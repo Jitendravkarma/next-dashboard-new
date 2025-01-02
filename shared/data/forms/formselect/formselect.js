@@ -1,3 +1,57 @@
+export const sortOption = [
+  {value:"website", label: "website"},
+  {value:"email", label: "email"},
+  {value:"phone", label: "phone"}
+]
+
+export const keywords = [
+  {value:"art schools", label: "art schools"},
+  {value:"cafe", label: "cafe"},
+  {value:"cyber cafe", label: "cyber cafe"},
+  {value:"hospitals", label: "hospitals"},
+  {value:"international schools", label: "international schools"},
+  {value:"hotels", label: "hotels"},
+  {value:"restaurants", label: "restaurants"},
+  {value:"stationery", label: "stationery"},
+  {value:"software company", label: "software company"},
+  {value:"schools", label: "schools"}
+]
+
+export const GoogleGlobalKeywords = [
+  {value : "schools contact number in london", label: "schools contact number in london"},
+  {value : "software companies email id in new york", label: "software companies email id in new york"}
+]
+
+export const DocumentScraperContentType = [
+  {value: "File Content", label: "File Content"},
+  {value: "Text Content", label: "Text Content"}
+]
+
+export const whoisYears = [
+  {value: "2016", label: "2016"},
+  {value: "2017", label: "2017"},
+  {value: "2018", label: "2018"},
+  {value: "2019", label: "2019"},
+  {value: "2020", label: "2020"},
+  {value: "2021", label: "2021"},
+  {value: "2022", label: "2022"},
+  {value: "2023", label: "2023"}
+]
+
+export const whoisMonths = [
+  {value: "January", label: "January"},
+  {value: "February", label: "February"},
+  {value: "March", label: "March"},
+  {value: "April", label: "April"},
+  {value: "May", label: "May"},
+  {value: "June", label: "June"},
+  {value: "July", label: "July"},
+  {value: "Auguest", label: "Auguest"},
+  {value: "October", label: "October"},
+  {value: "November", label: "November"},
+  {value: "December", label: "December"}
+]
+
 export const DefaultSelect = [
   { value: "1", label: "1" },
   { value: "2", label: "2" },

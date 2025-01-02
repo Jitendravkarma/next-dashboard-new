@@ -9,8 +9,15 @@ import Footer from "@/shared/layout-components/footer/footer";
 import Backtotop from "@/shared/layout-components/back-to-top/backtotop";
 import PrelineScript from "@/app/PrelineScript";
 import { ThemeChanger } from "@/shared/redux/action"
+import Cookies from "js-cookie";
+import { redirect } from "next/navigation";
 
 const Contentlayout = ({ children }) => {
+
+	const token = Cookies.get("authToken");
+	if(!token){
+		redirect("/")
+	}
 
 	const Add = () => {
 		document.querySelector("body")?.classList.remove("error-1");

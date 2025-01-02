@@ -5,6 +5,13 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false })
 
 //Orders
 
+const websiteIcon = <i className="ri-global-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
+const emailIcon = <i className="ri-mail-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
+const phoneIcon = <i className="ri-phone-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
+const googleIcon = <i className="ri-google-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
+const mapIcon = <i className="ri-map-pin-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
+
+
 const icon1 = <svg xmlns="http://www.w3.org/2000/svg" className="fill-white svg1" height="24px"
   viewBox="0 0 24 24" width="24px" fill="#000000">
   <path d="M0 0h24v24H0V0z" fill="none" />
@@ -62,6 +69,21 @@ export const ecommerceorders = [
   { id: 6, icon: icon6, class: "Total Products", text: "45,280", data: "Increased by ", data1: "+1.31%", color: "success/10", color1: "success" },
 
 ];
+
+export const dashboardRecords = [
+  { id: 1, icon: websiteIcon, class: "Total Searched Records", text: "13,54,654", color: "primary/10", color1: "success" },
+  { id: 2, icon: websiteIcon, class: "Total Website Scraped", text: "10,12,088", color: "primary/10", color1: "success" },
+  { id: 3, icon: emailIcon, class: "Total Email Scraped", text: "11,00,088", color: "primary/10", color1: "success" },
+  { id: 4, icon: phoneIcon, class: "Total Phone Scraped", text: "13,05,684", color: "primary/10", color1: "success" },
+  { id: 5, icon: googleIcon, class: "Total Google Searches", text: "89,088", color: "primary/10", color1: "success" },
+  { id: 6, icon: mapIcon, class: "Total Map Searches", text: "1,05,088", color: "primary/10", color1: "success" }
+]
+
+export const googlescraperorders = [
+  { id: 1, icon: websiteIcon, class: "Total Website", text: "0", color: "primary/10" },
+  { id: 2, icon: emailIcon, class: "Total Email", text: "0", color: "primary/10" },
+  { id: 3, icon: phoneIcon, class: "Total Phone", text: "0", color: "primary/10" },
+]
 
 //Order Vs Sales
 

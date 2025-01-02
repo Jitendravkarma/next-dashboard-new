@@ -39,12 +39,12 @@ export const sales = [
 //Top Customaers
 
 export const customerdata = [
-  { id: 1, src: "../../assets/img/users/2.jpg", class: "Socrates Itumay", data: "15 Purchases", text: "$1,835" },
-  { id: 2, src: "../../assets/img/users/3.jpg", class: " Json Taylor", data: "18 Purchases", text: "$2,415" },
-  { id: 3, src: "../../assets/img/users/4.jpg", class: "Suzika Stallone", data: "21 Purchases", text: "$2,341" },
-  { id: 4, src: "../../assets/img/users/5.jpg", class: "Angelina Hose", data: "24 Purchases", text: "2,624" },
-  { id: 5, src: "../../assets/img/users/6.jpg", class: "Selena Deoyl", data: " 12 Purchases", text: "$1,035" },
-  { id: 6, src: "../../assets/img/users/10.jpg", class: "Charlie Davieson", data: "15 Purchases", text: "$1,835" },
+  { id: 1, src: "../../assets/img/users/2.jpg", icon: <i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Google Scraper", data: "70,000 tasks", url: "/dashboards/google-search-scraper" },
+  { id: 2, src: "../../assets/img/users/3.jpg", icon: <i className="ri-map-2-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Google Map Scraper", data: "1,50,000 tasks", url: "/dashboards/google-map-scraper" },
+  { id: 3, src: "../../assets/img/users/4.jpg", icon: <i className="ri-global-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Website Scraper", data: "50,000 tasks", url: "/dashboards/website-scraper" },
+  { id: 4, src: "../../assets/img/users/5.jpg", icon: <i className="ri-git-repository-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Directory Scraper", data: "90,000 tasks", url: "/dashboards/directory-scraper"},
+  { id: 5, src: "../../assets/img/users/6.jpg", icon: <i className="ri-database-2-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Website Data Center", data: "10,000 tasks", url: "/dashboards/website-data-center" },
+  { id: 6, src: "../../assets/img/users/10.jpg", icon: <i className="ri-download-cloud-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Whois Downloads", data: "60,000 tasks", url: "/dashboards/whois-domain-database" },
 ];
 
 //order details 
@@ -61,12 +61,12 @@ export const orderdetails = [
 //Top Selling Products
 
 export const topselling = [
-  { id: 1, src: "../../assets/img/ecommerce/products/13.png", data1: "Ethnic School bag for children (24L)", data: "Bags", color: "success", text: "In Stock", sale: "5,093" },
-  { id: 2, src: "../../assets/img/ecommerce/products/14.png", data1: "Leather jacket for men (S,M,L,XL)", data: "Clothing", color: "success", text: "In Stock", sale: "6,890" },
-  { id: 3, src: "../../assets/img/ecommerce/products/15.png", data1: "Childrens Teddy toy of high quality", data: "Toys", color: "danger", text: "Out Of Stock", sale: "5,423" },
-  { id: 4, src: "../../assets/img/ecommerce/products/16.png", data1: "Orange smart watch (24mm)", data: "Fashion", color: "danger", text: "Out Of Stock", sale: "10,234" },
-  { id: 5, src: "../../assets/img/ecommerce/products/17.png", data1: "Black Camera", data: "Electronic", color: "success", text: "In Stock", sale: "10,234" },
-  { id: 6, src: "../../assets/img/ecommerce/products/18.png", data1: "Hand Bag For Ladies", data: "Fashion", color: "danger", text: "Out Of Stock", sale: "1,034" },
+  { id: 1, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Scraper", url: "/dashboards/google-search-scraper", data1: "Schools contact numbers in london", data: "Bags", color: "success", text: "Completed" },
+  { id: 2, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Scraper", url: "/dashboards/google-map-scraper", data1: "Software companies in New York", data: "Clothing", color: "success", text: "Completed" },
+  { id: 3, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Scraper", url: "/dashboards/google-search-scraper", data1: "Hospitals email id in Holand", data: "Toys", color: "danger", text: "Incompleted" },
+  { id: 4, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Scraper", url: "/dashboards/google-search-scraper", data1: "Lawyers contact numbers in Edinburgh", data: "Fashion", color: "danger", text: "Incompleted" },
+  { id: 5, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Scraper", url: "/dashboards/google-map-scraper", data1: "Restaurants in Peris", data: "Electronic", color: "success", text: "Completed" },
+  { id: 6, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Scraper", url: "/dashboards/google-map-scraper", data1: "Medical stores in belgium", data: "Fashion", color: "danger", text: "Incompleted" },
 ];
 
 //Upcoming Products
@@ -90,11 +90,11 @@ export class SalesOverView extends Component {
 
       series: [
         {
-          name: "Income",
+          name: "Quries",
           data: [20, 38, 38, 72, 55, 63, 43, 76, 55, 80, 40, 80],
         },
         {
-          name: "Expenses",
+          name: "Full filled",
           data: [85, 65, 75, 38, 85, 35, 62, 40, 40, 64, 50, 89],
         },
       ],
@@ -212,7 +212,7 @@ export class SocialVisitor extends Component {
 
       series: [
         {
-          data: [400, 470, 540, 690, 1100, 1380],
+          data: [1380, 1000, 780, 750, 600, 500],
         },
       ],
       options: {
@@ -260,12 +260,12 @@ export class SocialVisitor extends Component {
         },
         xaxis: {
           categories: [
-            "Facebook",
-            "Instagram",
-            "Dribble",
-            "Twitter",
-            "Chrome",
-            "Pininterest",
+            "Google Scraper",
+            "Map Scraper",
+            "Website Scraper",
+            "Directory Scraper",
+            "Data Center",
+            "Whois Downloads",
           ],
           axisBorder: {
             show: true,

@@ -25,10 +25,6 @@ const Cover1 = () => {
 					<div className="p-4 sm:p-7">
 						<div className="text-center">
 							<h1 className="block text-2xl font-bold text-gray-800 dark:text-white">Sign in</h1>
-							<p className="mt-3 text-sm text-gray-600 dark:text-white/70">
-								{`Don't`} have an account yet?
-								<Link className="text-primary decoration-2 hover:underline font-medium" href={"/authentication/sign-up/cover-1"}> Sign up here</Link>
-							</p>
 						</div>
 
 						<div className="mt-5">
@@ -88,7 +84,12 @@ const Cover1 = () => {
 									</div>
 									<Link href={"/dashboards/sales/"}
 										className="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-sm border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-0 focus:ring-primary focus:ring-offset-0 transition-all text-sm dark:focus:ring-offset-white/10">Sign
-										in</Link>
+										in
+									</Link>
+									<p className="text-center text-sm text-gray-600 dark:text-white/70">
+										{`Don't`} have an account yet?
+										<Link className="text-primary decoration-2 hover:underline font-medium" href={"/authentication/sign-up/cover-1"}> Sign up here</Link>
+									</p>
 								</div>
 							</div>
 						</div>

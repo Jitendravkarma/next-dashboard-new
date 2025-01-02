@@ -128,7 +128,7 @@ const Calendar = () => {
     }
   };
   return (
-    <Fragment>
+    <div>
       <Pageheader currentpage="Full Calendar" activepage="Advanced Ui" mainpage="Full Calendar" />
       <div className="grid grid-cols-12 gap-6">
         <div className="xl:col-span-3 col-span-12">
@@ -236,7 +236,7 @@ const Calendar = () => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

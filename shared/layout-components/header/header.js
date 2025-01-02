@@ -390,7 +390,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                         <div className="header-right">
                             <div className="responsive-headernav">
                                 <div className="header-nav-right">
-                                    <div className="header-country hs-dropdown ti-dropdown hidden sm:block"
+                                    {/* <div className="header-country hs-dropdown ti-dropdown hidden sm:block"
                                         data-hs-dropdown-placement="bottom-right">
                                         <button id="dropdown-flag" type="button"
                                             className="hs-dropdown-toggle ti-dropdown-toggle !p-0 flex-shrink-0 h-[2.375rem] w-[2.375rem] !border-0 rounded-full shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
@@ -480,8 +480,15 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                             className="inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10">
                                             <i className="ri-search-2-line header-icon"></i>
                                         </button>
-                                    </div>
+                                    </div> */}
 
+                                    <p
+                                        className="uppercase rounded-sm p-2 md:py-1 text-sm md:text-xs border border-blue-100 bg-green-100 hover:bg-green-200"
+                                        title="beta version 1.0"
+                                    >
+                                        <code className="text-green-600">beta <span className="hidden md:inline">version</span></code>
+                                    </p>
+                                    
                                     <div className="header-theme-mode hidden sm:block" onClick={() => ToggleDark()} >
                                         <Link aria-label="anchor" className="hs-dark-mode-active:hidden flex hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
                                             href="#!" scroll={false} data-hs-theme-click-value="dark">
@@ -500,7 +507,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                             <i className="ri-fullscreen-line header-icon fullscreen-exit-line hidden"></i>
                                         </Link>
                                     </div>
-                                    <div className="header-cart hs-dropdown ti-dropdown hidden lg:block" data-hs-dropdown-placement="left">
+                                    {/* <div className="header-cart hs-dropdown ti-dropdown hidden lg:block" data-hs-dropdown-placement="left">
                                         <button id="dropdown-cart" type="button" className="hs-dropdown-toggle ti-dropdown-toggle p-0 border-0 flex-shrink-0 h-[2.375rem] w-[2.375rem] rounded-full shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
                                             <i className="ri-shopping-basket-line header-icon"></i>
                                             <span className="flex absolute h-5 w-5 top-0 ltr:right-0 rtl:left-0 -mt-1 ltr:-mr-1 rtl:-ml-1">
@@ -667,18 +674,18 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="header-profile hs-dropdown ti-dropdown" data-hs-dropdown-placement="bottom-right">
                                         <button id="dropdown-profile" type="button" className="hs-dropdown-toggle ti-dropdown-toggle gap-2 !p-0 !ring-0 !border-0 flex-shrink-0 h-8 w-8 rounded-full !shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
                                             <img className="inline-block rounded-full ring-2 ring-white dark:ring-white/10"
-                                                src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/users/1.jpg`} alt="Image Description" />
+                                                src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/users/profile.png`} alt="Image Description" />
                                         </button>
 
                                         <div className="hs-dropdown-menu ti-dropdown-menu border-0 w-[20rem]" aria-labelledby="dropdown-profile">
                                             <div className="ti-dropdown-header !bg-primary flex">
                                                 <div className="ltr:mr-3 rtl:ml-3">
                                                     <img className="avatar shadow-none rounded-full !ring-transparent"
-                                                        src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/users/1.jpg`} alt="profile-img" />
+                                                        src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/users/profile.png`} alt="profile-img" />
                                                 </div>
                                                 <div>
                                                     <p className="ti-dropdown-header-title !text-white">Json Taylor</p>
@@ -690,7 +697,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                                     <i className="ti ti-user-circle text-lg"></i>
                                                     Profile
                                                 </Link>
-                                                <Link href={"/pages/mail/mail/"} className="ti-dropdown-item">
+                                                {/* <Link href={"/pages/mail/mail/"} className="ti-dropdown-item">
                                                     <i className="ti ti-inbox text-lg"></i>
                                                     Inbox
                                                 </Link>
@@ -705,7 +712,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                                 <Link href={"/dashboards/crypto/"} className="ti-dropdown-item">
                                                     <i className="ti ti-wallet text-lg"></i>
                                                     Bal: $7,12,950
-                                                </Link>
+                                                </Link> */}
                                                 <Link href={"/"} className="ti-dropdown-item">
                                                     <i className="ti ti-logout  text-lg"></i>
                                                     Log Out

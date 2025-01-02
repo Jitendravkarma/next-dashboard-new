@@ -279,7 +279,6 @@ const Sweetalert = () => {
 						<div className="box-body text-center">
 							<button type="button" className="ti-btn ti-btn-primary"
 								onClick={Dangersweetalert}
-								aria-label="Try me! Example: A modal with a title, an error icon, a text, and a footer"
 								id="error-sweetalert">
 								Try me!
 							</button>

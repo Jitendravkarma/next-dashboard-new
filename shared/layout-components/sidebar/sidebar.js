@@ -10,8 +10,17 @@ import Menuloop from "./menuloop";
 import store from "../../redux/store";
 import { basePath } from "../../../next.config";
 import MENUITEMS from "./nav";
+import { useUserContext } from "@/shared/userContext/userContext";
 
 const Sidebar = ({ local_varaiable, ThemeChanger }) => {
+
+	const navigate = useRouter()
+	const { handleSignOut } = useUserContext()
+
+	function handleSignOutCall() {
+		navigate.push("/");
+		handleSignOut();
+	}
 
 	const [menuitems, setMenuitems] = useState(MENUITEMS);
 
@@ -657,6 +666,24 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
 											</span>
 											: ""}
 										{levelone.type === "link" ?
+											levelone.title === "Log Out" ? 
+												<button type="button" onClick={handleSignOutCall} className={`cursor-pointer side-menu__item ${levelone.selected ? 'active' : ''}`}>
+													<span className={`hs-tooltip inline-block [--placement:right] leading-none ${local_varaiable?.dataVerticalStyle == 'doublemenu' ? '' : 'hidden'}`}>
+														<span className="cursor-pointer hs-tooltip-toggle  inline-flex justify-center items-center">
+															{levelone.icon}
+															<span className="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-black text-xs font-medium text-white rounded shadow-sm dark:bg-neutral-700" role="tooltip">
+																{levelone.title}
+															</span>
+														</span>
+													</span>
+													{local_varaiable.dataVerticalStyle != "doublemenu" ? levelone.icon : ""}
+													<span className="side-menu__label">{levelone.title} {levelone.badgetxt ? (<span className={levelone.class}> {levelone.badgetxt}</span>
+													) : (
+														""
+													)}
+													</span>
+												</button>
+											:
 											<Link href={levelone.path + "/"} className={`side-menu__item ${levelone.selected ? 'active' : ''}`}>
 												<span className={`hs-tooltip inline-block [--placement:right] leading-none ${local_varaiable?.dataVerticalStyle == 'doublemenu' ? '' : 'hidden'}`}>
 													<button type="button" className="hs-tooltip-toggle  inline-flex justify-center items-center">

@@ -299,10 +299,10 @@ export const polarOptions = {
 
 const data = {
   type: "doughnut",
-  labels: ["Items", "Revenue"],
+  labels: ["Used storage", "Free storage"],
   datasets: [
     {
-      data: [60, 40],
+      data: [75, 25],
       backgroundColor: ["rgb(90, 102, 241)", "rgb(96, 165, 250)"],
       borderWidth: 0,
     },

@@ -46,7 +46,7 @@ function Layout({ children, local_varaiable, ThemeChanger }) {
         style={customstyles}>
         <head>
           <link href="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.css" rel="stylesheet" />
-          <meta name="keywords" content="tailwind admin template, nextjs app router, dashboard, tailwind css templates, next js tailwind, router admin, tailwind dashboard template, dashboard tailwind, admin, tailwind css dashboard, tailwind, admin panel, tail wind, tailwind nextjs" />
+          <meta name="keywords" content="Web crawler spider, google search scraper" />
         </head>
         <body className={`${local_varaiable.body ? local_varaiable.body : ''}`}>
           {theme.pageloading && children}
