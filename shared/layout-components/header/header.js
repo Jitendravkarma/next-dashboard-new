@@ -7,8 +7,11 @@ import Modalsearch from "../modal-search/modalsearch";
 import store from "@/shared/redux/store";
 import Link from "next/link";
 import { basePath } from "@/next.config";
+import { useUserContext } from "@/shared/userContext/userContext";
 
 const Header = ({ local_varaiable, ThemeChanger }) => {
+
+    const { user } = useUserContext()
 
     let [storedata, SetStoreData] = useState(local_varaiable);
 
@@ -364,6 +367,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
         dispatch(removeFromCart(id));
     };
 
+    console.log(user)
     return (
         <Fragment>
             <header className="header custom-sticky !top-0 !w-full">
@@ -688,12 +692,12 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                                         src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/users/profile.png`} alt="profile-img" />
                                                 </div>
                                                 <div>
-                                                    <p className="ti-dropdown-header-title !text-white">Json Taylor</p>
-                                                    <p className="ti-dropdown-header-content !text-white/50">Web Designer</p>
+                                                    <p className="ti-dropdown-header-title !text-white">{user.name}</p>
+                                                    <p className="ti-dropdown-header-content !text-white/50">{user.email}</p>
                                                 </div>
                                             </div>
                                             <div className="mt-2 ti-dropdown-divider">
-                                                <Link href={"/home"} className="ti-dropdown-item">
+                                                <Link href={"/dashboard/profile"} className="ti-dropdown-item">
                                                     <i className="ti ti-user-circle text-lg"></i>
                                                     Profile
                                                 </Link>

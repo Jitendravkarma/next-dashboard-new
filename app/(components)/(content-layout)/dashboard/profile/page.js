@@ -124,9 +124,9 @@ const Profile = () => {
         <Helmet>
           <body className={ClassName}></body>
         </Helmet>
-        <PageHeader currentpage="Profile Settings" activepage="Pages" mainpage="Profile Settings" />
+        <PageHeader currentpage="Profile" activepage="Dashboard" img="/assets/img/users/profile.png" mainpage="Profile" />
         <div className="grid grid-cols-12 gap-x-6">
-          <div className="col-span-12 xl:col-span-3">
+          {/* <div className="col-span-12 xl:col-span-3">
             <div className="box">
               <div className="box-body relative">
                 <div className="flex relative before:bg-black/50 before:absolute before:w-full before:h-full before:rounded-sm">
@@ -178,7 +178,7 @@ const Profile = () => {
                   </div>
                 </div>
               </div>
-              <div className="box-body pt-0">
+              <div className="box-body">
                 <nav className="flex flex-col space-y-2" aria-label="Tabs" role="tablist" data-hs-tabs-vertical="true">
                   <button type="button" className="hs-tab-active:bg-primary hs-tab-active:border-primary hs-tab-active:text-white dark:hs-tab-active:bg-primary dark:hs-tab-active:border-primary dark:hs-tab-active:text-white -mr-px py-3 px-3 inline-flex items-center gap-2 bg-gray-50 text-sm font-medium text-center border text-gray-500 rounded-sm hover:text-gray-700 dark:bg-black/20 dark:border-white/10 dark:text-white/70 active" id="profile-settings-item-1" data-hs-tab="#profile-settings-1" aria-controls="profile-settings-1" role="tab">
                     <i className="ri ri-shield-user-line"></i> Personal Settings
@@ -198,8 +198,8 @@ const Profile = () => {
                 </nav>
               </div>
             </div>
-          </div>
-          <div className="col-span-12 xl:col-span-9">
+          </div> */}
+          <div className="col-span-12">
             <div className="box">
               <div className="box-body p-0">
                 <div id="profile-settings-1" role="tabpanel" aria-labelledby="profile-settings-item-1">
@@ -211,17 +211,17 @@ const Profile = () => {
                       <div>
                         <div className="grid lg:grid-cols-2 gap-6">
                           <div className="space-y-2">
-                            <label className="ti-form-label mb-0">First Name</label>
+                            <label className="ti-form-label mb-0">Full Name</label>
                             <input type="text" className="my-auto ti-form-input" placeholder="Firstname" />
                           </div>
-                          <div className="space-y-2">
+                          {/* <div className="space-y-2">
                             <label className="ti-form-label mb-0">Last Name</label>
                             <input type="text" className="my-auto ti-form-input" placeholder="Lastname" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Phone Number</label>
                             <input type="number" className="my-auto ti-form-input" placeholder="+91 123-456-789" />
-                          </div>
+                          </div> */}
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Email Address</label>
                             <input type="email" className="my-auto ti-form-input" placeholder="your@site.com" />
