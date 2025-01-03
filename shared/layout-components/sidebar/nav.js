@@ -75,11 +75,11 @@ export const MENUITEMS = [
 	{
 		icon: ComponentsSvg, title: "E-Commerce", type: "sub", active: false, selected: false, children: [
 
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Amazon Product Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Flipkart Product Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Shopify Product Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Snapdeal Product Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Accordion" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Amazon Product Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Flipkart Product Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Shopify Product Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Snapdeal Product Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Accordion" },
 			// { path: "/components/alerts", type: "link", active: false, selected: false, title: "Alerts" },
 			// { path: "/components/avatars", type: "link", active: false, selected: false, title: "Avatars" },
 			// { path: "/components/badges", type: "link", active: false, selected: false, title: "Badges" },
@@ -99,13 +99,13 @@ export const MENUITEMS = [
 	{
 		icon: ElementsSvg, title: "Social Media", type: "sub", active: false, selected: false, children: [
 
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Facebook Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Instagram Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Twitter Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Linkedin Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "YouTube Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Quara Scraper" },
-			{ path: "/dashboard/home", type: "link", active: false, selected: false, title: "Pinterest Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Facebook Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Instagram Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Twitter Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Linkedin Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "YouTube Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Quara Scraper" },
+			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Pinterest Scraper" },
 			// { path: "/elements/navbar", type: "link", active: false, selected: false, title: "Navbar" },
 			// { path: "/elements/mega-menu", type: "link", active: false, selected: false, title: "Mega Menu" },
 			// { path: "/elements/nav-tabs", type: "link", active: false, selected: false, title: "Nav & Tabs" },

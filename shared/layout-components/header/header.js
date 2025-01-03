@@ -11,7 +11,7 @@ import { useUserContext } from "@/shared/userContext/userContext";
 
 const Header = ({ local_varaiable, ThemeChanger }) => {
 
-    const { user } = useUserContext()
+    const { user, handleSignOutCall } = useUserContext()
 
     let [storedata, SetStoreData] = useState(local_varaiable);
 
@@ -681,8 +681,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                     </div> */}
                                     <div className="header-profile hs-dropdown ti-dropdown" data-hs-dropdown-placement="bottom-right">
                                         <button id="dropdown-profile" type="button" className="hs-dropdown-toggle ti-dropdown-toggle gap-2 !p-0 !ring-0 !border-0 flex-shrink-0 h-8 w-8 rounded-full !shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
-                                            <img className="inline-block rounded-full ring-2 ring-white dark:ring-white/10"
-                                                src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/users/profile.png`} alt="Image Description" />
+                                            <i className="ri-user-3-line header-icon"></i>
                                         </button>
 
                                         <div className="hs-dropdown-menu ti-dropdown-menu border-0 w-[20rem]" aria-labelledby="dropdown-profile">
@@ -724,9 +723,15 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="switcher-icon">
+                                    {/* <div className="switcher-icon">
                                         <button aria-label="button" type="button" className="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus-visible:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10" data-hs-overlay="#hs-overlay-switcher">
                                             <i className="ri-settings-5-line header-icon animate-spin"></i>
+                                        </button>
+                                    </div> */}
+                                    <div className="header-fullscreen hidden lg:block" title="Logout">
+                                        <button aria-label="button" className="inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                                            href="#!" scroll={false} data-hs-theme-click-value="dark" onClick={handleSignOutCall} >
+                                            <i className="ri-logout-box-r-line header-icon"></i>
                                         </button>
                                     </div>
                                 </div>
