@@ -10,10 +10,11 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import Tesseract from 'tesseract.js';
 import countryList from "@/shared/layout-components/dashboard/Country";
+import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const ImageDataScraper = () => {
-	const { isVerfified, isActivated, contactNum, smsNum, whatsAppNum, iconPing, hanleIconPing } = useUserContext()
+	const { isVerfified, isActivated, contactNum, smsNum, whatsAppNum, iconPing, hanleIconPing, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
 	const columns = [
 		{
 			field: 'actions',
@@ -186,8 +187,8 @@ const ImageDataScraper = () => {
 		let type = Object.keys(files).map(docs=>files[docs].type);
 		let len = Object.keys(files).length;
 		if(len > 1 && !isActivated){
-			// setLimitMsg(`You cannot select multiple images during the free trial. Please consider purchasing our product!`);
-			// setLimit(true);
+			openSnackBar()
+			handleSnackMessage('You cannot select multiple files during the free trial. Please consider purchasing our product!', "white", "text-danger")
 			fileInputRef.current.value = null;
 		}
 		else {
@@ -198,7 +199,8 @@ const ImageDataScraper = () => {
 					collectSize = collectSize + image.size;
 				});
 				if(collectSize > 10486760){
-					alert(`File size must be between 10KB to 10MB!`);
+					openSnackBar()
+					handleSnackMessage("File size must be between 10KB to 10MB!", "white", "text-danger")
 				}
 				else {
 					if(!isActivated){
@@ -220,7 +222,8 @@ const ImageDataScraper = () => {
 			//   alert(`Too heavy image size, Size should be between 10KB to 10MB!`);
 			// }
 			else {
-				alert(`Image not supported!`);
+				openSnackBar()
+				handleSnackMessage("Image not supported!", "white", "text-danger")
 			}
 		}
 	}
@@ -241,7 +244,8 @@ const ImageDataScraper = () => {
 	const handleCopy = async () => {
 		try {
 			await navigator.clipboard.writeText(textContent);
-			alert('Text copied to clipboard!');
+			openSnackBar()
+			handleSnackMessage("Text copied to clipboard!", "white", "text-success")
 		} catch (err) {
 			console.error('Failed to copy: ', err);
 		}
@@ -330,6 +334,11 @@ const ImageDataScraper = () => {
 		<div>
 			<Seo title={"Image Data Scraper"} />
 			<PageHeader currentpage="Image Data Scraper" activepage="Lead Generation" img="/assets/iconfonts/dashboard-icon/imageIcon.png" mainpage="Image Data Scraper" />
+
+			{
+				openSnack &&
+				<Snackbar content={snackMessage} isOpen={openSnack}/>
+			}
 
 			<div className="grid grid-cols-12 gap-x-5">
 				{numOfData.map((idx) => (
@@ -446,7 +455,7 @@ const ImageDataScraper = () => {
 								</div>
 							</div>
 							<div className="box-body">
-								<textarea className="ti-form-input" value={textContent} onChange={(e)=>setTextContent(e.target.value)} rows="6" placeholder="Your extracted content"></textarea>
+								<textarea className="ti-form-input" value={textContent} onChange={(e)=>setTextContent(e.target.value)} rows="10" placeholder="Your extracted content"></textarea>
 								<div className="flex items-center gap-3 mt-4">
 									{
 										iconPing.email ?

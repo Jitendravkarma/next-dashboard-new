@@ -8,13 +8,13 @@ import { getGoogleMapData, getMapData, getMapGlobalData, getWebsiteData, request
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import axios from "axios";
 import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
-import { ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const GoogleMapScraper = () => {
-	const { isActivated, contactNum, smsNum, whatsAppNum, dashboardRecords } = useUserContext()
+	const { isActivated, contactNum, smsNum, whatsAppNum, dashboardRecords, limitErr, handleLimitErr } = useUserContext()
 	const recordIcon = <i className="ri-clipboard-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const websiteIcon = <i className="ri-global-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const emailIcon = <i className="ri-mail-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
@@ -290,6 +290,8 @@ const GoogleMapScraper = () => {
 				}
 			}).catch((err) => {
 				console.log(err)
+				const error = err?.response?.data?.message;
+				handleLimitErr(error)
 			}).finally(()=>{
 				setIsScraping(false)
 			})
@@ -456,6 +458,10 @@ const GoogleMapScraper = () => {
 	useEffect(()=>{
 		const globalData = async ()=>{
 			let data = await getMapGlobalData();
+			const limitErr = data?.response?.data?.message;
+			if(limitErr){
+                handleLimitErr(limitErr)
+            }
 			if(data.length){
 				const convertData = data.map(({order_id, query})=>{
 					return { label: query, value: order_id }
@@ -657,6 +663,10 @@ const GoogleMapScraper = () => {
 			{
 				isDownload &&
 				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"google-map-scraper"} isModal={isDownload} closeModel={closeModel}/>
+			}
+			{
+				limitErr &&
+				<LimitReachedBox/>
 			}
 			{/* alert boxes */}
 		</div>

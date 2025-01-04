@@ -253,8 +253,8 @@ const Home = () => {
 					<div className="box">
 						<div className="box-header">
 							<div className="flex">
-								<h5 className="box-title my-auto">Data Storages</h5>
-								<div className="hs-dropdown ti-dropdown block ltr:ml-auto rtl:mr-auto my-auto">
+								<h5 className="box-title my-auto">Daily Limits</h5>
+								{/* <div className="hs-dropdown ti-dropdown block ltr:ml-auto rtl:mr-auto my-auto">
 									<button type="button" aria-label="button"
 										className="hs-dropdown-toggle ti-dropdown-toggle rounded-sm p-2 bg-white !border border-gray-200 text-gray-500 hover:bg-gray-100  focus:ring-gray-200 dark:bg-bodybg dark:hover:bg-black/30 dark:border-white/10 dark:hover:border-white/20 dark:focus:ring-white/10 dark:focus:ring-offset-white/10">
 										<i className="text-sm leading-none ti ti-dots-vertical"></i> </button>
@@ -263,7 +263,7 @@ const Home = () => {
 										<Link className="ti-dropdown-item" href="#!" scroll={false} >Import</Link>
 										<Link className="ti-dropdown-item" href="#!" scroll={false} >Export</Link>
 									</div>
-								</div>
+								</div> */}
 							</div>
 						</div>
 						<div className="box-body pb-0 px-0">
@@ -272,30 +272,26 @@ const Home = () => {
 								<div
 									className="chart-circle-value circle-style absolute border-2 border-dashed border-primary -top-5 inset-0 flex justify-center items-center w-[150px] h-[150px] leading-[70px] rounded-full text-5xl mx-auto my-auto">
 									<div className="text-xl font-bold text-center">
-										25% <br/>
-										<span>Free Space</span>
+										500 <br/>
+										<span>Requests</span>
 									</div>
 								</div>
 							</div>
 							<div className="grid grid-cols-2 p-3">
 								<div className="px-5 py-3 ltr:border-r rtl:border-l border-gray-200 dark:border-white/10">
-									<div className="text-sm text-gray-500 dark:text-white/80 text-center font-medium">
-										Free Storage
-									</div>
 									<div className="text-center">
-										<p className="text-gray-800 dark:text-white text-2xl font-medium">3.75GB</p>
-										<span className="text-success font-semibold">25%</span>
+										<p className="text-blue-500 dark:text-white text-2xl font-medium">120</p>
+									</div>
+									<div className="text-sm text-gray-500 dark:text-white/80 text-center font-medium">
+										Remaining Requests
 									</div>
 								</div>
 								<div className="px-5 py-3">
-									<div className="text-sm text-gray-500 dark:text-white/80 text-center font-medium">
-										Used Storage
-									</div>
 									<div className="text-center">
-										<p className="text-gray-800 dark:text-white text-2xl font-medium">11.25GB</p>
-										<span className="text-danger font-semibold">
-											75%
-										</span>
+										<p className="text-primary dark:text-white text-2xl font-medium">380</p>
+									</div>
+									<div className="text-sm text-gray-500 dark:text-white/80 text-center font-medium">
+										Used Requests
 									</div>
 								</div>
 							</div>

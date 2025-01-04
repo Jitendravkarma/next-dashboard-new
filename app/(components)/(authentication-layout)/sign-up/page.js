@@ -4,9 +4,12 @@ import { signUp } from "@/shared/apis/api";
 import GoogleSignIn from "@/shared/layout-components/google-signin/googlesignin";
 import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
+import { useUserContext } from "@/shared/userContext/userContext";
+import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 
 const Signupcover2 = () => {
 	const refElement = useRef()
+	const { openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
 	const [ onSuccess, setOnSuccess ] = useState(false)
 	const [ loading, setLoading ] = useState(false)
 	const [ formData, setFormData ] = useState({name:"", email: "", password: "", confirmPassword: "", rememberMe: false})
@@ -36,15 +39,19 @@ const Signupcover2 = () => {
 					await signUp(formData)
 					setOnSuccess(true)
 				} catch (error) {
-					alert(error.response.data.errors.email)
-					console.log(error)
-					refElement.current.focus()
+					const err = error.response.data.errors.email;
+					openSnackBar();
+					if(err === "email is allready registered"){
+						handleSnackMessage("email is already registered.", "white", "text-danger")
+						refElement.current.focus()
+					}
 				} finally {
 					setLoading(false)
 				}
 			}
 			else {
-				alert(`Accept the privacy policy!`)
+				openSnackBar();
+            	handleSnackMessage("Accept the privacy policy!", "white", "text-danger")
 			}
 		}
 	}
@@ -60,6 +67,10 @@ const Signupcover2 = () => {
 	return (
 		<Fragment>
 			<Seo title={"Signup-cover2"} />
+			{
+				openSnack &&
+				<Snackbar content={snackMessage} isOpen={openSnack}/>
+			}
 			<div className="grid grid-cols-12 gap-6 w-full h-screen">
 				<div className="lg:col-span-6 col-span-12 hidden lg:block relative">
 					<div className="cover relative w-full h-full z-[1] p-10">
@@ -185,7 +196,7 @@ const Signupcover2 = () => {
 
 											<button type="submit"
 												className={`py-2 px-3 inline-flex justify-center items-center gap-2 rounded-sm border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-0 focus:ring-primary focus:ring-offset-0 transition-all text-sm dark:focus:ring-offset-white/10 ${loading ? "opacity-[0.6]" : ""}`}>
-												{ loading ? <span className="animate-pulse">Please wait</span> : "Sign up"}
+												{ loading ? <span className="animate-pulse">Please wait...</span> : "Sign up"}
 											</button>
 
 											<p className="text-center text-sm text-gray-600 dark:text-white/70">

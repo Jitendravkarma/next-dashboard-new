@@ -8,13 +8,13 @@ import { getGoogleData, getGoogleGlobalData, getWebsiteData, requestGoogleData, 
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import axios from "axios";
 import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
-import { ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const GoogleSearchScraper = () => {
-	const { isActivated, contactNum, smsNum, whatsAppNum, dashboardRecords } = useUserContext()
+	const { isActivated, contactNum, smsNum, whatsAppNum, limitErr, handleLimitErr, dashboardRecords } = useUserContext()
 	const columns = [
 		{
 			field: 'actions',
@@ -239,6 +239,9 @@ const GoogleSearchScraper = () => {
 				}
 			}).catch((err) => {
 				console.log(err)
+				const error = err?.response?.data?.message;
+				handleLimitErr(error)
+				setProgressMsg("Start Working")
 			}).finally(()=>{
 				setIsScraping(false)
 			})
@@ -401,6 +404,8 @@ const GoogleSearchScraper = () => {
 	useEffect(()=>{
 		const globalData = async ()=>{
 			let data = await getGoogleGlobalData();
+			const limitErr = data?.response?.data?.message;
+			handleLimitErr(limitErr)
 			if(data.length){
 				const convertData = data.map(({order_id, query})=>{
 					return { label: query, value: order_id }
@@ -603,6 +608,10 @@ const GoogleSearchScraper = () => {
 			{
 				isDownload &&
 				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"google-search-scraper"} isModal={isDownload} closeModel={closeModel}/>
+			}
+			{
+				limitErr &&
+				<LimitReachedBox/>
 			}
 			{/* alert boxes */}
 		</div>

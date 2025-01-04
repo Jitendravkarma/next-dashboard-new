@@ -5,7 +5,7 @@ import Seo from "@/shared/layout-components/seo/seo";
 import dynamic from "next/dynamic";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
-import { ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { fetchDirectoryScraper } from "@/shared/apis/api";
@@ -14,7 +14,7 @@ import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const DirectoryScraper = () => {
-	const { snackMessage, openSnack, openSnackBar, handleSnackMessage, isVerfified, isActivated, contactNum, smsNum, whatsAppNum } = useUserContext()
+	const { snackMessage, openSnack, openSnackBar, handleSnackMessage, isVerfified, isActivated, contactNum, smsNum, whatsAppNum, limitErr, handleLimitErr } = useUserContext()
 	const columns = [
 		{
 			field: 'actions',
@@ -136,6 +136,7 @@ const DirectoryScraper = () => {
 					if(limitErr === "You have reached the limits of the free plan. Please upgrade your plan to continue using this service."){
 					  console.log(limitErr)
 					//   setIsModal(true)
+						handleLimitErr(limitErr)
 					  setIsScraping(false)
 					}
 					if (response && !limitErr) {
@@ -197,7 +198,8 @@ const DirectoryScraper = () => {
 			}
 		  }
 		  else {
-			alert(`Please provide any URL.`)
+			openSnackBar()
+			handleSnackMessage("Please provide any URL.", "white", "text-danger")
 		  }
 		}
 		else {
@@ -355,6 +357,10 @@ const DirectoryScraper = () => {
 			{
 				isDownload &&
 				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"google-search-scraper"} isModal={isDownload} closeModel={closeModel}/>
+			}
+			{
+				limitErr &&
+				<LimitReachedBox/>
 			}
 			{/* alert boxes */}
 		</div>

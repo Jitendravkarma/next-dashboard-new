@@ -8,10 +8,17 @@ import store from "@/shared/redux/store";
 import Link from "next/link";
 import { basePath } from "@/next.config";
 import { useUserContext } from "@/shared/userContext/userContext";
+import { useRouter } from "next/navigation";
 
 const Header = ({ local_varaiable, ThemeChanger }) => {
 
-    const { user, handleSignOutCall } = useUserContext()
+    const navigate = useRouter()
+    const { user, handleSignOut } = useUserContext()
+    
+    function handleSignOutCall() {
+        navigate.push("/");
+        handleSignOut();
+    }
 
     let [storedata, SetStoreData] = useState(local_varaiable);
 
@@ -367,7 +374,6 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
         dispatch(removeFromCart(id));
     };
 
-    console.log(user)
     return (
         <Fragment>
             <header className="header custom-sticky !top-0 !w-full">
@@ -492,6 +498,13 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                     >
                                         <code className="text-green-600">beta <span className="hidden md:inline">version</span></code>
                                     </p>
+
+                                    {/* <button
+                                        className="uppercase rounded-sm p-2 md:py-1 text-sm md:text-xs border border-blue-100 bg-green-100 hover:bg-green-200"
+                                        title="buy now"
+                                    >
+                                        <code className="text-green-600">buy <span className="hidden md:inline">now</span></code>
+                                    </button> */}
                                     
                                     <div className="header-theme-mode hidden sm:block" onClick={() => ToggleDark()} >
                                         <Link aria-label="anchor" className="hs-dark-mode-active:hidden flex hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
@@ -503,14 +516,14 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                             <i className="ri-sun-line header-icon"></i>
                                         </Link>
                                     </div>
-                                    <div className="header-fullscreen hidden lg:block"
+                                    {/* <div className="header-fullscreen hidden lg:block"
                                         onClick={() => Fullscreen()}
                                     >
                                         <Link aria-label="anchor" scroll={false} href="#!" className="inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10">
                                             <i className="ri-fullscreen-line header-icon full-screen-open"></i>
                                             <i className="ri-fullscreen-line header-icon fullscreen-exit-line hidden"></i>
                                         </Link>
-                                    </div>
+                                    </div> */}
                                     {/* <div className="header-cart hs-dropdown ti-dropdown hidden lg:block" data-hs-dropdown-placement="left">
                                         <button id="dropdown-cart" type="button" className="hs-dropdown-toggle ti-dropdown-toggle p-0 border-0 flex-shrink-0 h-[2.375rem] w-[2.375rem] rounded-full shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
                                             <i className="ri-shopping-basket-line header-icon"></i>
@@ -730,7 +743,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                     </div> */}
                                     <div className="header-fullscreen hidden lg:block" title="Logout">
                                         <button aria-label="button" className="inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
-                                            href="#!" scroll={false} data-hs-theme-click-value="dark" onClick={handleSignOutCall} >
+                                            href="#!" onClick={handleSignOutCall} >
                                             <i className="ri-logout-box-r-line header-icon"></i>
                                         </button>
                                     </div>

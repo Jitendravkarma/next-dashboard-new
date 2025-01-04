@@ -54,7 +54,7 @@ export const MENUITEMS = [
 	// { path: "/widgets", icon: WidgetsSvg, title: "Widgets", type: "link", active: false, selected: false },
 	
 	{
-		menutitle: "Coming Soon",
+		menutitle: "More Services",
 	},
 	
 	// {
@@ -72,51 +72,57 @@ export const MENUITEMS = [
 	// 	],
 	// },
 
-	{
-		icon: ComponentsSvg, title: "E-Commerce", type: "sub", active: false, selected: false, children: [
+	{ path: "/dashboard/e-comm", icon: ComponentsSvg, title: "E-Commerce", type: "link", active: false, selected: false },
+	
+	// {
+	// 	icon: ComponentsSvg, title: "E-Commerce", type: "sub", active: false, selected: false, children: [
 
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Amazon Product Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Flipkart Product Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Shopify Product Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Snapdeal Product Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Accordion" },
-			// { path: "/components/alerts", type: "link", active: false, selected: false, title: "Alerts" },
-			// { path: "/components/avatars", type: "link", active: false, selected: false, title: "Avatars" },
-			// { path: "/components/badges", type: "link", active: false, selected: false, title: "Badges" },
-			// { path: "/components/blockquotes", type: "link", active: false, selected: false, title: "Blockquotes" },
-			// { path: "/components/buttons", type: "link", active: false, selected: false, title: "Buttons" },
-			// { path: "/components/cards", type: "link", active: false, selected: false, title: "Cards" },
-			// { path: "/components/collapse", type: "link", active: false, selected: false, title: "Collapse" },
-			// { path: "/components/list-group", type: "link", active: false, selected: false, title: "List Group" },
-			// { path: "/components/list", type: "link", active: false, selected: false, title: "List" },
-			// { path: "/components/indicators", type: "link", active: false, selected: false, title: "Indicators" },
-			// { path: "/components/progress", type: "link", active: false, selected: false, title: "Progress" },
-			// { path: "/components/skeleton", type: "link", active: false, selected: false, title: "Skeleton" },
-			// { path: "/components/spinners", type: "link", active: false, selected: false, title: "Spinners" },
-			// { path: "/components/toast", type: "link", active: false, selected: false, title: "Toast" }
-		]
-	},
-	{
-		icon: ElementsSvg, title: "Social Media", type: "sub", active: false, selected: false, children: [
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Amazon Product Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Flipkart Product Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Shopify Product Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Snapdeal Product Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Accordion" },
+	// 		{ path: "/components/alerts", type: "link", active: false, selected: false, title: "Alerts" },
+	// 		{ path: "/components/avatars", type: "link", active: false, selected: false, title: "Avatars" },
+	// 		{ path: "/components/badges", type: "link", active: false, selected: false, title: "Badges" },
+	// 		{ path: "/components/blockquotes", type: "link", active: false, selected: false, title: "Blockquotes" },
+	// 		{ path: "/components/buttons", type: "link", active: false, selected: false, title: "Buttons" },
+	// 		{ path: "/components/cards", type: "link", active: false, selected: false, title: "Cards" },
+	// 		{ path: "/components/collapse", type: "link", active: false, selected: false, title: "Collapse" },
+	// 		{ path: "/components/list-group", type: "link", active: false, selected: false, title: "List Group" },
+	// 		{ path: "/components/list", type: "link", active: false, selected: false, title: "List" },
+	// 		{ path: "/components/indicators", type: "link", active: false, selected: false, title: "Indicators" },
+	// 		{ path: "/components/progress", type: "link", active: false, selected: false, title: "Progress" },
+	// 		{ path: "/components/skeleton", type: "link", active: false, selected: false, title: "Skeleton" },
+	// 		{ path: "/components/spinners", type: "link", active: false, selected: false, title: "Spinners" },
+	// 		{ path: "/components/toast", type: "link", active: false, selected: false, title: "Toast" }
+	// 	]
+	// },
 
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Facebook Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Instagram Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Twitter Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Linkedin Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "YouTube Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Quara Scraper" },
-			{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Pinterest Scraper" },
-			// { path: "/elements/navbar", type: "link", active: false, selected: false, title: "Navbar" },
-			// { path: "/elements/mega-menu", type: "link", active: false, selected: false, title: "Mega Menu" },
-			// { path: "/elements/nav-tabs", type: "link", active: false, selected: false, title: "Nav & Tabs" },
-			// { path: "/elements/scrollspy", type: "link", active: false, selected: false, title: "Scrollspy" },
-			// { path: "/elements/breadcrumb", type: "link", active: false, selected: false, title: "BreadCrumb" },
-			// { path: "/elements/pagination", type: "link", active: false, selected: false, title: "Pagination" },
-			// { path: "/elements/grids", type: "link", active: false, selected: false, title: "Grids" },
-			// { path: "/elements/columns", type: "link", active: false, selected: false, title: "Columns" },
-			// { path: "/elements/typography", type: "link", active: false, selected: false, title: "Typography" },
-		]
-	},
+	{ path: "/dashboard/social-media", icon: ElementsSvg, title: "Social Media", type: "link", active: false, selected: false },
+	{ path: "/dashboard/jobs", icon: AdvancedUISvg, title: "Jobs", type: "link", active: false, selected: false },
+	{ path: "/dashboard/real-estate", icon: FormsSvg, title: "Real Estate", type: "link", active: false, selected: false },
+	// {
+	// 	icon: ElementsSvg, title: "Social Media", type: "sub", active: false, selected: false, children: [
+
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Facebook Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Instagram Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Twitter Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Linkedin Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "YouTube Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Quara Scraper" },
+	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Pinterest Scraper" },
+	// 		// { path: "/elements/navbar", type: "link", active: false, selected: false, title: "Navbar" },
+	// 		// { path: "/elements/mega-menu", type: "link", active: false, selected: false, title: "Mega Menu" },
+	// 		// { path: "/elements/nav-tabs", type: "link", active: false, selected: false, title: "Nav & Tabs" },
+	// 		// { path: "/elements/scrollspy", type: "link", active: false, selected: false, title: "Scrollspy" },
+	// 		// { path: "/elements/breadcrumb", type: "link", active: false, selected: false, title: "BreadCrumb" },
+	// 		// { path: "/elements/pagination", type: "link", active: false, selected: false, title: "Pagination" },
+	// 		// { path: "/elements/grids", type: "link", active: false, selected: false, title: "Grids" },
+	// 		// { path: "/elements/columns", type: "link", active: false, selected: false, title: "Columns" },
+	// 		// { path: "/elements/typography", type: "link", active: false, selected: false, title: "Typography" },
+	// 	]
+	// },
 	// {
 	// 	icon: FormsSvg, title: "Real Estate", type: "sub", active: false, selected: false, children: [
 	// 		{ path: "/forms/form-inputs", type: "link", active: false, selected: false, title: "Form Inputs" },

@@ -7,9 +7,9 @@ import { Download } from './DownloadBtn';
 
 const Logo = ()=>{
   return(
-    <Link href="/">
+    <p>
       <img src={"/assets/img/brand-logos/toggle-logo.png"} className='mx-auto'/>
-    </Link>
+    </p>
   )
 }
 
@@ -432,11 +432,12 @@ const EmailBox = memo(({closeModel, icon="ri-sparkling-line", message="Data Extr
   );
 })
 
-const LimitReachedBox = memo(({message="You have reached the limits of the free plan. Please upgrade your plan to continue using this service.", setIsModal, isModal}) => {
+const LimitReachedBox = memo(({message="You have reached the limits of the free plan. Please upgrade your plan to continue using this service."}) => {
+  const { handleLimitErr } = useUserContext()
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
-        closeModel("");
+        handleLimitErr("");
       }
     };
 
@@ -449,7 +450,7 @@ const LimitReachedBox = memo(({message="You have reached the limits of the free 
 
   const handleOutsideClick = (e) => {
     if (e.target.id === 'popup-container') {
-      closeModel("");
+      handleLimitErr("");
     }
   };
 
@@ -460,10 +461,10 @@ const LimitReachedBox = memo(({message="You have reached the limits of the free 
           onClick={handleOutsideClick}
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
       >
-        <div className="bg-white rounded-md shadow-lg p-6 max-w-xl w-full relative">
+        <div className="bg-white rounded-md shadow-lg px-6 py-10 max-w-xl w-full relative">
               <button
-                  onClick={() => setIsModal(!isModal)}
                   type="button"
+                  onClick={()=>handleLimitErr("")}
                   className="absolute top-4 right-2 text-gray-400 bg-transparent hover-bg-gray-200 hover-text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark-hover-bg-gray-600 dark-hover-text-white"
                   data-modal-hide="defaultModal"
               >
@@ -487,7 +488,7 @@ const LimitReachedBox = memo(({message="You have reached the limits of the free 
               {/* Modal Body */}
               <div className="modal-body pt-4">
                   <div className="flex flex-col items-center justify-center px-6 py-4  pt:mt-0 ">
-                      <div className="w-full max-w-xl p-6 sm:p-8">
+                      <div className="w-full max-w-xl">
                           <Logo/>
                           
                           <h2 className="text-xl mt-4 text-center font-bold text-gray-900">

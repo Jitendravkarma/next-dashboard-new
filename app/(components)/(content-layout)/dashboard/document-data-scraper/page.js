@@ -4,17 +4,16 @@ import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import dynamic from "next/dynamic";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
-import axios from "axios";
 import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
 import { ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
-import { getWebsiteData, requestWebsiteData } from "@/shared/apis/api";
 import countryList from "@/shared/layout-components/dashboard/Country";
+import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const DocumentScraper = () => {
-	const { isActivated, contactNum, smsNum, whatsAppNum } = useUserContext()
+	const { isActivated, contactNum, smsNum, whatsAppNum, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
 	const columns = [
 		{
 			field: 'actions',
@@ -115,8 +114,6 @@ const DocumentScraper = () => {
 		if (extractedNumbers) {
 			let matchCnt = countryList.find((country)=>selectedCountry.value.toLowerCase() === country.cnt.toLowerCase());
 			let numbers = extractedNumbers.map(number => convertPhoneNumber(number));
-			console.log(selectedCountry)
-			console.log(matchCnt)
 			// setCountryCode(matchCnt.countryCode);
 			let filterNumber = numbers.map((num)=>{
 			  // console.log(num);
@@ -165,8 +162,8 @@ const DocumentScraper = () => {
 		const file = event.target.files[0];
 		let type = Object.keys(Files).map(docs=>Files[docs].type);
 		if(type.length > 1 && !isActivated){
-			// setLimit(true)
-			// setLimitMsg(`You cannot select multiple files during the free trial. Please consider purchasing our product!`);
+			openSnackBar()
+			handleSnackMessage('You cannot select multiple files during the free trial. Please consider purchasing our product!', "white", "text-danger")
 			fileInputRef.current.value = null;
 		}
 		else {
@@ -220,7 +217,8 @@ const DocumentScraper = () => {
 				}
 			}
 			else if(file.size > 51000000){
-				alert("This file size is too large, file size should be up to 50 MB!");
+				openSnackBar()
+				handleSnackMessage("This file size is too large, file size should be up to 50 MB!", "white", "text-danger")
 			}
 			else if (type.includes(filetypes.docx)){
 				const reader = new FileReader();
@@ -230,7 +228,8 @@ const DocumentScraper = () => {
 				reader.readAsArrayBuffer(file);
 			}
 			else {
-				alert(`File not supported!`);
+				openSnackBar()
+				handleSnackMessage("File not supported!", "white", "text-danger")
 			}
 		}
 	}
@@ -277,7 +276,10 @@ const DocumentScraper = () => {
 		<div>
 			<Seo title={"Document Data Scraper"} />
 			<PageHeader currentpage="Document Data Scraper" activepage="Lead Generation" img="/assets/iconfonts/dashboard-icon/docIcon.png" mainpage="Document Data Scraper" />
-
+			{
+				openSnack &&
+				<Snackbar content={snackMessage} isOpen={openSnack}/>
+			}
 			<div className="grid grid-cols-12 gap-x-5">
 				{numOfData.map((idx) => (
 					<div className="col-span-12 md:col-span-6" key={Math.random()}>
@@ -402,7 +404,7 @@ const DocumentScraper = () => {
 			}
 			{
 				isDownload &&
-				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"google-search-scraper"} isModal={isDownload} closeModel={closeModel}/>
+				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"document-data-scraper"} isModal={isDownload} closeModel={closeModel}/>
 			}
 			{/* alert boxes */}
 		</div>

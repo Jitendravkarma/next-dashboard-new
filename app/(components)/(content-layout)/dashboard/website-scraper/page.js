@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import axios from "axios";
 import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
-import { ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { getWebsiteData, requestWebsiteData } from "@/shared/apis/api";
@@ -14,7 +14,7 @@ import countryList from "@/shared/layout-components/dashboard/Country";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const WebsiteScraper = () => {
-	const { isActivated, contactNum, smsNum, whatsAppNum } = useUserContext()
+	const { isActivated, contactNum, smsNum, whatsAppNum, limitErr, handleLimitErr } = useUserContext()
 	const columns = [
 		{
 			field: 'actions',
@@ -191,7 +191,7 @@ const WebsiteScraper = () => {
 		  // const requestId = "5585cfed-4714-4ece-b164-077631380419"
 		  const limitErr = requestId?.response?.data?.message
 		  if(limitErr === "You have reached the limits of the free plan. Please upgrade your plan to continue using this service."){
-			fileInputRef.current.value = null;
+			handleLimitErr(limitErr)
 			// setIsModal(true)
 			setFile('');
 			setIsScraping(false)
@@ -207,6 +207,7 @@ const WebsiteScraper = () => {
 			const fetch_data = async () =>{
 			  errorCount++;
 			  const bulk_data = await getWebsiteData({fetch_id: requestId});
+			  console.log(bulk_data)
 			  if(!bulk_data.length){
 				interval = setTimeout(()=>{
 				  if(errorCount !== 10){
@@ -477,6 +478,10 @@ const WebsiteScraper = () => {
 			{
 				isDownload &&
 				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"google-search-scraper"} isModal={isDownload} closeModel={closeModel}/>
+			}
+			{
+				limitErr &&
+				<LimitReachedBox/>
 			}
 			{/* alert boxes */}
 		</div>

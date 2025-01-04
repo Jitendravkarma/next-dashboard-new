@@ -1,8 +1,11 @@
 "use client"
+import { activateAccount } from "@/shared/apis/api";
 import { ProfileService, ProfileService1 } from "@/shared/data/pages/contactdata";
 import { LanguageData, TimeZoneData } from "@/shared/data/pages/profile/profilesettingdata";
+import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
+import { useUserContext } from "@/shared/userContext/userContext";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -11,9 +14,10 @@ import DatePicker from "react-datepicker";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 import { TagsInput } from "react-tag-input-component";
+import Cookies from 'js-cookie';
 
 const Profile = () => {
-
+  const { user, setActivated, isActivated, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
   const [startDate, setStartDate] = useState(new Date());
   const [startDate1, setStartDate1] = useState(new Date());
   const [startDate2, setStartDate2] = useState(new Date());
@@ -22,6 +26,7 @@ const Profile = () => {
   const [startDate5, setStartDate5] = useState(new Date());
   const [startDate6, setStartDate6] = useState(new Date());
   const [startDate7, setStartDate7] = useState(new Date());
+  const [purchaseCode, setPurchaseCode] = useState("")
 
   const [selected, setSelected] = useState(["Laravel", "Angular", "Html", "VueJs", "React"]);  // react-tag-input-component
 
@@ -105,6 +110,36 @@ const Profile = () => {
   };
   const [ClassName1, setClassName1] = useState();
 
+  const handePurchaseChange = (e) => {
+    const value = e.target.value;
+    setPurchaseCode(value)
+  }
+
+  const handlePurchaseBlur = async (e) => {
+    const value = e.target.value;
+    if (value) {
+      try {
+        const response = await activateAccount(value);
+        if (response) {
+          console.log("response", response)
+          Cookies.set('purchaseCode', value)
+          setActivated()
+          setPurchaseCode(value)
+        }
+      } catch (error) {
+        const err = error.response.data.message
+        if(err === "Purchase code not verified"){
+          openSnackBar();
+          handleSnackMessage("Invalid purchase code", "white", "text-danger")
+        }
+        else if(err === "Purchased code is allready in used."){
+          openSnackBar();
+          handleSnackMessage("Purchased code is already in used.", "white", "text-danger")
+        }
+      }
+    }
+  }
+
   useEffect(() => {
     if (ProfileService1.returnImage1() != undefined) {
       setImage1(ProfileService1.returnImage1());
@@ -121,6 +156,10 @@ const Profile = () => {
     <div>
       <Seo title={"Profile Settings"} />
       <HelmetProvider>
+        {
+            openSnack &&
+            <Snackbar content={snackMessage} isOpen={openSnack}/>
+        }
         <Helmet>
           <body className={ClassName}></body>
         </Helmet>
@@ -212,19 +251,31 @@ const Profile = () => {
                         <div className="grid lg:grid-cols-2 gap-6">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Full Name</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="Firstname" />
+                            <input type="text" className="my-auto ti-form-input bg-gray-100" value={user.name} disabled={user.name} placeholder="Enter full name" />
                           </div>
                           {/* <div className="space-y-2">
                             <label className="ti-form-label mb-0">Last Name</label>
                             <input type="text" className="my-auto ti-form-input" placeholder="Lastname" />
+                          </div> */}
+                          <div className="space-y-2">
+                            <label className="ti-form-label mb-0">Email Address</label>
+                            <input type="email" className="my-auto ti-form-input bg-gray-100" value={user.email} disabled={user.email} placeholder="your@site.com" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Phone Number</label>
                             <input type="number" className="my-auto ti-form-input" placeholder="+91 123-456-789" />
-                          </div> */}
-                          <div className="space-y-2">
-                            <label className="ti-form-label mb-0">Email Address</label>
-                            <input type="email" className="my-auto ti-form-input" placeholder="your@site.com" />
+                          </div>
+                          <div className="space-y-2 relative">
+                            <label className="ti-form-label mb-0">Purchase Code</label>
+                            <input type="text" className={`my-auto ti-form-input ${openSnack && "text-danger"} ${isActivated && "text-success bg-gray-100"}`} placeholder="XXXX-XXXX-XXXX-XXXX" value={user.purchase_code ? user.purchase_code : purchaseCode} onChange={handePurchaseChange} onBlur={handlePurchaseBlur} disabled={isActivated || user.purchase_code} />
+                            <span className="absolute top-[58%] -translate-y-1/2 right-2">
+                              {
+                                isActivated ?
+                                <i className="ri-checkbox-circle-fill text-lg text-success"></i>
+                                :
+                                <i className="ri-close-line text-lg text-danger"></i>
+                              }
+                            </span>
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Date Of Birth</label>
@@ -281,7 +332,7 @@ const Profile = () => {
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Country</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="state" />
+                            <input type="text" className="my-auto ti-form-input" placeholder="country" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">State</label>

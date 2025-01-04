@@ -9,7 +9,7 @@ import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 const SignInPage = () => {
     const { handleSignIn, handleSignOut, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
     const [ loading, setLoading ] = useState(false)
-    const [ loginData, setLoginData ] = useState({email: "allmysource@gmail.com", password: "Dewas@123"})
+    const [ loginData, setLoginData ] = useState({email: "", password: ""})
 
     const handleChange = (e)=>{
         const name = e.target.name
@@ -26,10 +26,17 @@ const SignInPage = () => {
             try {
                 const response = await login(loginData);
                 const userData = response.user;
-                setAuthToken(response.access_token);
-                handleSignIn(userData, userData.verified);
-                // navigate.push("/dashboard/home/")
-                window.open('/dashboard/home/', '_blank');
+                if(userData.verified){
+                    setAuthToken(response.access_token);
+                    handleSignIn(userData, userData.verified);
+                    // navigate.push("/dashboard/home/")
+                    e.reset()
+                    window.open('/dashboard/home/', '_blank');
+                }
+                else {
+                    openSnackBar();
+                    handleSnackMessage("Please verify your email before signing in. Check your inbox or spam folder.", "white", "text-danger")
+                }
             } catch (error) {
                 openSnackBar();
                 handleSnackMessage(error.response?.data?.errors?.email, "white", "text-danger")
@@ -99,7 +106,7 @@ const SignInPage = () => {
                                                         <label htmlFor="email" className="block text-sm mb-2 dark:text-white">Email
                                                             address</label>
                                                         <div className="relative">
-                                                            <input type="email" id="email" value={loginData.email} onChange={handleChange} name="email" placeholder="example@example.com"
+                                                            <input type="email" id="email" value={loginData.email} onChange={handleChange} name="email" placeholder="Enter email"
                                                                 className="py-2 px-3 block w-full border-gray-200 rounded-sm text-sm focus:border-primary focus:ring-primary dark:bg-bgdark dark:border-white/10 dark:text-white/70"
                                                                 required />
                                                         </div>
