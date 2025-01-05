@@ -230,8 +230,8 @@ const GoogleSearchScraper = () => {
 						const countNotNullEmail = convertedData.filter(item=> item.email !== "N/A").length;
 						const countNotNullPhone = convertedData.filter(item=> item.phone !== "N/A").length;
 						const countNotNullURL = convertedData.filter(item=> item.website !== "N/A").length;
-						console.log(countNotNullEmail, countNotNullPhone, countNotNullURL)
-						// dashboardRecords("google", "map", queryBox?.length, countNotNullURL, countNotNullEmail, countNotNullPhone);
+						// console.log(countNotNullEmail, countNotNullPhone, countNotNullURL)
+						dashboardRecords("google", "map", queryBox?.length, countNotNullURL, countNotNullEmail, countNotNullPhone);
 						setData(convertedData)
 						setPer(100)
 						setProgressMsg(`Proccess completed!`)

@@ -249,7 +249,7 @@ const GoogleMapScraper = () => {
 					const fetchGoogleData = async()=>{
 						countRequest++;
 						const response = await getMapData({fetch_id: queryId});
-						console.log(response)
+						// console.log(response)
 						const responseData = response?.data?.data;
 						if(responseData && !responseData.length){
 							return new Promise(resolve=>{
@@ -283,6 +283,11 @@ const GoogleMapScraper = () => {
 					});
 					if (mergeData) {
 						const convertedData = convertData(mergeData)
+						const countNotNullEmail = convertedData.filter(item=> item.email !== "N/A").length;
+						const countNotNullPhone = convertedData.filter(item=> item.phone !== "N/A").length;
+						const countNotNullURL = convertedData.filter(item=> item.website !== "N/A").length;
+						// console.log(countNotNullEmail, countNotNullPhone, countNotNullURL)
+						dashboardRecords("map", "google", queryBox?.length, countNotNullURL, countNotNullEmail, countNotNullPhone);
 						setData(convertedData)
 						setPer(100)
 						setProgressMsg(`Proccess completed!`)
@@ -371,10 +376,6 @@ const GoogleMapScraper = () => {
 										}
 										return cur;
 									})
-									const countNotNullEmail = updatedData.filter(item=> !(item.email === "N/A" || item.email.length === 0)).length;
-									const countNotNullPhone = updatedData.filter(item=> !(item.phone === "N/A" || item.phone.length === 0)).length;
-									const countNotNullURL = updatedData.filter(item=> item.website !== "N/A").length;
-									// dashboardRecords("map", "google", queryBox?.length, countNotNullURL, countNotNullEmail, countNotNullPhone);
 									setData(updatedData)
 									clearInterval(interval)
 									setIsExtracting(false)

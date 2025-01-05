@@ -34,18 +34,11 @@ const Home = () => {
 	]
 
 	const [totalRecords, setTotalRecords] = useState([]);
-	const [getTotalRecords, setGetTotalRecords] = useState([]);
 
 	useEffect(()=>{
-		setGetTotalRecords(JSON.parse(localStorage.getItem("totalRecords")))
-		if(!getTotalRecords.length){
-			localStorage.setItem("totalRecords", JSON.stringify(recordData));
-		}
-	},[])
-
-	useEffect(()=>{
-		if(getTotalRecords){
-			const applyIcons = getTotalRecords.map((data)=>{
+		const getRecords = JSON.parse(localStorage.getItem("totalRecords"))
+		if(getRecords){
+			const applyIcons = getRecords.map((data)=>{
 				const find = icons.find((iconData)=>{
 					if(iconData.title === data.title){
 						return iconData
@@ -57,7 +50,11 @@ const Home = () => {
 			})
 			setTotalRecords(applyIcons)
 		}
-	}, [getTotalRecords])
+		else {
+			localStorage.setItem("totalRecords", JSON.stringify(recordData))
+			const getRecords = JSON.parse(localStorage.getItem("totalRecords"))
+		}
+	},[])
 
 	return (
 		<div>
@@ -118,8 +115,9 @@ const Home = () => {
 										<span
 											className="block w-3 h-3 rounded-full ltr:mr-2 rtl:ml-2 border-4 border-primary pointer-events-none"></span>
 										<span className="flex items-center">
-											<span
-												className="text-2xl text-gray-800 dark:text-white font-bold ltr:mr-2 rtl:ml-2 pointer-events-none">1.2M</span>
+											<span className="text-2xl text-gray-800 dark:text-white font-bold ltr:mr-2 rtl:ml-2 pointer-events-none">
+												1.2M
+											</span>
 											<span className="text-sm text-gray-400 dark:text-white/80">/ Queries</span>
 										</span>
 									</p>
@@ -129,8 +127,9 @@ const Home = () => {
 										<span
 											className="block w-3 h-3 rounded-full ltr:mr-2 rtl:ml-2 border-4 border-gray-200 pointer-events-none"></span>
 										<span className="flex items-center">
-											<span
-												className="text-2xl text-gray-800 dark:text-white font-bold ltr:mr-2 rtl:ml-2 pointer-events-none">1.1M</span>
+											<span className="text-2xl text-gray-800 dark:text-white font-bold ltr:mr-2 rtl:ml-2 pointer-events-none">
+												1.1M
+											</span>
 											<span className="text-sm text-gray-400 dark:text-white/80">/ Full Field</span>
 										</span>
 									</p>

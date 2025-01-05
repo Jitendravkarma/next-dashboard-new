@@ -14,7 +14,7 @@ import countryList from "@/shared/layout-components/dashboard/Country";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const WebsiteScraper = () => {
-	const { isActivated, contactNum, smsNum, whatsAppNum, limitErr, handleLimitErr } = useUserContext()
+	const { isActivated, contactNum, smsNum, whatsAppNum, limitErr, handleLimitErr, dashboardRecords } = useUserContext()
 	const columns = [
 		{
 			field: 'actions',
@@ -207,7 +207,7 @@ const WebsiteScraper = () => {
 			const fetch_data = async () =>{
 			  errorCount++;
 			  const bulk_data = await getWebsiteData({fetch_id: requestId});
-			  console.log(bulk_data)
+			//   console.log(bulk_data)
 			  if(!bulk_data.length){
 				interval = setTimeout(()=>{
 				  if(errorCount !== 10){
@@ -252,22 +252,14 @@ const WebsiteScraper = () => {
 					clearInterval(interval)
 					const data = convertData(bulk_data)
 					if(data.length){
-					  setData(data)
-					//   setActualData(data)
-					//   setRecords(data);
-					  setIsScraping(false);
-					//   setPercentage(100)
-					//   setMessages({firstMessage:`Scraping Completed.`, secondMessage: 
-					//   <>
-					// 	Progress is Completed!{" "}
-					// 	<FontAwesomeIcon className="text-green-600" icon={faThumbsUp} />
-					//   </>
-					//   })
-					  const countNotNullEmail = data.filter(item=> item.email.length).length;
-					  const countNotNullPhone = data.filter(item=> item.phone).length;
-					  const countNotNullURL = data.filter(item=> item?.url !== null).length || [];
-					//   dashboardRecords(countNotNullURL, countNotNullEmail, countNotNullPhone);
-					  return data;
+					 	setData(data)
+					  	setIsScraping(false);
+						const countNotNullEmail = data.filter(item=> item.email !== "N/A").length;
+						const countNotNullPhone = data.filter(item=> item.phone !== "N/A").length;
+						const countNotNullURL = data.filter(item=> item.website !== "N/A").length;
+						// console.log(countNotNullEmail, countNotNullPhone, countNotNullURL)
+						dashboardRecords("google", "map", 0, countNotNullURL, countNotNullEmail, countNotNullPhone);
+					  	return data;
 					}
 				  }
 				  

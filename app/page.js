@@ -30,8 +30,9 @@ const SignInPage = () => {
                     setAuthToken(response.access_token);
                     handleSignIn(userData, userData.verified);
                     // navigate.push("/dashboard/home/")
-                    e.reset()
+                    // e.reset()
                     window.open('/dashboard/home/', '_blank');
+                    setLoginData({email: "", password: ""})
                 }
                 else {
                     openSnackBar();

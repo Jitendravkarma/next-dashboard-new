@@ -123,7 +123,10 @@ export const UserProvider = ({ children }) => {
       setNet(false);
       setNetwork(false)
     }
-    setRecords(JSON.parse(localStorage.getItem("totalRecords")))
+    const getRecords = JSON.parse(localStorage.getItem("totalRecords"))
+    if(getRecords){
+      setRecords(getRecords)
+    }
     window.addEventListener("online", checkOn);
     window.addEventListener("offline", checkOff);
     return ()=>{
@@ -196,10 +199,11 @@ export const UserProvider = ({ children }) => {
         "phone": phone,
         [service] : totalUsedService
     };
-    
-    const updatedRecords = records.map(cur=>({...cur, text: (cur.title === exceptService ? cur.text : cur.text + recordsMap[cur.title])}))
-
-    localStorage.setItem("totalRecords", JSON.stringify(updatedRecords));
+    const getRecords = JSON.parse(localStorage.getItem("totalRecords"))
+    if(getRecords){
+      const updatedRecords = getRecords.map(cur=>({...cur, text: (cur.title === exceptService ? cur.text : cur.text + recordsMap[cur.title])}))
+      localStorage.setItem("totalRecords", JSON.stringify(updatedRecords));
+    }
   }
 
   const addEmails = (countEmail)=>{
