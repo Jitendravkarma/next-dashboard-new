@@ -52,19 +52,8 @@ const DocumentScraper = () => {
 		{ id: 1, icon: emailIcon, title:'email', class: "Total Email", text: 0, color: "primary/10" },
 		{ id: 2, icon: phoneIcon, title:'phone', class: "Total Phone", text: 0, color: "primary/10" },
 	]
-	const countries = [
-		{label: "australia", value: "australia"},
-		{label: "brazil", value: "brazil"},
-		{label: "canada", value: "canada"},
-		{label: "germany", value: "germany"},
-		{label: "france", value: "france"},
-		{label: "india", value: "india"},
-		{label: "italy", value: "italy"},
-		{label: "turkey", value: "turkey"},
-		{label: "united kingdom", value: "united kingdom"},
-		{label: "united states", value: "united states"}
-	]
 	let fileInputRef = useRef(null);
+	const [ countries, setCountries ] = useState([])
 	const [ numOfData, setNumOfData] = useState(recordData)
 	const [ selectedCountry, setSelectedCountry ] = useState("")
 	const [ file, setFile ] = useState("")
@@ -270,6 +259,16 @@ const DocumentScraper = () => {
 			}
 		})
 		setNumOfData(newData)
+	}, [])
+
+	useEffect(()=>{
+		const country = countryList.map(({cnt})=>{
+			return {
+				label: cnt,
+				value: cnt
+			}
+		})
+		setCountries(country)
 	}, [])
 
 	return (

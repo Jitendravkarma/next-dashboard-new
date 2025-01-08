@@ -103,16 +103,15 @@ const GoogleSearchScraper = () => {
 	},[isDownload])
 
 	const convertData = (data)=>{
-		return data.map(({title, link, snippet, phones, emails}, ind)=>{
+		return data.map(({title, link, snippet, phones, emails})=>{
 			return {
-				id: ind+1,
 				website: link,
 				title,
 				description: snippet,
 				phone: phones.length ? phones[0] : "N/A",
 				email: emails.length ? emails.join(", ") : "N/A"
 			}
-		})
+		}).filter(item => item.phone !== "N/A" || item.email !== "N/A").map((item, ind)=>({id:ind+1, ...item}));
 	}
 
 	const showGlobalData = async ()=>{
