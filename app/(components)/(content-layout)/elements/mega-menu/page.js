@@ -564,7 +564,7 @@ const Megamenu = () => {
 												<img src="../../assets/img/brand-logos/desktop-dark.png" alt="logo" className="hidden dark:block" />
 											</a>
 											<div className="sm:hidden">
-												<button type="button" className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-white/10 dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" data-hs-collapse="#navbar-collapse-columns-1" aria-controls="navbar-collapse-columns-1" aria-label="Toggle navigation">
+												<button type="button" className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-white/10 dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" data-hs-collapse="#navbar-collapse-columns-1" aria-controls="navbar-collapse-columns-1" aria-label="Toggle navigation">
 													<svg className="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" x2="21" y1="6" y2="6" /><line x1="3" x2="21" y1="12" y2="12" /><line x1="3" x2="21" y1="18" y2="18" /></svg>
 													<svg className="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
 												</button>
@@ -579,15 +579,15 @@ const Megamenu = () => {
 														<svg className="ms-1 flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
 													</button>
 
-													<div className="hs-dropdown-menu transition-[opacity,margin] sm:border duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full sm:w-48 bg-white sm:shadow-md rounded-lg py-2 sm:px-2 dark:bg-bgdark sm:dark:border dark:border-white/10 dark:divide-white/10">
+													<div className="hs-dropdown-menu transition-[opacity,margin] sm:border duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full sm:w-48 bg-white sm:shadow-md rounded-md py-2 sm:px-2 dark:bg-bgdark sm:dark:border dark:border-white/10 dark:divide-white/10">
 														<div className="flex flex-col">
-															<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+															<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																About
 															</a>
-															<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+															<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																Services
 															</a>
-															<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+															<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																Customer Story
 															</a>
 														</div>
@@ -600,28 +600,28 @@ const Megamenu = () => {
 														<svg className="ms-1 flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
 													</button>
 
-													<div className="hs-dropdown-menu transition-[opacity,margin] sm:border duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full end-0 sm:w-96 bg-white sm:shadow-md rounded-lg py-2 sm:px-2 dark:bg-bgdark sm:dark:border dark:border-white/10 dark:divide-white/10">
+													<div className="hs-dropdown-menu transition-[opacity,margin] sm:border duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full end-0 sm:w-96 bg-white sm:shadow-md rounded-md py-2 sm:px-2 dark:bg-bgdark sm:dark:border dark:border-white/10 dark:divide-white/10">
 														<div className="sm:grid sm:grid-cols-2">
 															<div className="flex flex-col">
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	About
 																</a>
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Services
 																</a>
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Customer Story
 																</a>
 															</div>
 
 															<div className="flex flex-col">
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Careers
 																</a>
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Careers: Overview
 																</a>
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Careers: Apply
 																</a>
 															</div>
@@ -635,37 +635,37 @@ const Megamenu = () => {
 														<svg className="ms-1 flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
 													</button>
 
-													<div className="hs-dropdown-menu transition-[opacity,margin] sm:border duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full end-0 sm:w-[30rem] bg-white sm:shadow-md rounded-lg py-2 sm:px-2 dark:bg-bgdark sm:dark:border dark:border-white/10 dark:divide-white/10">
+													<div className="hs-dropdown-menu transition-[opacity,margin] sm:border duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full end-0 sm:w-[30rem] bg-white sm:shadow-md rounded-md py-2 sm:px-2 dark:bg-bgdark sm:dark:border dark:border-white/10 dark:divide-white/10">
 														<div className="sm:grid sm:grid-cols-3">
 															<div className="flex flex-col">
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	About
 																</a>
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Services
 																</a>
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Customer Story
 																</a>
 															</div>
 
 															<div className="flex flex-col">
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Careers
 																</a>
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Careers: Overview
 																</a>
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Careers: Apply
 																</a>
 															</div>
 
 															<div className="flex flex-col">
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Log In
 																</a>
-																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
+																<a className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-primary dark:text-white/70 dark:hover:bg-bodybg dark:hover:text-white dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-primary" href="#!">
 																	Sign Up
 																</a>
 															</div>

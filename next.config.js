@@ -8,9 +8,17 @@ const nextConfig = {
   swcMinify: true,
   basePath: "",
 	assetPrefix : "",
+  // images: {
+  //   loader: "imgix",
+  //   path: "/",
+  // },
   images: {
-    loader: "imgix",
-    path: "/",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**", // Allows images from any domain
+      },
+    ],
   },
 };
 

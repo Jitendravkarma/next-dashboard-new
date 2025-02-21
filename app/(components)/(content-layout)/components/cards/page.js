@@ -1317,7 +1317,7 @@ const Cards = () => {
 							<p className="mt-2 text-gray-500 dark:text-white/70">
 								With supporting text below as a natural lead-in to additional content.
 							</p>
-							<a className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-primary hover:text-primary/80 disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary/80 dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-gray-600" href="#!">
+							<a className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-md border border-transparent text-primary hover:text-primary/80 disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary/80 dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-gray-600" href="#!">
 								Card link
 								<i className="ri-arrow-right-s-line flex-shrink-0"></i>
 							</a>
@@ -1334,7 +1334,7 @@ const Cards = () => {
 								<p className="mt-2 text-gray-500 dark:text-white/70">
 									With supporting text below as a natural lead-in to additional content.
 								</p>
-								<a className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-primary hover:text-primary/80 disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary/80 dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-gray-600" href="#!">
+								<a className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-md border border-transparent text-primary hover:text-primary/80 disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary/80 dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-gray-600" href="#!">
 									Card link
 									<i className="ri-arrow-right-s-line flex-shrink-0"></i>
 								</a>
@@ -1374,7 +1374,7 @@ const Cards = () => {
 							<p className="mt-2 text-gray-500 dark:text-white/70">
 								With supporting text below as a natural lead-in to additional content.
 							</p>
-							<a className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-primary hover:text-primary/80 disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary/80 dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-gray-600" href="#!">
+							<a className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-md border border-transparent text-primary hover:text-primary/80 disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary/80 dark:focus:outline-none dark:focus:ring-0 dark:focus:ring-gray-600" href="#!">
 								Card link
 								<i className="ri-arrow-right-s-line flex-shrink-0"></i>
 							</a>

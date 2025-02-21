@@ -531,7 +531,7 @@ const Alerts = () => {
 							</h5>
 						</div>
 						<div className="box-body space-y-3">
-							<div className="bg-success/10 border-t-2 border-success rounded-lg p-4 dark:bg-success/30" role="alert">
+							<div className="bg-success/10 border-t-2 border-success rounded-md p-4 dark:bg-success/30" role="alert">
 								<div className="flex">
 									<div className="flex-shrink-0">
 										<span className="inline-flex justify-center items-center size-8 rounded-full border-4 border-success/10 bg-success/20 text-success dark:border-success dark:bg-success dark:text-white">

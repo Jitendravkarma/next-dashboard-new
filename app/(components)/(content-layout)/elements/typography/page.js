@@ -119,7 +119,7 @@ const Typography = () => {
             </div>
             <div className="box-body space-y-8">
               <div className="">
-                <details className="open:bg-white dark:open:bg-bgdark open:ring-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-6 rounded-lg" open>
+                <details className="open:bg-white dark:open:bg-bgdark open:ring-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-6 rounded-md" open>
                   <summary className="text-sm leading-6 text-gray-800 dark:text-white font-semibold select-none">
                     Why do they call it Ovaltine?
                   </summary>

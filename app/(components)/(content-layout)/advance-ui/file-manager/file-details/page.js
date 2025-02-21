@@ -42,7 +42,7 @@ const Filedetails = () => {
                             <h5 className="box-title">File Details</h5>
                         </div>
                         <div className="box-body p-0">
-                            <div className="rounded-lg overflow-auto">
+                            <div className="rounded-md overflow-auto">
                                 <table className="ti-custom-table ti-custom-table-head">
                                     <tbody>
                                         <tr className="divide-x divide-gray-200 dark:divide-white/10">

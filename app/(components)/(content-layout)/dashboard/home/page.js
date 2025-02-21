@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { SalesOverView, SocialVisitor, customerdata, topselling } from "@/shared/data/dashboard/salesdata";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
-import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
 import { SalesValue } from "@/shared/data/charts/chartjsdata";
 import UpgradePlan from "@/shared/layout-components/dashboard/UpgradePlan";
@@ -58,7 +57,6 @@ const Home = () => {
 
 	return (
 		<div>
-			<Seo title='Dashboard' />
 			<PageHeader currentpage="Dashboard" img="/assets/iconfonts/dashboard-icon/dashboard.png" activepage="Home" mainpage="Dashboard" />
 			<div className="grid grid-cols-12 gap-x-5">
 				{totalRecords.map((idx) => (
@@ -79,7 +77,7 @@ const Home = () => {
 										<div className="text-gray-500 dark:text-white/70 mb-1 text-xs">
 											<span
 												className="text-gray-800 font-semibold text-xl leading-none align-bottom dark:text-white">
-												{idx.text}
+												{idx.text.toLocaleString('en-US')}
 											</span>
 										</div>
 									</div>

@@ -54,7 +54,7 @@ export const MENUITEMS = [
 	// { path: "/widgets", icon: WidgetsSvg, title: "Widgets", type: "link", active: false, selected: false },
 	
 	{
-		menutitle: "More Services",
+		menutitle: "Local Services",
 	},
 	
 	// {

@@ -183,7 +183,7 @@ const Tooltipspopovers = () => {
 												<path d="M2.27921 10.64L7.92565 4.99357C8.12091 4.79831 8.4375 4.79831 8.63276 4.99357L14.2792 10.64" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
 											</svg>
 										</span>
-										<div className="hs-tooltip-content ti-main-tooltip-content hidden p-0 max-w-xs border-gray-200 text-start rounded-lg" role="tooltip">
+										<div className="hs-tooltip-content ti-main-tooltip-content hidden p-0 max-w-xs border-gray-200 text-start rounded-md" role="tooltip">
 											<span className="pt-3 px-4 block text-lg font-bold text-gray-800 dark:text-white">Overview</span>
 											<div className="py-2 px-3 text-sm text-gray-600 dark:text-white/70">
 												<svg className="rounded-md mb-3" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">

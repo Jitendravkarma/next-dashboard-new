@@ -30,12 +30,12 @@ const Switcher = ({ local_varaiable, ThemeChanger }) => {
                 <div className="ti-offcanvas-body pt-0 border-b dark:border-white/10 z-10 relative">
                     <div className="flex space-x-2 rtl:space-x-reverse" aria-label="Tabs" role="tablist">
                         <button type="button"
-                            className="hs-tab-active:bg-secondary/10 w-full hs-tab-active:border-b-transparent hs-tab-active:text-secondary dark:hs-tab-active:bg-black/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-secondary -mb-px py-2 px-3 bg-white text-xs font-medium text-center border text-gray-500 rounded-lg hover:text-gray-700 dark:bg-bgdark dark:border-white/10 dark:text-white/70 active"
+                            className="hs-tab-active:bg-secondary/10 w-full hs-tab-active:border-b-transparent hs-tab-active:text-secondary dark:hs-tab-active:bg-black/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-secondary -mb-px py-2 px-3 bg-white text-xs font-medium text-center border text-gray-500 rounded-md hover:text-gray-700 dark:bg-bgdark dark:border-white/10 dark:text-white/70 active"
                             id="switcher-item-1" data-hs-tab="#switcher-1" aria-controls="switcher-1" role="tab">
                             Theme Style
                         </button>
                         <button type="button"
-                            className="hs-tab-active:bg-secondary/10 w-full hs-tab-active:border-b-transparent hs-tab-active:text-secondary dark:hs-tab-active:bg-black/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-secondary -mb-px py-2 px-3 bg-white text-xs font-medium text-center border text-gray-500 rounded-lg hover:text-gray-700 dark:bg-bgdark dark:border-white/10 dark:text-white/70 dark:hover:text-gray-300"
+                            className="hs-tab-active:bg-secondary/10 w-full hs-tab-active:border-b-transparent hs-tab-active:text-secondary dark:hs-tab-active:bg-black/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-secondary -mb-px py-2 px-3 bg-white text-xs font-medium text-center border text-gray-500 rounded-md hover:text-gray-700 dark:bg-bgdark dark:border-white/10 dark:text-white/70 dark:hover:text-gray-300"
                             id="switcher-item-2" data-hs-tab="#switcher-2" aria-controls="switcher-2" role="tab">
                             Theme Colors
                         </button>

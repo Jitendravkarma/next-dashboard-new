@@ -403,7 +403,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Find more detailed insctructions here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>
@@ -427,7 +427,7 @@ const Timeline = () => {
                     <h3 className="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
                       Release v5.2.0 quick bug fix &#128030;
                     </h3>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <span className="flex flex-shrink-0 justify-center items-center size-4 bg-white border border-gray-200 text-[10px] font-semibold uppercase text-gray-600 rounded-full dark:bg-bodybg dark:border-white/10 dark:text-white/70">
                         A
                       </span>
@@ -456,7 +456,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Finally! You can check it out here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>
@@ -535,7 +535,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Find more detailed insctructions here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>
@@ -559,7 +559,7 @@ const Timeline = () => {
                     <h3 className="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
                       Release v5.2.0 quick bug fix &#128030;
                     </h3>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <span className="flex flex-shrink-0 justify-center items-center size-4 bg-white border border-gray-200 text-[10px] font-semibold uppercase text-gray-600 rounded-full dark:bg-bodybg dark:border-white/10 dark:text-white/70">
                         A
                       </span>
@@ -588,7 +588,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Finally! You can check it out here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>
@@ -692,7 +692,7 @@ const Timeline = () => {
                 {/* <!-- End Heading --> */}
 
                 {/* <!-- Item --> */}
-                <div className="flex gap-x-3 relative group rounded-lg hover:bg-gray-100 dark:hover:bg-white/10">
+                <div className="flex gap-x-3 relative group rounded-md hover:bg-gray-100 dark:hover:bg-white/10">
                   <a className="absolute inset-0 z-[1]" href="#!"></a>
 
                   {/* <!-- Icon --> */}
@@ -712,7 +712,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Find more detailed insctructions here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 relative z-10 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-white hover:shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 relative z-10 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-white hover:shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>
@@ -722,7 +722,7 @@ const Timeline = () => {
                 {/* <!-- End Item --> */}
 
                 {/* <!-- Item --> */}
-                <div className="flex gap-x-3 relative group rounded-lg hover:bg-gray-100 dark:hover:bg-white/10">
+                <div className="flex gap-x-3 relative group rounded-md hover:bg-gray-100 dark:hover:bg-white/10">
                   <a className="absolute inset-0 z-[1]" href="#!"></a>
 
                   {/* <!-- Icon --> */}
@@ -738,7 +738,7 @@ const Timeline = () => {
                     <h3 className="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
                       Release v5.2.0 quick bug fix &#128030;
                     </h3>
-                    <button type="button" className="mt-1 -ms-1 p-1 relative z-10 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-white hover:shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 relative z-10 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-white hover:shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <span className="flex flex-shrink-0 justify-center items-center size-4 bg-white border border-gray-200 text-[10px] font-semibold uppercase text-gray-600 rounded-full dark:bg-bodybg dark:border-white/10 dark:text-white/70">
                         A
                       </span>
@@ -750,7 +750,7 @@ const Timeline = () => {
                 {/* <!-- End Item --> */}
 
                 {/* <!-- Item --> */}
-                <div className="flex gap-x-3 relative group rounded-lg hover:bg-gray-100 dark:hover:bg-white/10">
+                <div className="flex gap-x-3 relative group rounded-md hover:bg-gray-100 dark:hover:bg-white/10">
                   <a className="absolute inset-0 z-[1]" href="#!"></a>
 
                   {/* <!-- Icon --> */}
@@ -769,7 +769,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Finally! You can check it out here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 relative z-10 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-white hover:shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 relative z-10 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-white hover:shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>
@@ -787,7 +787,7 @@ const Timeline = () => {
                 {/* <!-- End Heading --> */}
 
                 {/* <!-- Item --> */}
-                <div className="flex gap-x-3 relative group rounded-lg hover:bg-gray-100 dark:hover:bg-white/10">
+                <div className="flex gap-x-3 relative group rounded-md hover:bg-gray-100 dark:hover:bg-white/10">
                   <a className="absolute inset-0 z-[1]" href="#!"></a>
 
                   {/* <!-- Icon --> */}
@@ -853,7 +853,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Find more detailed insctructions here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>
@@ -883,7 +883,7 @@ const Timeline = () => {
                     <h3 className="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
                       Release v5.2.0 quick bug fix &#128030;
                     </h3>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <span className="flex flex-shrink-0 justify-center items-center size-4 bg-white border border-gray-200 text-[10px] font-semibold uppercase text-gray-600 rounded-full dark:bg-bodybg dark:border-white/10 dark:text-white/70">
                         A
                       </span>
@@ -918,7 +918,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Finally! You can check it out here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>
@@ -995,7 +995,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Find more detailed insctructions here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>
@@ -1021,7 +1021,7 @@ const Timeline = () => {
                     <h3 className="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
                       Release v5.2.0 quick bug fix &#128030;
                     </h3>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <span className="flex flex-shrink-0 justify-center items-center size-4 bg-white border border-gray-200 text-[10px] font-semibold uppercase text-gray-600 rounded-full dark:bg-bodybg dark:border-white/10 dark:text-white/70">
                         A
                       </span>
@@ -1050,7 +1050,7 @@ const Timeline = () => {
                     <p className="mt-1 text-sm text-gray-600 dark:text-white/70">
                       Finally! You can check it out here.
                     </p>
-                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
+                    <button type="button" className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-md border border-transparent text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white/70 dark:hover:dark:bg-bodybg dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-white/10">
                       <img className="flex-shrink-0 size-4 rounded-full" src="../../assets/img/users/1.jpg" alt="Image Description" />
                       James Collins
                     </button>

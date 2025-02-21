@@ -4,6 +4,7 @@ import countryList from './Country';
 import { useUserContext } from '@/shared/userContext/userContext';
 import Link from 'next/link';
 import { Download } from './DownloadBtn';
+import DatePicker from 'react-datepicker';
 
 const Logo = ()=>{
   return(
@@ -465,7 +466,7 @@ const LimitReachedBox = memo(({message="You have reached the limits of the free 
               <button
                   type="button"
                   onClick={()=>handleLimitErr("")}
-                  className="absolute top-4 right-2 text-gray-400 bg-transparent hover-bg-gray-200 hover-text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark-hover-bg-gray-600 dark-hover-text-white"
+                  className="absolute top-4 right-2 text-gray-400 bg-transparent hover-bg-gray-200 hover-text-gray-900 rounded-md text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark-hover-bg-gray-600 dark-hover-text-white"
                   data-modal-hide="defaultModal"
               >
                   <svg
@@ -545,7 +546,7 @@ const WhoisDownloadBox = memo(({closeModel}) => {
               <button
                   type="button"
                   onClick={()=>closeModel("")}
-                  className="absolute top-4 right-2 text-gray-400 bg-transparent hover-bg-gray-200 hover-text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark-hover-bg-gray-600 dark-hover-text-white"
+                  className="absolute top-4 right-2 text-gray-400 bg-transparent hover-bg-gray-200 hover-text-gray-900 rounded-md text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark-hover-bg-gray-600 dark-hover-text-white"
                   data-modal-hide="defaultModal"
               >
                   <svg
@@ -593,6 +594,239 @@ const WhoisDownloadBox = memo(({closeModel}) => {
   );
 })
 
+const ValidityBox = memo(({ id, closeModel }) => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [alertMsg, setAlertMsg] = useState("");
+
+  const handleDate = () => {
+    const customers = JSON.parse(localStorage.getItem("customers")) || [];
+    const options = { year: "numeric", month: "short", day: "numeric" };
+    const formattedDate = new Date(startDate).toLocaleDateString("en-GB", options).replace(",", "");
+
+    const updatedCustomers = customers.map(customer => ({
+      ...customer,
+      validity: customer.id === id ? formattedDate : customer.validity,
+    }));
+
+    localStorage.setItem("customers", JSON.stringify(updatedCustomers));
+    setAlertMsg("Account validity set successfully.");
+    setTimeout(() => closeModel(), 2000);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") closeModel("");
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [closeModel]);
+
+  const handleOutsideClick = (e) => {
+    if (e.target.id === "popup-container") closeModel("");
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div
+        id="popup-container"
+        onClick={handleOutsideClick}
+        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      >
+        <div className="bg-white rounded-md shadow-lg px-8 py-6 max-w-lg w-full relative">
+          <button
+            type="button"
+            onClick={() => closeModel("")}
+            className="absolute top-4 right-4 text-gray-600 focus:outline-none hover:bg-gray-200 hover:text-gray-900 p-2 rounded-full"
+          >
+            <svg
+              className="w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <span className="sr-only">Close</span>
+          </button>
+
+          <div className="text-center">
+            <Logo />
+            <h2 className="mt-4 text-2xl font-bold text-gray-800">Add / Edit Validity</h2>
+            <p className="text-sm text-gray-600 mt-2">Select a date to set account validity.</p>
+          </div>
+
+          <div className="mt-6 space-y-4">
+            <div>
+              <DatePicker
+                className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-700 focus:ring-2 focus:ring-secondary focus:outline-none"
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                placeholderText="Choose a date"
+                dateFormat="dd-MM-yyyy"
+              />
+            </div>
+
+            <div className="text-right">
+              <button
+                className="bg-blue-600 text-white px-6 py-2 rounded-md transition duration-300 hover:bg-blue-700"
+                onClick={handleDate}
+              >
+                Set Validity
+              </button>
+            </div>
+          </div>
+
+          {alertMsg && (
+            <div className="mt-4 text-center">
+              <span className="text-sm bg-green-100 text-green-600 px-3 py-1 rounded-md">
+                {alertMsg}
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+});
+
+
+const UpgradePlanPopup = memo(({ closeModel }) => {
+  const [selectedPlan, setSelectedPlan] = useState('Premium');
+  const [alertMsg, setAlertMsg] = useState('');
+  const [offers, setOffers] = useState([
+    "20% Off on Gold Plan for a limited time!",
+    "Get 3 months free with the Premium Plan!",
+    "Exclusive access to new features with Basic Plan."
+  ]);
+
+  const handleUpgrade = () => {
+    if (selectedPlan === 'Premium') {
+      setAlertMsg("You are already on the Premium plan. Click Renew to extend your plan.");
+    } else {
+      setAlertMsg(`${selectedPlan} plan selected successfully!`);
+    }
+
+    setTimeout(() => {
+      closeModel();
+    }, 2000);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeModel();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  const handleOutsideClick = (e) => {
+    if (e.target.id === 'popup-container') {
+      closeModel();
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div
+        id="popup-container"
+        onClick={handleOutsideClick}
+        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      >
+        <div className="bg-white rounded-md shadow-xl p-10 max-w-lg w-full relative transition-all transform scale-95">
+          <div className="modal-body">
+            <div className="text-center">
+              <Logo />
+              <h2 className="text-2xl font-bold text-gray-800 mt-4">Renew / Upgrade Plan</h2>
+              <p className="text-gray-600 mt-2">Choose the plan that suits you best. Your current plan is <strong>{selectedPlan}</strong>.</p>
+            </div>
+
+            <div className="mt-6 space-y-4">
+              {/* Plan Options */}
+              <div className="grid grid-cols-12 space-x-4">
+              <div
+                  onClick={() => setSelectedPlan('Premium')}
+                  className={`relative col-span-4 shadow overflow-hidden rounded-md cursor-pointer text-center p-4 rounded-md transition duration-300 ${selectedPlan === 'Premium' ? 'bg-secondary/10' : 'hover:bg-secondary/10'}`}
+                >
+                  {/* Ribbon */}
+                  <div
+                    className="absolute top-10 w-20 bg-danger text-white text-xs px-4 py-1 transform rotate-45 origin-top-right"
+                    style={{ transformOrigin: 'top right', right: "-17px" }}
+                  >
+                    Best
+                  </div>
+                  
+                  <i className="ri-vip-crown-line text-4xl text-secondary mx-auto"></i>
+                  <p className="text-center text-gray-700 mt-2">
+                    Premium Plan <i className="ri-question-line" title="You can make 500 clients"></i>
+                  </p>
+                  <p className="text-center text-gray-700 mt-2">Rs25000/-</p>
+                </div>
+                <div
+                  onClick={() => setSelectedPlan('Gold')}
+                  className={`col-span-4 shadow rounded-md cursor-pointer text-center p-4 rounded-md transition duration-300 ${selectedPlan === 'Gold' ? 'bg-warning/10' : 'hover:bg-warning/10'}`}
+                >
+                  <i className={`ri-medal-line text-4xl text-warning mx-auto`}></i>
+                  <p className="text-center text-gray-700 mt-2">Gold Plan <i className="ri-question-line" title='You can make 300 clients'></i></p>
+                  <p className="text-center text-gray-700 mt-2">Rs15000/-</p>
+                </div>
+                <div
+                  onClick={() => setSelectedPlan('Basic')}
+                  className={`col-span-4 shadow rounded-md cursor-pointer text-center p-4 rounded-md transition duration-300 ${selectedPlan === 'Basic' ? 'bg-info/10' : 'hover:bg-info/10'}`}
+                >
+                  <i className="ri-bard-line text-4xl text-info mx-auto"></i>
+                  <p className="text-center text-gray-700 mt-2">Basic Plan <i className="ri-question-line" title='You can make 100 clients'></i></p>
+                  <p className="text-center text-gray-700 mt-2">Rs5000/-</p>
+                </div>
+              </div>
+
+              {/* Offers */}
+              <div className="mt-6 text-center">
+                <h3 className="text-lg font-semibold text-gray-800">Special Offers</h3>
+                <ul className="mt-4 space-y-2">
+                  {offers.map((offer, index) => (
+                    <li key={index} className="text-gray-600">{offer}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="mt-6 flex justify-center space-x-4">
+                <button
+                  onClick={handleUpgrade}
+                  className="bg-blue-600 text-white px-6 py-2 rounded-md transition duration-300 hover:bg-blue-700"
+                >
+                  {selectedPlan === 'Premium' ? 'Renew Plan' : 'Upgrade Plan'}
+                </button>
+                <button
+                  onClick={() => closeModel()}
+                  className="bg-gray-200 text-gray-700 px-6 py-2 rounded-md transition duration-300 hover:bg-gray-300"
+                >
+                  Cancel
+                </button>
+              </div>
+
+              {/* Alert Message */}
+              {alertMsg && (
+                <div className="mt-4 text-center text-gray-700">
+                  <span className="inline-block bg-green-200 text-green-800 px-4 py-2 rounded-md">{alertMsg}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+});
+
 const DownloadBox = memo(({csvHeaders, data, fileName, closeModel}) => {
   const [ freeData, setFreeData ] = useState(data)
   useEffect(() => {
@@ -628,7 +862,7 @@ const DownloadBox = memo(({csvHeaders, data, fileName, closeModel}) => {
           <button
               onClick={closeModel}
               type="button"
-              className="absolute top-4 right-2 text-gray-400 bg-transparent hover-bg-gray-200 hover-text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark-hover-bg-gray-600 dark-hover-text-white"
+              className="absolute top-4 right-2 text-gray-400 bg-transparent hover-bg-gray-200 hover-text-gray-900 rounded-md text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark-hover-bg-gray-600 dark-hover-text-white"
               data-modal-hide="defaultModal"
           >
               <svg
@@ -679,4 +913,4 @@ const DownloadBox = memo(({csvHeaders, data, fileName, closeModel}) => {
   );
 })
 
-export { ContactBox, SmsBox, WhatsappBox, EmailBox, LimitReachedBox, WhoisDownloadBox, DownloadBox }
+export { ContactBox, SmsBox, WhatsappBox, EmailBox, LimitReachedBox, WhoisDownloadBox, DownloadBox, ValidityBox, UpgradePlanPopup }

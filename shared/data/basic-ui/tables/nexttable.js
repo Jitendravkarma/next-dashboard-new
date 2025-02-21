@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 import { sortOption } from '../../forms/formselect/formselect';
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
-const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount }) => {
-  const [rows, setRows] = useState(data);
+const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, hideClear = false, sortOptions = sortOption }) => {
+  const [rows, setRows] = useState([]);
   const [searchText, setSearchText] = useState('');
   const [sortName, setSortName] = useState('');
   const [paginationModel, setPaginationModel] = useState({
@@ -15,25 +15,35 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount }
 
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
-    const searchFields = ['title', 'description', 'phone', 'email', 'keywords'];
+    const searchFields = ['title', 'website', 'description', 'keywords', 'phone', 'email', 'query'];
     const filteredRows = data.filter((row) => {
       return searchFields.some((field) => {
-        return row[field] && row[field].toLowerCase().includes(value);
+        return row[field] && String(row[field]).toLowerCase().includes(value);
       });
     });
     setSearchText(value);
-    setRows(filteredRows);
+    setRows(filteredRows.map((item, ind)=>({id: ind+1, ...item})));
   };
 
   const handleSorting = (e)=>{
-    const filterData = data.filter(row=>row[e.label] !== "N/A")
-    setRows(filterData)
+    const filterData = data.filter(row=>(row[e.label] !== "N/A")).map((item, ind)=>({id: ind+1, ...item}))
+    let sort=[];
+    if(e.label === "Paid"){
+      sort = data.filter(row=>(row[e.value.toLowerCase()]))
+    }
+    else if(e.label === "Unpaid"){
+      sort = data.filter(row=>(!row[e.value.toLowerCase()]))
+    }
+    else if(e.value === "Expiry"){
+      sort = data.filter(row=>row[e.value.toLowerCase()])
+    }
+    setRows(sort.length ? sort : filterData)
     setSortName(e)
   }
 
   const removeSorting = ()=> {
     setSortName("")
-    setRows(data)
+    setRows(data.map((item, ind)=>({id: ind+1, ...item})))
   }
 
   const handleProcessRowUpdate = (newRow) => {
@@ -48,9 +58,16 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount }
     console.error('Error updating row:', error);
   };
 
-  useEffect(()=>{
-    setRows(data) 
-  },[data])
+  useEffect(() => {
+    const serialData = data.map((item, ind) => {
+      if (item.id !== undefined) {
+        return item; // Keep the existing data as is
+      }
+      return { id: ind + 1, ...item };
+    });
+    setRows(serialData);
+  }, [data]);
+  
 
   useEffect(()=>{
     const website = rows.filter(row=> row.website !== "N/A").length;
@@ -68,14 +85,22 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount }
   return (
     <div className="box-body">
       <div className="flex justify-between mb-4">
-        <div className='w-1/4'>
-          <input
-            type="text"
-            value={searchText}
-            onChange={handleSearch}
-            placeholder="Search..."
-            className="ti-form-input"
-          />
+        <div className='flex items-center gap-4'>
+          <div>
+            <input
+              type="text"
+              value={searchText}
+              onChange={handleSearch}
+              placeholder="Search..."
+              className="ti-form-input"
+            />
+          </div>
+          {
+            progressStatus.isScraping &&
+            <div>
+              <div className="ti-spinner w-8 h-8 text-primary" role="status" aria-label="loading"><span className="sr-only">Loading...</span></div>
+            </div>
+          }
         </div>
 
         <div className="flex gap-2 items-center">
@@ -86,16 +111,27 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount }
               <i className="ri-close-line"></i>
             </button>
           }
-          <Select classNamePrefix='react-select ti-form-input' id='react-select-3-live-region' value={sortName} className="capitalize" options={sortOption} placeholder='Sort By' onChange={handleSorting} />
+          <Select classNamePrefix='react-select ti-form-input' id='react-select-3-live-region' value={sortName} className="capitalize" options={sortOptions} placeholder='Sort By' onChange={handleSorting} />
 
-          <button type="button" className="py-1 px-2 ti-btn ml-0 md:ml-auto bg-red-500 text-white hover:bg-red-600 focus:ring-red-500 dark:focus:ring-offset-white/10" onClick={clearData} disabled={progressStatus.isScraping || progressStatus.isExtracting}>
-            Clear Data
-            <i className="ri-close-line"></i>
-          </button>
+          {
+            !hideClear &&
+            <button type="button" className="py-1 px-2 ti-btn ml-0 md:ml-auto bg-red-500 text-white hover:bg-red-600 focus:ring-red-500 dark:focus:ring-offset-white/10" onClick={clearData} disabled={progressStatus.isScraping || progressStatus.isExtracting}>
+              Clear Data
+              <i className="ri-close-line"></i>
+            </button>
+          }
         </div>
       </div>
       <DataGrid
-        rows={rows}
+        rows={
+          progressStatus.isScraping && !rows.length
+            ? Array.from({ length: 10 }, (_, index) => ({
+                id: `skeleton-${index}`,
+                name: "",
+                age: "",
+              })) // Placeholder rows for skeleton
+            : rows
+        }
         columns={columns}
         pagination
         paginationModel={paginationModel}

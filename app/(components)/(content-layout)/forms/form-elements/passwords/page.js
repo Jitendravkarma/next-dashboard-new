@@ -501,7 +501,7 @@ const Passwords = () => {
                             {/* <!-- Form Group --> */}
                             <div className="max-w-sm mb-5">
                                 <label htmlFor="hs-toggle-password-with-checkbox" className="block text-sm mb-2 dark:text-white">Current password</label>
-                                <input id="hs-toggle-password-with-checkbox" type="password" className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-primary focus:ring-primary disabled:opacity-50 disabled:pointer-events-none dark:!bg-light dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Enter current password" defaultValue="12345qwerty" />
+                                <input id="hs-toggle-password-with-checkbox" type="password" className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-primary focus:ring-primary disabled:opacity-50 disabled:pointer-events-none dark:!bg-light dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Enter current password" defaultValue="12345qwerty" />
 
                                 <div className="flex mt-4">
                                 <input type="checkbox" className=" ti-form-checkbox mt-0.5"
