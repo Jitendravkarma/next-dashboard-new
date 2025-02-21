@@ -25,7 +25,7 @@ const About = () => {
               </p>
               
               <p className="mb-2 text-xss font-light leading-normal">
-              Founded in 2015, <b>Neuralnetics Technologies Private Limited</b> specializes in management software, including our <b>business directory scraper</b> and <b>yellow pages extractor</b>. With over 75 products, we offer tools for <b>data scraping</b>, such as <b>PDF scrapers</b> and <b>image scraping tools</b>. Our solutions streamline data collection for users worldwide.
+              Founded in 2015, <b>Design Collection</b> specializes in management software, including our <b>business directory scraper</b> and <b>yellow pages extractor</b>. With over 75 products, we offer tools for <b>data scraping</b>, such as <b>PDF scrapers</b> and <b>image scraping tools</b>. Our solutions streamline data collection for users worldwide.
               </p>
               <hr className="border-t border-gray-300 my-4"></hr>
               <p className="text-xl text-blue-600 font-normal mb-5">

@@ -161,7 +161,7 @@ const SignUpForm = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className="flex items-center">
+                                <div className="flex gap-2 items-center">
                                     <div className="flex">
                                         <input id="remember-me" name="rememberMe" type="checkbox" onChange={handleChange}
                                             className="shrink-0 mt-0.5 border-gray-200 rounded text-primary  focus:ring-primary dark:bg-bgdark dark:border-white/10 dark:checked:bg-primary dark:checked:border-primary dark:focus:ring-offset-white/10" />{" "}
@@ -169,7 +169,7 @@ const SignUpForm = () => {
                                     <div className="ltr:ml-3 rtl:mr-3">
                                         <label htmlFor="remember-me" className="text-sm dark:text-white">I accept the <Link
                                             className="text-primary decoration-2 hover:underline font-medium"
-                                            href={"/terms-conditions"}>Terms and Conditions</Link></label>
+                                            href={"/legal-policy"}>Terms and Conditions</Link></label>
                                     </div>
                                 </div>
 

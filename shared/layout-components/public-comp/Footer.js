@@ -18,7 +18,7 @@ const Footer = () => {
     "Expert web scraping for comprehensive insights"
   ], []);
   const copyright =
-    "© 2016. Neuralnetics Technologies Private Limited owns all rights. Creator of webcrawlerspider.com";
+    "© 2016. Design Collection owns all rights. Creator of webcrawlerspider.com";
 
   // initialize components based on data attribute selectors
   return (
@@ -95,7 +95,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/terms-conditions"
+                  href="/legal-terms"
                   className="me-4 text-xxs text-white md:me-6 "
                 >
                   Terms and Condition
@@ -103,7 +103,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/privacy-policy"
+                  href="/legal-policy"
                   className="me-4 text-xxs text-white md:me-6"
                 >
                   Privacy Policy

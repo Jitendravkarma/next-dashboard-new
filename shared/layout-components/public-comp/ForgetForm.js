@@ -70,7 +70,7 @@ const ForgetForm = () => {
                 <p className="text-center text-sm text-gray-600 dark:text-white/70">
                     Remember your password?
                     <Link className="text-primary decoration-2 hover:underline font-medium ms-1 inline-flex"
-                        href={"/"}>
+                        href={"/signin"}>
                         Sign in here
                     </Link>
                 </p>

@@ -106,7 +106,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 gap-4 w-screen">
               <div>
                 <h3 className="text-xl font-bold mb-5">
-                Connect with Neuralnetics Technologies Private Limited - We're Here to Help!
+                Connect with Design Collection - We're Here to Help!
                 </h3>
               
                 <p className="mb-2 text-xss leading-normal font-normal">
