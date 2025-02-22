@@ -1,5 +1,5 @@
 "use client"
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import dynamic from "next/dynamic";
@@ -10,6 +10,7 @@ import { ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-co
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { websiteDataCenter } from "@/shared/apis/api";
+import { countryList } from "@/shared/data/static-content/allCountry";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const WebsiteDataCenter = () => {
@@ -84,18 +85,7 @@ const WebsiteDataCenter = () => {
 		{ id: 2, icon: emailIcon, title:'email', class: "Total Email", text: 0, color: "primary/10" },
 		{ id: 3, icon: phoneIcon, title:'phone', class: "Total Phone", text: 0, color: "primary/10" },
 	]
-	const countries = [
-		{label: "australia", value: "australia"},
-		{label: "brazil", value: "brazil"},
-		{label: "canada", value: "canada"},
-		{label: "germany", value: "germany"},
-		{label: "france", value: "france"},
-		{label: "india", value: "india"},
-		{label: "italy", value: "italy"},
-		{label: "turkey", value: "turkey"},
-		{label: "united kingdom", value: "united kingdom"},
-		{label: "united states", value: "united states"}
-	]
+	const [ countries, setCountries] = useState([])
 	const sourceRef = React.useRef(axios.CancelToken.source());
 	const [ numOfData, setNumOfData] = useState(recordData)
 	const [ selectedCountry, setSelectedCountry ] = useState("")
@@ -184,6 +174,16 @@ const WebsiteDataCenter = () => {
 			}
 		})
 		setNumOfData(newData)
+	}, [])
+
+	useEffect(()=>{
+			const country = countryList.map(({cnt})=>{
+				return {
+					label: cnt,
+					value: cnt
+				}
+			})
+			setCountries(country)
 	}, [])
 
 	return (

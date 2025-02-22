@@ -18,7 +18,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
 	const { handleSignOut } = useUserContext()
 
 	function handleSignOutCall() {
-		navigate.push("/");
+		navigate.push("/signin");
 		handleSignOut();
 	}
 

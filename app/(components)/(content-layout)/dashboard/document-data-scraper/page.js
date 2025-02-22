@@ -8,8 +8,8 @@ import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
 import { ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
-import countryList from "@/shared/layout-components/dashboard/Country";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
+import { countryList } from "@/shared/data/static-content/allCountry";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const DocumentScraper = () => {
@@ -219,6 +219,7 @@ const DocumentScraper = () => {
 			else {
 				openSnackBar()
 				handleSnackMessage("File not supported!", "white", "text-danger")
+				removeSelectedFile()
 			}
 		}
 	}
@@ -323,7 +324,7 @@ const DocumentScraper = () => {
 						<div className="box-header">
 							<h5 className="box-title">
 								Upload Document{" "}
-								<span className="text-xs">(Supported file: CSV, XLSX, DOC, DOCX, HTML, JSON.)</span>
+								<span className="text-xs">(Supported file: TXT, CSV, XLSX, DOC, DOCX, HTML, JSON.)</span>
 							</h5>
 						</div>
 						<div className="box-body">
@@ -342,7 +343,7 @@ const DocumentScraper = () => {
 									:
 									<>
 										<label className="block" htmlFor="csvFile" />
-										<input type="file" name="file" multiple id="csvFile" ref={fileInputRef} onChange={handleChange} className={`rounded-sm text-sm text-gray-500 dark:text-white/70 focus:outline-0 ltr:file:mr-4 rtl:file:ml-4 file:py-3 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold ${selectedCountry ? "file:bg-primary file:text-white cursor-pointer" : "file:bg-gray-200 file:text-gray-400 cursor-not-allowed"} focus-visible:outline-none`} disabled={!selectedCountry} />
+										<input type="file" name="file" accept=".txt, .csv, .xlsx, .doc, .docx, .html, .json" multiple id="csvFile" ref={fileInputRef} onChange={handleChange} className={`rounded-sm text-sm text-gray-500 dark:text-white/70 focus:outline-0 ltr:file:mr-4 rtl:file:ml-4 file:py-3 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold ${selectedCountry ? "file:bg-primary file:text-white cursor-pointer" : "file:bg-gray-200 file:text-gray-400 cursor-not-allowed"} focus-visible:outline-none`} disabled={!selectedCountry} />
 									</>
 								}
 								{

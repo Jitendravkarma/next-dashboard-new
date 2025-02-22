@@ -26,7 +26,7 @@ const Navbar = () => {
     // { to: '/faq', text: 'FAQ' },
     { to: '/about', text: 'About Us' },
     { to: '/contact', text: 'Contact' },
-    { to: '/signin', text: 'Sign In', target: '_blank' }
+    { to: '/signin', text: 'Sign In' }
   ];
   
   const subLinks = [
@@ -122,7 +122,6 @@ const Navbar = () => {
                 <Link
                   href="/signup"
                   className="bg-green-400 rounded-sm px-4 py-2 text-sm text-white mr-0 inline-block mb-2 lg:mt-0 uppercase"
-                  target="_blank"
                   style={{letterSpacing:"1px"}}
                 >
                   Free Trial

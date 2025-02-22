@@ -57,7 +57,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<PageHeader currentpage="Dashboard" img="/assets/iconfonts/dashboard-icon/dashboard.png" activepage="Home" mainpage="Dashboard" />
+			<PageHeader currentpage="Dashboard" img="/assets/iconfonts/dashboard-icon/dashboard.png" activepage="Dashboard" mainpage="Home" />
 			<div className="grid grid-cols-12 gap-x-5">
 				{totalRecords.map((idx) => (
 					<div className="col-span-12 md:col-span-6 xl:col-span-4" key={Math.random()}>

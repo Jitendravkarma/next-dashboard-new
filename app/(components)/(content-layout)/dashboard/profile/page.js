@@ -182,7 +182,7 @@ const Profile = () => {
                             <input type="file" id="file-input" disabled={fileDisabled1} onChange={(ele) => ProfileService1.handleChange1(ele)} className=" inset-0 block w-full h-full cursor-pointer border my-2 border-gray-200 focus:shadow-sm dark:focus:shadow-white/10 rounded-sm text-sm focus:z-10 focus:outline-0 focus:border-gray-200 dark:focus:border-white/10 dark:border-white/10 dark:text-white/70  file:border-0 file:bg-gray-100 ltr:file:mr-4 rtl:file:ml-4 file:py-3 file:px-4 dark:file:bg-black/20 dark:file:text-white/70" />
                           </div>
                           <div onClick={() => { toggleImage1("UrlDisabled"); }}>
-                            <input type="text" className="my-auto ti-form-input" name="basic-input" id="basic-input" disabled={UrlDisabled} onChange={(ele) => { setUrlImage1(ele.target.value); }} placeholder="Paste the URL" />
+                            <input type="text" className="my-auto capitalize ti-form-input" name="basic-input" id="basic-input" disabled={UrlDisabled} onChange={(ele) => { setUrlImage1(ele.target.value); }} placeholder="Paste the URL" />
                           </div><br />
                           <button type="button" onClick={() => { putImage1(); }} className="py-1 px-3 ti-btn ti-btn-primary text-sm m-0">Submit</button>
                         </div>
@@ -206,7 +206,7 @@ const Profile = () => {
                                 <input type="file" id="file-input" disabled={fileDisabled} onChange={(ele) => ProfileService.handleChange(ele)} className=" inset-0 block w-full h-full cursor-pointer border my-2 border-gray-200 focus:shadow-sm dark:focus:shadow-white/10 rounded-sm text-sm focus:z-10 focus:outline-0 focus:border-gray-200 dark:focus:border-white/10 dark:border-white/10 dark:text-white/70  file:border-0 file:bg-gray-100 ltr:file:mr-4 rtl:file:ml-4 file:py-3 file:px-4 dark:file:bg-black/20 dark:file:text-white/70" />
                               </div>
                               <div onClick={() => { toggleImage("UrlDisabled"); }}>
-                                <input type="text" className="my-auto ti-form-input" name="basic-input" id="basic-input" disabled={UrlDisabled} onChange={(ele) => { setUrlImage(ele.target.value); }} placeholder="Paste the URL" />
+                                <input type="text" className="my-auto capitalize ti-form-input" name="basic-input" id="basic-input" disabled={UrlDisabled} onChange={(ele) => { setUrlImage(ele.target.value); }} placeholder="Paste the URL" />
                               </div><br />
                               <button type="button" onClick={() => { putImage(); }} className="py-1 px-3 ti-btn ti-btn-primary text-sm m-0">Submit</button>
                             </div>
@@ -251,19 +251,19 @@ const Profile = () => {
                         <div className="grid lg:grid-cols-2 gap-6">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Full Name</label>
-                            <input type="text" className="my-auto ti-form-input bg-gray-100" value={user.name} disabled={user.name} placeholder="Enter full name" />
+                            <input type="text" className="my-auto capitalize ti-form-input bg-gray-100" value={user.name} disabled={user.name} placeholder="Enter full name" />
                           </div>
                           {/* <div className="space-y-2">
                             <label className="ti-form-label mb-0">Last Name</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="Lastname" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="Lastname" />
                           </div> */}
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Email Address</label>
-                            <input type="email" className="my-auto ti-form-input bg-gray-100" value={user.email} disabled={user.email} placeholder="your@site.com" />
+                            <input type="email" className="my-auto capitalize ti-form-input bg-gray-100" value={user.email} disabled={user.email} placeholder="your@site.com" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Phone Number</label>
-                            <input type="number" className="my-auto ti-form-input" placeholder="+91 123-456-789" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="+91 123-456-789" />
                           </div>
                           <div className="space-y-2 relative">
                             <label className="ti-form-label mb-0">Purchase Code</label>
@@ -322,31 +322,31 @@ const Profile = () => {
                         <div className="my-5">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Address</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="Address" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="Address" />
                           </div>
                         </div>
                         <div className="grid lg:grid-cols-2 gap-6">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">City</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="city" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="city" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Country</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="country" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="country" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">State</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="state" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="state" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Pincode</label>
-                            <input type="number" className="my-auto ti-form-input" placeholder="pincode" />
+                            <input type="number" className="my-auto capitalize ti-form-input" placeholder="pincode" />
                           </div>
                         </div>
                         <div className="mt-5">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Bio</label>
-                            <textarea className="ti-form-input" rows={3} placeholder="Add Your Bio"></textarea>
+                            <textarea className="ti-form-input capitalize" rows={3} placeholder="Add Your Bio"></textarea>
                           </div>
                         </div>
                       </div>
@@ -364,7 +364,7 @@ const Profile = () => {
                         <div className="grid lg:grid-cols-2 gap-6 mb-6">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">User Id</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="User Id" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="User Id" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Joining Date</label>
@@ -395,7 +395,7 @@ const Profile = () => {
                         <div className="grid lg:grid-cols-3 gap-6">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Schooling</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="Schooling" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="Schooling" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Joining Date</label>
@@ -407,7 +407,7 @@ const Profile = () => {
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Graduation</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="Graduation" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="Graduation" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Joining Date</label>
@@ -424,11 +424,11 @@ const Profile = () => {
                         <div className="grid lg:grid-cols-4 gap-6">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Work 1 :</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="company Name" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="company Name" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Designation</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="Designation" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="Designation" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Joining Date</label>
@@ -440,11 +440,11 @@ const Profile = () => {
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Work 2 :</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="company Name" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="company Name" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Designation</label>
-                            <input type="text" className="my-auto ti-form-input" placeholder="Designation" />
+                            <input type="text" className="my-auto capitalize ti-form-input" placeholder="Designation" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Joining Date</label>
@@ -470,19 +470,19 @@ const Profile = () => {
                           <div className="space-y-4">
                             <div className="space-y-2">
                               <label className="ti-form-label mb-0">Email Id<sup className="text-danger">*</sup></label>
-                              <input type="email" className="my-auto ti-form-input" placeholder="Email Id" required />
+                              <input type="email" className="my-auto capitalize ti-form-input" placeholder="Email Id" required />
                             </div>
                             <div className="space-y-2">
                               <label className="ti-form-label mb-0">Current Password<sup className="text-danger">*</sup></label>
-                              <input type="password" className="my-auto ti-form-input" autoComplete="off" placeholder="Current Password" required />
+                              <input type="password" className="my-auto capitalize ti-form-input" autoComplete="off" placeholder="Current Password" required />
                             </div>
                             <div className="space-y-2">
                               <label className="ti-form-label mb-0">New Password<sup className="text-danger">*</sup></label>
-                              <input type="password" className="my-auto ti-form-input" autoComplete="off" placeholder="New Password" required />
+                              <input type="password" className="my-auto capitalize ti-form-input" autoComplete="off" placeholder="New Password" required />
                             </div>
                             <div className="space-y-2">
                               <label className="ti-form-label mb-0">Confirm Password<sup className="text-danger">*</sup></label>
-                              <input type="password" className="my-auto ti-form-input" autoComplete="off" placeholder="Confirm Password" required />
+                              <input type="password" className="my-auto capitalize ti-form-input" autoComplete="off" placeholder="Confirm Password" required />
                             </div>
                             <p className="text-xs text-gray-500 dark:text-white/70">Password should be min of <b className="text-success">10 characters <sup>*</sup> </b> (and up to 100 characters),<b className="text-success">One Upper Case Character<sup>*</sup></b> and <b className="text-success">One Special Character<sup>*</sup></b>   e.g., ! @ # ? included.</p>
                           </div>

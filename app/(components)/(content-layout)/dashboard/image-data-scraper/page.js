@@ -9,8 +9,8 @@ import { ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-co
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import Tesseract from 'tesseract.js';
-import countryList from "@/shared/layout-components/dashboard/Country";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
+import { countryList } from "@/shared/data/static-content/allCountry";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const ImageDataScraper = () => {
@@ -53,19 +53,8 @@ const ImageDataScraper = () => {
 		{ id: 1, icon: emailIcon, title:'email', class: "Total Email", text: 0, color: "primary/10" },
 		{ id: 2, icon: phoneIcon, title:'phone', class: "Total Phone", text: 0, color: "primary/10" },
 	]
-	const countries = [
-		{label: "australia", value: "australia"},
-		{label: "brazil", value: "brazil"},
-		{label: "canada", value: "canada"},
-		{label: "germany", value: "germany"},
-		{label: "france", value: "france"},
-		{label: "india", value: "india"},
-		{label: "italy", value: "italy"},
-		{label: "turkey", value: "turkey"},
-		{label: "united kingdom", value: "united kingdom"},
-		{label: "united states", value: "united states"}
-	]
 	let fileInputRef = useRef(null);
+	const [countries, setCountries] = useState([]);
 	const [ numOfData, setNumOfData] = useState(recordData)
 	const [ selectedCountry, setSelectedCountry ] = useState("")
 	const [ isScraping, setIsScraping ] = useState(false)
@@ -273,6 +262,16 @@ const ImageDataScraper = () => {
 	}
 
 	useEffect(()=>{
+			const country = countryList.map(({cnt})=>{
+				return {
+					label: cnt,
+					value: cnt
+				}
+			})
+			setCountries(country)
+	}, [])
+
+	useEffect(()=>{
 		window.scrollTo(0, 0);
 		setData(mergeEmailMobile);
 	},[emails, mobileNumbers]);
@@ -409,11 +408,13 @@ const ImageDataScraper = () => {
 								{
 									image.length > 0 &&
 									<span className="text-xxs flex flex-wrap">
-										<b>{image.length > 1 ? "Bulk images" : image[0]}</b>
+										<b title={image.length > 1 ? image.join(', ') : image[0]}>{image.length > 1 ? "Bulk images" : `${image[0].slice(0, 10)}...`}</b>
 										&nbsp; &nbsp; &nbsp;
 										{
 											!isScraping &&
-											<button className="text-red-500 hover:underline font-bold hover:italic cursor-pointer" onClick={removeSelectedFile}>{image.length > 1 ? "Remove images" : "Remove image"}</button>
+											<button className="text-red-400 hover:text-red-500 font-bold hover:italic cursor-pointer" onClick={removeSelectedFile}>
+												{image.length > 1 ? "Remove images" : <i className="ri-delete-bin-line"></i>}
+											</button>
 										}
 									</span>
 								}
