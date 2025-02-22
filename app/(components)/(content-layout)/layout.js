@@ -17,7 +17,7 @@ const Contentlayout = ({ children }) => {
 	const [ reseller, setReseller ] = useState(false)
 	const token = Cookies.get("authToken");
 	if(!token){
-		redirect("/")
+		redirect("/signin")
 	}
 
 	return (

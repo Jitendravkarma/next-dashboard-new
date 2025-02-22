@@ -5,9 +5,13 @@ import React from 'react'
 const PublicLayout = ({children}) => {
   return (
     <>
-      <Navbar/>
-      {children}
-      <Footer/>
+      <html>
+        <body>
+          <Navbar/>
+          {children}
+          <Footer/>
+        </body>
+      </html>
     </>
   )
 }

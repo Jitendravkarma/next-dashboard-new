@@ -20,39 +20,36 @@ function Layout({ children, local_varaiable, ThemeChanger }) {
     if (typeof window !== 'undefined' && !theme.pageloading) {
       switcherdata.LocalStorageBackup(ThemeChanger, theme.setpageloading);
     }
+    const htmlTag = document.documentElement;
+    htmlTag.setAttribute("suppressHydrationWarning", true);
+    htmlTag.setAttribute("dir", local_varaiable.dir);
+    htmlTag.setAttribute("class", local_varaiable.class);
+    htmlTag.setAttribute("data-header-styles", local_varaiable.dataHeaderStyles);
+    htmlTag.setAttribute("data-vertical-style", local_varaiable.dataVerticalStyle);
+    htmlTag.setAttribute("data-nav-layout", local_varaiable.dataNavLayout);
+    htmlTag.setAttribute("data-menu-styles", local_varaiable.dataMenuStyles);
+    htmlTag.setAttribute("data-toggled", local_varaiable.toggled);
+    htmlTag.setAttribute("data-nav-style", local_varaiable.dataNavStyle);
+    htmlTag.setAttribute("hor-style", local_varaiable.horStyle);
+    htmlTag.setAttribute("data-page-style", local_varaiable.dataPageStyle);
+    htmlTag.setAttribute("data-width", local_varaiable.dataWidth);
+    htmlTag.setAttribute("data-menu-position", local_varaiable.dataMenuPosition);
+    htmlTag.setAttribute("data-header-position", local_varaiable.dataHeaderPosition);
+    htmlTag.setAttribute("icon-overlay", local_varaiable.iconOverlay);
+    htmlTag.setAttribute("bg-img", local_varaiable.bgImg);
+    htmlTag.setAttribute("icon-text", local_varaiable.iconText);
+
+    // For styles, we can directly assign the style attribute:
+    Object.keys(customstyles).forEach((key) => {
+      htmlTag.style.setProperty(key, customstyles[key]);
+    });
   }, []);
 
   return (
     <>
-       <html
-        suppressHydrationWarning={true}
-        dir={local_varaiable.dir}
-        className={local_varaiable.class}
-        data-header-styles={local_varaiable.dataHeaderStyles}
-        data-vertical-style={local_varaiable.dataVerticalStyle}
-        data-nav-layout={local_varaiable.dataNavLayout}
-        data-menu-styles={local_varaiable.dataMenuStyles}
-        data-toggled={local_varaiable.toggled}
-        data-nav-style={local_varaiable.dataNavStyle}
-        hor-style={local_varaiable.horStyle}
-        data-page-style={local_varaiable.dataPageStyle}
-        data-width={local_varaiable.dataWidth}
-        data-menu-position={local_varaiable.dataMenuPosition}
-        data-header-position={local_varaiable.dataHeaderPosition}
-        icon-overlay={local_varaiable.iconOverlay}
-        bg-img={local_varaiable.bgImg}
-        icon-text={local_varaiable.iconText}
-        //Styles
-        style={customstyles}>
-        <head>
-          <link href="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.css" rel="stylesheet" />
-          <meta name="keywords" content="Web crawler spider, google search scraper" />
-        </head>
-        <body className={`${local_varaiable.body ? local_varaiable.body : ''}`}>
+        <div>
           {theme.pageloading && children}
-          <script src="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.js"></script>
-        </body>
-      </html>
+        </div>
     </>
   )
 }

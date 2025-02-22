@@ -13,40 +13,42 @@ export const metadata = seo_home
 
 const Home = () => {
   return (
-    <>
-		    <Navbar/>
-        <Hero />
+    <html>
+		    <body>
+          <Navbar/>
+          <Hero />
 
-        {/* watch demo */}
-        <section className="py-28 relative bg-gradient-to-r from-primary-gradient-from to-primary-gradient-to">
-            <div className="flex flex-wrap relative items-center justify-center mx-auto p-4">
-            <img
-                src={`/assets/img/video-shape.png`}
-                className="h-auto max-w-full rounded-sm border-4 border-blue-800"
-                alt="videoshape"
-            />
-            <FontAwesomeIcon
-                color="#00ea90"
-                id="video-btn"
-                icon={faCirclePlay}
-                className="absolute text-2xl sm:text-[80px] md:text-[100px] sm:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
-            />
-            </div>
-        </section>
-        {/* watch demo */}
+          {/* watch demo */}
+          <section className="py-28 relative bg-gradient-to-r from-primary-gradient-from to-primary-gradient-to">
+              <div className="flex flex-wrap relative items-center justify-center mx-auto p-4">
+              <img
+                  src={`/assets/img/video-shape.png`}
+                  className="h-auto max-w-full rounded-sm border-4 border-blue-800"
+                  alt="videoshape"
+              />
+              <FontAwesomeIcon
+                  color="#00ea90"
+                  id="video-btn"
+                  icon={faCirclePlay}
+                  className="absolute text-2xl sm:text-[80px] md:text-[100px] sm:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+              />
+              </div>
+          </section>
+          {/* watch demo */}
 
-        {/*  Advanced and Simple Ways to Scrape Begin */}
-        <Information/>
+          {/*  Advanced and Simple Ways to Scrape Begin */}
+          <Information/>
 
-        {/* Data workflow */}
-        <Workflow/>
+          {/* Data workflow */}
+          <Workflow/>
 
-        {/* Services */}
-        <Services/>
+          {/* Services */}
+          <Services/>
 
-        {/* footer */}
-        <Footer/>
-    </>
+          {/* footer */}
+          <Footer/>
+        </body>
+    </html>
   )
 }
 

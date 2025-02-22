@@ -18,12 +18,7 @@ const RootLayout = ({ children }) => {
       <Provider store={store}>
         <Initialload.Provider value={{ pageloading, setpageloading }}>
           <UserProvider>
-            <html>
-              <body>
-                {children}
-                <script src="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.js"></script>
-              </body>
-            </html>
+            {children}
           </UserProvider>
         </Initialload.Provider>
       </Provider>
