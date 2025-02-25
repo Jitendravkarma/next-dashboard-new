@@ -1,8 +1,7 @@
 
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
-import Switcher from "@/shared/layout-components/switcher/switcher";
 import Sidebar from "@/shared/layout-components/sidebar/sidebar";
 import ResellerSidebar from "@/shared/layout-components/reseller-sidebar/sidebar";
 import Header from "@/shared/layout-components/header/header";

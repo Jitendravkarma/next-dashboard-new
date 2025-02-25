@@ -306,7 +306,7 @@ const Home = () => {
 		let getReseller = JSON.parse(localStorage.getItem("reseller"));
 		if(getCustomers){
 			const paid = getCustomers.filter(dt=>dt.payment_status).length
-			const checkDate = (new Date(getReseller[0]?.renewal_date) < validity);
+			const checkDate = (new Date(getReseller && getReseller[0]?.renewal_date) < validity);
 			const totalCount = [
 				{title: "total", count: getCustomers.length},
 				{title: "clients", count: getCustomers.filter(dt=>dt.payment_status).length},

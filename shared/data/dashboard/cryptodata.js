@@ -44,18 +44,6 @@ export const crypto = [
   { id: 4, icon: icon4, class: "Etherium", data: "GLM/USD", data1: "2.253353 GLM", text: "-1.52%", color: "danger", icon1: "ri-arrow-down-line" },
 ];
 
-//Recent Transcations
-
-export const Transcations = [
-  { id: 1, src: "../../assets/img/crypto-currencies/round-outline/Bitcoin.svg", class: "Bitcoin", class1: "Sell", data: "+$19,123.02", data1: "BTC 0.0823.45", color: "success", class2: "mb-6" },
-  { id: 2, src: "../../assets/img/crypto-currencies/round-outline/Ethereum.svg", class: "Etherium", class1: "Buy", data: "-$1,430.92", data1: "ETH 10,783.23", color: "primary", class2: "mb-6" },
-  { id: 3, src: "../../assets/img/crypto-currencies/round-outline/Dash.svg", class: "Dash", class1: "Sell", data: "+$5,236.53", data1: "DASH 12,456.58", color: "success", class2: "mb-6" },
-  { id: 4, src: "../../assets/img/crypto-currencies/round-outline/Bytecoin.svg", class: "Bytecoin", class1: "Buy", data: "-$1,810.93", data1: "BYTE 8,154.00", color: "primary", class2: "mb-6" },
-  { id: 5, src: "../../assets/img/crypto-currencies/round-outline/Golem.svg", class: "Golem", class1: "Sell", data: "+$5,046.34", data1: "GOLEM 9,384.73", color: "success", class2: "mb-6" },
-  { id: 6, src: "../../assets/img/crypto-currencies/round-outline/Siacoin.svg", class: "SiaCoin", class1: "Sell", data: "+$2,625.50", data1: "SIA 3,151.09", color: "success", class2: "mb-6" },
-  { id: 7, src: "../../assets/img/crypto-currencies/round-outline/Monero.svg", class: "Monero", class1: "Sell", data: "+$1,256.24", data1: "XMR 2,799.06", color: "success", class2: "" },
-];
-
 //Top Traders 
 
 export const traders = [

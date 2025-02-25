@@ -23,9 +23,9 @@ const PriceCards = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-8 px-5 md:px-3 xl:px-0">
           {/* Free Plan */}
-          <div className="w-80 bg-white shadow-sm hvoer:shadow-sm rounded-md border-t-4 border-blue-500 hover:scale-105 transition-transform duration-300">
+          <div className="w-80 md:w-[19rem] xl:w-80 bg-white shadow-sm hvoer:shadow-sm rounded-md border-t-4 border-blue-500 hover:scale-105 transition-transform duration-300">
             <div className="p-6 text-center">
               <h3 className="text-xl font-semibold text-blue-500">Free Plan</h3>
               <p className="text-gray-500 mt-2">For a quick, simple project</p>
@@ -49,7 +49,7 @@ const PriceCards = () => {
           </div>
 
           {/* Standard Plan */}
-          <div className="w-80 bg-white shadow-sm hvoer:shadow-sm rounded-md border-t-4 border-green-500 hover:scale-105 lg:hover:scale-105 lg:scale-105 transition-transform duration-300">
+          <div className="w-80 md:w-[19rem] xl:w-80 bg-white shadow-sm hvoer:shadow-sm rounded-md border-t-4 border-green-500 hover:scale-105 lg:hover:scale-105 xl:scale-105 transition-transform duration-300">
             <div className="p-6 text-center relative overflow-hidden">
               {/* ribbon */}
               <div className="absolute top-6 right-6 bg-red-500 text-white text-xs font-bold py-1 px-8 transform translate-x-1/2 -translate-y-1/2 rotate-45 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
@@ -77,7 +77,7 @@ const PriceCards = () => {
           </div>
 
           {/* Premium Plan */}
-          <div className="w-80 bg-white shadow-sm hvoer:shadow-sm rounded-md border-t-4 border-yellow-500 hover:scale-105 transition-transform duration-300">
+          <div className="w-80 md:w-[19rem] xl:w-80 bg-white shadow-sm hvoer:shadow-sm rounded-md border-t-4 border-yellow-500 hover:scale-105 transition-transform duration-300">
             <div className="p-6 text-center">
               <h3 className="text-xl font-semibold text-yellow-500">Professional Plan</h3>
               <p className="text-gray-500 mt-2">Perfect for medium-sized businesses</p>

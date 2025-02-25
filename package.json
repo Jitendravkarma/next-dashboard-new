@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "export": "next export",
     "postcss": "sass ./public/assets/scss/style.scss ./public/assets/css/style.css && postcss ./public/assets/css/style.css -o ./public/assets/css/style.css",
     "sass": "sass ./public/assets/scss/:./public/assets/css/",
     "sass-min": "sass ./public/assets/scss/:./public/assets/css/ --style compressed"
@@ -91,6 +92,7 @@
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "sass": "^1.77.6",
+    "sharp": "^0.33.5",
     "simplebar-react": "^3.2.6",
     "suneditor": "^2.46.3",
     "suneditor-react": "^3.6.1",
