@@ -2,7 +2,7 @@
 import React from 'react'
 import { CSVLink } from 'react-csv';
 
-const cls = {btn:"px-3 mr-2 py-2 mt-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-600 rounded-sm hover:bg-blue-800 disabled:bg-gray-300 disabled:cursor-not-allowed"};
+const cls = {btn:"ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 hover:text-white hover:bg-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"};
 
 const button_name = "Download CSV"
 const icon = <i className="ri-download-2-line"></i>

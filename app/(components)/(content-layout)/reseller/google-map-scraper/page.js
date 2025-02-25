@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import dynamic from "next/dynamic";
-import { keywords } from "@/shared/data/forms/formselect/formselect";
+import { keywords } from "@/shared/data/static-content/allKeywords";
 import { getGoogleMapData, getMapData, getMapGlobalData, getWebsiteData, requestWebsiteData } from "@/shared/apis/api";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import axios from "axios";

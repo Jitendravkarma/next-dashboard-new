@@ -13,7 +13,7 @@ const PageHeader = (props) => {
 					{props.currentpage}
 				</h3>
 			</div>
-			<ol className="flex items-center whitespace-nowrap min-w-0">
+			<ol className="mt-2 md:mt-0 flex items-center whitespace-nowrap min-w-0">
 				<li className="text-sm">
 					<Link className="flex items-center font-semibold text-primary hover:text-primary dark:text-primary truncate" href="#!" scroll={false} >{props.activepage}
 						<i className="ti ti-chevrons-right flex-shrink-0 mx-3 overflow-visible text-gray-300 dark:text-gray-300 rtl:rotate-180"></i>

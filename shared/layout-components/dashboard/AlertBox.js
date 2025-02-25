@@ -753,7 +753,7 @@ const UpgradePlanPopup = memo(({ closeModel }) => {
               <div className="grid grid-cols-12 space-x-4">
               <div
                   onClick={() => setSelectedPlan('Premium')}
-                  className={`relative col-span-4 shadow overflow-hidden rounded-md cursor-pointer text-center p-4 rounded-md transition duration-300 ${selectedPlan === 'Premium' ? 'bg-secondary/10' : 'hover:bg-secondary/10'}`}
+                  className={`relative col-span-4 shadow overflow-hidden cursor-pointer text-center p-4 rounded-md transition duration-300 ${selectedPlan === 'Premium' ? 'bg-secondary/10' : 'hover:bg-secondary/10'}`}
                 >
                   {/* Ribbon */}
                   <div
@@ -771,7 +771,7 @@ const UpgradePlanPopup = memo(({ closeModel }) => {
                 </div>
                 <div
                   onClick={() => setSelectedPlan('Gold')}
-                  className={`col-span-4 shadow rounded-md cursor-pointer text-center p-4 rounded-md transition duration-300 ${selectedPlan === 'Gold' ? 'bg-warning/10' : 'hover:bg-warning/10'}`}
+                  className={`col-span-4 shadow cursor-pointer text-center p-4 rounded-md transition duration-300 ${selectedPlan === 'Gold' ? 'bg-warning/10' : 'hover:bg-warning/10'}`}
                 >
                   <i className={`ri-medal-line text-4xl text-warning mx-auto`}></i>
                   <p className="text-center text-gray-700 mt-2">Gold Plan <i className="ri-question-line" title='You can make 300 clients'></i></p>
@@ -779,7 +779,7 @@ const UpgradePlanPopup = memo(({ closeModel }) => {
                 </div>
                 <div
                   onClick={() => setSelectedPlan('Basic')}
-                  className={`col-span-4 shadow rounded-md cursor-pointer text-center p-4 rounded-md transition duration-300 ${selectedPlan === 'Basic' ? 'bg-info/10' : 'hover:bg-info/10'}`}
+                  className={`col-span-4 shadow cursor-pointer text-center p-4 rounded-md transition duration-300 ${selectedPlan === 'Basic' ? 'bg-info/10' : 'hover:bg-info/10'}`}
                 >
                   <i className="ri-bard-line text-4xl text-info mx-auto"></i>
                   <p className="text-center text-gray-700 mt-2">Basic Plan <i className="ri-question-line" title='You can make 100 clients'></i></p>

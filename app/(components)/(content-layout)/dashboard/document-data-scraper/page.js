@@ -10,6 +10,7 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 import { countryList } from "@/shared/data/static-content/allCountry";
+import ProcessHeader from "@/shared/layout-components/dashboard/ProcessHeader";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const DocumentScraper = () => {
@@ -311,9 +312,10 @@ const DocumentScraper = () => {
 				
 				<div className="col-span-12 xxl:col-span-6">
 					<div className="box">
-						<div className="box-header">
-							<h5 className="box-title">Select Country</h5>
-						</div>
+						{/* Header */}
+						<ProcessHeader heading={"Select Country"} url={"NfOetsKFX_E"} title={"Document Data Scraper."}/>
+						{/* Header */}
+
 						<div className="box-body">
 							<Select classNamePrefix='react-select' id='react-select-3-live-region' className="capitalize" value={selectedCountry} options={countries} placeholder='Choose Country' onChange={handleQueryChange} />
 						</div>
@@ -347,8 +349,14 @@ const DocumentScraper = () => {
 									</>
 								}
 								{
-									(file && !isScraping) &&
-									<button className="text-red-500 hover:underline font-bold hover:italic cursor-pointer" onClick={removeSelectedFile}>Remove file</button>
+									file &&
+									<span className="text-xxs flex flex-wrap">
+										<b title={file}>{file.length > 10 ? `${file.slice(0, 10)}...` : file} </b>
+										{
+											!isScraping &&
+											<button title="remove file" className="text-red-500 hover:underline font-bold hover:italic cursor-pointer" onClick={removeSelectedFile}><i className="ri-delete-bin-line"></i></button>
+										}
+									</span>
 								}
 							</div>
 						</div>
@@ -372,7 +380,7 @@ const DocumentScraper = () => {
 								<div className="px-6 pb-4">
 									{
 										isActivated ?
-										<Download csvHeaders={csvHeaders} data={data} fileName={"google-search-scrapper.csv"}/>
+										<Download csvHeaders={csvHeaders} data={data} fileName={"document-data-scraper.csv"}/>
 										:
 										<button type="button" onClick={()=>setIsDownload(true)} className={`ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`}>
 											Download <i className="ri-download-2-fill"></i>

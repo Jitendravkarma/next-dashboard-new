@@ -45,12 +45,12 @@ function Layout({ children, local_varaiable, ThemeChanger }) {
         //Styles
         style={customstyles}>
         <head>
-          <link href="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.css" rel="stylesheet" />
+          <link rel="stylesheet" href="/assets/css/dragula.min.css" />
           <meta name="keywords" content="Web crawler spider, google search scraper" />
         </head>
         <body className={`${local_varaiable.body ? local_varaiable.body : ''}`}>
           {theme.pageloading && children}
-          <script src="https://cdn.jsdelivr.net/npm/dragula@3.7.3/dist/dragula.min.js"></script>
+          <script src="/assets/js/dragula.min.js"></script>
         </body>
       </html>
     </>

@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 const Seo = ({ title }) => {
 
   useEffect(() => {
-    document.title = `Web Crawler Spider - ${title}`
+    document.title = `${title} - Web Crawler Spider`
   }, [])
 
   return (

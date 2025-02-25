@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
-import { SalesOverView, SocialVisitor, customerdata, topselling } from "@/shared/data/dashboard/salesdata";
+import { SalesOverView, SocialVisitor, topselling } from "@/shared/data/dashboard/salesdata";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Link from "next/link";
 import { SalesValue } from "@/shared/data/charts/chartjsdata";
@@ -23,6 +23,15 @@ const Home = () => {
 	  { id: 6, class: "Total Map Searches", title: "map", text: 0, color: "primary/10", color1: "success" }
 	]
 
+	const usedServices = [
+		{ id: 1, icon: <i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: 'Total Google Searches', title: "Google Scraper", data: 0, url: "/dashboard/google-search-scraper" },
+		{ id: 2, icon: <i className="ri-map-2-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: 'Total Map Searches', title: "Google Map Scraper", data: 0, url: "/dashboard/google-map-scraper" },
+		{ id: 3, icon: <i className="ri-global-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: '', title: "Website Scraper", data: 0, url: "/dashboard/website-scraper" },
+		{ id: 4, icon: <i className="ri-git-repository-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: '', title: "Directory Scraper", data: 0, url: "/dashboard/directory-scraper"},
+		{ id: 5, icon: <i className="ri-database-2-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: '', title: "Website Data Center", data: 0, url: "/dashboard/website-data-center" },
+		{ id: 6, icon: <i className="ri-download-cloud-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: '', title: "Whois Downloads", data: 0, url: "/dashboard/whois-domain-database" },
+	];
+
 	const icons = [
 		{title: "total", icon: record},
 		{title: "website", icon: websiteIcon},
@@ -33,6 +42,7 @@ const Home = () => {
 	]
 
 	const [totalRecords, setTotalRecords] = useState([]);
+	const [serviceData, setServiceData] = useState([]);
 
 	useEffect(()=>{
 		const getRecords = JSON.parse(localStorage.getItem("totalRecords"))
@@ -47,11 +57,22 @@ const Home = () => {
 					return {...data, icon: find.icon}
 				}
 			})
+			const servicesCount = usedServices.map(item=>{
+				const find = getRecords.find(dt=>dt.class === item.class);
+				console.log(find)
+				if(find && find.class){
+					return {...item, data: find.text}
+				}
+				else {
+					return item
+				}
+			})
+			setServiceData(servicesCount)
 			setTotalRecords(applyIcons)
 		}
 		else {
 			localStorage.setItem("totalRecords", JSON.stringify(recordData))
-			const getRecords = JSON.parse(localStorage.getItem("totalRecords"))
+			JSON.parse(localStorage.getItem("totalRecords"))
 		}
 	},[])
 
@@ -94,7 +115,7 @@ const Home = () => {
 						<div className="box-header">
 							<div className="flex">
 								<h5 className="box-title my-auto">Scraper Over View</h5>
-								<div className="hs-dropdown ti-dropdown block ltr:ml-auto rtl:mr-auto my-auto">
+								{/* <div className="hs-dropdown ti-dropdown block ltr:ml-auto rtl:mr-auto my-auto">
 									<button type="button" aria-label="button"
 										className="hs-dropdown-toggle ti-dropdown-toggle rounded-sm p-2 bg-white !border border-gray-200 text-gray-500 hover:bg-gray-100  focus:ring-gray-200 dark:bg-bodybg dark:hover:bg-black/30 dark:border-white/10 dark:hover:border-white/20 dark:focus:ring-white/10 dark:focus:ring-offset-white/10">
 										<i className="text-sm leading-none ti ti-dots-vertical"></i> </button>
@@ -103,7 +124,7 @@ const Home = () => {
 										<Link className="ti-dropdown-item" href="#!" scroll={false} >Import</Link>
 										<Link className="ti-dropdown-item" href="#!" scroll={false} >Export</Link>
 									</div>
-								</div>
+								</div> */}
 							</div>
 						</div>
 						<div className="box-body">
@@ -114,9 +135,9 @@ const Home = () => {
 											className="block w-3 h-3 rounded-full ltr:mr-2 rtl:ml-2 border-4 border-primary pointer-events-none"></span>
 										<span className="flex items-center">
 											<span className="text-2xl text-gray-800 dark:text-white font-bold ltr:mr-2 rtl:ml-2 pointer-events-none">
-												1.2M
+												{totalRecords[0]?.text}
 											</span>
-											<span className="text-sm text-gray-400 dark:text-white/80">/ Queries</span>
+											<span className="text-sm text-gray-400 dark:text-white/80">/ Searches</span>
 										</span>
 									</p>
 								</li>
@@ -126,7 +147,7 @@ const Home = () => {
 											className="block w-3 h-3 rounded-full ltr:mr-2 rtl:ml-2 border-4 border-gray-200 pointer-events-none"></span>
 										<span className="flex items-center">
 											<span className="text-2xl text-gray-800 dark:text-white font-bold ltr:mr-2 rtl:ml-2 pointer-events-none">
-												1.1M
+												{totalRecords[0]?.text}
 											</span>
 											<span className="text-sm text-gray-400 dark:text-white/80">/ Full Field</span>
 										</span>
@@ -142,7 +163,7 @@ const Home = () => {
 						<div className="box-header">
 							<div className="flex">
 								<h5 className="box-title my-auto">Top Used Tools</h5>
-								<div className="hs-dropdown ti-dropdown block ltr:ml-auto rtl:mr-auto my-auto">
+								{/* <div className="hs-dropdown ti-dropdown block ltr:ml-auto rtl:mr-auto my-auto">
 									<button type="button" aria-label="button"
 										className="hs-dropdown-toggle ti-dropdown-toggle rounded-sm p-2 bg-white !border border-gray-200 text-gray-500 hover:bg-gray-100  focus:ring-gray-200 dark:bg-bodybg dark:hover:bg-black/30 dark:border-white/10 dark:hover:border-white/20 dark:focus:ring-white/10 dark:focus:ring-offset-white/10">
 										<i className="text-sm leading-none ti ti-dots-vertical"></i> </button>
@@ -151,24 +172,24 @@ const Home = () => {
 										<Link className="ti-dropdown-item" href="#!" scroll={false} >Import</Link>
 										<Link className="ti-dropdown-item" href="#!" scroll={false} >Export</Link>
 									</div>
-								</div>
+								</div> */}
 							</div>
 						</div>
 						<div className="box-body">
 							<ul className="flex flex-col customer-list">
-								{customerdata.map((customer) => (
-									<li className="px-0 ti-list-group border-0 text-gray-800 dark:text-white" key={Math.random()}>
-										<Link href={customer.url} scroll={false} className="flex  justify-between items-center w-full">
+								{serviceData.map((service) => (
+									<li className="px-0 ti-list-group border-0 text-gray-800 dark:text-white" key={service.id}>
+										<Link href={service.url} scroll={false} className="flex  justify-between items-center w-full">
 											<div className="flex space-x-3 rtl:space-x-reverse w-full">
-												{customer.icon}
+												{service.icon}
 												<div className="flex w-full">
 													<div className="block my-auto">
 														<p
 															className="block text-sm font-semibold text-gray-800 hover:text-gray-900 my-auto  dark:text-white dark:hover:text-gray-200">
-															{customer.class}</p>
+															{service.title}</p>
 														<p
 															className="text-xs text-gray-400 dark:text-white/80 truncate sm:max-w-max max-w-[100px] font-normal">
-															{customer.data}</p>
+															{service.data} Tasks</p>
 													</div>
 												</div>
 											</div>
@@ -185,14 +206,14 @@ const Home = () => {
 						<div className="box-header">
 							<div className="flex">
 								<h5 className="box-title my-auto">Montly Report</h5>
-								<div className="hs-dropdown ti-dropdown block ltr:ml-auto rtl:mr-auto my-auto">
+								{/* <div className="hs-dropdown ti-dropdown block ltr:ml-auto rtl:mr-auto my-auto">
 									<button type="button" className="hs-dropdown-toggle ti-dropdown-toggle rounded-sm p-1 px-3 !border border-gray-200 text-gray-400 hover:text-gray-500 hover:bg-gray-200 hover:border-gray-200 focus:ring-gray-200  dark:hover:bg-black/30 dark:border-white/10 dark:hover:border-white/20 dark:focus:ring-white/10 dark:focus:ring-offset-white/10">
 										This Month <i className="ti ti-chevron-down"></i></button>
 									<div className="hs-dropdown-menu ti-dropdown-menu">
 										<Link className="ti-dropdown-item" href="#!" scroll={false} >This Month</Link>
 										<Link className="ti-dropdown-item" href="#!" scroll={false} >Last Month</Link>
 									</div>
-								</div>
+								</div> */}
 							</div>
 						</div>
 						<div className="box-body p-1 pb-6">

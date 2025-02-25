@@ -11,6 +11,8 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { websiteDataCenter } from "@/shared/apis/api";
 import { countryList } from "@/shared/data/static-content/allCountry";
+import ProcessHeader from "@/shared/layout-components/dashboard/ProcessHeader";
+import Link from "next/link";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const WebsiteDataCenter = () => {
@@ -38,6 +40,13 @@ const WebsiteDataCenter = () => {
 		  headerName: "Website",
 		  field: "website",
 		  width: 300,
+		  renderCell: ({row})=>(
+			(row.website !== "N/A") ? 
+			<Link href={row.website} title={row.website} target="_blank" className="hover:underline hover:text-blue-500">
+				{row.website}
+			</Link> 
+			: <span title={row.website}>{row.website}</span>
+		  ),
 		  editable: false
 		},
 		{
@@ -233,9 +242,10 @@ const WebsiteDataCenter = () => {
 				</div>
 				<div className="col-span-12 xxl:col-span-6">
 					<div className="box">
-						<div className="box-header">
-							<h5 className="box-title">Search Keywords</h5>
-						</div>
+						{/* Header */}
+						<ProcessHeader heading={"Search Keywords"} url={"NfOetsKFX_E"} title={"Website Data Center."}/>
+						{/* Header */}
+
 						<div className="box-body grid gap-3">
 							<div className="col-span-12">
 								<textarea name="keywords" onChange={handleChange} value={keywords} className={`w-full capitalize text-sm border-gray-200 bg-white p-3 overflow-auto border rounded-sm disabled:bg-gray-50`} placeholder="Enter keywords..." rows={1} disabled={!selectedCountry}/>
@@ -256,10 +266,6 @@ const WebsiteDataCenter = () => {
 								</button>
 								
 								<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(isScraping) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={stopScraping} disabled={!isScraping}>Stop</button>
-								
-								<button type="button" className="py-1 px-2 ti-btn ml-0 md:ml-auto bg-red-500 text-white hover:bg-red-600 focus:ring-red-500 dark:focus:ring-offset-white/10">
-									YouTube <i className="ri-youtube-fill"></i>
-								</button>
 							</div>
 						</div>
 					</div>
@@ -282,7 +288,7 @@ const WebsiteDataCenter = () => {
 								<div className="px-6 pb-4">
 									{
 										isActivated ?
-										<Download csvHeaders={csvHeaders} data={data} fileName={"google-search-scrapper.csv"}/>
+										<Download csvHeaders={csvHeaders} data={data} fileName={"website-data-center.csv"}/>
 										:
 										<button type="button" onClick={()=>setIsDownload(true)} className={`ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`}>
 											Download <i className="ri-download-2-fill"></i>
@@ -314,7 +320,7 @@ const WebsiteDataCenter = () => {
 			}
 			{
 				isDownload &&
-				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"google-search-scraper"} isModal={isDownload} closeModel={closeModel}/>
+				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"website-data-center"} isModal={isDownload} closeModel={closeModel}/>
 			}
 			{/* alert boxes */}
 		</div>

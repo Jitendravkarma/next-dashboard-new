@@ -11,6 +11,7 @@ import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import Tesseract from 'tesseract.js';
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 import { countryList } from "@/shared/data/static-content/allCountry";
+import ProcessHeader from "@/shared/layout-components/dashboard/ProcessHeader";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const ImageDataScraper = () => {
@@ -370,9 +371,10 @@ const ImageDataScraper = () => {
 				
 				<div className="col-span-12 xxl:col-span-6">
 					<div className="box">
-						<div className="box-header">
-							<h5 className="box-title">Select Country</h5>
-						</div>
+						{/* Header */}
+						<ProcessHeader heading={"Select Country"} url={"NfOetsKFX_E"} title={"Image Data Scraper."}/>
+						{/* Header */}
+
 						<div className="box-body">
 							<Select classNamePrefix='react-select' id='react-select-3-live-region' className="capitalize" value={selectedCountry} options={countries} placeholder='Choose Country' onChange={handleQueryChange} />
 						</div>
@@ -504,7 +506,7 @@ const ImageDataScraper = () => {
 								<div className="px-6 pb-4">
 									{
 										isActivated ?
-										<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={data} fileName={"google-search-scrapper.csv"}/>
+										<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={data} fileName={"image-data-scraper.csv"}/>
 										:
 										<button type="button" onClick={()=>setIsDownload(true)} className={`ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`}>
 											Download <i className="ri-download-2-fill"></i>
@@ -536,7 +538,7 @@ const ImageDataScraper = () => {
 			}
 			{
 				isDownload &&
-				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"google-search-scraper"} isModal={isDownload} closeModel={closeModel}/>
+				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"image-data-scraper"} isModal={isDownload} closeModel={closeModel}/>
 			}
 			{/* alert boxes */}
 		</div>

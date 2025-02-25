@@ -11,6 +11,8 @@ import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { fetchDirectoryScraper } from "@/shared/apis/api";
 import countryList from "@/shared/layout-components/dashboard/Country";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
+import ProcessHeader from "@/shared/layout-components/dashboard/ProcessHeader";
+import Link from "next/link";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const DirectoryScraper = () => {
@@ -50,6 +52,13 @@ const DirectoryScraper = () => {
 			headerName: "Website",
 			field: "website",
 			width: 400,
+			renderCell: ({row})=>(
+				(row.website !== "N/A") ? 
+				<Link href={row.website} title={row.website} target="_blank" className="hover:underline hover:text-blue-500">
+					{row.website}
+				</Link> 
+				: <span title={row.website}>{row.website}</span>
+			),
 			editable: false
 		},
 		{
@@ -280,11 +289,10 @@ const DirectoryScraper = () => {
 				</div>
 				<div className="col-span-12 xxl:col-span-6">
 					<div className="box">
-						<div className="box-header">
-							<h5 className="box-title">
-								Enter bulk URLs
-							</h5>
-						</div>
+						{/* Header */}
+						<ProcessHeader heading={"Enter bulk URLs"} url={"LW9_PAJhens"} title={"Business Directory Scraper."}/>
+						{/* Header */}
+						
 						<div className="box-body grid grid-cols-12 gap-y-5 xxl:gap-y-0 gap-x-5">
 							<div className="col-span-12 xxl:col-span-9">
 								<textarea className="ti-form-input" ref={refElement} value={textContent} onChange={(e)=>setTextContent(e.target.value)} rows="1" placeholder="Ex. https://example.com/, https://example.in"></textarea>
@@ -356,7 +364,7 @@ const DirectoryScraper = () => {
 			}
 			{
 				isDownload &&
-				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"google-search-scraper"} isModal={isDownload} closeModel={closeModel}/>
+				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"business-directory-scraper"} isModal={isDownload} closeModel={closeModel}/>
 			}
 			{
 				limitErr &&

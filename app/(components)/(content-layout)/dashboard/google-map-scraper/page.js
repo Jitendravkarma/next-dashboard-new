@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import dynamic from "next/dynamic";
-import { keywords } from "@/shared/data/forms/formselect/formselect";
+import { keywords } from "@/shared/data/static-content/allKeywords";
 import { getGoogleMapData, getMapData, getMapGlobalData, getWebsiteData, requestWebsiteData } from "@/shared/apis/api";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import axios from "axios";
@@ -11,10 +11,13 @@ import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
 import { ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
+import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
+import ProcessHeader from "@/shared/layout-components/dashboard/ProcessHeader";
+import Link from "next/link";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const GoogleMapScraper = () => {
-	const { isActivated, contactNum, smsNum, whatsAppNum, dashboardRecords, limitErr, handleLimitErr } = useUserContext()
+	const { isActivated, contactNum, smsNum, whatsAppNum, dashboardRecords, limitErr, handleLimitErr, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
 	const recordIcon = <i className="ri-clipboard-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const websiteIcon = <i className="ri-global-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const emailIcon = <i className="ri-mail-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
@@ -47,10 +50,17 @@ const GoogleMapScraper = () => {
 			editable: false,
 		},
 		{
-			headerName: "Website",
-			field: "website",
-			width: 300,
-			editable: false
+		  headerName: "Website",
+		  field: "website",
+		  width: 300,
+		  renderCell: ({row})=>(
+			(row.website !== "N/A") ? 
+			<Link href={row.website} title={row.website} target="_blank" className="hover:underline hover:text-blue-500">
+				{row.website}
+			</Link> 
+			: <span title={row.website}>{row.website}</span>
+		  ),
+		  editable: false
 		},
 		{
 			headerName: "Phone",
@@ -130,7 +140,7 @@ const GoogleMapScraper = () => {
 	const [ numOfData, setNumOfData] = useState(recordData)
 	const [ selectedQuery, setSelectedQuery ] = useState("")
 	const [ globalQuery, setGlobalQuery ] = useState([]);
-	const [ formData, setFormData ] = useState({keyword:"", city: ""});
+	const [ formData, setFormData ] = useState({keyword:"", custom: "", city: ""});
 	const [ progressMsg, setProgressMsg ] = useState("Start Working")
 	const [ per, setPer ] = useState(0)
 	const [ isScraping, setIsScraping ] = useState(false)
@@ -188,8 +198,15 @@ const GoogleMapScraper = () => {
 		if(selectedQuery.label){
 			const response = await getMapData({fetch_id: selectedQuery.value});
 			const responseData = response?.data?.data;
-			const convertedData = convertData(responseData)
-			setData(convertedData)
+			if(responseData && responseData.length){
+				const convertedData = convertData(responseData)
+				setData(convertedData)
+			}
+			else {
+				setData([])
+				openSnackBar();
+				handleSnackMessage("Data not found for your keyword.", "danger", "text-white")
+			}
 		}
 		setGlobalLoad(false)
 	}
@@ -198,7 +215,7 @@ const GoogleMapScraper = () => {
 		const name = e?.target?.name
 		const value = e?.target?.value
 		if(name){
-			setFormData({...formData, city: value})
+			setFormData({...formData, [name]: value})
 		}
 		else {
 			setFormData({...formData, keyword: {value: e.value, label: e.value}})
@@ -213,13 +230,24 @@ const GoogleMapScraper = () => {
 		if(formData.keyword && formData.city){
 			if(formData.city.includes(',')){
 				const cities = formData.city.split(',')
-				const multiQuery = cities.map( ct=> ({ keyword: formData.keyword, city: ct }) ).slice(0, 5)
-				setQueryBox([...queryBox, ...multiQuery])
+				let multiQuery = []
+				if(formData.keyword.value.toLowerCase() === "custom keyword" && formData.custom){
+					multiQuery = cities.map( ct=> ({ keyword: formData.custom, city: ct }) ).slice(0, 5)
+				}
+				else if(formData.keyword.value.toLowerCase() !== "custom keyword" && !formData.custom) {
+					multiQuery = cities.map( ct=> ({ keyword: formData.keyword, city: ct }) ).slice(0, 5)
+				}
+				else if(queryBox.length < 6){
+					setQueryBox([...queryBox, ...multiQuery])
+				}
 			}
 			else {
-				setQueryBox([...queryBox, {keyword: formData.keyword, city: formData.city}])
+				if(formData.keyword.value.toLowerCase() === "custom keyword" && formData.custom)
+					setQueryBox([...queryBox, {keyword: formData.custom, city: formData.city}])
+				else 
+					setQueryBox([...queryBox, {keyword: formData.keyword, city: formData.city}])
 			}
-			setFormData({keyword:"", city: ""})
+			setFormData({keyword:"", custom: "", city: ""})
 		}
 	}
 	
@@ -237,7 +265,12 @@ const GoogleMapScraper = () => {
 			}
 			let queries = []
 			queryBox.map(({keyword, city})=>{
-				queries.push({ query : `${keyword.value.trim().toLowerCase()} in ${city.trim().toLowerCase()}` })
+				if(keyword.value){
+					queries.push({ query : `${keyword.value.trim().toLowerCase()} in ${city.trim().toLowerCase()}` })
+				}
+				else {
+					queries.push({ query : `${keyword.trim().toLowerCase()} in ${city.trim().toLowerCase()}` })
+				}
 			})
 			
 			const makeRequest = queries.map(async query=>{
@@ -260,6 +293,10 @@ const GoogleMapScraper = () => {
 								}
 								else {
 									clearInterval(interval);
+									openSnackBar();
+									handleSnackMessage("Data not found for your keyword.", "danger", "text-white")
+									setProgressMsg("Data not found please try again after some time.")
+									setIsScraping(false)
 								}
 							})
 						}
@@ -474,6 +511,10 @@ const GoogleMapScraper = () => {
 	}, [])
 	return (
 		<div>
+			{
+				openSnack &&
+				<Snackbar isOpen={openSnack} content={snackMessage}/>
+			}
 			<Seo title={"Google Map Scraper"} />
 			<PageHeader currentpage="Google Map Scraper" activepage="Lead Generation" img="/assets/iconfonts/dashboard-icon/gmapIcon.png" mainpage="Google Map Scraper" />
 
@@ -556,33 +597,59 @@ const GoogleMapScraper = () => {
 				</div>
 				<div className="col-span-12 xxl:col-span-6">
 					<div className="box">
-						<div className="box-header">
-							<h5 className="box-title">Initial Steps</h5>
-						</div>
-						<div className="box-body grid gap-5">
-							<div className="col-span-12 xxl:col-span-8">
-								<label className="ti-form-select-label">Search Keywords</label>
-								<Select value={formData.keyword} classNamePrefix='react-select ti-form-input' id='react-select-3-live-region' className="capitalize" options={keywords} placeholder='Type Keyword' onChange={handleChange} />
+						{/* Header */}
+						<ProcessHeader heading={"Initial steps"} url={"BhI2KKoSj3Y"} title={"Google Map Scraper."}/>
+						{/* Header */}
+
+						<div className="box-body grid gap-5 items-end">
+							<div className="col-span-12 xxl:col-span-8 flex flex-col gap-3">
+								<div>
+									<label className="ti-form-select-label">Search Keywords</label>
+									<Select value={formData.keyword} classNamePrefix='react-select ti-form-input' id='react-select-3-live-region' className="capitalize" options={keywords} placeholder='Type Keyword' onChange={handleChange} />
+								</div>
+								{
+									(formData.keyword?.value && formData.keyword?.value?.toLowerCase() === "custom keyword") &&
+									<div>
+										<label className="ti-form-select-label" htmlFor="custom">Your Keyword</label>
+										<input type="text" name="custom" value={formData.custom} className="capitalize py-2 px-3 ti-form-input disabled:bg-gray-100 disabled:cursor-not-allowed" id="custom" placeholder="Type Custom Keyword" onChange={handleChange} disabled={formData.keyword?.value?.toLowerCase() !== "custom keyword"} />
+									</div>
+								}
 							</div>
 							<div className="col-span-12 xxl:col-span-4">
 								<label className="ti-form-select-label" id="city">Enter City</label>
-								<input type="text" name="city" value={formData.city} className="capitalize py-2 px-3 ti-form-input disabled:bg-gray-100 disabled:cursor-not-allowed" id="city" placeholder="Ex. London, Peris, Delhi" onChange={handleChange} disabled={!formData.keyword} />
+								<input type="text" name="city" value={formData.city} className="capitalize py-2 px-3 ti-form-input disabled:bg-gray-100 disabled:cursor-not-allowed" id="city" placeholder="Ex. London, Peris, Delhi" onChange={handleChange} disabled={!formData.keyword || (formData.keyword?.value?.toLowerCase() === "custom keyword" && !formData.custom)} />
 							</div>
 							<div className="col-span-12">
 								<label className="ti-form-select-label">Selected Queries</label>
 								<div className={`border-gray-200 ${queryBox.length ? "bg-white" : "bg-gray-100"} p-2 min-h-10 h-20 max-h-20 overflow-auto border rounded-sm grid grid-cols-1 ${queryBox.length > 1 ? "md:grid-cols-2" : "md:grid-cols-1"} items-center gap-1`}>
 									{
 										queryBox.length > 0 &&
-										queryBox.map(({ keyword, city }, ind)=>(
-											<span key={ind} className={`inline-flex rounded-sm items-center justify-between capitalize border border-indigo-200 ${queryBox.length < 2 && "w-fit"}`} style={{fontSize:'11px'}}>
-												<span title={keyword.value} className="p-1 pl-2 inline-block">
-													{keyword.value} contact no & email id in {city}
-												</span>
-												<button className="py-1 px-2 rounded-r-sm bg-indigo-100 hover:text-white hover:bg-indigo-500 duration-200" title="Remove query" onClick={()=>removeQuery(ind)}>
-													<i className="ri-close-line"></i>
-												</button>
-											</span>
-										))
+										queryBox.map(({ keyword, city }, ind)=>{
+											if(keyword.value){
+												return (
+													<span key={ind} className={`inline-flex rounded-sm items-center justify-between capitalize border border-indigo-200 ${queryBox.length < 2 && "w-fit"}`} style={{fontSize:'11px'}}>
+														<span title={keyword.value} className="p-1 pl-2 inline-block">
+															{keyword.value} in {city}
+														</span>
+														<button className="py-1 px-2 rounded-r-sm bg-indigo-100 hover:text-white hover:bg-indigo-500 duration-200" title="Remove query" onClick={()=>removeQuery(ind)}>
+															<i className="ri-close-line"></i>
+														</button>
+													</span>
+												)
+											}
+											else {
+												return (
+													<span key={ind} className={`inline-flex rounded-sm items-center justify-between capitalize border border-indigo-200 ${queryBox.length < 2 && "w-fit"}`} style={{fontSize:'11px'}}>
+														<span title={keyword} className="p-1 pl-2 inline-block">
+															{keyword} in {city}
+														</span>
+														<button className="py-1 px-2 rounded-r-sm bg-indigo-100 hover:text-white hover:bg-indigo-500 duration-200" title="Remove query" onClick={()=>removeQuery(ind)}>
+															<i className="ri-close-line"></i>
+														</button>
+													</span>
+												)
+											}
+										})
 									}
 									{
 										queryBox.length > 1 &&
@@ -601,14 +668,10 @@ const GoogleMapScraper = () => {
 								
 								{
 									( numOfData[1].title === "website" && numOfData[0].text > 0 ) &&
-									<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(numOfData[0].text > 0 && !isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={deepExtractor} disabled={isExtracting || isScraping}>
+									<button type="button" className={`md:ml-auto ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(numOfData[0].text > 0 && !isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={deepExtractor} disabled={isExtracting || isScraping}>
 										Deep Extractor
 									</button>
 								}
-								
-								<button type="button" className="py-1 px-2 ti-btn ml-0 md:ml-auto bg-red-500 text-white hover:bg-red-600 focus:ring-red-500 dark:focus:ring-offset-white/10">
-									YouTube <i className="ri-youtube-fill"></i>
-								</button>
 							</div>
 						</div>
 					</div>

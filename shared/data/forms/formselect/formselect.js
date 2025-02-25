@@ -4,19 +4,6 @@ export const sortOption = [
   {value:"phone", label: "phone"}
 ]
 
-export const keywords = [
-  {value:"art schools", label: "art schools"},
-  {value:"cafe", label: "cafe"},
-  {value:"cyber cafe", label: "cyber cafe"},
-  {value:"hospitals", label: "hospitals"},
-  {value:"international schools", label: "international schools"},
-  {value:"hotels", label: "hotels"},
-  {value:"restaurants", label: "restaurants"},
-  {value:"stationery", label: "stationery"},
-  {value:"software company", label: "software company"},
-  {value:"schools", label: "schools"}
-]
-
 export const GoogleGlobalKeywords = [
   {value : "schools contact number in london", label: "schools contact number in london"},
   {value : "software companies email id in new york", label: "software companies email id in new york"}

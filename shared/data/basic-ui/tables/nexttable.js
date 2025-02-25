@@ -84,9 +84,9 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
 
   return (
     <div className="box-body">
-      <div className="flex justify-between mb-4">
-        <div className='flex items-center gap-4'>
-          <div>
+      <div className="flex flex-wrap gap-3 justify-between mb-4">
+        <div className='w-full md:w-auto flex items-center gap-4'>
+          <div className='w-full md:w-auto'>
             <input
               type="text"
               value={searchText}
@@ -103,7 +103,7 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
           }
         </div>
 
-        <div className="flex gap-2 items-center">
+        <div className="w-full md:w-auto flex gap-2 items-center justify-between">
           {
             sortName && 
             <button className='text-sm text-red-500 hover:underline' onClick={removeSorting}>

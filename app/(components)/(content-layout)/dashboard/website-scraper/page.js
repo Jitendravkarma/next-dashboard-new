@@ -11,6 +11,8 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { getWebsiteData, requestWebsiteData } from "@/shared/apis/api";
 import { countryList } from "@/shared/data/static-content/allCountry";
+import ProcessHeader from "@/shared/layout-components/dashboard/ProcessHeader";
+import Link from "next/link";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const WebsiteScraper = () => {
@@ -38,6 +40,13 @@ const WebsiteScraper = () => {
 		  headerName: "Website",
 		  field: "website",
 		  width: 300,
+		  renderCell: ({row})=>(
+			(row.website !== "N/A") ? 
+			<Link href={row.website} title={row.website} target="_blank" className="hover:underline hover:text-blue-500">
+				{row.website}
+			</Link> 
+			: <span title={row.website}>{row.website}</span>
+		  ),
 		  editable: false
 		},
 		{
@@ -222,7 +231,8 @@ const WebsiteScraper = () => {
 					  description: item.description || "N/A",
 					  keywords: item.keywords || "N/A",
 					  phone: getPhones?.length ? getPhones[0] : "N/A", 
-					  email: item.Email || "N/A"
+					  email: item.Email || "N/A",
+					  country: selectedCountry.value || "N/A"
 					};
 					// else return {sno: ind + 1, ...item, url:"N/A", emails: item.emails?.join(", ")};
 				  }).filter(dt=>dt);
@@ -388,9 +398,10 @@ const WebsiteScraper = () => {
 				</div>
 				<div className="col-span-12 xxl:col-span-6">
 					<div className="box">
-						<div className="box-header">
-							<h5 className="box-title">Upload CSV file</h5>
-						</div>
+						{/* Header */}
+						<ProcessHeader heading={"Upload CSV file"} url={"_sXWe4U2Cz8"} title={"Website Data Scraper."}/>
+						{/* Header */}
+
 						<div className="box-body">
 							<div className="flex items-center gap-2">
 								{
@@ -407,12 +418,18 @@ const WebsiteScraper = () => {
 									:
 									<>
 										<label className="block" htmlFor="csvFile" />
-										<input type="file" name="file" id="csvFile" ref={fileInputRef} onChange={handleChange} className={`rounded-sm text-sm text-gray-500 dark:text-white/70 focus:outline-0 ltr:file:mr-4 rtl:file:ml-4 file:py-3 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold ${selectedCountry ? "file:bg-primary file:text-white cursor-pointer" : "file:bg-gray-200 file:text-gray-400 cursor-not-allowed"} focus-visible:outline-none`} disabled={!selectedCountry} />
+										<input type="file" name="file" id="csvFile" accept=".csv" ref={fileInputRef} onChange={handleChange} className={`rounded-sm text-sm text-gray-500 dark:text-white/70 focus:outline-0 ltr:file:mr-4 rtl:file:ml-4 file:py-3 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold ${selectedCountry ? "file:bg-primary file:text-white cursor-pointer" : "file:bg-gray-200 file:text-gray-400 cursor-not-allowed"} focus-visible:outline-none`} disabled={!selectedCountry} />
 									</>
 								}
 								{
-									(file && !isScraping) &&
-									<button className="text-red-500 hover:underline font-bold hover:italic cursor-pointer" onClick={removeSelectedFile}>Remove file</button>
+									file &&
+									<span className="text-xxs flex flex-wrap">
+										<b title={file}>{file.length > 10 ? `${file.slice(0, 10)}...` : file} </b>
+										{
+											!isScraping &&
+											<button title="remove file" className="text-red-500 hover:underline font-bold hover:italic cursor-pointer" onClick={removeSelectedFile}><i className="ri-delete-bin-line"></i></button>
+										}
+									</span>
 								}
 							</div>
 						</div>
@@ -436,7 +453,7 @@ const WebsiteScraper = () => {
 								<div className="px-6 pb-4">
 									{
 										isActivated ?
-										<Download csvHeaders={csvHeaders} data={data} fileName={"google-search-scrapper.csv"}/>
+										<Download csvHeaders={csvHeaders} data={data} fileName={"website-data-scraper.csv"}/>
 										:
 										<button type="button" onClick={()=>setIsDownload(true)} className={`ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`}>
 											Download <i className="ri-download-2-fill"></i>
@@ -468,7 +485,7 @@ const WebsiteScraper = () => {
 			}
 			{
 				isDownload &&
-				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"google-search-scraper"} isModal={isDownload} closeModel={closeModel}/>
+				<DownloadBox csvHeaders={csvHeaders} data={data.length ? data : []} fileName={"website-data-scraper"} isModal={isDownload} closeModel={closeModel}/>
 			}
 			{
 				limitErr &&
