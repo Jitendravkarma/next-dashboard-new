@@ -1,14 +1,3 @@
-//Recent Blogs 
-
-export const blogdata = [
-    { id: 1, icon: "calendar-line", data: "Sept 29 , 2022", src: "../../../assets/img/gallery/7.jpg" },
-    { id: 2, icon: "time-line", data: "3 hours ago", src: "../../../assets/img/gallery/9.jpg" },
-    { id: 3, icon: "time-line", data: "30 mins ago", src: "../../../assets/img/gallery/8.jpg" },
-    { id: 4, icon: "calendar-line", data: "l day ago", src: "../../../assets/img/gallery/3.jpg" },
-    { id: 5, icon: "calendar-line", data: "l day ago", src: "../../../assets/img/gallery/2.jpg" },
-    { id: 6, icon: "time-line", data: "30 mins ago", src: "../../../assets/img/gallery/8.jpg" },
-];
-
 export const Categories = [
     { id: 1, class: "#Lifestyle" },
     { id: 2, class: "#Health" },

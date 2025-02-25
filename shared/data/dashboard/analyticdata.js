@@ -3,18 +3,6 @@ import dynamic from "next/dynamic";
 import { Component } from "react";
 const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-//Visitors By Countries
-
-export const countries = [
-  { id: 1, src: "../../assets/img/flags/10.png", class: "United States ", data: "32,190" },
-  { id: 2, src: "../../assets/img/flags/1.png", class: "Argentina", data: "17,578" },
-  { id: 3, src: "../../assets/img/flags/4.png", class: "Germany", data: "8,798" },
-  { id: 4, src: "../../assets/img/flags/5.png", class: "Mexico", data: "16,885" },
-  { id: 5, src: "../../assets/img/flags/7.png", class: "Russia", data: "10,118" },
-  { id: 6, src: "../../assets/img/flags/2.png", class: "Cannada", data: "1,678" },
-  { id: 7, src: "../../assets/img/flags/6.png", class: "Malaysia", data: "6,578" },
-];
-
 //Visitors By Channel
 
 export const channel = [

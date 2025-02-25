@@ -47,17 +47,6 @@ export const customerdata = [
   { id: 6, src: "../../assets/img/users/10.jpg", icon: <i className="ri-download-cloud-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Whois Downloads", data: "60,000 tasks", url: "/dashboard/whois-domain-database" },
 ];
 
-//order details 
-
-export const orderdetails = [
-  { id: 1, src: "../../assets/img/ecommerce/products/1.png", src1: "../../assets/img/users/2.jpg", class: "Black Heals For Women", class1: "Socrates Itumay", data: "#2343", data1: "socratesitumay@gmail.com", user: "#user1", date: "10-12-2022", color: "success", text: "Success", data2: "$999" },
-  { id: 2, src: "../../assets/img/ecommerce/products/2.png", src1: "../../assets/img/users/3.jpg", class: "White Tshirt", class1: "Json Taylor", data: "#5655", data1: "jsontaylor2416@gmail.com", user: "#user2", date: "11-12-2022", color: "primary", text: "Shipping", data2: "$699" },
-  { id: 3, src: "../../assets/img/ecommerce/products/3.png", src1: "../../assets/img/users/4.jpg", class: "Jacket For Men", class1: "Suzika Stallone", data: "#15245", data1: "suzikastallone3214@gmail.com", user: "#user3", date: "12-12-2022", color: "warning", text: "Out For Delivary", data2: "$599" },
-  { id: 4, src: "../../assets/img/ecommerce/products/4.png", src1: "../../assets/img/users/5.jpg", class: "Airpods", class1: "Selena Deoyl", data: "#45415", data1: "selenadeoyl114@gmail.com", user: "#user4", date: "12-12-2022", color: "danger", text: "Cancelled", data2: "$299" },
-  { id: 5, src: "../../assets/img/ecommerce/products/5.png", src1: "../../assets/img/users/9.jpg", class: "Jasmine Fragrance", class1: "Roman Killon", data: "#35656", data1: "romankillon143@gmail.com", user: "#user5", date: "13-12-2022", color: "primary", text: "Ordered", data2: "$299" },
-  { id: 6, src: "../../assets/img/ecommerce/products/6.png", src1: "../../assets/img/users/10.jpg", class: "Smart Watch", class1: "Charlie Davieson", data: "#622545", data1: "charliedavieson@gmail.com", user: "#user6", date: "13-12-2022	", color: "secondary", text: "Packed", data2: "$299" },
-];
-
 //Top Selling Products
 
 export const topselling = [
@@ -67,17 +56,6 @@ export const topselling = [
   { id: 4, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Scraper", url: "/dashboard/google-search-scraper", data1: "Lawyers contact numbers in Edinburgh", data: "Fashion", color: "danger", text: "Incompleted" },
   { id: 5, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Scraper", url: "/dashboard/google-map-scraper", data1: "Restaurants in Peris", data: "Electronic", color: "success", text: "Completed" },
   { id: 6, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Scraper", url: "/dashboard/google-map-scraper", data1: "Medical stores in belgium", data: "Fashion", color: "danger", text: "Incompleted" },
-];
-
-//Upcoming Products
-
-export const products = [
-  { id: 1, src: "../../assets/img/ecommerce/jpg/1.jpg", data: "Smart Phone", data1: "Mobile", text: "$199.99", class: "mb-6" },
-  { id: 2, src: "../../assets/img/ecommerce/jpg/2.jpg", data: "White Headphones", data1: "Music", text: "$79.49", class: "mb-6" },
-  { id: 3, src: "../../assets/img/ecommerce/jpg/3.jpg", data: "Stop Watch", data1: "Electronics", text: "$49.29", class: "mb-6" },
-  { id: 4, src: "../../assets/img/ecommerce/jpg/4.jpg", data: "Kikon Camera", data1: "Electronics", text: "$1,699.00", class: "mb-6" },
-  { id: 5, src: "../../assets/img/ecommerce/jpg/6.jpg", data: "Kids Shoes", data1: "Clothing", text: "$149.00", class: "mb-6" },
-  { id: 6, src: "../../assets/img/ecommerce/jpg/5.jpg", data: "Photo Frame", data1: "Furniture", text: "$29.99", class: "" },
 ];
 
 //Sales Over View
