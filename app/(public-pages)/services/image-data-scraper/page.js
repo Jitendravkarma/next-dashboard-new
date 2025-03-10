@@ -4,6 +4,7 @@ import ContentHeader from "@/shared/layout-components/public-comp/ContentHeader"
 import ImageSlider from "@/shared/layout-components/public-comp/ImageSlider";
 import ContentItemList from "@/shared/layout-components/public-comp/ContentItem";
 import { seo_image_scraper } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_image_scraper
 
@@ -112,6 +113,10 @@ return (
       {/* Subpage Heading */}
 
       <section className="bg-white py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <ContentHeader img={"https://cdn-icons-png.flaticon.com/128/4904/4904233.png"} heading={'Introduction'} description={<span>
             Our <b>Image Data Scraper</b> tool is designed to <b>scrape images from websites</b> and extract embedded contact information, making it simple to <b>scrape all images from a website</b> or select specific images for data extraction. Supporting formats like <b>.jpg, .png, and .webp</b>, this tool lets you <b>scrape images from a website free</b> of hassle, providing essential details like <b>email addresses and phone numbers</b> quickly. Just upload your image to begin, and with a click, this <b>web scraper for images</b> will seamlessly retrieve the information you need. It’s the ideal solution for professionals who want a fast, efficient way to <b>scrape images from websites</b> for contact details and more.

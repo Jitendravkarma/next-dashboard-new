@@ -12,14 +12,13 @@ import { ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import Maintenance from "@/shared/layout-components/public-comp/Maintenance";
-import YouTubeBtn from "@/shared/layout-components/dashboard/YoutubeButton";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 import ProcessHeader from "@/shared/layout-components/dashboard/ProcessHeader";
 import Link from "next/link";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const GoogleSearchScraper = () => {
-	const maintenance = false;
+	const maintenance = true;
 	const { isActivated, contactNum, smsNum, whatsAppNum, limitErr, handleLimitErr, dashboardRecords, openSnack, snackMessage, openSnackBar, handleSnackMessage  } = useUserContext()
 	const columns = [
 		{
@@ -401,13 +400,13 @@ const GoogleSearchScraper = () => {
 	},[])
 
 	useEffect(()=>{
-		let target = 80;
+		let target = 90;
 		let interval;
 		if(isScraping){
 			setProgressMsg("Working on it...")
 			interval = setInterval(()=>{
 				setPer(cur=>{
-					let inc = cur + 0.1
+					let inc = cur + 1
 					if(cur === target || cur === 100){
 						clearInterval(interval)
 						return cur;
@@ -416,7 +415,7 @@ const GoogleSearchScraper = () => {
 						return inc
 					}
 				})
-			}, 200)
+			}, queryBox.length * 10000)
 		}
 		return ()=>{
 			clearInterval(interval)
@@ -424,13 +423,13 @@ const GoogleSearchScraper = () => {
 	}, [ isScraping ])
 	
 	useEffect(()=>{
-		let target = 80;
+		let target = 90;
 		let interval;
 		if(isExtracting){
 			setProgressMsg("Working on it...")
 			interval = setInterval(()=>{
 				setPer(cur=>{
-					let inc = cur + 0.1
+					let inc = cur + 1
 					if(cur === target || cur === 100){
 						clearInterval(interval)
 						return cur;
@@ -439,7 +438,7 @@ const GoogleSearchScraper = () => {
 						return inc
 					}
 				})
-			}, 200)
+			}, 10000)
 		}
 		return ()=>{
 			clearInterval(interval)
@@ -464,7 +463,7 @@ const GoogleSearchScraper = () => {
 	if(maintenance)
 	return (
 		<>
-			<Maintenance/>
+			<Maintenance message={<span>Currently, the Google Search Scraper is not functional on the web. <br/> However, you can still perform scraping tasks using the Google Search Scraper on your local machine.</span>}/>
 		</>
 	)
 
@@ -507,6 +506,23 @@ const GoogleSearchScraper = () => {
 					</div>
 				))}
 				
+				<div className="col-span-12 xxxl:col-span-3">
+					<div className="box bg-gradient-to-r from-primary to-secondary">
+						<div className="box-body">
+							<div className="flex items-center gap-3 ">
+								<div className="flex-1">
+									<h2 className="text-xl text-white font-semibold">
+										<i class="ri-error-warning-line text-warning"></i> {" "}
+										Service Unavailable
+									</h2>
+									<p className="text-sm text-white/80">Currently, the Google Search Scraper is not functional on the web. However, you can still perform scraping tasks using the Google Search Scraper on your local machine.</p>
+								</div>
+								<Link href={""} target="_blank" type="button" className="ti-btn ti-btn-light my-auto ltr:ml-auto rtl:mr-auto">Download Locally</Link>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div className="col-span-12 xxl:col-span-6">
 					<div className="box">
                         <div className="box-header">
@@ -622,7 +638,17 @@ const GoogleSearchScraper = () => {
 							<div className="col-span-12 flex flex-wrap gap-1 items-center overflow-hidden">
 								<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${formData.city ? "bg-indigo-500 text-white" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={addQuery}>Add</button>
 								
-								<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(queryBox.length && !isScraping && !isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={startScraping} disabled={isScraping || isExtracting}>Start</button>
+								<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(queryBox.length && !isScraping && !isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={startScraping} disabled={isScraping || isExtracting}>
+									{
+										isScraping ? 
+										<>
+											<div className="ti-spinner w-5 h-5" role="status" aria-label="loading">
+												<span className="sr-only"></span>
+											</div>
+										</>
+										: "Start"
+									}
+								</button>
 								
 								<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(isScraping || isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={stopScraping} disabled={!isScraping && !isExtracting}>Stop</button>
 								
@@ -643,7 +669,15 @@ const GoogleSearchScraper = () => {
 					<div className="box orders-table">
 						<div className="box-header">
 							<div className="sm:flex justify-between">
-								<h5 className="box-title my-auto">Records</h5>
+								{
+									(isScraping && !data.length) ? 
+									<div className="flex items-center gap-2">
+										<div className="ti-spinner w-5 h-5 text-primary" role="status" aria-label="loading"><span className="sr-only">Loading...</span></div>
+										<span>Processing...</span>
+									</div>
+									:
+									<span>Records</span>
+								}
 							</div>
 						</div>
 						{

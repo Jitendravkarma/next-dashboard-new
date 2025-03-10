@@ -1,6 +1,6 @@
 import { seo_terms } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
-import Link from "next/link";
 
 export const metadata = seo_terms
 
@@ -12,6 +12,10 @@ const TermsCondition = () => {
 
       {/* Gets Connects Section */}
       <section className="py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="prose">
             <h2 className="font-bold text-3xl my-3 text-center leading-10 italic"> Web Crawler Spider <br /> Terms and Conditions</h2>

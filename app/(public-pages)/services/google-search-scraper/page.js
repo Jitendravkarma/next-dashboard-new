@@ -4,6 +4,7 @@ import ContentHeader from "@/shared/layout-components/public-comp/ContentHeader"
 import ImageSlider from "@/shared/layout-components/public-comp/ImageSlider";
 import ContentItemList from "@/shared/layout-components/public-comp/ContentItem";
 import { seo_google_search } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_google_search
 
@@ -138,6 +139,10 @@ return (
       {/* Subpage Heading */}
 
       <section className="bg-white py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <ContentHeader img={"https://cdn-icons-png.flaticon.com/128/300/300221.png"} heading={'Introduction'} description={<span>
             In today’s data-centric world, efficiently <b>scraping Google search results</b> has become vital for businesses, researchers, and marketers alike. Our <b>Google Search Scraper</b> tool empowers you to perform <b>web scraping on Google search results</b> quickly and accurately. With seamless integration for <b>Python</b> users, our scraper tool uses APIs designed to extract valuable insights, whether you're looking to <b>scrape search results</b> for analytics or need a reliable <b>Google search scraper</b> for your custom applications. This includes everything from <b>scraping Google Maps search results</b> to automating <b>Google search data extraction</b> for specific keywords, contact details, and more. Discover how our <b>Python-based Google Search Scraper</b> can streamline your data collection process with easy access and support for diverse search requirements.

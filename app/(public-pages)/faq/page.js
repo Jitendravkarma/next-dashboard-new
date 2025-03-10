@@ -4,6 +4,7 @@ import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
 import { seo_faq } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_faq
 
@@ -276,6 +277,9 @@ const Faq = () => {
 
       {/* faq question and answer Begin */}
       <section className="bg-white py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:gap-2 lg:gap-4">
             <p className="text-3xl font-extrabold leading-tight">

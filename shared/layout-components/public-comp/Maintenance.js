@@ -3,7 +3,8 @@ import React from "react";
 import Seo from "@/shared/layout-components/seo/seo";
 import Link from "next/link";
 
-const Maintenance = () => {
+const Maintenance = ({message=<span>We apologize for the inconvenience, but our service is currently undergoing scheduled maintenance. <br/>
+                            <b>We regret the inconvenience caused.</b></span>}) => {
 	return (
 		<div>
 			<Seo title={"Under Maintenance"} />
@@ -14,8 +15,7 @@ const Maintenance = () => {
                             <i className="ri-tools-fill text-5xl"></i> <br/>
                             Under Maintenance</h1>
                         <p className="text-lg md:text-xl mb-2">
-                            We apologize for the inconvenience, but our service is currently undergoing scheduled maintenance. <br/>
-                            <b>We regret the inconvenience caused.</b>
+                            {message}
                         </p>
                         <Link href={"/dashboard/home"} className="ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 hover:text-white hover:bg-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10">
                             Go Home

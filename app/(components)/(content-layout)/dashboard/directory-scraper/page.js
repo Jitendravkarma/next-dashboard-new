@@ -321,7 +321,15 @@ const DirectoryScraper = () => {
 					<div className="box orders-table">
 						<div className="box-header">
 							<div className="sm:flex justify-between">
-								<h5 className="box-title my-auto">Records</h5>
+								{
+									(isScraping && !data.length) ? 
+									<div className="flex items-center gap-2">
+										<div className="ti-spinner w-5 h-5 text-primary" role="status" aria-label="loading"><span className="sr-only">Loading...</span></div>
+										<span>Processing...</span>
+									</div>
+									:
+									<span>Records</span>
+								}
 							</div>
 						</div>
 						{

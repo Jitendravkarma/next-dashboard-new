@@ -454,7 +454,7 @@ const GoogleMapScraper = () => {
 			setProgressMsg("Working on it...")
 			interval = setInterval(()=>{
 				setPer(cur=>{
-					let inc = cur + 0.1
+					let inc = cur + 1
 					if(cur === target || cur === 100){
 						clearInterval(interval)
 						return cur;
@@ -463,7 +463,7 @@ const GoogleMapScraper = () => {
 						return inc
 					}
 				})
-			}, 200)
+			}, queryBox.length * 10000)
 		}
 		return ()=>{
 			clearInterval(interval)
@@ -477,7 +477,7 @@ const GoogleMapScraper = () => {
 			setProgressMsg("Working on it...")
 			interval = setInterval(()=>{
 				setPer(cur=>{
-					let inc = cur + 0.1
+					let inc = cur + 1
 					if(cur === target || cur === 100){
 						clearInterval(interval)
 						return cur;
@@ -486,7 +486,7 @@ const GoogleMapScraper = () => {
 						return inc
 					}
 				})
-			}, 200)
+			}, 10000)
 		}
 		return ()=>{
 			clearInterval(interval)
@@ -662,9 +662,22 @@ const GoogleMapScraper = () => {
 							<div className="col-span-12 flex flex-wrap gap-1 items-center overflow-hidden">
 								<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${formData.city ? "bg-indigo-500 text-white" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={addQuery}>Add</button>
 								
-								<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(queryBox.length && !isScraping && !isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={startScraping} disabled={isScraping || isExtracting || !queryBox.length}>Start</button>
+								<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(queryBox.length && !isScraping && !isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={startScraping} disabled={isScraping || isExtracting || !queryBox.length}>
+									{
+										isScraping ? 
+										<>
+											<div className="ti-spinner w-5 h-5" role="status" aria-label="loading">
+												<span className="sr-only"></span>
+											</div>
+										</>
+										: "Start"
+									}
+								</button>
 								
-								<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(isScraping || isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} disabled={!isScraping || !isExtracting} onClick={stopScraping}>Stop</button>
+								{
+									isExtracting &&
+									<button type="button" className={`ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={stopScraping}>Stop</button>
+								}
 								
 								{
 									( numOfData[1].title === "website" && numOfData[0].text > 0 ) &&
@@ -683,7 +696,15 @@ const GoogleMapScraper = () => {
 					<div className="box orders-table">
 						<div className="box-header">
 							<div className="sm:flex justify-between">
-								<h5 className="box-title my-auto">Records</h5>
+								{
+									(isScraping && !data.length) ? 
+									<div className="flex items-center gap-2">
+										<div className="ti-spinner w-5 h-5 text-primary" role="status" aria-label="loading"><span className="sr-only">Loading...</span></div>
+										<span>Processing...</span>
+									</div>
+									:
+									<span>Records</span>
+								}
 							</div>
 						</div>
 						{

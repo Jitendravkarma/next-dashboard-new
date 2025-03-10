@@ -4,6 +4,7 @@ import ContentHeader from "@/shared/layout-components/public-comp/ContentHeader"
 import ImageSlider from "@/shared/layout-components/public-comp/ImageSlider";
 import ContentItemList from "@/shared/layout-components/public-comp/ContentItem";
 import { seo_document_scraper } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_document_scraper
 
@@ -112,6 +113,10 @@ return (
       {/* Subpage Heading */}
 
       <section className="bg-white py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <ContentHeader img={"https://cdn-icons-png.flaticon.com/128/281/281760.png"} heading={'Introduction'} description={<span>
             Our <b>Document Data Scraper</b> is an advanced <b>website data scraper software</b> tailored for extracting contact information from various document types. This tool supports <b>website scraping</b> and document scraping across multiple formats, including .txt, .pdf, .html, and .json, making it a versatile <b>data scraping tool</b>. With our <b>web scraper</b>, professionals can efficiently gather emails, phone numbers, and other relevant data directly from their files. Designed to be compatible with <b>website scraper Python</b> setups and available as a <b>web scraper Chrome</b> extension, our service simplifies the process of data extraction, whether for lead generation, research, or outreach. Experience the convenience of <b>web scraping tools</b> built to save you time and enhance productivity with our reliable <b>web scraping service</b>.

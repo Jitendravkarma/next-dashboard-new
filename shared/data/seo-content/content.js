@@ -131,6 +131,13 @@ export const seo_whois_data = {
     keywords: `Whois domain lookup, domain owner search, website registration details, domain expiration checker, domain verification tool, domain intelligence, Whois API`
 }
 
+export const seo_verify = {
+    title: `Email Verification - Web Crawler Spider`,
+    description: `Thank you for verifying your email! Your account is now confirmed, and you can proceed to enjoy all our features. We're excited to have you on board!`,
+    keywords: ``
+}
+
+
 export const seo_not_found = {
     title: `Page Not Found`,
     description: `This page is not avaiable on Web Crawler Spider`,

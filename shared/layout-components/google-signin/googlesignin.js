@@ -1,5 +1,5 @@
 "use client"
-import { googleSignIn } from "@/shared/apis/api";
+import { googleSignIn, setAuthToken } from "@/shared/apis/api";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";

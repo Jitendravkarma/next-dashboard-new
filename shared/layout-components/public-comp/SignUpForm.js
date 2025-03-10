@@ -95,7 +95,7 @@ const SignUpForm = () => {
             :
             <main id="content" className="w-full max-w-md mx-auto p-6 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] lg:shadow-none">
                 <div className="mt-5"/>
-                <Link href={"/dashboards/sales/"} className="header-logo lg:hidden">
+                <Link href={"/"} className="header-logo lg:hidden">
                     <img src={"../../../assets/img/brand-logos/desktop-logo.png"} alt="logo" className="mx-auto block dark:hidden" />
                     <img src={"../../../assets/img/brand-logos/desktop-dark.png"} alt="logo" className="mx-auto hidden dark:block" />
                 </Link>

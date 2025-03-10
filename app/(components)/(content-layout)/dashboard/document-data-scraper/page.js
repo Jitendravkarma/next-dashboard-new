@@ -15,6 +15,8 @@ const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const DocumentScraper = () => {
 	const { isActivated, contactNum, smsNum, whatsAppNum, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+	const [ selectedCountry, setSelectedCountry ] = useState("")
+	const [countryCode, setCountryCode] = useState("91")
 	const columns = [
 		{
 			field: 'actions',
@@ -44,6 +46,18 @@ const DocumentScraper = () => {
 			headerName: "Phone",
 			field: "phone",
 			width: 400,
+			renderCell: ({row})=>(
+				(selectedCountry.value) ?
+				<>
+					{
+						row.phone !== "N/A" ?
+						<span>+{countryCode} {row.phone}</span> :
+						<span>{row.phone}</span>
+					}
+				</>
+				:
+				<span>{row.phone}</span>
+			),
 			editable: false
 		}
 	];
@@ -56,7 +70,6 @@ const DocumentScraper = () => {
 	let fileInputRef = useRef(null);
 	const [ countries, setCountries ] = useState([])
 	const [ numOfData, setNumOfData] = useState(recordData)
-	const [ selectedCountry, setSelectedCountry ] = useState("")
 	const [ file, setFile ] = useState("")
 	const [ isScraping, setIsScraping ] = useState(false)
 	const [ isDownload, setIsDownload ] = useState(false)
@@ -104,7 +117,7 @@ const DocumentScraper = () => {
 		if (extractedNumbers) {
 			let matchCnt = countryList.find((country)=>selectedCountry.value.toLowerCase() === country.cnt.toLowerCase());
 			let numbers = extractedNumbers.map(number => convertPhoneNumber(number));
-			// setCountryCode(matchCnt.countryCode);
+			setCountryCode(matchCnt.countryCode);
 			let filterNumber = numbers.map((num)=>{
 			  // console.log(num);
 			  let updatedNumber = num.replace(/\(|\)/g, "");
@@ -162,12 +175,9 @@ const DocumentScraper = () => {
 				csv:"text/csv", 
 				txt:"text/plain", 
 				word:"application/msword", 
-				docx:"application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 				html:"text/html",
 				json:"application/json",
 				xls:"application/vnd.ms-excel",
-				xlsx:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-				pdf:"application/pdf"
 			}
 			
 			if ((type.includes(filetypes.csv) || type.includes(filetypes.txt) || type.includes(filetypes.word) || type.includes(filetypes.html) || type.includes(filetypes.xls) || type.includes(filetypes.json)) && file.size < 51000000) {
@@ -369,7 +379,17 @@ const DocumentScraper = () => {
 					<div className="box orders-table">
 						<div className="box-header">
 							<div className="sm:flex justify-between">
-								<h5 className="box-title my-auto">Records</h5>
+								<h5 className="box-title my-auto">
+									{
+										(isScraping && !data.length) ? 
+										<div className="flex items-center gap-2">
+											<div className="ti-spinner w-5 h-5 text-primary" role="status" aria-label="loading"><span className="sr-only">Loading...</span></div>
+											<span>Processing...</span>
+										</div>
+										:
+										<span>Records</span>
+									}
+								</h5>
 							</div>
 						</div>
 						{
@@ -400,15 +420,15 @@ const DocumentScraper = () => {
 			{/* alert boxes */}
 			{
 				contactNum &&
-				<ContactBox number={contactNum}/>
+				<ContactBox number={contactNum} code={countryCode}/>
 			}
 			{
 				smsNum &&
-				<SmsBox number={smsNum} />
+				<SmsBox number={smsNum} code={countryCode}/>
 			}
 			{
 				whatsAppNum &&
-				<WhatsappBox number={whatsAppNum} />
+				<WhatsappBox number={whatsAppNum} code={countryCode}/>
 			}
 			{
 				isDownload &&

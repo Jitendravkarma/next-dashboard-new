@@ -4,6 +4,7 @@ import ContentHeader from "@/shared/layout-components/public-comp/ContentHeader"
 import ImageSlider from "@/shared/layout-components/public-comp/ImageSlider";
 import ContentItemList from "@/shared/layout-components/public-comp/ContentItem";
 import { seo_google_map } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_google_map
 
@@ -157,6 +158,10 @@ return (
       {/* Subpage Heading */}
 
       <section className="bg-white py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <ContentHeader img={"https://cdn-icons-png.flaticon.com/128/2335/2335353.png"} heading={'Introduction'} description={<span>
             Our <b>Google Map Extractor</b> and <b>Google Maps Scraper</b> services are designed to extract detailed and structured data directly from <b>Google Maps</b>.

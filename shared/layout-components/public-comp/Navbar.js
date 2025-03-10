@@ -37,7 +37,7 @@ const Navbar = () => {
     {url:"/services/image-data-scraper", title:"image data scraper"},
     {url:"/services/business-directory-scraper", title:"business directory scraper"},
     {url:"/services/whois-database", title:"whois data download"},
-    {url:"/services/website-data-center", title:"website data center"}
+    // {url:"/services/website-data-center", title:"website data center"}
   ]
 
   // initialize components based on data attribute selectors
