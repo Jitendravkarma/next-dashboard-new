@@ -4,6 +4,7 @@ import ContentHeader from "@/shared/layout-components/public-comp/ContentHeader"
 import ImageSlider from "@/shared/layout-components/public-comp/ImageSlider";
 import ContentItemList from "@/shared/layout-components/public-comp/ContentItem";
 import { seo_directory_scraper } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_directory_scraper
 
@@ -147,6 +148,10 @@ return (
       {/* Subpage Heading */}
 
       <section className="bg-white py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <ContentHeader img={"https://cdn-icons-png.flaticon.com/128/6223/6223617.png"} heading={'Introduction'} description={<span>
             Our <b>Business Directory Scraper</b> service is a powerful tool designed to help you quickly extract valuable contact information, such as <b>emails and phone numbers</b>, from business directories like <b>Yellow Pages</b>. Whether you’re working with large directories in various formats or need structured data extraction, this tool is ideal for <b>web scraping Yellow Pages</b> and other business listings. The <b>Yellow Pages scraper</b> and <b>Yellow Pages data extractor</b> features allow you to gather essential contact details efficiently. For those in need of a <b>Yellow Pages email extractor</b> or looking for a <b>Yellow Pages scraper free</b> option, this service provides the flexibility to meet your needs. With support for <b>Yellow Pages web scraper</b> and <b>Yellow Pages extractor free download</b> options, our <b>Reoon Yellow Pages scraper</b> offers a complete solution for data extraction.

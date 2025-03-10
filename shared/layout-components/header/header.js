@@ -16,7 +16,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
     const { user, handleSignOut } = useUserContext()
     
     function handleSignOutCall() {
-        navigate.push("/");
+        navigate.push("/signin");
         handleSignOut();
     }
 
@@ -391,9 +391,9 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                         </div>
 
                         <div className="responsive-logo">
-                            <Link className="responsive-logo-dark" href={"/dashboards/sales"} aria-label="Brand">
+                            <Link className="responsive-logo-dark" href={"/dashboard/home"} aria-label="Brand">
                                 <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="mx-auto" /></Link>
-                            <Link className="responsive-logo-light" href={"/dashboards/sales"} aria-label="Brand">
+                            <Link className="responsive-logo-light" href={"/dashboard/home"} aria-label="Brand">
                                 <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="mx-auto" /></Link>
                         </div>
 
@@ -637,7 +637,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                                     <i className="ti ti-wallet text-lg"></i>
                                                     Bal: $7,12,950
                                                 </Link> */}
-                                                <Link href={"/"} className="ti-dropdown-item">
+                                                <Link href={"/signin"} type="button" onClick={handleSignOutCall} className="ti-dropdown-item">
                                                     <i className="ti ti-logout  text-lg"></i>
                                                     Log Out
                                                 </Link>

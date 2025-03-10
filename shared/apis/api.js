@@ -245,16 +245,15 @@ export async function getMapGlobalData() {
   }
 }
 
-export async function websiteDataCenter(query) {
+export async function websiteDataCenter(query, cancelToken) {
   checkAndAddAuthTokenToHeader()
   try {
-    const response = await api.post('/restricted/website_scrapper_global_data', query);
+    const response = await api.post('/restricted/Website_data_local_search', query, cancelToken);
     return response.data.data; // Assuming the API returns the user data and a token
   } catch (error) {
     return error;
   }
 }
-
 export async function verificationLink(email) {
   checkAndAddAuthTokenToHeader()
   try {

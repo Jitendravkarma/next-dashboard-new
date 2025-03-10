@@ -88,7 +88,7 @@ export const countryList = [
     {cnt: "Macau", reg: /\b(?:8536\d{7}|6\d{7})\b/g, diffReg:/^(?:853|0)?(6\d{7})$/, shortCode: "MAC", countryCode: "853"},
     {cnt: "Madagascar", reg: /\b(?:2613\d{8}|3\d{8})\b/g, diffReg:/^(?:261|0)?(3\d{9})$/, shortCode: "MDG", countryCode: "261"},
     {cnt: "Madeira", reg: /\b(?:3519\d{8}|9\d{8})\b/g, diffReg:/^(?:351|0)?(9\d{8})$/, shortCode: "PRT-MD", countryCode: "351"},
-    {cnt: "Malaysia", reg: /\b(?:601[0-9]\d{7,8}|1[0-9]\d{7,8})\b/g, diffReg:/^(?:60|0)?([1,0-9]\d{6,7})$/, shortCode: "MYS", countryCode: "60"},
+    {cnt: "Malaysia", reg: /\b(?:601[0-9]\d{7,8}|1[0-9]\d{7,8})\b/g, diffReg:/^(?:60|0)?([1,0-9]\d{6,8})$/, shortCode: "MYS", countryCode: "60"},
     {cnt: "Malawi", reg: /\b(?:265[8-9]\d{8}|[8-9]\d{8})\b/g, diffReg:/^(?:265|0)?([8-9]\d{6})$/, shortCode: "MWI", countryCode: "265"},
     {cnt: "Maldives", reg: /\b(?:960[7,9]\d{6}|[7,9]\d{6})\b/g, diffReg:/^(?:960|0)?([7,9]\d{6})$/, shortCode: "MDV", countryCode: "960"},
     {cnt: "Mali", reg: /\b(?:223[3,7]\d{7}|[3,7]\d{7})\b/g, diffReg:/^(?:223|0)?([3-7]\d{6})$/, shortCode: "MLI", countryCode: "223"},
@@ -133,7 +133,7 @@ export const countryList = [
     {cnt: "Samoa", reg: /\b(?:68577\d{5}|77\d{5})\b/g, diffReg:/^(?:685|0)?(77\d{3})$/, shortCode: "WSM", countryCode: "685"},
     {cnt: "Saudi Arabia", reg: /\b(?:9665[0-9]\d{7}|5[0-9]\d{7})\b/g, diffReg:/^(?:966|0)?(5[0-9]\d{7})$/, shortCode: "SAU", countryCode: "966"},
     {cnt: "Senegal", reg: /\b(?:2217[6,7]\d{7}|7[6,7]\d{7})\b/g, diffReg:/^(?:382|0)?(6[0,3,6-9]\d{6})$/, shortCode: "SEN", countryCode: "221"},
-    {cnt: "Serbia", reg: /\b(?:3816[0-9]\d{7}|6[0-9]\d{7})\b/g, diffReg:/^(?:381|0)?(6[0-9]\d{7})$/, shortCode: "SRB", countryCode: "381"},
+    {cnt: "Serbia", reg: /\b(?:3816[0-9]\d{7}|6[0-9]\d{7})\b/g, diffReg:/^(?:381|0)?([1,2,6][0-9]\d{6,9})$/, shortCode: "SRB", countryCode: "381"},
     {cnt: "Seychelles", reg: /\b(?:2482[5,7]\d{5}|2[5,7]\d{5})\b/g, diffReg:/^(?:248|0)?(2[5,7]\d{3})$/, shortCode: "SYC", countryCode: "248"},
     {cnt: "Singapore", reg: /\b(?:65[8,9]\d{7}|[8,9]\d{7})\b/g, diffReg:/^(?:65|0)?([8-9]\d{7})$/, shortCode: "SGP", countryCode: "65"},
     {cnt: "Sri Lanka", reg: /\b(?:947[0-8]\d{7}|7[0-8]\d{7})\b/g, diffReg:/^(?:94|0)?(7[0-8]\d{5})$/, shortCode: "LKA", countryCode: "94"},
@@ -156,5 +156,5 @@ export const countryList = [
     {cnt: "United States", reg: /\b(?:1[2-9][0-8][2-8]\d{7}|[2-9][0-8][2-8]\d{7})\b/g, diffReg:/^(?:1|0)?([2-9][0-8][0,2-8]\d{7})$/, shortCode: "USA", countryCode: "1"},
     {cnt: "United Kingdom", reg: /\b(?:44[1-7][1-9]\d{8}|[1-7][1-9]\d{8})\b/g, diffReg:/^(?:44|0)?([1-7][1-9]\d{8})$/, shortCode: "GBR", countryCode: "44"},
     {cnt: "Vietnam", reg: /\b(?:84[3-9]\d{8}|[3-9]\d{8})\b/g, diffReg:/^(?:84|0)?([3,5,7-9]\d{8})$/, shortCode: "VNM", countryCode: "84"},
-    {cnt: "Zimbabwe", reg: /\b(?:2637[1,3,7]\d{7}|7[1,3,7]\d{7})\b/g, diffReg:/^(?:263|0)?(7[1,3,7]\d{7})$/, shortCode: "ZWE", countryCode: "263"}
+    {cnt: "Zimbabwe", reg: /\b(?:2637[1,3,7]\d{7}|7[1,3,7]\d{7})\b/g, diffReg:/^(?:263|0)?([2,4,9,7][1,3,4,7,8]\d{5,7})$/, shortCode: "ZWE", countryCode: "263"}
 ]

@@ -72,7 +72,7 @@ export const MENUITEMS = [
 	// 	],
 	// },
 
-	{ path: "/dashboard/e-comm", icon: ComponentsSvg, title: "E-Commerce", type: "link", active: false, selected: false },
+	{ path: "/dashboard/coming-soon", icon: ComponentsSvg, title: "E-Commerce", type: "link", active: false, selected: false },
 	
 	// {
 	// 	icon: ComponentsSvg, title: "E-Commerce", type: "sub", active: false, selected: false, children: [
@@ -99,9 +99,9 @@ export const MENUITEMS = [
 	// 	]
 	// },
 
-	{ path: "/dashboard/social-media", icon: ElementsSvg, title: "Social Media", type: "link", active: false, selected: false },
-	{ path: "/dashboard/jobs", icon: AdvancedUISvg, title: "Jobs", type: "link", active: false, selected: false },
-	{ path: "/dashboard/real-estate", icon: FormsSvg, title: "Real Estate", type: "link", active: false, selected: false },
+	{ path: "/dashboard/coming-soon", icon: ElementsSvg, title: "Social Media", type: "link", active: false, selected: false },
+	{ path: "/dashboard/coming-soon", icon: AdvancedUISvg, title: "Jobs", type: "link", active: false, selected: false },
+	{ path: "/dashboard/coming-soon", icon: FormsSvg, title: "Real Estate", type: "link", active: false, selected: false },
 	// {
 	// 	icon: ElementsSvg, title: "Social Media", type: "sub", active: false, selected: false, children: [
 

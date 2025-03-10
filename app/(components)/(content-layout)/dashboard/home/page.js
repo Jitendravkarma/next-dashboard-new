@@ -5,6 +5,7 @@ import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Link from "next/link";
 import { SalesValue } from "@/shared/data/charts/chartjsdata";
 import UpgradePlan from "@/shared/layout-components/dashboard/UpgradePlan";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 const Home = () => {
 	const record = <i className="ri-clipboard-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
@@ -59,7 +60,7 @@ const Home = () => {
 			})
 			const servicesCount = usedServices.map(item=>{
 				const find = getRecords.find(dt=>dt.class === item.class);
-				console.log(find)
+				// console.log(find)
 				if(find && find.class){
 					return {...item, data: find.text}
 				}
@@ -109,6 +110,11 @@ const Home = () => {
 				))}
 			</div>
 			<div className="grid grid-cols-12 gap-x-5">
+				<div className="col-span-12">
+					{/* google ads */}
+					<HorizontalAds/>
+        			{/* google ads */}
+				</div>
 				<UpgradePlan/>
 				<div className="col-span-12 lg:col-span-12 xxl:col-span-6">
 					<div className="box">

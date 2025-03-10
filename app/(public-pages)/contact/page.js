@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
 import { seo_contact } from "@/shared/data/seo-content/content";
 import ContactForm from "@/shared/layout-components/public-comp/ContactForm";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_contact
 
@@ -49,6 +50,9 @@ const Contact = () => {
       
       <div className="">
         <section className="pt-20 bg-white">
+          {/* google ads */}
+          <HorizontalAds/>
+          {/* google ads */}
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             {/* grid Begin */}
             <div className="grid lg:grid-cols-2 gap-4 w-screen">

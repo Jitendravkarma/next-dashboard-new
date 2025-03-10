@@ -15,7 +15,9 @@ import ProcessHeader from "@/shared/layout-components/dashboard/ProcessHeader";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const ImageDataScraper = () => {
-	const { isVerfified, isActivated, contactNum, smsNum, whatsAppNum, iconPing, hanleIconPing, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+	const { isActivated, contactNum, smsNum, whatsAppNum, iconPing, hanleIconPing, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+	const [ selectedCountry, setSelectedCountry ] = useState("")
+	const [countryCode, setCountryCode] = useState("91")
 	const columns = [
 		{
 			field: 'actions',
@@ -45,6 +47,18 @@ const ImageDataScraper = () => {
 			headerName: "Phone",
 			field: "phone",
 			width: 400,
+			renderCell: ({row})=>(
+				(selectedCountry.value) ?
+				<>
+					{
+						row.phone !== "N/A" ?
+						<span>+{countryCode} {row.phone}</span> :
+						<span>{row.phone}</span>
+					}
+				</>
+				:
+				<span>{row.phone}</span>
+			),
 			editable: false
 		}
 	];
@@ -57,7 +71,6 @@ const ImageDataScraper = () => {
 	let fileInputRef = useRef(null);
 	const [countries, setCountries] = useState([]);
 	const [ numOfData, setNumOfData] = useState(recordData)
-	const [ selectedCountry, setSelectedCountry ] = useState("")
 	const [ isScraping, setIsScraping ] = useState(false)
 	const [ isDownload, setIsDownload ] = useState(false)
 	const [ data, setData ] = useState([])
@@ -66,11 +79,9 @@ const ImageDataScraper = () => {
 	const [image, setImage] = useState([]);
 	const [imageObjects, setImageObjects] = useState([]);
 	const [textContent, setTextContent] = useState("");
-	const [countryCode, setCountryCode] = useState("91")
 	const [textFormat, setTextFormat] = useState(false);
 	
 	const csvHeaders = [
-        { label: "ID", key: "id" },
         { label: "Email", key: "email" },
         { label: "Phone", key: "phone" }
     ];
@@ -85,34 +96,28 @@ const ImageDataScraper = () => {
 	},[isDownload])
 
 	const extractEmails = ()=>{
-		if(isVerfified){
-		  hanleIconPing("email", true);
-		  const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
-		  const results = returnMatchedContent(emailRegex);
-		  if(results.length){
+		hanleIconPing("email", true);
+		const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+		const results = returnMatchedContent(emailRegex);
+		if(results.length){
 			setTimeout(()=>{
-			  // console.log(results)
-			  setEmails(results)
-			  hanleIconPing("email", false);
-			  hanleIconPing("phone", false);
-			  // moveToBottom(results)
+				// console.log(results)
+				setEmails(results)
+				hanleIconPing("email", false);
+				hanleIconPing("phone", false);
+				// moveToBottom(results)
 			//   setDataAlert({...dataAlert, email: true});
 			}, 2000);
-		  }
-		  else {
+		}
+		else {
 			alert(`Email not found!`);
 			hanleIconPing("email", false);
 			hanleIconPing("phone", false);
-		  }
-		}
-		else {
-		//   openVerifyEmail();
 		}
 	}
 
 	const extractPhones = ()=>{
-		if(isVerfified){
-		  if(selectedCountry.value){
+		if(selectedCountry.value){
 			hanleIconPing("phone", true);
 			const numberRegex = /(?:\(?(\d+)\)?[\s-+]?)?(\d+)[\s-]?(\d+)|\+(\d+)\s(\d+)\s(\d+)(?:\s(\d+))+/g;
 			const results = returnMatchedContent(numberRegex)
@@ -151,12 +156,8 @@ const ImageDataScraper = () => {
 			  alert(`Phone number not found!`)
 			}
 		  }
-		  else {
-			alert(`Please select a country to extract phone numbers!`)
-		  }
-		}
 		else {
-		//   openVerifyEmail();
+			alert(`Please select a country to extract phone numbers!`)
 		}
 	}
 

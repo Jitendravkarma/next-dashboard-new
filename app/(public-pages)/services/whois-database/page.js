@@ -4,6 +4,7 @@ import ContentHeader from "@/shared/layout-components/public-comp/ContentHeader"
 import ImageSlider from "@/shared/layout-components/public-comp/ImageSlider";
 import ContentItemList from "@/shared/layout-components/public-comp/ContentItem";
 import { seo_whois_data } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_whois_data
 
@@ -124,6 +125,10 @@ return (
       {/* Subpage Heading */}
 
       <section className="bg-white py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <ContentHeader img={"https://cdn-icons-png.flaticon.com/128/2282/2282226.png"} heading={'Introduction'} description={<span>
             Our <b>Whois Database Download</b> service provides you with easy access to detailed <b>whois domain</b> information. As a reliable <b>whois database provider</b>, we allow you to download comprehensive <b>whois database</b> data, including <b>whois domain owner</b> details, <b>whois IP</b> information, and other critical data. Whether you're conducting <b>whois search</b> queries, performing <b>whois lookup domain</b> checks, or managing digital assets, this service is designed to meet your needs. Download our detailed <b>whois database lookup</b> information in a convenient zip file format, complete with ownership details for easy access and analysis. Ideal for <b>icann whois</b> searches, <b>whois IP lookup</b>, and <b>domain search whois</b> functions.

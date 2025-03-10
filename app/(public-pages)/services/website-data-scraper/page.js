@@ -4,6 +4,7 @@ import ContentHeader from "@/shared/layout-components/public-comp/ContentHeader"
 import ImageSlider from "@/shared/layout-components/public-comp/ImageSlider";
 import ContentItemList from "@/shared/layout-components/public-comp/ContentItem";
 import { seo_website_scraper } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_website_scraper
 
@@ -140,6 +141,10 @@ return (
       {/* Subpage Heading */}
 
       <section className="bg-white py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <ContentHeader img={"https://cdn-icons-png.flaticon.com/128/1674/1674969.png"} heading={'Introduction'} description={<span>
             Our <b>Website Data Scraper</b> service is a powerful <b>website data scraper software</b> designed to help you extract essential details like email addresses, phone numbers, website title, description, and keywords from any website URL. Whether you’re gathering leads, conducting research, or compiling contact information, this <b>web scraping service</b> provides a quick and efficient way to obtain data directly from the websites you’re interested in. With support for <b>web scraper Python</b> and compatibility as a <b>web scraper Chrome</b> extension, our tool is ideal for those seeking a <b>free web scraper</b> or advanced <b>web scraping tools</b>. Make use of our <b>data scraping tools</b> to streamline your workflow and boost productivity.

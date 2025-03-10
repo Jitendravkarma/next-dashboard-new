@@ -3,6 +3,7 @@ import Link from "next/link";
 import { seo_privacy } from "@/shared/data/seo-content/content";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_privacy
 
@@ -286,20 +287,13 @@ const PrivacyPolicy = () => {
       {/* Privacy Policy Section */}
       <PageHeader title={"Privacy Policy"}/>
 
-      {/* <div className="pt-100">
-        <div className='text-center'>
-            <ins className="adsbygoogle"
-                data-ad-client="ca-pub-6421827460277995"
-                data-ad-slot="2799812988"
-                data-ad-format="auto" 
-                data-full-width-responsive="true" 
-                style={{ display: 'block' }}>
-            </ins>
-        </div>
-      </div> */}
       
       {/* Gets Connects Section */}
       <section className="py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+        
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="prose">
             <h1 className="font-bold text-3xl my-3 text-center leading-10 italic">

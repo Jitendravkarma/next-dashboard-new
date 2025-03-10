@@ -8,6 +8,7 @@ import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '@/shared/layout-components/public-comp/Navbar'
 import Footer from '@/shared/layout-components/public-comp/Footer'
 import { seo_home } from '@/shared/data/seo-content/content'
+import { HorizontalAds } from '@/shared/layout-components/public-comp/Ads'
 
 export const metadata = seo_home
 
@@ -36,12 +37,20 @@ const Home = () => {
           </section>
           {/* watch demo */}
 
+          {/* google ads */}
+          <HorizontalAds/>
+          {/* google ads */}
+
           {/*  Advanced and Simple Ways to Scrape Begin */}
           <Information/>
 
           {/* Data workflow */}
           <Workflow/>
 
+          {/* google ads */}
+          <HorizontalAds/>
+          {/* google ads */}
+          
           {/* Services */}
           <Services/>
 

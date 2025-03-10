@@ -64,6 +64,12 @@ export const seo_forget_password = {
     keywords: `Forgot password, reset web scraper login, password recovery, lost account access, web scraping tool login recovery`
 }
 
+export const seo_forget_password_email = {
+    title: `Reset Your Password - Web Crawler Spider`,
+    description: `Receive a password reset email to regain access to your account. Secure your data and recover your login credentials easily.`,
+    keywords: `forgot password email, password reset, recover account, email verification, data security, user authentication, account recovery, secure login`
+}
+
 export const seo_terms = {
     title: `Terms and Conditions | Web Crawler Spider`,
     description: `Read the terms and conditions of web crawler spiders. Understand the rules, policies, and usage guidelines for our web scraping services, ensuring compliance and ethical data extraction.`,
@@ -130,6 +136,13 @@ export const seo_whois_data = {
     description: `Get real-time Whois domain information including owner details, registration date, expiration and contact details. Perfect for domain research, cyber security and website validation.`,
     keywords: `Whois domain lookup, domain owner search, website registration details, domain expiration checker, domain verification tool, domain intelligence, Whois API`
 }
+
+export const seo_verify = {
+    title: `Email Verification - Web Crawler Spider`,
+    description: `Thank you for verifying your email! Your account is now confirmed, and you can proceed to enjoy all our features. We're excited to have you on board!`,
+    keywords: ``
+}
+
 
 export const seo_not_found = {
     title: `Page Not Found`,

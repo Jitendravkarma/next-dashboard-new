@@ -4,6 +4,7 @@ import ContentHeader from "@/shared/layout-components/public-comp/ContentHeader"
 import ImageSlider from "@/shared/layout-components/public-comp/ImageSlider";
 import ContentItemList from "@/shared/layout-components/public-comp/ContentItem";
 import { seo_websitedata } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_websitedata
 
@@ -96,6 +97,10 @@ return (
       {/* Subpage Heading */}
 
       <section className="bg-white py-24">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <ContentHeader img={"https://cdn-icons-png.flaticon.com/128/7915/7915366.png"} heading={'Introduction'} description={<span>
             The <b>Website Data Center</b> is a comprehensive <b>website data scraper</b> designed to make finding relevant website information simple and efficient. This <b>website data scraper software</b> offers powerful <b>web scraping</b> capabilities to extract data based on your selected country and query. It quickly provides detailed results, including the <b>website URL, title, description, keywords, emails, and phone numbers</b>. With support for <b>website scraper Python</b> functionality, <b>web scraper Chrome</b> extensions, and <b>online web scraper</b> options, it’s a complete <b>web scraping service</b>. This feature-packed tool enables you to <b>extract data from websites</b> effortlessly, whether for research, <b>scraping LinkedIn</b>, or exporting <b>data to Excel</b>. The <b>Website Data Center</b> is your all-in-one solution for efficient, accurate data extraction using the best <b>web scraping tools</b> and <b>website scraping tools</b>.

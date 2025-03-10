@@ -3,6 +3,7 @@ import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
 import Services from "@/shared/layout-components/public-comp/Services";
 import PrimaryButton from "@/shared/layout-components/public-comp/PrimaryButton";
 import { seo_about } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_about
 
@@ -15,6 +16,9 @@ const About = () => {
       {/* Inquiry now Section Begin*/}
       
       <section className="bg-white pt-20">
+        {/* google ads */}
+          <HorizontalAds/>
+        {/* google ads */}
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="grid md:grid-cols-2 items-center gap-10 md:gap-12">
             {/* ... Column 1 Content ... */}

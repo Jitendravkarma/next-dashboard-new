@@ -154,7 +154,7 @@ const Profile = () => {
                           </div> */}
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Email Address</label>
-                            <input type="email" className="my-auto capitalize ti-form-input bg-gray-100" value={user.email} disabled={user.email} placeholder="your@site.com" />
+                            <input type="email" className="my-auto ti-form-input bg-gray-100" value={user.email} disabled={user.email} placeholder="your@site.com" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Phone Number</label>

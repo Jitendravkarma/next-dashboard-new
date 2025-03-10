@@ -5,6 +5,7 @@ import PricingTable from "./table";
 import Link from "next/link";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
 import { seo_pricing } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_pricing
 
@@ -14,6 +15,10 @@ const PriceCards = () => {
       <PageHeader title={"Pricing"}/>
 
       <div className="bg-white pt-20">
+        {/* google ads */}
+        <HorizontalAds/>
+        {/* google ads */}
+        
         {/* Heading and Subtitle */}
         <div className="text-center mb-24">
           <h1 className="text-4xl font-bold text-gray-800">Our Pricing Plans</h1>
