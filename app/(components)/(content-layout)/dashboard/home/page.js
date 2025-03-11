@@ -24,6 +24,15 @@ const Home = () => {
 	  { id: 6, class: "Total Map Searches", title: "map", text: 0, color: "primary/10", color1: "success" }
 	]
 
+	const localRecords = [
+		{ id: 1, class: "Total Searched Records", icon: record, title: "total", text: 0, color: "primary/10", color1: "success" },
+		{ id: 2, class: "Total Website Scraped", icon: websiteIcon, title: "website", text: 0, color: "primary/10", color1: "success" },
+		{ id: 3, class: "Total Email Scraped", icon: emailIcon, title: "email", text: 0, color: "primary/10", color1: "success" },
+		{ id: 4, class: "Total Phone Scraped", icon: phoneIcon, title: "phone", text: 0, color: "primary/10", color1: "success" },
+		{ id: 5, class: "Total Google Searches", icon: googleIcon, title: "google", text: 0, color: "primary/10", color1: "success" },
+		{ id: 6, class: "Total Map Searches", icon: mapIcon, title: "map", text: 0, color: "primary/10", color1: "success" }
+	]
+
 	const usedServices = [
 		{ id: 1, icon: <i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: 'Total Google Searches', title: "Google Scraper", data: 0, url: "/dashboard/google-search-scraper" },
 		{ id: 2, icon: <i className="ri-map-2-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: 'Total Map Searches', title: "Google Map Scraper", data: 0, url: "/dashboard/google-map-scraper" },
@@ -42,8 +51,8 @@ const Home = () => {
 		{title: "map", icon: mapIcon},
 	]
 
-	const [totalRecords, setTotalRecords] = useState([]);
-	const [serviceData, setServiceData] = useState([]);
+	const [totalRecords, setTotalRecords] = useState(localRecords);
+	const [serviceData, setServiceData] = useState(usedServices);
 
 	useEffect(()=>{
 		const getRecords = JSON.parse(localStorage.getItem("totalRecords"))

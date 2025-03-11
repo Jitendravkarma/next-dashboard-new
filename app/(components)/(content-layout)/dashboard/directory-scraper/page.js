@@ -5,7 +5,7 @@ import Seo from "@/shared/layout-components/seo/seo";
 import dynamic from "next/dynamic";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
-import { ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { CompleteBox, ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { fetchDirectoryScraper } from "@/shared/apis/api";
@@ -16,7 +16,7 @@ import Link from "next/link";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const DirectoryScraper = () => {
-	const { snackMessage, openSnack, openSnackBar, handleSnackMessage, isVerfified, isActivated, contactNum, smsNum, whatsAppNum, limitErr, handleLimitErr } = useUserContext()
+	const { snackMessage, openSnack, openSnackBar, handleSnackMessage, isVerfified, isActivated, successPop, openSuccessPop, contactNum, smsNum, whatsAppNum, limitErr, handleLimitErr } = useUserContext()
 	const columns = [
 		{
 			field: 'actions',
@@ -200,6 +200,7 @@ const DirectoryScraper = () => {
 			//   setNumberOfData({url: countUrl, email: countEmail, phone: countPhone})
 			//   setActualData(addSerial)
 			  setData(addSerial)
+			  openSuccessPop()
 			//   const freeData = addSerial.slice(0, 50);
 			//   setRecords(isActivated ? addSerial : freeData)
 			//   setIsLoading(false)
@@ -358,6 +359,10 @@ const DirectoryScraper = () => {
 			</div>
 
 			{/* alert boxes */}
+			{
+				successPop &&
+				<CompleteBox message={"Scraping has been completed. Kindly review and download your data."}/>
+			}
 			{
 				contactNum &&
 				<ContactBox number={contactNum} code={countryCode}/>

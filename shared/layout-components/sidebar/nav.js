@@ -43,10 +43,10 @@ export const MENUITEMS = [
 			{ path: "/dashboard/google-search-scraper", type: "link", active: false, selected: false, title: "Google Search Scraper" },
 			{ path: "/dashboard/google-map-scraper", type: "link", active: false, selected: false, title: "Google Map Scraper" },
 			{ path: "/dashboard/website-scraper", type: "link", active: false, selected: false, title: "Website Scraper" },
+			{ path: "/dashboard/website-data-center", type: "link", active: false, selected: false, title: "Website Data Center" },
+			{ path: "/dashboard/directory-scraper", type: "link", active: false, selected: false, title: "Directory Scraper" },
 			{ path: "/dashboard/document-data-scraper", type: "link", active: false, selected: false, title: "Document Data Scraper" },
 			{ path: "/dashboard/image-data-scraper", type: "link", active: false, selected: false, title: "Image Data Scraper" },
-			{ path: "/dashboard/directory-scraper", type: "link", active: false, selected: false, title: "Directory Scraper" },
-			{ path: "/dashboard/website-data-center", type: "link", active: false, selected: false, title: "Website Data Center" },
 			{ path: "/dashboard/whois-domain-database", type: "link", active: false, selected: false, title: "Whois Domain Download" }
 		],
 	},

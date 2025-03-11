@@ -13,6 +13,7 @@ export const UserProvider = ({ children }) => {
   const [iconPing, setIconPing] = useState({url: false, email: false, phone: false, record: false});
   const [isActivated, setIsActivated] = useState(false); // Initialize with false
   const [openSnack, setOpenSnack] = useState(false); // Initialize with false
+  const [ successPop, setSuccessPop ] = useState(false)
   const [user, setUser] = useState({ email: "", auth: false });
   const [googleData, setGoogleData] = useState([]);
   const [mapData, setMapData] = useState([]);
@@ -42,6 +43,14 @@ export const UserProvider = ({ children }) => {
 
   const handleSnackMessage = (msg, bg, txt)=>{
     setSnackMessage({message: msg, bg, txt})
+  }
+
+  const openSuccessPop = ()=>{
+    setSuccessPop(true)
+  }
+
+  const closeSuccessPop = ()=>{
+    setSuccessPop(false)
   }
 
   const openSnackBar = ()=>{
@@ -308,7 +317,7 @@ export const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ user, limitErr, snackMessage, handleSnackMessage, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail }}
+      value={{ user, limitErr, snackMessage, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail }}
     >
       {children}
     </UserContext.Provider>

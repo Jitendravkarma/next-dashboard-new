@@ -73,6 +73,86 @@ const validatePhoneNum = (number, url, countryCode, message)=>{
   }
 }
 
+const CompleteBox = memo(({message="You have reached the limits of the free plan. Please upgrade your plan to continue using this service."}) => {
+  const { closeSuccessPop } = useUserContext()
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeSuccessPop();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  const handleOutsideClick = (e) => {
+    if (e.target.id === 'popup-container') {
+      closeSuccessPop();
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div
+          id="popup-container"
+          onClick={handleOutsideClick}
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      >
+        <div className="bg-white rounded-md shadow-lg px-6 py-10 max-w-xl w-full relative">
+              <button
+                  type="button"
+                  onClick={()=>closeSuccessPop()}
+                  className="absolute top-4 right-2 text-gray-400 bg-transparent hover-bg-gray-200 hover-text-gray-900 rounded-md text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark-hover-bg-gray-600 dark-hover-text-white"
+                  data-modal-hide="defaultModal"
+              >
+                  <svg
+                      className="w-3 h-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 14"
+                  >
+                      <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                      />
+                  </svg>
+                  <span className="sr-only">Close modal</span>
+              </button>
+              {/* Modal Body */}
+              <div className="modal-body pt-4">
+                  <div className="flex flex-col items-center justify-center px-6 py-4  pt:mt-0 ">
+                      <div className="w-full max-w-xl">
+                          <Logo/>
+                          
+                          <h2 className="text-xl mt-4 text-center font-bold text-gray-900">
+                              "{message}"
+                          </h2>
+
+                          <div className="text-center mt-5">
+                              <button
+                                  onClick={closeSuccessPop}
+                                  className="shadow-md hover:shadow-lg px-5 py-2 text-md text-center inline-flex items-center text-white bg-secondary rounded-sm hover:bg-secondary"
+                              >
+                                  Ok
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  );
+})
+
 const ContactBox = memo(({number, code=""}) => {
     const [countryCode, setCountryCode] = useState(code);
     const { contactNum, handleContactNumber } = useUserContext()
@@ -913,4 +993,4 @@ const DownloadBox = memo(({csvHeaders, data, fileName, closeModel}) => {
   );
 })
 
-export { ContactBox, SmsBox, WhatsappBox, EmailBox, LimitReachedBox, WhoisDownloadBox, DownloadBox, ValidityBox, UpgradePlanPopup }
+export { ContactBox, SmsBox, WhatsappBox, CompleteBox, EmailBox, LimitReachedBox, WhoisDownloadBox, DownloadBox, ValidityBox, UpgradePlanPopup }

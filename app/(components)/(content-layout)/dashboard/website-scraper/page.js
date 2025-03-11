@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import axios from "axios";
 import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
-import { ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { CompleteBox, ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { getWebsiteData, requestWebsiteData } from "@/shared/apis/api";
@@ -16,7 +16,7 @@ import Link from "next/link";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const WebsiteScraper = () => {
-	const { isActivated, contactNum, smsNum, whatsAppNum, limitErr, handleLimitErr, dashboardRecords } = useUserContext()
+	const { isActivated, contactNum, smsNum, whatsAppNum, limitErr, successPop, openSuccessPop, handleLimitErr, dashboardRecords } = useUserContext()
 	const columns = [
 		{
 			field: 'actions',
@@ -251,6 +251,7 @@ const WebsiteScraper = () => {
 					clearInterval(interval)
 					const data = convertData(bulk_data)
 					if(data.length){
+						openSuccessPop()
 					 	setData(data)
 					  	setIsScraping(false);
 						const countNotNullEmail = data.filter(item=> item.email !== "N/A").length;
@@ -479,6 +480,10 @@ const WebsiteScraper = () => {
 			</div>
 
 			{/* alert boxes */}
+			{
+				successPop &&
+				<CompleteBox message={"Scraping has been completed. Kindly review and download your data."}/>
+			}
 			{
 				contactNum &&
 				<ContactBox number={contactNum}/>

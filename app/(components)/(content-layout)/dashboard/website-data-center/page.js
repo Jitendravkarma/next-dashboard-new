@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import axios from "axios";
 import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
-import { ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { CompleteBox, ContactBox, DownloadBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { websiteDataCenter } from "@/shared/apis/api";
@@ -17,7 +17,7 @@ import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const WebsiteDataCenter = () => {
-	const { isActivated, contactNum, smsNum, whatsAppNum, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+	const { isActivated, contactNum, smsNum, successPop, openSuccessPop, whatsAppNum, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
 	const [ selectedCountry, setSelectedCountry ] = useState("")
 	const [countryCode, setCountryCode] = useState("91")
 	const columns = [
@@ -303,6 +303,7 @@ const WebsiteDataCenter = () => {
 			}
 			if(collectData.length){
 				setData(collectData)
+				openSuccessPop()
 			}
 			else {
 				openSnackBar()
@@ -472,6 +473,10 @@ const WebsiteDataCenter = () => {
 			</div>
 
 			{/* alert boxes */}
+			{
+				successPop &&
+				<CompleteBox message={"Scraping has been completed. Kindly review and download your data."}/>
+			}
 			{
 				contactNum &&
 				<ContactBox number={contactNum} code={countryCode}/>

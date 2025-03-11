@@ -8,7 +8,7 @@ import { getGoogleMapData, getMapData, getMapGlobalData, getWebsiteData, request
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import axios from "axios";
 import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
-import { ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { CompleteBox, ContactBox, DownloadBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
@@ -17,7 +17,7 @@ import Link from "next/link";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const GoogleMapScraper = () => {
-	const { isActivated, contactNum, smsNum, whatsAppNum, dashboardRecords, limitErr, handleLimitErr, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+	const { isActivated, contactNum, smsNum, whatsAppNum, dashboardRecords, limitErr, handleLimitErr, successPop, openSuccessPop, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
 	const recordIcon = <i className="ri-clipboard-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const websiteIcon = <i className="ri-global-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const emailIcon = <i className="ri-mail-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
@@ -258,6 +258,8 @@ const GoogleMapScraper = () => {
 
 	const startScraping =  async ()=>{
 		if(queryBox.length){
+			setData([])
+			setNumOfData(recordData)
 			sourceRef.current = axios.CancelToken.source();
 			setIsScraping(true)
 			if(per > 10){
@@ -328,6 +330,7 @@ const GoogleMapScraper = () => {
 						setData(convertedData)
 						setPer(100)
 						setProgressMsg(`Proccess completed!`)
+						openSuccessPop()
 					}
 				}
 			}).catch((err) => {
@@ -418,6 +421,7 @@ const GoogleMapScraper = () => {
 									setIsExtracting(false)
 									setPer(100)
 									setProgressMsg("Added additional data!")
+									openSuccessPop()
 								}
 							}, 20000)
 						}
@@ -426,6 +430,10 @@ const GoogleMapScraper = () => {
 					fetch_data();
 				}
 			}
+		}
+		else {
+			openSnackBar();
+			handleSnackMessage("URL not found.", "danger", "text-white")
 		}
 	}
 
@@ -680,9 +688,18 @@ const GoogleMapScraper = () => {
 								}
 								
 								{
-									( numOfData[1].title === "website" && numOfData[0].text > 0 ) &&
+									( numOfData[1].title === "website" && numOfData[1].text > 0 ) &&
 									<button type="button" className={`md:ml-auto ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 ${(numOfData[0].text > 0 && !isExtracting) ? "text-white bg-indigo-500" : "hover:text-white hover:bg-indigo-500"} hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} onClick={deepExtractor} disabled={isExtracting || isScraping}>
-										Deep Extractor
+										{
+											isExtracting ? 
+											<>
+												<div className="ti-spinner w-4 h-4" role="status" aria-label="loading">
+													<span className="sr-only"></span>
+												</div>
+												Extracting...
+											</>
+											: "Extract Emails"
+										}
 									</button>
 								}
 							</div>
@@ -733,6 +750,10 @@ const GoogleMapScraper = () => {
 			</div>
 
 			{/* alert boxes */}
+			{
+				successPop &&
+				<CompleteBox message={"Scraping has been completed. Kindly review and download your data."}/>
+			}
 			{
 				contactNum &&
 				<ContactBox number={contactNum} />
