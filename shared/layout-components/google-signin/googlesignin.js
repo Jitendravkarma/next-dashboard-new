@@ -28,7 +28,7 @@ const GoogleSignIn = () => {
           if (tokenResponse) {
             setAuthToken(tokenResponse.access_token);
             handleSignIn(tokenResponse.user, tokenResponse.user.verified);
-            navigate("/web-crawler-dashboard");
+            navigate.push("/dashboard/home");
           }
         } catch (error) {
           openSnackBar();
