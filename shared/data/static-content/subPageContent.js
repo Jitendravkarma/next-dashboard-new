@@ -1,0 +1,879 @@
+// Define the properties as an object
+export const GooglesearchscraperProps = {
+  title: (
+    <>
+    Google <span className="hero-title">Search</span> Scraper
+    </>
+  ),
+  description:
+    "Our Google Search Scraper extracts data like keywords, contact details, and Google Maps results efficiently. With Python integration, it automates data collection for analytics and custom applications. Ideal for businesses, researchers, and marketers, it delivers accurate, reliable insights for diverse data-driven needs.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/gscreen.png",
+  rightImg: "/assets/img/gscreen2.png",
+};
+
+export const googlesearchscraperstatus = [
+  { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-global-line"></i>, value: "20M+", label: "Total Website" },
+  { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
+];
+
+export const googlesearchscraperdataget = [
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'A brief description providing details about the place or service.', keywords: 'Description' },
+  { tooltips: 'The keyword or query term used for searching in Google Search.', keywords: 'Keywords' },
+  { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+];
+
+export const HowitworksGooglesearchscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Google Search Scraper (Scrape By Query)",
+      paragraph: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Scraper to provide precise results by scraping Google search results.",
+      description: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Scraper to provide precise results by scraping Google search results.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Scrape By Query", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape By Query",
+      pretitle: "Google",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Search Scraper (Initiate the Extraction)",
+      paragraph: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin web scraping Google search results based on your input, utilizing advanced Google search scraper APIs and Python-based extraction techniques.",
+      description: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin web scraping Google search results based on your input, utilizing advanced Google search scraper APIs and Python-based extraction techniques.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Initiate the Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape By Keyword",
+      pretitle: "Google",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Search Scraper (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Data Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape By URLs",
+      pretitle: "Google",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Search Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search scraper tool lets you quickly use and analyze the data, making it valuable for various applications",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search scraper tool lets you quickly use and analyze the data, making it valuable for various applications",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Review Results",
+      pretitle: "Google",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Search Scraper (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in your preferred format, ready for further use. Whether for research, lead generation, or contacting businesses, our Google search scraper and Google Maps search scraper make saving and accessing extracted data straightforward.",
+      description: "Finally, you have the option to download or export the data in your preferred format, ready for further use. Whether for research, lead generation, or contacting businesses, our Google search scraper and Google Maps search scraper make saving and accessing extracted data straightforward.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Export Data",
+      pretitle: "Google",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const GooglesearchscraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "https://www.youtube.com/embed/xJsktXJfZZ8",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+
+// Google map Scraper
+
+// Define the properties as an object
+export const GooglesmapscraperProps = {
+  title: (
+    <>
+    Google <span className="hero-title">Map</span> Scraper
+    </>
+  ),
+  description:
+    "Our Google Map Extractor extracts structured data like businesses, addresses, phone numbers, and reviews from Google Maps. Perfect for marketers and researchers, it streamlines geographic data collection, providing essential details for campaigns and analysis. A reliable tool for quick, accurate information from Google Maps.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/mscreen.png",
+  rightImg: "/assets/img/mscreen2.png",
+};
+
+export const googlemapscraperstatus = [
+  { icon: <i className="ri-file-text-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-global-line"></i>, value: "20M+", label: "Total Website" },
+  { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
+];
+
+export const googlemapscraperdataget = [
+
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The map link or URL for the location of the place.', keywords: 'Map URL' },
+  { tooltips: 'A brief description providing details about the place or service.', keywords: 'Description' },
+  { tooltips: 'The keyword or query term used for searching in Google Search.', keywords: 'Keywords' },
+  { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
+  { tooltips: 'The average rating of the place, ranging from 1.0 to 5.0, based on user reviews.', keywords: 'Rating' },
+  { tooltips: 'User-generated reviews and feedback about the place.', keywords: 'Review' },
+  { tooltips: 'The geographical latitude coordinate in decimal degrees.', keywords: 'Latitude' },
+  { tooltips: 'The geographical longitude coordinate in decimal degrees.', keywords: 'Longitude' },
+
+];
+
+export const HowitworksGooglesmapscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Google Map Scraper (Scrape By URL)",
+      paragraph: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      description: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
+      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape By URL",
+      pretitle: "Map",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Map Scraper (Extract Emails)",
+      paragraph: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
+      description: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
+      imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
+      sectionHeading: "Extract Emails", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Extract Emails",
+      pretitle: "Map",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Map Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Review Results",
+      pretitle: "Map",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Map Scraper (Analyze the Results)",
+      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      description: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
+      sectionHeading: "Analyze the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Analyze Results",
+      pretitle: "Map",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Map Scraper (Download or Export Data)",
+      paragraph: "You can download or export the extracted emails in your preferred format, whether for marketing, outreach, or research. Our free web scraper and website data scraper options make exporting data efficient and convenient.",
+      description: "You can download or export the extracted emails in your preferred format, whether for marketing, outreach, or research. Our free web scraper and website data scraper options make exporting data efficient and convenient.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Export Data",
+      pretitle: "Map",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const GooglesmapscraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "https://www.youtube.com/embed/BhI2KKoSj3Y",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+
+
+// Website Data Scraper
+
+// Define the properties as an object
+export const websitedatascraperProps = {
+  title: (
+    <>
+    Website <span className="hero-title">Data</span> Scraper
+    </>
+  ),
+  description:
+    "Our Website Data Scraper helps extract essential details like emails, phone numbers, titles, descriptions, and keywords from any website URL. Perfect for lead generation, research, and contact info collection, it’s fast and efficient. Supports Python and Chrome, ideal for free or advanced web scraping to boost productivity effortlessly.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/webscreen.png",
+  rightImg: "/assets/img/webscreen2.jpg",
+};
+
+export const websitedatascraperstatus = [
+  { icon: <i className="ri-file-text-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
+];
+
+export const websitedatascraperdataget = [
+
+  { tooltips: 'The official website address of the place or service.', keywords: 'Website' },
+  { tooltips: 'The email address associated with the place or service.', keywords: 'Email' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The name or title of the place or service.', keywords: 'Title' },
+  { tooltips: 'A brief description of the place or service, suitable for SEO.', keywords: 'Meta Description' },
+  { tooltips: 'Relevant keywords associated with the place or service, used for SEO.', keywords: 'Meta Keywords' },
+
+];
+
+export const Howitworkswebsitedatascraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Website Data Scraper (Enter the Website URL)",
+      paragraph: "Start by entering the URL of the website you want to scrape. Our Website Data Scraper allows you to extract email addresses from any website URL, whether it's the homepage or a specific page. This website scraping process makes data collection easy and fast.",
+      description: "Start by entering the URL of the website you want to scrape. Our Website Data Scraper allows you to extract email addresses from any website URL, whether it's the homepage or a specific page. This website scraping process makes data collection easy and fast.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
+      sectionHeading: "Enter the Website URL", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by URL",
+      pretitle: "Website Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Website Data Scraper (Initiate the Scraping Process)",
+      paragraph: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction.",
+      description: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
+      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Website",
+      pretitle: "Website Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Website Data Scraper (Extract Emails)",
+      paragraph: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision.",
+      description: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
+      sectionHeading: "Extract Emails", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Email",
+      pretitle: "Website Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Website Data Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs.",
+      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Review Results",
+      pretitle: "Website Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Website Data Scraper (Analyze the Results)",
+      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      description: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
+      sectionHeading: "Analyze the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Analyze Results",
+      pretitle: "Website Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Website Data Scraper (Download or Export Data)",
+      paragraph: "You can download or export the extracted emails in your preferred format, whether for marketing, outreach, or research. Our free web scraper and website data scraper options make exporting data efficient and convenient.",
+      description: "You can download or export the extracted emails in your preferred format, whether for marketing, outreach, or research. Our free web scraper and website data scraper options make exporting data efficient and convenient.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Export Data",
+      pretitle: "Website Data",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const websitedatascraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "https://www.youtube.com/embed/_sXWe4U2Cz8?si=6KyklE6r_9923k0j",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+
+// Documnet Data Scraper
+
+// Define the properties as an object
+export const documentdatascraperProps = {
+  title: (
+    <>
+    Document <span className="hero-title">Data</span> Scraper
+    </>
+  ),
+  description:
+    "Our Document Data Scraper extracts contact details like emails and phone numbers from .txt, .pdf, .html, and .json files. It supports Python and Chrome, making it perfect for lead generation, research, or outreach. Simplify data extraction with our reliable, efficient, and versatile web scraping tool.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/docscreen.png",
+  rightImg: "/assets/img/docscreen2.jpg",
+};
+
+export const documentdatascraperstatus = [
+  { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
+];
+
+export const documentdatascraperdataget = [
+
+  { tooltips: 'The email address associated with the place or service.', keywords: 'Email' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'Additional details or features associated with the service', keywords: 'More' },
+
+];
+
+export const Howitworksdocumentdatascraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Document Data Scraper (Upload Your Document)",
+      paragraph: "Start by uploading your document in one of the supported formats, such as .txt, .pdf, .html, .json, and more. Our website data scraper and web scraping service accept a wide range of file types to accommodate various data extraction needs.",
+      description: "Start by uploading your document in one of the supported formats, such as .txt, .pdf, .html, .json, and more. Our website data scraper and web scraping service accept a wide range of file types to accommodate various data extraction needs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
+      sectionHeading: "Upload Your Document", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Document",
+      pretitle: "Document Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Document Data Scraper (Initiate the Scraping Process)",
+      paragraph: "Once your document is uploaded, click the extract button to begin the website scraping process. This web scraper will automatically start analyzing the content of your document to identify relevant data.",
+      description: "Once your document is uploaded, click the extract button to begin the website scraping process. This web scraper will automatically start analyzing the content of your document to identify relevant data.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
+      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Document",
+      pretitle: "Document Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Document Data Scraper (Extract Contact Information)",
+      paragraph: "The data scraping tool will search through the document and extract all available email addresses and phone numbers from any country. This webscraper provides accurate and quick contact extraction for all your professional needs.",
+      description: "The data scraping tool will search through the document and extract all available email addresses and phone numbers from any country. This webscraper provides accurate and quick contact extraction for all your professional needs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
+      sectionHeading: "Extract Contact Information", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Document",
+      pretitle: "Document Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Document Data Scraper (Review the Results)",
+      paragraph: "After extraction, the web scraping tool will display the collected data, including email addresses and phone numbers. The information is organized in a way that makes it easy to review and use immediately.",
+      description: "After extraction, the web scraping tool will display the collected data, including email addresses and phone numbers. The information is organized in a way that makes it easy to review and use immediately.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Review Results",
+      pretitle: "Document Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Document Data Scraper (Analyze the Results)",
+      paragraph: "Once the scraping is complete, review the extracted data presented in a clear, organized format. This helps you quickly identify and leverage the most relevant information, using a reliable website scraper Python setup or web scraper Chrome extension.",
+      description: "Once the scraping is complete, review the extracted data presented in a clear, organized format. This helps you quickly identify and leverage the most relevant information, using a reliable website scraper Python setup or web scraper Chrome extension.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
+      sectionHeading: "Analyze the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Analyze Results",
+      pretitle: "Document Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Document Data Scraper (Download or Export Data)",
+      paragraph: "Finally, download or export the extracted data in a format that suits your needs. This website data scraper software is perfect for further processing, marketing, or outreach, saving you time and effort.",
+      description: "Finally, download or export the extracted data in a format that suits your needs. This website data scraper software is perfect for further processing, marketing, or outreach, saving you time and effort.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Export Data",
+      pretitle: "Document Data",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const documentdatascraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "https://www.youtube.com/embed/NfOetsKFX_E?si=mt8J2KTxUWdkP6xL",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+
+// Image Data Scraper
+
+// Documnet Data Scraper
+
+// Define the properties as an object
+export const imageDataScraperProps = {
+  title: (
+    <>
+    Image <span className="hero-title">Data</span> Scraper
+    </>
+  ),
+  description:
+    "Our Image Data Scraper extracts images and embedded contact details like emails and phone numbers from websites. Supporting formats like .jpg, .png, and .webp, it’s a hassle-free solution for professionals seeking fast and efficient image scraping for contact information and essential data extraction.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/imgscreen.png",
+  rightImg: "/assets/img/imgscreen2.jpg",
+};
+
+export const imageDataScraperstatus = [
+  { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
+];
+
+export const imageDataScraperdataget = [
+
+  { tooltips: 'The email address associated with the place or service.', keywords: 'Email' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'Additional details or features associated with the service', keywords: 'More' },
+
+];
+
+export const HowitworksimageDataScraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Image Data Scraper (Upload Your Images)",
+      paragraph: "Start by uploading one or multiple image files in the supported formats, such as .jpg, .png, or .webp. This image scraper tool allows both single and bulk uploads, making it easy to scrape images from websites with flexibility for your data extraction needs.",
+      description: "Start by uploading one or multiple image files in the supported formats, such as .jpg, .png, or .webp. This image scraper tool allows both single and bulk uploads, making it easy to scrape images from websites with flexibility for your data extraction needs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
+      sectionHeading: "Upload Your Images", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Images",
+      pretitle: "Image Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Image Data Scraper (Initiate the Scraping Process)",
+      paragraph: "Once the images are uploaded, the web scraper for images will automatically extract the text content from each image and display it in a textarea element, allowing you to scrape all images from a website for easy review.",
+      description: "Once the images are uploaded, the web scraper for images will automatically extract the text content from each image and display it in a textarea element, allowing you to scrape all images from a website for easy review.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
+      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Image",
+      pretitle: "Image Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Image Data Scraper (Extract Specific Information)",
+      paragraph: " With the extracted text in the textarea, you have two options: click on the Extract Emails button to find and extract any email addresses within the text, or use the Extract Phone button to locate and pull out phone numbers. This feature is especially useful for those wanting to scrape images from websites free",
+      description: "With the extracted text in the textarea, you have two options: click on the Extract Emails button to find and extract any email addresses within the text, or use the Extract Phone button to locate and pull out phone numbers. This feature is especially useful for those wanting to scrape images from websites free",
+      imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
+      sectionHeading: "Extract Specific Information", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Image",
+      pretitle: "Image Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Image Data Scraper (Review the Results)",
+      paragraph: "After clicking the desired button, the extracted information is presented in an organized manner, allowing you to easily review and use the data obtained from the image data scraper.",
+      description: "After clicking the desired button, the extracted information is presented in an organized manner, allowing you to easily review and use the data obtained from the image data scraper.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Review Results",
+      pretitle: "Image Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Image Data Scraper (Analyze the Results)",
+      paragraph: "Once the scraping is complete, review the extracted data in an organized format. This helps you easily identify and use the information most relevant to your needs, whether for contact management or other purposes.",
+      description: "Once the scraping is complete, review the extracted data in an organized format. This helps you easily identify and use the information most relevant to your needs, whether for contact management or other purposes.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
+      sectionHeading: "Analyze the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Analyze Results",
+      pretitle: "Image Data",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Image Data Scraper (Download or Export Data)",
+      paragraph: "Finally, you can download or copy the extracted data for use in contact management, marketing, or other activities. Our web scraping tools ensure seamless data extraction and exporting, helping you make the most of this image scraper",
+      description: "Finally, you can download or copy the extracted data for use in contact management, marketing, or other activities. Our web scraping tools ensure seamless data extraction and exporting, helping you make the most of this image scraper",
+      imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Export Data",
+      pretitle: "Image Data",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const imageDataScraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "https://www.youtube.com/embed/k_zh66JW-oU?si=zPYJ4alln-oqK-lb",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+
+
+// Business Data Scraper
+
+// Define the properties as an object
+export const businessdirectoryscraperProps = {
+  title: (
+    <>
+    Business <span className="hero-title">Directory</span> Scraper
+    </>
+  ),
+  description:
+    "Our Business Directory Scraper efficiently extracts valuable contact details like emails and phone numbers from directories like Yellow Pages. Supporting various formats, it provides structured data extraction. Features include Yellow Pages email extractor and web scraper tools, offering free and flexible options for seamless data scraping and lead generation.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/dirscreen.png",
+  rightImg: "/assets/img/dirscreen2.jpg"
+};
+
+export const businessdirectoryscraperstatus = [
+  { icon: <i className="ri-clipboard-line"></i>, value: "50M+", label: "Total Records" },
+  { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
+];
+
+export const businessdirectoryscraperdataget = [
+  { tooltips: 'The name or title of the place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service.', keywords: 'Email' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+];
+
+export const Howitworksbusinessdirectoryscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Business Directory Scraper (Effortless Data Extraction)",
+      paragraph: "Simplify the process of pulling contact details from large directories with the Business Directory Scraper. This Yellow Pages scraper and Yellow Pages data extractor saves time and reduces manual effort, making data collection more efficient.",
+      description: "Simplify the process of pulling contact details from large directories with the Business Directory Scraper. This Yellow Pages scraper and Yellow Pages data extractor saves time and reduces manual effort, making data collection more efficient.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
+      sectionHeading: "Effortless Data Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by URL",
+      pretitle: "Business Directory",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Business Directory Scraper (Targeted Contact Information)",
+      paragraph: "Extract phone numbers and emails specific to key regions with our Yellow Pages email extractor and Yellow Pages web scraper, ensuring your contact lists are precise and actionable. This tool makes web scraping Yellow Pages highly targeted.",
+      description: "Extract phone numbers and emails specific to key regions with our Yellow Pages email extractor and Yellow Pages web scraper, ensuring your contact lists are precise and actionable. This tool makes web scraping Yellow Pages highly targeted.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
+      sectionHeading: "Targeted Contact Information", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by URL",
+      pretitle: "Business Directory",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Business Directory Scraper (Flexible Data Handling)",
+      paragraph: "With support for multiple file formats like CSV and Excel, the Yellow Pages scraper allows you to work with various directory types without compatibility concerns. This Yellow Pages scraper software free download option is perfect for handling diverse data sources.",
+      description: "With support for multiple file formats like CSV and Excel, the Yellow Pages scraper allows you to work with various directory types without compatibility concerns. This Yellow Pages scraper software free download option is perfect for handling diverse data sources.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
+      sectionHeading: "Flexible Data Handling", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by URL",
+      pretitle: "Business Directory",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Business Directory Scraper (Intuitive and Accessible)",
+      paragraph: "Designed with a user-friendly interface, the Reoon Yellow Pages scraper makes data extraction straightforward, even for users with minimal experience. This Yellow Pages scraper free tool is accessible and easy to use for all.",
+      description: "Designed with a user-friendly interface, the Reoon Yellow Pages scraper makes data extraction straightforward, even for users with minimal experience. This Yellow Pages scraper free tool is accessible and easy to use for all.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
+      sectionHeading: "Intuitive and Accessible", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by URL",
+      pretitle: "Business Directory",
+      presubtitle: "Lead Generation",
+    }
+  ],
+};
+
+export const businessdirectoryscraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "https://www.youtube.com/embed/LW9_PAJhens?si=KrEhZ4skAo8tK5iN",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+
+// Whois DetaDownload
+
+// Define the properties as an object
+export const whoisdetadownloadProps = {
+  title: (
+    <>
+    Whois <span className="hero-title">Database</span> Download
+    </>
+  ),
+  description:
+    "Our Whois Database Download service offers easy access to detailed Whois domain information, including ownership, IP data, and more. Download comprehensive Whois data in a convenient zip file format, ideal for Whois searches, domain lookups, and managing digital assets, including ICANN and IP queries.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/whoisscreen.png",
+  rightImg: "/assets/img/whoisscreen2.jpg",
+};
+
+export const whoisdetadownloadstatus = [
+  { icon: <i className="ri-calendar-2-line"></i>, value: "Select Year", label: "8 Years Available" },
+  { icon: <i className="ri-calendar-event-line"></i>, value: "Months per Year", label: "12 Months Available" },
+  { icon: <i className="ri-file-download-line"></i>, value: "Download File", label: "Varies by Month" },
+];
+
+export const whoisdetadownloaddataget = [
+  { tooltips: 'The unique identifier or number associated with the entry.', keywords: 'Num' },
+  { tooltips: 'The name of the domain being queried.', keywords: 'Domain Name' },
+  { tooltips: 'The timestamp of when the domain was queried.', keywords: 'Query Time' },
+  { tooltips: 'The date when the domain was originally created.', keywords: 'Create Date' },
+  { tooltips: 'The date when the domain information was last updated.', keywords: 'Update Date' },
+  { tooltips: 'The expiration date of the domain registration.', keywords: 'Expiry Date' },
+  { tooltips: 'The unique identifier of the domain registrar.', keywords: 'Domain Registrar ID' },
+  { tooltips: 'The name of the registrar managing the domain.', keywords: 'Domain Registrar Name' },
+  { tooltips: 'The Whois server provided by the registrar.', keywords: 'Domain Registrar Whois' },
+  { tooltips: 'The URL of the registrar managing the domain.', keywords: 'Domain Registrar URL' },
+  { tooltips: 'The name of the person or organization who registered the domain.', keywords: 'Registrant Name' },
+  { tooltips: 'The company associated with the domain registrant.', keywords: 'Registrant Company' },
+  { tooltips: 'The physical address of the domain registrant.', keywords: 'Registrant Address' },
+  { tooltips: 'The city of the domain registrant.', keywords: 'Registrant City' },
+  { tooltips: 'The state or region of the domain registrant.', keywords: 'Registrant State' },
+  { tooltips: 'The postal code of the domain registrant.', keywords: 'Registrant Zip' },
+  { tooltips: 'The country of the domain registrant.', keywords: 'Registrant Country' },
+  { tooltips: 'The email address of the domain registrant.', keywords: 'Registrant Email' },
+  { tooltips: 'The phone number of the domain registrant.', keywords: 'Registrant Phone' },
+  { tooltips: 'The fax number of the domain registrant.', keywords: 'Registrant Fax' },
+  { tooltips: 'The name of the administrative contact for the domain.', keywords: 'Administrative Name' },
+  { tooltips: 'The company of the administrative contact for the domain.', keywords: 'Administrative Company' },
+  { tooltips: 'The address of the administrative contact for the domain.', keywords: 'Administrative Address' },
+  { tooltips: 'The city of the administrative contact for the domain.', keywords: 'Administrative City' },
+  { tooltips: 'The state of the administrative contact for the domain.', keywords: 'Administrative State' },
+  { tooltips: 'The postal code of the administrative contact for the domain.', keywords: 'Administrative Zip' },
+  { tooltips: 'The country of the administrative contact for the domain.', keywords: 'Administrative Country' },
+  { tooltips: 'The email address of the administrative contact for the domain.', keywords: 'Administrative Email' },
+  { tooltips: 'The phone number of the administrative contact for the domain.', keywords: 'Administrative Phone' },
+  { tooltips: 'The fax number of the administrative contact for the domain.', keywords: 'Administrative Fax' },
+  { tooltips: 'The name of the technical contact for the domain.', keywords: 'Technical Name' },
+  { tooltips: 'The company of the technical contact for the domain.', keywords: 'Technical Company' },
+  { tooltips: 'The address of the technical contact for the domain.', keywords: 'Technical Address' },
+  { tooltips: 'The city of the technical contact for the domain.', keywords: 'Technical City' },
+  { tooltips: 'The state of the technical contact for the domain.', keywords: 'Technical State' },
+  { tooltips: 'The postal code of the technical contact for the domain.', keywords: 'Technical Zip' },
+  { tooltips: 'The country of the technical contact for the domain.', keywords: 'Technical Country' },
+  { tooltips: 'The email address of the technical contact for the domain.', keywords: 'Technical Email' },
+  { tooltips: 'The phone number of the technical contact for the domain.', keywords: 'Technical Phone' },
+  { tooltips: 'The fax number of the technical contact for the domain.', keywords: 'Technical Fax' },
+  { tooltips: 'The name of the billing contact for the domain.', keywords: 'Billing Name' },
+  { tooltips: 'The company of the billing contact for the domain.', keywords: 'Billing Company' },
+  { tooltips: 'The address of the billing contact for the domain.', keywords: 'Billing Address' },
+  { tooltips: 'The city of the billing contact for the domain.', keywords: 'Billing City' },
+  { tooltips: 'The state of the billing contact for the domain.', keywords: 'Billing State' },
+  { tooltips: 'The postal code of the billing contact for the domain.', keywords: 'Billing Zip' },
+  { tooltips: 'The country of the billing contact for the domain.', keywords: 'Billing Country' },
+  { tooltips: 'The email address of the billing contact for the domain.', keywords: 'Billing Email' },
+  { tooltips: 'The phone number of the billing contact for the domain.', keywords: 'Billing Phone' },
+  { tooltips: 'The fax number of the billing contact for the domain.', keywords: 'Billing Fax' },
+  { tooltips: 'The first name server for the domain.', keywords: 'Name Server 1' },
+  { tooltips: 'The second name server for the domain.', keywords: 'Name Server 2' },
+  { tooltips: 'The third name server for the domain.', keywords: 'Name Server 3' },
+  { tooltips: 'The fourth name server for the domain.', keywords: 'Name Server 4' },
+  { tooltips: 'The first status of the domain (e.g., active, inactive).', keywords: 'Domain Status 1' },
+  { tooltips: 'The second status of the domain.', keywords: 'Domain Status 2' },
+  { tooltips: 'The third status of the domain.', keywords: 'Domain Status 3' },
+  { tooltips: 'The fourth status of the domain.', keywords: 'Domain Status 4' },
+
+
+];
+
+export const Howitworkswhoisdetadownload = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Whois Data Download (Select Year and Month)",
+      paragraph: "Start by choosing the year and month for which you want to download whois database domain data. This step allows you to target specific registration periods that are relevant to your needs, ensuring precise whois database lookup.",
+      description: "Start by choosing the year and month for which you want to download whois database domain data. This step allows you to target specific registration periods that are relevant to your needs, ensuring precise whois database lookup.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
+      sectionHeading: "Select Year and Month", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Year",
+      pretitle: "Whois Data Download",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Business Directory Scraper (Initiate the Download)",
+      paragraph: "Once youve selected the desired timeframe, click the download button. The whois database provider service will compile all relevant whois domain information registered within the specified period, including whois IP and whois domain owner details.",
+      description: "Once youve selected the desired timeframe, click the download button. The whois database provider service will compile all relevant whois domain information registered within the specified period, including whois IP and whois domain owner details.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
+      sectionHeading: "Initiate the Download", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Year",
+      pretitle: "Whois Data Download",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Business Directory Scraper (Download the Zip File)",
+      paragraph: "The compiled whois database data, including domain names, owner’s details, purchase dates, and more, will be packaged into a single zip file. You can download this file for easy access and storage, ideal for icann whois queries and whois IP lookup needs.",
+      description: "The compiled whois database data, including domain names, owner’s details, purchase dates, and more, will be packaged into a single zip file. You can download this file for easy access and storage, ideal for icann whois queries and whois IP lookup needs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
+      sectionHeading: "Download the Zip File", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Year",
+      pretitle: "Whois Data Download",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Business Directory Scraper (Extract and Review)",
+      paragraph: "After downloading, extract the zip file to view all the whois domain data. The information is organized for easy review, making it perfect for whois search, domain search whois functions, or managing whois com domain assets.",
+      description: "After downloading, extract the zip file to view all the whois domain data. The information is organized for easy review, making it perfect for whois search, domain search whois functions, or managing whois com domain assets.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
+      sectionHeading: "Extract and Review", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Year",
+      pretitle: "Whois Data Download",
+      presubtitle: "Lead Generation",
+    }
+  ],
+};
+
+export const whoisdetadownloadVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "https://www.youtube.com/embed/iGRgQurIOPg?si=_FZxSenRrpUWK87c",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+
+// website detacenter
+
+
+// Whois DetaDownload
+
+// Define the properties as an object
+export const websitedetacenterProps = {
+  title: (
+    <>
+    Website <span className="hero-title">Data</span> Center
+    </>
+  ),
+  description:
+    "The Website Data Center is a powerful tool for extracting website data efficiently. It provides detailed results, including URLs, titles, emails, and phone numbers, with support for Python scripts, Chrome extensions, and Excel exports. Ideal for research or LinkedIn scraping, its your all-in-one web scraping solution.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/websiteDataCenter.png",
+  rightImg: "/assets/img/webscreen2.jpg",
+};
+
+export const websitedetacenterstatus = [
+
+  { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
+  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Website" },
+];
+
+export const websitedetacenterdataget = [
+  { tooltips: 'The website URL or address associated with the entry.', keywords: 'Website' },
+  { tooltips: 'The email address extracted from the website.', keywords: 'Email' },
+  { tooltips: 'The phone number extracted from the website.', keywords: 'Phone' },
+  { tooltips: 'The title or headline of the website page.', keywords: 'Title' },
+  { tooltips: 'You can get the social media links such as Facebook, Twitter and more.', keywords: 'Social Media Links' },
+  { tooltips: 'The description or summary of the website page content.', keywords: 'Description' },
+  { tooltips: 'The keywords or tags associated with the website page.', keywords: 'Keywords' },
+
+];
+
+export const Howitworkswebsitedetacenter = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Website Data Center (Select Country)",
+      paragraph: "Start by selecting the country you want to focus your search on to ensure more targeted results. This step is essential for refining your search in our website data scraper, helping you get precise information from specific regions.",
+      description: "Start by selecting the country you want to focus your search on to ensure more targeted results. This step is essential for refining your search in our website data scraper, helping you get precise information from specific regions.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
+      sectionHeading: "Select Country", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Keywords",
+      pretitle: "Website deta",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Website Data Center (Enter Your Query)",
+      paragraph: "After selecting the country, enter the keyword or phrase you want to search for in the Website Data Center's search bar. This web scraper and web scraping service enables efficient data retrieval based on your query, simplifying website scraping for exact matches.",
+      description: "After selecting the country, enter the keyword or phrase you want to search for in the Website Data Center's search bar. This web scraper and web scraping service enables efficient data retrieval based on your query, simplifying website scraping for exact matches.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
+      sectionHeading: "Enter Your Query", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Keywords",
+      pretitle: "Website deta",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Website Data Center (Automated Scanning)",
+      paragraph: "The system then scans for relevant information, including website URLs, titles, descriptions, keywords, emails, and phone numbers related to your query. With data scraping tools and web scraper Chrome integration, this website data scraper software automates the entire process, making extracting data from websites seamless.",
+      description: "The system then scans for relevant information, including website URLs, titles, descriptions, keywords, emails, and phone numbers related to your query. With data scraping tools and web scraper Chrome integration, this website data scraper software automates the entire process, making extracting data from websites seamless.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
+      sectionHeading: "Automated Scanning", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Keywords",
+      pretitle: "Website deta",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Website Data Center (Receive Detailed Results)",
+      paragraph: "Once a match is found, the tool presents you with detailed information in an organized manner for easy review. This feature is perfect for scraping LinkedIn or other platforms and is compatible with website scraper Python setups and web scraping tools free options for further data processing.",
+      description: "Once a match is found, the tool presents you with detailed information in an organized manner for easy review. This feature is perfect for scraping LinkedIn or other platforms and is compatible with website scraper Python setups and web scraping tools free options for further data processing.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
+      sectionHeading: "Receive Detailed Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Scrape by Keywords",
+      pretitle: "Website deta",
+      presubtitle: "Lead Generation",
+    }
+  ],
+};
+
+// Dynamic data arrays
+export const aboutuswhowearecontent = [
+  "Founded in 2015, Design Collection Private Limited specializes in management software, including our business directory scraper and yellow pages extractor. With over 75 products, we offer tools for data scraping, such as PDF scrapers and image scraping tools. Our solutions streamline data collection for users worldwide.",
+  "Our mission is to make data collection as easy as possible. We offer an automated process that lets you quickly and easily grab data from the Internet, all in one convenient place.",
+];
+
+export const aboutuswebcontent = [
+  "The Web Crawler Spider is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a business directory scraper, yellow pages scraper, and yellow pages data extractor, enabling users to effortlessly gather essential information such as yellow pages email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites, scrape images from websites, and scrape PDF files, it is invaluable for various data collection tasks.",
+  "Why struggle with complex tools when you can harness the simplicity and efficiency of the Web Crawler Spider? It streamlines the process of web scraping yellow pages and supports document scraping for PDFs and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
+];
+
+export const buttons = [
+  { text: "Buy Now", class: "bg-blue-500 hover:bg-blue-400 text-white" },
+  { text: "Start a Free Trial", class: "bg-transparent border hover:bg-slate-200 hover:text-black text-black" },
+];
+
+

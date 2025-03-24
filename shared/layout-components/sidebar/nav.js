@@ -1,34 +1,19 @@
-import React from "react";
-
-//Svg icons of Dashboard
 
 const Dashboardsvg = <i className="ri-home-8-line side-menu__icon"></i>;
 
-const WidgetsSvg = <i className="ri-apps-2-line side-menu__icon"></i>;
+const Search = <i className="ri-search-line side-menu__icon"></i>;
 
-const ComponentsSvg = <i className="ri-shopping-cart-line"></i>;
+const WebIcon = <i className="ri-html5-line side-menu__icon"></i>;
 
-const ElementsSvg = <i className="ri-global-line"></i>;
+const AddIcon = <i className="ri-add-line side-menu__icon"></i>;
 
-const FormsSvg = <i className="ri-building-line"></i>;
+const Social = <i className="ri-megaphone-line text-lg"></i>;
 
-const AdvancedUISvg = <i className="ri-briefcase-2-line"></i>;
-
-const BasicUISvg = <i className="ri-bus-line"></i>;
+const Domain = <i className="ri-global-line"></i>;
 
 const Profile = <i className="ri-user-line"></i>;
 
 const Logout = <i className="ri-logout-box-line"></i>;
-
-const MapsSvg = <i className="ri-map-pin-user-line side-menu__icon"></i>;
-
-const ChartsSvg = <i className="ri-pie-chart-2-line side-menu__icon"></i>;
-
-const PagesSvg = <i className="ri-book-open-line side-menu__icon"></i>;
-
-const IconsSvg = <i className="ri-camera-lens-line side-menu__icon"></i>;
-
-const AuthenticationSvg = <i className="ri-error-warning-line side-menu__icon"></i>;
 
 export const MENUITEMS = [
 	{
@@ -38,70 +23,40 @@ export const MENUITEMS = [
 	{ path: "/dashboard/home", icon: Dashboardsvg, title: "Dashboard", type: "link", active: false, selected: false },
 
 	{
-		icon: WidgetsSvg, title: "Lead Generation", type: "sub", active: true, children: [
+		icon: Search, title: "Search Engine Scraper", type: "sub", active: true, children: [
 
+			{ path: "/dashboard/bing-search-scraper", type: "link", active: false, selected: false, title: "Bing Search Scraper" },
 			{ path: "/dashboard/google-search-scraper", type: "link", active: false, selected: false, title: "Google Search Scraper" },
-			{ path: "/dashboard/google-map-scraper", type: "link", active: false, selected: false, title: "Google Map Scraper" },
+			{ path: "/dashboard/yahoo-search-scraper", type: "link", active: false, selected: false, title: "Yahoo Search Scraper" },
+			{ path: "/dashboard/duckduckgo-search-scraper", type: "link", active: false, selected: false, title: "DuckDuckGo Scraper" },
+			{ path: "/dashboard/google-map-scraper", type: "link", active: false, selected: false, title: "Google Map Scraper" }
+		],
+	},
+
+	{
+		icon: Social, title: "Social Media Scraper", type: "sub", active: false, children: [
+			{ path: "/dashboard/facebook-scraper", type: "link", active: false, selected: false, title: "Facebook Scraper" },
+			{ path: "/dashboard/youtube-scraper", type: "link", active: false, selected: false, title: "YouTube Scraper" },
+			{ path: "/dashboard/linkedin-scraper", type: "link", active: false, selected: false, title: "Linkedin Scraper" },
+		],
+	},
+
+	{
+		icon: WebIcon, title: "Web Scrapers", type: "sub", active: false, children: [
 			{ path: "/dashboard/website-scraper", type: "link", active: false, selected: false, title: "Website Scraper" },
 			{ path: "/dashboard/website-data-center", type: "link", active: false, selected: false, title: "Website Data Center" },
-			{ path: "/dashboard/directory-scraper", type: "link", active: false, selected: false, title: "Directory Scraper" },
-			{ path: "/dashboard/document-data-scraper", type: "link", active: false, selected: false, title: "Document Data Scraper" },
-			{ path: "/dashboard/image-data-scraper", type: "link", active: false, selected: false, title: "Image Data Scraper" },
-			{ path: "/dashboard/whois-domain-database", type: "link", active: false, selected: false, title: "Whois Domain Download" }
+			{ path: "/dashboard/business-directory-scraper", type: "link", active: false, selected: false, title: "Business Directory" },
 		],
 	},
 	
-	// { path: "/widgets", icon: WidgetsSvg, title: "Widgets", type: "link", active: false, selected: false },
+	{ path: "/dashboard/whois-domain-database", icon: Domain, title: "Whois Domain Download", type: "link", active: false, selected: false },
 	
 	{
-		menutitle: "Local Services",
+		icon: AddIcon, title: "Additional Scrapers", type: "sub", active: false, children: [
+			{ path: "/dashboard/document-data-scraper", type: "link", active: false, selected: false, title: "Document Data Scraper" },
+			{ path: "/dashboard/image-data-scraper", type: "link", active: false, selected: false, title: "Image Data Scraper" },
+		],
 	},
-	
-	// {
-	// 	icon: WidgetsSvg, title: "Dashboard", type: "sub", active: true, children: [
-	// 		{ path: "/dashboard/crypto", type: "link", active: false, selected: false, title: "Crypto" },
-	// 		{ path: "/dashboard/jobs", type: "link", active: false, selected: false, title: "Jobs" },
-	// 		{ path: "/dashboard/nft", type: "link", active: false, selected: false, title: "NFT" },
-	// 		{ path: "/dashboard/analytics", type: "link", active: false, selected: false, title: "Analytics" },
-	// 		{ path: "/dashboard/projects", type: "link", active: false, selected: false, title: "Projects" },
-	// 		{ path: "/dashboard/hrm", type: "link", active: false, selected: false, title: "HRM" },
-	// 		{ path: "/dashboard/crm", type: "link", active: false, selected: false, title: "CRM" },
-	// 		{ path: "/dashboard/personal", type: "link", active: false, selected: false, title: "Personal" },
-	// 		{ path: "/dashboard/stocks", type: "link", active: false, selected: false, title: "Stocks" },
-	// 		{ path: "/dashboard/course", type: "link", active: false, selected: false, title: "Course" }
-	// 	],
-	// },
-
-	{ path: "/dashboard/coming-soon", icon: ComponentsSvg, title: "E-Commerce", type: "link", active: false, selected: false },
-	
-	// {
-	// 	icon: ComponentsSvg, title: "E-Commerce", type: "sub", active: false, selected: false, children: [
-
-	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Amazon Product Scraper" },
-	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Flipkart Product Scraper" },
-	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Shopify Product Scraper" },
-	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Snapdeal Product Scraper" },
-	// 		{ path: "/dashboard/coming-soon", type: "link", active: false, selected: false, title: "Accordion" },
-	// 		{ path: "/components/alerts", type: "link", active: false, selected: false, title: "Alerts" },
-	// 		{ path: "/components/avatars", type: "link", active: false, selected: false, title: "Avatars" },
-	// 		{ path: "/components/badges", type: "link", active: false, selected: false, title: "Badges" },
-	// 		{ path: "/components/blockquotes", type: "link", active: false, selected: false, title: "Blockquotes" },
-	// 		{ path: "/components/buttons", type: "link", active: false, selected: false, title: "Buttons" },
-	// 		{ path: "/components/cards", type: "link", active: false, selected: false, title: "Cards" },
-	// 		{ path: "/components/collapse", type: "link", active: false, selected: false, title: "Collapse" },
-	// 		{ path: "/components/list-group", type: "link", active: false, selected: false, title: "List Group" },
-	// 		{ path: "/components/list", type: "link", active: false, selected: false, title: "List" },
-	// 		{ path: "/components/indicators", type: "link", active: false, selected: false, title: "Indicators" },
-	// 		{ path: "/components/progress", type: "link", active: false, selected: false, title: "Progress" },
-	// 		{ path: "/components/skeleton", type: "link", active: false, selected: false, title: "Skeleton" },
-	// 		{ path: "/components/spinners", type: "link", active: false, selected: false, title: "Spinners" },
-	// 		{ path: "/components/toast", type: "link", active: false, selected: false, title: "Toast" }
-	// 	]
-	// },
-
-	{ path: "/dashboard/coming-soon", icon: ElementsSvg, title: "Social Media", type: "link", active: false, selected: false },
-	{ path: "/dashboard/coming-soon", icon: AdvancedUISvg, title: "Jobs", type: "link", active: false, selected: false },
-	{ path: "/dashboard/coming-soon", icon: FormsSvg, title: "Real Estate", type: "link", active: false, selected: false },
 	// {
 	// 	icon: ElementsSvg, title: "Social Media", type: "sub", active: false, selected: false, children: [
 

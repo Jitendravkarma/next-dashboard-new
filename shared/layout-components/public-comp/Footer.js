@@ -1,123 +1,184 @@
-"use client"
-import React, { useMemo } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckDouble } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
+"use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import PrimaryButton from "./PrimaryButton";
+import Image from "next/image";
 
-const Footer = () => {
-  const SomeTopAdvantages = "Easy Ways to Connect with Customers and Grow Your Business";
-  const ListItem = useMemo(() => [
-    "Reliable email extractor for accurate data",
-    "Efficient website data scraper for fast results",
-    "Document scraper for versatile data collection",
-    "PDF scraper online for easy file access",
-    "Image scraping for visual data extraction",
-    "Advanced web scraping tools for efficiency",
-    "Expert web scraping for comprehensive insights"
-  ], []);
-  const copyright =
-    "© 2016. Design Collection owns all rights. Creator of webcrawlerspider.com";
+export default function Footer() {
+  const [showGoTop, setShowGoTop] = useState(false);
 
-  // initialize components based on data attribute selectors
+  const handleVisibleButton = () => {
+    const position = window.pageYOffset;
+    setShowGoTop(position > 50); // Show button if scrolled down more than 50px
+  };
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  };
+
+  // Scroll Listener
+  useEffect(() => {
+    window.addEventListener("scroll", handleVisibleButton);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleVisibleButton);
+    };
+  }, []);
+
+  const footerLinks = [
+    {
+      title: "Lead Generation",
+      list: [
+        { title: "Google Search Scraper", url: "/services/google-search-scraper" },
+        { title: "Google Map Scraper", url: "/services/google-map-scraper" },
+        { title: "Website Data Scraper", url: "/services/website-data-scraper" },
+        { title: "Website Data Center", url: "/services/website-data-center" },
+        { title: "Document Data Scraper", url: "/services/document-data-scraper" },
+        { title: "Image Data Scraper", url: "/services/image-data-scraper" },
+        { title: "Business Directory Scraper", url: "/services/business-directory-scraper" },
+        { title: "Whois Data Download", url: "/services/whois-database" }
+      ],
+    },
+    {
+      title: "Quick Links",
+      list: [
+        { title: "Sign In", url: "/signin" },
+        { title: "Sign Up", url: "/signup" },
+        { title: "Contact Us", url: "/contact" },
+        { title: "About Us", url: "/about" },
+        { title: "Terms & Conditions", url: "/legal-terms" },
+        { title: "Privacy Policy", url: "/legal-policy" },
+        { title: "FAQ", url: "/faq" }
+      ],
+    },
+    {
+      title: "follow us",
+      list: [
+        { title: "facebook", url: "https://www.facebook.com/designcollection.in" },
+        { title: "twitter", url: "https://x.com/mukesh019" },
+        { title: "youtube", url: "https://www.youtube.com/@designcollection6499" },
+        { title: "linkedin", url: "https://www.linkedin.com/company/designcollection/" }
+      ],
+    },
+  ];
+
   return (
     <>
-      <section className="bg-[#05177f] pt-28 pb-10">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          {/* grid Begin */}
-          <div className="grid md:grid-cols-2  sm:gap-2 lg:gap-4 w-screen">
-            {/* ... Column 1 Content ... */}
-
-            {/* col-1 Begin */}
-            <div>
-              <p className="text-xl text-green-400 font-normal mb-5">
-                {SomeTopAdvantages}
+      {/* Footer Section */}
+      <footer className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-12 gap-10 xl:gap-0 xl:space-x-10">
+            <div className="col-span-12 xl:col-span-5 flex flex-col gap-5">
+              <div className="mr-auto">
+                <Link href="/">
+                  <Image
+                    src="/assets/img/brand-logos/desktop-logo.png"
+                    alt="Site logo"
+                    width={150}
+                    height={150}
+                  />
+                </Link>
+              </div>
+              <p>
+                Easily generate Lorem Ipsum placeholder text in any number of characters, words sentences or paragraphs. Learn about the origins of the passage and its history, from the Roman era to today.
               </p>
-              <ul className="list-none leading-normal text-white text-xss mt-3 font-normal">
-                {ListItem.map((advantage, index) => (
-                  <li key={index} className="mb-2 flex items-center">
-                    <FontAwesomeIcon
-                      className="mr-2"
-                      color="#ffffff"
-                      icon={faCheckDouble}
-                    />
-                    {advantage}
-                  </li>
-                ))}
-              </ul>
-              
-              <PrimaryButton/>
+              <p>
+              © 2016. Design Collection Private Limited owns all rights. Creator of webcrawlerspider.com
+              </p>
             </div>
-            {/* col-1 End */}
-            {/* ... Column 2 Content ... */}
-            {/* col-2 Begin */}
-            <div>
-                <Image 
-                  width={500}
-                  height={500}
-                  src={"/assets/img/footerImage.svg"}
-                  className="h-auto max-w-full mx-auto"
-                  alt="growbusiness"
-                />
+
+            <div className="col-span-12 xl:col-span-7 grid grid-cols-12 gap-10 md:gap-2">
+              {
+                footerLinks.map(({ title, list }, ind) => (
+                  title === "follow us" ? (
+                    <div key={ind} className="col-span-12 md:col-span-4">
+                      <h4 className="capitalize text-base font-normal text-black mb-4">
+                        {title}
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {
+                          list.map(({ title, url }, idx) => (
+                            <div key={idx}>
+                              <Link
+                                href={url}
+                                target="_blank"
+                                aria-label={title}
+                                title={title}
+                                className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "twitter" ? "hover:bg-gray-800" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
+                              >
+                                <i className={`${title === "facebook" ? "ri-facebook-line" : title === "twitter" ? "ri-twitter-x-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
+                              </Link>
+                            </div>
+                          ))
+                        }
+                      </div>
+                    </div>
+                  ) : (
+                    <div key={ind} className="col-span-12 md:col-span-4">
+                      <h4 className="capitalize text-base font-normal text-black mb-4">
+                        {title}
+                      </h4>
+                      <ul>
+                        {
+                          list.map(({ title, url }, idx) => (
+                            <li key={idx}>
+                              <Link href={url} className="block py-1 hover:text-blue-500">{title}</Link>
+                            </li>
+                          ))
+                        }
+                      </ul>
+                    </div>
+                  )
+                ))
+              }
             </div>
-            {/* col-2 End */}
+
           </div>
-          {/* grid End */}
-          {/* Border Begin */}
-          <div className="w-screen pt-5">
-            <hr className="border-t border-gray-300 opacity-25 my-8"></hr>
-            <Image width={500} height={500} src={"/assets/img/logos/logo.png"} className="h-auto w-[200px]" alt="Logo" />
-            <hr className="border-t border-gray-300 opacity-25 my-8"></hr>
-          </div>
-          {/* Border End */}
-
-          {/* grid Begin */}
-          <div className="grid lg:grid-cols-2 md:grid-cols-1 items-center sm:gap-2 lg:gap-4 w-screen">
-            {/* ... Column 1 Content ... */}
-
-            {/* col-1 Begin */}
-            <div>
-              <p className="text-white text-xxs">{copyright}</p>
-            </div>
-            {/* col-1 End */}
-            {/* ... Column 2 Content ... */}
-            {/* col-2 Begin */}
-
-            <ul className="flex flex-wrap md:items-end md:justify-end">
-              <li>
-                <Link
-                  href="/faq"
-                  className="me-4 text-xxs text-white md:me-6 "
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/legal-terms"
-                  className="me-4 text-xxs text-white md:me-6 "
-                >
-                  Terms and Condition
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/legal-policy"
-                  className="me-4 text-xxs text-white md:me-6"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-            </ul>
-
-            {/* col-2 End */}
-          </div>
-          {/* grid End */}
         </div>
-      </section>
+      </footer>
+
+      {/* Floating Contact and WhatsApp Buttons */}
+      <Link
+        href="tel:+917987887047"
+        className="fixed z-10 bottom-[4.5rem] xl:bottom-20 left-4 border-4 border-white rounded-md shadow-md flex items-center justify-center overflow-hidden w-12 h-12 hover:scale-110 bg-white transition-all duration-150"
+        target="_blank"
+        title="Contact Now"
+      >
+        <Image
+          src="/assets/img/call-icons.png"
+          alt="Contact Now"
+          className="w-8 h-8"
+          width={500}
+          height={500}
+        />
+      </Link>
+      <Link
+        href="https://wa.me/917987887047"
+        className="fixed z-10 bottom-4 xl:bottom-6 left-4 border-4 border-white rounded-md shadow-md flex items-center justify-center overflow-hidden w-12 h-12 hover:scale-110 bg-white transition-all duration-150"
+        target="_blank"
+        title="WhatsApp Now"
+      >
+        <Image
+          src="/assets/img/whatsapp-icons.png"
+          alt="WhatsApp Now"
+          className="w-8 h-8"
+          width={500}
+          height={500}
+        />
+      </Link>
+
+      {/* Scroll to Top Button */}
+      {showGoTop && (
+        <div
+          className="fixed z-10 bottom-4 right-4 bg-blue-500 text-white rounded-md p-2 cursor-pointer shadow-md hover:bg-blue-600 transition duration-150"
+          onClick={scrollUp}
+        >
+          <i className="ri-arrow-up-circle-fill text-3xl"></i>
+        </div>
+      )}
     </>
   );
-};
-
-export default Footer;
+}

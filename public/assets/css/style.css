@@ -545,6 +545,7 @@ Background Image
   }
   html {
     @apply font-inter;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-bodybg h-full text-gray-600 dark:text-white m-0 font-inter font-normal text-sm relative;

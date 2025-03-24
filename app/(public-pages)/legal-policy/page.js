@@ -1,9 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { seo_privacy } from "@/shared/data/seo-content/content";
-import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_privacy
 
@@ -37,7 +33,6 @@ const ContentItem = ({title, description, list=false, listItems=[]})=>{
 }
 
 const PrivacyPolicy = () => {
-  
   const policyData = [
     {
       title:"Consent", 
@@ -284,22 +279,18 @@ const PrivacyPolicy = () => {
   ]
   return (
     <>
-      {/* Privacy Policy Section */}
-      <PageHeader title={"Privacy Policy"}/>
+      <header className='py-14 lg:pt-28 lg:pb-20 bg-gray-100'>
+        <div className='w-full text-center px-4 lg:px-16'>
+          <h1 className='text-3xl lg:text-[64px] font-semibold mb-4 lg:mb-12 text-black-800 w-full'>Privacy Policy</h1>
+          <h3 className='text-xl font-medium text-gray-600'>Last updated December 24, 2024</h3>
+        </div>
+      </header>
 
       
       {/* Gets Connects Section */}
-      <section className="py-24">
-        {/* google ads */}
-        <HorizontalAds/>
-        {/* google ads */}
-        
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 py-16 lg:py-18 sm:px-6 lg:px-10  flex flex-wrap items-center justify-between p-4">
           <div className="prose">
-            <h1 className="font-bold text-3xl my-3 text-center leading-10 italic">
-              Web Crawler Spider <br /> Privacy Policy
-            </h1>
-
             <p className="text-xss font-light leading-normal">
               At webcrawlerspider, accessible from
               https://webcrawlerspider.com/, one of our main priorities is the
@@ -327,16 +318,19 @@ const PrivacyPolicy = () => {
               ))
             }
 
-            <div className="text-center mt-28 mb-5 ">
+            <div className="text-center mt-28 mb-5 bg-blue-100 rounded-md py-16">
               <h4 className="font-bold text-3xl mb-3 leading-10 italic capitalize">
                 "How do you contact us regarding this policy"
               </h4>
               <div className="text-lg font-light leading-normal">
                 If you have any questions or suggestions about our Privacy Policy,
-                do not hesitate to <Link href="/contact-us" className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize">contact us</Link>.
+                do not hesitate to 
+                <Link href="/contact-us" className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize">
+                  contact us
+                </Link>.
                 <p className="mt-3 text-5xl text-center">
                   <a href="mailto:support@webcrawlerspider.com">
-                    <FontAwesomeIcon className="text-blue-600" icon={faEnvelope} title="Email Now"/>
+                    <i className="ri-mail-line text-blue-500 hover:text-blue-600" title="Email Now"/>
                   </a>
                 </p>
               </div>

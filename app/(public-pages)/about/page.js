@@ -1,68 +1,55 @@
 import React from "react";
-import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
-import Services from "@/shared/layout-components/public-comp/Services";
-import PrimaryButton from "@/shared/layout-components/public-comp/PrimaryButton";
 import { seo_about } from "@/shared/data/seo-content/content";
-import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+// import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+import { aboutuswebcontent, aboutuswhowearecontent } from "@/shared/data/static-content/subPageContent";
+import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
+import PrimaryButton from "@/shared/layout-components/public-comp/PrimaryButton";
 
 export const metadata = seo_about
 
 const About = () => {
   return (
     <div className="bg-white">
-      {/* Contact Us Section Begin*/}
-      <PageHeader title={"About us"}/>
-      {/* Contact Us Section End*/}
-      {/* Inquiry now Section Begin*/}
-      
-      <section className="bg-white pt-20">
-        {/* google ads */}
-          <HorizontalAds/>
-        {/* google ads */}
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <div className="grid md:grid-cols-2 items-center gap-10 md:gap-12">
-            {/* ... Column 1 Content ... */}
-            {/* col-1 Begin */}
-            <div>
-              <p className="text-xl text-blue-600 font-normal mb-5">
-              Who we are?
-              </p>
-              
-              <p className="mb-2 text-xss font-light leading-normal">
-              Founded in 2015, <b>Design Collection</b> specializes in management software, including our <b>business directory scraper</b> and <b>yellow pages extractor</b>. With over 75 products, we offer tools for <b>data scraping</b>, such as <b>PDF scrapers</b> and <b>image scraping tools</b>. Our solutions streamline data collection for users worldwide.
-              </p>
-              <hr className="border-t border-gray-300 my-4"></hr>
-              <p className="text-xl text-blue-600 font-normal mb-5">
-              What is web crawler spider?
-              </p>
-              {/* <hr className="border-t border-gray-300 my-4"></hr> */}
-              <p className="mb-2 text-xss font-light leading-normal">
-                  The <b>Web Crawler Spider</b> is a powerful <b>data scraping tool</b> designed to simplify data extraction for <b>business professionals</b> and enthusiasts. This versatile tool acts as a <b>business directory scraper</b>, <b>yellow pages scraper</b>, and <b>yellow pages data extractor</b>, enabling users to effortlessly gather essential information such as <b>yellow pages email extractor</b> details, contact numbers, and domain names. With capabilities to <b>scrape data from websites</b>, <b>scrape images from websites</b>, and <b>scrape pdf files</b>, it is invaluable for various data collection tasks.
-              </p>
-              <p className="mb-2 text-xss font-light leading-normal">
-                  Why struggle with complex tools when you can harness the simplicity and efficiency of the <b>Web Crawler Spider</b>? It streamlines the process of <b>web scraping yellow pages</b> and supports <b>document scraping</b> for PDFs and other formats. Whether you're conducting a <b>whois search</b> or utilizing a <b>website data scraper</b>, this tool ensures that all necessary data, including <b>whois domain</b> information and <b>whois database lookup</b>, is at your fingertips, turning minutes into moments of discovery.
-              </p>
-
-
-              <PrimaryButton/>
-          
-            </div>
-            {/* col-1 End */}
-            {/* ... Column 2 Content ... */}
-            {/* col-2 Begin */}
-            <div>
-              <img
-                  src={"/assets/img/about.png"}
-                  className="h-auto w-9/12 md:w-full mx-auto"
-                  alt="growbusiness"
-                />
-            </div>
-            {/* col-2 End */}
+        {/* Section: Top Header Section Begin */}
+        <header className='py-14 lg:pt-28 lg:pb-20 bg-gray-100'>
+          <div className='w-full text-center px-4 lg:px-16'>
+            <h1 className='text-3xl lg:text-[64px] font-semibold mb-4 lg:mb-12 text-black-800 w-full'>About Us</h1>
+            <h3 className='text-xl font-medium text-gray-600'>Last updated December 24, 2024</h3>
           </div>
-        </div>
-      </section>
+        </header>
+        {/* Section: Top Header Section End */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section className='py-14 lg:py-16 bg-white flex justify-center items-center'>
+            <div className=''>
+              {/* Welcome Message */}
+              <p className='text-lg font-semibold my-4 text-center'>Hey there!</p>
+              <p className='text-lg font-semibold text-center'>We are all about making web scraping a breeze for everyone!</p>
 
-      <Services/>
+              {/* About Us - Who We Are */}
+              <h2 className='text-2xl lg:text-3xl font-bold  mt-16 uppercase'>Who we are?</h2>
+              {aboutuswhowearecontent.map((content, index) => (
+                <p key={index} className='text-black text-base font-light my-7'>
+                  {content}
+                </p>
+              ))}
+
+              {/* About Us - What is Web Crawler Spider */}
+              <h2 className='text-2xl lg:text-3xl font-bold  mt-16 uppercase'>What is web crawler spider?</h2>
+              {aboutuswebcontent.map((content, index) => (
+                <p key={index} className='text-black text-base font-light my-7'>
+                  {content}
+                </p>
+              ))}
+
+              {/* Call-to-Action Buttons */}
+              <div className='mt-8'>
+                <PrimaryButton/>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <WhyChooseUs />
     </div>
   );
 };

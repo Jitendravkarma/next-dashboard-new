@@ -143,6 +143,12 @@ export const seo_verify = {
     keywords: ``
 }
 
+export const seo_docs = {
+    title: `Documentation - Web Crawler Spider`,
+    description: `Check out the comprehensive Web Crawler Spider documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
+    keywords: `web crawler spider documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+}
+
 
 export const seo_not_found = {
     title: `Page Not Found`,

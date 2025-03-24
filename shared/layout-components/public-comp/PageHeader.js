@@ -1,19 +1,28 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
+import ImageSlider from "./ImageSlider";
 
-const PageHeader = ({title}) => {
+const PageHeaderSection = (googlemapscraperProps) => {
   return (
-    <div className="bg-gray-200 py-5 border-t border-gray-300">
-        <div className="max-w-screen-xl mx-auto p-4">
-          <div className="grid lg:grid-cols-1 md:grid-cols-1  sm:gap-2 lg:gap-4">
-            <div>
-              <p className="text-3xl font-extrabold leading-tight capitalize">
-                {title}
-              </p>
-            </div>
-          </div>
-        </div>
-    </div>
-  )
-}
+    <>
+      <h1 className="text-3xl lg:text-[58px] lg:pt-7 font-bold leading-tight mb-6 text-black-800 w-full">
+        {googlemapscraperProps.title}
+      </h1>
+      <p className="mb-12 text-black text-base font-light text-paragraph">
+        {googlemapscraperProps.description}
+      </p>
+      <Link
+        href={googlemapscraperProps.buttonLink}
+        className="text-xs lg:text-base font-medium bg-blue-500 hover:bg-blue-600 text-white rounded-md py-4 lg:px-24 px-12 mb-3"
+      >
+        {googlemapscraperProps.buttonText}
+      </Link>
+      <ImageSlider
+        leftImg={googlemapscraperProps.leftImg}
+        rightImg={googlemapscraperProps.rightImg}
+      />
+    </>
+  );
+};
 
-export default PageHeader
+export default PageHeaderSection;

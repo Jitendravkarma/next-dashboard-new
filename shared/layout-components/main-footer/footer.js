@@ -456,7 +456,7 @@ const Footer = () => {
                 </div>
                 <div className='flex items-center flex-col gap-1 text-sm text-gray-500 hover:text-gray-800'>
                     <p>
-                        &copy; <Link href={""} className='italic text-gray-800 hover:underline font-medium'>Neuralnetics Technology Pvt Ltd.</Link> 2025-30. All rights reservered.
+                        &copy; <Link href={""} className='italic text-gray-800 hover:underline font-medium'>Design Collection Pvt Ltd.</Link> 2025-30. All rights reservered.
                     </p>
                     <div className='flex gap-1 text-xs'>
                         <Link href={"/next-dash"} title={"Terms & Conditions"} className='capitalize inline-flex gap-1 hover:underline'>
@@ -505,7 +505,7 @@ const Footer = () => {
                 </div>
                 <div className='flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800'>
                     <p>
-                        &copy; <Link href={""} className='italic text-gray-800 hover:underline font-medium'>Neuralnetics Technology Pvt Ltd.</Link> 2025-30. All rights reservered.
+                        &copy; <Link href={""} className='italic text-gray-800 hover:underline font-medium'>Design Collection Pvt Ltd.</Link> 2025-30. All rights reservered.
                     </p>
                     <div className='flex gap-1'>
                         <Link href={"/next-dash"} title={"Terms & Conditions"} className='capitalize inline-flex gap-1 hover:underline'>

@@ -1,31 +1,28 @@
 import { seo_terms } from "@/shared/data/seo-content/content";
-import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
-import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
+import Link from "next/link";
 
 export const metadata = seo_terms
 
 const TermsCondition = () => {
   return (
     <>
-      {/* Terms Conditions Section */}
-      <PageHeader title={"Terms & Conditions"}/>
+      <header className='py-14 lg:pt-28 lg:pb-20 bg-gray-100'>
+        <div className='w-full text-center px-4 lg:px-16'>
+          <h1 className='text-3xl lg:text-[64px] font-semibold mb-4 lg:mb-12 text-black-800 w-full'>Terms and conditions</h1>
+          <h3 className='text-xl font-medium text-gray-600'>Last updated December 24, 2024</h3>
+        </div>
+      </header>
 
       {/* Gets Connects Section */}
-      <section className="py-24">
-        {/* google ads */}
-        <HorizontalAds/>
-        {/* google ads */}
-
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 py-16 lg:py-18 sm:px-6 lg:px-10 flex flex-wrap items-center justify-between p-4">
           <div className="prose">
-            <h2 className="font-bold text-3xl my-3 text-center leading-10 italic"> Web Crawler Spider <br /> Terms and Conditions</h2>
-
             <p className="text-xss font-bold leading-normal">Welcome to <b>Web Crawler Spider</b>!</p>
-
+            <br/>
             <p className="text-xss font-light leading-normal">
               This service is owned and run by <b>Design Collection</b>., which also owns this product. You accept the terms and conditions of <b>Design Collection</b>., as stated in this agreement, by using <b>Web Crawler Spider</b>.
             </p>
-
+            <br/>
             <p className="text-xss font-light leading-normal">
               By accessing this website we assume you accept these terms and
               conditions. Do not continue to use <b>Web Crawler Spider</b> if you do
@@ -338,6 +335,21 @@ const TermsCondition = () => {
               website are provided free of charge, we will not be liable for any
               loss or damage of any nature.
             </p>
+
+            <div className="text-center mt-28 mb-5 bg-blue-100 rounded-md py-16">
+              <h4 className="font-bold text-3xl mb-3 leading-10 italic capitalize">
+                "How do you contact us regarding this policy"
+              </h4>
+              <div className="text-lg font-light leading-normal">
+                If you have any questions or suggestions about our Terms and conditions,
+                do not hesitate to <Link href="/contact-us" className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize">contact us</Link>.
+                <p className="mt-3 text-5xl text-center">
+                  <a href="mailto:support@webcrawlerspider.com">
+                    <i className="ri-mail-line text-blue-500 hover:text-blue-600" title="Email Now"/>
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

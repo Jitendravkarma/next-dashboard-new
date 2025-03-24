@@ -30,7 +30,7 @@ const SignInForm = () => {
                     handleSignIn(userData, userData.verified);
                     // navigate.push("/dashboard/home/")
                     // e.reset()
-                    window.open('/dashboard/home/', '_blank');
+                    window.open('/downloads', '_blank');
                     setLoginData({email: "", password: ""})
                 }
                 else {

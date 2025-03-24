@@ -43,29 +43,22 @@ const Contact = () => {
     ]
   return (
     <div className="bg-white">
-      {/* Contact Us Section Begin*/}
-      <PageHeader title={"Contact us"}/>
-      {/* Contact Us Section End*/}
-      {/* Inquiry now Section Begin*/}
+      <header className='py-14 lg:pt-28 lg:pb-20 bg-gray-100'>
+        <div className='w-full text-center px-4 lg:px-16'>
+          <h1 className='text-3xl lg:text-[64px] font-semibold mb-4 lg:mb-12 text-black-800 w-full'>Contact Us</h1>
+          <h3 className='text-xl font-medium text-gray-600'>Need assistance? We're here for you!</h3>
+        </div>
+      </header>
       
       <div className="">
         <section className="pt-20 bg-white">
-          {/* google ads */}
-          <HorizontalAds/>
-          {/* google ads */}
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             {/* grid Begin */}
             <div className="grid lg:grid-cols-2 gap-4 w-screen">
-              {/* ... Column 1 Content ... */}
-
-              {/* col-1 Begin */}
               <ContactForm/>
-              {/* col-1 End */}
-              {/* ... Column 2 Content ... */}
-              {/* col-2 Begin */}
               <div>
                 <img
-                  src={"/assets/img/contactus.png"}
+                  src={"/assets/img/contact.svg"}
                   className="h-auto md:w-96 mx-auto lg:w-full my-3 p-3"
                   alt="inquirynow"
                 />

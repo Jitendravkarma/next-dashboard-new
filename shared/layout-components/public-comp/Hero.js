@@ -1,98 +1,61 @@
-import React, { memo } from "react";
-import PropTypes from "prop-types";
+"use client"
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { HeroContent } from "@/shared/data/static-content/public";
 import PrimaryButton from "./PrimaryButton";
 
-const Hero = () => {
-    const HomeHero = [
-        {
-          type: "text",
-          content: <span style={{lineHeight:'3.5rem'}}>Enhance Your Marketing with, <br /> Web Crawler Spider !</span>,
-          className: "text-4xl md:text-5xl text-white font-bold",
-        },
-        {
-          type: "hr",
-          className: "border-t border-gray-300 my-4",
-        },
-        {
-          type: "text",
-          content: "",
-          className: "text-3xl text-white font-normal inline",
-        },
-        {
-          type: "text",
-          content: "Increase Sales with Our Scraper.",
-          className: "font-bold text-3xl text-white font-bold inline",
-        },
-          {
-          type: "hr",
-          className: "border-t border-gray-300 my-4",
-        },
-        {
-          type: "text",
-          content: "Try it out now",
-          className: "text-xl text-green-400 font-light pt-4",
-        },
-        {
-          type: "text",
-          content: "Grow Your Business With Us!",
-          className: "text-white font-light pb-3",
-        },
-        {
-          type: "link",
-          pageLink: "https://codecanyon.net/item/google-map-scraper-pro/25283251",
-          content: "Buy Now",
-          className: "bg-green-400",
-        },
-        {
-          type: "link",
-          pageLink: "/signin",
-          content: "Try Now",
-          className: "border border-green-400 text-green-400",
-        },
-    ]
+
+const HeroSection = () => {
+  const [currentText, setCurrentText] = useState(HeroContent[0].text);
+  const [fadeClass, setFadeClass] = useState("fade-in");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFadeClass("fade-out");
+
+      setTimeout(() => {
+        setIndex((prevIndex) => (prevIndex + 1) % HeroContent.length);
+        setFadeClass("fade-in");
+      }, 1000); // Match CSS animation duration
+    }, 4000); // 3 seconds display + 1 second fade-out
+
+    return () => clearInterval(interval); // Cleanup interval
+  }, []);
+
+  useEffect(() => {
+    setCurrentText(HeroContent[index].text);
+  }, [index]);
 
   return (
-    <>
-      <section className={"bg-[#05177f] pt-28 md:pt-32 mt-[-80px] pb-20"}>
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4" id="hero">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 group">
-            <div className="w-8/12 sm:w-1/2 lg:w-9/12 mx-auto">
-              <img
-                id="hero-img"
-                src={`/assets/img/hero.png`}
-                className="w-full h-auto group-hover:scale-105 duration-700"
-                alt="shape"
-              />
-            </div>
-            {/* Column 1 Content */}
-            <div>
-              {HomeHero &&
-                HomeHero.map((array, index) => {
-                  if (array.type === "text") {
-                    return (
-                      <p key={index} className={array.className}>
-                        {array.content}
-                      </p>
-                    );
-                  } else if (array.type === "hr") {
-                    return <hr key={index} className={array.className} />;
-                  }
-                  return null; // Handle other types if needed or skip invalid types
-                })}
+    <section className="max-w-8xl mx-auto py-14 lg:py-16" data-aos="fade-up">
+      {/* Text Content */}
+      <div className="w-full text-center px-4 lg:px-16">
+        <h1
+          className={`text-2xl lg:text-[58px] pt-7 font-bold leading-tight mb-6 text-black-800 w-full ${fadeClass}`}
+        >
+          {/* Render dynamic content with HTML safely */}
+          <div dangerouslySetInnerHTML={{ __html: currentText }} />
+        </h1>
+        <p className="mb-8 text-black text-base font-light">
+          Increase Sales with Our Scraper.
+        </p>
+        <PrimaryButton/>
+      </div>
 
-              <PrimaryButton/>
-            </div>
-          </div>
-          
-          
-        </div>
-      </section>
-    </>
+      {/* Full-Width Image */}
+      <div className="w-[80%] flex items-center justify-center pt-10 mx-auto">
+        <Image
+          src="/assets/img/header-image.png"
+          className="rounded-md shadow-md"
+          alt="Header Image"
+          width={1920}
+          height={1080}
+        />
+      </div>
+    </section>
   );
 };
 
-Hero.propTypes = {
-  propsData: PropTypes.array.isRequired, // Define the prop as an array and mark it as required
-};
-
-export default memo(Hero);
+export default HeroSection;
