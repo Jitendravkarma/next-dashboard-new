@@ -224,11 +224,11 @@ export default function Header() {
 
         <ul className="flex flex-col space-y-5 px-5 text-black">
           {menus.map(({ title, url }) =>
-            title === "Try Free Trial" ? (
+            (title === "Start a Free Trial" || title === "Download Now") ? (
               <li key={url}>
                 <Link
                   href={url}
-                  className="block bg-blue-500 hover:bg-blue-600 lg:text-sm text-xs text-white font-medium py-3 px-4 rounded-lg text-center"
+                  className="inline-block bg-blue-500 hover:bg-blue-600 lg:text-sm text-xs text-white font-medium py-3 px-4 rounded-md text-center"
                 >
                   {title}
                 </Link>
@@ -260,14 +260,14 @@ export default function Header() {
                   </svg>
                 </button>
                 {isDropdownOpen && (
-                  <div className="bg-white shadow-lg rounded-lg py-2 transition-all duration-300 w-full">
+                  <div className="bg-white shadow-lg rounded-md py-2 transition-all duration-300 w-full">
                     <ul>
                       {
                         submenu.map(({title, url}, ind)=>(
                           <li key={ind}>
                             <Link
                               href={url}
-                              className="block px-4 py-2 text-black hover:bg-gray-100 text-sm font-light"
+                              className="capitalize block px-4 py-2 text-black hover:bg-gray-100 text-sm font-light"
                             >
                               {title}
                             </Link>
@@ -286,7 +286,7 @@ export default function Header() {
                     Logout
                   </button>
                   :
-                  <Link href={url} className="nav-link">
+                  <Link href={url} className="nav-link capitalize">
                     {title}
                   </Link>
                 }

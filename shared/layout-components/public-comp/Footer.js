@@ -70,7 +70,7 @@ export default function Footer() {
       {/* Footer Section */}
       <footer className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-12 gap-10 xl:gap-0 xl:space-x-10">
+          <div className="grid grid-cols-12 gap-0 xl:gap-0 xl:space-x-10">
             <div className="col-span-12 xl:col-span-5 flex flex-col gap-5">
               <div className="mr-auto">
                 <Link href="/">
@@ -90,11 +90,11 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="col-span-12 xl:col-span-7 grid grid-cols-12 gap-10 md:gap-2">
+            <div className="col-span-12 xl:col-span-7 grid grid-cols-12 gap-0 md:gap-2">
               {
                 footerLinks.map(({ title, list }, ind) => (
                   title === "follow us" ? (
-                    <div key={ind} className="col-span-12 md:col-span-4">
+                    <div key={ind} className="col-span-12 md:col-span-4 my-5 xl:my-0">
                       <h4 className="capitalize text-base font-normal text-black mb-4">
                         {title}
                       </h4>
@@ -117,7 +117,7 @@ export default function Footer() {
                       </div>
                     </div>
                   ) : (
-                    <div key={ind} className="col-span-12 md:col-span-4">
+                    <div key={ind} className="col-span-12 md:col-span-4 my-5 xl:my-0">
                       <h4 className="capitalize text-base font-normal text-black mb-4">
                         {title}
                       </h4>

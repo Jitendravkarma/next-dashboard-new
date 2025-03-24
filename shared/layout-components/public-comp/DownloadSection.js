@@ -127,7 +127,7 @@ const DownloadSection = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col flex-wrap justify-center w-[57%] gap-4 mb-10 mx-auto">
+          <div className="flex flex-col flex-wrap justify-center md:w-[57%] gap-4 mb-10 mx-auto">
             {/* <button 
               onClick={downloadZip}
               className="flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-8 py-3 transform transition-all"
@@ -152,10 +152,10 @@ const DownloadSection = () => {
                 Download Starter Kit
             </Link>
             
-            <div className='flex justify-between gap-3 items-center'>
+            <div className='flex flex-col sm:flex-row justify-between gap-3 items-center'>
               <a 
                 href="/docs"
-                className="flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-5 py-3 transform transition-all"
+                className="w-full flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-5 py-3 transform transition-all"
               >
                 <i className="text-xl ri-file-text-line"></i>
                 Explore Docs
@@ -164,7 +164,7 @@ const DownloadSection = () => {
               <Link 
                 href={"https://www.youtube.com/watch?v=jLI0zULD6cw"}
                 target='_blank'
-                className="flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-5 py-3 transform transition-all"
+                className="w-full flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-5 py-3 transform transition-all"
               >
                 <i className="text-xl ri-video-line"></i>
                 Watch a Video
