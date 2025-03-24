@@ -12,7 +12,7 @@ const DownloadSection = () => {
   const contactLinks = [
     {
       title: "Mail Now",
-      url: "mailto:support@webcrawlerspider.com",
+      url: "mailto:support@designcollection.in",
       icon: "ri-mail-line"
     },
     {

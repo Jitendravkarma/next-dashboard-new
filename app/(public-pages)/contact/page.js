@@ -22,10 +22,10 @@ const Contact = () => {
             We also available on <br />
             <Link
                 target="_blank"
-                href="mailto:support@webcrawlerspider.com"
+                href="mailto:support@designcollection.in"
                 className="text-blue-500 underline"
             >
-                support@webcrawlerspider.com
+                support@designcollection.in
             </Link>
             </span>, 
             icon: "/assets/img/mail.png"
@@ -110,10 +110,10 @@ const Contact = () => {
                 For any queries, questions, customization requests, or support needs, please feel free to contact us at{" "}
                   <Link
                     target="_blank"
-                    href="mailto:support@webcrawlerspider.com"
+                    href="mailto:support@designcollection.in"
                     className="text-blue-500 underline"
                   >
-                    support@webcrawlerspider.com
+                    support@designcollection.in
                   </Link>{" "}<br></br>
                   We are dedicated to providing you with prompt and effective assistance, ensuring your complete satisfaction with our services.
                 </p>
@@ -122,10 +122,10 @@ const Contact = () => {
                   Address: 271 Avn, Scheme No 51, Sangam Nagar, Army Head Quarter, Indore- 452006, Madhya Pradesh. <br />
                   Email: <Link
                     target="_blank"
-                    href="mailto:support@webcrawlerspider.com"
+                    href="mailto:support@designcollection.in"
                     className="text-blue-500 hover:underline"
                   >
-                    support@webcrawlerspider.com
+                    support@designcollection.in
                   </Link> <br />
                   Tel: <Link href={"tel:07314010110"} className="text-blue-500 hover:underline">0731-4010110</Link>
                 </address>

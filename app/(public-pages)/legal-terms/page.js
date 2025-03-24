@@ -344,7 +344,7 @@ const TermsCondition = () => {
                 If you have any questions or suggestions about our Terms and conditions,
                 do not hesitate to <Link href="/contact-us" className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize">contact us</Link>.
                 <p className="mt-3 text-5xl text-center">
-                  <a href="mailto:support@webcrawlerspider.com">
+                  <a href="mailto:support@designcollection.in">
                     <i className="ri-mail-line text-blue-500 hover:text-blue-600" title="Email Now"/>
                   </a>
                 </p>

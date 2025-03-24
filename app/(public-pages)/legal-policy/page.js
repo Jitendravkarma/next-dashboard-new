@@ -104,11 +104,11 @@ const PrivacyPolicy = () => {
       </p>, 
       list: true, 
       listItems: [
-        <li>You may cancel your subscription or services at any time by contacting our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize" href="mailto:support@webcrawlerspider.com">support@webcrawlerspider.com</a>.</li>,
+        <li>You may cancel your subscription or services at any time by contacting our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize" href="mailto:support@designcollection.in">support@designcollection.in</a>.</li>,
         <li>Cancellations will only be effective from the next billing cycle. No refunds will be provided for the current billing cycle.</li>,
         <li>We reserve the right to cancel or suspend services in cases of misuse, non-compliance with our terms, or fraudulent activities.</li>,
         <li>In such cases, no refunds will be provided.</li>,
-        <li>For cancellations or refund-related inquiries, please contact us at <a className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize" href="mailto:support@webcrawlerspider.com">support@webcrawlerspider.com</a>.</li>
+        <li>For cancellations or refund-related inquiries, please contact us at <a className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize" href="mailto:support@designcollection.in">support@designcollection.in</a>.</li>
       ]
     },
     {
@@ -130,7 +130,7 @@ const PrivacyPolicy = () => {
         </li>,
         <li>
           <b>Delivery Issues: </b>
-          If you do not receive your purchased product or experience any delay, please contact our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize" href="mailto:support@webcrawlerspider.com">support@webcrawlerspider.com</a> We will resolve the issue promptly.
+          If you do not receive your purchased product or experience any delay, please contact our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize" href="mailto:support@designcollection.in">support@designcollection.in</a> We will resolve the issue promptly.
         </li>,
         <li>
           <b>Changes to Delivery: </b>
@@ -329,7 +329,7 @@ const PrivacyPolicy = () => {
                   contact us
                 </Link>.
                 <p className="mt-3 text-5xl text-center">
-                  <a href="mailto:support@webcrawlerspider.com">
+                  <a href="mailto:support@designcollection.in">
                     <i className="ri-mail-line text-blue-500 hover:text-blue-600" title="Email Now"/>
                   </a>
                 </p>

@@ -201,7 +201,7 @@ const Docs = () => {
                 We’re dedicated to supporting you—don’t hesitate to get in touch!
               </p>
               <Link 
-                href={"mailto:support@webcrawlerspider.com"} 
+                href={"mailto:support@designcollection.in"} 
                 className="bg-blue-600 rounded-md text-lg text-white duration-300 font-medium gap-2 hover:bg-blue-700 inline-flex items-center px-6 py-3 transition-colors"
               >
                 <i className="text-xl ri-mail-fill"></i>
