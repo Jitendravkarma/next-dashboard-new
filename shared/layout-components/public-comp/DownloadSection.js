@@ -161,13 +161,14 @@ const DownloadSection = () => {
                 Explore Docs
               </a>
               <span>OR</span>
-              <button 
-                onClick={()=>window.alert(`We will launch our video tutorial shortly!`)}
+              <Link 
+                href={"https://www.youtube.com/watch?v=jLI0zULD6cw"}
+                target='_blank'
                 className="flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-5 py-3 transform transition-all"
               >
                 <i className="text-xl ri-video-line"></i>
                 Watch a Video
-              </button>
+              </Link>
             </div>
           </div>
 

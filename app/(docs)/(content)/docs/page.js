@@ -44,6 +44,19 @@ const Docs = () => {
               <p className="mb-20" id="installation"></p>
               <Heading title={"Installation"}/>
               
+              <p className="mb-20" id="youtube"></p>
+              <div className="bg-red-100 p-4 rounded-md shadow-sm text-center">
+                <Heading_Two title={"Watch on YouTube"}/>
+                <Para para={
+                  <span>
+                    For a comprehensive, step-by-step installation guide, we also offer a detailed instructional video on YouTube. <br/>
+                    <Link href={"https://www.youtube.com/watch?v=jLI0zULD6cw"} target="_blank" className="my-3 inline-block text-white bg-red-500 hover:bg-red-600 rounded-sm py-2 px-3">
+                      Watch Now <i className="ri-youtube-fill"/> 
+                    </Link>
+                  </span>}
+                />
+              </div>
+
               <br/><br/>
               <Heading_Two title={"Initial setup"}/>
               <Para para={
@@ -58,7 +71,7 @@ const Docs = () => {
               <ul className="list-disc text-base ml-5">
                 <li>Locate the downloaded file, <Code title={"Web-Crawler-Spider.zip"}/>.</li>
                 <li>Right-click on the file and select "Extract All" (on Windows) or "Extract Here" (on macOS/Linux) to unzip it.</li>
-                <li>Choose a folder where you want to extract the contents. Once done, you will see a folder named <Code title={"Web-Crawler-Spider"}/>. Open this folder, and inside, you will find two more folders: <Code title={"/docs and /web_crawler_spider"}/>.
+                <li>Choose a folder where you want to extract the contents. Once done, you will see a folder named <Code title={"Web-Crawler-Spider"}/>. Open this folder, and inside, you will find two more folders: <Code title={"/document and /web_crawler_spider"}/>.
                 </li>
                 <li>
                   Simply open the <Code title={"/web_crawler_spider"}/> this will be your main project directory.
