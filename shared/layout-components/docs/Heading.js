@@ -42,7 +42,7 @@ export const CmdBox = ({cmd})=>{
   return (
     <div className="bg-gray-700 text-gray-300 p-4 rounded-md shadow-md my-5">
       <span className="text-xs text-gray-400">cmd</span>
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-1 sm:gap-2 flex-wrap items-center text-xs sm:text-base">
         <span><span>C</span><span>\</span><span>Users</span><span>\</span>XYZ{">"}</span>
         <span>{cmd}</span>
       </div>

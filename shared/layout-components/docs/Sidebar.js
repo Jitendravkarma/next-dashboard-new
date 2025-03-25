@@ -3,24 +3,16 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { ThemeChanger } from "../../redux/action";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import SimpleBar from 'simplebar-react';
 import Menuloop from "./menuloop";
 import store from "../../redux/store";
 import { basePath } from "../../../next.config";
 import MENUITEMS from "./nav";
-import { useUserContext } from "@/shared/userContext/userContext";
+import { VerticalAds } from "../public-comp/Ads";
 
 const Sidebar = ({ local_varaiable, ThemeChanger }) => {
-
-  const navigate = useRouter()
-  const { handleSignOut } = useUserContext()
-
-  function handleSignOutCall() {
-    navigate.push("/signin");
-    handleSignOut();
-  }
 
   const [menuitems, setMenuitems] = useState(MENUITEMS);
 
@@ -627,10 +619,6 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
     }
   }
 
-  const handleClick = (event) => {
-    event.preventDefault();
-  };
-
   return (
 
     <Fragment>
@@ -666,24 +654,6 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
                       </span>
                       : ""}
                     {levelone.type === "link" ?
-                      levelone.title === "Log Out" ? 
-                        <Link href={"/signin"} type="button" onClick={handleSignOutCall} className={`cursor-pointer side-menu__item ${levelone.selected ? 'active' : ''}`}>
-                          <span className={`hs-tooltip inline-block [--placement:right] leading-none ${local_varaiable?.dataVerticalStyle == 'doublemenu' ? '' : 'hidden'}`}>
-                            <span className="cursor-pointer hs-tooltip-toggle  inline-flex justify-center items-center">
-                              {levelone.icon}
-                              <span className="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-black text-xs font-medium text-white rounded shadow-sm dark:bg-neutral-700" role="tooltip">
-                                {levelone.title}
-                              </span>
-                            </span>
-                          </span>
-                          {local_varaiable.dataVerticalStyle != "doublemenu" ? levelone.icon : ""}
-                          <span className="side-menu__label">{levelone.title} {levelone.badgetxt ? (<span className={levelone.class}> {levelone.badgetxt}</span>
-                          ) : (
-                            ""
-                          )}
-                          </span>
-                        </Link>
-                      :
                       <Link href={levelone.path} className={`side-menu__item ${levelone.selected ? 'active' : ''}`}>
                         <span className={`hs-tooltip inline-block [--placement:right] leading-none ${local_varaiable?.dataVerticalStyle == 'doublemenu' ? '' : 'hidden'}`}>
                           <button type="button" className="hs-tooltip-toggle  inline-flex justify-center items-center">
@@ -701,22 +671,22 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
                         </span>
                       </Link>
                       : ""}
-                    {levelone.type === "empty" ?
-
-                      <Link href="#!" scroll={false} className='side-menu__item' onClick={handleClick}>{levelone.icon}<span className=""> {levelone.title} {levelone.badgetxt ? (
-                        <span className={levelone.class}>{levelone.badgetxt} </span>
-                      ) : (
-                        ""
-                      )}
-                      </span>
-                      </Link>
-                      : ""}
                     {levelone.type === "sub" ?
                       <Menuloop MenuItems={levelone} level={level + 1} toggleSidemenu={toggleSidemenu} HoverToggleInnerMenuFn={HoverToggleInnerMenuFn} />
                       : ''}
                   </li>
                 </Fragment>
               ))}
+              <li className="sm:hidden inline-block">
+                <Link href={"/signup"} className={`side-menu__item`}>
+                    <span className="uppercase rounded-sm p-2 md:py-1 text-xs border border-blue-100 bg-green-500 hover:bg-green-600 animate-pulse">
+                      Free Trial
+                    </span>
+                </Link>
+              </li>
+              <li>
+                <VerticalAds/>
+              </li>
             </ul>
 
             <div className="slide-right" onClick={() => { slideRight(); }} id="slide-right">

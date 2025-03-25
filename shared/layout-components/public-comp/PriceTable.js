@@ -50,7 +50,7 @@ const PriceTable = () => {
                 <i className="ri-close-line text-red-500" />
               </td>
               <td className="py-4 px-6 text-gray-500">
-                <i className="ri-check-line text-green-500" />
+                <i className="ri-close-line text-red-500" />
               </td>
               <td className="py-4 px-6 text-gray-500">
                 <i className="ri-close-line text-red-500" />
@@ -62,7 +62,7 @@ const PriceTable = () => {
                 <i className="ri-close-line text-red-500" />
               </td>
               <td className="py-4 px-6 text-gray-500">
-                <i className="ri-close-line text-red-500" />
+                <i className="ri-check-line text-green-500" />
               </td>
               <td className="py-4 px-6 text-gray-500">
                 <i className="ri-check-line text-green-500" />
@@ -102,7 +102,7 @@ const PriceTable = () => {
               <td className="py-4 px-6">
                 <i className="ri-close-line text-red-500" />
               </td>
-              <td className="py-4 px-6">Resale to 100+ clients</td>
+              <td className="py-4 px-6">Resale upto 100 clients</td>
             </tr>
 
             {/* Contact Section */}

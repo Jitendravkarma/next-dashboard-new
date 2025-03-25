@@ -19,7 +19,7 @@ export const MENUITEMS = [
 		menutitle: "MAIN",
 	},
 
-	{ path: "#intro", icon: Dashboardsvg, title: "Introduction", type: "link", active: false, selected: false },
+	{ path: "/", icon: Dashboardsvg, title: "Home", type: "link", active: false, selected: false },
 	{ path: "#started", icon: Started, title: "Getting Started", type: "link", active: false, selected: false, title: "Getting Started" },
 	{ path: "#features", icon: Features, title: "Features", type: "link", active: false, selected: false, title: "Features" },
 	{ path: "#logs", icon: Logs, title: "Change logs", type: "link", active: false, selected: false, title: "Change Logs" },

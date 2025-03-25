@@ -4,6 +4,7 @@ import { seo_about } from "@/shared/data/seo-content/content";
 import { aboutuswebcontent, aboutuswhowearecontent } from "@/shared/data/static-content/subPageContent";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
 import PrimaryButton from "@/shared/layout-components/public-comp/PrimaryButton";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_about
 
@@ -48,7 +49,8 @@ const About = () => {
             </div>
           </section>
         </div>
-
+        
+        <HorizontalAds/>
         <WhyChooseUs />
     </div>
   );

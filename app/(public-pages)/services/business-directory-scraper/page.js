@@ -45,7 +45,7 @@ const DirectoryScraper = () => {
 
       <section className="py-14 lg:py-16 bg-soft flex justify-center items-center">
         <div className="w-full lg:w-[80%] text-center px-4 lg:px-16">
-          <h2 className="text-2xl lg:text-3xl font-bold text-center mb-16 flex items-center justify-center gap-2">
+          <h2 className="text-2xl lg:text-3xl font-bold text-center mb-16 flex flex-wrap  items-center justify-center gap-2">
             {/* <i className="ri-google-fill"></i> */}
             <span className="text-blue-500">What Type</span> of Data You Can Get
           </h2>

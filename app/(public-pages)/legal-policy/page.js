@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { seo_privacy } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_privacy
 
@@ -10,9 +11,9 @@ const ContentItem = ({title, description, list=false, listItems=[]})=>{
         {title}
       </h2>
 
-      <p className="text-xss font-light leading-normal">
+      <div className="text-xss font-light leading-normal">
         {description}
-      </p>
+      </div>
 
       {
         list ? 
@@ -288,6 +289,9 @@ const PrivacyPolicy = () => {
 
       
       {/* Gets Connects Section */}
+      <div className="bg-white">
+        <HorizontalAds/>
+      </div>
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 py-16 lg:py-18 sm:px-6 lg:px-10  flex flex-wrap items-center justify-between p-4">
           <div className="prose">
@@ -318,17 +322,17 @@ const PrivacyPolicy = () => {
               ))
             }
 
-            <div className="text-center mt-28 mb-5 bg-blue-100 rounded-md py-16">
-              <h4 className="font-bold text-3xl mb-3 leading-10 italic capitalize">
+            <div className="text-center mt-28 mb-5 bg-blue-100 rounded-md py-16 px-5">
+              <h4 className="font-bold text-lg sm:text-3xl mb-3 sm:leading-10 italic capitalize">
                 "How do you contact us regarding this policy"
               </h4>
-              <div className="text-lg font-light leading-normal">
+              <div className="text-sm sm:text-lg font-light leading-normal">
                 If you have any questions or suggestions about our Privacy Policy,
                 do not hesitate to 
                 <Link href="/contact-us" className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize">
-                  contact us
+                  {" "} contact us
                 </Link>.
-                <p className="mt-3 text-5xl text-center">
+                <p className="mt-3 text-2xl sm:text-5xl text-center">
                   <a href="mailto:support@designcollection.in">
                     <i className="ri-mail-line text-blue-500 hover:text-blue-600" title="Email Now"/>
                   </a>

@@ -284,6 +284,7 @@ const Faq = () => {
       <section className="bg-white py-24">
        <FaqSection/>
       </section>
+      <HorizontalAds/>
       {/*faq question and answer End */}
     </>
   );

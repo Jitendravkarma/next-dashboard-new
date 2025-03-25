@@ -33,14 +33,16 @@ const HorizontalAds = () => {
         }
     }, []);
     return (
-        <div className='text-center py-10'>
-            <ins className="adsbygoogle"
-                data-ad-client="ca-pub-6421827460277995"
-                data-ad-slot="2799812988"
-                data-ad-format="auto" 
-                data-full-width-responsive="true" 
-                style={{ display: 'block' }}>
-            </ins>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center py-10'>
+                <ins className="adsbygoogle"
+                    data-ad-client="ca-pub-6421827460277995"
+                    data-ad-slot="2799812988"
+                    data-ad-format="auto" 
+                    data-full-width-responsive="true" 
+                    style={{ display: 'block' }}>
+                </ins>
+            </div>
         </div>
     )
 }

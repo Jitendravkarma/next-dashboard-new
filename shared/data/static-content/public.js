@@ -233,7 +233,7 @@ export const priceplanmonth = [
     plantitle: "Free Plan", // Plan title
     plansubtitle: "For a quick, simple project", // Subtitle for the plan
     rupees: "₹0", // Pricing
-    month: "/month", // Billing period
+    month: "/year", // Billing period
     payLink: "/signup",
     buttontext: "Get Started", // Button text
     paragraph: "All features in Free, plus", // Paragraph for features
@@ -281,7 +281,7 @@ export const priceplanmonth = [
     plantitle: "Standard Plan",
     plansubtitle: "Ideal for small teams",
     rupees: "₹2,999",
-    month: "/3 month",
+    month: "/year",
     buttontext: "Buy Now",
     paragraph: "Advanced tools for your projects",
     payLink: "https://pmny.in/PAYUMN/oJ45wjNe1PxQ",
@@ -340,8 +340,8 @@ export const priceplanmonth = [
         question: true,
       },
       {
-        tooltips: "Empower resellers to sell products to 100+ customers effortlessly.",
-        text: "100+ Access codes",
+        tooltips: "Empower resellers to sell products to upto 100 customers effortlessly.",
+        text: "100 Access codes",
         question: true,
       },
       {

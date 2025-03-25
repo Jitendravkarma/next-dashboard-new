@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 const layout = ({children}) => {
   const token = Cookies.get("authToken");
   if(token){
-    redirect("/dashboard/home")
+    redirect("/downloads")
   }
   return (
     <html>

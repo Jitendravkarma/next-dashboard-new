@@ -3,6 +3,7 @@ import { seo_pricing } from "@/shared/data/seo-content/content";
 // import BecomeReseller from "@/shared/layout-components/public-comp/BecomeReseller";
 import PriceCards from "@/shared/layout-components/public-comp/PriceCards";
 import PriceTable from "@/shared/layout-components/public-comp/PriceTable";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_pricing
 
@@ -17,6 +18,7 @@ const PricingPage = () => {
       </header>
       <div className="bg-white">
         <PriceCards/>
+        <HorizontalAds/>
         <PriceTable/>
       </div>
       {/* <div className="bg-gray-100 py-16">

@@ -1,4 +1,5 @@
 import { seo_terms } from "@/shared/data/seo-content/content";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 import Link from "next/link";
 
 export const metadata = seo_terms
@@ -13,6 +14,7 @@ const TermsCondition = () => {
         </div>
       </header>
 
+      <HorizontalAds/>
       {/* Gets Connects Section */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 py-16 lg:py-18 sm:px-6 lg:px-10 flex flex-wrap items-center justify-between p-4">
@@ -336,14 +338,14 @@ const TermsCondition = () => {
               loss or damage of any nature.
             </p>
 
-            <div className="text-center mt-28 mb-5 bg-blue-100 rounded-md py-16">
-              <h4 className="font-bold text-3xl mb-3 leading-10 italic capitalize">
+            <div className="text-center mt-28 mb-5 bg-blue-100 rounded-md py-16 px-5">
+              <h4 className="font-bold text-lg sm:text-3xl mb-3 sm:leading-10 italic capitalize">
                 "How do you contact us regarding this policy"
               </h4>
-              <div className="text-lg font-light leading-normal">
+              <div className="text-sm sm:text-lg font-light leading-normal">
                 If you have any questions or suggestions about our Terms and conditions,
                 do not hesitate to <Link href="/contact-us" className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize">contact us</Link>.
-                <p className="mt-3 text-5xl text-center">
+                <p className="mt-3 text-2xl sm:text-5xl text-center">
                   <a href="mailto:support@designcollection.in">
                     <i className="ri-mail-line text-blue-500 hover:text-blue-600" title="Email Now"/>
                   </a>

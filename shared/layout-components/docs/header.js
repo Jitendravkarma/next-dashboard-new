@@ -230,9 +230,9 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                         </div>
 
                         <div className="responsive-logo">
-                            <Link className="responsive-logo-dark" href={"/dashboard/home"} aria-label="Brand">
+                            <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
                                 <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="mx-auto" /></Link>
-                            <Link className="responsive-logo-light" href={"/dashboard/home"} aria-label="Brand">
+                            <Link className="responsive-logo-light" href={"/"} aria-label="Brand">
                                 <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="mx-auto" /></Link>
                         </div>
 
@@ -240,7 +240,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                             <div className="responsive-headernav">
                                 <div className="header-nav-right">
                                     <Link href={"/signup"}
-                                        className="uppercase rounded-sm p-2 md:py-1 text-sm md:text-xs border border-blue-100 bg-green-100 hover:bg-green-200 animate-pulse"
+                                        className="uppercase rounded-sm p-2 md:py-1 hidden sm:inline-block text-xs border border-blue-100 bg-green-100 hover:bg-green-200 animate-pulse"
                                         title="free trial"
                                     >
                                         <code className="text-green-600"><span>Free Trial</span></code>

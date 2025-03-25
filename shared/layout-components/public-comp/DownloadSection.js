@@ -100,7 +100,7 @@ const DownloadSection = () => {
           <div className="bg-green-300 h-48 rounded-full w-48 absolute delay-200 duration-1000 ease-out left-2/3 rotate-180 top-0 transition-all translate-y-full"></div>
         </div> */}
 
-        <div className="text-center max-w-4xl mx-auto z-10">
+        <div className="text-center w-full sm:max-w-4xl mx-auto z-10">
           {/* Logout Button */}
           <div className="flex justify-end mb-6">
             <button onClick={handleLogout} 
@@ -178,7 +178,7 @@ const DownloadSection = () => {
             <p className="text-gray-600 mb-4">
               Contact or follow us! We’re just a message away!
             </p>
-            <div className="flex justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-6">
               {
                 contactLinks.map(({title, url, icon}, ind)=>(
                   <a 

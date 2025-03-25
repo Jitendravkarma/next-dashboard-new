@@ -71,16 +71,16 @@ const Services = () => {
           rel="noopener noreferrer"
           className="transform hover:scale-[1.03] transition-all duration-300"
         >
-          <div className="w-[370px] bg-gradient-to-br from-blue-50 to-blue-100 p-6 py-10 shadow-lg rounded-xl text-center hover:shadow-2xl hover:bg-gradient-to-br hover:from-blue-100 hover:to-white">
-            <div className="mb-6">
+          <div className="w-full sm:w-[370px] bg-gradient-to-br from-blue-50 to-blue-100 p-4 sm:p-6 sm:py-10 shadow-lg rounded-xl text-center hover:shadow-2xl hover:bg-gradient-to-br hover:from-blue-100 hover:to-white">
+            <div className="mb-3 sm:mb-6">
               <img
                 src={img}
                 alt={title}
-                className="w-[60px] h-[60px] mx-auto rounded-full shadow-sm"
+                className="w-[30px] h-[30px] sm:w-[60px] sm:h-[60px] mx-auto rounded-full shadow-sm"
               />
             </div>
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">{title}</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">{des}</p>
+            <h3 className="text-base sm:text-xl font-semibold text-blue-900 mb-3">{title}</h3>
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{des}</p>
           </div>
         </a>
       ))}
