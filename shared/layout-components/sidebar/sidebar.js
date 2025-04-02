@@ -18,7 +18,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
 	const { handleSignOut } = useUserContext()
 
 	function handleSignOutCall() {
-		navigate.push("/signin");
+		// navigate.push("/signin");
 		handleSignOut();
 	}
 
@@ -667,7 +667,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
 											: ""}
 										{levelone.type === "link" ?
 											levelone.title === "Log Out" ? 
-												<Link href={"/signin"} type="button" onClick={handleSignOutCall} className={`cursor-pointer side-menu__item ${levelone.selected ? 'active' : ''}`}>
+												<button type="button" onClick={handleSignOutCall} className={`cursor-pointer side-menu__item ${levelone.selected ? 'active' : ''}`}>
 													<span className={`hs-tooltip inline-block [--placement:right] leading-none ${local_varaiable?.dataVerticalStyle == 'doublemenu' ? '' : 'hidden'}`}>
 														<span className="cursor-pointer hs-tooltip-toggle  inline-flex justify-center items-center">
 															{levelone.icon}
@@ -682,7 +682,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
 														""
 													)}
 													</span>
-												</Link>
+												</button>
 											:
 											<Link href={levelone.path + "/"} className={`side-menu__item ${levelone.selected ? 'active' : ''}`}>
 												<span className={`hs-tooltip inline-block [--placement:right] leading-none ${local_varaiable?.dataVerticalStyle == 'doublemenu' ? '' : 'hidden'}`}>

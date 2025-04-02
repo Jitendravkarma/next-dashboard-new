@@ -26,6 +26,10 @@ const SignInForm = () => {
                 const response = await login(loginData);
                 const userData = response.user;
                 if(userData.verified){
+                    const licences = JSON.parse(localStorage.getItem("licences"))
+                    if(licences && licences[0].email.toLowerCase() !== loginData.email.toLowerCase()){
+                        localStorage.removeItem("licences")
+                    }
                     setAuthToken(response.access_token);
                     handleSignIn(userData, userData.verified);
                     // navigate.push("/dashboard/home/")

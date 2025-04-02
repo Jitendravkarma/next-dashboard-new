@@ -102,9 +102,16 @@ const DownloadSection = () => {
 
         <div className="text-center w-full sm:max-w-4xl mx-auto z-10">
           {/* Logout Button */}
-          <div className="flex justify-end mb-6">
+          <div className="flex justify-between items-center mb-6">
+            {
+              user.reseller && 
+              <Link href={"/reseller/dashboard"} title='Visit reseller dashboard' target='_blank' className='inline-block rounded-md duration-300 gap-2 hover:bg-indigo-500 hover:text-white items-center px-6 py-2 transition-all'>
+                <i className='ri-home-4-line text-lg'/> Reseller
+              </Link>
+            }
+
             <button onClick={handleLogout} 
-              className="flex rounded-md duration-300 gap-2 hover:bg-red-500 hover:text-white items-center px-6 py-2 transition-all"
+              className="flex ml-auto rounded-md duration-300 gap-2 hover:bg-red-500 hover:text-white items-center px-6 py-2 transition-all"
             >
               <i className="text-lg ri-logout-box-line"></i>
               Logout
@@ -112,7 +119,7 @@ const DownloadSection = () => {
           </div>
 
           {/* Welcome Title */}
-          <h1 className="text-4xl text-indigo-900 font-extrabold mb-4 md:text-5xl">
+          <h1 className="text-4xl text-indigo-900 font-extrabold mb-4 md:text-5xl capitalize">
             Hello, {user.name || "User"}!
           </h1>
 

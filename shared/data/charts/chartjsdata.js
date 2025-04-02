@@ -296,19 +296,6 @@ export const polarOptions = {
 };
 
 //Sale Value
-
-const data = {
-  type: "doughnut",
-  labels: ["Used storage", "Free storage"],
-  datasets: [
-    {
-      data: [75, 25],
-      backgroundColor: ["rgb(90, 102, 241)", "rgb(96, 165, 250)"],
-      borderWidth: 0,
-    },
-  ],
-};
-
 const options = {
   redraw: true,
   animation: false,
@@ -322,7 +309,7 @@ const options = {
   cutout: 90,
 };
 
-export function SalesValue() {
+export function SalesValue({data}) {
   return <Doughnut id='sales-donut' className="mx-auto my-auto" data={data} options={options} width={230} height={230} />;
 }
 //

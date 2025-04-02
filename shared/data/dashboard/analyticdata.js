@@ -212,26 +212,14 @@ export class Deviceview extends Component {
 export class SessionOverview extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-
-      series: [
-        {
-          name: "Session",
-          data: [20, 38, 38, 72, 55, 63, 43, 76, 55, 80, 40, 100],
-          color: "rgba(var(--color-primary))"
-        },
-      ],
+      series: [props.data], // ✅ updated to match the new structure
       options: {
         chart: {
           height: 300,
           type: "bar",
-          zoom: {
-            enabled: false,
-          },
-          toolbar: {
-            show: false,
-          },
+          zoom: { enabled: false },
+          toolbar: { show: false },
         },
         grid: {
           borderColor: "rgba(107 ,114 ,128,0.1)",
@@ -240,16 +228,12 @@ export class SessionOverview extends Component {
           bar: {
             columnWidth: "55%",
             borderRadius: 4,
-            borderRadiusApplication: 'end', // 'around', 'end'
-            borderRadiusWhenStacked: 'last', // 'all', 'last'
+            borderRadiusApplication: 'end',
+            borderRadiusWhenStacked: 'last',
           },
         },
-        dataLabels: {
-          enabled: false,
-        },
-        legend: {
-          show: false,
-        },
+        dataLabels: { enabled: false },
+        legend: { show: false },
         yaxis: {
           title: {
             style: {
@@ -265,38 +249,22 @@ export class SessionOverview extends Component {
               colors: "rgb(107 ,114 ,128)",
               fontSize: "12px",
             },
-            formatter: function (y) {
-              return y.toFixed(0) + "";
-            },
+            formatter: y => y.toFixed(0) + "",
           },
         },
         xaxis: {
           categories: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
           ],
           axisBorder: {
             show: true,
             color: "rgba(119, 119, 142, 0.05)",
-            offsetX: 0,
-            offsetY: 0,
           },
           axisTicks: {
             show: true,
             borderType: "solid",
             color: "rgba(119, 119, 142, 0.05)",
-            offsetX: 0,
-            offsetY: 0,
           },
           labels: {
             rotate: -90,
@@ -305,22 +273,33 @@ export class SessionOverview extends Component {
               fontSize: "12px",
             },
           },
-
         },
       },
-
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.data !== this.props.data) {
+      this.setState({
+        series: [this.props.data], // ✅ update series properly
+      });
+    }
   }
 
   render() {
     return (
-
       <div>
-        <ReactApexChart height={315} width={"100%"} options={this.state.options} series={this.state.series} type="bar" />
+        <ReactApexChart
+          height={315}
+          width={"100%"}
+          options={this.state.options}
+          series={this.state.series}
+          type="bar"
+        />
       </div>
     );
   }
-};
+}
 //Sessions By Gender
 
 export class SessionsByGender extends Component {

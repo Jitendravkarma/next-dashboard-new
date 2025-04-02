@@ -16,7 +16,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
     const { user, handleSignOut } = useUserContext()
     
     function handleSignOutCall() {
-        navigate.push("/signin");
+        // navigate.push("/signin");
         handleSignOut();
     }
 
@@ -637,10 +637,10 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                                     <i className="ti ti-wallet text-lg"></i>
                                                     Bal: $7,12,950
                                                 </Link> */}
-                                                <Link href={"/signin"} type="button" onClick={handleSignOutCall} className="ti-dropdown-item">
+                                                <button type="button" onClick={handleSignOutCall} className="ti-dropdown-item">
                                                     <i className="ti ti-logout  text-lg"></i>
                                                     Log Out
-                                                </Link>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

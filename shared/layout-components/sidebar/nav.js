@@ -11,52 +11,67 @@ const Social = <i className="ri-megaphone-line text-lg"></i>;
 
 const Domain = <i className="ri-global-line"></i>;
 
+const ResellerDash = <i className="ri-home-4-line side-menu__icon"></i>;
+
+const Analytics = <i className="ri-user-line side-menu__icon"></i>;
+
+const Renewal = <i className="ri-refresh-line side-menu__icon"></i>;
+
 const Profile = <i className="ri-user-line"></i>;
 
 const Logout = <i className="ri-logout-box-line"></i>;
 
 export const MENUITEMS = [
 	{
-		menutitle: "MAIN",
+		menutitle: "reseller",
 	},
 
-	{ path: "/dashboard/home", icon: Dashboardsvg, title: "Dashboard", type: "link", active: false, selected: false },
+	{ path: "/reseller/dashboard", icon: ResellerDash, title: "Dashboard", type: "link", active: false, selected: false },
 
-	{
-		icon: Search, title: "Search Engine Scraper", type: "sub", active: true, children: [
+	{ path: "/reseller/user-analytics", icon: Analytics, title: "User Analytics", type: "link", active: false, selected: false },
 
-			{ path: "/dashboard/bing-search-scraper", type: "link", active: false, selected: false, title: "Bing Search Scraper" },
-			{ path: "/dashboard/google-search-scraper", type: "link", active: false, selected: false, title: "Google Search Scraper" },
-			{ path: "/dashboard/yahoo-search-scraper", type: "link", active: false, selected: false, title: "Yahoo Search Scraper" },
-			{ path: "/dashboard/duckduckgo-search-scraper", type: "link", active: false, selected: false, title: "DuckDuckGo Scraper" },
-			{ path: "/dashboard/google-map-scraper", type: "link", active: false, selected: false, title: "Google Map Scraper" }
-		],
-	},
+	{ path: "/reseller/plan-renewal", icon: Renewal, title: "Plan Renewal", type: "link", active: false, selected: false },
+	// {
+	// 	menutitle: "MAIN",
+	// },
 
-	{
-		icon: Social, title: "Social Media Scraper", type: "sub", active: false, children: [
-			{ path: "/dashboard/facebook-scraper", type: "link", active: false, selected: false, title: "Facebook Scraper" },
-			{ path: "/dashboard/youtube-scraper", type: "link", active: false, selected: false, title: "YouTube Scraper" },
-			{ path: "/dashboard/linkedin-scraper", type: "link", active: false, selected: false, title: "Linkedin Scraper" },
-		],
-	},
+	// { path: "/dashboard/home", icon: Dashboardsvg, title: "Dashboard", type: "link", active: false, selected: false },
 
-	{
-		icon: WebIcon, title: "Web Scrapers", type: "sub", active: false, children: [
-			{ path: "/dashboard/website-scraper", type: "link", active: false, selected: false, title: "Website Scraper" },
-			{ path: "/dashboard/website-data-center", type: "link", active: false, selected: false, title: "Website Data Center" },
-			{ path: "/dashboard/business-directory-scraper", type: "link", active: false, selected: false, title: "Business Directory" },
-		],
-	},
+	// {
+	// 	icon: Search, title: "Search Engine Scraper", type: "sub", active: true, children: [
+
+	// 		{ path: "/dashboard/bing-search-scraper", type: "link", active: false, selected: false, title: "Bing Search Scraper" },
+	// 		{ path: "/dashboard/google-search-scraper", type: "link", active: false, selected: false, title: "Google Search Scraper" },
+	// 		{ path: "/dashboard/yahoo-search-scraper", type: "link", active: false, selected: false, title: "Yahoo Search Scraper" },
+	// 		{ path: "/dashboard/duckduckgo-search-scraper", type: "link", active: false, selected: false, title: "DuckDuckGo Scraper" },
+	// 		{ path: "/dashboard/google-map-scraper", type: "link", active: false, selected: false, title: "Google Map Scraper" }
+	// 	],
+	// },
+
+	// {
+	// 	icon: Social, title: "Social Media Scraper", type: "sub", active: false, children: [
+	// 		{ path: "/dashboard/facebook-scraper", type: "link", active: false, selected: false, title: "Facebook Scraper" },
+	// 		{ path: "/dashboard/youtube-scraper", type: "link", active: false, selected: false, title: "YouTube Scraper" },
+	// 		{ path: "/dashboard/linkedin-scraper", type: "link", active: false, selected: false, title: "Linkedin Scraper" },
+	// 	],
+	// },
+
+	// {
+	// 	icon: WebIcon, title: "Web Scrapers", type: "sub", active: false, children: [
+	// 		{ path: "/dashboard/website-scraper", type: "link", active: false, selected: false, title: "Website Scraper" },
+	// 		{ path: "/dashboard/website-data-center", type: "link", active: false, selected: false, title: "Website Data Center" },
+	// 		{ path: "/dashboard/business-directory-scraper", type: "link", active: false, selected: false, title: "Business Directory" },
+	// 	],
+	// },
 	
-	{ path: "/dashboard/whois-domain-database", icon: Domain, title: "Whois Domain Download", type: "link", active: false, selected: false },
+	// { path: "/dashboard/whois-domain-database", icon: Domain, title: "Whois Domain Download", type: "link", active: false, selected: false },
 	
-	{
-		icon: AddIcon, title: "Additional Scrapers", type: "sub", active: false, children: [
-			{ path: "/dashboard/document-data-scraper", type: "link", active: false, selected: false, title: "Document Data Scraper" },
-			{ path: "/dashboard/image-data-scraper", type: "link", active: false, selected: false, title: "Image Data Scraper" },
-		],
-	},
+	// {
+	// 	icon: AddIcon, title: "Additional Scrapers", type: "sub", active: false, children: [
+	// 		{ path: "/dashboard/document-data-scraper", type: "link", active: false, selected: false, title: "Document Data Scraper" },
+	// 		{ path: "/dashboard/image-data-scraper", type: "link", active: false, selected: false, title: "Image Data Scraper" },
+	// 	],
+	// },
 	// {
 	// 	icon: ElementsSvg, title: "Social Media", type: "sub", active: false, selected: false, children: [
 
@@ -149,7 +164,7 @@ export const MENUITEMS = [
 	{
 		menutitle: "Settings",
 	},
-	{ path: "/dashboard/profile", icon: Profile, title: "Profile", type: "link", active: false, selected: false },
+	{ path: "/reseller/profile", icon: Profile, title: "Profile", type: "link", active: false, selected: false },
 	{ path: "/", icon: Logout, title: "Log Out", type: "link", active: false, selected: false },
 	// {
 	// 	icon: NestedSvg, title: "Nested Menu", type: "sub", active: false, selected: false, children: [

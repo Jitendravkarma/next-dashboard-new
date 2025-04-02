@@ -83,7 +83,7 @@ export default function Footer() {
                 </Link>
               </div>
               <p>
-                Easily generate Lorem Ipsum placeholder text in any number of characters, words sentences or paragraphs. Learn about the origins of the passage and its history, from the Roman era to today.
+                Web Crawler Spider provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
               </p>
               <p>
               © 2016. Design Collection Private Limited owns all rights. Creator of webcrawlerspider.com
