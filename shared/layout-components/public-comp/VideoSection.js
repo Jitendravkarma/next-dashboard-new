@@ -15,7 +15,7 @@ const VideoSection = ({ heading, videoUrl, buttonText, buttonLink }) => {
         <div className="w-full aspect-video rounded-md border-2 border-blue-500 border-dashed p-1">
           <iframe
             className="w-full h-full rounded-md"
-            src={videoUrl} // Dynamic video URL
+            src={`https://www.youtube.com/embed/${videoUrl}`} // Dynamic video URL
             title="Demo Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

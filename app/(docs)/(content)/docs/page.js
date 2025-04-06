@@ -135,9 +135,17 @@ const Docs = () => {
               <br/><br/>
               <Heading title={"Start the Application"}/>
               <ul className="list-disc text-base ml-5">
-                <li>
-                  Now run <CopyCommand id="browser-content" content={<span>"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222</span>}/> command. This will launch or open a web browser where you can monitor all your activities:
-                  <LoadImage url={"browser_cmd.png"}/>
+                <li className="grid grid-cols-1 xl:grid-cols-2 space-y-8 xl:space-y-0 xl:space-x-8">
+                  <li>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-500 italic group-hover:underline">For Windows Users</h3>
+                    Now run <CopyCommand id="browser-content" content={<span>"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222</span>}/> command. This will launch or open a web browser where you can monitor all your activities:
+                    <LoadImage url={"browser_cmd.png"}/>
+                  </li>
+                  <li>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-500 italic group-hover:underline">For Mac Users</h3>
+                    Now run <CopyCommand id="mac-content" content={<span>/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222</span>}/> command. This will launch or open a web browser where you can monitor all your activities:
+                    <LoadImage url={"mac_browser.png"}/>
+                  </li>
                 </li>
                 <li>
                   If you are using multiple accounts in your browser, then you will see your accounts like this in your dynamic browser, remove the extra accounts and keep only one.
@@ -162,11 +170,10 @@ const Docs = () => {
                 <p className="mb-28" id="quick-start"></p>
                 <Heading title={<span>⚡Quick Start</span>}/>
                 <p className="text-lg">
-                  <b>Note:</b> After the installation process, you don't need to follow each step to run the application. Instead, simply open the project folder in the command prompt and run these two commands: <br/>
-                  i. <CopyCommand id="dynamic-browser" content={<span>"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222</span>}/> <br/>
-                  <LoadImage url={"browser_cmd.png"}/>
-                  ii. <CopyCommand id="start" content={`npm start`}/> <br/>
-                  That's it! Your application is ready to use at:: <CustomLink href={"http://localhost:3000"} title={"http://localhost:3000"}/>
+                  <b>Note:</b> After the installation process, you don't need to follow each step to run the application. Instead, simply open the project folder and open file by name <b>/starter.bat</b>, this will start your server: <br/>
+                  <LoadImage url={"starterbat.png"}/>
+                  <br/>
+                  That's it! Your application is ready to use at: <CustomLink href={"http://localhost:3000"} title={"http://localhost:3000"}/>
                   <LoadImage url={"start.png"}/>
                 </p>
               </ul>

@@ -106,12 +106,6 @@ export const seo_website_scraper = {
     keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
 }
 
-export const seo_websitedata = {
-    title: `Website Data Center - Web Crawler Spider`,
-    description: `Hello how are your are you fine?`,
-    keywords: `Some keywords are unable to dipslay please login your account`
-}
-
 export const seo_document_scraper = {
     title: `Document Data Scraper | Efficient Contact Info Scraper - Web Crawler Spider`,
     description: `Extract valuable insights from PDFs, Word, Excel, and CSV files with our Document Data Scraper. Automate text, table, and metadata extraction for research, finance, and analytics.`,
@@ -149,6 +143,47 @@ export const seo_docs = {
     keywords: `web crawler spider documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
 }
 
+export const seo_live_scraping = {
+    title: `Live Website Scraping - Web Crawler Spider`,
+    description: `Check out the comprehensive Web Crawler Spider documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
+    keywords: `web crawler spider documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+}
+
+export const seo_live_data = {
+    title: `Live Website Data - Web Crawler Spider`,
+    description: `Get valuable live website data, including website URLs, descriptions, titles, contact details, and more. Stay updated with real-time insights from various websites!`,
+    keywords: `live website data, website details, website information, URL lookup, site description, website title, contact details, web analytics, real-time website data, online site info`
+}
+
+export const seo_bing = {
+    title: `Live Website Scraping - Web Crawler Spider`,
+    description: `Check out the comprehensive Web Crawler Spider documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
+    keywords: `web crawler spider documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+}
+
+export const seo_yahoo = {
+    title: `Live Website Scraping - Web Crawler Spider`,
+    description: `Check out the comprehensive Web Crawler Spider documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
+    keywords: `web crawler spider documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+}
+
+export const seo_duck = {
+    title: `Live Website Scraping - Web Crawler Spider`,
+    description: `Check out the comprehensive Web Crawler Spider documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
+    keywords: `web crawler spider documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+}
+
+export const seo_facebook = {
+    title: `Live Website Scraping - Web Crawler Spider`,
+    description: `Check out the comprehensive Web Crawler Spider documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
+    keywords: `web crawler spider documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+}
+
+export const seo_youtube = {
+    title: `Live Website Scraping - Web Crawler Spider`,
+    description: `Check out the comprehensive Web Crawler Spider documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
+    keywords: `web crawler spider documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+}
 
 export const seo_not_found = {
     title: `Page Not Found`,

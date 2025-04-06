@@ -10,25 +10,108 @@ export default function Header() {
   const { pathname, push } = useRouter()
   const menus = [
     { title: "home", url: "/" },
-    { title: "services", url: "/services" },
+    { title: "tools", url: "/services" },
     { title: "pricing", url: "/pricing" },
-    { title: "Docs", url: "/docs" },
+    // { title: "Docs", url: "/docs" },
     { title: "about", url: "/about" },
     { title: "signin", url: "/signin" },
     { title: isAuthenticated ? "Download Now" : "Start a Free Trial", url: isAuthenticated ? "/downloads" : "/signup" }
   ];
 
-  const submenu = [
-    // {title : "bing search scraper", url: "/services/bing-search-scraper"},
-    {title : "google search scraper", url: "/services/google-search-scraper"},
-    {title : "google map scraper", url: "/services/google-map-scraper"},
-    {title : "website data scraper", url: "/services/website-data-scraper"},
-    {title : "website data center", url: "/services/website-data-center"},
-    {title : "business directory scraper", url: "/services/business-directory-scraper"},
-    {title : "document data scraper", url: "/services/document-data-scraper"},
-    {title : "image data scraper", url: "/services/image-data-scraper"},
-    {title : "whois domain database", url: "/services/whois-database"}
+  const mainMenus = [
+    {
+      title : "Live Website Scraping", 
+      url: "/services/live-website-scraping", 
+      subLinks: [], 
+      category: false
+    },
+    {
+      title : "Live Website Data", 
+      url: "/services/live-website-data", 
+      subLinks: [], 
+      category: false
+    },
+    {
+      title : "Search Engine Scraper", 
+      url: "", 
+      subLinks: [
+        {
+          title: "Bing Search Scraper",
+          url: "/services/bing-search-scraper/"
+        },
+        {
+          title: "Google Search Scraper",
+          url: "/services/google-search-scraper/"
+        },
+        {
+          title: "Yahoo Search Scraper",
+          url: "/services/yahoo-search-scraper/"
+        },
+        {
+          title: "DuckDuckGo Search Scraper",
+          url: "/services/duckduckgo-search-scraper/"
+        },
+        {
+          title: "Google Map Scraper",
+          url: "/services/google-map-scraper/"
+        }
+      ], 
+      category: true
+    },
+    {
+      title : "Social Media Scraper", 
+      url: "", 
+      subLinks: [
+        {
+          title: "facebook Scraper",
+          url: "/services/facebook-scraper/"
+        },
+        {
+          title: "youtube scraper",
+          url: "/services/youtube-scraper"
+        }
+      ], 
+      category: true
+    },
+    {
+      title : "Web Scrapers", 
+      url: "", 
+      subLinks: [
+        {
+          title: "Website Data Scraper",
+          url: "/services/website-data-scraper/"
+        },
+        {
+          title: "Business Directory Scraper",
+          url: "/services/business-directory-scraper/"
+        }
+      ], 
+      category: true
+    },
+    {
+      title : "File data scrapers", 
+      url: "/services/document-data-scraper", 
+      subLinks: [
+        {
+          title: "Document data scraper",
+          url: "/services/document-data-scraper/"
+        },
+        {
+          title: "image data scraper",
+          url: "/services/image-data-scraper/"
+        }
+      ], 
+      category: true
+    },
+    {
+      title : "whois domain database", 
+      url: "/services/whois-database", 
+      subLinks: [], 
+      category: false
+    }
   ]
+
+  const [ subMenus, setSubMenus ] = useState({title: "", menus: []})
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -48,6 +131,10 @@ export default function Header() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const showSubMenu = (title, menus)=>{
+    setSubMenus({title, menus})
+  }
+
   function handleLogout() {
     handleSignOut();
 		window.location.reload()
@@ -61,6 +148,7 @@ export default function Header() {
         setIsDropdownOpen(false); // Close dropdown when clicking outside
         setIsEcommerceDropdownOpen(false);
         setIsSocialMediaDropdownOpen(false);
+        setSubMenus({title: "", menus: []})
       }
     };
 
@@ -104,14 +192,14 @@ export default function Header() {
                       {title}
                     </Link>
                   </li>
-                ) : title === "services" ? (
+                ) : title === "tools" ? (
                   <li key={url} className="relative z-50">
                     {/* Lead Generation menu with dropdown */}
                     <button
                       onClick={toggleDropdown}
                       className="flex items-center space-x-1 nav-link hover:text-blue-500"
                     >
-                      <span>Services</span>
+                      <span>Tools & Services</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -133,14 +221,56 @@ export default function Header() {
                       <div className="rounded-md absolute left-0 mt-5 border border-gray-300 bg-white shadow-md w-60 p-2 z-50 header-submenu">
                         <ul>
                           {
-                            submenu.map(({title, url}, ind)=>(
+                            mainMenus.map(({title, url, category, subLinks}, ind)=>(
                               <li key={ind}>
-                                <Link
-                                  href={url}
-                                  className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
-                                >
-                                  {title}
-                                </Link>
+                                {
+                                  category ? 
+                                  <button onClick={()=>showSubMenu(title, subLinks)} className="w-full relative header-submenu-item rounded-sm hover:bg-gray-100 p-2 flex justify-between cursor-pointer">
+                                      <span>{title}</span>
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        className={`w-4 h-4 transition-transform duration-200 ${
+                                          subMenus.title === title ? "transform rotate-0" : "-rotate-90"
+                                        }`}
+                                      >
+                                        <path
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          strokeWidth="2"
+                                          d="M19 9l-7 7-7-7"
+                                        />
+                                      </svg>
+                                      {
+                                        (subMenus.menus.length > 0 && subMenus.title === title) &&
+                                        <div className="rounded-md absolute -right-52 capitalize text-start mt-5 border border-gray-300 bg-white shadow-md w-60 p-2 z-50 header-submenu">
+                                          <ul>
+                                            {
+                                              subMenus.menus.map((link, ind)=>(
+                                                <li key={ind}>
+                                                  <Link
+                                                    href={link.url}
+                                                    className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                                  >
+                                                    {link.title}
+                                                  </Link>
+                                                </li>
+                                              ))
+                                            }
+                                          </ul>
+                                        </div>
+                                      }
+                                  </button>
+                                  :
+                                  <Link
+                                    href={url}
+                                    className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                  >
+                                    {title}
+                                  </Link>
+                                }
                               </li>
                             ))
                           }
@@ -233,7 +363,7 @@ export default function Header() {
                   {title}
                 </Link>
               </li>
-            ) : title === "services" ? (
+            ) : title === "tools" ? (
               <li key={url} className="border-bottom relative">
                 <button
                   onClick={toggleDropdown}
@@ -241,7 +371,7 @@ export default function Header() {
                   aria-haspopup="true"
                   className="font-normal flex items-center space-x-1 text-black cursor-pointer capitalize"
                 >
-                  <span>Lead Generation</span>
+                  <span>Tools & Services</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -263,14 +393,56 @@ export default function Header() {
                   <div className="bg-white shadow-lg rounded-md py-2 transition-all duration-300 w-full">
                     <ul>
                       {
-                        submenu.map(({title, url}, ind)=>(
+                        mainMenus.map(({title, url, category, subLinks}, ind)=>(
                           <li key={ind}>
-                            <Link
-                              href={url}
-                              className="capitalize block px-4 py-2 text-black hover:bg-gray-100 text-sm font-light"
-                            >
-                              {title}
-                            </Link>
+                            {
+                              category ? 
+                              <button onClick={()=>showSubMenu(title, subLinks)} className="w-full relative header-submenu-item rounded-sm hover:bg-gray-100 px-4 py-2 flex justify-between cursor-pointer">
+                                  <span>{title}</span>
+                                  <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                      className={`w-4 h-4 transition-transform duration-200 ${
+                                        subMenus.title === title ? "transform rotate-0" : "-rotate-90"
+                                      }`}
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M19 9l-7 7-7-7"
+                                      />
+                                    </svg>
+                                  {
+                                    (subMenus.menus.length > 0 && subMenus.title === title) &&
+                                    <div className="rounded-md absolute left-4 top-4 capitalize text-start mt-5 border border-gray-300 bg-white shadow-md w-60 p-2 z-50 header-submenu">
+                                      <ul>
+                                        {
+                                          subMenus.menus.map((link, ind)=>(
+                                            <li key={ind}>
+                                              <Link
+                                                href={link.url}
+                                                className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                              >
+                                                {link.title}
+                                              </Link>
+                                            </li>
+                                          ))
+                                        }
+                                      </ul>
+                                    </div>
+                                  }
+                              </button>
+                              :
+                              <Link
+                                href={url}
+                                className="capitalize block px-4 py-2 text-black hover:bg-gray-100 text-sm font-light"
+                              >
+                                {title}
+                              </Link>
+                            }
                           </li>
                         ))
                       }

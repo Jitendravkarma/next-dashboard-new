@@ -1,3 +1,17 @@
+export const LiveScrapingProps = {
+  title: (
+    <>
+    Live <span className="hero-title">Website</span> Scraping
+    </>
+  ),
+  description:
+    "Our Live Website Scraping tool fetches real-time data directly from live websites, including keywords, contact details, and Google Maps information (if available). It automates data collection for analysis and tailored applications. Whether you're a business, researcher, or marketer, our service ensures accurate, up-to-date insights to support your data-driven goals.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/livescrapingscreen.png",
+  rightImg: "/assets/img/slider-images/gscreen2.png",
+};
+
 // Define the properties as an object
 export const GooglesearchscraperProps = {
   title: (
@@ -6,11 +20,86 @@ export const GooglesearchscraperProps = {
     </>
   ),
   description:
-    "Our Google Search Scraper extracts data like keywords, contact details, and Google Maps results efficiently. With Python integration, it automates data collection for analytics and custom applications. Ideal for businesses, researchers, and marketers, it delivers accurate, reliable insights for diverse data-driven needs.",
+    "Our Google Search Scraper extracts data like keywords, contact details, and Google Maps results efficiently. It automates data collection for analytics and custom applications. Ideal for businesses, researchers, and marketers, it delivers accurate, reliable insights for diverse data-driven needs.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
-  leftImg: "/assets/img/gscreen.png",
-  rightImg: "/assets/img/gscreen2.png",
+  leftImg: "/assets/img/slider-images/gscreen.png",
+  rightImg: "/assets/img/slider-images/gscreen2.png",
+};
+
+// Define the properties as an object
+export const BingsearchscraperProps = {
+  title: (
+    <>
+    Bing <span className="hero-title">Search</span> Scraper
+    </>
+  ),
+  description:
+    "Our Bing Search Scraper efficiently extracts valuable data from Bing search results, including keywords, contact information, and even Google Maps links when available. it automates the data collection process for analytics, lead generation, and custom applications. Perfect for businesses, researchers, and marketers, it provides precise, dependable insights to power your data-driven strategies.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/bingscreen.png",
+  rightImg: "/assets/img/slider-images/gscreen2.png",
+};
+
+// Define the properties as an object
+export const DucksearchscraperProps = {
+  title: (
+    <>
+    DuckDuckGo <span className="hero-title">Search</span> Scraper
+    </>
+  ),
+  description:
+    "Our DuckDuckGo Search Scraper captures key data from DuckDuckGo search results, including keywords, contact details, and location-related links—while respecting user privacy-focused platforms. It simplifies the data collection process for use in analytics, lead generation, and customized solutions. Ideal for privacy-conscious businesses, researchers, and digital marketers seeking clean, reliable, and real-time insights.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/duckscreen.png",
+  rightImg: "/assets/img/slider-images/gscreen2.png",
+};
+
+// Define the properties as an object
+export const FacebookscraperProps = {
+  title: (
+    <>
+    Facebook Scraper
+    </>
+  ),
+  description:
+    "Our Facebook Scraper collects publicly available data like profile names, followers, likes, phone numbers, emails, and more. It’s perfect for marketers and researchers seeking quick, structured insights from Facebook pages and profiles.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/fbscreen.png",
+  rightImg: "/assets/img/slider-images/fbscreen2.png",
+};
+
+// Define the properties as an object
+export const YoutubescraperProps = {
+  title: (
+    <>
+    YouTube Scraper
+    </>
+  ),
+  description:
+    "Our YouTube Scraper collects public data like channel names, subscriber counts, video titles, views, likes, and descriptions. It's perfect for content research, competitor analysis, and tracking YouTube performance with ease.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/ytscreen.png",
+  rightImg: "/assets/img/slider-images/ytscreen2.png",
+};
+
+// Define the properties as an object
+export const YahoosearchscraperProps = {
+  title: (
+    <>
+    Yahoo <span className="hero-title">Search</span> Scraper
+    </>
+  ),
+  description:
+    "Our Yahoo Search Scraper is designed to pull essential data directly from Yahoo search results—including keywords, business contact information, and location-based links. It streamlines data extraction for analytics, marketing insights, and custom tools. Whether you're in business, research, or digital marketing, this scraper delivers trustworthy and timely data to support your strategic decisions.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/yahooscreen.png",
+  rightImg: "/assets/img/slider-images/gscreen2.png",
 };
 
 export const googlesearchscraperstatus = [
@@ -20,11 +109,80 @@ export const googlesearchscraperstatus = [
   { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
 ];
 
+export const facebookscraperstatus = [
+  { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-group-line"></i>, value: "20M+", label: "Total Followers" },
+  { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
+];
+
+export const youtubescraperstatus = [
+  { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-group-line"></i>, value: "20M+", label: "Total Subscribers" },
+  { icon: <i className="ri-video-line"></i>, value: "35M+", label: "Total Videos" },
+  { icon: <i className="ri-eye-line"></i>, value: "43M+", label: "Total Views" },
+];
+
+export const livescraperdataget = [
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'A brief description providing details about the place or service.', keywords: 'Description' },
+  { tooltips: 'The keyword or query term used for searching in Google Search.', keywords: 'Keywords' },
+  { tooltips: 'Get the all social media links for searched results', keywords: 'Social Links' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+];
+
+export const facebookscraperdataget = [
+  { tooltips: 'The name or title of a place or service.', keywords: 'Profile Name' },
+  { tooltips: 'Get the number of followers.', keywords: 'Followers' },
+  { tooltips: 'Get the number of post likes', keywords: 'Likes' },
+  { tooltips: 'Know the rating of Accounts', keywords: 'Ratings' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+];
+
+export const youtubescraperdataget = [
+  { tooltips: 'The name of the YouTube channel', keywords: 'Channel Name' },
+  { tooltips: 'The name of the YouTube profile name', keywords: 'Profile Name' },
+  { tooltips: 'The image of the YouTube Profile', keywords: 'Profile Image' },
+  { tooltips: 'Get the number of subscribers.', keywords: 'Subscribers' },
+  { tooltips: 'Get the number of total videos', keywords: 'Videos' },
+  { tooltips: 'Get the number of total views', keywords: 'Views' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+];
+
 export const googlesearchscraperdataget = [
   { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
   { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
   { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
   { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'A brief description providing details about the place or service.', keywords: 'Description' },
+  { tooltips: 'The keyword or query term used for searching in Google Search.', keywords: 'Keywords' },
+  { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+];
+
+export const bingsearchscraperdataget = [
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'A brief description providing details about the place or service.', keywords: 'Description' },
+  { tooltips: 'The keyword or query term used for searching in Google Search.', keywords: 'Keywords' },
+  { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+];
+
+export const yahoosearchscraperdataget = [
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'Get the all social media links for searched results.', keywords: 'Social Links' },
   { tooltips: 'A brief description providing details about the place or service.', keywords: 'Description' },
   { tooltips: 'The keyword or query term used for searching in Google Search.', keywords: 'Keywords' },
   { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
@@ -41,8 +199,8 @@ export const HowitworksGooglesearchscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
       sectionHeading: "Scrape By Query", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape By Query",
-      pretitle: "Google",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
       presubtitle: "Lead Generation",
     },
     {
@@ -52,8 +210,8 @@ export const HowitworksGooglesearchscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
       sectionHeading: "Initiate the Extraction", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape By Keyword",
-      pretitle: "Google",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
       presubtitle: "Lead Generation",
     },
     {
@@ -63,8 +221,8 @@ export const HowitworksGooglesearchscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
       sectionHeading: "Data Extraction", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape By URLs",
-      pretitle: "Google",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
       presubtitle: "Lead Generation",
     },
     {
@@ -74,27 +232,442 @@ export const HowitworksGooglesearchscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Review Results",
-      pretitle: "Google",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
       presubtitle: "Lead Generation",
     },
     {
       subheading: "Google Search Scraper (Download or Export Data)",
-      paragraph: "Finally, you have the option to download or export the data in your preferred format, ready for further use. Whether for research, lead generation, or contacting businesses, our Google search scraper and Google Maps search scraper make saving and accessing extracted data straightforward.",
-      description: "Finally, you have the option to download or export the data in your preferred format, ready for further use. Whether for research, lead generation, or contacting businesses, our Google search scraper and Google Maps search scraper make saving and accessing extracted data straightforward.",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Export Data",
-      pretitle: "Google",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
       presubtitle: "Lead Generation",
     },
   ],
 };
 
+export const HowitworksBingsearchscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Bing Search Scraper (Scrape By Keyword)",
+      paragraph: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search Keyword will guide our Bing Search Scraper to provide precise results by scraping Bing search results.",
+      description: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search Keyword will guide our Bing Search Scraper to provide precise results by scraping Bing search results.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
+      sectionHeading: "Scrape By Keyword", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Bing Search Scraper (Initiate the Extraction)",
+      paragraph: "Once you enter your query, simply click the search button to initiate the extraction process. Our tool will begin scraping Bing search results based on your input, leveraging advanced Bing search scraper APIs.",
+      description: "Once you enter your query, simply click the search button to initiate the extraction process. Our tool will begin scraping Bing search results based on your input, leveraging advanced Bing search scraper APIs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
+      sectionHeading: "Initiate the Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Bing Search Scraper (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive a neatly organized list of all the emails found. Our web scraping service delivers clear results, enabling you to quickly review and utilize the website data scraper output as needed.",
+      description: "Once the extraction is complete, you’ll receive a neatly organized list of all the emails found. Our web scraping service delivers clear results, enabling you to quickly review and utilize the website data scraper output as needed.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
+      sectionHeading: "Data Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Bing Search Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Bing search scraper tool allows you to quickly review, use, and analyze the data, making it valuable for a wide range of applications.",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Bing search scraper tool allows you to quickly review, use, and analyze the data, making it valuable for a wide range of applications.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Bing Search Scraper (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const HowitworksYahoosearchscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Yahoo Search Scraper (Scrape By Keywords)",
+      paragraph: "Start by typing the specific search term you're interested in. For example, you could search for 'schools in London contact details.' These search keywords will guide our Yahoo Search Scraper to deliver precise results by scraping Yahoo search results.",
+      description: "Start by typing the specific search term you're interested in. For example, you could search for 'schools in London contact details.' These search keywords will guide our Yahoo Search Scraper to deliver precise results by scraping Yahoo search results.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
+      sectionHeading: "Scrape By Keywords", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Yahoo Search Scraper (Initiate the Extraction)",
+      paragraph: "Once you enter your query, simply click the search button to begin the extraction process. Our tool will start scraping Yahoo search results based on your input, utilizing advanced Yahoo search scraper APIs.",
+      description: "Once you enter your query, simply click the search button to begin the extraction process. Our tool will start scraping Yahoo search results based on your input, utilizing advanced Yahoo search scraper APIs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
+      sectionHeading: "Initiate the Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Yahoo Search Scraper (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all the emails found. Our web scraping service delivers clear results, enabling you to quickly review and utilize the scraped data for your needs.",
+      description: "Once the extraction is complete, you’ll receive an organized list of all the emails found. Our web scraping service delivers clear results, enabling you to quickly review and utilize the scraped data for your needs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
+      sectionHeading: "Data Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Yahoo Search Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Yahoo search scraper tool allows you to quickly use and analyze the data, making it valuable for a variety of applications.",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Yahoo search scraper tool allows you to quickly use and analyze the data, making it valuable for a variety of applications.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Yahoo Search Scraper (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const HowitworksDucksearchscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "DuckDuckGo Search Scraper (Scrape By Query)",
+      paragraph: "Begin by entering the specific search term you’re interested in. For instance, you could search for 'schools in London contact details.' This query will direct our DuckDuckGo Search Scraper to deliver precise results by extracting relevant data from DuckDuckGo search results.",
+      description: "Begin by entering the specific search term you’re interested in. For instance, you could search for 'schools in London contact details.' This query will direct our DuckDuckGo Search Scraper to deliver precise results by extracting relevant data from DuckDuckGo search results.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
+      sectionHeading: "Scrape By Query", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "DuckDuckGo Search Scraper (Initiate the Extraction)",
+      paragraph: "After entering your query, click the search button to begin the extraction process. Our tool will efficiently scrape DuckDuckGo search results based on your input, utilizing sophisticated search scraper APIs to ensure precise and accurate data retrieval.",
+      description: "After entering your query, click the search button to begin the extraction process. Our tool will efficiently scrape DuckDuckGo search results based on your input, utilizing sophisticated search scraper APIs to ensure precise and accurate data retrieval.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
+      sectionHeading: "Initiate the Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "DuckDuckGo Search Scraper (Data Extraction)",
+      paragraph: "Upon completion of the extraction, you’ll receive a well-organized list of all the emails identified. Our web scraping service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
+      description: "Upon completion of the extraction, you’ll receive a well-organized list of all the emails identified. Our web scraping service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
+      sectionHeading: "Data Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "DuckDuckGo Search Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a comprehensive list of results, presented in a clear and user-friendly format. This DuckDuckGo search scraper tool enables you to quickly analyze and utilize the data, making it highly valuable for a wide range of applications.",
+      description: "Once the extraction is complete, you’ll receive a comprehensive list of results, presented in a clear and user-friendly format. This DuckDuckGo search scraper tool enables you to quickly analyze and utilize the data, making it highly valuable for a wide range of applications.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "DuckDuckGo Search Scraper (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const HowitworksFacebookscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Facebook Scraper (Scrape By Query)",
+      paragraph: "Begin by entering the specific search term you’re interested in. For example, you might search for 'schools contact number in London.' This query will direct our Facebook Scraper to retrieve precise results by extracting data from public Facebook profiles, including phone numbers, profile names, addresses, followers, and more.",
+      description: "Begin by entering the specific search term you’re interested in. For example, you might search for 'schools contact number in London.' This query will direct our Facebook Scraper to retrieve precise results by extracting data from public Facebook profiles, including phone numbers, profile names, addresses, followers, and more.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
+      sectionHeading: "Scrape By Query", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Facebook Scraper (Initiate the Extraction)",
+      paragraph: "Once you’ve entered your query, click the search button to initiate the extraction process. Our tool will begin collecting data from public Facebook profiles based on your input.",
+      description: "Once you’ve entered your query, click the search button to initiate the extraction process. Our tool will begin collecting data from public Facebook profiles based on your input.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
+      sectionHeading: "Initiate the Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Facebook Scraper (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all profiles found on Facebook. This service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
+      description: "Once the extraction is complete, you’ll receive an organized list of all profiles found on Facebook. This service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
+      sectionHeading: "Data Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Facebook Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results, presented in a clear and easy-to-read format. This tool allows you to quickly analyze and utilize the data, making it highly valuable for a variety of applications.",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results, presented in a clear and easy-to-read format. This tool allows you to quickly analyze and utilize the data, making it highly valuable for a variety of applications.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Facebook Scraper (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const HowitworksYoutubescraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "YouTube Scraper (Scrape By Query)",
+      paragraph: "Begin by entering the specific search term you're interested in. For example, you might search for 'schools YouTube details in London.' This query will guide our YouTube Scraper to retrieve precise results, including channel details such as subscribers, videos, views, and more.",
+      description: "Begin by entering the specific search term you're interested in. For example, you might search for 'schools YouTube details in London.' This query will guide our YouTube Scraper to retrieve precise results, including channel details such as subscribers, videos, views, and more.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
+      sectionHeading: "Scrape By Query", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "YouTube Scraper (Initiate the Extraction)",
+      paragraph: "Once you’ve entered your query, click the search button to initiate the extraction process. Our tool will begin collecting results based on your input or selected keywords.",
+      description: "Once you’ve entered your query, click the search button to initiate the extraction process. Our tool will begin collecting results based on your input or selected keywords.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
+      sectionHeading: "Initiate the Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "YouTube Scraper (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of YouTube channel details. Our tool delivers clear results, allowing you to efficiently review and utilize the data for your specific needs.",
+      description: "Once the extraction is complete, you’ll receive an organized list of YouTube channel details. Our tool delivers clear results, allowing you to efficiently review and utilize the data for your specific needs.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
+      sectionHeading: "Data Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "YouTube Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results of YouTube profiles. Review the information, which is presented in an easy-to-read format. This tool lets you quickly use and analyze the data, making it valuable for various applications",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results of YouTube profiles. Review the information, which is presented in an easy-to-read format. This tool lets you quickly use and analyze the data, making it valuable for various applications",
+      imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "YouTube Scraper (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Social Media",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const HowitworksLiveScraping = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Live Website Scraping (Scrape By Country Selection)",
+      paragraph: "Start scraping by simply selecting a country and clicking the Start button. Instantly begin collecting efficient, targeted data tailored to your selected region—quick, easy, and hassle-free!",
+      description: "Start scraping by simply selecting a country and clicking the Start button. Instantly begin collecting efficient, targeted data tailored to your selected region—quick, easy, and hassle-free!",
+      imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
+      sectionHeading: "Scrape By Country Name", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Live Website Scraping",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Live Website Scraping (Initiate the Extraction)",
+      paragraph: "Once you’ve select the country, simply click on the start button to start the extraction process. Our tool will begin web scraping and start data collection from live websites",
+      description: "Once you’ve select the country, simply click the start button to start the extraction process. Our tool will begin web scraping and start data collection from live websites",
+      imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
+      sectionHeading: "Initiate the Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Live Website Scraping",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Live Website Scraping (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of collected data from websites. Our Lice website scraping service provides clear results, allowing you to quickly review and utilize the searched records easily.",
+      description: "Once the extraction is complete, you’ll receive an organized list of collected data from websites. Our Lice website scraping service provides clear results, allowing you to quickly review and utilize the searched records easily.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
+      sectionHeading: "Data Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Live Website Scraping",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Live Website Scraping (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This tool lets you quickly use and analyze the data, making it valuable for various applications",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This tool lets you quickly use and analyze the data, making it valuable for various applications",
+      imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Live Website Scraping",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Live Website Scraping (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Live Website Scraping",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const LiveScraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "XjvB_8ytM58?si=SsPUdkdZ3SrB15cL",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+
+export const LiveDataVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "ml-Jwi1ktlY?si=M40qSyirGaHz7Fx_",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+
+export const DuckScraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "dERJQhBtSd0?si=Loh6icLPQdttUsfU",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+
+export const FacebookScraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "S9xClhXFAu0?si=NvpNRjnf63QZ4gur",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+
+export const YoutubeScraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "6S46UhmaSwg?si=U0RJGj_DL2ekJFCD",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+
 export const GooglesearchscraperVideo = {
   heading: "<span className='text-blue-500'>Watch a</span>Demo",
-  videoUrl: "https://www.youtube.com/embed/xJsktXJfZZ8",
+  videoUrl: "t_ziUplJMjc?si=NQ75yw6_Q6z7jPPE",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+
+export const BingsearchscraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "FzhB9wRwZlA?si=BHbQJ6if3r1aMsOM",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+
+export const YahoosearchscraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "w15iPuDbtBo?si=cQjcZkk8wgI6GjHx",
   buttonText: "Get Started",
   buttonLink: "/signup",
 };
@@ -112,8 +685,8 @@ export const GooglesmapscraperProps = {
     "Our Google Map Extractor extracts structured data like businesses, addresses, phone numbers, and reviews from Google Maps. Perfect for marketers and researchers, it streamlines geographic data collection, providing essential details for campaigns and analysis. A reliable tool for quick, accurate information from Google Maps.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
-  leftImg: "/assets/img/mscreen.png",
-  rightImg: "/assets/img/mscreen2.png",
+  leftImg: "/assets/img/slider-images/mscreen.png",
+  rightImg: "/assets/img/slider-images/mscreen2.png",
 };
 
 export const googlemapscraperstatus = [
@@ -150,8 +723,8 @@ export const HowitworksGooglesmapscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
       sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape By URL",
-      pretitle: "Map",
+      buttonText: "Try Now",
+      pretitle: "Map Search Engine",
       presubtitle: "Lead Generation",
     },
     {
@@ -161,8 +734,8 @@ export const HowitworksGooglesmapscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
       sectionHeading: "Extract Emails", // Dynamic section heading
       link: "/signup",
-      buttonText: "Extract Emails",
-      pretitle: "Map",
+      buttonText: "Try Now",
+      pretitle: "Map Search Engine",
       presubtitle: "Lead Generation",
     },
     {
@@ -172,8 +745,8 @@ export const HowitworksGooglesmapscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Review Results",
-      pretitle: "Map",
+      buttonText: "Try Now",
+      pretitle: "Map Search Engine",
       presubtitle: "Lead Generation",
     },
     {
@@ -183,19 +756,19 @@ export const HowitworksGooglesmapscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Analyze Results",
-      pretitle: "Map",
+      buttonText: "Try Now",
+      pretitle: "Map Search Engine",
       presubtitle: "Lead Generation",
     },
     {
       subheading: "Google Map Scraper (Download or Export Data)",
-      paragraph: "You can download or export the extracted emails in your preferred format, whether for marketing, outreach, or research. Our free web scraper and website data scraper options make exporting data efficient and convenient.",
-      description: "You can download or export the extracted emails in your preferred format, whether for marketing, outreach, or research. Our free web scraper and website data scraper options make exporting data efficient and convenient.",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Export Data",
-      pretitle: "Map",
+      buttonText: "Try Now",
+      pretitle: "Map Search Engine",
       presubtitle: "Lead Generation",
     },
   ],
@@ -203,7 +776,7 @@ export const HowitworksGooglesmapscraper = {
 
 export const GooglesmapscraperVideo = {
   heading: "<span className='text-blue-500'>Watch a</span>Demo",
-  videoUrl: "https://www.youtube.com/embed/BhI2KKoSj3Y",
+  videoUrl: "IHf_YM-Voqk?si=kjmj9UYR_qxD-EWx",
   buttonText: "Try Free Trial",
   buttonLink: "/signup",
 };
@@ -222,8 +795,8 @@ export const websitedatascraperProps = {
     "Our Website Data Scraper helps extract essential details like emails, phone numbers, titles, descriptions, and keywords from any website URL. Perfect for lead generation, research, and contact info collection, it’s fast and efficient. Supports Python and Chrome, ideal for free or advanced web scraping to boost productivity effortlessly.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
-  leftImg: "/assets/img/webscreen.png",
-  rightImg: "/assets/img/webscreen2.jpg",
+  leftImg: "/assets/img/slider-images/webscreen.png",
+  rightImg: "/assets/img/slider-images/webscreen2.jpg",
 };
 
 export const websitedatascraperstatus = [
@@ -253,8 +826,8 @@ export const Howitworkswebsitedatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Enter the Website URL", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by URL",
-      pretitle: "Website Data",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -264,8 +837,8 @@ export const Howitworkswebsitedatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Website",
-      pretitle: "Website Data",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -275,8 +848,8 @@ export const Howitworkswebsitedatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Extract Emails", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Email",
-      pretitle: "Website Data",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -286,8 +859,8 @@ export const Howitworkswebsitedatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Review Results",
-      pretitle: "Website Data",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -297,19 +870,19 @@ export const Howitworkswebsitedatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Analyze Results",
-      pretitle: "Website Data",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     },
     {
       subheading: "Website Data Scraper (Download or Export Data)",
-      paragraph: "You can download or export the extracted emails in your preferred format, whether for marketing, outreach, or research. Our free web scraper and website data scraper options make exporting data efficient and convenient.",
-      description: "You can download or export the extracted emails in your preferred format, whether for marketing, outreach, or research. Our free web scraper and website data scraper options make exporting data efficient and convenient.",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Export Data",
-      pretitle: "Website Data",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     },
   ],
@@ -317,7 +890,7 @@ export const Howitworkswebsitedatascraper = {
 
 export const websitedatascraperVideo = {
   heading: "<span className='text-blue-500'>Watch a</span>Demo",
-  videoUrl: "https://www.youtube.com/embed/_sXWe4U2Cz8?si=6KyklE6r_9923k0j",
+  videoUrl: "FvonHQhouGI?si=VG8jDgiwpcqLsYsI",
   buttonText: "Try Free Trial",
   buttonLink: "/signup",
 };
@@ -335,8 +908,8 @@ export const documentdatascraperProps = {
     "Our Document Data Scraper extracts contact details like emails and phone numbers from .txt, .pdf, .html, and .json files. It supports Python and Chrome, making it perfect for lead generation, research, or outreach. Simplify data extraction with our reliable, efficient, and versatile web scraping tool.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
-  leftImg: "/assets/img/docscreen.png",
-  rightImg: "/assets/img/docscreen2.jpg",
+  leftImg: "/assets/img/slider-images/docscreen.png",
+  rightImg: "/assets/img/slider-images/docscreen2.jpg",
 };
 
 export const documentdatascraperstatus = [
@@ -362,8 +935,8 @@ export const Howitworksdocumentdatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Upload Your Document", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Document",
-      pretitle: "Document Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -373,8 +946,8 @@ export const Howitworksdocumentdatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Document",
-      pretitle: "Document Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -384,8 +957,8 @@ export const Howitworksdocumentdatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Extract Contact Information", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Document",
-      pretitle: "Document Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -395,8 +968,8 @@ export const Howitworksdocumentdatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Review Results",
-      pretitle: "Document Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -406,19 +979,19 @@ export const Howitworksdocumentdatascraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Analyze Results",
-      pretitle: "Document Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
       subheading: "Document Data Scraper (Download or Export Data)",
-      paragraph: "Finally, download or export the extracted data in a format that suits your needs. This website data scraper software is perfect for further processing, marketing, or outreach, saving you time and effort.",
-      description: "Finally, download or export the extracted data in a format that suits your needs. This website data scraper software is perfect for further processing, marketing, or outreach, saving you time and effort.",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Export Data",
-      pretitle: "Document Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
   ],
@@ -426,7 +999,7 @@ export const Howitworksdocumentdatascraper = {
 
 export const documentdatascraperVideo = {
   heading: "<span className='text-blue-500'>Watch a</span>Demo",
-  videoUrl: "https://www.youtube.com/embed/NfOetsKFX_E?si=mt8J2KTxUWdkP6xL",
+  videoUrl: "1TrNt8Szv7Y?si=CxoPG9wLYOoFYd3a",
   buttonText: "Try Free Trial",
   buttonLink: "/signup",
 };
@@ -446,8 +1019,8 @@ export const imageDataScraperProps = {
     "Our Image Data Scraper extracts images and embedded contact details like emails and phone numbers from websites. Supporting formats like .jpg, .png, and .webp, it’s a hassle-free solution for professionals seeking fast and efficient image scraping for contact information and essential data extraction.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
-  leftImg: "/assets/img/imgscreen.png",
-  rightImg: "/assets/img/imgscreen2.jpg",
+  leftImg: "/assets/img/slider-images/imgscreen.png",
+  rightImg: "/assets/img/slider-images/imgscreen2.jpg",
 };
 
 export const imageDataScraperstatus = [
@@ -473,8 +1046,8 @@ export const HowitworksimageDataScraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Upload Your Images", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Images",
-      pretitle: "Image Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -484,8 +1057,8 @@ export const HowitworksimageDataScraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Image",
-      pretitle: "Image Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -495,8 +1068,8 @@ export const HowitworksimageDataScraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Extract Specific Information", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Image",
-      pretitle: "Image Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -506,8 +1079,8 @@ export const HowitworksimageDataScraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Review Results",
-      pretitle: "Image Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -517,19 +1090,19 @@ export const HowitworksimageDataScraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Analyze Results",
-      pretitle: "Image Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
     {
       subheading: "Image Data Scraper (Download or Export Data)",
-      paragraph: "Finally, you can download or copy the extracted data for use in contact management, marketing, or other activities. Our web scraping tools ensure seamless data extraction and exporting, helping you make the most of this image scraper",
-      description: "Finally, you can download or copy the extracted data for use in contact management, marketing, or other activities. Our web scraping tools ensure seamless data extraction and exporting, helping you make the most of this image scraper",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
-      buttonText: "Try Export Data",
-      pretitle: "Image Data",
+      buttonText: "Try Now",
+      pretitle: "File Scraper",
       presubtitle: "Lead Generation",
     },
   ],
@@ -537,7 +1110,7 @@ export const HowitworksimageDataScraper = {
 
 export const imageDataScraperVideo = {
   heading: "<span className='text-blue-500'>Watch a</span>Demo",
-  videoUrl: "https://www.youtube.com/embed/k_zh66JW-oU?si=zPYJ4alln-oqK-lb",
+  videoUrl: "uGlkLHHHXSw?si=NOv7vA68g2DoocIG",
   buttonText: "Try Free Trial",
   buttonLink: "/signup",
 };
@@ -556,8 +1129,8 @@ export const businessdirectoryscraperProps = {
     "Our Business Directory Scraper efficiently extracts valuable contact details like emails and phone numbers from directories like Yellow Pages. Supporting various formats, it provides structured data extraction. Features include Yellow Pages email extractor and web scraper tools, offering free and flexible options for seamless data scraping and lead generation.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
-  leftImg: "/assets/img/dirscreen.png",
-  rightImg: "/assets/img/dirscreen2.jpg"
+  leftImg: "/assets/img/slider-images/dirscreen.png",
+  rightImg: "/assets/img/slider-images/dirscreen2.jpg"
 };
 
 export const businessdirectoryscraperstatus = [
@@ -582,8 +1155,8 @@ export const Howitworksbusinessdirectoryscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       sectionHeading: "Effortless Data Extraction", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by URL",
-      pretitle: "Business Directory",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -593,8 +1166,8 @@ export const Howitworksbusinessdirectoryscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       sectionHeading: "Targeted Contact Information", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by URL",
-      pretitle: "Business Directory",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -604,8 +1177,8 @@ export const Howitworksbusinessdirectoryscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       sectionHeading: "Flexible Data Handling", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by URL",
-      pretitle: "Business Directory",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     },
     {
@@ -615,8 +1188,8 @@ export const Howitworksbusinessdirectoryscraper = {
       imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       sectionHeading: "Intuitive and Accessible", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by URL",
-      pretitle: "Business Directory",
+      buttonText: "Try Now",
+      pretitle: "Web Scraper",
       presubtitle: "Lead Generation",
     }
   ],
@@ -624,7 +1197,7 @@ export const Howitworksbusinessdirectoryscraper = {
 
 export const businessdirectoryscraperVideo = {
   heading: "<span className='text-blue-500'>Watch a</span>Demo",
-  videoUrl: "https://www.youtube.com/embed/LW9_PAJhens?si=KrEhZ4skAo8tK5iN",
+  videoUrl: "6GR_rHwR-r0?si=Z2yMBc4z-mT6qwio",
   buttonText: "Try Free Trial",
   buttonLink: "/signup",
 };
@@ -642,8 +1215,8 @@ export const whoisdetadownloadProps = {
     "Our Whois Database Download service offers easy access to detailed Whois domain information, including ownership, IP data, and more. Download comprehensive Whois data in a convenient zip file format, ideal for Whois searches, domain lookups, and managing digital assets, including ICANN and IP queries.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
-  leftImg: "/assets/img/whoisscreen.png",
-  rightImg: "/assets/img/whoisscreen2.jpg",
+  leftImg: "/assets/img/slider-images/whoisscreen.png",
+  rightImg: "/assets/img/slider-images/whoisscreen2.jpg",
 };
 
 export const whoisdetadownloadstatus = [
@@ -725,7 +1298,7 @@ export const Howitworkswhoisdetadownload = {
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
       sectionHeading: "Select Year and Month", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Year",
+      buttonText: "Try Now",
       pretitle: "Whois Data Download",
       presubtitle: "Lead Generation",
     },
@@ -736,7 +1309,7 @@ export const Howitworkswhoisdetadownload = {
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
       sectionHeading: "Initiate the Download", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Year",
+      buttonText: "Try Now",
       pretitle: "Whois Data Download",
       presubtitle: "Lead Generation",
     },
@@ -747,7 +1320,7 @@ export const Howitworkswhoisdetadownload = {
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
       sectionHeading: "Download the Zip File", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Year",
+      buttonText: "Try Now",
       pretitle: "Whois Data Download",
       presubtitle: "Lead Generation",
     },
@@ -758,7 +1331,7 @@ export const Howitworkswhoisdetadownload = {
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
       sectionHeading: "Extract and Review", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Year",
+      buttonText: "Try Now",
       pretitle: "Whois Data Download",
       presubtitle: "Lead Generation",
     }
@@ -767,7 +1340,7 @@ export const Howitworkswhoisdetadownload = {
 
 export const whoisdetadownloadVideo = {
   heading: "<span className='text-blue-500'>Watch a</span>Demo",
-  videoUrl: "https://www.youtube.com/embed/iGRgQurIOPg?si=_FZxSenRrpUWK87c",
+  videoUrl: "4hmndvMq1rQ?si=yu4yTzlMWbMzObK3",
   buttonText: "Try Free Trial",
   buttonLink: "/signup",
 };
@@ -781,22 +1354,22 @@ export const whoisdetadownloadVideo = {
 export const websitedetacenterProps = {
   title: (
     <>
-    Website <span className="hero-title">Data</span> Center
+    Live <span className="hero-title">Website</span> Data
     </>
   ),
   description:
-    "The Website Data Center is a powerful tool for extracting website data efficiently. It provides detailed results, including URLs, titles, emails, and phone numbers, with support for Python scripts, Chrome extensions, and Excel exports. Ideal for research or LinkedIn scraping, its your all-in-one web scraping solution.",
+    "The Live Website Data is a powerful tool for extracting website data efficiently. It provides detailed results, including URLs, titles, emails, and phone numbers, Chrome extensions, and Excel exports. Ideal for research or LinkedIn scraping, its your all-in-one web scraping solution.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
-  leftImg: "/assets/img/websiteDataCenter.png",
-  rightImg: "/assets/img/webscreen2.jpg",
+  leftImg: "/assets/img/slider-images/websiteDataCenter.png",
+  rightImg: "/assets/img/slider-images/webscreen2.jpg",
 };
 
 export const websitedetacenterstatus = [
-
+  { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
   { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Email" },
   { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Phone" },
-  { icon: <i className="ri-phone-line"></i>, value: "43M+", label: "Total Website" },
+  { icon: <i className="ri-global-line"></i>, value: "43M+", label: "Total Website" },
 ];
 
 export const websitedetacenterdataget = [
@@ -814,47 +1387,47 @@ export const Howitworkswebsitedetacenter = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Website Data Center (Select Country)",
+      subheading: "Live Website Data (Select Country)",
       paragraph: "Start by selecting the country you want to focus your search on to ensure more targeted results. This step is essential for refining your search in our website data scraper, helping you get precise information from specific regions.",
       description: "Start by selecting the country you want to focus your search on to ensure more targeted results. This step is essential for refining your search in our website data scraper, helping you get precise information from specific regions.",
       imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
       sectionHeading: "Select Country", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Keywords",
-      pretitle: "Website deta",
+      buttonText: "Try Now",
+      pretitle: "Live Website data",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Website Data Center (Enter Your Query)",
-      paragraph: "After selecting the country, enter the keyword or phrase you want to search for in the Website Data Center's search bar. This web scraper and web scraping service enables efficient data retrieval based on your query, simplifying website scraping for exact matches.",
-      description: "After selecting the country, enter the keyword or phrase you want to search for in the Website Data Center's search bar. This web scraper and web scraping service enables efficient data retrieval based on your query, simplifying website scraping for exact matches.",
+      subheading: "Live Website Data (Enter Your Keywords)",
+      paragraph: "After selecting the country, enter the keyword or phrase you want to search for in the Live Website Data's search bar. This web scraper and web scraping service enables efficient data retrieval based on your Keywords, simplifying website scraping for exact matches.",
+      description: "After selecting the country, enter the keyword or phrase you want to search for in the Live Website Data's search bar. This web scraper and web scraping service enables efficient data retrieval based on your Keywords, simplifying website scraping for exact matches.",
       imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
-      sectionHeading: "Enter Your Query", // Dynamic section heading
+      sectionHeading: "Enter Your Keywords", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Keywords",
-      pretitle: "Website deta",
+      buttonText: "Try Now",
+      pretitle: "Live Website data",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Website Data Center (Automated Scanning)",
+      subheading: "Live Website Data (Automated Scanning)",
       paragraph: "The system then scans for relevant information, including website URLs, titles, descriptions, keywords, emails, and phone numbers related to your query. With data scraping tools and web scraper Chrome integration, this website data scraper software automates the entire process, making extracting data from websites seamless.",
       description: "The system then scans for relevant information, including website URLs, titles, descriptions, keywords, emails, and phone numbers related to your query. With data scraping tools and web scraper Chrome integration, this website data scraper software automates the entire process, making extracting data from websites seamless.",
       imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
       sectionHeading: "Automated Scanning", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Keywords",
-      pretitle: "Website deta",
+      buttonText: "Try Now",
+      pretitle: "Live Website data",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Website Data Center (Receive Detailed Results)",
+      subheading: "Live Website Data (Receive Detailed Results)",
       paragraph: "Once a match is found, the tool presents you with detailed information in an organized manner for easy review. This feature is perfect for scraping LinkedIn or other platforms and is compatible with website scraper Python setups and web scraping tools free options for further data processing.",
       description: "Once a match is found, the tool presents you with detailed information in an organized manner for easy review. This feature is perfect for scraping LinkedIn or other platforms and is compatible with website scraper Python setups and web scraping tools free options for further data processing.",
       imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
       sectionHeading: "Receive Detailed Results", // Dynamic section heading
       link: "/signup",
-      buttonText: "Scrape by Keywords",
-      pretitle: "Website deta",
+      buttonText: "Try Now",
+      pretitle: "Live Website data",
       presubtitle: "Lead Generation",
     }
   ],

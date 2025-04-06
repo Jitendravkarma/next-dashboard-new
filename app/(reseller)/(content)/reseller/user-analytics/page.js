@@ -8,6 +8,7 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
+import { resellerUsers } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
 	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
@@ -15,29 +16,30 @@ const UserAnalytics = () => {
 	const [ userId, setUserId ] = useState(false);
 	const [ startDate, setStartDate ] = useState("");
 	const [ data, setData ] = useState([]);
+	const [ isLoading, setIsLoading ] = useState(false);
 	const columns = [
-		{
-			field: 'actions',
-			headerName: 'Actions',
-			width: 200,
-			renderCell: (params) => {
-				const phone = params.row.phone;
-				const email = params.row.email;
-				return (
-					<ContactVia contact={{phone, email, customNum:false}}/>
-				);
-			},
-		},
+		// {
+		// 	field: 'actions',
+		// 	headerName: 'Actions',
+		// 	width: 200,
+		// 	renderCell: (params) => {
+		// 		const phone = params.row.phone;
+		// 		const email = params.row.email;
+		// 		return (
+		// 			<ContactVia contact={{phone, email, customNum:false}}/>
+		// 		);
+		// 	},
+		// },
 		{
 			field: 'user_id',
 			headerName: 'User Id',
-			width: 100,
+			width: 200,
 			editable: false,
 		},
 		{
 			headerName: "User Name",
 			field: "name",
-			width: 200,
+			width: 300,
 			renderCell: (params)=>
 				(<span className="capitalize">{params.value}</span>)
 			,
@@ -46,19 +48,19 @@ const UserAnalytics = () => {
 		{
 			headerName: "Email",
 			field: "email",
-			width: 200,
+			width: 300,
 			editable: false
 		},
-		{
-			headerName: "Phone",
-			field: "phone",
-			width: 170,
-			editable: false
-		},
+		// {
+		// 	headerName: "Phone",
+		// 	field: "phone",
+		// 	width: 170,
+		// 	editable: false
+		// },
 		{
 			headerName: "Access Code",
 			field: "access_code",
-			width: 200,
+			width: 300,
 			renderCell: (params) => {
 				const value = params.row.access_code;
 				return (
@@ -69,67 +71,67 @@ const UserAnalytics = () => {
 			},
 			editable: false
 		},
-		{
-			headerName: "Plan Date",
-			field: "plan_date",
-			width: 150,
-			renderCell: (params) => {
-				const value = params.value;
-				return value && (
-				  <span>
-					{value}
-				  </span>
-				)
-			},
-			editable: false
-		},
-		{
-			headerName: "Plan Expiry",
-			field: "validity",
-			width: 150,
-			renderCell: (params) => {
-				const value = params.value;
-				const id = params.row.id;
-				const editValidity = ()=>{
-					setValidity(true)
-					setUserId(id)
-					setStartDate(params.row.plan_date)
-				}
-				return value ? (
-				  <span>
-					{
-						params.row.expired ?
-						<span className="text-danger font-semibold" title="Plan expired!">{value}</span>
-						:
-						<span className="font-semibold">{value}</span>
-					}
-				  </span>
-				) : (
-					<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Set Plan Validity">
-						Set Validity
-					</button>
-				);
-			},
-			editable: false
-		},
-		{
-			field: 'block',
-			headerName: 'Plan Edit',
-			width: 100,
-			renderCell: (params) => {
-				const id = params.row.id;
-				const editValidity = ()=>{
-					setValidity(true)
-					setUserId(id)
-					setStartDate(params.row.plan_date)
-				}
-				return (
-					<div>
-						<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Edit Plan Validity"><i className="ri-pencil-fill"></i></button>
-					</div>
-				)
-			},
-		},
+		// {
+		// 	headerName: "Plan Date",
+		// 	field: "plan_date",
+		// 	width: 150,
+		// 	renderCell: (params) => {
+		// 		const value = params.value;
+		// 		return value && (
+		// 		  <span>
+		// 			{value}
+		// 		  </span>
+		// 		)
+		// 	},
+		// 	editable: false
+		// },
+		// {
+		// 	headerName: "Plan Expiry",
+		// 	field: "validity",
+		// 	width: 150,
+		// 	renderCell: (params) => {
+		// 		const value = params.value;
+		// 		const id = params.row.id;
+		// 		const editValidity = ()=>{
+		// 			setValidity(true)
+		// 			setUserId(id)
+		// 			setStartDate(params.row.plan_date)
+		// 		}
+		// 		return value ? (
+		// 		  <span>
+		// 			{
+		// 				params.row.expired ?
+		// 				<span className="text-danger font-semibold" title="Plan expired!">{value}</span>
+		// 				:
+		// 				<span className="font-semibold">{value}</span>
+		// 			}
+		// 		  </span>
+		// 		) : (
+		// 			<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Set Plan Validity">
+		// 				Set Validity
+		// 			</button>
+		// 		);
+		// 	},
+		// 	editable: false
+		// },
+		// {
+		// 	field: 'block',
+		// 	headerName: 'Plan Edit',
+		// 	width: 100,
+		// 	renderCell: (params) => {
+		// 		const id = params.row.id;
+		// 		const editValidity = ()=>{
+		// 			setValidity(true)
+		// 			setUserId(id)
+		// 			setStartDate(params.row.plan_date)
+		// 		}
+		// 		return (
+		// 			<div>
+		// 				<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Edit Plan Validity"><i className="ri-pencil-fill"></i></button>
+		// 			</div>
+		// 		)
+		// 	},
+		// },
 	];
 	
 	// const localData = [
@@ -196,7 +198,7 @@ const UserAnalytics = () => {
 	]
 
 	const [ numOfData, setNumOfData] = useState([
-		{ id: 1, icon: users, class: "Total Sales", title: "total", text: 0, color: "primary/10", color1: "success" },
+		{ id: 1, icon: users, class: "Total Customers", title: "total", text: 0, color: "primary/10", color1: "success" },
 		{ id: 2, icon: clients, class: "Active Plans", title: "clients", text: 0, color: "primary/10", color1: "success" },
 		{ id: 3, icon: renewal, class: "Expired Plans", title: "renewal", text: 0, color: "primary/10", color1: "success" }
 	])
@@ -233,6 +235,47 @@ const UserAnalytics = () => {
 	// 		JSON.parse(localStorage.getItem("customers"));
 	// 	}
 	// },[data.length])
+
+	useEffect(()=>{
+		if(data.length){
+			const records = [{ title: "total", count: data.length}, { title: "clients", count: data.filter(user=>user.access_code).length}, { title: "renewal", count: 0}]
+			const new_data = numOfData.map(rec=>{
+				const find = records.find(rec2=> rec.title === rec2.title);
+				return {
+					...rec,
+					text: rec.title === find.title ? find.count : rec.text
+				}
+			})
+			setNumOfData(new_data)
+		}
+	}, [data.length])
+
+	useEffect(()=>{
+		const fetchUsers = async ()=>{
+			try {
+				setIsLoading(true)
+				const users = await resellerUsers()
+				const user_data = users.data.data
+				if(user_data.length){
+					const convert_data = user_data.map(({id, email, name, purchase_code, verified})=>{
+						return {
+							user_id: id,
+							name,
+							email,
+							access_code: purchase_code,
+							verified
+						}
+					})
+					setData(convert_data)
+				}
+			} catch (error) {
+				console.log(error)
+			} finally {
+				setIsLoading(false)
+			}
+		} 
+		fetchUsers()
+	}, [])
 
 	return (
 		<div>
@@ -277,8 +320,14 @@ const UserAnalytics = () => {
 				<div className="col-span-12">
 					<div className="box orders-table">
 						<div className="box-header">
-							<div className="sm:flex justify-between">
+							<div className="flex gap-2 items-center">
 								<h5 className="box-title my-auto">User Records</h5>
+								{
+									isLoading &&
+									<div className="ti-spinner w-4 h-4 text-primary" role="status" aria-label="loading">
+										<span className="sr-only">Loading...</span>
+									</div>
+								}
 							</div>
 						</div>
 						{

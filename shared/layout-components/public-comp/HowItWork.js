@@ -40,7 +40,7 @@ const HowItWork = ({ scraperData }) => {
                             {howitworkgmps.subheading}
                           </h3>
                           {/* Assuming dynamic text for these spans */}
-                          <span className="text-xs h-5 px-2 py-1 rounded-full bg-slate-100 leading-[18px] mr-2">
+                          <span className="text-xs h-5 px-2 py-1 rounded-full bg-slate-100 leading-[18px] mr-2 capitalize">
                             {howitworkgmps.pretitle}
                           </span>
                           <span className="text-xs h-5  px-2 py-1 rounded-full bg-slate-100 leading-[18px]">
@@ -83,7 +83,7 @@ const HowItWork = ({ scraperData }) => {
                     </p>
                     <Link
                       href={howitworkgmps.link} // Dynamic link
-                      className="text-xs lg:text-base font-medium bg-blue-500 hover:bg-blue-400 text-white rounded-md py-4 lg:px-24 px-12 mb-3"
+                      className="text-xs lg:text-base font-medium bg-blue-500 hover:bg-blue-600 text-white rounded-md py-4 lg:px-24 px-12 mb-3"
                     >
                       {howitworkgmps.buttonText} {/* Dynamic button text */}
                     </Link>
