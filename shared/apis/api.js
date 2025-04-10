@@ -110,6 +110,16 @@ export const resellerUsers = async () => {
   }
 };
 
+export const resellerLicences = async () => {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.get(`/restricted/getreseller_purchasecode`);
+    return response; // Assuming the API returns the user data and a token
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const forgetPhaseFirst = async (userData) => {
   try {
     const response = await api.post('/forget', userData);

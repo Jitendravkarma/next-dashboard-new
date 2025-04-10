@@ -25,14 +25,8 @@ export const validateEmail = (email) => {
 };
 
 export const validatePassword = (password) => {
-  const passwordVal = /^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/
-  if (!password) {
-    return "Password is required";
-  }
-  else if (password.length < 6 || password.length > 15) {
-    return "Password must be between 6 and 15 characters";
-  } else if (!passwordVal.test(password)) {
-    return "Password should be 8+ characters, including a letter and a number";
+  if (password.length < 8 || password.length > 50) {
+    return "Password must be between 8 and 50 characters";
   }
   return false;
 };

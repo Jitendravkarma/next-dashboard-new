@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { signUp } from "@/shared/apis/api";
 import { useUserContext } from "@/shared/userContext/userContext";
 import Link from "next/link";
@@ -12,6 +12,7 @@ const SignUpForm = () => {
 	const [ onSuccess, setOnSuccess ] = useState(false)
 	const [ loading, setLoading ] = useState(false)
 	const [ formData, setFormData ] = useState({name:"", email: "", password: "", confirmPassword: "", rememberMe: false})
+	const [ errors, setErrors ] = useState({name:"", email: "", password: "", confirmPassword: "", rememberMe: false})
 	const [ togglePass, setTogglePass ] = useState({ password: false, confirmPassword: false})
 
 	const handleChange = (e)=>{
@@ -25,6 +26,20 @@ const SignUpForm = () => {
 		}
 	}
 
+    const handleEventBlur = (e)=>{
+        const name = e.target.name
+        const value = e.target.value
+        if(value && value.length < 8 || value.length > 50){
+            setErrors({...errors, [name]: `Password length must be between 8 and 50 characters!`})
+        }
+        else if(value && formData.password && formData.confirmPassword && formData.password !== formData.confirmPassword){
+            setErrors({...errors, confirmPassword: `Passwords do not match!`})
+        }
+        else {
+            setErrors({...errors, password: "", confirmPassword: ""})
+        }
+    }
+
 	const togglePassword = (name)=>{
 		setTogglePass({...togglePass, [name]: !togglePass[name]})
 	}
@@ -32,26 +47,35 @@ const SignUpForm = () => {
 	const handleSubmit = async (e)=>{
 		e.preventDefault()
 		if(formData.name && formData.email && formData.password && formData.confirmPassword){
-			if(formData.rememberMe){
-				setLoading(true)
-				try {
-					await signUp(formData)
-					setOnSuccess(true)
-				} catch (error) {
-					const err = error.response.data.errors.email;
-					openSnackBar();
-					if(err === "email is allready registered"){
-						handleSnackMessage("email is already registered.", "white", "text-danger")
-						refElement.current.focus()
-					}
-				} finally {
-					setLoading(false)
-				}
-			}
-			else {
-				openSnackBar();
-            	handleSnackMessage("Accept the privacy policy!", "white", "text-danger")
-			}
+			if(formData.password !== formData.confirmPassword){
+                setErrors({...errors, confirmPassword: `Passwords do not match!`})
+            }
+            else {
+                if(formData.rememberMe){
+                    setLoading(true)
+                    try {
+                        await signUp(formData)
+                        setOnSuccess(true)
+                    } catch (error) {
+                        const err = error.response.data.errors.email;
+                        const lenErr = error.response.data.errors.password;
+                        openSnackBar();
+                        if(err === "email is allready registered"){
+                            handleSnackMessage("email is already registered.", "white", "text-danger")
+                            refElement.current.focus()
+                        }
+                        if(lenErr){
+                            handleSnackMessage("Password length must be between 8 and 50 characters!", "white", "text-danger")
+                        }
+                    } finally {
+                        setLoading(false)
+                    }
+                }
+                else {
+                    openSnackBar();
+                    handleSnackMessage("Accept the privacy policy!", "white", "text-danger")
+                }
+            }
 		}
 	}
   return (
@@ -126,12 +150,12 @@ const SignUpForm = () => {
                                         <input type="email" ref={refElement} name="email" onChange={handleChange} placeholder="Enter your email" value={formData.email}
                                             className="py-2 px-3 block w-full border-gray-200 rounded-sm text-sm focus:border-primary focus:ring-primary dark:bg-bgdark dark:border-white/10 dark:text-white/70"
                                             required />
-                                    </div>
+                                    </div>                                
                                 </div>
                                 <div>
                                     <label htmlFor="password" className="block text-sm mb-2 dark:text-white">Password</label>
                                     <div className="relative">
-                                        <input type={togglePass.password ? "text" : "password"} id="password" name="password" onChange={handleChange} placeholder="Enter password" value={formData.password}
+                                        <input type={togglePass.password ? "text" : "password"} id="password" name="password" onBlur={handleEventBlur} onChange={handleChange} placeholder="Enter password" value={formData.password}
                                             className="py-2 px-3 block w-full border-gray-200 rounded-sm text-sm focus:border-primary focus:ring-primary dark:bg-bgdark dark:border-white/10 dark:text-white/70"
                                             required />
                                         <button type="button" className="absolute top-0 right-0 py-2 px-2 rounded-e-md dark:focus:outline-none dark:focus:ring-0 dark:shadow-none dark:focus:ring-transparent" onClick={()=>togglePassword("password")}>
@@ -143,12 +167,16 @@ const SignUpForm = () => {
                                             }
                                         </button>
                                     </div>
+                                    {
+                                        errors.password &&
+                                        <p className="text-red-500 text-xs mt-1">{errors.password}</p>
+                                    }
                                 </div>
                                 <div>
                                     <label htmlFor="confirm-password" className="block text-sm mb-2 dark:text-white">Confirm
                                         Password</label>
                                     <div className="relative">
-                                        <input type={togglePass.confirmPassword ? "text" : "password"} id="confirm-password" name="confirmPassword" onChange={handleChange} placeholder="Enter confirm password" value={formData.confirmPassword}
+                                        <input type={togglePass.confirmPassword ? "text" : "password"} id="confirm-password" onBlur={handleEventBlur} name="confirmPassword" onChange={handleChange} placeholder="Enter confirm password" value={formData.confirmPassword}
                                             className="py-2 px-3 block w-full border-gray-200 rounded-sm text-sm focus:border-primary focus:ring-primary dark:bg-bgdark dark:border-white/10 dark:text-white/70"
                                             required />
                                         <button type="button" className="absolute top-0 right-0 py-2 px-2 rounded-e-md dark:focus:outline-none dark:focus:ring-0 dark:shadow-none dark:focus:ring-transparent" onClick={()=>togglePassword("confirmPassword")}>
@@ -160,6 +188,10 @@ const SignUpForm = () => {
                                             }
                                         </button>
                                     </div>
+                                    {
+                                        errors.confirmPassword &&
+                                        <p className="text-red-500 text-xs mt-1">{errors.confirmPassword}</p>
+                                    }
                                 </div>
                                 <div className="flex gap-2 items-center">
                                     <div className="flex">
@@ -173,8 +205,10 @@ const SignUpForm = () => {
                                     </div>
                                 </div>
 
-                                <button type="submit"
-                                    className={`py-2 px-3 inline-flex justify-center items-center gap-2 rounded-sm border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-0 focus:ring-primary focus:ring-offset-0 transition-all text-sm dark:focus:ring-offset-white/10 ${loading ? "opacity-[0.6]" : ""}`}>
+                                <button 
+                                    disabled={errors.password || errors.confirmPassword}
+                                    type="submit"
+                                    className={`py-2 px-3 inline-flex justify-center items-center gap-2 rounded-sm border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-0 focus:ring-primary focus:ring-offset-0 transition-all text-sm dark:focus:ring-offset-white/10 disabled:opacity-50 ${loading ? "opacity-[0.6]" : ""}`}>
                                     { loading ? <span className="animate-pulse">Please wait...</span> : "Sign up"}
                                 </button>
 

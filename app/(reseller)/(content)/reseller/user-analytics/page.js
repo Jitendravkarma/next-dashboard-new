@@ -284,7 +284,7 @@ const UserAnalytics = () => {
 				<Snackbar content={snackMessage} isOpen={openSnack}/>
 			}
 			<Seo title='User Analytics' />
-			<PageHeader currentpage="User Analytics" img="/assets/img/users/profile.png" activepage="Home" mainpage="User Analytics" />
+			<PageHeader currentpage="User Analytics" img="/assets/img/users/profile.png" activepage="Reseller" mainpage="User Analytics" />
 			<div className="grid grid-cols-12 gap-x-5">
 				{numOfData.map((idx) => (
 					<div className="col-span-12 md:col-span-6 xl:col-span-4" key={Math.random()}>

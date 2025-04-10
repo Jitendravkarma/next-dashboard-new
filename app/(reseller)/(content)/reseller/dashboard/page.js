@@ -1,8 +1,7 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
-import Link from "next/link";
 import { SalesValue } from "@/shared/data/charts/chartjsdata";
 import UpgradePlan from "@/shared/layout-components/dashboard/UpgradePlan";
 import { SessionOverview } from "@/shared/data/dashboard/analyticdata";

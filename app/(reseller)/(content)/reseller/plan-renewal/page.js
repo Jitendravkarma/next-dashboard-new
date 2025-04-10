@@ -4,7 +4,7 @@ import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import { UpgradePlanPopup } from "@/shared/layout-components/dashboard/AlertBox";
 import { useUserContext } from "@/shared/userContext/userContext";
-import { generateLicence } from "@/shared/apis/api";
+import { generateLicence, resellerLicences } from "@/shared/apis/api";
 
 const PlanRenewal = () => {
     const { user } = useUserContext()
@@ -57,16 +57,6 @@ const PlanRenewal = () => {
 	const [ isGenerating, setIsGenerating ] = useState(false)
 	const [ licences, setLicences ] = useState([])
 
-	const updateNumOfData = useCallback((dataCount)=>{
-		const newData = numOfData.map(obj=>{
-			const find = dataCount.find(dt=>dt.title === obj.title)
-			if(find){
-				return {...obj, text: find.title === obj.title ? find.num : 0}
-			}
-		})
-		// setNumOfData(newData)
-	}, [])
-
     const copyLicenceCode = (txt)=>{
         const textArea = document.createElement('textarea');
         textArea.value = txt;
@@ -77,22 +67,38 @@ const PlanRenewal = () => {
         alert('License code copied to clipboard!');
     }
 
+	const fetchLicenses = async ()=>{
+		try {
+			const licences = await resellerLicences()
+			const allLicence = licences.data.data
+			const converData = allLicence.map(({asigned_user_email, asigned_user_id, purchase_code, created_at})=>{
+				const date = new Date(created_at);
+				const day = String(date.getDate()).padStart(2, '0');  // Add leading zero if needed
+				const month = String(date.getMonth() + 1).padStart(2, '0');  // Months are 0-indexed
+				const year = String(date.getFullYear()).slice(-2);
+				return {
+					licence_code: purchase_code, 
+					allocated: asigned_user_email ? asigned_user_email : false, 
+					email: asigned_user_email, 
+					created_date: `${day}-${month}-${year}`,
+					available: asigned_user_email ? false : true
+				}
+			})
+			setLicences(converData)
+		} catch (error) {
+			console.log(error)
+		} finally {
+			// setIsLoading(false)
+		}
+	} 
+
 	const generateLicenceCode = async ()=>{
 		try {
 			setIsGenerating(true)
-			const collectLicence = []
 			const generateCode = await generateLicence()
 			const access_code = generateCode.data.data
 			if(access_code){
-				collectLicence.push({licence_code: access_code, allocated: false, email: user.email, available: true})
-				const getLicences = JSON.parse(localStorage.getItem("licences"));
-				if(getLicences && getLicences?.length){
-					collectLicence.push(...getLicences)
-				}
-				else {
-					localStorage.setItem("licences", JSON.stringify(collectLicence))
-				}
-				localStorage.setItem("licences", JSON.stringify(collectLicence))
+				fetchLicenses()
 			}
 		} catch (error) {
 			console.log(error)
@@ -102,15 +108,14 @@ const PlanRenewal = () => {
 	}
 
 	useEffect(()=>{
-		const getLicences = JSON.parse(localStorage.getItem("licences")) || [];
-		setLicences(getLicences)
 		setNumOfData([
 			{ id: 1, icon: calender, class: "Plan Activate", title: "validity", text: dashboard_data.plan_date, color: "primary/10", color1: "success" },
 			{ id: 2, icon: status, class: "Plan Status", title: "status", text: dashboard_data.expired ? "Inactive" : "Active", color: "primary/10", color1: "success" },
 			{ id: 3, icon: expiry, class: "Plan Expiry", title: "expiry", text: dashboard_data.validity, color: "primary/10", color1: "success" },
 			{ id: 4, icon: planIcon, class: "Plan Type", title: "type", text: dashboard_data.role, color: "primary/10", color1: "success" },
 		])
-	},[isGenerating])
+		fetchLicenses()
+	}, [])
 
 	return (
 		<div>
@@ -181,8 +186,8 @@ const PlanRenewal = () => {
 											<th scope="col" className="!p-[0.65rem]">Activation Year</th>
 											<th scope="col" className="!p-[0.65rem]">Plan Validity</th>
 											{/* <th scope="col" className="!p-[0.65rem]">Purchase Date</th> */}
-											<th scope="col" className="!p-[0.65rem]">Total Licence</th>
-											<th scope="col" className="!p-[0.65rem]">Remaining Licence</th>
+											<th scope="col" className="!p-[0.65rem]">Licence Limit</th>
+											<th scope="col" className="!p-[0.65rem]">Available Licence</th>
 											<th scope="col" className="!p-[0.65rem]">Sold Licence</th>
 											<th scope="col" className="!p-[0.65rem]">Plan Type</th>
 											<th scope="col" className="!p-[0.65rem]">Plan Status</th>
@@ -211,10 +216,10 @@ const PlanRenewal = () => {
 												100
 											</td>
 											<td className="leading-none !text-gray-800 dark:!text-white !p-[0.65rem] capitalize font-semibold">
-												100
+												{licences.filter(item=>!item.email).length}
 											</td>
 											<td className="leading-none !text-gray-800 dark:!text-white !p-[0.65rem] capitalize">
-												0
+												{licences.filter(item=>item.email).length}
 											</td>
 											<td className="leading-none !text-gray-800 dark:!text-white !p-[0.65rem] capitalize">
 												<span className={`badge leading-none 
@@ -263,7 +268,7 @@ const PlanRenewal = () => {
 									<div className="flex gap-2 items-center">
 										<h3 className="">Total Licences: <b>{licences.length}</b></h3>
 										<span className="font-bold">|</span>
-										<h3 className="">Available Licences: <b>{licences.length}</b></h3>
+										<h3 className="">Available Licences: <b>{licences.filter(lic=>!lic.email).length}</b></h3>
 									</div>
 								</div>
 
@@ -272,6 +277,7 @@ const PlanRenewal = () => {
 									<table className="ti-custom-table ti-custom-table-head">
 										<thead>
 											<tr>
+												<th scope="col" className="!p-[0.65rem]">Generated At</th>
 												<th scope="col" className="text-center !p-[0.65rem]">Licence Code</th>
 												<th scope="col" className="!p-[0.65rem]">Allocated To</th>
 												<th scope="col" className="!p-[0.65rem]">Licence Availability</th>
@@ -281,16 +287,19 @@ const PlanRenewal = () => {
 											{
 												licences.map((dt, ind)=>(
 												<tr key={ind}>
+													<td className="!p-[0.65rem] text-sm">
+														Date: {dt.created_date}
+													</td>
 													<td className="leading-none !text-gray-800 dark:!text-white !p-[0.65rem]">
-														<span className={`cursor-pointer group bg-success/10 text-success badge leading-none rounded-sm`} onClick={()=>copyLicenceCode(dt.licence_code)} title="Copy licence code">
+														<span className={`cursor-pointer group ${dt.email ? "bg-danger/10 text-danger" : "bg-success/10 text-success"} badge leading-none rounded-sm`} onClick={()=>copyLicenceCode(dt.licence_code)} title="Copy licence code">
 															{dt.licence_code}
 															<span> <i className="ri-file-copy-line"></i></span>
 														</span>
 													</td>
-													<td className="leading-none !text-gray-800 dark:!text-white !p-[0.65rem]">
-														{dt.allocated ? "Allocated" : "Not Allocated"}
-													</td>
 													<td className="!p-[0.65rem] text-sm">
+														{dt.allocated ? dt.allocated : "Not Allocated"}
+													</td>
+													<td className={`!p-[0.65rem] text-sm ${!dt.available && "text-danger"}`}>
 														{dt.available ? "Available" : "Not Available"}
 													</td>
 												</tr>

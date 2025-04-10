@@ -21,20 +21,20 @@ export const MENUITEMS = [
 
 	{ path: "/", icon: Dashboardsvg, title: "Home", type: "link", active: false, selected: false },
 	{ path: "#started", icon: Started, title: "Getting Started", type: "link", active: false, selected: false, title: "Getting Started" },
-	{ path: "#features", icon: Features, title: "Features", type: "link", active: false, selected: false, title: "Features" },
-	{ path: "#logs", icon: Logs, title: "Change logs", type: "link", active: false, selected: false, title: "Change Logs" },
-	{ path: "#services", icon: Service, title: "Services", type: "link", active: false, selected: false, title: "Services" },
-
 	{
-		icon: Setup, title: "Setup", type: "sub", active: false, children: [
+		icon: Setup, title: "Application Setup", type: "sub", active: false, children: [
 
 			{ path: "#installation", type: "link", active: false, selected: false, title: "Installation" },
 			{ path: "#prerequisites", type: "link", active: false, selected: false, title: "Prerequisites" },
 			{ path: "#start-app", type: "link", active: false, selected: false, title: "Start Application" },
-			{ path: "#quick-start", type: "link", active: false, selected: false, title: "Quick Start" },
+			{ path: "#quick-start", type: "link", active: false, selected: false, title: <span>⚡Quick Start</span> },
 			{ path: "#purchase-code", type: "link", active: false, selected: false, title: "Purchase Code" },
 		],
 	},
+	{ path: "#features", icon: Features, title: "Features", type: "link", active: false, selected: false, title: "Features" },
+	{ path: "#services", icon: Service, title: "Services", type: "link", active: false, selected: false, title: "Services" },
+	{ path: "#logs", icon: Logs, title: "Change logs", type: "link", active: false, selected: false, title: "Change Logs" },
+
 
 	{ path: "#support", icon: Support, title: "Thanks & Support", type: "link", active: false, selected: false }
 ];

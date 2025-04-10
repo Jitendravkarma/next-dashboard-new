@@ -888,7 +888,7 @@ const Profile = () => {
             openSnack &&
             <Snackbar content={snackMessage} isOpen={openSnack}/>
         }
-        <PageHeader currentpage="Profile" activepage="Dashboard" img="/assets/img/users/profile.png" mainpage="Profile" />
+        <PageHeader currentpage="Profile" activepage="Reseller" img="/assets/img/users/profile.png" mainpage="Profile" />
         <div className="grid grid-cols-12 gap-x-6">
           {/* <div className="col-span-12 xl:col-span-3">
             <div className="box">
