@@ -4,6 +4,7 @@ import { seo_pricing } from "@/shared/data/seo-content/content";
 import PriceCards from "@/shared/layout-components/public-comp/PriceCards";
 import PriceTable from "@/shared/layout-components/public-comp/PriceTable";
 import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+import Link from "next/link";
 
 export const metadata = seo_pricing
 
@@ -18,6 +19,11 @@ const PricingPage = () => {
       </header>
       <div className="bg-white">
         <PriceCards/>
+        <div className="max-w-7xl mx-auto px-4 py-16 lg:py-18 sm:px-6 lg:px-8">
+          <Link href={"https://codecanyon.net/item/google-map-scraper-pro/25283251"} target="_blank" title="Buy Now">
+            <img src="/assets/img/pricebanner.png" className="rounded-md shadow-md" />
+          </Link>
+        </div>
         <HorizontalAds/>
         <PriceTable/>
       </div>

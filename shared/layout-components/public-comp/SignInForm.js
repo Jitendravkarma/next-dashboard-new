@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { login, setAuthToken } from "@/shared/apis/api";
+import { login, setAuthToken, verificationLink } from "@/shared/apis/api";
 import { useUserContext } from "@/shared/userContext/userContext";
 import Link from 'next/link';
 import Snackbar from '../dashboard/SnackBar';
@@ -8,6 +8,8 @@ import Snackbar from '../dashboard/SnackBar';
 const SignInForm = () => {
     const { handleSignIn, handleSignOut, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
     const [ loading, setLoading ] = useState(false)
+    const [ isSending, setIsSending ] = useState(false)
+    const [ isError, setIsError ] = useState({ status:false, email: "" })
     const [ loginData, setLoginData ] = useState({email: "", password: ""})
 
     const handleChange = (e)=>{
@@ -40,6 +42,7 @@ const SignInForm = () => {
                 else {
                     openSnackBar();
                     handleSnackMessage("Please verify your email before signing in. Check your inbox or spam folder.", "white", "text-danger")
+                    setIsError({status: true, email: userData.email})
                 }
             } catch (error) {
                 const errorType = error?.message === "Network Error" ? "Something went wrong. Please try again after some time." : error.response?.data?.errors?.email
@@ -55,6 +58,25 @@ const SignInForm = () => {
             handleSnackMessage("Email or Password is missing!", "white", "text-danger")
         }
     }
+
+    const resendVerification = async ()=>{
+        if(loginData.email){
+            setIsSending(true)
+            try {
+                const verify = await verificationLink(loginData.email)
+                if(verify){
+                    openSnackBar();
+                    handleSnackMessage("The verification link has been sent successfully! Check your email", "success", "text-white")
+                }
+            } catch (error) {
+                openSnackBar();
+                handleSnackMessage("Enable to sending verification link, Please try after some time.", "white", "text-danger")
+            } finally {
+                setIsSending(false)
+            }
+        }
+    }
+    
   return (
     <div>
         {
@@ -114,6 +136,20 @@ const SignInForm = () => {
                 </div>
             </div> */}
 
+            {
+                (isError.status && loginData.email && (loginData.email === isError.email)) && 
+                <p className="block text-xs text-center text-red-500">
+                    Note: Haven't received verification link. Click to {" "}
+                    <button type='button' onClick={resendVerification} className={`opacity-75 ${isSending && "animate-pulse"} hover:opacity-100 underline`} title='Resend verification link.'>
+                        <span className='font-bold'>
+                        {
+                            isSending ? "Sending..." : "Resend."
+                        }
+                        </span>
+                    </button>
+                </p>
+            }
+            
             <button type="submit"
                 className={`py-2 px-3 inline-flex justify-center items-center gap-2 rounded-sm border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-0 focus:ring-primary focus:ring-offset-0 transition-all text-sm dark:focus:ring-offset-white/10 ${loading ? "opacity-[0.6]" : ""}`}>
                 { loading ? <span className="animate-pulse">Please wait...</span> : "Sign in"}

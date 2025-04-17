@@ -70,11 +70,34 @@ const Docs = () => {
               <Heading_Two title={"Prerequisites"}/>
               <ul className="list-disc text-base ml-5">
                 <p>Before running the application, make sure your system meets these requirements:</p>
-
-                <li>Download and Install <CustomLink href={"https://nodejs.org/dist/v20.11.1/node-v20.11.1-x64.msi"} title={"Node.js (version 20)"}/> on your computer.</li>
+                
+                <li>Download <CustomLink href={"https://nodejs.org/en"} title={"Node LTS version"}/>.</li>
                 <li>
-                  To check if Node.js installed, open the command prompt using <Code title={"Win + R and type cmd"}/> and press enter and run <br/> <CopyCommand id="node-version" content={`node -v`}/> (to check nodejs version) <br/>
-                  <CmdBox cmd={"node -v"}/> 
+                  This project was developed using <b>Node.js v20.11.0</b>.
+                  You can download the same version below, based on your system:
+                  <ul className="text-sm ml-2 italic flex flex-col gap-1 py-2">
+                    <li><b>Windows (x64):</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0-x64.msi"} title={"node-v20.11.0-x64.msi"}/></li>
+                    <li><b>Ubuntu/Linux (x64):</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-x64.tar.gz"} title={"node-v20.11.0-linux-x64.tar.gz"}/></li>
+                    <li><b>macOS (Apple Silicon):</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0-darwin-arm64.tar.gz"} title={"node-v20.11.0-darwin-arm64.tar.gz"}/></li>
+                    <li><b>macOS (Intel):</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0-darwin-x64.tar.gz"} title={"node-v20.11.0-darwin-x64.tar.gz"}/></li>
+                  </ul>
+                </li>
+                <br/>
+                <li>
+                  To check if Node.js successfully installed, follow below steps:<br/>
+                  <ul className="text-sm ml-2 italic flex flex-col gap-1 py-2">
+                    <li><b>Windows Users:</b> open the command prompt using <Code title={"Win + R and type cmd"}/> and press enter and run:<br/>
+                      <CopyCommand id="node-version" content={`node -v`}/>.
+                    </li>
+                    <li>
+                     <b>Ubuntu/Linux Users:</b> Open your terminal and run:<br/>
+                      <CopyCommand id="node-version" content={`node -v`}/>
+                    </li>
+                    <li>
+                      <b>macOS Users:</b> Open Terminal (press Cmd + Space, type "Terminal", then press Enter) and run:<br/>
+                      <CopyCommand id="node-version" content={`node -v`}/>
+                    </li>
+                  </ul>
                 </li>
 
                 <p className="text-sm italic">
@@ -88,14 +111,25 @@ const Docs = () => {
               <Heading_Two title={"Steps to Install and Run the Application"}/>
               <ul className="list-disc text-base ml-5">
                 <li>
-                  Once you opened <Code title={"/web_crawler_spider"}/>, run the <Code title={"/installer.bat"}/> file. 
-                  <p className="text-sm italic"><b>Note:</b> Ensure a stable internet connection, as the process may take time.</p>
+                  Once you opened <Code title={"/web_crawler_spider"}/>, run the <Code title={"/installer.bat"}/> file.
+                  <p className="text-sm italic"><b>Note:</b> If the <b>/installer.bat</b> file will not work on your system, checkout our <CustomLink title={"Alternate option"} target="_self" href={"#alternate"}/>.</p>
                   <LoadImage url={"installer.png"}/>
+                  <p className="text-sm italic"><b>Note:</b> Ensure a stable internet connection, as the process may take time.</p>
                 </li>
+                <br/>
+                <p className="mb-20" id="alternate"></p>
                 <Heading_Two title={"Alternate (Optional)"}/>
                 <p className="text-sm italic"><b>Note:</b> If the <b>/installer.bat</b> is not supported or not working on your system, follow the steps below:</p>
                 <li>
-                  Open your project directory <b>/web_crawler_spider</b> in command prompt by typing <b>cmd</b> in the folder's address bar, and run below commands: {" "}
+                  Open your project directory <b>/web_crawler_spider</b> in terminal or command prompt.{" "}<br/>
+                  <div className="my-2">
+                    <p className="text-sm italic">
+                      <b>For Windows:</b> Type cmd on browser's address bar and press enter. <br/>
+                      <b>For macOS:</b> Open the folder in Finder, Right-click the folder (or inside the folder background), Choose "Services" - "New Terminal at Folder".<br/>
+                      <b>For Ubuntu / Linux:</b> Open the folder in Finder, Right-click the folder (or inside the folder background), Choose "Services" - "New Terminal at Folder".<br/>
+                      Now run follow below commands:
+                    </p>
+                  </div>
                   <div className="grid grid-cols-2 space-x-5 mt-5">
                     <div>
                       <CopyCommand id={"install"} content={"npm install"}/>:

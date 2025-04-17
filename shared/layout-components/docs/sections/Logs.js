@@ -4,6 +4,15 @@ import { Heading } from "../Heading";
 const Logs = () => {
   const change_logs = [
     {
+      release: "8.0",
+      logs: [
+        <span>Implement <strong>Google Sign-In</strong> feature.</span>,
+        <span>Added <strong>YouTube demo</strong> videos as <strong>tutorials</strong> for each scraper tool.</span>,
+        <span>Users can now change their country to receive a relevant phone number for that region.</span>,
+        <span>Fixed several bugs related to the UI and core functionality.</span>,
+      ]
+    },
+    {
       release: "7.0",
       logs: [
         <span>
