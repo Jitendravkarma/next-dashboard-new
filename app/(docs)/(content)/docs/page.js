@@ -150,7 +150,7 @@ const Docs = () => {
               <ul className="list-disc text-base ml-5">
                 {/* <p><b>Note:</b> Windows users can skip these steps and directly run the <CustomLink target="_self" href={"#quick-start"} title={"/starter.bat"}/> file to start the server.</p> */}
                 <br/>
-                <li className="grid grid-cols-1 xl:grid-cols-2 space-y-8 xl:space-y-0 xl:space-x-8">
+                {/* <li className="grid grid-cols-1 xl:grid-cols-2 space-y-8 xl:space-y-0 xl:space-x-8">
                   <li>
                     <h3 class="text-xl font-semibold mb-2 italic group-hover:underline">For Windows Users (simply run the 👉<CustomLink target="_self" href={"#quick-start"} title={"/starter.bat"}/> file)</h3>
                     <p className="text-sm italic"><b>Note:</b> If the <b>/starter.bat</b> not working, follow the steps below:</p>
@@ -175,9 +175,9 @@ const Docs = () => {
                 <li>
                   If you are using multiple accounts in your browser, then you will see your accounts like this in your dynamic browser, remove the extra accounts and keep only one.
                   <LoadImage url={"account.png"}/>
-                </li>
+                </li> */}
                 <li>
-                  After that run the <CopyCommand id="npmstart" content={`npm start`}/> command to start the server:
+                  Now simply run the <CopyCommand id="npmstart" content={`npm start`}/> command to start the server:
                   <LoadImage url={"start.png"}/>
                 </li>
                 <li>
