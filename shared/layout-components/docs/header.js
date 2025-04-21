@@ -231,9 +231,9 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
 
                         <div className="responsive-logo">
                             <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
-                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="mx-auto" /></Link>
+                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="mx-auto w-36" /></Link>
                             <Link className="responsive-logo-light" href={"/"} aria-label="Brand">
-                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="mx-auto" /></Link>
+                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="mx-auto w-36" /></Link>
                         </div>
 
                         <div className="header-right">

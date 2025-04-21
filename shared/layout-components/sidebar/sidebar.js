@@ -640,10 +640,10 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
 				onMouseLeave={() => Outhover()}>
 				<div className="main-sidebar-header">
 					<Link href="/dashboard/home" className="header-logo">
-						<img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="main-logo desktop-logo" />
-						<img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/toggle-dark.png`} alt="logo" className="main-logo toggle-dark" />
-						<img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="main-logo desktop-dark" />
-						<img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/toggle-logo.png`} alt="logo" className="main-logo toggle-logo" />
+						<img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="w-36 main-logo desktop-logo" />
+						<img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/toggle-dark.png`} alt="logo" className="w-36 main-logo toggle-dark" />
+						<img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="w-36 main-logo desktop-dark" />
+						<img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/toggle-logo.png`} alt="logo" className="w-36 main-logo toggle-logo" />
 
 					</Link>
 				</div>
