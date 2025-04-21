@@ -6,7 +6,7 @@ import { seo_home } from '@/shared/data/seo-content/content'
 import ServicesSection from '@/shared/layout-components/public-comp/Services'
 import FeatureSection from '@/shared/layout-components/public-comp/Features'
 import BusinessGrowSection from '@/shared/layout-components/public-comp/BusinessGrow'
-import { HorizontalAds } from '@/shared/layout-components/public-comp/Ads'
+// import { HorizontalAds } from '@/shared/layout-components/public-comp/Ads'
 
 export const metadata = seo_home
 
@@ -19,7 +19,7 @@ const Home = () => {
           <ServicesSection/>
           <FeatureSection/>
           <BusinessGrowSection/>
-          <HorizontalAds/>
+          {/* <HorizontalAds/> */}
           <Footer/>
         </body>
     </html>

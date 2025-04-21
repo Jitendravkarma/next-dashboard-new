@@ -7,7 +7,7 @@ import GetStart from "@/shared/layout-components/docs/sections/Start";
 import Features from "@/shared/layout-components/docs/sections/Features";
 import Logs from "@/shared/layout-components/docs/sections/Logs";
 import Services from "@/shared/layout-components/docs/sections/Services";
-import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+// import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_docs
 
@@ -144,7 +144,7 @@ const Docs = () => {
               </ul>
               
               <p className="mb-20" id="start-app"></p>
-              <HorizontalAds/>
+              {/* <HorizontalAds/> */}
               <br/><br/>
               <Heading_Two title={"Start the Application"}/>
               <ul className="list-disc text-base ml-5">
@@ -224,7 +224,7 @@ const Docs = () => {
 
             <div className="py-24" id="features">
               <Features/>
-              <HorizontalAds/>
+              {/* <HorizontalAds/> */}
             </div>
 
 
@@ -234,7 +234,7 @@ const Docs = () => {
 
             <div className="py-24" id="logs">
               <Logs/>
-              <HorizontalAds/>
+              {/* <HorizontalAds/> */}
             </div>
           </div>
 

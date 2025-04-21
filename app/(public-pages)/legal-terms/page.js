@@ -1,5 +1,5 @@
 import { seo_terms } from "@/shared/data/seo-content/content";
-import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+// import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 import Link from "next/link";
 
 export const metadata = seo_terms
@@ -14,7 +14,7 @@ const TermsCondition = () => {
         </div>
       </header>
 
-      <HorizontalAds/>
+      {/* <HorizontalAds/> */}
       {/* Gets Connects Section */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 py-16 lg:py-18 sm:px-6 lg:px-10 flex flex-wrap items-center justify-between p-4">

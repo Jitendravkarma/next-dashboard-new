@@ -1,12 +1,12 @@
 export const HeroContent = [
   {
-    text: "Enhance Your Marketing With  <br />Web <span className='hero-title'>Crawler</span> Spider!",
+    text: <span>Enhance Your Marketing With  <br />Scrape <span className='text-blue-500 italic'>Genius</span></span>,
   },
   {
-    text: "Boost Your Business With  <br />Web <span className='hero-title'>Crawler</span> Spider!",
+    text: <span>Boost Your Business With  <br />Scrape <span className='text-blue-500 italic'>Genius</span></span>,
   },
   {
-    text: "Increase Your Sales With  <br />Web <span className='hero-title'>Crawler</span> Spider!",
+    text: <span>Increase Your Sales With  <br />Scrape <span className='text-blue-500 italic'>Genius</span></span>,
   },
 ];
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { seo_privacy } from "@/shared/data/seo-content/content";
-import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+// import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_privacy
 
@@ -290,7 +290,7 @@ const PrivacyPolicy = () => {
       
       {/* Gets Connects Section */}
       <div className="bg-white">
-        <HorizontalAds/>
+        {/* <HorizontalAds/> */}
       </div>
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 py-16 lg:py-18 sm:px-6 lg:px-10  flex flex-wrap items-center justify-between p-4">

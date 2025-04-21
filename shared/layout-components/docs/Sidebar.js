@@ -10,7 +10,7 @@ import Menuloop from "./menuloop";
 import store from "../../redux/store";
 import { basePath } from "../../../next.config";
 import MENUITEMS from "./nav";
-import { VerticalAds } from "../public-comp/Ads";
+// import { VerticalAds } from "../public-comp/Ads";
 
 const Sidebar = ({ local_varaiable, ThemeChanger }) => {
 
@@ -628,10 +628,10 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
         onMouseLeave={() => Outhover()}>
         <div className="main-sidebar-header">
           <Link href="/" className="header-logo">
-            <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="main-logo desktop-logo" />
-            <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/toggle-dark.png`} alt="logo" className="main-logo toggle-dark" />
-            <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="main-logo desktop-dark" />
-            <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/toggle-logo.png`} alt="logo" className="main-logo toggle-logo" />
+            <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="w-36 main-logo desktop-logo" />
+            <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/toggle-dark.png`} alt="logo" className="w-36 main-logo toggle-dark" />
+            <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="w-36 main-logo desktop-dark" />
+            <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/toggle-logo.png`} alt="logo" className="w-36 main-logo toggle-logo" />
 
           </Link>
         </div>
@@ -684,9 +684,9 @@ const Sidebar = ({ local_varaiable, ThemeChanger }) => {
                     </span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <VerticalAds/>
-              </li>
+              </li> */}
             </ul>
 
             <div className="slide-right" onClick={() => { slideRight(); }} id="slide-right">

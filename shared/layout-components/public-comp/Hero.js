@@ -36,7 +36,7 @@ const HeroSection = () => {
           className={`text-2xl lg:text-[58px] pt-7 font-bold leading-tight mb-6 text-black-800 w-full ${fadeClass}`}
         >
           {/* Render dynamic content with HTML safely */}
-          <div dangerouslySetInnerHTML={{ __html: currentText }} />
+          <div>{currentText}</div>
         </h1>
         <p className="mb-8 text-black text-base font-light">
           Increase Sales with Our Scraper.

@@ -3,7 +3,7 @@ import { seo_pricing } from "@/shared/data/seo-content/content";
 // import BecomeReseller from "@/shared/layout-components/public-comp/BecomeReseller";
 import PriceCards from "@/shared/layout-components/public-comp/PriceCards";
 import PriceTable from "@/shared/layout-components/public-comp/PriceTable";
-import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+// import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 import Link from "next/link";
 
 export const metadata = seo_pricing
@@ -24,7 +24,7 @@ const PricingPage = () => {
             <img src="/assets/img/pricebanner.png" className="rounded-md shadow-md" />
           </Link>
         </div>
-        <HorizontalAds/>
+        {/* <HorizontalAds/> */}
         <PriceTable/>
       </div>
       {/* <div className="bg-gray-100 py-16">

@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
-import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
+// import Link from "next/link";
+// import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
 import { seo_faq } from "@/shared/data/seo-content/content";
-import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+// import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 
 export const metadata = seo_faq
@@ -284,7 +284,7 @@ const Faq = () => {
       <section className="bg-white py-24">
        <FaqSection/>
       </section>
-      <HorizontalAds/>
+      {/* <HorizontalAds/> */}
       {/*faq question and answer End */}
     </>
   );
