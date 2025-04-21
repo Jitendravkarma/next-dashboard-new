@@ -127,9 +127,9 @@ const ForgotPass = () => {
 
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-primary-gradient-from to-primary-gradient-to">
         <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
-          <Link href="/">
+          {/* <Link href="/">
             <img src={"../../../assets/img/brand-logos/desktop-logo.png"} alt="logo" className="max-w-full my-5 mx-auto mb-5" />
-          </Link>
+          </Link> */}
 
           <h2 className="text-xl uppercase text-center font-bold text-gray-900">
             Reset Your Password
