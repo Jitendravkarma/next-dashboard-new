@@ -20,7 +20,7 @@ const GoogleMapScraper = () => {
   return (
     <>
       <section className="py-14 lg:py-16 bg-gradient-to-b from-blue-200 to-white flex justify-center items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-center px-4 lg:px-16">
             <PageHeader {...GooglesmapscraperProps} />
             <div className="flex justify-evenly flex-wrap items-center gap-6 pt-12">

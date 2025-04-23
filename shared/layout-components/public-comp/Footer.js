@@ -47,6 +47,7 @@ export default function Footer() {
       list: [
         { title: "Sign In", url: "/signin" },
         { title: "Sign Up", url: "/signup" },
+        { title: "Docs", url: "/docs" },
         { title: "Contact Us", url: "/contact" },
         { title: "About Us", url: "/about" },
         { title: "Terms & Conditions", url: "/legal-terms" },
@@ -74,7 +75,7 @@ export default function Footer() {
             <div className="col-span-12 xl:col-span-5 flex flex-col gap-5">
               <div className="mr-auto">
                 <Link href="/">
-                  <Image
+                  <img
                     src="/assets/img/brand-logos/desktop-logo.png"
                     alt="Site logo"
                     width={150}

@@ -1,7 +1,5 @@
 "use client"
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { HeroContent } from "@/shared/data/static-content/public";
 import PrimaryButton from "./PrimaryButton";
 
@@ -29,7 +27,7 @@ const HeroSection = () => {
   }, [index]);
 
   return (
-    <section className="max-w-8xl mx-auto py-14 lg:py-16" data-aos="fade-up">
+    <section className="max-w-7xl mx-auto py-14 lg:py-16" data-aos="fade-up">
       {/* Text Content */}
       <div className="w-full text-center px-4 lg:px-16">
         <h1
@@ -46,12 +44,10 @@ const HeroSection = () => {
 
       {/* Full-Width Image */}
       <div className="w-[80%] flex items-center justify-center pt-10 mx-auto">
-        <Image
+        <img
           src="/assets/img/header-image.png"
           className="rounded-md shadow-md"
           alt="Header Image"
-          width={1920}
-          height={1080}
         />
       </div>
     </section>
