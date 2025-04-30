@@ -34,8 +34,8 @@ const About = () => {
                 </p>
               ))}
 
-              {/* About Us - What is Web Crawler Spider */}
-              <h2 className='text-2xl lg:text-3xl font-bold  mt-16 uppercase'>What is web crawler spider?</h2>
+              {/* About Us - What is Scrape Genius */}
+              <h2 className='text-2xl lg:text-3xl font-bold  mt-16 uppercase'>What is scrape genius?</h2>
               {aboutuswebcontent.map((content, index) => (
                 <p key={index} className='text-black text-base font-light my-7'>
                   {content}

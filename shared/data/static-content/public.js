@@ -54,7 +54,7 @@ export const tabs = [
       title:
         "Seamless and Reliable Data Extraction",
       description:
-      <span>Our platform ensures seamless data extraction with unmatched efficiency. With Web Crawler Spider's advanced Document Scraper service, extracting critical information such as email addresses and phone numbers has never been easier. Whether you're working with <b>.csv, .txt, .doc, .docx, .html</b>, or other file formats, our tool simplifies the process, providing a user-friendly and reliable solution. Trust in our proven expertise to deliver accurate and consistent results, empowering you with the data you need, precisely when you need it.</span>,
+      <span>Our platform ensures seamless data extraction with unmatched efficiency. With Scrape Genius's advanced Document Scraper service, extracting critical information such as email addresses and phone numbers has never been easier. Whether you're working with <b>.csv, .txt, .doc, .docx, .html</b>, or other file formats, our tool simplifies the process, providing a user-friendly and reliable solution. Trust in our proven expertise to deliver accurate and consistent results, empowering you with the data you need, precisely when you need it.</span>,
       image: "/assets/img/data-extraction.png",
     },
   },

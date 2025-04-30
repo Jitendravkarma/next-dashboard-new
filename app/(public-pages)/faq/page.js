@@ -11,15 +11,15 @@ export const metadata = seo_faq
 
 const questions = [
   {
-    title: "What is web crawler spider?",
+    title: "What is scrape genius?",
     description: (
       <span>
-        A <b>web crawler spider</b> is a versatile tool that extracts data
+        A <b>scrape genius</b> is a versatile tool that extracts data
         according to given keywords. It supports a range of{" "}
         <b>data scraping tools</b> for various needs, including{" "}
         <b>website data scraper</b>, <b>yellow pages scraper</b>,{" "}
         <b>whois database lookup</b>, and <b>image scraping</b>. The{" "}
-        <b>web crawler spider</b> can gather data such as mobile numbers,
+        <b>scrape genius</b> can gather data such as mobile numbers,
         website URLs, and email IDs, which are essential for business growth.
         This tool can be used for <b>business directory scraping</b>,{" "}
         <b>whois domain</b> searches, and <b>scrape images from websites</b>,
@@ -29,7 +29,7 @@ const questions = [
         capabilities, this tool makes scraping tasks easier. Compatible with{" "}
         <b>scraping software</b> like <b>business directory scraper Python</b>{" "}
         and <b>web scraping with Python</b>, it is designed for efficient data
-        extraction. The <b>web crawler spider</b> can help with{" "}
+        extraction. The <b>scrape genius</b> can help with{" "}
         <b>domain search whois</b>, <b>scrape data from website to Excel</b>,
         and even <b>scrape LinkedIn</b> and <b>scrape Instagram photos</b>. As a
         comprehensive <b>web scraping tool</b>, it ensures accurate and
@@ -41,10 +41,10 @@ const questions = [
     ),
   },
   {
-    title: "Can web crawler spider tool scrape data in many ways?",
+    title: "Can scrape genius tool scrape data in many ways?",
     description: (
       <span>
-        Yes, the <b>web crawler spider</b> has many tools and can scrape data in
+        Yes, the <b>scrape genius</b> has many tools and can scrape data in
         various ways, making it highly versatile. This includes tools like the{" "}
         <b>Google Search Scraper</b>, <b>Google Map Scraper</b>,{" "}
         <b>Website Data Scraper</b>, <b>Whois Domain Data Scraper</b>,{" "}
@@ -55,7 +55,7 @@ const questions = [
         <b>image scraper from website</b> for gathering visual data. Whether
         you're looking to perform <b>business directory scraping</b>,{" "}
         <b>web scraping yellow pages</b>, <b>scrape pdf files</b>, or{" "}
-        <b>scrape Instagram photos</b>, the <b>web crawler spider</b> provides
+        <b>scrape Instagram photos</b>, the <b>scrape genius</b> provides
         the tools you need. It’s compatible with advanced options like{" "}
         <b>business directory scraper Python</b> and <b>web scraper Chrome</b>{" "}
         extensions, as well as free tools such as{" "}

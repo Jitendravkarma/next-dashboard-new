@@ -168,12 +168,11 @@ export default function Header() {
           {/* Logo */}
           <div className="text-xl font-semibold">
             <Link href="/">
-              <Image
+              <img
                 src="/assets/img/brand-logos/desktop-logo.png"
                 alt="Site logo"
-                width={500}
-                height={500}
-                style={{ width: "150px", height: "auto" }} // Example
+                width={150}
+                height={150}
               />
             </Link>
           </div>

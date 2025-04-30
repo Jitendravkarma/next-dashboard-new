@@ -84,7 +84,7 @@ export default function Footer() {
                 </Link>
               </div>
               <p>
-                Web Crawler Spider provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
+                Scrape Genius provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
               </p>
               <p>
               © 2016. Design Collection Private Limited owns all rights. Creator of webcrawlerspider.com
