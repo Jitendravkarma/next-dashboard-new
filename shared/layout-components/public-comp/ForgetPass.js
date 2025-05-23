@@ -135,7 +135,7 @@ const ForgotPass = () => {
             Reset Your Password
           </h2>
           <form onSubmit={cnfrmHandleSubmit} className="mt-4" action="#">
-            <div className="grid md:grid-cols-2 items-center md:gap-6">
+            <div className="grid md:grid-cols-2 items-center gap-4 md:gap-6">
               <div>
                 <label
                   htmlFor="password"
@@ -207,7 +207,7 @@ const ForgotPass = () => {
               </p>
             )}
 
-            <div className="text-center mt-2">
+            <div className="text-center mt-4">
               <input
                 type="submit"
                 className="w-full cursor-pointer bg-indigo-600 text-white py-2 px-4 rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-indigo-300 disabled:cursor-not-allowed focus:ring-offset-2"

@@ -54,7 +54,7 @@ const SignUpForm = () => {
                 if(formData.rememberMe){
                     setLoading(true)
                     try {
-                        await signUp(formData)
+                        await signUp({...formData, ParentEmail: "support@designcollection.in"})
                         setOnSuccess(true)
                     } catch (error) {
                         const err = error.response.data.errors.email;

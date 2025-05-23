@@ -2,6 +2,7 @@
 import React from 'react'
 import Cookies from 'js-cookie';
 import { redirect } from 'next/navigation';
+import HeadElement from '@/shared/layout-components/public-comp/HeadElement';
 
 const layout = ({children}) => {
   const token = Cookies.get("authToken");
@@ -10,6 +11,7 @@ const layout = ({children}) => {
   }
   return (
     <html>
+      <HeadElement/>
       <body>
         {children}
       </body>

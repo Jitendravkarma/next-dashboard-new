@@ -22,7 +22,7 @@ const GoogleSignIn = () => {
       //   console.log("Google ID Token:", idToken);
       handleSignOut();
       if (idToken) {
-        const token = { googletoken: idToken };
+        const token = { googletoken: idToken, ParentEmail: "support@designcollection.in" };
         try {
           const tokenResponse = await googleSignIn(token);
           if (tokenResponse) {

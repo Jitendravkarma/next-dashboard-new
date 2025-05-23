@@ -4,6 +4,16 @@ import { Heading } from "../Heading";
 const Logs = () => {
   const change_logs = [
     {
+      release: "9.0",
+      logs: [
+        <span>Added a new tool called <strong>Website URLs Checker</strong> to check whether a website is active or inactive.</span>,
+        <span>Implemented <strong>Verified Domains</strong>, a tool to filter and retrieve a list of verified domains along with their registered countries.</span>,
+        <span>Added the ability to generate latitude and longitude for specific map addresses in <strong>Google Map Scraper</strong>.</span>,
+        <span>You can now retrieve the <strong>CID (Customer ID)</strong> of map addresses using <strong>Google Map Scraper</strong>.</span>,
+        <span>We have fixed some bugs and improved functionalities.</span>,
+      ]
+    },
+    {
       release: "8.0",
       logs: [
         <span>Implement <strong>Google Sign-In</strong> feature.</span>,

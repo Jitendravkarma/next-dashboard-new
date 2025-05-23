@@ -28,13 +28,6 @@ const RootLayout = ({ children }) => {
             />
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-R0MF2YW0DP"/>
             <Script
-              id="mcjs"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/385185488e96c2387bba7596f/b72597b8ca4e9990309b9354f.js");`,
-              }}
-            />
-            <Script
               id="gtag-init" // Unique ID for this script
               strategy="afterInteractive"
               dangerouslySetInnerHTML={{

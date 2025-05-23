@@ -16,6 +16,16 @@ export async function sendRecords(userData) {
     }
 }
 
+export async function smtp(details) {
+    checkAndAddAuthTokenToHeader()
+    try {
+      const response = await api.post('/restricted/addsmtpdetails', details);
+      return response; // Assuming the API returns the user data and a token
+    } catch (error) {
+      throw error;
+    }
+}
+
 export async function getMapData(recordId, cancelToken) {
     checkAndAddAuthTokenToHeader()
     try {

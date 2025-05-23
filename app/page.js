@@ -6,6 +6,7 @@ import { seo_home } from '@/shared/data/seo-content/content'
 import ServicesSection from '@/shared/layout-components/public-comp/Services'
 import FeatureSection from '@/shared/layout-components/public-comp/Features'
 import BusinessGrowSection from '@/shared/layout-components/public-comp/BusinessGrow'
+import HeadElement from '@/shared/layout-components/public-comp/HeadElement'
 // import { HorizontalAds } from '@/shared/layout-components/public-comp/Ads'
 
 export const metadata = seo_home
@@ -13,6 +14,7 @@ export const metadata = seo_home
 const Home = () => {
   return (
     <html>
+        <HeadElement/>
 		    <body>
           <Navbar/>
           <Hero />
