@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import Cookies from 'js-cookie';
-import { getUserData } from "../apis/api";
+import { getUserData, resellerUsers } from "../apis/api";
 const UserContext = createContext();
 export const useUserContext = () => useContext(UserContext);
 export const UserProvider = ({ children }) => {
@@ -22,6 +22,7 @@ export const UserProvider = ({ children }) => {
   const [queryBox, setQueryBox] = useState([]);
   const [queryMapBox, setQueryMapBox] = useState([]);
   const [tempData, setTempData] = useState([]);
+  const [usersData, setUsersData] = useState([]);
   const [freeData, setFreeData] = useState({gData:[], mData:[]});
   const [network, setNetwork] = useState(false);
   const [net, setNet] = useState(network);
@@ -143,6 +144,34 @@ export const UserProvider = ({ children }) => {
         window.removeEventListener("offline", checkOff);
     }
   }, []);
+
+  useEffect(()=>{
+    const fetchUsers = async ()=>{
+      try {
+        // setIsLoading(true)
+        const users = await resellerUsers()
+        const user_data = users.data.data
+        if(user_data.length){
+          const convert_data = user_data.map(({id, email, name, purchase_code, verified}, ind)=>{
+            return {
+              sn: ind + 1,
+              user_id: id,
+              name,
+              email,
+              access_code: purchase_code,
+              verified
+            }
+          })
+          setUsersData(convert_data)
+        }
+      } catch (error) {
+        console.log(error)
+      } finally {
+        // setIsLoading(false)
+      }
+    } 
+    fetchUsers()
+  }, [])
 
   // Update user state and local storage when the user logs in
   const handleSignIn = (userData, verified) => {
@@ -317,7 +346,7 @@ export const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ user, limitErr, snackMessage, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail }}
+      value={{ user, usersData, limitErr, snackMessage, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail }}
     >
       {children}
     </UserContext.Provider>

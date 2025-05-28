@@ -257,7 +257,7 @@ export const priceplanmonth = [
       },
       {
         tooltips: "Direct contact with support is not available in this plan.",
-        text: "Direct Contact",
+        text: "No Direct Contact",
         question: false, // Tooltip disabled
       },
       {
@@ -365,8 +365,8 @@ export const priceplanmonth = [
         question: true,
       },
       {
-        tooltips: "Access 24/7 priority support with instant responses.",
-        text: "24/7 priority support",
+        tooltips: "Get high priority support with instant responses.",
+        text: "High priority support",
         question: true,
       },
     ],

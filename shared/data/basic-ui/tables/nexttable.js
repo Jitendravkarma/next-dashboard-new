@@ -26,18 +26,19 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
   };
 
   const handleSorting = (e)=>{
-    const filterData = data.filter(row=>(row[e.label] !== "N/A")).map((item, ind)=>({id: ind+1, ...item}))
+    const filterData = data.filter(row=>(row[e.value])).map((item, ind)=>({id: ind+1, ...item}))
     let sort=[];
-    if(e.label === "Paid"){
-      sort = data.filter(row=>(row[e.value.toLowerCase()]))
+    if(e.value === "paid"){
+      sort = data.filter(row=>(row.access_code))
     }
-    else if(e.label === "Unpaid"){
-      sort = data.filter(row=>(!row[e.value.toLowerCase()]))
+    else if(e.value === "unpaid"){
+      console.log(e)
+      sort = data.filter(row=>!row.access_code)
     }
-    else if(e.value === "Expiry"){
-      sort = data.filter(row=>row[e.value.toLowerCase()])
+    else if(e.value === "verified"){
+      sort = data.filter(row=>!row.access_code)
     }
-    setRows(sort.length ? sort : filterData)
+    setRows(sort.length ? sort.map((item, ind)=>({id: ind+1, ...item})) : filterData)
     setSortName(e)
   }
 

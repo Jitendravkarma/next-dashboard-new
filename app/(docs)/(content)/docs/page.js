@@ -77,9 +77,8 @@ const Docs = () => {
                   You can download the same version below, based on your system:
                   <ul className="text-sm ml-2 italic flex flex-col gap-1 py-2">
                     <li><b>Windows (x64):</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0-x64.msi"} title={"node-v20.11.0-x64.msi"}/></li>
-                    <li><b>Ubuntu/Linux (x64):</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-x64.tar.gz"} title={"node-v20.11.0-linux-x64.tar.gz"}/></li>
-                    <li><b>macOS (Apple Silicon):</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0-darwin-arm64.tar.gz"} title={"node-v20.11.0-darwin-arm64.tar.gz"}/></li>
-                    <li><b>macOS (Intel):</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0-darwin-x64.tar.gz"} title={"node-v20.11.0-darwin-x64.tar.gz"}/></li>
+                    <li><b>Ubuntu/Linux (x64):</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-x64.tar.xz"} title={"node-v20.11.0-linux-x64.tar.xz"}/></li>
+                    <li><b>macOS:</b> <CustomLink href={"https://nodejs.org/dist/v20.11.0/node-v20.11.0.pkg"} title={"node-v20.11.0.pkg"}/></li>
                   </ul>
                 </li>
                 <br/>

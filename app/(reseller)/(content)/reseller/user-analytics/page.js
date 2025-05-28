@@ -3,18 +3,15 @@ import React, { useCallback, useEffect, useState } from "react";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
-import ContactVia from "@/shared/layout-components/dashboard/ContactVia";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
-import { resellerUsers } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
-	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
-	const [ validity, setValidity ] = useState(false);
-	const [ userId, setUserId ] = useState(false);
-	const [ startDate, setStartDate ] = useState("");
+	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData } = useUserContext()
+	// const [ validity, setValidity ] = useState(false);
+	// const [ userId, setUserId ] = useState(false);
 	const [ data, setData ] = useState([]);
 	const [ isLoading, setIsLoading ] = useState(false);
 	const columns = [
@@ -31,9 +28,9 @@ const UserAnalytics = () => {
 		// 	},
 		// },
 		{
-			field: 'user_id',
-			headerName: 'User Id',
-			width: 200,
+			headerName: 'S.N',
+			field: 'sn',
+			width: 100,
 			editable: false,
 		},
 		{
@@ -58,14 +55,28 @@ const UserAnalytics = () => {
 		// 	editable: false
 		// },
 		{
-			headerName: "Access Code",
+			headerName: "Paid/Unpaid",
 			field: "access_code",
-			width: 300,
+			width: 200,
 			renderCell: (params) => {
 				const value = params.row.access_code;
 				return (
-				  <span title={`${params.row.validity ? params.row.expired ? `Plan is expired` : `Plan is active` : "Need to set validity"}`} className={`cursor-pointer ${params.row.expired ? "bg-danger/10 text-danger" : params.row.validity ? "bg-success/10 text-success" : "bg-warning/10 text-warning"} badge leading-none rounded-sm`}>
-					{value}
+				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+					{value ? "Paid User" : "Unpaid User"}
+				  </span>
+				)
+			},
+			editable: false
+		},
+		{
+			headerName: "User Status",
+			field: "verified",
+			width: 200,
+			renderCell: (params) => {
+				const value = params.row.verified;
+				return (
+				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+					{value ? "Verified User" : "Unverified User"}
 				  </span>
 				)
 			},
@@ -134,50 +145,6 @@ const UserAnalytics = () => {
 		// },
 	];
 	
-	// const localData = [
-	// 	{
-	// 		user_id: 2,
-	// 		name: "aman singh",
-	// 		email: "amansingh@example.com",
-	// 		phone: "+917876543210",
-	// 		country: "india",
-	// 		role: "user",
-	// 		access_code: "7ty6-93sf-102a-p9k1",
-	// 		purchase_date: "2025-01-02",
-	// 		plan_date: "2025-01-02",
-	// 		validity: "",
-	// 		expired: false
-	// 	},
-	// 	{
-	// 		user_id: 5,
-	// 		name: "neha gupta",
-	// 		email: "nehagupta@gmail.com",
-	// 		phone: "+917850612345",
-	// 		country: "india",
-	// 		role: "user",
-	// 		access_code: "8gh2-56dw-947b-u2v4",
-	// 		purchase_date: "2025-03-15",
-	// 		plan_date: "2025-03-15",
-	// 		validity: "",
-	// 		expired: false
-	// 	},
-	// 	{
-	// 		user_id: 6,
-	// 		name: "jitendra karma",
-	// 		email: "jeet@gmail.com",
-	// 		phone: "+919387594734",
-	// 		country: "india",
-	// 		role: "user",
-	// 		access_code: "9dh1-42pl-201q-z3w5",
-	// 		purchase_date: "2025-03-25",
-	// 		plan_date: "2025-03-25",
-	// 		validity: "2025-06-25",
-	// 		expired: false
-	// 	}
-	// ]
-
-	const localData = []
-
 	const csvHeaders = [
         { label: "ID", key: "id" },
         { label: "Customer Name", key: "name" },
@@ -192,9 +159,9 @@ const UserAnalytics = () => {
 	const renewal = <i className="ri-loop-left-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-danger/10 text-danger leading-none"></i>
 
 	const sortOptions = [
-		{value:"validity", label: "Need Validity"},
-		{value:"validity", label: "Active Plans"},
-		{value:"expired", label: "Expired Plans"}
+		{value:"paid", label: "Paid Users"},
+		{value:"unpaid", label: "Unpaid Users"},
+		{value:"verified", label: "Unverified Users"}
 	]
 
 	const [ numOfData, setNumOfData] = useState([
@@ -213,28 +180,9 @@ const UserAnalytics = () => {
 		// setNumOfData(newData)
 	}, [])
 
-	// useEffect(()=>{
-	// 	let getCustomers = JSON.parse(localStorage.getItem("customers"));
-	// 	if(getCustomers){
-	// 		const totalCount = [
-	// 			{title: "total", count: getCustomers.length},
-	// 			{title: "clients", count: getCustomers.filter(dt=>(dt.validity && !dt.expired)).length},
-	// 			{title: "renewal", count: getCustomers.filter(dt=>dt.expired).length}
-	// 		]
-	// 		setData(getCustomers)
-	// 		const newData = numOfData.map(obj=>{
-	// 			const find = totalCount.find(dt=>dt.title === obj.title)
-	// 			if(find){
-	// 				return {...obj, text: find.title === obj.title ? find.count : 0}
-	// 			}
-	// 		})
-	// 		setNumOfData(newData)
-	// 	}
-	// 	else {
-	// 		localStorage.setItem("customers", JSON.stringify(localData))
-	// 		JSON.parse(localStorage.getItem("customers"));
-	// 	}
-	// },[data.length])
+	useEffect(()=>{
+		setData(usersData)
+	}, [usersData.length])
 
 	useEffect(()=>{
 		if(data.length){
@@ -249,33 +197,6 @@ const UserAnalytics = () => {
 			setNumOfData(new_data)
 		}
 	}, [data.length])
-
-	useEffect(()=>{
-		const fetchUsers = async ()=>{
-			try {
-				setIsLoading(true)
-				const users = await resellerUsers()
-				const user_data = users.data.data
-				if(user_data.length){
-					const convert_data = user_data.map(({id, email, name, purchase_code, verified})=>{
-						return {
-							user_id: id,
-							name,
-							email,
-							access_code: purchase_code,
-							verified
-						}
-					})
-					setData(convert_data)
-				}
-			} catch (error) {
-				console.log(error)
-			} finally {
-				setIsLoading(false)
-			}
-		} 
-		fetchUsers()
-	}, [])
 
 	return (
 		<div>
@@ -366,10 +287,10 @@ const UserAnalytics = () => {
 				limitErr &&
 				<LimitReachedBox/>
 			}
-			{
+			{/* {
 				validity &&
 				<ValidityBox id={userId} closeModel={()=>setValidity(false)}/>
-			}
+			} */}
 			{/* alert boxes */}
 		</div>
 	);
