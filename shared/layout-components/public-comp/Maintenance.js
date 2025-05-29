@@ -17,7 +17,7 @@ const Maintenance = ({message=<span>We apologize for the inconvenience, but our 
                         <p className="text-lg md:text-xl mb-2">
                             {message}
                         </p>
-                        <Link href={"/dashboard/home"} className="ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 hover:text-white hover:bg-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10">
+                        <Link href={"/"} className="ti-btn ti-btn-outline !border-indigo-500 text-indigo-500 hover:text-white hover:bg-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10">
                             Go Home
                         </Link>
                     </div>
