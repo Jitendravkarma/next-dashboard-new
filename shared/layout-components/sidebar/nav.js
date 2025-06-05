@@ -4,6 +4,8 @@ const Analytics = <i className="ri-user-line side-menu__icon"></i>;
 
 const Renewal = <i className="ri-refresh-line side-menu__icon"></i>;
 
+const Licence = <i className="ri-magic-line side-menu__icon"></i>;
+
 const Profile = <i className="ri-user-line side-menu__icon"></i>;
 
 const SMTP = <i className="ri-mail-send-line side-menu__icon"></i>;
@@ -20,6 +22,8 @@ export const MENUITEMS = [
 	{ path: "/reseller/user-analytics", icon: Analytics, title: "User Analytics", type: "link", active: false, selected: false },
 
 	{ path: "/reseller/plan-renewal", icon: Renewal, title: "Plan Renewal", type: "link", active: false, selected: false },
+
+	// { path: "/reseller/generate-licence", icon: Licence, title: "Generate Licence", type: "link", active: false, selected: false },
 	
 	{
 		menutitle: "Settings",

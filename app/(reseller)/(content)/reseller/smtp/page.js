@@ -29,7 +29,11 @@ const Profile = () => {
     out_port: [
       {
         "label": "SMTP Port: 465",
-        "value": "SMTP Port: 465",
+        "value": "SMTP Port: 465"
+      },
+      {
+        "label": "SMTP Port: 587",
+        "value": "SMTP Port: 587"
       }
     ]
   }

@@ -208,7 +208,7 @@ const UserAnalytics = () => {
 			<PageHeader currentpage="User Analytics" img="/assets/img/users/profile.png" activepage="Reseller" mainpage="User Analytics" />
 			<div className="grid grid-cols-12 gap-x-5">
 				{numOfData.map((idx) => (
-					<div className="col-span-12 md:col-span-6 xl:col-span-4" key={Math.random()}>
+					<div className="col-span-12 md:col-span-4" key={Math.random()}>
 						<div className="box">
 							<div className="box-body">
 								<div className="flex space-x-3 rtl:space-x-reverse">
