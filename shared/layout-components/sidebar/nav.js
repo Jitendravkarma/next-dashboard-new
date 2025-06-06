@@ -21,9 +21,9 @@ export const MENUITEMS = [
 
 	{ path: "/reseller/user-analytics", icon: Analytics, title: "User Analytics", type: "link", active: false, selected: false },
 
+	{ path: "/reseller/generate-licence", icon: Licence, title: "Generate Licence", type: "link", active: false, selected: false },
+	
 	{ path: "/reseller/plan-renewal", icon: Renewal, title: "Plan Renewal", type: "link", active: false, selected: false },
-
-	// { path: "/reseller/generate-licence", icon: Licence, title: "Generate Licence", type: "link", active: false, selected: false },
 	
 	{
 		menutitle: "Settings",

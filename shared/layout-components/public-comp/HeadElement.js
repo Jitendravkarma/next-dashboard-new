@@ -24,6 +24,37 @@ const HeadElement = () => {
             fbq('track', 'PageView');`,
           }}
         />
+        {/* <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2QX6FBRXL5"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2QX6FBRXL5');
+            `,
+          }}
+        /> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-2QX6FBRXL5"
+        />
+        <script
+          id="gtag-init"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2QX6FBRXL5');
+            `,
+          }}
+        />
     </head>
   )
 }

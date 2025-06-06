@@ -4,8 +4,11 @@ import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import { UpgradePlanPopup } from "@/shared/layout-components/dashboard/AlertBox";
 import { generateLicence, resellerLicences } from "@/shared/apis/api";
+import { useUserContext } from "@/shared/userContext/userContext";
+import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 
 const GenerateLicence = () => {
+	const { openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
 	const dashboard_data = {
 		user_id: 5,
         name: "kripal",
@@ -39,10 +42,10 @@ const GenerateLicence = () => {
 
 	const compareDate = dashboard_data && new Date([dashboard_data.validity]) < new Date();
 	
-	const calender = <i className="ri-calendar-check-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
+	const calender = <i className="ri-pass-valid-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const status = <i className={`${compareDate ? "ri-close-line bg-danger/10 text-danger" : "ri-shield-check-line bg-success/10 text-success"} text-xl avatar w-10 h-10 rounded-full p-2.5 leading-none`}></i>
-	const expiry = <i className={`${dashboard_data.expired ? "ri-calendar-close-fill" : "ri-calendar-schedule-line"} text-xl avatar w-10 h-10 rounded-full p-2.5 bg-danger/10 text-danger leading-none`}></i>
-	const planIcon = <i className={`${dashboard_data.role === "reseller" ? "ri-vip-crown-line bg-secondary/10 text-secondary" : dashboard_data.role === "white" ? "ri-medal-line bg-warning/10 text-warning" : "ri-bard-line bg-info/10 text-info"} text-xl avatar w-10 h-10 rounded-full p-2.5 leading-none`}></i>
+	const expiry = <i className={`ri-bar-chart-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-danger/10 text-danger leading-none`}></i>
+	const planIcon = <i className={`${dashboard_data.role === "reseller" ? "ri-pie-chart-line bg-secondary/10 text-secondary" : dashboard_data.role === "white" ? "ri-medal-line bg-warning/10 text-warning" : "ri-bard-line bg-info/10 text-info"} text-xl avatar w-10 h-10 rounded-full p-2.5 leading-none`}></i>
 
 	const [ numOfData, setNumOfData] = useState([
 		{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "100", color: "primary/10", color1: "success" },
@@ -90,26 +93,32 @@ const GenerateLicence = () => {
 	} 
 
 	const generateLicenceCode = async ()=>{
-		try {
-			setIsGenerating(true)
-			const generateCode = await generateLicence()
-			const access_code = generateCode.data.data
-			if(access_code){
-				fetchLicenses()
+		if(licences.length < 100){
+			try {
+				setIsGenerating(true)
+				const generateCode = await generateLicence()
+				const access_code = generateCode.data.data
+				if(access_code){
+					fetchLicenses()
+				}
+			} catch (error) {
+				console.log(error)
+			} finally {
+				setIsGenerating(false)
 			}
-		} catch (error) {
-			console.log(error)
-		} finally {
-			setIsGenerating(false)
+		}
+		else {
+			openSnackBar();
+            handleSnackMessage("Please verify your email before signing in. Check your inbox or spam folder.", "white", "text-danger")
 		}
 	}
 
 	useEffect(()=>{
 		setNumOfData([
 			{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "100", color: "primary/10", color1: "success" },
-			{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: 100 - licences.length, color: "primary/10", color1: "success" },
-			{ id: 3, icon: status, class: "Sold Licences", title: "sold", text: <span>{licences.filter(lic=>lic.email).length}/<small>{licences.length}</small></span>, color: "primary/10", color1: "success" },
-			{ id: 4, icon: planIcon, class: "Available Licences", title: "type", text: <span>{licences.filter(lic=>!lic.email).length}/<small>{licences.length}</small></span>, color: "primary/10", color1: "success" },
+			{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: <span className={`${licences.length > 95 && "animate-pulse text-danger"}`}>{100 - licences.length}</span>, color: "primary/10", color1: "success" },
+			{ id: 3, icon: status, class: "Sold Licences", title: "sold", text: <span>{licences.filter(lic=>lic.email).length}/<small className={`${licences.length < 5 && "animate-pulse text-danger"}`}>{licences.length}</small></span>, color: "primary/10", color1: "success" },
+			{ id: 4, icon: planIcon, class: "Available Licences", title: "type", text: <span>{licences.filter(lic=>!lic.email).length}/<small className={`${licences.length < 5 && "animate-pulse text-danger"}`}>{licences.length}</small></span>, color: "primary/10", color1: "success" },
 		])
 		fetchLicenses()
 	}, [licences.length])
@@ -117,7 +126,11 @@ const GenerateLicence = () => {
 	return (
 		<div>
 			<Seo title='Generate Licence' />
-			<PageHeader currentpage="Generate Licence" img="/assets/img/users/renewal.png" activepage="Reseller" mainpage="Generate Licence" />
+			<PageHeader currentpage="Generate Licence" img="https://cdn-icons-png.flaticon.com/128/3600/3600987.png" activepage="Reseller" mainpage="Generate Licence" />
+			{
+				openSnack &&
+				<Snackbar content={snackMessage} isOpen={openSnack}/>
+			}
 			<div className="grid grid-cols-12 gap-x-5">
 				{numOfData.map((idx) => (
 					<div className="col-span-12 md:col-span-6 lg:col-span-3" key={idx.id}>
@@ -186,7 +199,7 @@ const GenerateLicence = () => {
 										</button>
 										{
 											licences.length === 100 && 
-											<p className="mt-1 text-red-500">Note: You cannot generate more than 100 licenses as per your reseller plan.</p>
+											<p className="mt-1 text-red-500">Note: You can't generate more than 100 licenses. Contact your plan provider to increase your licence limit.</p>
 										}
 									</div>
 									<div className="flex gap-2 items-center">
