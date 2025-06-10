@@ -1,20 +1,38 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import Cookies from 'js-cookie';
-import { getUserData, resellerUsers } from "../apis/api";
+import { getUserData } from "../apis/api";
+import axios from "axios";
 const UserContext = createContext();
 export const useUserContext = () => useContext(UserContext);
 export const UserProvider = ({ children }) => {
 
   const [isVerfified, setIsVerified] = useState(true); // Initialize with false
-  const [isAuthenticated, setIsAuthenticated] = useState(true); // Initialize with false
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Initialize with false
   const [isAdmin, setIsAdmin] = useState(false);
   const [verify, setVerify] = useState(false);
+  const [ successPop, setSuccessPop ] = useState(false)
   const [snackMessage, setSnackMessage] = useState({message: "", bg: "", txt: ""});
   const [iconPing, setIconPing] = useState({url: false, email: false, phone: false, record: false});
   const [isActivated, setIsActivated] = useState(false); // Initialize with false
   const [openSnack, setOpenSnack] = useState(false); // Initialize with false
-  const [ successPop, setSuccessPop ] = useState(false)
   const [user, setUser] = useState({ email: "", auth: false });
+  const [localUser, setLocalUser] = useState({
+    name: "",
+    email: "",
+    token: "",
+    country: ""
+  });
+  const [ HeroContent, setHeroContent ] = useState([
+    {
+      text: <span>Enhance Your Marketing With  <br />Company <span className='text-blue-500 italic'>Name</span></span>,
+    },
+    {
+      text: <span>Boost Your Business With  <br />Company <span className='text-blue-500 italic'>Name</span></span>,
+    },
+    {
+      text: <span>Increase Your Sales With  <br />Company <span className='text-blue-500 italic'>Name</span></span>,
+    },
+  ]);
   const [googleData, setGoogleData] = useState([]);
   const [mapData, setMapData] = useState([]);
   const [googleAllData, setGoogleAllData] = useState([]);
@@ -22,7 +40,6 @@ export const UserProvider = ({ children }) => {
   const [queryBox, setQueryBox] = useState([]);
   const [queryMapBox, setQueryMapBox] = useState([]);
   const [tempData, setTempData] = useState([]);
-  const [usersData, setUsersData] = useState([]);
   const [freeData, setFreeData] = useState({gData:[], mData:[]});
   const [network, setNetwork] = useState(false);
   const [net, setNet] = useState(network);
@@ -104,6 +121,157 @@ export const UserProvider = ({ children }) => {
     setVerify(true)
   },[])
 
+  function waitForInternetConnection(retryInterval = 5000) {
+      return new Promise(resolve => {
+        const checkConnection = () => {
+        if (navigator.onLine) {
+          resolve();
+        } else {
+          console.log('🌐 Waiting for internet...');
+          setTimeout(checkConnection, retryInterval);
+        }
+        };
+        checkConnection();
+      });
+  }
+
+  const Youtube = <i className="ri-youtube-line side-menu__icon"></i>;
+  const Email = <i className="ri-mail-line side-menu__icon"></i>;
+  const Phone = <i className="ri-phone-line side-menu__icon"></i>;
+  const [ logo, setLogo ] = useState({light: "/uploads/light.png", dark: "/uploads/dark.png"})
+  const [ resellerContact, setResellerContact ] = useState([
+    {
+      menutitle: "support",
+    },
+  
+    { path: `tel:`, icon: Phone, title: "Call Us", type: "link", active: false, selected: false },
+  
+    { path: `mailto:`, icon: Email, title: "Email Us", type: "link", active: false, selected: false },	
+  ])
+
+  const [ userProfileDetails, setUserProfileDetails ] = useState({phone: "", email: "", address: "", city: "", state: "", pin: "", country: "", company_name: "", company_year: ""})
+
+  const [ resellerContactInfo, setResellerContactInfo ] = useState({email: "", phone: ""})
+  const [ companyDetails, setCompanyDetails ] = useState({company_name: "", company_year: ""})
+
+  const [ isLoading, setIsLoading ] = useState(false)
+  const [ yt_links, setYt_Links ] = useState({
+    live_scraping: "XjvB_8ytM58",
+    live_data: "ml-Jwi1ktlY",
+    bing: "FzhB9wRwZlA",
+    google: "t_ziUplJMjc",
+    mode: "qkmjSmuPhc4",
+    yahoo: "w15iPuDbtBo",
+    duck: "dERJQhBtSd0",
+    map: "IHf_YM-Voqk",
+    facebook: "S9xClhXFAu0",
+    youtube: "6S46UhmaSwg",
+    website_data: "FvonHQhouGI",
+    directory: "6GR_rHwR-r0",
+    document: "1TrNt8Szv7Y",
+    image: "uGlkLHHHXSw",
+    whois: "4hmndvMq1rQ",
+    installation: "jLI0zULD6cw"
+  })
+  const [ yt_channel, setYt_Channel ] = useState("https://www.youtube.com/@designcollection6499")
+  const [ DOCS, setDOCS] = useState([
+    {
+      menutitle: "DOCS",
+    },
+  
+    { path: yt_channel, icon: Youtube, title: "Watch on YouTube", type: "link", active: false, selected: false },
+  ]);
+  const [ years, setYears ] = useState([]);
+  
+  useEffect(()=>{
+    const getProfile = async ()=>{
+      try {
+        setIsLoading(true)
+        const getData = await axios.post('/api/get_profile')
+        const data = getData.data;
+        if(data){
+          // setLogo({light: data.imageLight, dark: data.imageDark})
+          const newData = [
+            {
+              menutitle: "support",
+            },
+          
+            { path: `tel:${data.phone[0]}`, icon: Phone, title: "Call Us", type: "link", active: false, selected: false },
+          
+            { path: `mailto:${data.email[0]}`, icon: Email, title: "Email Us", type: "link", active: false, selected: false },	
+          ]
+          if(user.email === data.email[0] && user.reseller){
+            setUserProfileDetails({ phone: data.phone[0], email: data.email[0], address: data.address, city: data.city, state: data.state, pin: data.pin, country: {label: data.country, value: data.country}, company_name: data.company, company_year: {label: data.company_year, value: data.company_year}})
+          }
+          const ytChannel = data.youtubeChannel.filter(chn=>chn).length
+          setCompanyDetails({company_name: data.company, company_year: {label: data.company_year, value: data.company_year}})
+          setResellerContactInfo({phone: data.phone[0], email: data.email[0]})
+          setResellerContact(newData)
+          setYt_Channel(ytChannel ? data.youtubeChannel[0] : "https://www.youtube.com/@ClipCloud-m3t")
+          setDOCS([
+            {
+              menutitle: "DOCS",
+            },
+          
+            { path: ytChannel ? data.youtubeChannel[0] : "https://www.youtube.com/@ClipCloud-m3t", icon: Youtube, title: "Watch on YouTube", type: "link", active: false, selected: false },
+          ])
+          const resellerYoutubeObj = JSON.parse(data.youtubeLinks);
+          const newYoutubeObj = Object.keys(resellerYoutubeObj).reduce((acc, key) => {
+            acc[key] = resellerYoutubeObj[key].replace("https://www.youtube.com/watch?v=", "");
+            return acc;
+          }, {});
+          const resellerYoutubeLen = Object.keys(newYoutubeObj).map(item=>newYoutubeObj[item]).filter(url=>url).length
+          setHeroContent([
+            {
+              text: <span className="capitalize">Enhance Your Marketing With  <br />{data.company}</span>,
+            },
+            {
+              text: <span className="capitalize">Boost Your Business With  <br />{data.company}</span>,
+            },
+            {
+              text: <span className="capitalize">Increase Your Sales With  <br />{data.company}</span>,
+            },
+          ])
+          setYt_Links(
+            resellerYoutubeLen ? newYoutubeObj :
+            {
+              live_scraping: "Ls-FfPTmuDU",
+              live_data: "QNEtI_b3zOY",
+              bing: "plZ8Jgbc5Fo",
+              google: "UDVS9GvCQ9c",
+              mode: "guM7r-UIN-Y",
+              yahoo: "rA_Uj-p7OBw",
+              duck: "IsTXALXQIL4",
+              map: "-gkZGKExP-4",
+              facebook: "iv9bJRcsP7Y",
+              youtube: "ZatCD6KfYv0",
+              website_data: "hBQezVYKatw",
+              directory: "xnDlalSMNdk",
+              document: "UCuamwNuO2M",
+              image: "B13KxuDkY98",
+              whois: "_w0iMP95G-A",
+              installation: "tOLGsRr9V5Q"
+            }
+          )
+        }
+      } catch (error) {
+        console.log(error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    if(user.reseller){
+      let date = new Date()
+      let totalYears = []
+      for(let i = 2000; i <= date.getFullYear(); i++){
+        totalYears.push({ label: i, value: i})
+      }
+      setYears(totalYears)
+    }
+    getProfile()
+  }, [])
+
   // Load user data from local storage when cOthe app starts
   useEffect(() => {
     const isUserAuthenticated = Cookies.get('authToken');
@@ -113,10 +281,14 @@ export const UserProvider = ({ children }) => {
     );
     isVerified ? setIsVerified(true) : setIsVerified(false);
     const storedUser = JSON.parse(localStorage.getItem("user"));
+    const local_user = JSON.parse(localStorage.getItem("local_user"));
     if (storedUser) {
       setUser(storedUser);
       setIsAdmin(storedUser.admin);
     };
+    if(local_user){
+      setLocalUser(local_user)
+    }
 
     const purchaseCode = Cookies.get('purchaseCode');
     if (purchaseCode) {
@@ -145,38 +317,11 @@ export const UserProvider = ({ children }) => {
     }
   }, []);
 
-  useEffect(()=>{
-    const fetchUsers = async ()=>{
-      try {
-        // setIsLoading(true)
-        const users = await resellerUsers()
-        const user_data = users.data.data
-        if(user_data.length){
-          const convert_data = user_data.map(({id, email, name, purchase_code, verified}, ind)=>{
-            return {
-              sn: ind + 1,
-              user_id: id,
-              name,
-              email,
-              access_code: purchase_code,
-              verified
-            }
-          })
-          setUsersData(convert_data)
-        }
-      } catch (error) {
-        console.log(error)
-      } finally {
-        // setIsLoading(false)
-      }
-    } 
-    fetchUsers()
-  }, [])
-
   // Update user state and local storage when the user logs in
-  const handleSignIn = (userData, verified) => {
+  const handleSignIn = (userData, local_user, verified) => {
     setUser(userData);
     localStorage.setItem("user", JSON.stringify(userData));
+    localStorage.setItem("local_user", JSON.stringify(local_user));
     setIsAuthenticated(true); // Set authentication to true when user signs in
     localStorage.setItem("isAuthenticated", JSON.stringify(true));
     if (verified) {
@@ -229,9 +374,7 @@ export const UserProvider = ({ children }) => {
   
   const dashboardRecords = (service, exceptService, usedService, website, email, phone)=>{
     const totalUsedService = usedService;
-    const totalDataScraped = website + email + phone;
     const recordsMap = {
-        "total": totalDataScraped,
         "website": website,
         "email": email,
         "phone": phone,
@@ -266,6 +409,13 @@ export const UserProvider = ({ children }) => {
     subscribed_users: 0
   });
   
+  const saveData = async (data, fileName="data")=>{
+    try {
+      await axios.post("/api/saved", { data, fileName })
+    } catch (error) {
+      console.log(`e`)
+    }
+  }
 
   const manipulateUserData = (user, ind)=>{
       const { name, email, verified, purchase_code, updated_at } = user;
@@ -346,7 +496,7 @@ export const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ user, usersData, limitErr, snackMessage, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail }}
+      value={{ HeroContent, user, localUser, logo, years, DOCS, yt_channel, yt_links, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail }}
     >
       {children}
     </UserContext.Provider>

@@ -1,15 +1,3 @@
-export const HeroContent = [
-  {
-    text: <span>Enhance Your Marketing With  <br />Scrape <span className='text-blue-500 italic'>Genius</span></span>,
-  },
-  {
-    text: <span>Boost Your Business With  <br />Scrape <span className='text-blue-500 italic'>Genius</span></span>,
-  },
-  {
-    text: <span>Increase Your Sales With  <br />Scrape <span className='text-blue-500 italic'>Genius</span></span>,
-  },
-];
-
 // Tab data including icons and content for each tab
 export const tabs = [
   {

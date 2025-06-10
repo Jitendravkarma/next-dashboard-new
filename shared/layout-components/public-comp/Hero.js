@@ -1,10 +1,11 @@
 "use client"
 import React, { useEffect, useState } from "react";
-import { HeroContent } from "@/shared/data/static-content/public";
 import PrimaryButton from "./PrimaryButton";
+import { useUserContext } from "@/shared/userContext/userContext";
 
 
 const HeroSection = () => {
+  const { HeroContent } = useUserContext()
   const [currentText, setCurrentText] = useState(HeroContent[0].text);
   const [fadeClass, setFadeClass] = useState("fade-in");
   const [index, setIndex] = useState(0);

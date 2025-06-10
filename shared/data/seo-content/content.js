@@ -1,6 +1,6 @@
 export const seo_home = {
-    title: `Simple Data Scraping Made Possible by Scrape Genius`,
-    description: `Scrape Genius – The ultimate web scraping and data extraction tool for Google Search, Google Maps, Websites, Documents, Images, Business Directories and Whois Domains. Automated data collection for lead generation, market research and business intelligence.`,
+    title: `Simple Data Scraping Made`,
+    description: `The ultimate web scraping and data extraction tool for Google Search, Google Maps, Websites, Documents, Images, Business Directories and Whois Domains. Automated data collection for lead generation, market research and business intelligence.`,
     keywords: `Web scraping tool, data extraction software, lead generation automation, Google search scraper, business contact scraper, web crawler service, online data mining`,
     // openGraph: {
     //     title: "About Us - My Website",
@@ -29,15 +29,15 @@ export const seo_home = {
 }
 
 export const seo_pricing = {
-    title: `Pricing - Scrape Genius`,
-    description: `Explore Scrape Genius's pricing plans and choose the best web scraping solution for your needs. Affordable plans for Google Search Scraper, Google Maps Scraper, Website Data Scraper, Whois Domain Lookup, and more. Start extracting data today!`,
+    title: `Pricing`,
+    description: `Explore pricing plans and choose the best web scraping solution for your needs. Affordable plans for Google Search Scraper, Google Maps Scraper, Website Data Scraper, Whois Domain Lookup, and more. Start extracting data today!`,
     keywords: `Web scraping pricing, data extraction cost, web crawler subscription, lead generation tool pricing, affordable web scraper, pricing plans for data mining, scraping service cost`
 }
 
 export const seo_about = {
     title: `About Us - Your Source for Data Scraping Tools & Services`,
-    description: `Learn more about Scrape Genius – a powerful web scraping solution designed to automate data extraction from Google Search, Google Maps, websites, documents, and more. Explore our mission, technology and expertise in data mining and automation.`,
-    keywords: `About Scrape Genius, web scraping company, data extraction experts, automated lead generation, business data mining, advanced web crawler, scraping solutions`
+    description: `Learn more about – a powerful web scraping solution designed to automate data extraction from Google Search, Google Maps, websites, documents, and more. Explore our mission, technology and expertise in data mining and automation.`,
+    keywords: `Web scraping company, data extraction experts, automated lead generation, business data mining, advanced web crawler, scraping solutions`
 }
 
 export const seo_contact = {

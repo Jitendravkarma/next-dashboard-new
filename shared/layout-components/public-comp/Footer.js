@@ -2,8 +2,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useUserContext } from "@/shared/userContext/userContext";
 
 export default function Footer() {
+  const { isLoading, logo } = useUserContext()
   const [showGoTop, setShowGoTop] = useState(false);
 
   const handleVisibleButton = () => {
@@ -74,14 +76,16 @@ export default function Footer() {
           <div className="grid grid-cols-12 gap-0 xl:gap-0 xl:space-x-10">
             <div className="col-span-12 xl:col-span-5 flex flex-col gap-5">
               <div className="mr-auto">
-                <Link href="/">
-                  <img
-                    src="/assets/img/brand-logos/desktop-logo.png"
-                    alt="Site logo"
-                    width={150}
-                    height={150}
-                  />
-                </Link>
+                {
+                  isLoading ? 
+                  <div className="pl-0 p-1 h-10 w-36 mx-auto">
+                    <div className="rounded bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse h-full w-full"/>
+                  </div>
+                  :
+                  <Link className="responsive-logo-dark" href={"/dashboard/home"} aria-label="Brand">
+                    <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" />
+                  </Link>
+                }
               </div>
               <p>
                 Scrape Genius provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.

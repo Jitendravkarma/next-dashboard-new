@@ -1,0 +1,38 @@
+{
+  "email": [
+    "allmysource@gmail.com"
+  ],
+  "phone": [
+    "+919876543210"
+  ],
+  "address": [
+    "pune, mumbai"
+  ],
+  "company": [
+    "Neural netics"
+  ],
+  "company_year": [
+    "2015"
+  ],
+  "country": [
+    "India"
+  ],
+  "city": [
+    "mumbai"
+  ],
+  "state": [
+    ""
+  ],
+  "pin": [
+    ""
+  ],
+  "youtubeLinks": [
+    "{\"installation\":\"https://www.youtube.com/watch?v=jLI0zULD6cw\",\"mode\":\"https://www.youtube.com/watch?v=qkmjSmuPhc4\",\"live_scraping\":\"https://www.youtube.com/watch?v=XjvB_8ytM58\",\"live_data\":\"https://www.youtube.com/watch?v=ml-Jwi1ktlY\",\"bing\":\"https://www.youtube.com/watch?v=FzhB9wRwZlA\",\"google\":\"https://www.youtube.com/watch?v=t_ziUplJMjc\",\"yahoo\":\"https://www.youtube.com/watch?v=w15iPuDbtBo\",\"duck\":\"https://www.youtube.com/watch?v=dERJQhBtSd0\",\"map\":\"https://www.youtube.com/watch?v=IHf_YM-Voqk\",\"facebook\":\"https://www.youtube.com/watch?v=S9xClhXFAu0\",\"youtube\":\"https://www.youtube.com/watch?v=6S46UhmaSwg\",\"website_data\":\"https://www.youtube.com/watch?v=FvonHQhouGI\",\"directory\":\"https://www.youtube.com/watch?v=6GR_rHwR-r0\",\"document\":\"https://www.youtube.com/watch?v=1TrNt8Szv7Y\",\"image\":\"https://www.youtube.com/watch?v=uGlkLHHHXSw\",\"whois\":\"https://www.youtube.com/watch?v=4hmndvMq1rQ\"}"
+  ],
+  "youtubeChannel": [
+    "https://www.youtube.com/@designcollection6499"
+  ],
+  "imageLight": "/uploads/light.png",
+  "imageDark": "/uploads/dark.png",
+  "createdAt": "2025-06-08T11:05:23.828Z"
+}

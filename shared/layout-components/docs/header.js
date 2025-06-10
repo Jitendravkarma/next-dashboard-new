@@ -7,9 +7,11 @@ import Modalsearch from "../modal-search/modalsearch";
 import store from "@/shared/redux/store";
 import Link from "next/link";
 import { basePath } from "@/next.config";
+import { useUserContext } from "@/shared/userContext/userContext";
 
 const Header = ({ local_varaiable, ThemeChanger }) => {
 
+    const { isLoading, logo } = useUserContext()
     let [storedata, SetStoreData] = useState(local_varaiable);
 
     useEffect(() => {
@@ -230,10 +232,19 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                         </div>
 
                         <div className="responsive-logo">
-                            <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
-                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="mx-auto w-36" /></Link>
-                            <Link className="responsive-logo-light" href={"/"} aria-label="Brand">
-                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="mx-auto w-36" /></Link>
+                            {
+                                isLoading ? 
+                                <div className="pl-0 p-1 h-10 w-36 mx-auto">
+                                    <div className="rounded bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse h-full w-full"/>
+                                </div>
+                                :
+                                <>
+                                <Link className="responsive-logo-dark" href={"/dashboard/home"} aria-label="Brand">
+                                    <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" /></Link>
+                                <Link className="responsive-logo-light" href={"/dashboard/home"} aria-label="Brand">
+                                    <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" /></Link>
+                                </>
+                            }
                         </div>
 
                         <div className="header-right">

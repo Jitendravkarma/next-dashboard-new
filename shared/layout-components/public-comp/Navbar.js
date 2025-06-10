@@ -1,12 +1,11 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useUserContext } from "@/shared/userContext/userContext";
 
 export default function Header() {
-  const { isAuthenticated, handleSignOut } = useUserContext()
+  const { isAuthenticated, handleSignOut, isLoading, logo } = useUserContext()
   const { pathname, push } = useRouter()
   const menus = [
     { title: "home", url: "/" },
@@ -167,14 +166,16 @@ export default function Header() {
         <div className="flex justify-between items-center py-5">
           {/* Logo */}
           <div className="text-xl font-semibold">
-            <Link href="/">
-              <img
-                src="/assets/img/brand-logos/desktop-logo.png"
-                alt="Site logo"
-                width={150}
-                height={150}
-              />
-            </Link>
+            {
+							isLoading ? 
+							<div className="pl-0 p-1 h-10 w-36 mx-auto">
+								<div className="rounded bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse h-full w-full"/>
+							</div>
+							:
+              <Link className="responsive-logo-dark" href={"/dashboard/home"} aria-label="Brand">
+                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" />
+              </Link>
+            }
           </div>
 
           {/* Desktop Navigation */}
