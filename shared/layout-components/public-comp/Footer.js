@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useUserContext } from "@/shared/userContext/userContext";
+import { basePath } from "@/next.config";
 
 export default function Footer() {
   const { isLoading, logo } = useUserContext()

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useUserContext } from "@/shared/userContext/userContext";
+import { basePath } from "@/next.config";
 
 export default function Header() {
   const { isAuthenticated, handleSignOut, isLoading, logo } = useUserContext()
