@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import Cookies from 'js-cookie';
-import { getUserData } from "../apis/api";
+import { getUserData, resellerUsers } from "../apis/api";
 import axios from "axios";
 const UserContext = createContext();
 export const useUserContext = () => useContext(UserContext);
@@ -22,17 +22,6 @@ export const UserProvider = ({ children }) => {
     token: "",
     country: ""
   });
-  const [ HeroContent, setHeroContent ] = useState([
-    {
-      text: <span>Enhance Your Marketing With  <br />Company <span className='text-blue-500 italic'>Name</span></span>,
-    },
-    {
-      text: <span>Boost Your Business With  <br />Company <span className='text-blue-500 italic'>Name</span></span>,
-    },
-    {
-      text: <span>Increase Your Sales With  <br />Company <span className='text-blue-500 italic'>Name</span></span>,
-    },
-  ]);
   const [googleData, setGoogleData] = useState([]);
   const [mapData, setMapData] = useState([]);
   const [googleAllData, setGoogleAllData] = useState([]);
@@ -40,6 +29,7 @@ export const UserProvider = ({ children }) => {
   const [queryBox, setQueryBox] = useState([]);
   const [queryMapBox, setQueryMapBox] = useState([]);
   const [tempData, setTempData] = useState([]);
+  const [usersData, setUsersData] = useState([]);
   const [freeData, setFreeData] = useState({gData:[], mData:[]});
   const [network, setNetwork] = useState(false);
   const [net, setNet] = useState(network);
@@ -152,7 +142,8 @@ export const UserProvider = ({ children }) => {
   const [ userProfileDetails, setUserProfileDetails ] = useState({phone: "", email: "", address: "", city: "", state: "", pin: "", country: "", company_name: "", company_year: ""})
 
   const [ resellerContactInfo, setResellerContactInfo ] = useState({email: "", phone: ""})
-  const [ companyDetails, setCompanyDetails ] = useState({company_name: "", company_year: ""})
+  const [ companyDetails, setCompanyDetails ] = useState({company_name: "", company_year: "", company_address: ""})
+  const [ productUrl, setProductUrl ] = useState("")
 
   const [ isLoading, setIsLoading ] = useState(false)
   const [ yt_links, setYt_Links ] = useState({
@@ -172,6 +163,13 @@ export const UserProvider = ({ children }) => {
     image: "uGlkLHHHXSw",
     whois: "4hmndvMq1rQ",
     installation: "jLI0zULD6cw"
+  })
+  const [ dynamicSocialLinks, setDynamicSocialLinks ] = useState({
+    facebook: "",
+    instagram: "",
+    youtube: "",
+    twitter: "",
+    linkedin: ""
   })
   const [ yt_channel, setYt_Channel ] = useState("https://www.youtube.com/@designcollection6499")
   const [ DOCS, setDOCS] = useState([
@@ -204,10 +202,11 @@ export const UserProvider = ({ children }) => {
             setUserProfileDetails({ phone: data.phone[0], email: data.email[0], address: data.address, city: data.city, state: data.state, pin: data.pin, country: {label: data.country, value: data.country}, company_name: data.company, company_year: {label: data.company_year, value: data.company_year}})
           }
           const ytChannel = data.youtubeChannel.filter(chn=>chn).length
-          setCompanyDetails({company_name: data.company, company_year: {label: data.company_year, value: data.company_year}})
+          setCompanyDetails({company_name: data.company, company_address: data.address, company_year: {label: data.company_year, value: data.company_year}})
           setResellerContactInfo({phone: data.phone[0], email: data.email[0]})
           setResellerContact(newData)
           setYt_Channel(ytChannel ? data.youtubeChannel[0] : "https://www.youtube.com/@ClipCloud-m3t")
+          setProductUrl(data.productUrl[0])
           setDOCS([
             {
               menutitle: "DOCS",
@@ -221,17 +220,7 @@ export const UserProvider = ({ children }) => {
             return acc;
           }, {});
           const resellerYoutubeLen = Object.keys(newYoutubeObj).map(item=>newYoutubeObj[item]).filter(url=>url).length
-          setHeroContent([
-            {
-              text: <span className="capitalize">Enhance Your Marketing With  <br />{data.company}</span>,
-            },
-            {
-              text: <span className="capitalize">Boost Your Business With  <br />{data.company}</span>,
-            },
-            {
-              text: <span className="capitalize">Increase Your Sales With  <br />{data.company}</span>,
-            },
-          ])
+          setDynamicSocialLinks(JSON.parse(data.socialLinks))
           setYt_Links(
             resellerYoutubeLen ? newYoutubeObj :
             {
@@ -269,8 +258,33 @@ export const UserProvider = ({ children }) => {
       }
       setYears(totalYears)
     }
+    const fetchUsers = async ()=>{
+      try {
+        // setIsLoading(true)
+        const users = await resellerUsers()
+        const user_data = users.data.data
+        if(user_data.length){
+          const convert_data = user_data.map(({id, email, name, purchase_code, verified}, ind)=>{
+            return {
+              sn: ind + 1,
+              user_id: id,
+              name,
+              email,
+              access_code: purchase_code,
+              verified
+            }
+          })
+          setUsersData(convert_data)
+        }
+      } catch (error) {
+        console.log(error)
+      } finally {
+        // setIsLoading(false)
+      }
+    } 
+    fetchUsers()
     getProfile()
-  }, [])
+  }, [user])
 
   // Load user data from local storage when cOthe app starts
   useEffect(() => {
@@ -496,7 +510,7 @@ export const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ HeroContent, user, localUser, logo, years, DOCS, yt_channel, yt_links, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail }}
+      value={{ user, usersData, productUrl, localUser, logo, years, DOCS, yt_channel, yt_links, dynamicSocialLinks, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail }}
     >
       {children}
     </UserContext.Provider>

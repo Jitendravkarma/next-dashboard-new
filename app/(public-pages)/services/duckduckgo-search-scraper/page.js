@@ -127,7 +127,7 @@ const DuckDuckGo = () => {
       </section>
 
       <HowItWork scraperData={HowitworksDucksearchscraper} />
-      <VideoSection {...DuckScraperVideo} />
+      <VideoSection {...DuckScraperVideo} toolName={`duck`} />
       <FaqSection />
       <WhyChooseUs />
     </>

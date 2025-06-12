@@ -127,7 +127,7 @@ const FacebookScraper = () => {
       </section>
 
       <HowItWork scraperData={HowitworksFacebookscraper} />
-      <VideoSection {...FacebookScraperVideo} />
+      <VideoSection {...FacebookScraperVideo} toolName={`facebook`} />
       <FaqSection />
       <WhyChooseUs />
     </>

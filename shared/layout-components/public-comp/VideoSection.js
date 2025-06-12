@@ -1,7 +1,17 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useUserContext } from "@/shared/userContext/userContext";
 
-const VideoSection = ({ heading, videoUrl, buttonText, buttonLink }) => {
+const VideoSection = ({ heading, toolName, buttonText, buttonLink }) => {
+  const { yt_links } = useUserContext()
+  const [ videoLink, setVideoLink ] = useState("")
+  useEffect(()=>{
+    if(toolName && yt_links){
+      setVideoLink(yt_links[toolName])
+    }
+    console.log(yt_links)
+  }, [yt_links])
   return (
     <section className="py-14 lg:py-16 bg-soft">
       <div className="max-w-7xl lg:w-[70%] mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +25,7 @@ const VideoSection = ({ heading, videoUrl, buttonText, buttonLink }) => {
         <div className="w-full aspect-video rounded-md border-2 border-blue-500 border-dashed p-1">
           <iframe
             className="w-full h-full rounded-md"
-            src={`https://www.youtube.com/embed/${videoUrl}`} // Dynamic video URL
+            src={`https://www.youtube.com/embed/${videoLink}`} // Dynamic video URL
             title="Demo Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

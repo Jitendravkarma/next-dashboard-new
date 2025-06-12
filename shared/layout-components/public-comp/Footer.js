@@ -6,7 +6,7 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { basePath } from "@/next.config";
 
 export default function Footer() {
-  const { isLoading, logo } = useUserContext()
+  const { logo, resellerContactInfo, companyDetails, dynamicSocialLinks } = useUserContext()
   const [showGoTop, setShowGoTop] = useState(false);
 
   const handleVisibleButton = () => {
@@ -61,10 +61,10 @@ export default function Footer() {
     {
       title: "follow us",
       list: [
-        { title: "facebook", url: "https://www.facebook.com/designcollection.in" },
-        { title: "twitter", url: "https://x.com/mukesh019" },
-        { title: "youtube", url: "https://www.youtube.com/@designcollection6499" },
-        { title: "linkedin", url: "https://www.linkedin.com/company/designcollection/" }
+        { title: "facebook", url: dynamicSocialLinks.facebook },
+        { title: "twitter", url: dynamicSocialLinks.twitter },
+        { title: "youtube", url: dynamicSocialLinks.youtube },
+        { title: "linkedin", url: dynamicSocialLinks.linkedin }
       ],
     },
   ];
@@ -77,22 +77,15 @@ export default function Footer() {
           <div className="grid grid-cols-12 gap-0 xl:gap-0 xl:space-x-10">
             <div className="col-span-12 xl:col-span-5 flex flex-col gap-5">
               <div className="mr-auto">
-                {
-                  isLoading ? 
-                  <div className="pl-0 p-1 h-10 w-36 mx-auto">
-                    <div className="rounded bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse h-full w-full"/>
-                  </div>
-                  :
-                  <Link className="responsive-logo-dark" href={"/dashboard/home"} aria-label="Brand">
-                    <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" />
-                  </Link>
-                }
+                <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
+                  <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" />
+                </Link>
               </div>
               <p>
-                Scrape Genius provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
+                So Lets Talk Digital provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
               </p>
               <p>
-              © 2016. Design Collection Private Limited owns all rights. Creator of webcrawlerspider.com
+              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of webcrawlerspider.com
               </p>
             </div>
 
@@ -148,7 +141,7 @@ export default function Footer() {
 
       {/* Floating Contact and WhatsApp Buttons */}
       <Link
-        href="tel:+917987887047"
+        href={`tel:${resellerContactInfo.phone}`}
         className="fixed z-10 bottom-[4.5rem] xl:bottom-20 left-4 border-4 border-white rounded-md shadow-md flex items-center justify-center overflow-hidden w-12 h-12 hover:scale-110 bg-white transition-all duration-150"
         target="_blank"
         title="Contact Now"
@@ -162,7 +155,7 @@ export default function Footer() {
         />
       </Link>
       <Link
-        href="https://wa.me/917987887047"
+        href={`https://wa.me/${resellerContactInfo.phone.replace(/[\s()\-\+]/g, '')}`}
         className="fixed z-10 bottom-4 xl:bottom-6 left-4 border-4 border-white rounded-md shadow-md flex items-center justify-center overflow-hidden w-12 h-12 hover:scale-110 bg-white transition-all duration-150"
         target="_blank"
         title="WhatsApp Now"

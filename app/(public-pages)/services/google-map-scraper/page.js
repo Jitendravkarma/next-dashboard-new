@@ -129,7 +129,7 @@ const GoogleMapScraper = () => {
       </section>
 
       <HowItWork scraperData={HowitworksGooglesmapscraper} />
-      <VideoSection {...GooglesmapscraperVideo} />
+      <VideoSection {...GooglesmapscraperVideo} toolName={`map`} />
       <FaqSection />
       <WhyChooseUs />
     </>

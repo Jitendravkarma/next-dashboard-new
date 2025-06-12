@@ -127,7 +127,7 @@ const GoogleSearch = () => {
       </section>
 
       <HowItWork scraperData={HowitworksYahoosearchscraper} />
-      <VideoSection {...YahoosearchscraperVideo} />
+      <VideoSection {...YahoosearchscraperVideo} toolName={`yahoo`} />
       <FaqSection />
       <WhyChooseUs />
     </>

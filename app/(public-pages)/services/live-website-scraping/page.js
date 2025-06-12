@@ -127,7 +127,7 @@ const LiveWebsiteScraping = () => {
       </section>
 
       <HowItWork scraperData={HowitworksLiveScraping} />
-      <VideoSection {...LiveScraperVideo} />
+      <VideoSection {...LiveScraperVideo} toolName={`live_scraping`} />
       <FaqSection />
       <WhyChooseUs />
     </>

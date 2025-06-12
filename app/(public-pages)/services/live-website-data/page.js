@@ -129,7 +129,7 @@ const WebsiteDataCenter = () => {
       </section>
 
       <HowItWork scraperData={Howitworkswebsitedetacenter} />
-      <VideoSection {...LiveDataVideo} />
+      <VideoSection {...LiveDataVideo} toolName={`live_data`} />
       <FaqSection />
       <WhyChooseUs />
     </>

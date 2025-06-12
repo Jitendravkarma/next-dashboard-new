@@ -129,7 +129,7 @@ const ImageDataScraper = () => {
       </section>
 
       <HowItWork scraperData={HowitworksimageDataScraper} />
-      <VideoSection {...imageDataScraperVideo} />
+      <VideoSection {...imageDataScraperVideo} toolName={`image`} />
       <FaqSection />
       <WhyChooseUs />
     </>

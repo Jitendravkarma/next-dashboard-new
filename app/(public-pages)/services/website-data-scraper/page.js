@@ -129,7 +129,7 @@ const WebsiteScraper = () => {
       </section>
 
       <HowItWork scraperData={Howitworkswebsitedatascraper} />
-      <VideoSection {...websitedatascraperVideo} />
+      <VideoSection {...websitedatascraperVideo} toolName={`website_data`} />
       <FaqSection />
       <WhyChooseUs />
     </>

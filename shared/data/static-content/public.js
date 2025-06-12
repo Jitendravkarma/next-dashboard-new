@@ -1,4 +1,16 @@
 // Tab data including icons and content for each tab
+export const HeroContent = [
+    {
+      text: <span>Enhance Your Marketing With  <br />So Lets Talk Digital</span>,
+    },
+    {
+      text: <span>Boost Your Business With  <br />So Lets Talk Digital</span>,
+    },
+    {
+      text: <span>Increase Your Sales With  <br />So Lets Talk Digital</span>,
+    },
+]
+
 export const tabs = [
   {
     key: "Transform Your Deta",
@@ -42,7 +54,7 @@ export const tabs = [
       title:
         "Seamless and Reliable Data Extraction",
       description:
-      <span>Our platform ensures seamless data extraction with unmatched efficiency. With Scrape Genius's advanced Document Scraper service, extracting critical information such as email addresses and phone numbers has never been easier. Whether you're working with <b>.csv, .txt, .doc, .docx, .html</b>, or other file formats, our tool simplifies the process, providing a user-friendly and reliable solution. Trust in our proven expertise to deliver accurate and consistent results, empowering you with the data you need, precisely when you need it.</span>,
+      <span>Our platform ensures seamless data extraction with unmatched efficiency. With So Lets Talk Digital's advanced Document Scraper service, extracting critical information such as email addresses and phone numbers has never been easier. Whether you're working with <b>.csv, .txt, .doc, .docx, .html</b>, or other file formats, our tool simplifies the process, providing a user-friendly and reliable solution. Trust in our proven expertise to deliver accurate and consistent results, empowering you with the data you need, precisely when you need it.</span>,
       image: "/assets/img/data-extraction.png",
     },
   },
@@ -62,6 +74,7 @@ export const featurestemplates = [
     description:
       "Scrape data using keywords on Google to extract website names, emails, contact numbers, and more efficiently with this powerful web scraping tool.",
     youtube: "xJsktXJfZZ8",
+    toolName: "google"
   },
   {
     title: "Google Map Scraper",
@@ -76,6 +89,7 @@ export const featurestemplates = [
     description:
       "Google Map Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
     youtube: "BhI2KKoSj3Y",
+    toolName: "map"
   },
   {
     title: "Website Data Scraper",
@@ -90,6 +104,7 @@ export const featurestemplates = [
     description:
       "Gather country-specific domain records, including domain names, emails, and phone numbers, with our seamless website data scraper software.",
     youtube: "_sXWe4U2Cz8",
+    toolName: "website_data"
   },
   {
     title: "Document Data Scraper",
@@ -104,6 +119,7 @@ export const featurestemplates = [
     description:
       "Our document scraper handles .txt, .csv, .pdf, and more, efficiently extracting contact numbers and email addresses from various document types.",
     youtube: "NfOetsKFX_E",
+    toolName: "document"
   },
   {
     title: "Image Data Scraper",
@@ -118,6 +134,7 @@ export const featurestemplates = [
     description:
       "Upload any image to our image scraping tool to extract text or details efficiently, converting visuals into data to enhance your workflow.",
     youtube: "k_zh66JW-oU",
+    toolName: "image"
   },
   {
     title: "Business Directory Scraper",
@@ -132,6 +149,7 @@ export const featurestemplates = [
     description:
       "Easily scrape data by entering URLs of directories, including email IDs, contact numbers, and domain names for efficient business directory scraping.",
     youtube: "LW9_PAJhens",
+    toolName: "directory"
   },
   {
     title: "Website Data Center",
@@ -146,6 +164,7 @@ export const featurestemplates = [
     description:
       "Our Website Data Center allows quick searches by country and keyword, delivering results like URLs, emails, and phone numbers tailored to your needs.",
     youtube: "_sXWe4U2Cz8",
+    toolName: "live_data"
   },
   {
     title: "Whois Domain Database",
@@ -160,6 +179,7 @@ export const featurestemplates = [
     description:
       "Access our 8+ years of Whois database with raw data from APIs, filtered year-wise, offering an extensive and convenient search experience.",
     youtube: "iGRgQurIOPg",
+    toolName: "whois"
   },
 ];
 

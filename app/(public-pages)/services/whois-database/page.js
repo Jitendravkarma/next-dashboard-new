@@ -129,7 +129,7 @@ const WhoisDatabase = () => {
       </section>
 
       <HowItWork scraperData={Howitworkswhoisdetadownload} />
-      <VideoSection {...whoisdetadownloadVideo} />
+      <VideoSection {...whoisdetadownloadVideo} toolName={`whois`} />
       <FaqSection />
       <WhyChooseUs />
     </>

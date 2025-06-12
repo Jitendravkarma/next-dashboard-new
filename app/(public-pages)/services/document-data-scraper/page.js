@@ -129,7 +129,7 @@ const DocumentScraper = () => {
       </section>
 
       <HowItWork scraperData={Howitworksdocumentdatascraper} />
-      <VideoSection {...documentdatascraperVideo} />
+      <VideoSection {...documentdatascraperVideo} toolName={`document`} />
       <FaqSection />
       <WhyChooseUs />
     </>

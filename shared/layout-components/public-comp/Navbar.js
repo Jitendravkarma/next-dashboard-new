@@ -11,7 +11,7 @@ export default function Header() {
   const menus = [
     { title: "home", url: "/" },
     { title: "tools", url: "/services" },
-    { title: "pricing", url: "/pricing" },
+    // { title: "pricing", url: "/pricing" },
     // { title: "Docs", url: "/docs" },
     { title: "about", url: "/about" },
     { title: "signin", url: "/signin" },
@@ -167,16 +167,9 @@ export default function Header() {
         <div className="flex justify-between items-center py-5">
           {/* Logo */}
           <div className="text-xl font-semibold">
-            {
-							isLoading ? 
-							<div className="pl-0 p-1 h-10 w-36 mx-auto">
-								<div className="rounded bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse h-full w-full"/>
-							</div>
-							:
-              <Link className="responsive-logo-dark" href={"/dashboard/home"} aria-label="Brand">
+              <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
                 <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" />
               </Link>
-            }
           </div>
 
           {/* Desktop Navigation */}

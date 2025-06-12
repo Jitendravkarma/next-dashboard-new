@@ -127,7 +127,7 @@ const YoutubeScraper = () => {
       </section>
 
       <HowItWork scraperData={HowitworksYoutubescraper} />
-      <VideoSection {...YoutubeScraperVideo} />
+      <VideoSection {...YoutubeScraperVideo} toolName={`youtube`} />
       <FaqSection />
       <WhyChooseUs />
     </>

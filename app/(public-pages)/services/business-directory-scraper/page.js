@@ -129,7 +129,7 @@ const DirectoryScraper = () => {
       </section>
 
       <HowItWork scraperData={Howitworksbusinessdirectoryscraper} />
-      <VideoSection {...businessdirectoryscraperVideo} />
+      <VideoSection {...businessdirectoryscraperVideo} toolName={`directory`} />
       <FaqSection />
       <WhyChooseUs />
     </>

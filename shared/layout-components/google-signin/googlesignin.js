@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 import Snackbar from "../dashboard/SnackBar";
 
 const GoogleSignIn = () => {
-  const { handleSignIn, handleSignOut, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+  const { handleSignIn, handleSignOut, openSnack, snackMessage, openSnackBar, handleSnackMessage, resellerContactInfo } = useUserContext()
   const navigate = useRouter();
   useEffect(() => {
     // Load the Google Identity Services script
@@ -22,7 +22,7 @@ const GoogleSignIn = () => {
       //   console.log("Google ID Token:", idToken);
       handleSignOut();
       if (idToken) {
-        const token = { googletoken: idToken, ParentEmail: "support@designcollection.in" };
+        const token = { googletoken: idToken, ParentEmail: resellerContactInfo.email };
         try {
           const tokenResponse = await googleSignIn(token);
           if (tokenResponse) {

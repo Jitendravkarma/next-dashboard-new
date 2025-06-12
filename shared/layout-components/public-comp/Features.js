@@ -2,7 +2,9 @@
 import React from "react";
 import { featurestemplates } from "@/shared/data/static-content/public";
 import Link from "next/link";
+import { useUserContext } from "@/shared/userContext/userContext";
 const FeatureSection = () => {
+  const { yt_links } = useUserContext()
   return (
     <section className="py-14 lg:pt-[62px] bg-white relative">
       <div className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +33,7 @@ const FeatureSection = () => {
               <div className="flex items-center">
                 <a
                   className="pt-4 text-red-600 flex items-center text-sm space-x-2"
-                  href={`https://www.youtube.com/watch?v=${template.youtube}`}
+                  href={`https://www.youtube.com/watch?v=${yt_links[template.toolName]}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -14,15 +14,17 @@ const Profile = () => {
   const darkRef = useRef(null);
   const lightRef = useRef(null);
   const phoneRef = useRef(null);
-  const { user, setActivated, isActivated, openSnack, localUser, snackMessage, openSnackBar, yt_channel, yt_links, handleSnackMessage, years, userProfileDetails } = useUserContext()
+  const { user, setActivated, isActivated, openSnack, localUser, snackMessage, openSnackBar, yt_channel, yt_links, handleSnackMessage, years, userProfileDetails, productUrl, dynamicSocialLinks } = useUserContext()
   const [purchaseCode, setPurchaseCode] = useState("")
   const [ msg, setMsg] = useState(false)
   const [ isLoading, setIsLoading ] = useState(false)
   const [ hideYoutubeLinks, setHideYoutubeLinks ] = useState(true)
+  const [ hideSocialLinks, setSocialLinks ] = useState(true)
   const [ formData, setFormData] = useState({
     email: user.email, 
     phone: "", 
     address: "", 
+    productUrl: "",
     company: "", 
     company_year: "",
     country: "",
@@ -861,9 +863,17 @@ const Profile = () => {
     { toolName: "image data scraper", shortName: "image", value: `https://www.youtube.com/watch?v=B13KxuDkY98`, placeholder: `https://www.youtube.com/watch?v=B13KxuDkY98`},
     { toolName: "whois domain lookup", shortName: "whois", value: `https://www.youtube.com/watch?v=_w0iMP95G-A`, placeholder: `https://www.youtube.com/watch?v=_w0iMP95G-A`}
   ]
+  const defautlSocialLinks = [
+    { mediaName: "facebook", shortName: "facebook", value: ``, placeholder: ``},
+    { mediaName: "instagram", shortName: "instagram", value: ``, placeholder: ``},
+    { mediaName: "youtube", shortName: "youtube", value: ``, placeholder: ``},
+    { mediaName: "twitter", shortName: "twitter", value: ``, placeholder: ``},
+    { mediaName: "linkedin", shortName: "linkedin", value: ``, placeholder: ``}
+  ]
 
   const [ youtubeChannel, setYoutubeChannel ] = useState(yt_channel)
   const [ youtubeLinks, setYouTubeLinks ] = useState(defaultLinks)
+  const [ socialMediaLinks, setSocialMediaLinks ] = useState(defautlSocialLinks)
 
   const handleInputChange = (e)=>{
     const name = e.target.name;
@@ -917,7 +927,7 @@ const Profile = () => {
     }
   }
 
-  const handleLinkChange = (e)=>{
+  const handleYoutubeLinkChange = (e)=>{
     const name = e.target.name
     const value = e.target.value
     if(name.toLowerCase() === "youtube channel"){
@@ -931,13 +941,22 @@ const Profile = () => {
     }
   }
 
+  const handleSocialLinkChange = (e)=>{
+    const name = e.target.name
+    const value = e.target.value
+    setSocialMediaLinks(cur=>{
+      const newData = cur.map(item=>({...item, value: item.mediaName === name ? value : item.value}))
+      return newData
+    })
+  }
+
   const handleDefaultLinks = ()=>{
     setYoutubeChannel("https://www.youtube.com/@ClipCloud-m3t")
     setYouTubeLinks(defaultLinks)
   }
 
   const watchPreviewVideo = (link)=>{
-    if(link && link.includes('https://www.youtube.com')){
+    if(link && (link.includes('https://www.youtube.com') || link.includes('https://drive.google.com/drive'))){
       const anchor = document.createElement('a')
       anchor.href = link;
       anchor.target = "_blank"
@@ -945,7 +964,7 @@ const Profile = () => {
     }
     else {
       openSnackBar();
-      handleSnackMessage("Invalid YouTube URL.", "danger", "text-white")
+      handleSnackMessage("Invalid or Missing URL.", "danger", "text-white")
     }
   }
 
@@ -956,7 +975,7 @@ const Profile = () => {
   
   const handleSubmit  = async ()=>{
     let phone = formData.phone
-    if(phone && formData.address && formData.city && formData.country.value){
+    if(user.email === "info@soletstalkdigital.com" && phone && formData.address && formData.city && formData.country.value){
       if (!phone.startsWith('+')) {
         openSnackBar();
         handleSnackMessage("Please enter a valid phone number including your country code (e.g., +91).", "danger", "text-white")
@@ -985,6 +1004,14 @@ const Profile = () => {
             try {
               setIsLoading(true)
               // const links = youtubeLinks.map(item=>({ toolName: item.shortName, url:item.value }))
+              const customSocialLinks = {
+                facebook: socialMediaLinks[0].value,
+                instagram: socialMediaLinks[1].value,
+                youtube: socialMediaLinks[2].value,
+                twitter: socialMediaLinks[3].value,
+                linkedin: socialMediaLinks[4].value
+              }
+
               const links = {
                 installation: youtubeLinks[0].value,
                 mode: youtubeLinks[1].value,
@@ -1004,6 +1031,7 @@ const Profile = () => {
                 whois: youtubeLinks[15].value
               }
               collectedData.append("youtubeLinks", JSON.stringify(links))
+              collectedData.append("socialLinks", JSON.stringify(customSocialLinks))
               collectedData.append("youtubeChannel", youtubeChannel)
               await axios.post(`/api/save_profile`, collectedData, {
                 headers: {
@@ -1068,10 +1096,23 @@ const Profile = () => {
   }, [yt_links])
 
   useEffect(()=>{
+    setSocialMediaLinks(
+      [
+        { mediaName: "facebook", shortName: "facebook", value: dynamicSocialLinks.facebook, placeholder: ``},
+        { mediaName: "instagram", shortName: "instagram", value: dynamicSocialLinks.instagram, placeholder: ``},
+        { mediaName: "youtube", shortName: "youtube", value: dynamicSocialLinks.youtube, placeholder: ``},
+        { mediaName: "twitter", shortName: "twitter", value: dynamicSocialLinks.twitter, placeholder: ``},
+        { mediaName: "linkedin", shortName: "linkedin", value: dynamicSocialLinks.linkedin, placeholder: ``}
+      ]
+    )
+  }, [dynamicSocialLinks])
+
+  useEffect(()=>{
     setFormData({
       email: user.email, 
       phone: userProfileDetails.phone, 
       address: userProfileDetails.address, 
+      productUrl,
       company: userProfileDetails.company_name, 
       company_year: userProfileDetails.company_year,
       country: userProfileDetails.country,
@@ -1081,7 +1122,7 @@ const Profile = () => {
       light: null, 
       dark: null
     })
-  }, [userProfileDetails])
+  }, [productUrl, userProfileDetails])
 
   return (
     <div>
@@ -1172,7 +1213,7 @@ const Profile = () => {
                                 YouTube Channel
                                 <button className="text-blue-500 hover:underline" onClick={()=>watchPreviewVideo(youtubeChannel)} title="Visit Channel">Preview URL</button>
                               </label>
-                              <input type="text" name={"YouTube Channel"} value={youtubeChannel} onChange={handleLinkChange} className={`my-auto ti-form-input ${!youtubeChannel && "bg-gray-100"}`} placeholder={youtubeChannel} />
+                              <input type="text" name={"YouTube Channel"} value={youtubeChannel} onChange={handleYoutubeLinkChange} className={`my-auto ti-form-input ${!youtubeChannel && "bg-gray-100"}`} placeholder={youtubeChannel} />
                             </div>
                             {
                               youtubeLinks.map(({toolName, value, placeholder}, ind)=>(
@@ -1181,7 +1222,44 @@ const Profile = () => {
                                     {toolName}
                                     <button className="text-blue-500 hover:underline" onClick={()=>watchPreviewVideo(value)} title={`Watch ${toolName} video before saving`}>Preview URL</button>
                                   </label>
-                                  <input type="text" name={toolName} value={value} onChange={handleLinkChange} className={`my-auto ti-form-input ${!value && "bg-gray-100"}`} placeholder={placeholder} />
+                                  <input type="text" name={toolName} value={value} onChange={handleYoutubeLinkChange} className={`my-auto ti-form-input ${!value && "bg-gray-100"}`} placeholder={placeholder} />
+                                </div>
+                              ))
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-span-12">
+            <div className="box">
+              <div className="box-body p-0">
+                <div id="uploadlogo-1" role="tabpanel" aria-labelledby="uploadlogo-item-1">
+                  <div className="box border-0 shadow-none mb-0">
+                    <div className="box-header flex justify-between gap-2 items-center flex-wrap">
+                      <h5 className="box-title leading-none flex"><i className="ri-facebook-fill ltr:mr-2 rtl:ml-2"></i> Social Media Links</h5>
+                      <span className="flex items-center gap-1">
+                        <button className="text-blue-500 hover:underline" onClick={()=>setSocialLinks(!hideSocialLinks)}>{hideSocialLinks ? 'Edit' : 'Hide'} Links</button>
+                        <i className="ri-question-line text-lg cursor-pointer" title="Upload Social Media Links."/>
+                      </span>
+                    </div>
+                    {
+                      !hideSocialLinks &&
+                      <div className="box-body">
+                        <div>
+                          <div className="grid lg:grid-cols-2 gap-6">
+                            {
+                              socialMediaLinks.map(({mediaName, value, placeholder}, ind)=>(
+                                <div className="space-y-2" key={ind}>
+                                  <label className="ti-form-label mb-0 capitalize flex justify-between items-center gap-2">
+                                    {mediaName} Profile
+                                    <button className="text-blue-500 hover:underline" onClick={()=>watchPreviewVideo(value)} title={`Watch ${mediaName} video before saving`}>Preview URL</button>
+                                  </label>
+                                  <input type="text" name={mediaName} value={value} onChange={handleSocialLinkChange} className={`my-auto ti-form-input ${!value && "bg-gray-100"}`} placeholder={placeholder} />
                                 </div>
                               ))
                             }
@@ -1233,27 +1311,36 @@ const Profile = () => {
                               }
                             </span>
                           </div>
-                          {
-                            user.reseller &&
-                            <>
-                              <div className="space-y-2">
-                                <label className="ti-form-label mb-0">Company Name</label>
-                                <input type="text" className="my-auto capitalize ti-form-input disabled:bg-gray-100 disabled:cursor-not-allowed" value={formData.company} name="company" onChange={handleInputChange}  placeholder="Ex. XYZ Pvt. Ltd." />
-                              </div>
-                              <div className="space-y-2">
-                                <label className="ti-form-label mb-0">Company Registered</label>
-                                <Select classNamePrefix='react-select' id='react-select-3-live-region' value={formData.company_year} options={years} placeholder='Select Year' onChange={handleYear} />
-                              </div>
-                            </>
-                          }
+                          <div className="space-y-2">
+                            <label className="ti-form-label mb-0">Company Name</label>
+                            <input type="text" className="my-auto capitalize ti-form-input disabled:bg-gray-100 disabled:cursor-not-allowed" value={formData.company} name="company" onChange={handleInputChange}  placeholder="Ex. XYZ Pvt. Ltd." />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="ti-form-label mb-0">Company Registered</label>
+                            <Select classNamePrefix='react-select' id='react-select-3-live-region' value={formData.company_year} options={years} placeholder='Select Year' onChange={handleYear} />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="ti-form-label mb-0">Address</label>
+                            <textarea rows={1} type="text" name="address" value={formData.address} onChange={handleInputChange} className="my-auto capitalize ti-form-input disabled:bg-gray-100 disabled:cursor-not-allowed" placeholder="Ex. Street address, city, state ZIP"  />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="ti-form-label mb-0 capitalize flex justify-between items-center gap-2">
+                              <span>
+                                Product URL{" "}
+                                <i className="ri-question-line cursor-pointer font-bold hover:font-normal" title="Provide a URL where the user can download the product file."/>
+                              </span>
+                              <button className="text-blue-500 hover:underline" onClick={()=>watchPreviewVideo(formData.productUrl)} title="Visit Product URL">Preview URL</button>
+                            </label>
+                            <input type="text" name="productUrl" value={formData.productUrl} onChange={handleInputChange} className="my-auto ti-form-input disabled:bg-gray-100 disabled:cursor-not-allowed" placeholder="https://drive.google.com/drive/u/1/folders/1seb7VCWi662S0XlvK2rrOcldQQ7R1Iu6"  />
+                          </div>
                         </div>
-                        <div className="my-5">
+                        {/* <div className="my-5">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Address</label>
                             <input type="text" name="address" value={formData.address} onChange={handleInputChange} className="my-auto capitalize ti-form-input disabled:bg-gray-100 disabled:cursor-not-allowed" placeholder="Ex. Street address, city, state ZIP"  />
                           </div>
-                        </div>
-                        <div className="grid lg:grid-cols-2 gap-6">
+                        </div> */}
+                        <div className="my-5 grid lg:grid-cols-2 gap-6">
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">City</label>
                             <input type="text" name="city" value={formData.city} onChange={handleInputChange} className="my-auto capitalize ti-form-input disabled:bg-gray-100 disabled:cursor-not-allowed" placeholder="Enter city"  />

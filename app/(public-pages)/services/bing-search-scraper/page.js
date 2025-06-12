@@ -127,7 +127,7 @@ const BingSearch = () => {
       </section>
 
       <HowItWork scraperData={HowitworksBingsearchscraper} />
-      <VideoSection {...BingsearchscraperVideo} />
+      <VideoSection {...BingsearchscraperVideo} toolName={`bing`} />
       <FaqSection />
       <WhyChooseUs />
     </>
