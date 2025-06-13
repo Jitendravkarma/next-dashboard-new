@@ -13,7 +13,7 @@ import { redirect } from "next/navigation";
 
 const Contentlayout = ({ children }) => {
 	const { user } = useUserContext()
-	const token = "support@leadscraper.in";
+	const token = "info@soletstalkdigital.com";
 	if(token !== user.email){
 		redirect("/signin")
 	}

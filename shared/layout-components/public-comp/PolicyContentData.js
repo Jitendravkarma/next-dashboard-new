@@ -117,7 +117,7 @@ const PolicyContentData = () => {
       title:"Shipping and Delivery Policy", 
       description:
       <p className="text-xss font-light leading-normal">
-        At Lead Data, we provide digital products and services that are delivered electronically. Below is our Shipping and Delivery Policy outlining how we process and deliver our services.
+        At So Lets Talk Data, we provide digital products and services that are delivered electronically. Below is our Shipping and Delivery Policy outlining how we process and deliver our services.
       </p>, 
       list: true, 
       listItems: [

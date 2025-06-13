@@ -34,8 +34,8 @@ const About = () => {
                 </p>
               ))}
 
-              {/* About Us - What is Lead Data */}
-              <h2 className='text-2xl lg:text-3xl font-bold  mt-16 uppercase'>What is Lead Data?</h2>
+              {/* About Us - What is So Lets Talk Data */}
+              <h2 className='text-2xl lg:text-3xl font-bold  mt-16 uppercase'>What is So Lets Talk Data?</h2>
               {aboutuswebcontent.map((content, index) => (
                 <p key={index} className='text-black text-base font-light my-7'>
                   {content}
