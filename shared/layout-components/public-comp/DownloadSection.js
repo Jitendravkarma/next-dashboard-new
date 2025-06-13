@@ -102,7 +102,7 @@ const DownloadSection = () => {
           {/* Logout Button */}
           <div className="flex justify-between items-center mb-6">
             {
-              (user.reseller && user.email === "info@soletstalkdigital.com") && 
+              (user.reseller && user.email === "wiseloktechsolution@gmail.com") && 
               <Link href={"/reseller/dashboard"} title='Visit reseller dashboard' target='_blank' className='inline-block rounded-md duration-300 gap-2 hover:bg-indigo-500 hover:text-white items-center px-6 py-2 transition-all'>
                 <i className='ri-home-4-line text-lg'/> Reseller
               </Link>
@@ -123,7 +123,7 @@ const DownloadSection = () => {
 
           {/* Subtitle with Thanks Message */}
           <h2 className="text-indigo-700 text-xl mb-6 md:text-2xl">
-            Welcome to So Lets Talk Data!
+            Welcome to Scraper Tools!
           </h2>
 
           {/* Introduction Paragraph */}

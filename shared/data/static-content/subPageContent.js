@@ -1435,13 +1435,13 @@ export const Howitworkswebsitedetacenter = {
 
 // Dynamic data arrays
 export const aboutuswhowearecontent = [
-  "So Lets Talk Data specializes in management software, including our Google search scraper, Google map scraper, B2B directory scraper and more. We offer tools for data scraping, such as Document scrapers and image scraping tools. Our solutions streamline data collection for users worldwide.",
+  "Scraper Tools specializes in management software, including our Google search scraper, Google map scraper, B2B directory scraper and more. We offer tools for data scraping, such as Document scrapers and image scraping tools. Our solutions streamline data collection for users worldwide.",
   "Our mission is to make data collection as easy as possible. We offer an automated process that lets you quickly and easily grab data from the Internet, all in one convenient place.",
 ];
 
 export const aboutuswebcontent = [
-  "The So Lets Talk Data is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a Search Engine Scraper, B2B directory scraper and Bulk contact scraper enabling users to effortlessly gather essential information such as email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites and scrape from documents, it is invaluable for various data collection tasks.",
-  "Why struggle with complex tools when you can harness the simplicity and efficiency of the So Lets Talk Data? It streamlines the process of web scraping Google search scraper, Bing search scraper and supports document scraping for CSV, Excel, JSON and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
+  "The Scraper Tools is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a Search Engine Scraper, B2B directory scraper and Bulk contact scraper enabling users to effortlessly gather essential information such as email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites and scrape from documents, it is invaluable for various data collection tasks.",
+  "Why struggle with complex tools when you can harness the simplicity and efficiency of the Scraper Tools? It streamlines the process of web scraping Google search scraper, Bing search scraper and supports document scraping for CSV, Excel, JSON and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
 ];
 
 export const buttons = [

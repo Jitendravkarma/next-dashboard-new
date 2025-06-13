@@ -1,13 +1,13 @@
 // Tab data including icons and content for each tab
 export const HeroContent = [
     {
-      text: <span>Enhance Your Marketing With  <br />So Lets Talk Data</span>,
+      text: <span>Enhance Your Marketing With  <br />Scraper Tools</span>,
     },
     {
-      text: <span>Boost Your Business With  <br />So Lets Talk Data</span>,
+      text: <span>Boost Your Business With  <br />Scraper Tools</span>,
     },
     {
-      text: <span>Increase Your Sales With  <br />So Lets Talk Data</span>,
+      text: <span>Increase Your Sales With  <br />Scraper Tools</span>,
     },
 ]
 
@@ -54,7 +54,7 @@ export const tabs = [
       title:
         "Seamless and Reliable Data Extraction",
       description:
-      <span>Our platform ensures seamless data extraction with unmatched efficiency. With So Lets Talk Data's advanced Document Scraper service, extracting critical information such as email addresses and phone numbers has never been easier. Whether you're working with <b>.csv, .txt, .doc, .docx, .html</b>, or other file formats, our tool simplifies the process, providing a user-friendly and reliable solution. Trust in our proven expertise to deliver accurate and consistent results, empowering you with the data you need, precisely when you need it.</span>,
+      <span>Our platform ensures seamless data extraction with unmatched efficiency. With Scraper Tools's advanced Document Scraper service, extracting critical information such as email addresses and phone numbers has never been easier. Whether you're working with <b>.csv, .txt, .doc, .docx, .html</b>, or other file formats, our tool simplifies the process, providing a user-friendly and reliable solution. Trust in our proven expertise to deliver accurate and consistent results, empowering you with the data you need, precisely when you need it.</span>,
       image: "/assets/img/data-extraction.png",
     },
   },

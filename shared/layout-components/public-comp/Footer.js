@@ -82,10 +82,10 @@ export default function Footer() {
                 </Link>
               </div>
               <p>
-                So Lets Talk Data provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
+                Scraper Tools provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
               </p>
               <p>
-              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of So Lets Talk Data
+              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of Scraper Tools
               </p>
             </div>
 
