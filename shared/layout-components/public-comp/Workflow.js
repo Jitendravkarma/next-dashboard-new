@@ -101,7 +101,7 @@ const Workflow = () => {
       subtitle: "Seamless and Reliable Data Extraction",
       description:
       <span>
-          Our platform ensures seamless <b>data extraction</b> with unmatched efficiency. With <b>So Lets Talk Digital's</b> advanced <b>Document Scraper</b> service, extracting critical information such as email addresses and phone numbers has never been easier.
+          Our platform ensures seamless <b>data extraction</b> with unmatched efficiency. With <b>Lead Data's</b> advanced <b>Document Scraper</b> service, extracting critical information such as email addresses and phone numbers has never been easier.
           Whether you're working with <b>.csv</b>, <b>.txt</b>, <b>.doc</b>, <b>.docx</b>, <b>.html</b>, or other file formats, our tool simplifies the process, providing a <b>user-friendly</b> and reliable solution. 
           Trust in our proven expertise to deliver accurate and consistent results, empowering you with the data you need, precisely when you need it.
       </span>,

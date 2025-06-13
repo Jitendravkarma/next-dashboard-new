@@ -33,16 +33,16 @@ export default function Footer() {
 
   const footerLinks = [
     {
-      title: "Lead Generation",
+      title: "Top Services",
       list: [
         { title: "Google Search Scraper", url: "/services/google-search-scraper" },
         { title: "Google Map Scraper", url: "/services/google-map-scraper" },
         { title: "Website Data Scraper", url: "/services/website-data-scraper" },
-        { title: "Website Data Center", url: "/services/website-data-center" },
+        { title: "Live Data Center", url: "/services/website-data-center" },
         { title: "Document Data Scraper", url: "/services/document-data-scraper" },
         { title: "Image Data Scraper", url: "/services/image-data-scraper" },
         { title: "Business Directory Scraper", url: "/services/business-directory-scraper" },
-        { title: "Whois Data Download", url: "/services/whois-database" }
+        { title: "Whois Domain Lookup", url: "/services/whois-database" }
       ],
     },
     {
@@ -82,10 +82,10 @@ export default function Footer() {
                 </Link>
               </div>
               <p>
-                So Lets Talk Digital provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
+                Lead Data provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
               </p>
               <p>
-              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of webcrawlerspider.com
+              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of Lead Data
               </p>
             </div>
 
@@ -102,10 +102,10 @@ export default function Footer() {
                           list.map(({ title, url }, idx) => (
                             <div key={idx}>
                               <Link
-                                href={url}
+                                href={url ? url : "/reseller/profile"}
                                 target="_blank"
                                 aria-label={title}
-                                title={title}
+                                title={url ? `Visit ${title} profile` : `${title} profile not found`}
                                 className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "twitter" ? "hover:bg-gray-800" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
                               >
                                 <i className={`${title === "facebook" ? "ri-facebook-line" : title === "twitter" ? "ri-twitter-x-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>

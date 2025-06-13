@@ -20,7 +20,7 @@ const Docs = () => {
         <div className="max-w-screen-xl mx-auto px-4">
           {/* Heading and Subtitle */}
           <div className="text-center">
-            <h1 className="text-2xl sm:text-4xl text-gray-800 font-semibold">So Lets Talk Digital<br/>Documentation</h1>
+            <h1 className="text-2xl sm:text-4xl text-gray-800 font-semibold"><span className="text-blue-500">Lead Data</span><br/>Documentation</h1>
             <p className="text-gray-600 mt-4">
               An advanced web scraping solution that uses multiple legal tools to <br/> efficiently extract and manage data, ensuring full compliance with relevant regulations.
             </p>

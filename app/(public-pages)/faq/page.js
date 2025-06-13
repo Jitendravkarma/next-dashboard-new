@@ -47,20 +47,18 @@ const questions = [
         Yes, the <b>So Lets Talk Digital</b> has many tools and can scrape data in
         various ways, making it highly versatile. This includes tools like the{" "}
         <b>Google Search Scraper</b>, <b>Google Map Scraper</b>,{" "}
+        <b>IndiaMART Scraper</b>, <b>JustDial Scraper</b>,{" "}
         <b>Website Data Scraper</b>, <b>Whois Domain Data Scraper</b>,{" "}
         <b>Business Directory Scraper</b>, and <b>Document Data Scraper</b>.
         Additionally, it offers specialized features such as the{" "}
         <b>yellow pages scraper</b> for <b>yellow pages data extraction</b>,{" "}
         <b>whois database download</b> for <b>whois domain</b> information, and{" "}
-        <b>image scraper from website</b> for gathering visual data. Whether
-        you're looking to perform <b>business directory scraping</b>,{" "}
-        <b>web scraping yellow pages</b>, <b>scrape pdf files</b>, or{" "}
-        <b>scrape Instagram photos</b>, the <b>So Lets Talk Digital</b> provides
-        the tools you need. It’s compatible with advanced options like{" "}
-        <b>business directory scraper Python</b> and <b>web scraper Chrome</b>{" "}
-        extensions, as well as free tools such as{" "}
-        <b>yellow pages scraper free</b> and <b>online web scraper</b>{" "}
-        solutions. This makes it ideal for a variety of scraping tasks, from{" "}
+        <b>image data scraper</b> for gathering visual data. Whether
+        you're looking to perform,{" "}
+        <b>web scraping yellow pages</b>, or{" "}
+        the <b>So Lets Talk Digital</b> provides
+        the tools you need.
+        This makes it ideal for a variety of scraping tasks, from{" "}
         <b>scraping LinkedIn</b> to conducting <b>icann whois</b> searches, and
         supports <b>data scraping tools</b> for efficient data collection.
       </span>

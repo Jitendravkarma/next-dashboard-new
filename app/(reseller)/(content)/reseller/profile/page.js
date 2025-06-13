@@ -856,6 +856,13 @@ const Profile = () => {
     { toolName: "duckduckgo search scraper", shortName: "duck", value: `https://www.youtube.com/watch?v=IsTXALXQIL4`, placeholder: `https://www.youtube.com/watch?v=IsTXALXQIL4`},
     { toolName: "google map scraper", shortName: "map", value: `https://www.youtube.com/watch?v=-gkZGKExP-4`, placeholder: `https://www.youtube.com/watch?v=-gkZGKExP-4`},
     { toolName: "facebook scraper", shortName: "facebook", value: `https://www.youtube.com/watch?v=iv9bJRcsP7Y`, placeholder: `https://www.youtube.com/watch?v=iv9bJRcsP7Y`},
+    { toolName: "indiamart scraper", shortName: "map", value: `https://www.youtube.com/watch?v=oVgCPWGB0yI`, placeholder: `https://www.youtube.com/watch?v=oVgCPWGB0yI`},
+    { toolName: "justdial scraper", shortName: "map", value: `https://www.youtube.com/watch?v=PhDmPg7JDKQ`, placeholder: `https://www.youtube.com/watch?v=PhDmPg7JDKQ`},
+    { toolName: "sulekha scraper", shortName: "map", value: `https://www.youtube.com/watch?v=hvMlGTMvFcY`, placeholder: `https://www.youtube.com/watch?v=hvMlGTMvFcY`},
+    { toolName: "tradeindia scraper", shortName: "map", value: `https://www.youtube.com/watch?v=1g92KfRGA5E`, placeholder: `https://www.youtube.com/watch?v=1g92KfRGA5E`},
+    { toolName: "exportersindia scraper", shortName: "map", value: `https://www.youtube.com/watch?v=fZtWqWT_69M`, placeholder: `https://www.youtube.com/watch?v=fZtWqWT_69M`},
+    { toolName: "email scraper", shortName: "map", value: `https://www.youtube.com/watch?v=uJYDZtnIj0o`, placeholder: `https://www.youtube.com/watch?v=uJYDZtnIj0o`},
+    { toolName: "phone number scraper", shortName: "map", value: `https://www.youtube.com/watch?v=qgPVom0YKpw`, placeholder: `https://www.youtube.com/watch?v=qgPVom0YKpw`},
     { toolName: "youtube scraper", shortName: "youtube", value: `https://www.youtube.com/watch?v=ZatCD6KfYv0`, placeholder: `https://www.youtube.com/watch?v=ZatCD6KfYv0`},
     { toolName: "website data scraper", shortName: "website_data", value: `https://www.youtube.com/watch?v=hBQezVYKatw`, placeholder: `https://www.youtube.com/watch?v=hBQezVYKatw`},
     { toolName: "business directory scraper", shortName: "directory", value: `https://www.youtube.com/watch?v=xnDlalSMNdk`, placeholder: `https://www.youtube.com/watch?v=xnDlalSMNdk`},
@@ -975,7 +982,7 @@ const Profile = () => {
   
   const handleSubmit  = async ()=>{
     let phone = formData.phone
-    if(user.email === "info@soletstalkdigital.com" && phone && formData.address && formData.city && formData.country.value){
+    if(user.email === "support@leadscraper.in" && phone && formData.address && formData.city && formData.country.value){
       if (!phone.startsWith('+')) {
         openSnackBar();
         handleSnackMessage("Please enter a valid phone number including your country code (e.g., +91).", "danger", "text-white")
@@ -1022,13 +1029,20 @@ const Profile = () => {
                 yahoo: youtubeLinks[6].value,
                 duck: youtubeLinks[7].value,
                 map: youtubeLinks[8].value,
-                facebook: youtubeLinks[9].value,
-                youtube: youtubeLinks[10].value,
-                website_data: youtubeLinks[11].value,
-                directory: youtubeLinks[12].value,
-                document: youtubeLinks[13].value,
-                image: youtubeLinks[14].value,
-                whois: youtubeLinks[15].value
+                indiamart: youtubeLinks[9].value,
+                justdial: youtubeLinks[10].value,
+                sulekha: youtubeLinks[11].value,
+                tradeindia: youtubeLinks[12].value,
+                exportersindia: youtubeLinks[13].value,
+                email: youtubeLinks[14].value,
+                phone: youtubeLinks[15].value,
+                facebook: youtubeLinks[16].value,
+                youtube: youtubeLinks[17].value,
+                website_data: youtubeLinks[18].value,
+                directory: youtubeLinks[19].value,
+                document: youtubeLinks[20].value,
+                image: youtubeLinks[21].value,
+                whois: youtubeLinks[22].value
               }
               collectedData.append("youtubeLinks", JSON.stringify(links))
               collectedData.append("socialLinks", JSON.stringify(customSocialLinks))
@@ -1085,6 +1099,13 @@ const Profile = () => {
       { toolName: "yahoo search scraper", shortName: "yahoo", value: `https://www.youtube.com/watch?v=${yt_links.yahoo}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.yahoo}`},
       { toolName: "duckduckgo search scraper", shortName: "duck", value: `https://www.youtube.com/watch?v=${yt_links.duck}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.duck}`},
       { toolName: "google map scraper", shortName: "map", value: `https://www.youtube.com/watch?v=${yt_links.map}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.map}`},
+      { toolName: "indiamart scraper", shortName: "map", value: `https://www.youtube.com/watch?v=${yt_links.indiamart}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.indiamart}`},
+      { toolName: "justdial scraper", shortName: "map", value: `https://www.youtube.com/watch?v=${yt_links.justdial}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.justdial}`},
+      { toolName: "sulekha scraper", shortName: "map", value: `https://www.youtube.com/watch?v=${yt_links.sulekha}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.sulekha}`},
+      { toolName: "tradeindia scraper", shortName: "map", value: `https://www.youtube.com/watch?v=${yt_links.tradeindia}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.tradeindia}`},
+      { toolName: "exportersindia scraper", shortName: "map", value: `https://www.youtube.com/watch?v=${yt_links.exportersindia}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.exportersindia}`},
+      { toolName: "email scraper", shortName: "map", value: `https://www.youtube.com/watch?v=${yt_links.email}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.email}`},
+      { toolName: "phone number scraper", shortName: "map", value: `https://www.youtube.com/watch?v=${yt_links.phone}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.phone}`},
       { toolName: "facebook scraper", shortName: "facebook", value: `https://www.youtube.com/watch?v=${yt_links.facebook}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.facebook}`},
       { toolName: "youtube scraper", shortName: "youtube", value: `https://www.youtube.com/watch?v=${yt_links.youtube}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.youtube}`},
       { toolName: "website data scraper", shortName: "website_data", value: `https://www.youtube.com/watch?v=${yt_links.website_data}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.website_data}`},
