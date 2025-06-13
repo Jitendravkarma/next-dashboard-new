@@ -905,7 +905,7 @@ export const documentdatascraperProps = {
     </>
   ),
   description:
-    "Our Document Data Scraper extracts contact details like emails and phone numbers from .txt, .pdf, .html, and .json files. It supports Python and Chrome, making it perfect for lead generation, research, or outreach. Simplify data extraction with our reliable, efficient, and versatile web scraping tool.",
+    "Our Document Data Scraper extracts contact details like emails and phone numbers from .txt, .html, and .json files. It supports Python and Chrome, making it perfect for lead generation, research, or outreach. Simplify data extraction with our reliable, efficient, and versatile web scraping tool.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/docscreen.png",
@@ -930,8 +930,8 @@ export const Howitworksdocumentdatascraper = {
   scrapers: [
     {
       subheading: "Document Data Scraper (Upload Your Document)",
-      paragraph: "Start by uploading your document in one of the supported formats, such as .txt, .pdf, .html, .json, and more. Our website data scraper and web scraping service accept a wide range of file types to accommodate various data extraction needs.",
-      description: "Start by uploading your document in one of the supported formats, such as .txt, .pdf, .html, .json, and more. Our website data scraper and web scraping service accept a wide range of file types to accommodate various data extraction needs.",
+      paragraph: "Start by uploading your document in one of the supported formats, such as .txt, .html, .json, and more. Our website data scraper and web scraping service accept a wide range of file types to accommodate various data extraction needs.",
+      description: "Start by uploading your document in one of the supported formats, such as .txt, .html, .json, and more. Our website data scraper and web scraping service accept a wide range of file types to accommodate various data extraction needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Upload Your Document", // Dynamic section heading
       link: "/signup",

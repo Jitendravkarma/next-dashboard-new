@@ -22,7 +22,7 @@ const TermsCondition = () => {
             <p className="text-xss font-bold leading-normal">Welcome to <b>Lead Data</b>!</p>
             <br/>
             <p className="text-xss font-light leading-normal">
-              This service is owned and run by <b>Lead Data</b>., which also owns this product. You accept the terms and conditions of <b>Lead Data</b>., as stated in this agreement, by using <b>Lead Data</b>.
+              This service is owned and run by <b>Nety Incorporation</b>., which also owns this product. You accept the terms and conditions of <b>Lead Data</b>., as stated in this agreement, by using <b>Lead Data</b>.
             </p>
             <br/>
             <p className="text-xss font-light leading-normal">
