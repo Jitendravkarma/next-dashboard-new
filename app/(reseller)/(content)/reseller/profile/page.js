@@ -855,14 +855,14 @@ const Profile = () => {
     { toolName: "yahoo search scraper", shortName: "yahoo", value: `https://www.youtube.com/watch?v=rA_Uj-p7OBw`, placeholder: `https://www.youtube.com/watch?v=rA_Uj-p7OBw`},
     { toolName: "duckduckgo search scraper", shortName: "duck", value: `https://www.youtube.com/watch?v=IsTXALXQIL4`, placeholder: `https://www.youtube.com/watch?v=IsTXALXQIL4`},
     { toolName: "google map scraper", shortName: "map", value: `https://www.youtube.com/watch?v=-gkZGKExP-4`, placeholder: `https://www.youtube.com/watch?v=-gkZGKExP-4`},
-    { toolName: "facebook scraper", shortName: "facebook", value: `https://www.youtube.com/watch?v=iv9bJRcsP7Y`, placeholder: `https://www.youtube.com/watch?v=iv9bJRcsP7Y`},
     { toolName: "indiamart scraper", shortName: "map", value: `https://www.youtube.com/watch?v=oVgCPWGB0yI`, placeholder: `https://www.youtube.com/watch?v=oVgCPWGB0yI`},
     { toolName: "justdial scraper", shortName: "map", value: `https://www.youtube.com/watch?v=PhDmPg7JDKQ`, placeholder: `https://www.youtube.com/watch?v=PhDmPg7JDKQ`},
-    { toolName: "sulekha scraper", shortName: "map", value: `https://www.youtube.com/watch?v=hvMlGTMvFcY`, placeholder: `https://www.youtube.com/watch?v=hvMlGTMvFcY`},
+    { toolName: "sulekha scraper", shortName: "map", value: `https://www.youtube.com/watch?v=pFGebR3RN9U`, placeholder: `https://www.youtube.com/watch?v=pFGebR3RN9U`},
     { toolName: "tradeindia scraper", shortName: "map", value: `https://www.youtube.com/watch?v=1g92KfRGA5E`, placeholder: `https://www.youtube.com/watch?v=1g92KfRGA5E`},
-    { toolName: "exportersindia scraper", shortName: "map", value: `https://www.youtube.com/watch?v=fZtWqWT_69M`, placeholder: `https://www.youtube.com/watch?v=fZtWqWT_69M`},
+    { toolName: "exportersindia scraper", shortName: "map", value: `https://www.youtube.com/watch?v=dYB2IUOra_8`, placeholder: `https://www.youtube.com/watch?v=dYB2IUOra_8`},
     { toolName: "email scraper", shortName: "map", value: `https://www.youtube.com/watch?v=uJYDZtnIj0o`, placeholder: `https://www.youtube.com/watch?v=uJYDZtnIj0o`},
     { toolName: "phone number scraper", shortName: "map", value: `https://www.youtube.com/watch?v=qgPVom0YKpw`, placeholder: `https://www.youtube.com/watch?v=qgPVom0YKpw`},
+    { toolName: "facebook scraper", shortName: "facebook", value: `https://www.youtube.com/watch?v=iv9bJRcsP7Y`, placeholder: `https://www.youtube.com/watch?v=iv9bJRcsP7Y`},
     { toolName: "youtube scraper", shortName: "youtube", value: `https://www.youtube.com/watch?v=ZatCD6KfYv0`, placeholder: `https://www.youtube.com/watch?v=ZatCD6KfYv0`},
     { toolName: "website data scraper", shortName: "website_data", value: `https://www.youtube.com/watch?v=hBQezVYKatw`, placeholder: `https://www.youtube.com/watch?v=hBQezVYKatw`},
     { toolName: "business directory scraper", shortName: "directory", value: `https://www.youtube.com/watch?v=xnDlalSMNdk`, placeholder: `https://www.youtube.com/watch?v=xnDlalSMNdk`},
@@ -982,7 +982,7 @@ const Profile = () => {
   
   const handleSubmit  = async ()=>{
     let phone = formData.phone
-    if(user.email === "support@leadscraper.in" && phone && formData.address && formData.city && formData.country.value){
+    if(user.email === "info@soletstalkdigital.com" && phone && formData.address && formData.city && formData.country.value){
       if (!phone.startsWith('+')) {
         openSnackBar();
         handleSnackMessage("Please enter a valid phone number including your country code (e.g., +91).", "danger", "text-white")
