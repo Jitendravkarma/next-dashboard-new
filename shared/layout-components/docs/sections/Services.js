@@ -58,6 +58,48 @@ const Services = () => {
       url: "/services/youtube-scraper/",
     },
     {
+      title: "India Mart Scraper",
+      img: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+      des: "Extract website URL, virtual phone numbers, actual phone number, email address, and GST number.",
+      url: "/services/indiamart-scraper",
+    },
+    {
+      title: "Justdial Scraper",
+      img: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+      des: "Extract business listings and profile details, including email address, GST number, virtual and actual phone numbers, and more.",
+      url:"/services/justdial-scraper"
+    },
+    {
+      title: "Sulekha Scraper",
+      img: "/assets/iconfonts/dashboard-icon/sulekha.png",
+      des: "Extract listing profile details, including website URL, virtual and actual phone numbers, email address, business address, and more.",
+      url:"/services/sulekha-scraper"
+    },
+    {
+      title: "Trade India Scraper",
+      img: "/assets/iconfonts/dashboard-icon/tradeindia.png",
+      des: "Extract business profile information, including profile URL, business website, virtual and actual phone numbers, email address, and more.",
+      url:"/services/tradeindia-scraper"
+    },
+    {
+      title: "ExportersIndia Scraper",
+      img: "/assets/iconfonts/dashboard-icon/exporters.png",
+      des: "Get ExportersIndia india business profile information, including website, virtual and actual phone numbers, email address, GST number .",
+      url:"/services/exportersindia-scraper"
+    },
+    {
+      title: "Email Scraper",
+      img: "/assets/iconfonts/dashboard-icon/email.png",
+      des: "Extract bulk email addresses based on various domain types such as .com, .in, .org, and more—filtered by your chosen keywords and city.",
+      url:"/services/email-scraper"
+    },
+    {
+      title: "Phone Scraper",
+      img: "/assets/iconfonts/dashboard-icon/phone.png",
+      des: "Extract Indian phone numbers in bulk based on your selected keywords and city.",
+      url:"/services/phone-scraper"
+    },
+    {
       title: "Website Data Scraper",
       img: "/assets/iconfonts/dashboard-icon/website.png",
       des: "Extract valuable data from websites for research and marketing.",

@@ -4,6 +4,8 @@ import { Heading } from '../Heading'
 const Features = () => {
     const features = [
         <span>Easy sign-in and sign-up</span>,
+        <span>Scrape data from popular Business Directories such as <b>IndiaMart Scraper</b>, <b>Justdial Scraper</b>, <b>Sulekha Scraper</b> and more.</span>,
+        <span>Scrape bulk contact data from using our <b>Email scraper</b> and<b> Phone number scraper</b>.</span>,
         <span>Scrape data from our <b>Live website scraper</b>.</span>,
         <span>Scrape data from <b>Search engines such as <b>Google.com</b>, <b>Bing.com</b>, <b>Yahoo</b> and more.</b></span>,
         <span>Scrape data from <b>'Maps.google.com'</b></span>,

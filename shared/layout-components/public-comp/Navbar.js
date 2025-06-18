@@ -20,16 +20,19 @@ export default function Header() {
 
   const mainMenus = [
     {
-      title : "Live Website Scraping", 
-      url: "/services/live-website-scraping", 
-      subLinks: [], 
-      category: false
-    },
-    {
-      title : "Live Website Data", 
-      url: "/services/live-website-data", 
-      subLinks: [], 
-      category: false
+      title : "Live Tools", 
+      url: "", 
+      subLinks: [
+        {
+         title : "Live Website Scraping", 
+         url: "/services/live-website-scraping", 
+        },
+        {
+          title : "Live Website Data", 
+          url: "/services/live-website-data",
+        }
+      ], 
+      category: true
     },
     {
       title : "Search Engine Scraper", 
@@ -72,6 +75,48 @@ export default function Header() {
         }
       ], 
       category: true
+    },
+    {
+      title : "B2B Directory Scraper",
+      url: "",
+      subLinks:[
+        {
+          title:"IndiaMart Scraper",
+          url:"/services/indiamart-scraper"
+        },
+        {
+          title:"JustDial Scraper",
+          url:"/services/justdial-scraper"
+        },
+        {
+          title:"Sulekha Scraper",
+          url:"/services/sulekha-scraper"
+        },
+        {
+          title:"TradeIndia Scraper",
+          url:"/services/tradeindia-scraper"
+        },
+        {
+          title:"ExportersIndia Scraper",
+          url:"/services/exportersindia-scraper"
+        }
+      ],
+      category:true
+    },
+    {
+      title:"Bulk Contact Scraper",
+      url:"",
+      subLinks: [
+        {
+          title:"Email Scraper",
+          url:"/services/email-scraper"
+        },
+        {
+          title:"Phone Number Scraper",
+          url:"/services/phone-scraper"
+        }
+      ],
+      category:true
     },
     {
       title : "Web Scrapers", 
