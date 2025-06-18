@@ -12,8 +12,6 @@ const Setup = <i className="ri-settings-line side-menu__icon"></i>;
 
 const Service = <i className="ri-apps-2-line side-menu__icon"></i>;
 
-const Reseller = <i className="ri-shake-hands-line side-menu__icon"></i>;
-
 const Support = <i className="ri-customer-service-line side-menu__icon"></i>;
 
 export const MENUITEMS = [
@@ -35,7 +33,6 @@ export const MENUITEMS = [
 	},
 	{ path: "#features", icon: Features, title: "Features", type: "link", active: false, selected: false, title: "Features" },
 	{ path: "#services", icon: Service, title: "Services", type: "link", active: false, selected: false, title: "Services" },
-	{ path: "#reseller", icon: Reseller, title: "Become a Reseller", type: "link", active: false, selected: false, title: "Become a Reseller" },
 	{ path: "#logs", icon: Logs, title: "Change logs", type: "link", active: false, selected: false, title: "Change Logs" },
 
 
