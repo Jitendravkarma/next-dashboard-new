@@ -1,6 +1,6 @@
 export const seo_home = {
-    title: `Simple Data Scraping Made`,
-    description: `The ultimate web scraping and data extraction tool for Google Search, Google Maps, Websites, Documents, Images, Business Directories and Whois Domains. Automated data collection for lead generation, market research and business intelligence.`,
+    title: `Simple Data Scraping Made Possible by So Lets Talk Data`,
+    description: `So Lets Talk Data – The ultimate web scraping and data extraction tool for Google Search, Google Maps, Websites, Documents, Images, Business Directories and Whois Domains. Automated data collection for lead generation, market research and business intelligence.`,
     keywords: `Web scraping tool, data extraction software, lead generation automation, Google search scraper, business contact scraper, web crawler service, online data mining`,
     // openGraph: {
     //     title: "About Us - My Website",
@@ -29,15 +29,15 @@ export const seo_home = {
 }
 
 export const seo_pricing = {
-    title: `Pricing`,
-    description: `Explore pricing plans and choose the best web scraping solution for your needs. Affordable plans for Google Search Scraper, Google Maps Scraper, Website Data Scraper, Whois Domain Lookup, and more. Start extracting data today!`,
+    title: `Pricing - So Lets Talk Data`,
+    description: `Explore So Lets Talk Data's pricing plans and choose the best web scraping solution for your needs. Affordable plans for Google Search Scraper, Google Maps Scraper, Website Data Scraper, Whois Domain Lookup, and more. Start extracting data today!`,
     keywords: `Web scraping pricing, data extraction cost, web crawler subscription, lead generation tool pricing, affordable web scraper, pricing plans for data mining, scraping service cost`
 }
 
 export const seo_about = {
     title: `About Us - Your Source for Data Scraping Tools & Services`,
-    description: `Learn more about – a powerful web scraping solution designed to automate data extraction from Google Search, Google Maps, websites, documents, and more. Explore our mission, technology and expertise in data mining and automation.`,
-    keywords: `Web scraping company, data extraction experts, automated lead generation, business data mining, advanced web crawler, scraping solutions`
+    description: `Learn more about So Lets Talk Data – a powerful web scraping solution designed to automate data extraction from Google Search, Google Maps, websites, documents, and more. Explore our mission, technology and expertise in data mining and automation.`,
+    keywords: `About So Lets Talk Data, web scraping company, data extraction experts, automated lead generation, business data mining, advanced web crawler, scraping solutions`
 }
 
 export const seo_contact = {
@@ -72,7 +72,7 @@ export const seo_forget_password_email = {
 
 export const seo_terms = {
     title: `Terms and Conditions | So Lets Talk Data`,
-    description: `Read the terms and conditions of So Lets Talk Data. Understand the rules, policies, and usage guidelines for our web scraping services, ensuring compliance and ethical data extraction.`,
+    description: `Read the terms and conditions of web crawler spiders. Understand the rules, policies, and usage guidelines for our web scraping services, ensuring compliance and ethical data extraction.`,
     keywords: `Web scraping terms, data extraction policies, legal web crawler usage, scraping guidelines, API usage terms, website terms & conditions`
 }
 
@@ -84,7 +84,7 @@ export const seo_privacy = {
 
 export const seo_faq = {
     title: `Frequently Asked Questions | Document & Data Scraping Tools`,
-    description: `Find answers to common questions about So Lets Talk Data. Learn how to use our web scraping tools, pricing details, features, API access, and data extraction best practices. Get expert insight and troubleshooting help.`,
+    description: `Find answers to common questions about web crawler spiders. Learn how to use our web scraping tools, pricing details, features, API access, and data extraction best practices. Get expert insight and troubleshooting help.`,
     keywords: `Web scraping FAQ, data extraction questions, web crawler help, scraping tool support, lead generation tool guide, how to use web scraper, web crawler troubleshooting`
 }
 
@@ -108,8 +108,8 @@ export const seo_website_scraper = {
 
 export const seo_document_scraper = {
     title: `Document Data Scraper | Efficient Contact Info Scraper - So Lets Talk Data`,
-    description: `Extract valuable insights from PDFs, Word, Excel, and CSV files with our Document Data Scraper. Automate text, table, and metadata extraction for research, finance, and analytics.`,
-    keywords: `Document scraper, PDF text extractor, data mining tool, file parsing software, OCR extraction, document automation, Excel and CSV scraper`
+    description: `Extract valuable insights from Text, Word, Excel, and CSV files with our Document Data Scraper. Automate text, table, and metadata extraction for research, finance, and analytics.`,
+    keywords: `Document scraper, CSV text extractor, data mining tool, OCR extraction, document automation, Excel and CSV scraper`
 }
 
 export const seo_image_scraper = {
@@ -156,31 +156,31 @@ export const seo_live_data = {
 }
 
 export const seo_bing = {
-    title: `Live Website Scraping - So Lets Talk Data`,
+    title: `Bing Search Scraper - So Lets Talk Data`,
     description: `Check out the comprehensive So Lets Talk Data documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
     keywords: `So Lets Talk Data documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
 }
 
 export const seo_yahoo = {
-    title: `Live Website Scraping - So Lets Talk Data`,
+    title: `Yahoo Search Scraper - So Lets Talk Data`,
     description: `Check out the comprehensive So Lets Talk Data documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
     keywords: `So Lets Talk Data documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
 }
 
 export const seo_duck = {
-    title: `Live Website Scraping - So Lets Talk Data`,
+    title: `Duck Duck Go Search Scraper - So Lets Talk Data`,
     description: `Check out the comprehensive So Lets Talk Data documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
     keywords: `So Lets Talk Data documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
 }
 
 export const seo_facebook = {
-    title: `Live Website Scraping - So Lets Talk Data`,
+    title: `Facebook Scraper - So Lets Talk Data`,
     description: `Check out the comprehensive So Lets Talk Data documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
     keywords: `So Lets Talk Data documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
 }
 
 export const seo_youtube = {
-    title: `Live Website Scraping - So Lets Talk Data`,
+    title: `Youtube Scraper - So Lets Talk Data`,
     description: `Check out the comprehensive So Lets Talk Data documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
     keywords: `So Lets Talk Data documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
 }
@@ -189,4 +189,35 @@ export const seo_not_found = {
     title: `Page Not Found`,
     description: `This page is not avaiable on So Lets Talk Data`,
     keyword: `Page Not Found`
+}
+
+export const seo_justdial_scraper = {
+    title: `Justdail Scraper | Efficient Web Scraping Tools - So Lets Talk Data`,
+    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
+    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+}
+export const seo_indiamart_scraper = {
+    title: `IndiaMart Scraper | Efficient Web Scraping Tools - So Lets Talk Data`,
+    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
+    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+}
+export const seo_tradeindia_scraper = {
+    title: `Tradeindia Scraper | Efficient Web Scraping Tools - So Lets Talk Data`,
+    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
+    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+}
+export const seo_exportersindia_scraper = {
+    title: `ExportersIndia Scraper | Efficient Web Scraping Tools - So Lets Talk Data`,
+    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
+    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+}
+export const seo_email_scraper = {
+    title: `Email Scraper | Efficient Web Scraping Tools - So Lets Talk Data`,
+    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
+    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+}
+export const seo_phone_scraper = {
+    title: `Phone Scraper Software | Efficient Web Scraping Tools - So Lets Talk Data`,
+    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
+    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
 }

@@ -4,6 +4,14 @@ import { Heading } from "../Heading";
 const Logs = () => {
   const change_logs = [
     {
+      release: "10.0",
+      logs:[
+        <span>Introduced a new<strong> B2B Directory Scraper, including Justdial Scraper, Indiamart Scraper, Sulekha Scraper, and more </strong>.</span>,
+        <span>Added Bulk Contact Scrapers such as <strong>Email Scraper and Phone Number Scraper</strong> .</span>,
+        <span>Enhanced several tools to deliver faster response times</span>
+      ]
+    },
+    {
       release: "9.0",
       logs: [
         <span>Added a new tool called <strong>Website URLs Checker</strong> to check whether a website is active or inactive.</span>,
