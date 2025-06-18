@@ -1,12 +1,12 @@
 import React from "react";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
-import { seo_duck } from "@/shared/data/seo-content/content";
+import { seo_justdial_scraper } from "@/shared/data/seo-content/content";
 import {
-  livescraperdataget,
-  DucksearchscraperProps,
-  googlesearchscraperstatus,
-  DuckScraperVideo,
-  HowitworksDucksearchscraper,
+  justdialscraperstatus,
+  Howitworksjustdialscraper,
+  justdialscraperdataget,
+  justdialscraperProps,
+  justdialscraperVideo,
 } from "@/shared/data/static-content/subPageContent";
 import Link from "next/link";
 import HowItWork from "@/shared/layout-components/public-comp/HowItWork";
@@ -14,29 +14,31 @@ import VideoSection from "@/shared/layout-components/public-comp/VideoSection";
 import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
 
-export const metadata = seo_duck;
+export const metadata = seo_justdial_scraper;
 
-const DuckDuckGo = () => {
+const JustDialScraper = () => {
   return (
     <>
       <section className="py-14 lg:py-16 bg-gradient-to-b from-blue-200 to-white flex justify-center items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <PageHeader {...DucksearchscraperProps} />
-          <div className="flex justify-evenly flex-wrap items-center gap-6 pt-12">
-            {googlesearchscraperstatus.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="flex items-center justify-center mb-3">
-                  <p className="text-blue-500 text-3xl me-3">{item.icon}</p>
-                  <p className="text-xl font-bold text-gray-800">
-                    {item.value}
-                  </p>
+          <div className="text-center px-4 lg:px-16">
+            <PageHeader {...justdialscraperProps} />
+            <div className="flex justify-evenly flex-wrap items-center gap-6 pt-12">
+              {justdialscraperstatus.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center"
+                >
+                  <div className="flex items-center justify-center mb-3">
+                    <p className="text-blue-500 text-3xl me-3">{item.icon}</p>
+                    <p className="text-xl font-bold text-gray-800">
+                      {item.value}
+                    </p>
+                  </div>
+                  <p className="text-gray-500">{item.label}</p>
                 </div>
-                <p className="text-gray-500">{item.label}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -49,8 +51,8 @@ const DuckDuckGo = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             <div className="bg-white shadow-md rounded-md lg:px-8 px-2 py-10 col-span-1">
-              {livescraperdataget
-                .slice(0, Math.ceil(livescraperdataget.length / 3))
+              {justdialscraperdataget
+                .slice(0, Math.ceil(justdialscraperdataget.length / 3))
                 .map((data, dataindex) => (
                   <div
                     key={dataindex}
@@ -71,10 +73,10 @@ const DuckDuckGo = () => {
             </div>
 
             <div className="bg-white shadow-md rounded-md lg:px-8 px-2 py-10 col-span-1">
-              {livescraperdataget
+              {justdialscraperdataget
                 .slice(
-                  Math.ceil(livescraperdataget.length / 3),
-                  Math.ceil((2 * livescraperdataget.length) / 3)
+                  Math.ceil(justdialscraperdataget.length / 3),
+                  Math.ceil((2 * justdialscraperdataget.length) / 3)
                 )
                 .map((data, dataindex) => (
                   <div
@@ -96,8 +98,8 @@ const DuckDuckGo = () => {
             </div>
 
             <div className="bg-white shadow-md rounded-md lg:px-8 px-2 py-10 col-span-1">
-              {livescraperdataget
-                .slice(Math.ceil((2 * livescraperdataget.length) / 3))
+              {justdialscraperdataget
+                .slice(Math.ceil((2 * justdialscraperdataget.length) / 3))
                 .map((data, dataindex) => (
                   <div
                     key={dataindex}
@@ -126,12 +128,12 @@ const DuckDuckGo = () => {
         </div>
       </section>
 
-      <HowItWork scraperData={HowitworksDucksearchscraper} />
-      <VideoSection {...DuckScraperVideo} toolName={`duck`} />
+      <HowItWork scraperData={Howitworksjustdialscraper} />
+      <VideoSection {...justdialscraperVideo} toolName={`justdial`} />
       <FaqSection />
       <WhyChooseUs />
     </>
   );
 };
 
-export default DuckDuckGo;
+export default JustDialScraper;

@@ -717,8 +717,8 @@ export const HowitworksGooglesmapscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Google Map Scraper (Scrape By URL)",
-      paragraph: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      subheading: "Google Map Scraper (Scrape By Keyword)",
+      paragraph: "After entering the Keyword, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
       description: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
       sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
@@ -1303,7 +1303,7 @@ export const Howitworkswhoisdetadownload = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Business Directory Scraper (Initiate the Download)",
+      subheading: "Whois Data Scraper (Initiate the Download)",
       paragraph: "Once youve selected the desired timeframe, click the download button. The whois database provider service will compile all relevant whois domain information registered within the specified period, including whois IP and whois domain owner details.",
       description: "Once youve selected the desired timeframe, click the download button. The whois database provider service will compile all relevant whois domain information registered within the specified period, including whois IP and whois domain owner details.",
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
@@ -1314,7 +1314,7 @@ export const Howitworkswhoisdetadownload = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Business Directory Scraper (Download the Zip File)",
+      subheading: "Whois Data Scraper (Download the Zip File)",
       paragraph: "The compiled whois database data, including domain names, owner’s details, purchase dates, and more, will be packaged into a single zip file. You can download this file for easy access and storage, ideal for icann whois queries and whois IP lookup needs.",
       description: "The compiled whois database data, including domain names, owner’s details, purchase dates, and more, will be packaged into a single zip file. You can download this file for easy access and storage, ideal for icann whois queries and whois IP lookup needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
@@ -1325,7 +1325,7 @@ export const Howitworkswhoisdetadownload = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Business Directory Scraper (Extract and Review)",
+      subheading: "Whois Data Scraper (Extract and Review)",
       paragraph: "After downloading, extract the zip file to view all the whois domain data. The information is organized for easy review, making it perfect for whois search, domain search whois functions, or managing whois com domain assets.",
       description: "After downloading, extract the zip file to view all the whois domain data. The information is organized for easy review, making it perfect for whois search, domain search whois functions, or managing whois com domain assets.",
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
@@ -1432,16 +1432,788 @@ export const Howitworkswebsitedetacenter = {
     }
   ],
 };
+// JustDail Scraper
 
+// Define the properties as an object
+export const justdialscraperProps = {
+  title: (
+    <>
+    Just<span className="hero-title">Dial</span> Scraper
+    </>
+  ),
+  description:
+    "Our Google Map Extractor extracts structured data like businesses, addresses, phone numbers, and reviews from Google Maps. Perfect for marketers and researchers, it streamlines geographic data collection, providing essential details for campaigns and analysis. A reliable tool for quick, accurate information from Google Maps.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/justdialscreen.png",
+  rightImg: "/assets/img/slider-images/justdialscreen2.png",
+};
+
+export const justdialscraperstatus = [
+  { icon: <i className="ri-file-text-line"></i>, value: "25M+", label: "Total Records" },
+  { icon: <i className="ri-global-line"></i>, value: "10M+", label: "Total Website" },
+  { icon: <i className="ri-mail-line"></i>, value: "15M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "21M+", label: "Total Phone" },
+];
+
+export const justdialscraperdataget = [
+
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone actual number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The number that is present on Justdial website', keywords: 'Justdial Phone' },
+  { tooltips: 'The Company Establishment Year.', keywords: 'Company Establishment' },
+  { tooltips: 'The Company GST number', keywords: 'GST' },
+  { tooltips: 'Number of Enquiry ', keywords: 'Enquiry' },
+  { tooltips: 'The Company Status', keywords: 'Company Status' },
+  { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+
+];
+
+export const Howitworksjustdialscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+  {
+    subheading: "Justdial Scraper (Scrape By Keyword)",
+    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'Plumbers in Mumbai' or 'Cafes in Bangalore.' This helps the Justdial Scraper narrow down results to provide highly relevant business listings.",
+    description: "Start by entering the city and the business category you're targeting. For instance, search for 'Plumbers in Mumbai' or 'Cafes in Bangalore.' This helps the Justdial Scraper narrow down results to provide highly relevant business listings.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+    sectionHeading: "Scrape By Keyword",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Justdial Scraper (Initiate Scraping Process)",
+    paragraph: "Once you’ve entered your search query, click the Start button to begin the data extraction. The tool connects to Justdial and fetches the listings based on your inputs in real-time.",
+    description: "Once you’ve entered your search query, click the Start button to begin the data extraction. The tool connects to Justdial and fetches the listings based on your inputs in real-time.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+    sectionHeading: "Initiate Scraping Process",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Justdial Scraper (Extract Business Data)",
+    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+    sectionHeading: "Extract Business Data",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Justdial Scraper (Deep Extractor)",
+    paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+    sectionHeading: "Deep Extractor",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Justdial Scraper (Review Extracted Listings)",
+    paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+    sectionHeading: "Review Extracted Listings",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Justdial Scraper (Export to CSV)",
+    paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+    sectionHeading: "Export to CSV",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+],
+};
+
+export const justdialscraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "OKzkToxybdc?si=JSTJsUPW9a3d9m8E",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+// IndiaMart Scraper
+
+// Define the properties as an object
+export const indiamartscraperProps = {
+  title: (
+    <>
+    India<span className="hero-title">Mart</span> Scraper
+    </>
+  ),
+  description:
+    "Our IndiaMart Extractor extracts structured data like businesses, addresses, phone numbers, and reviews from IndiaMarts. Perfect for marketers and researchers, it streamlines geographic data collection, providing essential details for campaigns and analysis. A reliable tool for quick, accurate information from IndiaMarts.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/indiamartscreen.png",
+  rightImg: "/assets/img/slider-images/indiamartscreen2.png",
+};
+
+export const indiamartscraperstatus = [
+  { icon: <i className="ri-file-text-line"></i>, value: "20M+", label: "Total Records" },
+  { icon: <i className="ri-global-line"></i>, value: "15M+", label: "Total Website" },
+  { icon: <i className="ri-mail-line"></i>, value: "18M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "16M+", label: "Total Phone" },
+];
+
+export const indiamartscraperdataget = [
+
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone actual number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The number that is present on indiaMart website', keywords: 'IndiaMart Phone' },
+  { tooltips: 'The Name of the Compnany.', keywords: 'Company Name' },
+  { tooltips: 'The Company GST number', keywords: 'GST' },
+  { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+
+];
+
+export const Howitworksindiamartscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+  {
+    subheading: "IndiaMart Scraper (Scrape By Keyword)",
+    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'Digital Marketing Agency in Pune'. This helps the IndiaMart Scraper narrow down results to provide highly relevant business listings.",
+    description: "Start by entering the city and the business category you're targeting. For instance, search for 'Digital Marketing Agency in Pune'. This helps the IndiaMart Scraper narrow down results to provide highly relevant business listings.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+    sectionHeading: "Scrape By Keyword",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "IndiaMart Scraper (Initiate Scraping Process)",
+    paragraph: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to IndiaMart and fetches the listings based on your inputs in real-time.",
+    description: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to IndiaMart and fetches the listings based on your inputs in real-time.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+    sectionHeading: "Initiate Scraping Process",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "IndiaMart Scraper (Extract Business Data)",
+    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+    sectionHeading: "Extract Business Data",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "IndiaMart Scraper (Deep Extractor)",
+    paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+    sectionHeading: "Deep Extractor",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "IndiaMart Scraper (Review Extracted Listings)",
+    paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+    sectionHeading: "Review Extracted Listings",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "IndiaMart Scraper (Export to CSV)",
+    paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+    sectionHeading: "Export to CSV",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+],
+};
+
+export const indiamartscraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "P7tQPPMeE5M?si=pe1PHj9xiJI7K_q1",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+// Sulekhs Scraper
+
+// Define the properties as an object
+export const sulekhascraperProps = {
+  title: (
+    <>
+     <span className="hero-title">Sulekha</span> Scraper
+    </>
+  ),
+  description:
+    "Our Sulekha Extractor extracts structured data like businesses, addresses, phone numbers, and reviews from Sulekha. Perfect for marketers and researchers, it streamlines geographic data collection, providing essential details for campaigns and analysis. A reliable tool for quick, accurate information from Sulekhas.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/sulekhascreen.png",
+  rightImg: "/assets/img/slider-images/sulekhascreen2.png",
+};
+
+export const sulekhascraperstatus = [
+  { icon: <i className="ri-file-text-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-global-line"></i>, value: "12M+", label: "Total Website" },
+  { icon: <i className="ri-mail-line"></i>, value: "5M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "13M+", label: "Total Phone" },
+];
+
+export const sulekhascraperdataget = [
+
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone actual number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The number that is present on Sulekha website', keywords: 'Sulekha Phone' },
+  { tooltips: 'The link to the Product page.', keywords: 'Product URL' },
+  { tooltips: 'The Name of the Compnany.', keywords: 'Company Name' },
+  { tooltips: 'Type of Business like manufacture,etc', keywords: 'Business Type' },
+  { tooltips: 'The city of the Company.', keywords: 'Location' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+];
+
+export const Howitworkssulekhascraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+  {
+    subheading: "Sulekha Scraper (Scrape By Keyword Or URL)",
+    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'CBSE Schools in Pune' . This helps the Sulekha Scraper narrow down results to provide highly relevant business listings.",
+    description: "Start by entering the city and the business category you're targeting. For instance, search for 'CBSE Schools in Pune' . This helps the Sulekha Scraper narrow down results to provide highly relevant business listings.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
+    sectionHeading: "Scrape By Keyword or URL",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Sulekha Scraper (Initiate Scraping Process)",
+    paragraph: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to Sulekha and fetches the listings based on your inputs in real-time.",
+    description: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to Sulekha and fetches the listings based on your inputs in real-time.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
+    sectionHeading: "Initiate Scraping Process",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Sulekha Scraper (Extract Business Data)",
+    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
+    sectionHeading: "Extract Business Data",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Sulekha Scraper (Deep Extractor)",
+    paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
+    sectionHeading: "Deep Extractor",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Sulekha Scraper (Review Extracted Listings)",
+    paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
+    sectionHeading: "Review Extracted Listings",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Sulekha Scraper (Export to CSV)",
+    paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
+    sectionHeading: "Export to CSV",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+],
+};
+
+export const sulekhascraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "iYIHs4DE3hE?si=tC9PcLigMuK4KN-M",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+// Trade India Scraper
+
+// Define the properties as an object
+export const tradeindiascraperProps = {
+  title: (
+    <>
+    Trade<span className="hero-title">India</span> Scraper
+    </>
+  ),
+  description:
+    "Our TradeIndia Scraper automates the extraction of business profiles, product data, and contact details from TradeIndia. It helps exporters, importers, and B2B marketers connect with verified suppliers and clients.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/tradeindiascreen.png",
+  rightImg: "/assets/img/slider-images/tradeindiascreen2.png",
+};
+
+export const tradeindiascraperstatus = [
+  { icon: <i className="ri-file-text-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-global-line"></i>, value: "20M+", label: "Total Website" },
+  { icon: <i className="ri-mail-line"></i>, value: "13M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "14M+", label: "Total Phone" },
+];
+
+export const tradeindiascraperdataget = [
+
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone actual number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The number that is present on Tradeindia website', keywords: 'Tradeindia Phone' },
+  { tooltips: 'The link to the Product page.', keywords: 'Product URL' },
+  { tooltips: 'The Name of the Compnany.', keywords: 'Company Name' },
+  { tooltips: 'Type of Business like manufacture,etc', keywords: 'Business Type' },
+  { tooltips: 'The Link of the portfolio on TradeIndia .', keywords: 'Compnay Portfolio' },
+  { tooltips: 'The city of the Company.', keywords: 'Location' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+
+];
+
+export const Howitworkstradeindiascraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+  {
+    subheading: "Trade India Scraper (Scrape By Keyword)",
+    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'agricultural equipment in Nodia' . This helps the Trade India Scraper narrow down results to provide highly relevant business listings.",
+    description: "Start by entering the city and the business category you're targeting. For instance, search for 'agricultural equipment in Nodia' . This helps the Trade India Scraper narrow down results to provide highly relevant business listings.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
+    sectionHeading: "Scrape By Keyword",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Trade India Scraper (Initiate Scraping Process)",
+    paragraph: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to Trade India and fetches the listings based on your inputs in real-time.",
+    description: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to Trade India and fetches the listings based on your inputs in real-time.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
+    sectionHeading: "Initiate Scraping Process",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Trade India Scraper (Extract Business Data)",
+    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
+    sectionHeading: "Extract Business Data",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Trade India Scraper (Deep Extractor)",
+    paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
+    sectionHeading: "Deep Extractor",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Trade India Scraper (Review Extracted Listings)",
+    paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
+    sectionHeading: "Review Extracted Listings",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Trade India Scraper (Export to CSV)",
+    paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
+    sectionHeading: "Export to CSV",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+],
+};
+
+export const tradeindiascraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "qc7_yiUhtCc?si=3M6Nq78MVcEQpJzP",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+// ExportersIndia Scraper
+
+// Define the properties as an object
+export const exportersindiascraperProps = {
+  title: (
+    <>
+    Exporters<span className="hero-title">India</span> Scraper
+    </>
+  ),
+  description:
+    "Our ExportersIndia Scraper helps you collect data like business listings, contact details, product info, and company profiles from ExportersIndia.com. It's great for finding leads, doing market research, or building a business database.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/exportersscreen.png",
+  rightImg: "/assets/img/slider-images/exportersscreen2.png",
+};
+
+export const exportersindiascraperstatus = [
+  { icon: <i className="ri-file-text-line"></i>, value: "25M+", label: "Total Records" },
+  { icon: <i className="ri-global-line"></i>, value: "18M+", label: "Total Website" },
+  { icon: <i className="ri-mail-line"></i>, value: "21M+", label: "Total Email" },
+  { icon: <i className="ri-phone-line"></i>, value: "19M+", label: "Total Phone" },
+];
+
+export const exportersindiascraperdataget = [
+
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone actual number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The number that is present on ExportersIndia website', keywords: 'ExportersIndia Phone' },
+  { tooltips: 'The link to the Product page.', keywords: 'Product URL' },
+  { tooltips: 'The Name of the Compnany.', keywords: 'Company Name' },
+  { tooltips: 'The Company GST number', keywords: 'GST' },
+  { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
+  { tooltips: 'The specific URl or query term used during the search process.', keywords: 'Searched URL' }
+
+];
+
+export const Howitworksexportersindiascraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Exporters India Scraper (Scrape By URL)",
+      paragraph: "After entering the URL, click the extract button to start the process. Our data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      description: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
+      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "B2B Directory Scraper",
+      presubtitle: "Lead Generation",
+    },
+  {
+    subheading: "Exporters India Scraper (Extract Business Data)",
+    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
+    sectionHeading: "Extract Business Data",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Exporters India Scraper (Deep Extractor)",
+    paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
+    sectionHeading: "Deep Extractor",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Exporters India Scraper (Review Extracted Listings)",
+    paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
+    sectionHeading: "Review Extracted Listings",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+  {
+    subheading: "Exporters India Scraper (Export to CSV)",
+    paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+    imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
+    sectionHeading: "Export to CSV",
+    link: "/signup",
+    buttonText: "Try Now",
+    pretitle: "B2B Directory Scraper",
+    presubtitle: "Lead Generation",
+  },
+],
+};
+
+export const exportersindiascraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "rLrtvQ9TkKc?si=5ftwlWawyaJT-fpP",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+// Email Scraper
+
+// Define the properties as an object
+export const emailscraperProps = {
+  title: (
+    <>
+    <span className="hero-title">Email</span> Scraper
+    </>
+  ),
+  description:
+    "Our Bulk Email Scraper efficiently extracts email addresses from websites, search engine results, or custom sources. Designed for marketers, researchers, and lead generation professionals, it automates the process of gathering valid email data at scale.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/emailscreen.png",
+  rightImg: "/assets/img/slider-images/emailscreen2.png",
+};
+
+export const emailscraperstatus = [
+
+  { icon: <i className="ri-file-text-line"></i>, value: "20M+", label: "Total Records" },
+  { icon: <i className="ri-global-line"></i>, value: "16M+", label: "Total Website" },
+  { icon: <i className="ri-mail-line"></i>, value: "15M+", label: "Total Email" },
+
+];
+
+export const emailscraperdataget = [
+
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The keyword or query term used for searching in Search.', keywords: 'Keywords' },
+
+];
+
+export const Howitworksemailscraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Email Scraper (Scrape By Keyword)",
+      paragraph: "After entering the Keyword, click the extract button to start the process. Our scraper software will scan the website for email addresses , utilizing efficient web scraper technology to ensure comprehensive extraction",
+      description: "After entering the Keyword, click the extract button to start the process. Our scraper software will scan the website for email addresses , utilizing efficient web scraper technology to ensure comprehensive extraction",
+      imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
+      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Email Scraper",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Email Scraper (Extract Emails)",
+      paragraph: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
+      description: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
+      imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
+      sectionHeading: "Extract Emails", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Email Scraper",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Email Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Email Scraper",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Email Scraper (Analyze the Results)",
+      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      description: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
+      sectionHeading: "Analyze the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Email Scraper",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Email Scraper (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Email Scraper",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const emailscraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "lYoNYTFTTE8",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+// Phone Scraper
+
+// Define the properties as an object
+export const phonescraperProps = {
+  title: (
+    <>
+    <span className="hero-title">Phone</span> Scraper
+    </>
+  ),
+  description:
+    "Our Bulk Phone Number Scraper automates the extraction of phone numbers from websites, online directories, and search results. It’s ideal for businesses, sales teams, and data researchers needing large volumes of contact numbers.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/phonescreen.png",
+  rightImg: "/assets/img/slider-images/phonescreen2.png",
+};
+
+export const phonescraperstatus = [
+  { icon: <i className="ri-file-text-line"></i>, value: "25M+", label: "Total Records" },
+  { icon: <i className="ri-global-line"></i>, value: "20M+", label: "Total Website" },
+  { icon: <i className="ri-phone-line"></i>, value: "21M+", label: "Total Phone" },
+];
+
+export const phonescraperdataget = [
+
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The keyword or query term used for searching in Search.', keywords: 'Keywords' },
+
+];
+
+export const Howitworksphonescraper = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Phone Scraper (Scrape By URL)",
+      paragraph: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      description: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
+      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Phone Scraper",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Phone Scraper (Extract Phone)",
+      paragraph: "The web scraper identifies and extracts all available phone on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
+      description: "The web scraper identifies and extracts all available phone on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
+      imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
+      sectionHeading: "Extract Phone", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Phone Scraper",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Phone Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all Phone Numbers found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      description: "Once the extraction is complete, you’ll receive an organized list of all Phone Numbers found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Phone Scraper",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Phone Scraper (Analyze the Results)",
+      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      description: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
+      sectionHeading: "Analyze the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Phone Scraper",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Phone Scraper (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Bulk Phone Scraper",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const phonescraperVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "Tyhmu_RS-eU?si=ILmsLFyfavSNCEaK",
+
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
 // Dynamic data arrays
 export const aboutuswhowearecontent = [
-  "Scraper Tools specializes in management software, including our Google search scraper, Google map scraper, B2B directory scraper and more. We offer tools for data scraping, such as Document scrapers and image scraping tools. Our solutions streamline data collection for users worldwide.",
+  "Scraper Tools, specializes in management software, including our business directory scraper and yellow pages extractor. With over 75 products, we offer tools for data scraping, such as Document scraper and image scraping tools. Our solutions streamline data collection for users worldwide.",
   "Our mission is to make data collection as easy as possible. We offer an automated process that lets you quickly and easily grab data from the Internet, all in one convenient place.",
 ];
 
 export const aboutuswebcontent = [
-  "The Scraper Tools is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a Search Engine Scraper, B2B directory scraper and Bulk contact scraper enabling users to effortlessly gather essential information such as email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites and scrape from documents, it is invaluable for various data collection tasks.",
-  "Why struggle with complex tools when you can harness the simplicity and efficiency of the Scraper Tools? It streamlines the process of web scraping Google search scraper, Bing search scraper and supports document scraping for CSV, Excel, JSON and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
+  "The Scrape Genius is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a business directory scraper, yellow pages scraper, and yellow pages data extractor, enabling users to effortlessly gather essential information such as yellow pages email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites, scrape images from websites, and scrape CSV files, it is invaluable for various data collection tasks.",
+  "Why struggle with complex tools when you can harness the simplicity and efficiency of the Scrape Genius? It streamlines the process of web scraping yellow pages and supports document scraping for Excel and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
 ];
 
 export const buttons = [

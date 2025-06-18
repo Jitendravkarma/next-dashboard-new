@@ -87,7 +87,7 @@ const ContactUs = () => {
                         </p>
 
                         <address className="mt-10">
-                            Address: 271 Avn, Scheme No 51, Sangam Nagar, Army Head Quarter, Indore- 452006, Madhya Pradesh. <br />
+                            Address: {companyDetails.company_address} <br />
                             Email: 
                             <Link
                                 target="_blank"
