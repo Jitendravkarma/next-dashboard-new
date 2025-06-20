@@ -1,12 +1,12 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useUserContext } from "@/shared/userContext/userContext";
+import { basePath } from "@/next.config";
 
 export default function Header() {
-  const { isAuthenticated, handleSignOut } = useUserContext()
+  const { isAuthenticated, handleSignOut, isLoading, logo } = useUserContext()
   const { pathname, push } = useRouter()
   const menus = [
     { title: "home", url: "/" },
@@ -20,16 +20,19 @@ export default function Header() {
 
   const mainMenus = [
     {
-      title : "Live Website Scraping", 
-      url: "/services/live-website-scraping", 
-      subLinks: [], 
-      category: false
-    },
-    {
-      title : "Live Website Data", 
-      url: "/services/live-website-data", 
-      subLinks: [], 
-      category: false
+      title : "Live Tools", 
+      url: "", 
+      subLinks: [
+        {
+         title : "Live Website Scraping", 
+         url: "/services/live-website-scraping", 
+        },
+        {
+          title : "Live Website Data", 
+          url: "/services/live-website-data",
+        }
+      ], 
+      category: true
     },
     {
       title : "Search Engine Scraper", 
@@ -72,6 +75,48 @@ export default function Header() {
         }
       ], 
       category: true
+    },
+    {
+      title : "B2B Directory Scraper",
+      url: "",
+      subLinks:[
+        {
+          title:"IndiaMart Scraper",
+          url:"/services/indiamart-scraper"
+        },
+        {
+          title:"JustDial Scraper",
+          url:"/services/justdial-scraper"
+        },
+        {
+          title:"Sulekha Scraper",
+          url:"/services/sulekha-scraper"
+        },
+        {
+          title:"TradeIndia Scraper",
+          url:"/services/tradeindia-scraper"
+        },
+        {
+          title:"ExportersIndia Scraper",
+          url:"/services/exportersindia-scraper"
+        }
+      ],
+      category:true
+    },
+    {
+      title:"Bulk Contact Scraper",
+      url:"",
+      subLinks: [
+        {
+          title:"Email Scraper",
+          url:"/services/email-scraper"
+        },
+        {
+          title:"Phone Number Scraper",
+          url:"/services/phone-scraper"
+        }
+      ],
+      category:true
     },
     {
       title : "Web Scrapers", 
@@ -167,14 +212,9 @@ export default function Header() {
         <div className="flex justify-between items-center py-5">
           {/* Logo */}
           <div className="text-xl font-semibold">
-            <Link href="/">
-              <img
-                src="/assets/img/brand-logos/desktop-logo.png"
-                alt="Site logo"
-                width={150}
-                height={150}
-              />
-            </Link>
+              <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
+                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" />
+              </Link>
           </div>
 
           {/* Desktop Navigation */}

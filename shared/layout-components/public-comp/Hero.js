@@ -1,8 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react";
-import { HeroContent } from "@/shared/data/static-content/public";
 import PrimaryButton from "./PrimaryButton";
-
+import { HeroContent } from "@/shared/data/static-content/public";
 
 const HeroSection = () => {
   const [currentText, setCurrentText] = useState(HeroContent[0].text);

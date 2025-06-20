@@ -46,7 +46,7 @@ function Layout({ children, local_varaiable, ThemeChanger }) {
         style={customstyles}>
         <head>
           <link rel="stylesheet" href="/assets/css/dragula.min.css" />
-          <meta name="keywords" content="Web crawler spider, google search scraper" />
+          <meta name="keywords" content="google search scraper" />
         </head>
         <body className={`${local_varaiable.body ? local_varaiable.body : ''}`}>
           {theme.pageloading && children}

@@ -13,6 +13,7 @@ import HowItWork from "@/shared/layout-components/public-comp/HowItWork";
 import VideoSection from "@/shared/layout-components/public-comp/VideoSection";
 import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_image_scraper;
 
@@ -39,6 +40,7 @@ const ImageDataScraper = () => {
                 </div>
               ))}
             </div>
+            <HorizontalAds/>
           </div>
         </div>
       </section>
@@ -129,8 +131,9 @@ const ImageDataScraper = () => {
       </section>
 
       <HowItWork scraperData={HowitworksimageDataScraper} />
-      <VideoSection {...imageDataScraperVideo} />
+      <VideoSection {...imageDataScraperVideo} toolName={`image`} />
       <FaqSection />
+      <HorizontalAds/>
       <WhyChooseUs />
     </>
   );

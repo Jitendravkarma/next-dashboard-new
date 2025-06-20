@@ -13,6 +13,7 @@ import HowItWork from "@/shared/layout-components/public-comp/HowItWork";
 import VideoSection from "@/shared/layout-components/public-comp/VideoSection";
 import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_website_scraper;
 
@@ -39,6 +40,7 @@ const WebsiteScraper = () => {
                 </div>
               ))}
             </div>
+            <HorizontalAds/>
           </div>
         </div>
       </section>
@@ -129,8 +131,9 @@ const WebsiteScraper = () => {
       </section>
 
       <HowItWork scraperData={Howitworkswebsitedatascraper} />
-      <VideoSection {...websitedatascraperVideo} />
+      <VideoSection {...websitedatascraperVideo} toolName={`website_data`} />
       <FaqSection />
+      <HorizontalAds/>
       <WhyChooseUs />
     </>
   );

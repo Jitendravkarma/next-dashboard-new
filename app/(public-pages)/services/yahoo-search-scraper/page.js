@@ -13,6 +13,7 @@ import HowItWork from "@/shared/layout-components/public-comp/HowItWork";
 import VideoSection from "@/shared/layout-components/public-comp/VideoSection";
 import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_google_search;
 
@@ -38,6 +39,7 @@ const GoogleSearch = () => {
               </div>
             ))}
           </div>
+          <HorizontalAds/>
         </div>
       </section>
 
@@ -127,8 +129,9 @@ const GoogleSearch = () => {
       </section>
 
       <HowItWork scraperData={HowitworksYahoosearchscraper} />
-      <VideoSection {...YahoosearchscraperVideo} />
+      <VideoSection {...YahoosearchscraperVideo} toolName={`yahoo`} />
       <FaqSection />
+      <HorizontalAds/>
       <WhyChooseUs />
     </>
   );

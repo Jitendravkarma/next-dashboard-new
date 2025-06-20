@@ -34,7 +34,7 @@ const SignInForm = () => {
                     }
                     setAuthToken(response.access_token);
                     handleSignIn(userData, userData.verified);
-                    // navigate.push("/dashboard/home/")
+                    // navigate.push("//")
                     // e.reset()
                     window.open('/downloads', '_blank');
                     setLoginData({email: "", password: ""})

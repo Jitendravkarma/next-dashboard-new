@@ -13,6 +13,7 @@ import HowItWork from "@/shared/layout-components/public-comp/HowItWork";
 import VideoSection from "@/shared/layout-components/public-comp/VideoSection";
 import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_whois_data;
 
@@ -39,6 +40,7 @@ const WhoisDatabase = () => {
                 </div>
               ))}
             </div>
+            <HorizontalAds/>
           </div>
         </div>
       </section>
@@ -129,8 +131,9 @@ const WhoisDatabase = () => {
       </section>
 
       <HowItWork scraperData={Howitworkswhoisdetadownload} />
-      <VideoSection {...whoisdetadownloadVideo} />
+      <VideoSection {...whoisdetadownloadVideo} toolName={`whois`} />
       <FaqSection />
+      <HorizontalAds/>
       <WhyChooseUs />
     </>
   );

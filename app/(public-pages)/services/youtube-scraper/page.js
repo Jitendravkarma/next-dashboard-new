@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
-import { seo_google_search } from "@/shared/data/seo-content/content";
+import { seo_youtube } from "@/shared/data/seo-content/content";
 import {
   youtubescraperdataget,
   YoutubescraperProps,
@@ -13,8 +13,9 @@ import HowItWork from "@/shared/layout-components/public-comp/HowItWork";
 import VideoSection from "@/shared/layout-components/public-comp/VideoSection";
 import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
-export const metadata = seo_google_search;
+export const metadata = seo_youtube;
 
 const YoutubeScraper = () => {
   return (
@@ -38,6 +39,7 @@ const YoutubeScraper = () => {
               </div>
             ))}
           </div>
+          <HorizontalAds/>
         </div>
       </section>
 
@@ -127,8 +129,9 @@ const YoutubeScraper = () => {
       </section>
 
       <HowItWork scraperData={HowitworksYoutubescraper} />
-      <VideoSection {...YoutubeScraperVideo} />
+      <VideoSection {...YoutubeScraperVideo} toolName={`youtube`} />
       <FaqSection />
+      <HorizontalAds/>
       <WhyChooseUs />
     </>
   );

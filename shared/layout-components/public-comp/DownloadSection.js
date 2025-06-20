@@ -1,48 +1,46 @@
 'use client'
 import { useUserContext } from '@/shared/userContext/userContext';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 import Seo from '../seo/seo';
 import Link from 'next/link';
 
 const DownloadSection = () => {
-  const { isAuthenticated, handleSignOut, user } = useUserContext()
+  const { isAuthenticated, handleSignOut, user, productUrl, yt_links, resellerContactInfo, dynamicSocialLinks } = useUserContext()
   const { push } = useRouter()
-  const [ loading, setLoading ] = useState(false)
   const contactLinks = [
     {
       title: "Mail Now",
-      url: "mailto:support@designcollection.in",
+      url: `mailto:${resellerContactInfo.email}`,
       icon: "ri-mail-line"
     },
     {
       title: "Contact Now",
-      url: "tel:+917987887047",
+      url: `tel:${resellerContactInfo.phone}`,
       icon: "ri-phone-line"
     },
     {
       title: "Whats'App Now",
-      url: "https://wa.me/917987887047",
+      url: `https://wa.me/${resellerContactInfo.phone.replace(/[\s()\-\+]/g, '')}`,
       icon: "ri-whatsapp-line"
     },
     {
       title: "Follow on Facebook",
-      url: "https://www.facebook.com/designcollection.in",
+      url: dynamicSocialLinks.facebook,
       icon: "ri-facebook-line"
     },
     {
       title: "Follow on YouTube",
-      url: "https://www.youtube.com/@designcollection6499",
+      url: dynamicSocialLinks.youtube,
       icon: "ri-youtube-line"
     },
     {
       title: "Follow on Twitter",
-      url: "https://twitter.com/mukesh019",
+      url: dynamicSocialLinks.twitter,
       icon: "ri-twitter-x-line"
     },
     {
       title: "Follow on Linkedin",
-      url: "https://www.linkedin.com/company/designcollection/?viewAsMember=true",
+      url: dynamicSocialLinks.linkedin,
       icon: "ri-linkedin-line"
     },
   ]
@@ -52,38 +50,38 @@ const DownloadSection = () => {
 		window.location.reload()
 	}
 
-  const downloadZip = async ()=>{
-    if(isAuthenticated){
-      try {
-        setLoading(true)
-        const response = await fetch("/downloads/Web-Crawler-Spider.zip");
+  // const downloadZip = async ()=>{
+  //   if(isAuthenticated){
+  //     try {
+  //       setLoading(true)
+  //       const response = await fetch("/downloads/Web-Crawler-Spider.zip");
         
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! Status: ${response.status}`);
+  //       }
     
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
+  //       const blob = await response.blob();
+  //       const url = window.URL.createObjectURL(blob);
         
-        const link = document.createElement("a");
-        link.href = url;
-        link.setAttribute("download", "Web-Crawler-Spider.zip");
-        document.body.appendChild(link);
-        link.click();
+  //       const link = document.createElement("a");
+  //       link.href = url;
+  //       link.setAttribute("download", "Web-Crawler-Spider.zip");
+  //       document.body.appendChild(link);
+  //       link.click();
         
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(link);
-      } catch (error) {
-        alert("Failed to download file. Please try again.");
-        console.error(error);
-      } finally {
-        setLoading(false)
-      }
-    }
-    else {
-      alert(`Please signin to download!`)
-    }
-  }
+  //       window.URL.revokeObjectURL(url);
+  //       document.body.removeChild(link);
+  //     } catch (error) {
+  //       alert("Failed to download file. Please try again.");
+  //       console.error(error);
+  //     } finally {
+  //       setLoading(false)
+  //     }
+  //   }
+  //   else {
+  //     alert(`Please signin to download!`)
+  //   }
+  // }
   if(isAuthenticated)
   return (
     <>
@@ -104,7 +102,7 @@ const DownloadSection = () => {
           {/* Logout Button */}
           <div className="flex justify-between items-center mb-6">
             {
-              user.reseller && 
+              (user.reseller && user.email === "support@designcollection.in") && 
               <Link href={"/reseller/dashboard"} title='Visit reseller dashboard' target='_blank' className='inline-block rounded-md duration-300 gap-2 hover:bg-indigo-500 hover:text-white items-center px-6 py-2 transition-all'>
                 <i className='ri-home-4-line text-lg'/> Reseller
               </Link>
@@ -154,7 +152,7 @@ const DownloadSection = () => {
                 </>
               }
             </button> */}
-            <Link className="flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-8 py-3 transform transition-all" href="https://drive.google.com/drive/folders/1seb7VCWi662S0XlvK2rrOcldQQ7R1Iu6" target="_blank">
+            <Link className="flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-8 py-3 transform transition-all" href={productUrl} target="_blank">
                 <i className="text-xl ri-download-line"></i>
                 Download Starter Kit
             </Link>
@@ -169,7 +167,7 @@ const DownloadSection = () => {
               </a>
               <span>OR</span>
               <Link 
-                href={"https://www.youtube.com/watch?v=jLI0zULD6cw"}
+                href={`https://www.youtube.com/watch?v=${yt_links.installation}`}
                 target='_blank'
                 className="w-full flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-5 py-3 transform transition-all"
               >
@@ -188,16 +186,21 @@ const DownloadSection = () => {
             <div className="flex flex-wrap justify-center gap-2 sm:gap-6">
               {
                 contactLinks.map(({title, url, icon}, ind)=>(
-                  <a 
-                    key={ind}
-                    href={url} 
-                    target='_blank'
-                    className="text-indigo-600 duration-300 hover:scale-125 hover:text-indigo-800 transform transition-all"
-                    aria-label="Email Support"
-                    title={title}
-                  >
-                    <i className={`text-2xl ${icon}`}></i>
-                  </a>
+                  <>
+                    {
+                      url &&
+                      <a 
+                        key={ind}
+                        href={url} 
+                        target='_blank'
+                        className="text-indigo-600 duration-300 hover:scale-125 hover:text-indigo-800 transform transition-all"
+                        aria-label="Email Support"
+                        title={title}
+                      >
+                        <i className={`text-2xl ${icon}`}></i>
+                      </a>
+                    }
+                  </>
                 ))
               }
             </div>

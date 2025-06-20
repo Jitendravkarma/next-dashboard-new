@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
 
 const FaqSection = () => {
@@ -8,14 +7,14 @@ const FaqSection = () => {
   // FAQ data as an array of objects
   const faqData = [
     {
-      question: "What is scrape genius?",
+      question: "What is Scrape Genius?",
       answer:
-        "A scrape genius is a versatile tool that extracts data according to given keywords. It supports a range of data scraping tools for various needs, including website data scraper, yellow pages scraper, whois database lookup, and image scraping. The scrape genius can gather data such as mobile numbers, website URLs, and email IDs, which are essential for business growth. This tool can be used for business directory scraping, whois domain searches, and scrape images from websites, making it a powerful asset for web scraping service. With options like web scraper Chrome extension, yellow pages scraper free, and online web scraper capabilities, this tool makes scraping tasks easier. Compatible with scraping software like business directory scraper Python and web scraping with Python, it is designed for efficient data extraction. The scrape genius can help with domain search whois, scrape data from website to Excel, and even scrape LinkedIn and scrape Instagram photos. As a comprehensive web scraping tool, it ensures accurate and organized data, providing businesses with valuable insights. From whois database download to screen scraping tools, the scrape genius meets diverse data needs for professionals and organizations.",
+        "A Scrape Genius is a versatile tool that extracts data according to given keywords. It supports a range of data scraping tools for various needs, including website data scraper, yellow pages scraper, whois database lookup, and image scraping. The Scrape Genius can gather data such as mobile numbers, website URLs, and email IDs, which are essential for business growth. This tool can be used for business directory scraping, whois domain searches, and scrape images from websites, making it a powerful asset for web scraping service. With options like web scraper Chrome extension, yellow pages scraper free, and online web scraper capabilities, this tool makes scraping tasks easier. Compatible with scraping software like business directory scraper and web scraping, it is designed for efficient data extraction. The Scrape Genius can help with domain search whois, scrape data from website to Excel, and even scrape LinkedIn and scrape Instagram photos. As a comprehensive web scraping tool, it ensures accurate and organized data, providing businesses with valuable insights. From whois database download to screen scraping tools, the Scrape Genius meets diverse data needs for professionals and organizations.",
     },
     {
-      question: "Can scrape genius tool scrape data in many ways?",
+      question: "Can Scrape Genius tool scrape data in many ways?",
       answer:
-        "Yes, the scrape genius has many tools and can scrape data in various ways, making it highly versatile. This includes tools like the Google Search Scraper, Google Map Scraper, Website Data Scraper, Whois Domain Data Scraper, Business Directory Scraper, and Document Data Scraper. Additionally, it offers specialized features such as the yellow pages scraper for yellow pages data extraction, whois database download for whois domain information, and image scraper from website for gathering visual data. Whether you're looking to perform business directory scraping, web scraping yellow pages, scrape pdf files, or scrape Instagram photos, the scrape genius provides the tools you need. It’s compatible with advanced options like business directory scraper Python and web scraper Chrome extensions, as well as free tools such as yellow pages scraper free and online web scraper solutions. This makes it ideal for a variety of scraping tasks, from scraping LinkedIn to conducting icann whois searches, and supports data scraping tools for efficient data collection.",
+        "Yes, the Scrape Genius has many tools and can scrape data in various ways, making it highly versatile. This includes tools like the Google Search Scraper, Google Map Scraper, Website Data Scraper, Whois Domain Data Scraper, Business Directory Scraper, and Document Data Scraper. Additionally, it offers specialized features such as the yellow pages scraper for yellow pages data extraction, whois database download for whois domain information, and image scraper from website for gathering visual data. Whether you're looking to perform business directory scraping, web scraping yellow pages, scrape excel, csv and more files, or scrape Instagram photos, the Scrape Genius provides the tools you need. It’s compatible with advanced options like business directory scraper and web scraper, as well as free tools such as yellow pages scraper free and online web scraper solutions. This makes it ideal for a variety of scraping tasks, from scraping LinkedIn to conducting icann whois searches, and supports data scraping tools for efficient data collection.",
     },
     {
       question: "What Is Google Search Scraper?",
@@ -40,7 +39,7 @@ const FaqSection = () => {
     {
       question: "What is Document Data Scraper?",
       answer:
-        "A Document Data Scraper is a tool designed to extract contact numbers and email addresses from various document formats such as CSV, TXT, DOC, DOCX, XLS, PDF, HTML, and JSON. It streamlines data extraction for communication tasks, ensuring high accuracy and efficiency, particularly in business directory scraping and web scraping. The tool automates the extraction process, saving time and reducing manual effort, making it ideal for lead generation, Whois domain data, and large dataset analysis.",
+        "A Document Data Scraper is a tool designed to extract contact numbers and email addresses from various document formats such as CSV, TXT, DOC, DOCX, XLS, HTML, and JSON. It streamlines data extraction for communication tasks, ensuring high accuracy and efficiency, particularly in business directory scraping and web scraping. The tool automates the extraction process, saving time and reducing manual effort, making it ideal for lead generation, Whois domain data, and large dataset analysis.",
     },
     // Add more FAQ objects as needed
   ];

@@ -7,7 +7,9 @@ import GetStart from "@/shared/layout-components/docs/sections/Start";
 import Features from "@/shared/layout-components/docs/sections/Features";
 import Logs from "@/shared/layout-components/docs/sections/Logs";
 import Services from "@/shared/layout-components/docs/sections/Services";
-// import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+import DocBottomSupport from "@/shared/layout-components/public-comp/DocBottomSupport";
+import DocYouTubeChannel from "@/shared/layout-components/public-comp/DocYouTubeChannel";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
 export const metadata = seo_docs
 
@@ -18,7 +20,7 @@ const Docs = () => {
         <div className="max-w-screen-xl mx-auto px-4">
           {/* Heading and Subtitle */}
           <div className="text-center">
-            <h1 className="text-2xl sm:text-4xl text-gray-800 font-semibold">Scrape <span className="text-blue-500 italic">Genius</span> <br/>Documentation</h1>
+            <h1 className="text-2xl sm:text-4xl text-gray-800 font-semibold"><span className="text-blue-500">Scrape Genius</span><br/>Documentation</h1>
             <p className="text-gray-600 mt-4">
               An advanced web scraping solution that uses multiple legal tools to <br/> efficiently extract and manage data, ensuring full compliance with relevant regulations.
             </p>
@@ -36,14 +38,7 @@ const Docs = () => {
               <p className="mb-20" id="youtube"></p>
               <div className="bg-red-100 p-4 rounded-md shadow-sm text-center">
                 <Heading_Two title={"Watch on YouTube"}/>
-                <Para para={
-                  <span className="text-xs sm:text-base">
-                    For a comprehensive, step-by-step installation guide, we also offer a detailed instructional video on YouTube. <br/>
-                    <Link href={"https://www.youtube.com/watch?v=jLI0zULD6cw"} target="_blank" className="my-3 inline-block text-white bg-red-500 hover:bg-red-600 rounded-sm py-2 px-3">
-                      Watch Now <i className="ri-youtube-fill"/> 
-                    </Link>
-                  </span>}
-                />
+                <DocYouTubeChannel/>
               </div>
 
               <br/><br/>
@@ -143,7 +138,7 @@ const Docs = () => {
               </ul>
               
               <p className="mb-20" id="start-app"></p>
-              {/* <HorizontalAds/> */}
+              <HorizontalAds/>
               <br/><br/>
               <Heading_Two title={"Start the Application"}/>
               <ul className="list-disc text-base ml-5">
@@ -222,18 +217,19 @@ const Docs = () => {
             </div>
 
             <div className="py-24" id="features">
+              <HorizontalAds/>
               <Features/>
-              {/* <HorizontalAds/> */}
             </div>
 
 
             <div className="py-24" id="services">
+              <HorizontalAds/>
               <Services/>
             </div>
 
             <div className="py-24" id="logs">
+              <HorizontalAds/>
               <Logs/>
-              {/* <HorizontalAds/> */}
             </div>
           </div>
 
@@ -242,20 +238,7 @@ const Docs = () => {
             <div className="bg-gradient-to-tr absolute from-blue-50 inset-0 opacity-50 to-transparent"></div>
             
             {/* Content */}
-            <div className="flex flex-col gap-6 items-center relative z-10">
-              <div className="flex bg-blue-100 justify-center rounded-full text-4xl sm:text-6xl text-blue-600 w-14 h-14 sm:h-20 sm:w-20 items-center">😊</div>
-              <h3 className="text-xl sm:text-4xl text-blue-700 font-semibold">Thank You for Choosing Us!</h3>
-              <p className="text-gray-600 text-sm sm:text-lg leading-relaxed max-w-md mx-auto">
-                We’re dedicated to supporting you—don’t hesitate to get in touch!
-              </p>
-              <Link 
-                href={"mailto:support@designcollection.in"} 
-                className="bg-blue-600 rounded-md text-sm sm:text-lg text-white duration-300 font-medium gap-2 hover:bg-blue-700 inline-flex items-center p-2 px-4 sm:px-6 sm:py-3 transition-colors"
-              >
-                <i className="text-base sm:text-xl ri-mail-fill"></i>
-                Contact Us
-              </Link>
-            </div>
+            <DocBottomSupport/>
           </div>
           
         </div>

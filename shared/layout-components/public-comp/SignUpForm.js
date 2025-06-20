@@ -8,7 +8,7 @@ import GoogleSignIn from "../google-signin/googlesignin";
 
 const SignUpForm = () => {
     const refElement = useRef()
-	const { openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+	const { openSnack, snackMessage, openSnackBar, handleSnackMessage, resellerContactInfo } = useUserContext()
 	const [ onSuccess, setOnSuccess ] = useState(false)
 	const [ loading, setLoading ] = useState(false)
 	const [ formData, setFormData ] = useState({name:"", email: "", password: "", confirmPassword: "", rememberMe: false})
@@ -54,7 +54,7 @@ const SignUpForm = () => {
                 if(formData.rememberMe){
                     setLoading(true)
                     try {
-                        await signUp({...formData, ParentEmail: "support@designcollection.in"})
+                        await signUp({...formData, ParentEmail: resellerContactInfo.email})
                         setOnSuccess(true)
                     } catch (error) {
                         const err = error.response.data.errors.email;

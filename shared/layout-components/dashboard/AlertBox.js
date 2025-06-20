@@ -9,7 +9,7 @@ import DatePicker from 'react-datepicker';
 const Logo = ()=>{
   return(
     <p>
-      <img src={"/assets/img/brand-logos/toggle-logo.png"} className='mx-auto'/>
+      <img src={"/uploads/dark.png"} className='mx-auto'/>
     </p>
   )
 }

@@ -8,17 +8,17 @@ import Footer from "@/shared/layout-components/footer/footer";
 import Backtotop from "@/shared/layout-components/back-to-top/backtotop";
 import { ThemeChanger } from "@/shared/redux/action"
 import { useUserContext } from "@/shared/userContext/userContext";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 import { redirect } from "next/navigation";
 
 const Contentlayout = ({ children }) => {
 	const { user } = useUserContext()
-	const token = Cookies.get("authToken");
-	if(!token){
+	const token = "support@designcollection.in";
+	if(token !== user.email){
 		redirect("/signin")
 	}
 	else{
-		if(token && !user.reseller){
+		if(token === user.email && !user.reseller){
 			redirect('/downloads')
 		}
 		else

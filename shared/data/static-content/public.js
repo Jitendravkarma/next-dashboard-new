@@ -1,16 +1,16 @@
-export const HeroContent = [
-  {
-    text: <span>Enhance Your Marketing With  <br />Scrape <span className='text-blue-500 italic'>Genius</span></span>,
-  },
-  {
-    text: <span>Boost Your Business With  <br />Scrape <span className='text-blue-500 italic'>Genius</span></span>,
-  },
-  {
-    text: <span>Increase Your Sales With  <br />Scrape <span className='text-blue-500 italic'>Genius</span></span>,
-  },
-];
-
 // Tab data including icons and content for each tab
+export const HeroContent = [
+    {
+      text: <span>Enhance Your Marketing With  <br />Scrape Genius</span>,
+    },
+    {
+      text: <span>Boost Your Business With  <br />Scrape Genius</span>,
+    },
+    {
+      text: <span>Increase Your Sales With  <br />Scrape Genius</span>,
+    },
+]
+
 export const tabs = [
   {
     key: "Transform Your Deta",
@@ -62,6 +62,51 @@ export const tabs = [
 
 export const featurestemplates = [
   {
+    title: "Live Website Scraper",
+    url: "/services/google-search-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/live.png"
+        alt="Live Website Scraper"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Extract the data from millions of live websites for the select country and get detailed data such as Phone numbers, Email addresses, Social media links, and more.",
+    youtube: "xJsktXJfZZ8",
+    toolName: "live_scraping"
+  },
+  {
+    title: "Live Website Data",
+    url: "/services/google-search-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/websiteIcon.png"
+        alt="Live Website Data"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Here now you can get the enhanced data from our actual database in few seconds.",
+    youtube: "xJsktXJfZZ8",
+    toolName: "live_data"
+  },
+  {
+    title: "Bing Search Scraper",
+    url: "/services/google-search-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/bing.png"
+        alt="Bing Search Scraper"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Scrape data using keywords on Google to extract website names, emails, contact numbers, and more efficiently with this powerful web scraping tool.",
+    youtube: "xJsktXJfZZ8",
+    toolName: "bing"
+  },
+  {
     title: "Google Search Scraper",
     url: "/services/google-search-scraper",
     image: (
@@ -74,6 +119,37 @@ export const featurestemplates = [
     description:
       "Scrape data using keywords on Google to extract website names, emails, contact numbers, and more efficiently with this powerful web scraping tool.",
     youtube: "xJsktXJfZZ8",
+    toolName: "google"
+  },
+  {
+    title: "DuckDuckGo Search Scraper",
+    url: "/services/google-search-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/duckduckgo.png"
+        alt="DuckDuckGo Search Scraper"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Scrape data using keywords on Google to extract website names, emails, contact numbers, and more efficiently with this powerful web scraping tool.",
+    youtube: "xJsktXJfZZ8",
+    toolName: "duck"
+  },
+  {
+    title: "Yahoo Search Scraper",
+    url: "/services/google-search-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/yahoo.png"
+        alt="Yahoo Search Scraper"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Scrape data using keywords on Google to extract website names, emails, contact numbers, and more efficiently with this powerful web scraping tool.",
+    youtube: "xJsktXJfZZ8",
+    toolName: "yahoo"
   },
   {
     title: "Google Map Scraper",
@@ -88,6 +164,82 @@ export const featurestemplates = [
     description:
       "Google Map Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
     youtube: "BhI2KKoSj3Y",
+    toolName: "map"
+  },
+  {
+    title: "IndiaMART Scraper",
+    url: "/services/google-map-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/indiamartIcon.png"
+        alt="IndiaMART Scraper"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "IndiaMART Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+    youtube: "BhI2KKoSj3Y",
+    toolName: "indiamart"
+  },
+  {
+    title: "Justdial Scraper",
+    url: "/services/google-map-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/jdIcon.png"
+        alt="Justdial Scraper"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "JustDial Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+    youtube: "BhI2KKoSj3Y",
+    toolName: "justdial"
+  },
+  {
+    title: "Sulekha Scraper",
+    url: "/services/google-map-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/sulekha.png"
+        alt="Sulekha Scraper"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Sulekha Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+    youtube: "BhI2KKoSj3Y",
+    toolName: "sulekha"
+  },
+  {
+    title: "Email Scraper",
+    url: "/services/google-map-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/email.png"
+        alt="Email Scraper"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Email Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+    youtube: "BhI2KKoSj3Y",
+    toolName: "email"
+  },
+  {
+    title: "Phone number scraper",
+    url: "/services/google-map-scraper",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/phone.png"
+        alt="Phone number scraper"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Phone number scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+    youtube: "BhI2KKoSj3Y",
+    toolName: "phone"
   },
   {
     title: "Website Data Scraper",
@@ -102,6 +254,7 @@ export const featurestemplates = [
     description:
       "Gather country-specific domain records, including domain names, emails, and phone numbers, with our seamless website data scraper software.",
     youtube: "_sXWe4U2Cz8",
+    toolName: "website_data"
   },
   {
     title: "Document Data Scraper",
@@ -114,8 +267,9 @@ export const featurestemplates = [
       />
     ),
     description:
-      "Our document scraper handles .txt, .csv, .pdf, and more, efficiently extracting contact numbers and email addresses from various document types.",
+      "Our document scraper handles .txt, .csv, and more, efficiently extracting contact numbers and email addresses from various document types.",
     youtube: "NfOetsKFX_E",
+    toolName: "document"
   },
   {
     title: "Image Data Scraper",
@@ -130,6 +284,7 @@ export const featurestemplates = [
     description:
       "Upload any image to our image scraping tool to extract text or details efficiently, converting visuals into data to enhance your workflow.",
     youtube: "k_zh66JW-oU",
+    toolName: "image"
   },
   {
     title: "Business Directory Scraper",
@@ -144,6 +299,7 @@ export const featurestemplates = [
     description:
       "Easily scrape data by entering URLs of directories, including email IDs, contact numbers, and domain names for efficient business directory scraping.",
     youtube: "LW9_PAJhens",
+    toolName: "directory"
   },
   {
     title: "Website Data Center",
@@ -158,6 +314,7 @@ export const featurestemplates = [
     description:
       "Our Website Data Center allows quick searches by country and keyword, delivering results like URLs, emails, and phone numbers tailored to your needs.",
     youtube: "_sXWe4U2Cz8",
+    toolName: "live_data"
   },
   {
     title: "Whois Domain Database",
@@ -172,20 +329,28 @@ export const featurestemplates = [
     description:
       "Access our 8+ years of Whois database with raw data from APIs, filtered year-wise, offering an extensive and convenient search experience.",
     youtube: "iGRgQurIOPg",
+    toolName: "whois"
   },
 ];
 
 export const Businessgrowusecases = [
   {
-    title: "Reliable email extractor",
+    title: "Reliable Email Extractor",
     icon: <i className="ri-mail-line"></i>,
     backgroundColor: "#ebf9ff",
     iconColor: "#36c3ff",
     link: "/email-extractor",
   },
   {
-    title: "Efficient website data scraper",
-    icon: <i className="ri-global-line"></i>,
+    title: "B2B Directory Scraper",
+    icon: <i className="ri-shake-hands-line"></i>,
+    backgroundColor: "#ffd9cd",
+    iconColor: "#e8501f",
+    link: "/pdf-scraper",
+  },
+  {
+    title: "Bulk Contact Scraper",
+    icon: <i className="ri-group-line"></i>,
     backgroundColor: "#f3f4ff",
     iconColor: "#6271ff",
     link: "/website-scraper",
@@ -196,13 +361,6 @@ export const Businessgrowusecases = [
     backgroundColor: "#ffead0",
     iconColor: "#ff9400",
     link: "/document-scraper",
-  },
-  {
-    title: "PDF scraper online",
-    icon: <i className="ri-file-pdf-2-line"></i>,
-    backgroundColor: "#ffd9cd",
-    iconColor: "#e8501f",
-    link: "/pdf-scraper",
   },
   {
     title: "Image scraping",
@@ -219,7 +377,7 @@ export const Businessgrowusecases = [
     link: "/advanced-scraper",
   },
   {
-    title: "Expert web scraping",
+    title: "Whois Data",
     icon: <i className="ri-bubble-chart-fill"></i>,
     backgroundColor: "#ebf9ff",
     iconColor: "#36c3ff",

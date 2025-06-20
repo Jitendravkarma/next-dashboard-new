@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
-import { seo_google_search } from "@/shared/data/seo-content/content";
+import { seo_facebook } from "@/shared/data/seo-content/content";
 import {
   facebookscraperdataget,
   FacebookscraperProps,
@@ -13,8 +13,9 @@ import HowItWork from "@/shared/layout-components/public-comp/HowItWork";
 import VideoSection from "@/shared/layout-components/public-comp/VideoSection";
 import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
+import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
-export const metadata = seo_google_search;
+export const metadata = seo_facebook;
 
 const FacebookScraper = () => {
   return (
@@ -38,6 +39,7 @@ const FacebookScraper = () => {
               </div>
             ))}
           </div>
+          <HorizontalAds/>
         </div>
       </section>
 
@@ -127,8 +129,9 @@ const FacebookScraper = () => {
       </section>
 
       <HowItWork scraperData={HowitworksFacebookscraper} />
-      <VideoSection {...FacebookScraperVideo} />
+      <VideoSection {...FacebookScraperVideo} toolName={`facebook`} />
       <FaqSection />
+      <HorizontalAds/>
       <WhyChooseUs />
     </>
   );

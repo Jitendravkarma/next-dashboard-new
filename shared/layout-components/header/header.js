@@ -1,52 +1,21 @@
 
 "use client"
-import React, { Fragment, useEffect, useState } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
-import { ThemeChanger, removeFromCart } from "@/shared/redux/action";
+import React, { Fragment, useEffect } from "react";
+import { connect } from "react-redux";
+import { ThemeChanger } from "@/shared/redux/action";
 import Modalsearch from "../modal-search/modalsearch";
 import store from "@/shared/redux/store";
 import Link from "next/link";
 import { basePath } from "@/next.config";
 import { useUserContext } from "@/shared/userContext/userContext";
-import { useRouter } from "next/navigation";
 
-const Header = ({ local_varaiable, ThemeChanger }) => {
+const Header = ({ ThemeChanger }) => {
 
-    const navigate = useRouter()
-    const { user, handleSignOut } = useUserContext()
+    const { user, handleSignOut, logo, isLoading } = useUserContext()
     
     function handleSignOutCall() {
         // navigate.push("/signin");
         handleSignOut();
-    }
-
-    let [storedata, SetStoreData] = useState(local_varaiable);
-
-    //full screen
-
-    function Fullscreen() {
-        if (!document.fullscreenElement &&    // alternative standard method
-            !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {  // current working methods
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            } else if (document.documentElement.mozRequestFullScreen) {
-                document.documentElement.mozRequestFullScreen();
-            } else if (document.documentElement.webkitRequestFullscreen) {
-                document.documentElement.webkitRequestFullscreen();
-            } else if (document.documentElement.msRequestFullscreen) {
-                document.documentElement.msRequestFullscreen();
-            }
-        } else {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.mozCancelFullScreen) {
-                document.mozCancelFullScreen();
-            } else if (document.webkitExitFullscreen) {
-                document.webkitExitFullscreen();
-            } else if (document.msExitFullscreen) {
-                document.msExitFullscreen();
-            }
-        }
     }
 
     useEffect(() => {
@@ -64,10 +33,6 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
-
-    useEffect(() => {
-        SetStoreData(local_varaiable);
-    }, [local_varaiable]);
 
     function menuClose() {
         const theme = store.getState();
@@ -223,98 +188,7 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
 
 
     };
-    //Dark Model
-    const ToggleDark = () => {
-
-        ThemeChanger({
-            ...local_varaiable,
-            "class": local_varaiable.class == "dark" ? "light" : "dark",
-            "dataHeaderStyles": local_varaiable.dataHeaderStyles == "dark" ? "light" : "dark",
-            // "dataHeaderStyles": local_varaiable.dataHeaderStyles == "dark",
-            "dataMenuStyles": local_varaiable.dataNavLayout == "horizontal" ? local_varaiable.dataMenuStyles == "dark" ? "light" : "dark" : "dark"
-
-        });
-        const theme = store.getState();
-
-        if (theme.class != "dark") {
-            ThemeChanger({
-                ...theme,
-                "bodyBg": "",
-                "darkBg": "",
-                "inputBorder": "",
-                "Light": "",
-                // "dataHeaderStyles": "",
-            });
-            localStorage.setItem("Syntolighttheme", "light");
-            localStorage.removeItem("Syntodarktheme");
-            localStorage.removeItem("SyntoHeader");
-            localStorage.removeItem("SyntoMenu");
-            localStorage.removeItem("bodyBgRGB");
-            localStorage.removeItem('darkBgRGB');
-            localStorage.removeItem('Light');
-            localStorage.removeItem('inputBorder');
-        }
-
-        else {
-            localStorage.setItem("Syntodarktheme", "dark");
-            localStorage.removeItem("Syntolighttheme");
-            localStorage.removeItem("SyntoHeader");
-            localStorage.removeItem("SyntoMenu");  
-        }
-
-    };
-
-    const cartProduct = [
-        {
-            id: 1,
-            productpicture: "/assets/img/ecommerce/products/1.png",
-            title: "Black Heals For Women",
-            price: "$699",
-            discount: "$999"
-        },
-        {
-            id: 2,
-            productpicture: "/assets/img/ecommerce/products/2.png",
-            title: "Tshirt For Men",
-            price: "$245",
-            discount: "$599"
-        },
-        {
-            id: 3,
-            productpicture: "/assets/img/ecommerce/products/9.png",
-            title: "Travel Bag For Womens",
-            price: "$299",
-            discount: "$399"
-        },
-        {
-            id: 4,
-            productpicture: "/assets/img/ecommerce/products/10.png",
-            title: "Leather Wallet For Girls",
-            price: "$100",
-            discount: "$150"
-        },
-    ];
-
-    const notificationdata = [
-        { id: 1, src: "/assets/img/users/17.jpg", heading: "Elon Isk", class: "Hello there! how are you doing?...", data: "2 min" },
-        { id: 2, src: "/assets/img/users/2.jpg", heading: "Shakira Sen", class: "I would like to discuss about that...", data: "09:43" },
-        { id: 3, src: "/assets/img/users/21.jpg", heading: "Sebastain", class: "Shall we go to the cafe at downto...", data: "yesterday" },
-        { id: 4, src: "/assets/img/users/11.jpg", heading: "Charlie Davieson", class: "Lorem ipsum dolor sit amet, cons...", data: "yesterday" },
-    ];
-    const [allData1, setAllData1] = useState(notificationdata);
-
-    const [notifications, setNotifications] = useState([...notificationdata]);
-
-    const handleNotificationClose = (index, event) => {
-        // Create a copy of the notifications array and remove the item at the specified index
-        if (event) {
-            event.stopPropagation();
-        }
-        const updatedNotifications = [...notifications];
-        updatedNotifications.splice(index, 1);
-        setNotifications(updatedNotifications);
-    };
-
+    
     useEffect(() => {
         const navbar = document.querySelector(".header");
         const navbar1 = document.querySelector(".app-sidebar");
@@ -341,39 +215,6 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
         };
     }, []);
 
-    const [cartItems, setCartItems] = useState([...cartProduct]);
-    const [cartItemCount, setCartItemCount] = useState(cartProduct.length);
-    const handleRemove = (itemId, event) => {
-        event.stopPropagation();
-        const updatedCart = localCart.filter((item) => item.id !== itemId);
-        setLocalCart(updatedCart);
-        setCartItemCount(updatedCart.length);
-    };
-
-    //Cart function
-
-    const maxDisplayItems = 5;
-
-    const dispatch = useDispatch();
-    const reduxCart = useSelector((state) => state.cart);
-    const [localCart, setLocalCart] = useState(cartProduct);
-    const [remainingCount2, setRemainingCount2] = useState(0);
-
-    // Combine local and redux carts whenever they change
-    const card = [...localCart, ...reduxCart];
-
-    useEffect(() => {
-        setRemainingCount2(card.length);
-    }, [card]);
-
-    const handleDelete = (id, event) => {
-        event.stopPropagation();
-        // Remove item from local cart
-        setLocalCart(localCart.filter(item => item.id !== id));
-        // Remove item from redux cart
-        dispatch(removeFromCart(id));
-    };
-
     return (
         <Fragment>
             <header className="header custom-sticky !top-0 !w-full">
@@ -390,216 +231,25 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
 
                         </div>
 
-                        <div className="responsive-logo">
+                        <div className="responsive-logo text-center">
+                        {
+							isLoading ? 
+							<div className="pl-0 p-1 h-10 w-36 mx-auto">
+								<div className="rounded bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse h-full w-full"/>
+							</div>
+							:
+                            <>
                             <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
-                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-logo.png`} alt="logo" className="w-36 mx-auto" /></Link>
+                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" /></Link>
                             <Link className="responsive-logo-light" href={"/"} aria-label="Brand">
-                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/img/brand-logos/desktop-dark.png`} alt="logo" className="w-36 mx-auto" /></Link>
+                                <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" /></Link>
+                            </>
+                        }
                         </div>
 
                         <div className="header-right">
                             <div className="responsive-headernav">
                                 <div className="header-nav-right">
-                                    <p
-                                        className="uppercase rounded-sm p-2 md:py-1 text-sm md:text-xs border border-blue-100 bg-green-100 hover:bg-green-200"
-                                        title="beta version 1.0"
-                                    >
-                                        <code className="text-green-600">beta <span className="hidden md:inline">version</span></code>
-                                    </p>
-
-                                    {/* <button
-                                        className="uppercase rounded-sm p-2 md:py-1 text-sm md:text-xs border border-blue-100 bg-green-100 hover:bg-green-200"
-                                        title="buy now"
-                                    >
-                                        <code className="text-green-600">buy <span className="hidden md:inline">now</span></code>
-                                    </button> */}
-                                    
-                                    <div className="header-theme-mode hidden sm:block" onClick={() => ToggleDark()} >
-                                        <Link aria-label="anchor" className="hs-dark-mode-active:hidden flex hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
-                                            href="#!" scroll={false} data-hs-theme-click-value="dark">
-                                            <i className="ri-moon-line header-icon"></i>
-                                        </Link>
-                                        <Link aria-label="anchor" className="hs-dark-mode-active:flex hidden hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
-                                            href="#!" scroll={false} data-hs-theme-click-value="light">
-                                            <i className="ri-sun-line header-icon"></i>
-                                        </Link>
-                                    </div>
-                                    {/* <div className="header-fullscreen hidden lg:block"
-                                        onClick={() => Fullscreen()}
-                                    >
-                                        <Link aria-label="anchor" scroll={false} href="#!" className="inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10">
-                                            <i className="ri-fullscreen-line header-icon full-screen-open"></i>
-                                            <i className="ri-fullscreen-line header-icon fullscreen-exit-line hidden"></i>
-                                        </Link>
-                                    </div> */}
-                                    {/* <div className="header-cart hs-dropdown ti-dropdown hidden lg:block" data-hs-dropdown-placement="left">
-                                        <button id="dropdown-cart" type="button" className="hs-dropdown-toggle ti-dropdown-toggle p-0 border-0 flex-shrink-0 h-[2.375rem] w-[2.375rem] rounded-full shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
-                                            <i className="ri-shopping-basket-line header-icon"></i>
-                                            <span className="flex absolute h-5 w-5 top-0 ltr:right-0 rtl:left-0 -mt-1 ltr:-mr-1 rtl:-ml-1">
-                                                <span className="relative inline-flex rounded-full h-5 w-5 bg-danger text-white justify-center items-center" id="cart-data2">{remainingCount2}</span>
-                                            </span>
-                                        </button>
-                                        <div className="hs-dropdown-menu ti-dropdown-menu w-[20rem] border-0" aria-labelledby="dropdown-cart">
-                                            <div className="ti-dropdown-header !bg-primary border-b dark:border-white/10 flex justify-between items-center">
-                                                <p className="ti-dropdown-header-title !text-white font-semibold">Shopping Cart</p>
-                                                <Link href="#!" scroll={false} className="badge bg-black/20 text-white rounded-sm" id="cart-data">{remainingCount2} Item{remainingCount2 !== 1 ? 's' : ''}</Link>
-                                            </div>
-                                            <div className="ti-dropdown-divider divide-y divide-gray-200 dark:divide-white/10">
-                                                <div className="py-2 first:pt-0 last:pb-0 !p-0" id="allCartsContainer">
-                                                    {card.slice(0, maxDisplayItems).map((idx, index) => (
-                                                        <Fragment key={index}>
-                                                            {!card.includes(idx.id) && (
-                                                                <div className="ti-dropdown-item relative header-box" key={Math.random()}>
-                                                                    <Link href={"/pages/ecommerce/cart/"} className="flex items-center space-x-3 rtl:space-x-reverse w-full">
-                                                                        <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${idx.productpicture}`} alt="product-img" className="avatar p-2 shadow-none  shrink-0 items-center justify-center rounded-sm bg-gray-100 dark:bg-black/20 !ring-transparent" />
-                                                                        <div>
-                                                                            <p className="text-sm font-medium text-gray-800 dark:text-white">{idx.title}</p>
-                                                                            <div className="flex space-x-2 rtl:space-x-reverse">
-                                                                                <h5 className="text-xs">{idx.price}</h5>
-                                                                                <span className="my-auto line-through text-xs text-gray-400 dark:text-white/70">{idx.discount}</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </Link>
-                                                                    <Link aria-label="anchor" href="#!" scroll={false} onClick={(event) => handleDelete(idx.id, event)} className="header-remove-btn ltr:ml-auto rtl:mr-auto flex-shrink-0 inline-flex items-center justify-center text-lg text-gray-500/20 dark:text-white/20 hover:text-gray-800 dark:hover:text-white">
-                                                                        <i className="ri-close-circle-line"></i>
-                                                                    </Link>
-
-                                                                </div>
-
-                                                            )}
-                                                        </Fragment>
-                                                    ))}
-                                                </div>
-
-                                                <div className={` first:pt-0 ${remainingCount2 === 0 ? 'hidden' : 'd-block'}`}>
-                                                    <div className="flex justify-between px-5 py-2 border-b dark:border-b-white/10">
-                                                        <div>
-                                                            <span className="text-xs font-semibold text-gray-800 dark:text-white">Total</span>
-                                                        </div>
-                                                        <div className="text-end font-medium">
-                                                            <span className="text-xs font-semibold text-gray-800 dark:text-white">$40,020</span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="py-2 px-5">
-                                                        <Link className="w-full ti-btn ti-btn-primary" href={"/pages/ecommerce/checkout/"}>
-                                                            Proceed Checkout
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                                <div className={`p-6 pb-8 text-center ${remainingCount2 === 0 ? 'd-block' : 'hidden'}`}>
-                                                    <i className="ri ri-shopping-cart-2-line leading-none text-4xl avatar avatar-lg bg-primary/20 text-primary rounded-full p-3 align-middle flex justify-center mx-auto"></i>
-                                                    <div className="mt-5 text-center">
-                                                        <p className="text-base font-semibold text-gray-800 dark:text-white mb-1">
-                                                            No Items In Cart
-                                                        </p>
-                                                        <p className="text-xs text-gray-500 dark:text-white/70">
-                                                            When you have Items added here , they will appear here.
-                                                        </p>
-                                                        <Link href="/pages/ecommerce/products/" className="m-0 ti-btn ti-btn-primary py-1 !mt-5"><i className="ti ti-arrow-right text-base leading-none"></i>Continue Shopping</Link>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="header-notification hs-dropdown ti-dropdown hidden sm:block" data-hs-dropdown-placement="bottom-right">
-                                        <button id="dropdown-notification" type="button"
-                                            className="hs-dropdown-toggle ti-dropdown-toggle p-0 border-0 flex-shrink-0 h-[2.375rem] w-[2.375rem] rounded-full shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
-                                            <i className="ri-notification-2-line header-icon animate-bell"></i>
-                                            <span className="flex absolute h-5 w-5 top-0 ltr:right-0 rtl:left-0 -mt-1 ltr:-mr-1 rtl:-ml-1">
-                                                <span
-                                                    className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success/80 opacity-75"></span>
-                                                <span
-                                                    className="relative inline-flex rounded-full h-5 w-5 bg-success text-white justify-center items-center" id="notify-data"> {notifications.length}</span>
-                                            </span>
-                                        </button>
-                                        <div className="hs-dropdown-menu ti-dropdown-menu w-[20rem] border-0" aria-labelledby="dropdown-notification">
-                                            <div className="ti-dropdown-header !bg-primary border-b dark:border-white/10 flex justify-between items-center">
-                                                <p className="ti-dropdown-header-title !text-white font-semibold">Notifications</p>
-                                                <Link href="#!" scroll={false} className="badge bg-black/20 text-white rounded-sm">{`${notifications.length} Mark All Read`}</Link>
-                                            </div>
-                                            <div className="ti-dropdown-divider divide-y divide-gray-200 dark:divide-white/10">
-                                                <div className="pt-2 first:pt-0 last:pb-0" id="allNotifyContainer">
-                                                    {notifications.map((idx, index) => (
-                                                        <div className="ti-dropdown-item relative header-box" key={index}>
-                                                            <Link href={"/pages/mail/mail/"} className="flex space-x-3 rtl:space-x-reverse">
-                                                                <div className="ltr:mr-2 rtl:ml-2 avatar rounded-full ring-0">
-                                                                    <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${idx.src}`} alt="img" className="rounded-sm" />
-                                                                </div>
-                                                                <div className="relative w-full">
-                                                                    <h5 className="text-sm text-gray-800 dark:text-white font-semibold mb-1">{idx.heading}</h5>
-                                                                    <p className="text-xs mb-1 max-w-[200px] truncate">{idx.class}</p>
-                                                                    <p className="text-xs text-gray-400 dark:text-white/70">{idx.data}</p>
-                                                                </div>
-                                                            </Link>
-                                                            <Link onClick={(event) => handleNotificationClose(index, event)} aria-label="anchor" href="#!" scroll={false} className="header-remove-btn ltr:ml-auto rtl:mr-auto text-lg text-gray-500/20 dark:text-white/20 hover:text-gray-800 dark:hover:text-white">
-                                                                <i className="ri-close-circle-line"></i>
-                                                            </Link>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                                <div className={`py-2 first:pt-0 px-5 ${notifications.length === 0 ? 'hidden' : 'd-block'}`}>
-                                                    <Link className="w-full ti-btn ti-btn-primary p-2" href={"/pages/mail/mail/"}>
-                                                        View All
-                                                    </Link>
-                                                </div>
-                                                <div className={`p-6 pb-8 text-center ${notifications.length === 0 ? 'd-block' : 'hidden'}`}>
-                                                    <i className="ri ri-notification-off-line leading-none text-4xl avatar avatar-lg bg-secondary/20 text-secondary rounded-full p-3 align-middle flex justify-center mx-auto"></i>
-                                                    <div className="mt-5 text-center">
-                                                        <p className="text-base font-semibold text-gray-800 dark:text-white mb-1">
-                                                            No Notifications Found
-                                                        </p>
-                                                        <p className="text-xs text-gray-500 dark:text-white/70">
-                                                            When you have notifications added here , they will appear here.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="header-apps hs-dropdown ti-dropdown hidden md:block" data-hs-dropdown-placement="bottom-right">
-                                        <button aria-label="button" id="dropdown-apps" type="button" className="hs-dropdown-toggle ti-dropdown-toggle !p-0 border-0 flex-shrink-0 h-[2.375rem] w-[2.375rem] rounded-full shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
-                                            <i className="ri-bookmark-line header-icon"></i>
-                                        </button>
-                                        <div className="hs-dropdown-menu ti-dropdown-menu w-[20rem] border-0" aria-labelledby="dropdown-apps">
-                                            <div
-                                                className="ti-dropdown-header !bg-primary border-b dark:border-white/10 flex justify-between items-center text-center">
-                                                <p className="ti-dropdown-header-title font-semibold !text-white">Related Apps</p>
-                                            </div>
-                                            <div className="ti-dropdown-divider divide-y divide-gray-200 dark:divide-white/10">
-                                                <div className="grid grid-cols-3 gap-0 p-4 pt-2">
-                                                    <Link href={"/pages/mail/mail/"} className="block pt-0 p-2 text-center rounded-sm hover:bg-gray-50 dark:hover:bg-black/20">
-                                                        <i className="ri ri-mail-line leading-none text-2xl avatar ring-0 bg-primary/20 text-primary rounded-sm p-3 my-3 align-middle flex justify-center mx-auto"></i>
-                                                        <div className="text-xs font-semibold text-gray-800 dark:text-white">Mail Inbox</div>
-                                                    </Link>
-                                                    <Link href={"/pages/mail/chat/"} className="block pt-0 p-2 text-center rounded-sm hover:bg-gray-50 dark:hover:bg-black/20">
-                                                        <i className="ri ri-chat-2-line leading-none text-2xl avatar ring-0 bg-secondary/20 text-secondary rounded-sm p-3 my-3 align-middle flex justify-center mx-auto"></i>
-                                                        <div className="text-xs font-semibold text-gray-800 dark:text-white">Chat</div>
-                                                    </Link>
-                                                    <Link href={"/pages/tasks/"} className="block pt-0 p-2 text-center rounded-sm hover:bg-gray-50 dark:hover:bg-black/20">
-                                                        <i className="ri ri-task-line leading-none text-2xl avatar ring-0 bg-warning/20 text-warning rounded-sm p-3 my-3 align-middle flex justify-center mx-auto"></i>
-                                                        <div className="text-xs font-semibold text-gray-800 dark:text-white">Task</div>
-                                                    </Link>
-                                                    <Link href={"/advance-ui/calendar/"} className="block pt-0 p-2 text-center rounded-sm hover:bg-gray-50 dark:hover:bg-black/20">
-                                                        <i className="ri ri-calendar-event-line leading-none text-2xl avatar ring-0 bg-danger/20 text-danger rounded-sm p-3 my-3 align-middle flex justify-center mx-auto"></i>
-                                                        <div className="text-xs font-semibold text-gray-800 dark:text-white">Calendar</div>
-                                                    </Link>
-                                                    <Link href={"/advance-ui/file-manager/file-manager/"} className="block pt-0 p-2 text-center rounded-sm hover:bg-gray-50 dark:hover:bg-black/20">
-                                                        <i className="ri ri-file-copy-2-line leading-none text-2xl avatar ring-0 bg-info/20 text-info rounded-sm p-3 my-3 align-middle flex justify-center mx-auto"></i>
-                                                        <div className="text-xs font-semibold text-gray-800 dark:text-white">File Manager</div>
-                                                    </Link>
-                                                    <Link href={"/pages/contacts/"} className="block pt-0 p-2 text-center rounded-sm hover:bg-gray-50 dark:hover:bg-black/20">
-                                                        <i className="ri ri-group-line leading-none text-2xl avatar ring-0 bg-success/20 text-success rounded-sm p-3 my-3 align-middle flex justify-center mx-auto"></i>
-                                                        <div className="text-xs font-semibold text-gray-800 dark:text-white">Contacts</div>
-                                                    </Link>
-                                                </div>
-                                                <div className="py-2 first:pt-0 px-5">
-                                                    <Link className="w-full ti-btn ti-btn-primary p-2" href="#!" scroll={false} >
-                                                        View All
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> */}
                                     <div className="header-profile hs-dropdown ti-dropdown" data-hs-dropdown-placement="bottom-right">
                                         <button id="dropdown-profile" type="button" className="hs-dropdown-toggle ti-dropdown-toggle gap-2 !p-0 !ring-0 !border-0 flex-shrink-0 h-8 w-8 rounded-full !shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
                                             <i className="ri-user-3-line header-icon"></i>
@@ -621,34 +271,13 @@ const Header = ({ local_varaiable, ThemeChanger }) => {
                                                     <i className="ti ti-user-circle text-lg"></i>
                                                     Profile
                                                 </Link>
-                                                {/* <Link href={"/pages/mail/mail/"} className="ti-dropdown-item">
-                                                    <i className="ti ti-inbox text-lg"></i>
-                                                    Inbox
-                                                </Link>
-                                                <Link href={"/pages/tasks/"} className="ti-dropdown-item">
-                                                    <i className="ti ti-clipboard-check text-lg"></i>
-                                                    Task Manager
-                                                </Link>
-                                                <Link href={"/pages/profile/profile-settings/"} className="ti-dropdown-item">
-                                                    <i className="ti ti-adjustments-horizontal text-lg"></i>
-                                                    Settings
-                                                </Link>
-                                                <Link href={"/dashboards/crypto/"} className="ti-dropdown-item">
-                                                    <i className="ti ti-wallet text-lg"></i>
-                                                    Bal: $7,12,950
-                                                </Link> */}
-                                                <button type="button" onClick={handleSignOutCall} className="ti-dropdown-item">
+                                                <button onClick={handleSignOutCall} className="ti-dropdown-item w-full">
                                                     <i className="ti ti-logout  text-lg"></i>
                                                     Log Out
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                    {/* <div className="switcher-icon">
-                                        <button aria-label="button" type="button" className="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus-visible:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10" data-hs-overlay="#hs-overlay-switcher">
-                                            <i className="ri-settings-5-line header-icon animate-spin"></i>
-                                        </button>
-                                    </div> */}
                                     <div className="header-fullscreen hidden lg:block" title="Logout">
                                         <button aria-label="button" className="inline-flex flex-shrink-0 justify-center items-center gap-2 h-[2.375rem] w-[2.375rem] rounded-full font-medium  hover:bg-gray-200 text-gray-500 align-middle focus:outline-none focus:ring-0 focus:ring-gray-400 focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-white/70 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
                                             href="#!" onClick={handleSignOutCall} >
