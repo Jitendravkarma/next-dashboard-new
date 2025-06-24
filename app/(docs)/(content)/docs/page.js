@@ -46,16 +46,16 @@ const Docs = () => {
               <Para para={
                 <span>
                   First download the the zip file by <CustomLink href={"/signin"} title={"signin"}/> or <CustomLink href={"/signup"} title={"signup"}/>, <br/>
-                  Once you've downloaded the product, you'll find a file named <Code title={"Web-Crawler-Spider.zip"}/>. Simply follow the steps below to get started:
+                  Once you've downloaded the product, Simply follow the steps below to get started:
                 </span>}
               />
               
               <br/><br/>
               <Heading_Two title={"Extract the Zip File"}/>
               <ul className="list-disc text-base ml-5">
-                <li>Locate the downloaded file, <Code title={"Web-Crawler-Spider.zip"}/> and simply unzip it.</li>
+                <li>Locate the downloaded zip file, and simply unzip it.</li>
                 <li>
-                After unzipping the file, open the folder and navigate to the <Code title={"/web_crawler_spider"}/>. <br/> 
+                After unzipping the file, open the folder and navigate to the <Code title={"/lead_scraper"}/>. <br/> 
                 <LoadImage url={"root_folder.png"}/> 
                 </li>
               </ul>
@@ -105,17 +105,17 @@ const Docs = () => {
               <Heading_Two title={"Steps to Install and Run the Application"}/>
               <ul className="list-disc text-base ml-5">
                 <li>
-                  Once you opened <Code title={"/web_crawler_spider"}/>, run the <Code title={"/installer.bat"}/> file.
-                  <p className="text-sm italic"><b>Note:</b> If the <b>/installer.bat</b> file will not work on your system, checkout our <CustomLink title={"Alternate option"} target="_self" href={"#alternate"}/>.</p>
+                  Once you opened <Code title={"/lead_scraper"}/>, run the <Code title={"/installer"}/> file.
+                  <p className="text-sm italic"><b>Note:</b> If the <b>/installer</b> file will not work on your system, checkout our <CustomLink title={"Alternate option"} target="_self" href={"#alternate"}/>.</p>
                   <LoadImage url={"installer.png"}/>
                   <p className="text-sm italic"><b>Note:</b> Ensure a stable internet connection, as the process may take time.</p>
                 </li>
                 <br/>
                 <p className="mb-20" id="alternate"></p>
                 <Heading_Two title={"Alternate (Optional)"}/>
-                <p className="text-sm italic"><b>Note:</b> If the <b>/installer.bat</b> is not supported or not working on your system, follow the steps below:</p>
+                <p className="text-sm italic"><b>Note:</b> If the <b>/installer</b> is not supported or not working on your system, follow the steps below:</p>
                 <li>
-                  Open your project directory <b>/web_crawler_spider</b> in terminal or command prompt.{" "}<br/>
+                  Open your project directory <b>/lead_scraper</b> in terminal or command prompt.{" "}<br/>
                   <div className="my-2">
                     <p className="text-sm italic">
                       <b>For Windows:</b> Type cmd on browser's address bar and press enter. <br/>
@@ -142,15 +142,15 @@ const Docs = () => {
               <br/><br/>
               <Heading_Two title={"Start the Application"}/>
               <ul className="list-disc text-base ml-5">
-                {/* <p><b>Note:</b> Windows users can skip these steps and directly run the <CustomLink target="_self" href={"#quick-start"} title={"/starter.bat"}/> file to start the server.</p> */}
+                {/* <p><b>Note:</b> Windows users can skip these steps and directly run the <CustomLink target="_self" href={"#quick-start"} title={"/starter"}/> file to start the server.</p> */}
                 <br/>
                 {/* <li className="grid grid-cols-1 xl:grid-cols-2 space-y-8 xl:space-y-0 xl:space-x-8">
                   <li>
-                    <h3 class="text-xl font-semibold mb-2 italic group-hover:underline">For Windows Users (simply run the 👉<CustomLink target="_self" href={"#quick-start"} title={"/starter.bat"}/> file)</h3>
-                    <p className="text-sm italic"><b>Note:</b> If the <b>/starter.bat</b> not working, follow the steps below:</p>
+                    <h3 class="text-xl font-semibold mb-2 italic group-hover:underline">For Windows Users (simply run the 👉<CustomLink target="_self" href={"#quick-start"} title={"/starter"}/> file)</h3>
+                    <p className="text-sm italic"><b>Note:</b> If the <b>/starter</b> not working, follow the steps below:</p>
                     <br/>
                     <p>
-                      Open your project directory <b>/web_crawler_spider</b> in command prompt by typing <b>cmd</b> in the folder's address bar.
+                      Open your project directory <b>/lead_scraper</b> in command prompt by typing <b>cmd</b> in the folder's address bar.
                       <LoadImage url={"main_folder.png"}/>
                       Now run <CopyCommand id="browser-content" content={<span>"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222</span>}/> command. This will launch or open a web browser where you can monitor all your activities:
                       <LoadImage url={"browser_cmd.png"}/>
@@ -159,7 +159,7 @@ const Docs = () => {
                   <li>
                     <h3 class="text-xl font-semibold mb-2 italic group-hover:underline">For Mac Users</h3>
                     <p>
-                      Open your project directory <b>/web_crawler_spider</b> in terminal.
+                      Open your project directory <b>/lead_scraper</b> in terminal.
                     </p>
                     <br/>
                     Now run <CopyCommand id="browser-content" content={<span>/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222</span>}/> command. This will launch or open a web browser where you can monitor all your activities:
@@ -188,7 +188,7 @@ const Docs = () => {
                 <p className="mb-28" id="quick-start"></p>
                 <Heading_Two title={<span>⚡Quick Start</span>}/>
                 <p className="text-lg">
-                  <b>Note:</b> After the installation process, you don't need to follow each step to run the application. Instead, simply open the project folder and open file by name <b>/starter.bat</b>, this will start your server (Only for Windows User): <br/>
+                  <b>Note:</b> After the installation process, you don't need to follow each step to run the application. Instead, simply open the project folder and open file by name <b>/starter</b>, this will start your server (Only for Windows User): <br/>
                   <LoadImage url={"starterbat.png"}/>
                   <br/>
                   That's it! Your application is ready to use at:: <CustomLink href={"http://localhost:3000"} title={"http://localhost:3000"}/>
