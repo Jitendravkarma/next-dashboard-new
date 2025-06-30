@@ -409,7 +409,7 @@ export const priceplanmonth = [
         question: true,
       },
       {
-        tooltips: "You can run up to 50 scraping tasks as part of this plan.",
+        tooltips: "You can download upto 50 records.",
         text: "50 Tasks",
         question: true,
       },
@@ -458,7 +458,7 @@ export const priceplanmonth = [
       },
       {
         tooltips: "Perform up to 500 tasks per subscription period.",
-        text: "500 Tasks",
+        text: "Unlimited Tasks",
         question: true,
       },
       {
@@ -468,7 +468,7 @@ export const priceplanmonth = [
       },
       {
         tooltips: "Download up to 500 records per export.",
-        text: "Downloads up to 500 records",
+        text: "Download Unlimited",
         question: true,
       },
       {
@@ -499,12 +499,12 @@ export const priceplanmonth = [
       },
       {
         tooltips: "Empower resellers to sell products to upto 100 customers effortlessly.",
-        text: "100 Access codes",
+        text: "100 License Key",
         question: true,
       },
       {
         tooltips: "Enjoy unlimited access to tools and resources.",
-        text: "Unlimited Access",
+        text: "Full Access",
         question: true,
       },
       {

@@ -38,7 +38,7 @@ const FreeTrialSection = () => {
                 </h2>
                 {/* Subheading */}
                 <p className="text-black text-base font-light mb-8">
-                  Sign up free and start your 14-day premium trial
+                  Sign up now and start a Free Trial
                 </p>
                 {/* Buttons */}
                 <PrimaryButton/>

@@ -8,7 +8,7 @@ const PrimaryButton = () => {
   return (
     <div className="flex justify-center space-x-4">
       {/* Get Started Button */}
-      <Link href={"/"} className="lg:text-base text-xs font-medium bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 px-4">
+      <Link href={"/pricing"} className="lg:text-base text-xs font-medium bg-blue-500 hover:bg-blue-600 text-white rounded-md py-2 px-4">
         Buy Now
       </Link>
       {/* Learn More Button */}
