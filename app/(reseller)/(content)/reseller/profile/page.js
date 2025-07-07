@@ -963,7 +963,7 @@ const Profile = () => {
   }
 
   const watchPreviewVideo = (link)=>{
-    if(link && (link.includes('https://www.youtube.com') || link.includes('https://drive.google.com/drive'))){
+    if(link.includes('https://')){
       const anchor = document.createElement('a')
       anchor.href = link;
       anchor.target = "_blank"
@@ -971,7 +971,7 @@ const Profile = () => {
     }
     else {
       openSnackBar();
-      handleSnackMessage("Invalid or Missing URL.", "danger", "text-white")
+      handleSnackMessage("Invalid URL.", "danger", "text-white")
     }
   }
 
@@ -982,7 +982,7 @@ const Profile = () => {
   
   const handleSubmit  = async ()=>{
     let phone = formData.phone
-    if(user.email === "info@soletstalkdigital.com" && phone && formData.address && formData.city && formData.country.value){
+    if(user.email === "support@leadscraper.in" && phone && formData.address && formData.city && formData.country.value){
       if (!phone.startsWith('+')) {
         openSnackBar();
         handleSnackMessage("Please enter a valid phone number including your country code (e.g., +91).", "danger", "text-white")
