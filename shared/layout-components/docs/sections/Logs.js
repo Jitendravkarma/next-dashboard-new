@@ -4,6 +4,32 @@ import { Heading } from "../Heading";
 const Logs = () => {
   const change_logs = [
     {
+      release: "13.0",
+      logs:[
+        <span>Introducing advanced tools.</span>,
+        <span>Added <strong>Phone Number Verifier</strong>.</span>,
+        <span>Added <strong>Email Verifier</strong></span>,
+        <span>Introducted <strong>WhatsApp Business Verifier</strong></span>,
+        <span>You can send WhatsApp in bulk to <strong>multiple users</strong></span>
+      ]
+    },
+    {
+      release: "12.0",
+      logs:[
+        <span>We introducted our new <strong>Linkedin Scraper</strong>.</span>,
+        <span>Improved <strong>data quantity</strong> on Indiamart scraper.</span>,
+        <span>Fixed some issues.</span>
+      ]
+    },
+    {
+      release: "11.0",
+      logs:[
+        <span>We launched our new tool <strong>Instagram Scraper</strong>.</span>,
+        <span>Improved data retrieval <strong>speed</strong>.</span>,
+        <span>Introduced a feature <strong>WhatsApp Business availability</strong> checker.</span>
+      ]
+    },
+    {
       release: "10.0",
       logs:[
         <span>Introduced a new<strong> B2B Directory Scraper, including Justdial Scraper, Indiamart Scraper, Sulekha Scraper, and more </strong>.</span>,
