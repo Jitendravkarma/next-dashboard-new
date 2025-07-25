@@ -82,10 +82,10 @@ export default function Footer() {
                 </Link>
               </div>
               <p>
-                Data Scrapper provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
+                Lead Global provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
               </p>
               <p>
-              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of Data Scrapper
+              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of Lead Global
               </p>
             </div>
 

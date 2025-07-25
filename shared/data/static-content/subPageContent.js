@@ -2207,7 +2207,7 @@ export const phonescraperVideo = {
 };
 // Dynamic data arrays
 export const aboutuswhowearecontent = [
-  "Data Scrapper, specializes in management software, including our business directory scraper and yellow pages extractor. With over 75 products, we offer tools for data scraping, such as Document scraper and image scraping tools. Our solutions streamline data collection for users worldwide.",
+  "Lead Global, specializes in management software, including our business directory scraper and yellow pages extractor. With over 75 products, we offer tools for data scraping, such as Document scraper and image scraping tools. Our solutions streamline data collection for users worldwide.",
   "Our mission is to make data collection as easy as possible. We offer an automated process that lets you quickly and easily grab data from the Internet, all in one convenient place.",
 ];
 
