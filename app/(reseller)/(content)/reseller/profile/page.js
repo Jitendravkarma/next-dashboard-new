@@ -982,7 +982,7 @@ const Profile = () => {
   
   const handleSubmit  = async ()=>{
     let phone = formData.phone
-    if(user.email === "support@leadscraper.in" && phone && formData.address && formData.city && formData.country.value){
+    if(user.email === "hardiinfotech@gmail.com" && phone && formData.address && formData.city && formData.country.value){
       if (!phone.startsWith('+')) {
         openSnackBar();
         handleSnackMessage("Please enter a valid phone number including your country code (e.g., +91).", "danger", "text-white")
