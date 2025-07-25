@@ -6,15 +6,15 @@ import Seo from "@/shared/layout-components/seo/seo";
 import { useUserContext } from "@/shared/userContext/userContext";
 import axios from "axios";
 import dynamic from "next/dynamic";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const Profile = () => {
-  const { user, setActivated, isActivated, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+  const { user, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
   const [ isTesting, setIsTesting ] = useState(false)
   const [ isSaving, setIsSaving ] = useState(false)
   const [ testMsg, setTestMsg ] = useState("")
-  const [ formData, setFormData] = useState({username: "", password: "", in_server: "", out_server: "", in_port: "", out_port: ""})
+  const [ formData, setFormData] = useState({mail_title: "", domain_name: "", username: "", password: "", in_server: "", out_server: "", in_port: "", out_port: ""})
   const ports = {
     in_port: [
       {
@@ -86,6 +86,8 @@ const Profile = () => {
       try {
         setIsSaving(true)
         const resellerData = {
+          redirect_domain: formData.domain_name,
+          reseller_title: formData.mail_title,
           name: "My SMTP Service", 
           host: formData.out_server, 
           port: formData.out_port, 
@@ -133,24 +135,32 @@ const Profile = () => {
                       <div>
                         <div className="grid lg:grid-cols-2 gap-6">
                           <div className="space-y-2">
+                            <label className="ti-form-label mb-0">Domain Name</label>
+                            <input type="text" className="my-auto ti-form-input" name="domain_name" onChange={handleInputChange} value={formData.domain_name} placeholder="Ex. abc.com" />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="ti-form-label mb-0">Mail Heading</label>
+                            <input type="text" className="my-auto ti-form-input" name="mail_title" onChange={handleInputChange} value={formData.mail_title} placeholder="Ex. Product/Company Name" />
+                          </div>
+                          <div className="space-y-2">
                             <label className="ti-form-label mb-0">Username</label>
-                            <input type="text" className="my-auto ti-form-input" name="username" onChange={handleInputChange} value={formData.username} placeholder="Enter Username" />
+                            <input type="text" className="my-auto ti-form-input" name="username" onChange={handleInputChange} value={formData.username} placeholder="Ex. support@abcxyz.com" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Password</label>
-                            <input type="password" className="my-auto ti-form-input" name="password" onChange={handleInputChange} value={formData.password} placeholder="Enter password" />
+                            <input type="password" className="my-auto ti-form-input" name="password" onChange={handleInputChange} value={formData.password} placeholder="•••••••••••••" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Incoming Server</label>
                             <div className="flex gap-2 items-center flex-wrap xl:flex-nowrap">
-                              <input type="text" className="my-auto ti-form-input" name="in_server" value={formData.in_server} onChange={handleInputChange} placeholder="Enter Server URL " />
+                              <input type="text" className="my-auto ti-form-input" name="in_server" value={formData.in_server} onChange={handleInputChange} placeholder="Ex. imap.mail.me.com" />
                               <Select classNamePrefix='react-select' id='react-select-3-live-region' className="w-full xl:w-56 border border-gray-100 rounded" value={formData.in_port} options={ports.in_port} placeholder='Choose Port' onChange={handleInPort} />
                             </div>
                           </div>
                           <div className="space-y-2 relative">
                             <label className="ti-form-label mb-0">Outgoing Server</label>
                             <div className="flex gap-2 items-center flex-wrap xl:flex-nowrap">
-                              <input type="text" className={`my-auto ti-form-input`} name="out_server" onChange={handleInputChange} placeholder="Enter Server URL" value={formData.out_server} />
+                              <input type="text" className={`my-auto ti-form-input`} name="out_server" onChange={handleInputChange} placeholder="Ex. smtp.office365.com" value={formData.out_server} />
                               <Select classNamePrefix='react-select' id='react-select-3-live-region' className="w-full xl:w-56 border border-gray-100 rounded" value={formData.out_port} options={ports.out_port} placeholder='Choose Port' onChange={handleOutPort} />
                             </div>
                           </div>
