@@ -36,7 +36,7 @@ const HeroSection = () => {
           <div>{currentText}</div>
         </h1>
         <p className="mb-8 text-black text-base font-light">
-          Increase Sales with Our Scraper.
+          Increase Sales with Our Advanced Tools.
         </p>
         <PrimaryButton/>
       </div>

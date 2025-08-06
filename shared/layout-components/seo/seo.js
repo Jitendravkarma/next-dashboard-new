@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 const Seo = ({ title }) => {
 
   useEffect(() => {
-    document.title = `${title} - Lead Global`
+    document.title = `${title} - aoul`
   }, [])
 
   return (

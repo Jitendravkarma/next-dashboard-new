@@ -82,10 +82,10 @@ export default function Footer() {
                 </Link>
               </div>
               <p>
-                Lead Global provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
+                aoul provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
               </p>
               <p>
-              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of Lead Global
+              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of aoul
               </p>
             </div>
 

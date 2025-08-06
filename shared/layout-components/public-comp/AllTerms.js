@@ -9,19 +9,19 @@ const AllTerms = () => {
       <div className="max-w-7xl mx-auto px-4 py-16 lg:py-18 sm:px-6 lg:px-10 flex flex-wrap items-center justify-between p-4">
         <div className="prose">
           <p className="text-xss font-bold leading-normal">
-            Welcome to <b>Lead Global</b>!
+            Welcome to <b>aoul</b>!
           </p>
           <br />
           <p className="text-xss font-light leading-normal">
             This service is owned and run by <b>{companyDetails.company_name}</b>. Which
             also owns this product. You accept the terms and conditions of{" "}
-            <b>Lead Global</b>., as stated in this agreement, by using{" "}
-            <b>Lead Global</b>.
+            <b>aoul</b>., as stated in this agreement, by using{" "}
+            <b>aoul</b>.
           </p>
           <br />
           <p className="text-xss font-light leading-normal">
             By accessing this website we assume you accept these terms and
-            conditions. Do not continue to use <b>Lead Global</b> if you do not
+            conditions. Do not continue to use <b>aoul</b> if you do not
             agree to take all of the terms and conditions stated on this page.
           </p>
 
@@ -46,8 +46,8 @@ const AllTerms = () => {
           <h3 className="font-bold text-2xl mt-8 mb-3">Cookies</h3>
 
           <p className="text-xss font-light leading-normal">
-            We employ the use of cookies. By accessing <b>Lead Global</b>, you
-            agreed to use cookies in agreement with the <b>Lead Global</b>'s
+            We employ the use of cookies. By accessing <b>aoul</b>, you
+            agreed to use cookies in agreement with the <b>aoul</b>'s
             Privacy Policy.
           </p>
 
@@ -62,26 +62,26 @@ const AllTerms = () => {
           <h3 className="font-bold text-2xl mt-8 mb-3">License</h3>
 
           <p className="text-xss font-light leading-normal">
-            Unless otherwise stated, <b>Lead Global</b> and/or its licensors own
+            Unless otherwise stated, <b>aoul</b> and/or its licensors own
             the intellectual property rights for all material on Web Crawler
             Spider. All intellectual property rights are reserved. You may
-            access this from <b>Lead Global</b> for your own personal use
+            access this from <b>aoul</b> for your own personal use
             subjected to restrictions set in these terms and conditions.
           </p>
 
           <p className="text-xss font-light leading-normal">You must not:</p>
           <ul className="list-disc list-inside text-xss font-light leading-normal  my-5 marker:text-green-500 marker:text-xl">
             <li>
-              Republish material from <b>Lead Global</b>
+              Republish material from <b>aoul</b>
             </li>
             <li>
-              Sell, rent or sub-license material from <b>Lead Global</b>
+              Sell, rent or sub-license material from <b>aoul</b>
             </li>
             <li>
-              Reproduce, duplicate or copy material from <b>Lead Global</b>
+              Reproduce, duplicate or copy material from <b>aoul</b>
             </li>
             <li>
-              Redistribute content from <b>Lead Global</b>
+              Redistribute content from <b>aoul</b>
             </li>
           </ul>
 
@@ -100,19 +100,19 @@ const AllTerms = () => {
           <p className="text-xss font-light leading-normal">
             Parts of this website offer an opportunity for users to post and
             exchange opinions and information in certain areas of the website.
-            <b>Lead Global</b> does not filter, edit, publish or review Comments
+            <b>aoul</b> does not filter, edit, publish or review Comments
             prior to their presence on the website. Comments do not reflect the
-            views and opinions of <b>Lead Global</b>, its agents and/or
+            views and opinions of <b>aoul</b>, its agents and/or
             affiliates. Comments reflect the views and opinions of the person
             who post their views and opinions. To the extent permitted by
-            applicable laws, <b>Lead Global</b> shall not be liable for the
+            applicable laws, <b>aoul</b> shall not be liable for the
             Comments or for any liability, damages or expenses caused and/or
             suffered as a result of any use of and/or posting of and/or
             appearance of the Comments on this website.
           </p>
 
           <p className="text-xss font-light leading-normal">
-            <b>Lead Global</b> reserves the right to monitor all Comments and to
+            <b>aoul</b> reserves the right to monitor all Comments and to
             remove any Comments which can be considered inappropriate, offensive
             or causes breach of these Terms and Conditions.
           </p>
@@ -143,7 +143,7 @@ const AllTerms = () => {
           </ul>
 
           <p className="text-xss font-light leading-normal">
-            You hereby grant <b>Lead Global</b> a non-exclusive license to use,
+            You hereby grant <b>aoul</b> a non-exclusive license to use,
             reproduce, edit and authorize others to use, reproduce and edit any
             of your Comments in any and all forms, formats or media.
           </p>
@@ -204,7 +204,7 @@ const AllTerms = () => {
             or to our accredited businesses; (b) the organization does not have
             any negative records with us; (c) the benefit to us from the
             visibility of the hyperlink compensates the absence of
-            <b>Lead Global</b>; and (d) the link is in the context of general
+            <b>aoul</b>; and (d) the link is in the context of general
             resource information.
           </p>
 
@@ -219,7 +219,7 @@ const AllTerms = () => {
           <p className="text-xss font-light leading-normal">
             If you are one of the organizations listed in paragraph 2 above and
             are interested in linking to our website, you must inform us by
-            sending an e-mail to <b>Lead Global</b>. Please include your name,
+            sending an e-mail to <b>aoul</b>. Please include your name,
             your organization name, contact information as well as the URL of
             your site, a list of any URLs from which you intend to link to our
             Website, and a list of the URLs on our site to which you would like
@@ -241,7 +241,7 @@ const AllTerms = () => {
           </ul>
 
           <p className="text-xss font-light leading-normal">
-            No use of <b>Lead Global</b>'s logo or other artwork will be allowed
+            No use of <b>aoul</b>'s logo or other artwork will be allowed
             for linking absent a trademark license agreement.
           </p>
 

@@ -13,7 +13,7 @@ import { redirect } from "next/navigation";
 
 const Contentlayout = ({ children }) => {
 	const { user } = useUserContext()
-	const token = "help@leadglobe.modiguru.com";
+	const token = "dotfloinc@gmail.com";
 	if(token !== user.email){
 		redirect("/signin")
 	}

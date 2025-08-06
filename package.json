@@ -3,9 +3,9 @@
   "version": "10.1.1",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3009",
+    "dev": "next dev -p 3010",
     "build": "next build",
-    "start": "next start -p 3009",
+    "start": "next start -p 3010",
     "lint": "next lint",
     "export": "next export",
     "postcss": "sass ./public/assets/scss/style.scss ./public/assets/css/style.css && postcss ./public/assets/css/style.css -o ./public/assets/css/style.css",
