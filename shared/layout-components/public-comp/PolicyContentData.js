@@ -117,7 +117,7 @@ const PolicyContentData = () => {
       title:"Shipping and Delivery Policy", 
       description:
       <p className="text-xss font-light leading-normal">
-        At Lead Global, we provide digital products and services that are delivered electronically. Below is our Shipping and Delivery Policy outlining how we process and deliver our services.
+        At TradeTAP, we provide digital products and services that are delivered electronically. Below is our Shipping and Delivery Policy outlining how we process and deliver our services.
       </p>, 
       list: true, 
       listItems: [
