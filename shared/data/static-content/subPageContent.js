@@ -2212,8 +2212,8 @@ export const aboutuswhowearecontent = [
 ];
 
 export const aboutuswebcontent = [
-  "The Scrape Genius is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a business directory scraper, yellow pages scraper, and yellow pages data extractor, enabling users to effortlessly gather essential information such as yellow pages email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites, scrape images from websites, and scrape CSV files, it is invaluable for various data collection tasks.",
-  "Why struggle with complex tools when you can harness the simplicity and efficiency of the Scrape Genius? It streamlines the process of web scraping yellow pages and supports document scraping for Excel and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
+  "The Data Scrapper is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a business directory scraper, yellow pages scraper, and yellow pages data extractor, enabling users to effortlessly gather essential information such as yellow pages email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites, scrape images from websites, and scrape CSV files, it is invaluable for various data collection tasks.",
+  "Why struggle with complex tools when you can harness the simplicity and efficiency of the Data Scrapper? It streamlines the process of web scraping yellow pages and supports document scraping for Excel and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
 ];
 
 export const buttons = [
