@@ -39,7 +39,9 @@ const PriceCards = () => {
                   {/* Pricing Details */}
                   <div className="mt-[30px] mb-[30px]">
                     <span className="text-4xl font-bold">{plan.rupees}</span>
-                    <span className="text-gray-500">{plan.month}</span>
+                    <span className="text-gray-500">
+                      {" "}<del>{plan.original_price}</del>{plan.month}
+                    </span>
                   </div>
                   {/* Call-to-Action Button */}
                   <Link

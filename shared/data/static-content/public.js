@@ -391,6 +391,7 @@ export const priceplanmonth = [
     plantitle: "Free Plan", // Plan title
     plansubtitle: "For a quick, simple project", // Subtitle for the plan
     rupees: "₹0", // Pricing
+    original_price: "",
     month: "/year", // Billing period
     payLink: "/signup",
     buttontext: "Get Started", // Button text
@@ -439,6 +440,7 @@ export const priceplanmonth = [
     plantitle: "Standard Plan",
     plansubtitle: "Ideal for small teams",
     rupees: "₹2,999",
+    original_price: "₹3,749",
     month: "/year",
     buttontext: "Buy Now",
     paragraph: "Advanced tools for your projects",
@@ -487,6 +489,7 @@ export const priceplanmonth = [
     plantitle: "Reseller Plan",
     plansubtitle: "Perfect for medium-sized businesses",
     rupees: "₹9,999",
+    original_price: "₹12,499",
     month: "/year",
     payLink: "https://pmny.in/PAYUMN/vIKMqUi2yUTD",
     buttontext: "Buy Now",
