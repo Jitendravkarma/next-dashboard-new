@@ -14,7 +14,7 @@ const Profile = () => {
   const [ isTesting, setIsTesting ] = useState(false)
   const [ isSaving, setIsSaving ] = useState(false)
   const [ testMsg, setTestMsg ] = useState("")
-  const [ formData, setFormData] = useState({mail_title: "", domain_name: "", username: "", password: "", in_server: "", out_server: "", in_port: "", out_port: ""})
+  const [ formData, setFormData] = useState({mail_title: "", domain_name: "", from_email: "", username: "", password: "", in_server: "", out_server: "", in_port: "", out_port: ""})
   const ports = {
     in_port: [
       {
@@ -93,7 +93,7 @@ const Profile = () => {
           port: formData.out_port, 
           username: formData.username, 
           password: formData.password, 
-          from_email: formData.username, 
+          from_email: formData.from_email, 
           from_name: user.name, 
           is_active: true, 
           encryption: "tls"
@@ -143,8 +143,12 @@ const Profile = () => {
                             <input type="text" className="my-auto ti-form-input" name="mail_title" onChange={handleInputChange} value={formData.mail_title} placeholder="Ex. Product/Company Name" />
                           </div>
                           <div className="space-y-2">
+                            <label className="ti-form-label mb-0">From Email</label>
+                            <input type="text" className="my-auto ti-form-input" name="from_email" onChange={handleInputChange} value={formData.from_email} placeholder="Ex. support@abcxyz.com" />
+                          </div>
+                          <div className="space-y-2">
                             <label className="ti-form-label mb-0">Username</label>
-                            <input type="text" className="my-auto ti-form-input" name="username" onChange={handleInputChange} value={formData.username} placeholder="Ex. support@abcxyz.com" />
+                            <input type="text" className="my-auto ti-form-input" name="username" onChange={handleInputChange} value={formData.username} placeholder="Ex. XYZYZEXEESK" />
                           </div>
                           <div className="space-y-2">
                             <label className="ti-form-label mb-0">Password</label>
