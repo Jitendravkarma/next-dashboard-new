@@ -2207,13 +2207,13 @@ export const phonescraperVideo = {
 };
 // Dynamic data arrays
 export const aboutuswhowearecontent = [
-  "aoul, specializes in management software, including our business directory scraper and yellow pages extractor. With over 75 products, we offer tools for data scraping, such as Document scraper and image scraping tools. Our solutions streamline data collection for users worldwide.",
+  "LeadSeas, specializes in management software, including our business directory scraper and yellow pages extractor. With over 75 products, we offer tools for data scraping, such as Document scraper and image scraping tools. Our solutions streamline data collection for users worldwide.",
   "Our mission is to make data collection as easy as possible. We offer an automated process that lets you quickly and easily grab data from the Internet, all in one convenient place.",
 ];
 
 export const aboutuswebcontent = [
-  "The aoul is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a business directory scraper, yellow pages scraper, and yellow pages data extractor, enabling users to effortlessly gather essential information such as yellow pages email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites, scrape images from websites, and scrape CSV files, it is invaluable for various data collection tasks.",
-  "Why struggle with complex tools when you can harness the simplicity and efficiency of the aoul? It streamlines the process of web scraping yellow pages and supports document scraping for Excel and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
+  "The LeadSeas is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a business directory scraper, yellow pages scraper, and yellow pages data extractor, enabling users to effortlessly gather essential information such as yellow pages email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites, scrape images from websites, and scrape CSV files, it is invaluable for various data collection tasks.",
+  "Why struggle with complex tools when you can harness the simplicity and efficiency of the LeadSeas? It streamlines the process of web scraping yellow pages and supports document scraping for Excel and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
 ];
 
 export const buttons = [

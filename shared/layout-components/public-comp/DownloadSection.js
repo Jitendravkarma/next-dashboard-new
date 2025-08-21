@@ -123,7 +123,7 @@ const DownloadSection = () => {
 
           {/* Subtitle with Thanks Message */}
           <h2 className="text-indigo-700 text-xl mb-6 md:text-2xl">
-            Welcome to aoul!
+            Welcome to LeadSeas!
           </h2>
 
           {/* Introduction Paragraph */}
