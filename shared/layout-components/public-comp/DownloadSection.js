@@ -102,7 +102,7 @@ const DownloadSection = () => {
           {/* Logout Button */}
           <div className="flex justify-between items-center mb-6">
             {
-              (user.reseller && user.email === "dotfloinc@gmail.com") && 
+              (user.reseller && user.email === "support@leadseas.net") && 
               <Link href={"/reseller/dashboard"} title='Visit reseller dashboard' target='_blank' className='inline-block rounded-md duration-300 gap-2 hover:bg-indigo-500 hover:text-white items-center px-6 py-2 transition-all'>
                 <i className='ri-home-4-line text-lg'/> Reseller
               </Link>
