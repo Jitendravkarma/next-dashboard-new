@@ -253,8 +253,9 @@ const SmsBox = memo(({number, code=""}) => {
   );
 })
 
-const WhatsappBox = memo(({number, code=""}) => {
-    const [whatsAppMsg, setWhatsAppMsg] = useState("");
+const WhatsappBox = memo(({closePop, code="", message}) => {
+    const [number, setNumber] = useState("");
+    const [whatsAppMsg, setWhatsAppMsg] = useState(message);
     const [countryCode, setCountryCode] = useState(code);
     const { handleWhatsAppNumber } = useUserContext()
     const closeWhatsAppBox = ()=>{
@@ -317,15 +318,18 @@ const WhatsappBox = memo(({number, code=""}) => {
                                           ))
                                       }
                                   </select>
-                                  <input type="text" className="px-4 py-2 focus:ring-gray-500 focus:border-gray-900 w-full text-sm border-gray-300 focus:outline-none text-gray-600" 
-                                  value={`${countryCode ? `+${countryCode}-` : "+??-"}${number}`} disabled={true}/>
+                                  <div className='relative'>
+                                    <span className='absolute top-2 text-sm left-2'>{countryCode ? `+${countryCode}-` : "+??-"}</span>
+                                    <input type="text" className="pl-10 pr-4 py-2 focus:ring-gray-500 focus:border-gray-900 w-full text-sm border-gray-300 focus:outline-none text-gray-600" 
+                                    value={number} onChange={(e)=>setNumber(e.target.value)}/>
+                                  </div>
                               </span>
                           </div>
                           
                           <div className="flex flex-col">
                               <label className="leading-loose text-sm">Your Message:</label>
                               <div className="relative focus-within:text-gray-600 text-gray-400">
-                              <textarea type="text" value={whatsAppMsg} onChange={(e)=>setWhatsAppMsg(e.target.value)} className="px-2 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Type your message"/>
+                              <textarea type="text" value={whatsAppMsg} rows={5} onChange={(e)=>setWhatsAppMsg(e.target.value)} className="px-2 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Type your message"/>
                               </div>
                               <p className='text-red-500 text-xs mt-1'>Please log in to <Link href={"https://web.whatsapp.com/"} target='_blank' className='font-bold underline hover:italic' title={`Click for What'sApp login`}>Web WhatsApp</Link> before sending messages.</p>
                           </div>

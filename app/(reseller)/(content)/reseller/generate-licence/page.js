@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
-import { UpgradePlanPopup } from "@/shared/layout-components/dashboard/AlertBox";
+import { UpgradePlanPopup, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import { generateLicence, resellerLicences } from "@/shared/apis/api";
 import { useUserContext } from "@/shared/userContext/userContext";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
+import countryList from "@/shared/layout-components/dashboard/Country";
 
 const GenerateLicence = () => {
-	const { openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+	const { openSnack, snackMessage, openSnackBar, handleSnackMessage, whatsAppNum, validatePhoneNumber } = useUserContext()
 	const dashboard_data = {
 		user_id: 5,
         name: "kripal",
@@ -56,6 +57,7 @@ const GenerateLicence = () => {
 
 	const [ isGenerating, setIsGenerating ] = useState(false)
 	const [ licences, setLicences ] = useState([])
+	const [ whatsappMsg, setWhatsappMsg ] = useState("")
 
     const copyLicenceCode = (txt)=>{
         const textArea = document.createElement('textarea');
@@ -66,6 +68,19 @@ const GenerateLicence = () => {
         document.body.removeChild(textArea);
         alert('License code copied to clipboard!');
     }
+
+	const convertAndReturnNum = (licence) => {
+		setWhatsappMsg(
+			`Hello Friend,
+			Thank you for purchasing *Scrape Genius* 🎉
+			Your activation key is: *${licence}*
+			With this key, you can now scrape unlimited leads using Scrap Genius. 🚀
+			If you need any help with setup or usage, feel free to reach out to us anytime.
+			*Best regards,*
+			Team Scrap Genius`
+		);
+        validatePhoneNumber("123456789", false, countryList, "whatsapp")
+    };
 
 	const fetchLicenses = async ()=>{
 		try {
@@ -215,6 +230,7 @@ const GenerateLicence = () => {
 										<thead>
 											<tr>
 												<th scope="col" className="!p-[0.65rem]">Generated At</th>
+												<th scope="col" className="text-center !p-[0.65rem]">Share On</th>
 												<th scope="col" className="text-center !p-[0.65rem]">Licence Code</th>
 												<th scope="col" className="!p-[0.65rem]">Allocated To</th>
 												<th scope="col" className="!p-[0.65rem]">Licence Availability</th>
@@ -226,6 +242,17 @@ const GenerateLicence = () => {
 												<tr key={ind}>
 													<td className="!p-[0.65rem] text-sm">
 														Date: {dt.created_date}
+													</td>
+													<td className="!p-[0.65rem] text-sm flex items-center gap-2">
+														<button className="" onClick={()=>convertAndReturnNum(dt.licence_code)}>
+															<i className="ri-whatsapp-fill text-green-500 hover:text-white  hover:bg-indigo-500 bg-primary/10 leading-none p-2 rounded-full bg-gray-100 text-lg"></i>
+														</button>
+														<a href={`mailto:${dt.allocated? dt.allocated : "example@mail.com"}?subject=Scrap Genius Activation Key Inside!&body=Thank you for purchasing *SCRAPE GENIUS* 🎉,%0A%0A Your activation key is: ${dt.licence_code}*,%0A%0A With this key, you can now scrape unlimited leads using Scrap Genius. 🚀,%0A%0A
+														If you need any help with setup or usage, feel free to reach out to us anytime.
+														*Best regards*,%0A%0A
+														Team Scrap Genius`} target="_blank">
+															<i className="ri-mail-fill text-lg text-blue-500 leading-none p-2 rounded-full bg-gray-100 hover:text-white  hover:bg-indigo-500 bg-primary/10"></i>
+														</a>
 													</td>
 													<td className="leading-none !text-gray-800 dark:!text-white !p-[0.65rem]">
 														<span className={`cursor-pointer group ${dt.email ? "bg-danger/10 text-danger" : "bg-success/10 text-success"} badge leading-none rounded-sm`} onClick={()=>copyLicenceCode(dt.licence_code)} title="Copy licence code">
@@ -256,6 +283,10 @@ const GenerateLicence = () => {
 			{
 				openRenewal &&
 				<UpgradePlanPopup closeModel={()=>setOpenRenewal(false)}/>
+			}
+			{
+				whatsAppNum &&
+				<WhatsappBox number={whatsAppNum} message={whatsappMsg}/>
 			}
 		</div>
 	);

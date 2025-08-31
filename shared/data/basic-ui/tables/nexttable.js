@@ -15,7 +15,7 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
 
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
-    const searchFields = ['title', 'website', 'description', 'keywords', 'phone', 'email', 'query'];
+    const searchFields = ['title', 'website', 'description', 'keywords', 'phone', 'email', 'query', 'user_type'];
     const filteredRows = data.filter((row) => {
       return searchFields.some((field) => {
         return row[field] && String(row[field]).toLowerCase().includes(value);

@@ -55,6 +55,20 @@ const UserAnalytics = () => {
 		// 	editable: false
 		// },
 		{
+			headerName: "User Type",
+			field: "user_type",
+			width: 200,
+			renderCell: (params) => {
+				const value = params.row.user_type;
+				return (
+				  <span className={`${value === "reseller" ? "bg-success/10 text-success" : "bg-primary/10 text-primary"} badge leading-none rounded-sm capitalize`}>
+					{value}
+				  </span>
+				)
+			},
+			editable: false
+		},
+		{
 			headerName: "Paid/Unpaid",
 			field: "access_code",
 			width: 200,
