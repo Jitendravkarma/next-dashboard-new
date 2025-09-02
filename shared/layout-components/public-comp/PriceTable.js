@@ -73,24 +73,8 @@ const PriceTable = () => {
             <tr>
               <td className="py-4 px-6 text-left bg-gray-100 md:bg-white shadow-md">Downloads</td>
               <td className="py-4 px-6">Limited upto 50 records</td>
-              <td className="py-4 px-6">Unlimited</td>
-              <td className="py-4 px-6">Unlimited</td>
-            </tr>
-
-            {/* Total Tasks Section */}
-            <tr>
-              <td className="py-4 px-6 text-left bg-gray-100 md:bg-white shadow-md">Total Tasks</td>
-              <td className="py-4 px-6">50 tasks</td>
-              <td className="py-4 px-6">Unlimited</td>
-              <td className="py-4 px-6">Unlimited</td>
-            </tr>
-
-            {/* Per day tasks */}
-            <tr>
-              <td className="py-4 px-6 text-left bg-gray-100 md:bg-white shadow-md">Tasks</td>
-              <td className="py-4 px-6">10 tasks per day</td>
-              <td className="py-4 px-6">500 tasks per day</td>
-              <td className="py-4 px-6">Unlimited tasks</td>
+              <td className="py-4 px-6">No Limit</td>
+              <td className="py-4 px-6">No Limit</td>
             </tr>
 
             {/* devices access */}

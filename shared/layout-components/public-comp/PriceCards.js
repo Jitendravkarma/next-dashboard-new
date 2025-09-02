@@ -22,7 +22,7 @@ const PriceCards = () => {
                 <div
                   key={index}
                   className={`bg-white shadow-md rounded-md lg:px-8 px-2 py-10 col-span-1 border relative  ${
-                    plan.plantitle === "Standard Plan" ? "border-1 overflow-hidden" : ""
+                    plan.plantitle === "Standard Plan" || plan.plantitle === "Reseller Plan" ? "border-1 overflow-hidden" : ""
                   }`}
                 >
                   {/* "Most Popular" Label for Standard Plan */}
@@ -37,10 +37,16 @@ const PriceCards = () => {
                   </h2>
                   <small className="text-gray-400">{plan.plansubtitle}</small>
                   {/* Pricing Details */}
-                  <div className="mt-[30px] mb-[30px]">
+                  <div className="mt-[30px] mb-[30px] flex gap-2 items-center justify-center">
                     <span className="text-4xl font-bold">{plan.rupees}</span>
-                    <span className="text-gray-500">
-                      {" "}<del>{plan.original_price}</del>{plan.month}
+                    <span className="text-gray-500 flex flex-col">
+                      {
+                        (plan.plantitle === "Standard Plan" || plan.plantitle === "Reseller Plan") &&
+                        <span className="text-red-500 font-bold">
+                          {plan.plantitle === "Standard Plan" ? "25%" : "20%"} Off
+                        </span>
+                      }
+                      <span><del>{plan.original_price}</del>{plan.month}</span>
                     </span>
                   </div>
                   {/* Call-to-Action Button */}

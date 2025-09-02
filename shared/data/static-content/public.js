@@ -405,13 +405,14 @@ export const priceplanmonth = [
       },
       {
         tooltips:
-          "Perform up to 10 scraping tasks simultaneously in this plan.",
-        text: "Limited Access",
+          "Enjoy free demo without need of license key.",
+        text: "No License Key",
         question: true,
       },
       {
-        tooltips: "You can download upto 50 records.",
-        text: "50 Tasks",
+        tooltips:
+          "Perform limited scraping tasks simultaneously in this plan.",
+        text: "Limited Access",
         question: true,
       },
       {
@@ -425,11 +426,6 @@ export const priceplanmonth = [
         question: true,
       },
       {
-        tooltips: "You can access limited pages for scraping tasks.",
-        text: "Limited page access",
-        question: true,
-      },
-      {
         tooltips: "Priority support is not included with this plan.",
         text: "No priority support",
         question: true,
@@ -438,9 +434,9 @@ export const priceplanmonth = [
   },
   {
     plantitle: "Standard Plan",
-    plansubtitle: "Ideal for small teams",
+    plansubtitle: "Ideal for personal use",
     rupees: "₹2,999",
-    original_price: "₹3,749",
+    original_price: "₹4,000",
     month: "/year",
     buttontext: "Buy Now",
     paragraph: "Advanced tools for your projects",
@@ -454,13 +450,14 @@ export const priceplanmonth = [
       },
       {
         tooltips:
-          "Full access to essential tools and features in the Standard Plan.",
-        text: "Full Access",
+          "Buy standard plan and get a single license key to get unlimited tool access.",
+        text: "Single License Key",
         question: true,
       },
       {
-        tooltips: "Perform up to 500 tasks per subscription period.",
-        text: "Unlimited Tasks",
+        tooltips:
+          "Full access to essential tools and features in the Standard Plan.",
+        text: "Full Access",
         question: true,
       },
       {
@@ -469,13 +466,8 @@ export const priceplanmonth = [
         question: true,
       },
       {
-        tooltips: "Download up to 500 records per export.",
-        text: "Download Unlimited",
-        question: true,
-      },
-      {
-        tooltips: "Access full-page scraping capabilities.",
-        text: "Full page access",
+        tooltips: "Download all displayed records.",
+        text: "Unlimited downloads",
         question: true,
       },
       {
@@ -488,8 +480,8 @@ export const priceplanmonth = [
   {
     plantitle: "Reseller Plan",
     plansubtitle: "Perfect for medium-sized businesses",
-    rupees: "₹9,999",
-    original_price: "₹12,499",
+    rupees: "₹11,999",
+    original_price: "₹14,999",
     month: "/year",
     payLink: "https://pmny.in/PAYUMN/vIKMqUi2yUTD",
     buttontext: "Buy Now",
@@ -508,11 +500,6 @@ export const priceplanmonth = [
       {
         tooltips: "Enjoy unlimited access to tools and resources.",
         text: "Full Access",
-        question: true,
-      },
-      {
-        tooltips: "Run unlimited tasks without restrictions.",
-        text: "Unlimited Tasks",
         question: true,
       },
       {
