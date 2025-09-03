@@ -1442,7 +1442,7 @@ export const justdialscraperProps = {
     </>
   ),
   description:
-    "Our Google Map Extractor extracts structured data like businesses, addresses, phone numbers, and reviews from Google Maps. Perfect for marketers and researchers, it streamlines geographic data collection, providing essential details for campaigns and analysis. A reliable tool for quick, accurate information from Google Maps.",
+    "Our JustDial Scraper extracts structured data like businesses, addresses, phone numbers, and reviews from Google Maps. Perfect for marketers and researchers, it streamlines geographic data collection, providing essential details for campaigns and analysis. A reliable tool for quick, accurate information from Google Maps.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/justdialscreen.png",
