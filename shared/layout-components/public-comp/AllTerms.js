@@ -63,7 +63,7 @@ const AllTerms = () => {
 
           <p className="text-xss font-light leading-normal">
             Unless otherwise stated, <b>Scrape Genius</b> and/or its licensors own
-            the intellectual property rights for all material on Web Crawler
+            the intellectual property rights for all material on Scrape Genius
             Spider. All intellectual property rights are reserved. You may
             access this from <b>Scrape Genius</b> for your own personal use
             subjected to restrictions set in these terms and conditions.

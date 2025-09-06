@@ -1,7 +1,7 @@
 export const seo_home = {
     title: `Simple Data Scraping Made Possible by Scrape Genius`,
     description: `Scrape Genius – The ultimate web scraping and data extraction tool for Google Search, Google Maps, Websites, Documents, Images, Business Directories and Whois Domains. Automated data collection for lead generation, market research and business intelligence.`,
-    keywords: `Web scraping tool, data extraction software, lead generation automation, Google search scraper, business contact scraper, web crawler service, online data mining`,
+    keywords: `Web scraping tool, data extraction software, lead generation automation, Google search scraper, business contact scraper, Scrape Genius service, online data mining`,
     // openGraph: {
     //     title: "About Us - My Website",
     //     description: "Learn more about our company and what we do.",
@@ -31,31 +31,31 @@ export const seo_home = {
 export const seo_pricing = {
     title: `Pricing - Scrape Genius`,
     description: `Explore Scrape Genius's pricing plans and choose the best web scraping solution for your needs. Affordable plans for Google Search Scraper, Google Maps Scraper, Website Data Scraper, Whois Domain Lookup, and more. Start extracting data today!`,
-    keywords: `Web scraping pricing, data extraction cost, web crawler subscription, lead generation tool pricing, affordable web scraper, pricing plans for data mining, scraping service cost`
+    keywords: `Web scraping pricing, data extraction cost, Scrape Genius subscription, lead generation tool pricing, affordable web scraper, pricing plans for data mining, scraping service cost`
 }
 
 export const seo_about = {
     title: `About Us - Your Source for Data Scraping Tools & Services`,
     description: `Learn more about Scrape Genius – a powerful web scraping solution designed to automate data extraction from Google Search, Google Maps, websites, documents, and more. Explore our mission, technology and expertise in data mining and automation.`,
-    keywords: `About Scrape Genius, web scraping company, data extraction experts, automated lead generation, business data mining, advanced web crawler, scraping solutions`
+    keywords: `About Scrape Genius, web scraping company, data extraction experts, automated lead generation, business data mining, advanced Scrape Genius, scraping solutions`
 }
 
 export const seo_contact = {
     title: `Contact Us - Get in Touch for Data Scraping Solutions`,
     description: `Contact Scrape Genius! Contact us for inquiries, support, partnerships and custom data scraping solutions. We are here to assist with your web extraction needs.`,
-    keywords: `Contact Scrape Genius, customer support, web scraping queries, data extraction services, web crawler assistance, scraping software support, API integration support`
+    keywords: `Contact Scrape Genius, customer support, web scraping queries, data extraction services, Scrape Genius assistance, scraping software support, API integration support`
 }
 
 export const seo_signin = {
     title: `Sign In to Your Scrape Genius Account`,
     description: `Log in to your Scrape Genius account to access powerful web scraping tools, manage data extraction, and effortlessly automate business intelligence tasks.`,
-    keywords: `Web scraping login, account sign in, data extraction dashboard access, web crawler user login, lead generation tool login`
+    keywords: `Web scraping login, account sign in, data extraction dashboard access, Scrape Genius user login, lead generation tool login`
 }
 
 export const seo_signup = {
     title: `Sign Up for Scrape Genius Tools`,
     description: `Create a free account on Scrape Genius and start extracting data from Google, Maps, Websites and Documents instantly. Join now and automate data collection!`,
-    keywords: `Sign up for web scraping, create an account, register for data extraction, free scraping tool signup, web crawler registration`
+    keywords: `Sign up for web scraping, create an account, register for data extraction, free scraping tool signup, Scrape Genius registration`
 }
 
 export const seo_forget_password = {
@@ -72,20 +72,20 @@ export const seo_forget_password_email = {
 
 export const seo_terms = {
     title: `Terms and Conditions | Scrape Genius`,
-    description: `Read the terms and conditions of web crawler spiders. Understand the rules, policies, and usage guidelines for our web scraping services, ensuring compliance and ethical data extraction.`,
-    keywords: `Web scraping terms, data extraction policies, legal web crawler usage, scraping guidelines, API usage terms, website terms & conditions`
+    description: `Read the terms and conditions of Scrape Genius. Understand the rules, policies, and usage guidelines for our web scraping services, ensuring compliance and ethical data extraction.`,
+    keywords: `Web scraping terms, data extraction policies, legal Scrape Genius usage, scraping guidelines, API usage terms, website terms & conditions`
 }
 
 export const seo_privacy = {
     title: `Privacy Policy | Scrape Genius`,
     description: `Your privacy matters! Read the privacy policy of Scrape Genius to understand how we collect, use and protect your data while providing web scraping services.`,
-    keywords: `Contact Scrape Genius, customer support, web scraping queries, data extraction services, web crawler assistance, scraping software support, API integration support`
+    keywords: `Contact Scrape Genius, customer support, web scraping queries, data extraction services, Scrape Genius assistance, scraping software support, API integration support`
 }
 
 export const seo_faq = {
     title: `Frequently Asked Questions | Document & Data Scraping Tools`,
-    description: `Find answers to common questions about web crawler spiders. Learn how to use our web scraping tools, pricing details, features, API access, and data extraction best practices. Get expert insight and troubleshooting help.`,
-    keywords: `Web scraping FAQ, data extraction questions, web crawler help, scraping tool support, lead generation tool guide, how to use web scraper, web crawler troubleshooting`
+    description: `Find answers to common questions about Scrape Genius. Learn how to use our web scraping tools, pricing details, features, API access, and data extraction best practices. Get expert insight and troubleshooting help.`,
+    keywords: `Web scraping FAQ, data extraction questions, Scrape Genius help, scraping tool support, lead generation tool guide, how to use web scraper, Scrape Genius troubleshooting`
 }
 
 export const seo_google_search = {
