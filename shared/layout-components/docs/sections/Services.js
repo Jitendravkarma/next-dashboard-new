@@ -4,130 +4,124 @@ import { Heading, Para } from "../Heading";
 const Services = () => {
   const services = [
     {
-      title: "Bing Search Scraper",
-      img: "/assets/iconfonts/dashboard-icon/bing.png",
-      des: "Collect Bing search data: URLs, titles, and contacts.",
-      url: "/services/bing-search-scraper/",
+      title: "Search Engine Scraper",
+      img: "/assets/iconfonts/dashboard-icon/searchEngine.png",
+      des: "Extract titles, URLs, descriptions, and contacts from Google, Bing, Yahoo, and DuckDuckGo.",
+      url: "/signup",
     },
     {
-      title: "Yahoo Search Scraper",
-      img: "/assets/iconfonts/dashboard-icon/yahoo.png",
-      des: "Filter out the results from Yahoo search engine and get important data.",
-      url: "/services/yahoo-search-scraper/",
+      title: "Social Media Scraper",
+      img: "/assets/iconfonts/dashboard-icon/socialIcon.png",
+      des: "Collect profiles, posts, and contact details from Facebook, Instagram, LinkedIn, and YouTube.",
+      url: "/signup",
     },
     {
-      title: "DuckDuckGo Scraper",
-      img: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
-      des: "Get search results from DuckDuckGo, including websites, description, and contact details",
-      url: "/services/duckduckgo-search-scraper/",
+      title: "E-commerce Seller Scraper",
+      img: "/assets/iconfonts/dashboard-icon/ecomIcon.png",
+      des: "Extract product details, prices, and seller info from Amazon, Flipkart, Meesho, and more.",
+      url: "/signup",
     },
     {
-      title: "Google Search Scraper",
-      img: "/assets/iconfonts/dashboard-icon/google.png",
-      des: "Extract search results from Google, including titles, URLs, and descriptions",
-      url: "/services/google-search-scraper/",
+      title: "Job Portal Scraper",
+      img: "/assets/iconfonts/dashboard-icon/jobIcon.png",
+      des: "Extract Job details, Company Name, Payout, Experience and more from Naukri.com, Shine.com, Apna.co, and more.",
+      url: "/signup",
+    },
+    {
+      title: "Corporate Scraper",
+      img: "/assets/iconfonts/dashboard-icon/ltdIcon.png",
+      des: "Scrape corporate details such as company name, phone, email, gst and more using Pvt Ltd and GST scrapers.",
+      url: "/signup",
     },
     {
       title: "Google Map Scraper",
       img: "/assets/iconfonts/dashboard-icon/map.png",
-      des: "Scrape business details from Google Maps, including name, phone, and address.",
-      url: "/services/google-map-scraper/",
+      des: "Scrape business details from Google Maps, including business name, phone, email, and address.",
+      url: "/signup",
     },
     {
       title: "Live Website Scraping",
       img: "/assets/iconfonts/dashboard-icon/live.png",
       des: "Get the contact information, social media links, and more data directly from live websites.",
-      url: "/services/live-website-scraping/",
+      url: "/signup",
     },
     {
       title: "Live Website Data",
       img: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
       des: "Instant business leads and faster engagement, powered by our next-gen live website data.",
-      url: "/services/live-website-data/",
-    },
-    {
-      title: "Facebook Scraper",
-      img: "/assets/iconfonts/dashboard-icon/facebook.png",
-      des: "Get the Followers, Phone, Email and more public data easily from facebook.",
-      url: "/services/facebook-scraper/",
-    },
-    {
-      title: "YouTube Scraper",
-      img: "/assets/iconfonts/dashboard-icon/youtube.png",
-      des: "Know about subscribers, viewers, and other important data of YouTubers.",
-      url: "/services/youtube-scraper/",
+      url: "/signup",
     },
     {
       title: "India Mart Scraper",
       img: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
-      des: "Extract website URL, virtual phone numbers, actual phone number, email address, and GST number.",
-      url: "/services/indiamart-scraper",
+      des: "Extract website URL, Indiamart numbers, actual phone number, email address, and GST number.",
+      url: "/signup",
     },
     {
       title: "Justdial Scraper",
       img: "/assets/iconfonts/dashboard-icon/jdIcon.png",
       des: "Extract business listings and profile details, including email address, GST number, virtual and actual phone numbers, and more.",
-      url:"/services/justdial-scraper"
+      url:"//signupr"
     },
     {
       title: "Sulekha Scraper",
       img: "/assets/iconfonts/dashboard-icon/sulekha.png",
       des: "Extract listing profile details, including website URL, virtual and actual phone numbers, email address, business address, and more.",
-      url:"/services/sulekha-scraper"
+      url:"//signupr"
     },
     {
       title: "Trade India Scraper",
       img: "/assets/iconfonts/dashboard-icon/tradeindia.png",
       des: "Extract business profile information, including profile URL, business website, virtual and actual phone numbers, email address, and more.",
-      url:"/services/tradeindia-scraper"
+      url:"//signupr"
     },
     {
       title: "ExportersIndia Scraper",
       img: "/assets/iconfonts/dashboard-icon/exporters.png",
       des: "Get ExportersIndia india business profile information, including website, virtual and actual phone numbers, email address, GST number .",
-      url:"/services/exportersindia-scraper"
+      url:"//signupr"
     },
     {
       title: "Email Scraper",
       img: "/assets/iconfonts/dashboard-icon/email.png",
       des: "Extract bulk email addresses based on various domain types such as .com, .in, .org, and more—filtered by your chosen keywords and city.",
-      url:"/services/email-scraper"
+      url:"//signupr"
     },
     {
       title: "Phone Scraper",
       img: "/assets/iconfonts/dashboard-icon/phone.png",
       des: "Extract Indian phone numbers in bulk based on your selected keywords and city.",
-      url:"/services/phone-scraper"
+      url:"//signupr"
     },
     {
       title: "Website Data Scraper",
       img: "/assets/iconfonts/dashboard-icon/website.png",
       des: "Extract valuable data from websites for research and marketing.",
-      url: "/services/website-data-scraper/",
+      url: "/signup",
     },
     {
       title: "Business Directory Scraper",
       img: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       des: "Extract contact details from online business directories easily.",
-      url: "/services/business-directory-scraper/",
+      url: "/signup",
     },
     {
       title: "Document Data Scraper",
       img: "/assets/iconfonts/dashboard-icon/docIcon.png",
       des: "Extract data from CSV, Excel, Doc, and other documents automatically.",
-      url: "/services/document-data-scraper/",
+      url: "/signup",
     },
     {
       title: "Image data scraper",
       img: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       des: "Extract text and contact information from images with OCR technology.",
-      url: "/services/image-data-scraper/",
+      url: "/signup",
     },
     {
       title: "Whois domain database",
       img: "/assets/iconfonts/dashboard-icon/domain.png",
       des: "Retrieve domain ownership details like name, address, and country.",
-      url: "/services/whois-database/",
+      url: "/signup",
     },
   ];
   return (
@@ -148,7 +142,7 @@ const Services = () => {
               <img
                 src={img}
                 alt={title}
-                className="w-[30px] h-[30px] sm:w-[60px] sm:h-[60px] mx-auto rounded-full shadow-sm"
+                className="w-[30px] h-[30px] sm:w-[60px] sm:h-[60px] mx-auto rounded-md shadow-sm"
               />
             </div>
             <h3 className="text-base sm:text-xl font-semibold text-blue-900 mb-3">{title}</h3>

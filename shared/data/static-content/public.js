@@ -483,7 +483,7 @@ export const priceplanmonth = [
     rupees: "₹11,999",
     original_price: "₹14,999",
     month: "/year",
-    payLink: "https://pmny.in/PAYUMN/vIKMqUi2yUTD",
+    payLink: "https://u.payu.in/PAYUMN/drPifGa4OYHh",
     buttontext: "Buy Now",
     paragraph: "All-in-one enterprise solutions",
     content: [

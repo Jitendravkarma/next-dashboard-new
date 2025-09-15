@@ -45,8 +45,8 @@ const Docs = () => {
               <Heading_Two title={"Initial setup"}/>
               <Para para={
                 <span>
-                  First download the the zip file by <CustomLink href={"/signin"} title={"signin"}/> or <CustomLink href={"/signup"} title={"signup"}/>, <br/>
-                  Once you've downloaded the product, Simply follow the steps below to get started:
+                  First download the Starter Kit zip file by <CustomLink href={"/signin"} title={"signin"}/> or <CustomLink href={"/signup"} title={"signup"}/>, <br/>
+                  Once you've downloaded the file, Simply follow the steps below to get started:
                 </span>}
               />
               
@@ -66,7 +66,7 @@ const Docs = () => {
               <ul className="list-disc text-base ml-5">
                 <p>Before running the application, make sure your system meets these requirements:</p>
                 
-                <li>Download <CustomLink href={"https://nodejs.org/en"} title={"Node LTS version"}/>.</li>
+                {/* <li>Download <CustomLink href={"https://nodejs.org/en"} title={"Node LTS version"}/>.</li> */}
                 <li>
                   This project was developed using <b>Node.js v20.11.0</b>.
                   You can download the same version below, based on your system:
@@ -102,18 +102,9 @@ const Docs = () => {
               </ul>
 
               <br/><br/>
-              <Heading_Two title={"Steps to Install and Run the Application"}/>
+              <p className="mb-20" id="start-app"></p>
+              <Heading_Two title={"Start the Application"}/>
               <ul className="list-disc text-base ml-5">
-                <li>
-                  Once you opened <Code title={"/lead_scraper"}/>, run the <Code title={"/installer"}/> file.
-                  <p className="text-sm italic"><b>Note:</b> If the <b>/installer</b> file will not work on your system, checkout our <CustomLink title={"Alternate option"} target="_self" href={"#alternate"}/>.</p>
-                  <LoadImage url={"installer.png"}/>
-                  <p className="text-sm italic"><b>Note:</b> Ensure a stable internet connection, as the process may take time.</p>
-                </li>
-                <br/>
-                <p className="mb-20" id="alternate"></p>
-                <Heading_Two title={"Alternate (Optional)"}/>
-                <p className="text-sm italic"><b>Note:</b> If the <b>/installer</b> is not supported or not working on your system, follow the steps below:</p>
                 <li>
                   Open your project directory <b>/lead_scraper</b> in terminal or command prompt.{" "}<br/>
                   <div className="my-2">
@@ -135,12 +126,15 @@ const Docs = () => {
                     </div>
                   </div>
                 </li>
+                <br/>
+                {/* <p className="mb-20" id="alternate"></p>
+                <Heading_Two title={"Alternate (Optional)"}/>
+                <p className="text-sm italic"><b>Note:</b> If the <b>/installer</b> is not supported or not working on your system, follow the steps below:</p> */}
               </ul>
               
-              <p className="mb-20" id="start-app"></p>
-              <HorizontalAds/>
               <br/><br/>
-              <Heading_Two title={"Start the Application"}/>
+              
+              <Heading_Two title={"Start Server"}/>
               <ul className="list-disc text-base ml-5">
                 {/* <p><b>Note:</b> Windows users can skip these steps and directly run the <CustomLink target="_self" href={"#quick-start"} title={"/starter"}/> file to start the server.</p> */}
                 <br/>
@@ -184,11 +178,19 @@ const Docs = () => {
                 <p className="text-center text-xl font-semibold my-10">
                   🎉Congratulations! Your setup is complete.🥳
                 </p>
-
+                
+                <HorizontalAds/>
                 <p className="mb-28" id="quick-start"></p>
-                <Heading_Two title={<span>⚡Quick Start</span>}/>
-                <p className="text-lg">
-                  <b>Note:</b> After the installation process, you don't need to follow each step to run the application. Instead, simply open the project folder and open file by name <b>/starter</b>, this will start your server (Only for Windows User): <br/>
+                <Heading_Two title={<span>⚡Quick Start (For Windows Users)</span>}/>
+                <li>
+                  Once you opened <Code title={"/lead_scraper"}/>, run the <Code title={"/installer"}/> file, It will install the necessary packages to run the application.
+                  {/* <p className="text-sm italic"><b>Note:</b> If the <b>/installer</b> file will not work on your system, checkout our <CustomLink title={"Alternate option"} target="_self" href={"#alternate"}/>.</p> */}
+                  <LoadImage url={"installer.png"}/>
+                  <p className="text-sm italic"><b>Note:</b> Ensure a stable internet connection, as the process may take time.</p>
+                </li>
+                <br/>
+                <p className="">
+                  After the installation process, you don't need to follow each step to run the application. Instead, simply open the project folder and open file by name <b>/starter</b>, this will start your server: <br/>
                   <LoadImage url={"starterbat.png"}/>
                   <br/>
                   That's it! Your application is ready to use at:: <CustomLink href={"http://localhost:3000"} title={"http://localhost:3000"}/>
