@@ -4,10 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { basePath } from "@/next.config";
+import EnquiryFormModal from "./Enquiry";
 
 export default function Footer() {
   const { logo, resellerContactInfo, companyDetails, dynamicSocialLinks } = useUserContext()
   const [showGoTop, setShowGoTop] = useState(false);
+  const [openEnquiry, setOpenEnquiry] = useState(false);
 
   const handleVisibleButton = () => {
     const position = window.pageYOffset;
@@ -69,9 +71,21 @@ export default function Footer() {
     },
   ];
 
+  const closePop = ()=>{
+    setOpenEnquiry(false)
+  }
+
+  useEffect(()=>{
+    setOpenEnquiry(true);
+  }, [])
+
   return (
     <>
       {/* Footer Section */}
+      {
+        openEnquiry &&
+        <EnquiryFormModal closePop={closePop}/>
+      }
       <footer className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 gap-0 xl:gap-0 xl:space-x-10">
@@ -168,6 +182,13 @@ export default function Footer() {
           height={500}
         />
       </Link>
+
+      <button
+          className="fixed z-10 bottom-[4.5rem] xl:bottom-20 right-4 border-4 border-blue-500 rounded-md shadow-md flex items-center justify-center overflow-hidden w-12 h-12 hover:bg-blue-500 transition-all duration-150" title="Enquiry Now"
+          onClick={()=>setOpenEnquiry(true)}
+      >
+        <Image src={"https://cdn-icons-png.flaticon.com/128/3719/3719420.png"} alt="Enquiry Now" className="w-8 h-8" width={500} height={500}/>
+      </button>
 
       {/* Scroll to Top Button */}
       {showGoTop && (
