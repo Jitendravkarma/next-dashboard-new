@@ -218,6 +218,7 @@ const EnquiryFormModal = ({closePop}) => {
         setIsSending(true)
         await axios.post('/api/send_enquiry', {enquiry_data: formData})
         setSendMsg("Enquiry send successfully!")
+        window.open('/thanks', '_blank');
       } catch (error) {
         console.log(error)
         setSendMsg("Failed to send Enquiry!")
