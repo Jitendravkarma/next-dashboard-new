@@ -248,7 +248,7 @@ const EnquiryFormModal = ({closePop}) => {
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 animate-fadeIn">
       {/* Modal Box */}
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-xl mx-4 relative overflow-hidden animate-slideUp">
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg mx-4 relative overflow-hidden animate-slideUp">
         {/* Decorative Gradient Top Border */}
         <div className="absolute top-0 left-0 w-full h-2 bg-blue-500"></div>
 
@@ -265,57 +265,46 @@ const EnquiryFormModal = ({closePop}) => {
           className="p-6 sm:p-8 max-h-[90vh] overflow-y-auto"
         >
           {/* Heading */}
-          <h2 className="text-3xl font-bold mb-6 text-blue-500 text-center">
-            Enquiry Form
+          <h2 className="text-3xl font-bold text-blue-500 text-center">
+            Enquiry Now
           </h2>
+          <p className="text-xs text-center mt-1 mb-6">Our representative will contact you shortly</p>
 
           {/* Name */}
           <div className="mb-4">
-            <label className="block text-gray-700 font-medium mb-2">
-              Full Name{" "}
-              <span className="text-red-500">*</span>
-            </label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="John Doe"
+              placeholder="Full Name"
               required
-              className="w-full capitalize border border-gray-200 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+              className="w-full capitalize border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
             />
           </div>
 
           {/* Email */}
           <div className="mb-4">
-            <label className="block text-gray-700 font-medium mb-2">
-              Email Address{" "}
-              <span className="text-red-500">*</span>
-            </label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="john@example.com"
+              placeholder="Email Address"
               required
-              className="w-full border border-gray-200 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+              className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
             />
           </div>
 
           {/* Phone */}
           <div className="mb-4">
-            <label className="block text-gray-700 font-medium mb-2">
-              Phone Number{" "}
-              <span className="text-red-500">*</span>
-            </label>
             <div className="flex">
               {/* Country Code Dropdown */}
               <select
                 name="countryCode"
                 value={formData.countryCode}
                 onChange={handleChange}
-                className="w-24 border border-gray-200 rounded-l-lg text-xs px-3 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
+                className="w-24 border border-gray-200 rounded-l-lg text-xs px-3 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition bg-white"
               >
                 {
                   countryList.map((item, idx)=>(
@@ -331,24 +320,21 @@ const EnquiryFormModal = ({closePop}) => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="Enter phone number"
-                className="w-full border border-gray-200 rounded-r-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                placeholder="Mobile Number"
+                className="w-full border border-gray-200 rounded-r-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
               />
             </div>
           </div>
 
           {/* Message */}
           <div className="mb-6">
-            <label className="block text-gray-700 font-medium mb-2">
-              Your Message
-            </label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Type your enquiry here..."
+              placeholder="Your requirements..."
               required
-              className="w-full border border-gray-200 rounded-lg px-4 py-3 h-28 resize-none shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+              className="w-full border border-gray-200 rounded-lg px-4 py-3 h-28 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
             ></textarea>
           </div>
 
@@ -360,8 +346,8 @@ const EnquiryFormModal = ({closePop}) => {
           >
             {
               isSending ?
-              "Sending...":
-              "Submit Enquiry"
+              "Sending enquiry...":
+              "Submit Now"
             }
           </button>
           {
