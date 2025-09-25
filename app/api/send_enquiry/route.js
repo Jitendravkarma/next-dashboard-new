@@ -45,7 +45,7 @@ function formatDateForEnquiry(date = new Date()) {
   }
 }
 
-async function appendToSheet(name, email, phone, message) {
+async function appendToSheet(name, email, phone, message, country) {
   const privateKey = formatPrivateKey(GOOGLE_PRIVATE_KEY)
   if (!GOOGLE_SERVICE_ACCOUNT_EMAIL || !privateKey) {
     throw new Error('Google service account credentials are not set.')
@@ -65,7 +65,7 @@ async function appendToSheet(name, email, phone, message) {
   const formattedDate = formatDateForEnquiry(new Date())
 
   // Order: Date, Name, Email, Phone, Message
-  const values = [[formattedDate, name, email, phone, message]]
+  const values = [[formattedDate, name, email, phone, message, country]]
 
   const res = await sheets.spreadsheets.values.append({
     spreadsheetId: GOOGLE_SHEET_ID,
@@ -102,16 +102,16 @@ export async function POST(request) {
     const { enquiry_data } = body || {}
 
     // Accept name, email, phone, message
-    const { name, email, countryCode, phone, message } = enquiry_data || {}
+    const { name, email, countryCode, phone, message, country } = enquiry_data || {}
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: 'Missing required fields: name, email, message' }, { status: 400 })
     }
 
     // phone is optional validation: if provided ensure string
-    const phoneStr = phone ? `${countryCode}${String(phone)}` : ''
+    const phoneStr = phone ? `${countryCode.value}${String(phone)}` : ''
 
-    const result = await appendToSheet(String(name), String(email), phoneStr, String(message))
+    const result = await appendToSheet(String(name), String(email), phoneStr, String(message), String(country))
 
     return NextResponse.json({ ok: true }, { status: 200 })
   } catch (err) {
