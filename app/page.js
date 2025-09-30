@@ -23,6 +23,14 @@ const Home = () => {
           <BusinessGrowSection/>
           <HorizontalAds/>
           <Footer/>
+          {/* Google Tag Manager (noscript */}
+          <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJQDPVMB"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
+          {/* Google Tag Manager (noscript */}
         </body>
     </html>
   )
