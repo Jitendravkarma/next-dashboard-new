@@ -395,7 +395,7 @@ export const priceplanmonth = [
     month: "/year", // Billing period
     payLink: "/signup",
     buttontext: "Get Started", // Button text
-    paragraph: "All features in Free, plus", // Paragraph for features
+    paragraph: "Access core features for free at no cost", // Paragraph for features
     content: [
       {
         tooltips:
@@ -435,11 +435,11 @@ export const priceplanmonth = [
   {
     plantitle: "Standard Plan",
     plansubtitle: "Ideal for personal use",
-    rupees: "₹2,999",
-    original_price: "₹4,000",
+    rupees: "₹4,999",
+    original_price: "₹6,999",
     month: "/year",
     buttontext: "Buy Now",
-    paragraph: "Advanced tools for your projects",
+    paragraph: "Upgrade to get full access on tools",
     payLink: "https://pmny.in/PAYUMN/oJ45wjNe1PxQ",
     content: [
       {
@@ -480,15 +480,15 @@ export const priceplanmonth = [
   {
     plantitle: "Reseller Plan",
     plansubtitle: "Perfect for medium-sized businesses",
-    rupees: "₹11,999",
-    original_price: "₹14,999",
+    rupees: "₹14,999",
+    original_price: "₹18,999",
     month: "/year",
     payLink: "https://u.payu.in/PAYUMN/drPifGa4OYHh",
     buttontext: "Buy Now",
-    paragraph: "All-in-one enterprise solutions",
+    paragraph: "Built for white-label reselling",
     content: [
       {
-        tooltips: "Unlock all premium features for enterprise-level scraping.",
+        tooltips: "Unlock all premium features for reseller-level scraping.",
         text: "Access to all premium features",
         question: true,
       },
