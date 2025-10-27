@@ -99,7 +99,7 @@ export default function Footer() {
                 Scrape Genius provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
               </p>
               <p>
-              © {companyDetails.company_year.value}. {companyDetails.company_name} owns all rights. Creator of Scrape Genius
+              © {new Date().getFullYear()}. <Link href={"https://designcollection.in"} target="_blank">Design Collection</Link> - All Rights Reserved.
               </p>
             </div>
 
