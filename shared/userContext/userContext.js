@@ -15,6 +15,8 @@ export const UserProvider = ({ children }) => {
   const [iconPing, setIconPing] = useState({url: false, email: false, phone: false, record: false});
   const [isActivated, setIsActivated] = useState(false); // Initialize with false
   const [openSnack, setOpenSnack] = useState(false); // Initialize with false
+  const [validity, setvalidity] = useState(false)
+  const [allocateKeyBox, setAllocateKeyBox] = useState(false);
   const [user, setUser] = useState({ email: "", auth: false });
   const [localUser, setLocalUser] = useState({
     name: "",
@@ -48,6 +50,13 @@ export const UserProvider = ({ children }) => {
   });
   const cls = useMemo(()=>({btn:"px-3 mr-2 py-2 mt-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-600 rounded-sm hover:bg-blue-800 disabled:bg-gray-300 disabled:cursor-not-allowed"}),[]);
   const [ records, setRecords] = useState("");
+
+  const validityBoxClose = () => {
+    setvalidity((prev) => !prev);
+  };
+    const allocateKeyBoxClose = () => {
+    setAllocateKeyBox((prev) => !prev);
+  };
 
   const handleSnackMessage = (msg, bg, txt)=>{
     setSnackMessage({message: msg, bg, txt})
@@ -525,7 +534,7 @@ export const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ user, usersData, productUrl, localUser, logo, years, DOCS, yt_channel, yt_links, dynamicSocialLinks, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail }}
+      value={{ user, usersData, productUrl, localUser, logo, years, DOCS, yt_channel, yt_links, dynamicSocialLinks, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail, validityBoxClose, validity, allocateKeyBoxClose, allocateKeyBox }}
     >
       {children}
     </UserContext.Provider>

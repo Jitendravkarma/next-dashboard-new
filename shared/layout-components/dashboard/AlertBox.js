@@ -433,24 +433,6 @@ const LimitReachedBox = memo(({message="You have reached the limits of the free 
 })
 
 const ValidityBox = memo(({ id, closeModel }) => {
-  const [startDate, setStartDate] = useState(new Date());
-  const [alertMsg, setAlertMsg] = useState("");
-
-  const handleDate = () => {
-    const customers = JSON.parse(localStorage.getItem("customers")) || [];
-    const options = { year: "numeric", month: "short", day: "numeric" };
-    const formattedDate = new Date(startDate).toLocaleDateString("en-GB", options).replace(",", "");
-
-    const updatedCustomers = customers.map(customer => ({
-      ...customer,
-      validity: customer.id === id ? formattedDate : customer.validity,
-    }));
-
-    localStorage.setItem("customers", JSON.stringify(updatedCustomers));
-    setAlertMsg("Account validity set successfully.");
-    setTimeout(() => closeModel(), 2000);
-  };
-
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") closeModel("");
@@ -462,6 +444,43 @@ const ValidityBox = memo(({ id, closeModel }) => {
 
   const handleOutsideClick = (e) => {
     if (e.target.id === "popup-container") closeModel("");
+  };
+
+  const [selectedRange, setSelectedRange] = useState(null);
+
+  const handleDynamicDate = (label) => {
+    const baseDate = new Date(); // Use provided start date
+    let futureDate = new Date(baseDate); // Clone it
+
+    if (label === "Three Months") {
+      futureDate.setMonth(futureDate.getMonth() + 3);
+    } else if (label === "Six Months") {
+      futureDate.setMonth(futureDate.getMonth() + 6);
+    } else if (label === "One Year") {
+      futureDate.setFullYear(futureDate.getFullYear() + 1);
+    }
+
+    const formatDate = (date) => {
+      const day = String(date.getDate()).padStart(2, "0");
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const month = monthNames[date.getMonth()];
+      const year = date.getFullYear();
+      return `${day} ${month} ${year}`;
+    };
+
+    setSelectedRange({
+      label,
+      from: formatDate(baseDate),
+      to: formatDate(futureDate),
+    });
+  };
+
+  const handleDate = () => {
+    console.log(selectedRange)
+    alert(`Validity set for: ${selectedRange?.label || "No period selected"} and email :${id}`);
+    setTimeout(()=>{
+      closeModel("")
+    }, [1000])
   };
 
   return (
@@ -489,40 +508,59 @@ const ValidityBox = memo(({ id, closeModel }) => {
             <span className="sr-only">Close</span>
           </button>
 
-          <div className="text-center">
-            <Logo />
+          {/* <div className="text-center">
             <h2 className="mt-4 text-2xl font-bold text-gray-800">Add / Edit Validity</h2>
-            <p className="text-sm text-gray-600 mt-2">Select a date to set account validity.</p>
-          </div>
+          </div> */}
 
-          <div className="mt-6 space-y-4">
-            <div>
-              <DatePicker
-                className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-700 focus:ring-2 focus:ring-secondary focus:outline-none"
-                selected={startDate}
-                onChange={(date) => setStartDate(date)}
-                placeholderText="Choose a date"
-                dateFormat="dd-MM-yyyy"
-              />
+          <div className="mt-10 space-y-8 text-center">
+            {/* Title */}
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-gray-800">Choose Your Validity</h2>
+              {/* <h2 className="mt-4 text-2xl font-bold text-gray-800">Add / Edit Validity</h2> */}
+              <p className="text-sm mt-2 text-gray-600">Select a time period to set account validity.</p>
             </div>
 
-            <div className="text-right">
+            {/* Quick Select Buttons */}
+            <div className="flex justify-center gap-4 flex-wrap">
+              {["Three Months", "Six Months", "One Year"].map((label) => (
+                <button
+                  key={label}
+                  onClick={() => handleDynamicDate(label)}
+                  className={`py-2 px-5 rounded-full transition-all duration-300 font-medium shadow-lg ${
+                    selectedRange?.label === label
+                      ? "bg-gradient-to-r from-blue-400 to-blue-500 scale-105 text-white"
+                      : "bg-gray-100 hover:scale-105 text-gray-800 hover:bg-gray-200 hover:shadow-md"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            {/* Selected Date Range Display */}
+            {selectedRange && (
+              <div className="mt-4 bg-gray-100 text-gray-700 rounded-lg p-4 inline-block shadow-md">
+                <p className="font-semibold">
+                  <span className="text-blue-600">{selectedRange.label}</span> selected
+                </p>
+                <p className="text-sm">
+                  From: <strong>{selectedRange.from}</strong> to{" "}
+                  <strong>{selectedRange.to}</strong>
+                </p>
+              </div>
+            )}
+
+            {/* Set Validity Button */}
+            <div className="">
               <button
-                className="bg-blue-600 text-white px-6 py-2 rounded-md transition duration-300 hover:bg-blue-700"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-2 rounded-full shadow-md transition-transform duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
                 onClick={handleDate}
+                disabled={!selectedRange}
               >
                 Set Validity
               </button>
             </div>
           </div>
-
-          {alertMsg && (
-            <div className="mt-4 text-center">
-              <span className="text-sm bg-green-100 text-green-600 px-3 py-1 rounded-md">
-                {alertMsg}
-              </span>
-            </div>
-          )}
         </div>
       </div>
     </div>
@@ -751,4 +789,112 @@ const DownloadBox = memo(({csvHeaders, data, fileName, closeModel}) => {
   );
 })
 
-export { ContactBox, SmsBox, WhatsappBox, LimitReachedBox, DownloadBox, ValidityBox, UpgradePlanPopup }
+const AllocateKey = memo(({ id,type, closeModel }) => {
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") closeModel("");
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [closeModel]);
+
+  // Close modal when clicking outside
+  const handleOutsideClick = (e) => {
+    if (e.target.id === "popup-container") closeModel("");
+  };
+
+  // Store numeric input value
+  const [validityNumber, setValidityNumber] = useState("");
+
+  // Handle setting the value
+  const handleAllocate = () => {
+    if (!validityNumber) return;
+    if(type ==="Truecaller Credits")
+    {
+      alert(`Allocated ${validityNumber} Truecaller credits to email: ${id}`);
+    }
+    else if( type ==="B2C Credits")
+    {
+      alert(`Allocated ${validityNumber} B2C credits to email: ${id}`);
+    }
+    else if( type ==="License")
+    {
+      alert(`Allocated ${validityNumber} License to email: ${id}`);
+    }
+    setTimeout(() => {
+      closeModel("");
+    }, 1000);
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div
+        id="popup-container"
+        onClick={handleOutsideClick}
+        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      >
+        <div className="bg-white rounded-md shadow-lg px-8 py-6 max-w-lg w-full relative">
+          {/* Close button */}
+          <button
+            type="button"
+            onClick={() => closeModel("")}
+            className="absolute top-4 right-4 text-gray-600 focus:outline-none hover:bg-gray-200 hover:text-gray-900 p-2 rounded-full"
+          >
+            <svg
+              className="w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <span className="sr-only">Close</span>
+          </button>
+
+          {/* Modal content */}
+          <div className="mt-10 space-y-8 text-center">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-800"> {type}</h2>
+              {/* <p className="text-sm mt-2 text-gray-600">Enter the number of {type} for the allocation.</p> */}
+            </div>
+
+            {/* Number Input */}
+            <div className="flex justify-center">
+              <input
+                type="number"
+                min="1"
+                placeholder={type === `License`? `License`:`Credits`}
+                value={validityNumber}
+                onChange={(e) => setValidityNumber(e.target.value)}
+                className="border border-black-500 rounded-md p-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            {/* Display chosen value */}
+            {validityNumber && (
+              <p className="text-gray-700 mt-2">
+                Number of {type} <strong>{validityNumber}</strong> Allocating
+              </p>
+            )}
+
+            {/* Submit Button */}
+            <div>
+              <button
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-2 rounded-full shadow-md transition-transform duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
+                onClick={handleAllocate}
+                disabled={!validityNumber}
+              >
+                Add {type === `License`? `License`:`Credits`}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+});
+
+export { ContactBox, SmsBox, WhatsappBox, LimitReachedBox, DownloadBox, ValidityBox, UpgradePlanPopup, AllocateKey }

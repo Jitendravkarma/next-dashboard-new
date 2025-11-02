@@ -4,6 +4,8 @@ const Analytics = <i className="ri-user-line side-menu__icon"></i>;
 
 const Renewal = <i className="ri-refresh-line side-menu__icon"></i>;
 
+const Credit = <i className="ri-money-dollar-circle-line side-menu__icon"></i>;
+
 const Licence = <i className="ri-magic-line side-menu__icon"></i>;
 
 const Profile = <i className="ri-user-line side-menu__icon"></i>;
@@ -26,6 +28,8 @@ export const MENUITEMS = [
 	{ path: "/admin/resellerKey", icon: Licence, title: "Reseller License Key", type: "link", active: false, selected: false },
 	
 	{ path: "/admin/resellerValidity", icon: Renewal, title: "Reseller Validity", type: "link", active: false, selected: false },
+
+	{ path: "/admin/resellerCredits", icon: Credit, title: "Reseller Credits", type: "link", active: false, selected: false },
 	
 	// {
 	// 	menutitle: "Settings",
