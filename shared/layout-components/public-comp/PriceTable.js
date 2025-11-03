@@ -39,8 +39,8 @@ const PriceTable = () => {
             <tr>
               <td className="py-4 px-6 text-left font-bold bg-gray-100 md:bg-white shadow-md">Price</td>
               <td className="py-4 px-6">₹0</td>
-              <td className="py-4 px-6">₹2,999</td>
-              <td className="py-4 px-6">₹9,999</td>
+              <td className="py-4 px-6">₹4,999</td>
+              <td className="py-4 px-6">₹14,999</td>
             </tr>
 
             {/* Billing Section */}
