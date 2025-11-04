@@ -440,7 +440,7 @@ export const priceplanmonth = [
     month: "/year",
     buttontext: "Buy Now",
     paragraph: "Upgrade to get full access on tools",
-    payLink: "https://pmny.in/PAYUMN/oJ45wjNe1PxQ",
+    payLink: "https://u.payu.in/PAYUMN/Frj6yWpbvwKu",
     content: [
       {
         tooltips:
@@ -483,7 +483,7 @@ export const priceplanmonth = [
     rupees: "₹14,999",
     original_price: "₹18,999",
     month: "/year",
-    payLink: "https://u.payu.in/PAYUMN/drPifGa4OYHh",
+    payLink: "https://u.payu.in/PAYUMN/Mr2pc5BkTfAL",
     buttontext: "Buy Now",
     paragraph: "Built for white-label reselling",
     content: [
