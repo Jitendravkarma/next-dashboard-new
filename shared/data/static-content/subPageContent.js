@@ -1588,6 +1588,379 @@ export const indiamartscraperdataget = [
 
 ];
 
+export const justdialCrmProps = {
+  title: (
+    <>
+    JustDial <span className="hero-title">CRM</span>
+    </>
+  ),
+  description:
+    "Our Justdial CRM helps you automatically collect, centralize, and manage customer enquiries from your Justdial account — without any API integration. It captures leads in real time directly from your Justdial dashboard and organizes them into a unified CRM panel. Perfect for sales teams and businesses that rely on Justdial for inbound leads, this tool ensures that no customer enquiry is ever missed.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/justdialscreen.png",
+  rightImg: "/assets/img/slider-images/gscreen2.png",
+};
+
+export const indiaMartCrmProps = {
+  title: (
+    <>
+    IndiaMart <span className="hero-title">CRM</span> 
+    </>
+  ),
+  description:
+    "Our IndiaMART CRM is built to simplify lead management by automatically fetching and centralizing your IndiaMART enquiries — completely API-free. Once connected, the system continuously monitors your IndiaMART seller account to collect leads, customer messages, and contact details into one streamlined dashboard. Designed for businesses that depend on IndiaMART for B2B growth, this CRM keeps all your buyer interactions organized and actionable.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/indiamartscreen.png",
+  rightImg: "/assets/img/slider-images/gscreen2.png",
+};
+
+export const googleAdsCrmProps = {
+  title: (
+    <>
+    GoogleAds <span className="hero-title">CRM</span> 
+    </>
+  ),
+  description:
+    "Our Yahoo Search Scraper is designed to pull essential data directly from Yahoo search results—including keywords, business contact information, and location-based links. It streamlines data extraction for analytics, marketing insights, and custom tools. Whether you're in business, research, or digital marketing, this scraper delivers trustworthy and timely data to support your strategic decisions.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/gscreen.png",
+  rightImg: "/assets/img/slider-images/gscreen2.png",
+};
+
+export const justdialCrmstatus = [
+  { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-group-line"></i>, value: "20M+", label: "Total Subscribers" },
+  { icon: <i className="ri-video-line"></i>, value: "35M+", label: "Total Videos" },
+  { icon: <i className="ri-eye-line"></i>, value: "43M+", label: "Total Views" },
+];
+
+export const googleAdsCrmstatus = [
+  { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-group-line"></i>, value: "20M+", label: "Total Subscribers" },
+  { icon: <i className="ri-video-line"></i>, value: "35M+", label: "Total Videos" },
+  { icon: <i className="ri-eye-line"></i>, value: "43M+", label: "Total Views" },
+];
+
+export const indiaMartCrmstatus = [
+  { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
+  { icon: <i className="ri-group-line"></i>, value: "20M+", label: "Total Subscribers" },
+  { icon: <i className="ri-video-line"></i>, value: "35M+", label: "Total Videos" },
+  { icon: <i className="ri-eye-line"></i>, value: "43M+", label: "Total Views" },
+];
+
+export const indiaMartCrmdataget = [
+  { tooltips: 'The Date of the Enquiry made .', keywords: 'Enquiry Date' },
+  { tooltips: 'The name of the custome .', keywords: 'Customer Name' },
+  { tooltips: 'The phone number of the Lead.', keywords: 'Phone Number' },
+  { tooltips: 'Source of the lead like .', keywords: 'Enquiry Source' },
+  { tooltips: 'The location including city.', keywords: 'Location' },
+  { tooltips: 'time at which last seen .', keywords: 'Last Seen' }
+];
+
+export const justdialCrmdataget = [
+  { tooltips: 'The Date of the Enquiry made .', keywords: 'Enquiry Date' },
+  { tooltips: 'The name of the custome .', keywords: 'Customer Name' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone number of the Lead.', keywords: 'Phone Number' },
+  { tooltips: 'Source of the lead like .', keywords: 'Enquiry Source' },
+  { tooltips: 'The location including city.', keywords: 'Location' },
+  { tooltips: 'Form which state the lead is .', keywords: 'State' }
+];
+
+export const googleAdsCrmdataget = [
+  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
+  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
+  { tooltips: 'Get the all social media links for searched results.', keywords: 'Social Links' },
+  { tooltips: 'A brief description providing details about the place or service.', keywords: 'Description' },
+  { tooltips: 'The keyword or query term used for searching in Google Search.', keywords: 'Keywords' },
+  { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
+  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+];
+
+export const HowitworksIndiamartCrm = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Welcome to Scrape Genius IndiaMART CRM",
+      paragraph:
+        "Our IndiaMART Enquiry Scraper is designed to simplify your lead collection process by automatically fetching customer enquiries from your IndiaMART seller account — no API required.",
+      description:
+        "Our IndiaMART Enquiry Scraper is designed to simplify your lead collection process by automatically fetching customer enquiries from your IndiaMART seller account — no API required.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+      sectionHeading: "Introduction",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "B2B Marketplace",
+      presubtitle: "Lead Management",
+    },
+    {
+      subheading: "Step 1: Select the Current Month Date",
+      paragraph:
+        "Begin by selecting the current month’s date in the tool. This defines the time range for collecting leads from your IndiaMART account.",
+      description:
+        "Begin by selecting the current month’s date in the tool. This defines the time range for collecting leads from your IndiaMART account.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+      sectionHeading: "Set Date Range",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "B2B Marketplace",
+      presubtitle: "Lead Management",
+    },
+    {
+      subheading: "Step 2: Click on Fetch Leads",
+      paragraph:
+        "Next, click the 'Fetch Leads' button. A new browser window will open automatically and redirect you to IndiaMART’s login page. Simply log in and enter your OTP to continue.",
+      description:
+        "Next, click the 'Fetch Leads' button. A new browser window will open automatically and redirect you to IndiaMART’s login page. Simply log in and enter your OTP to continue.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+      sectionHeading: "Login and Authenticate",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "B2B Marketplace",
+      presubtitle: "Lead Management",
+    },
+    {
+      subheading: "Step 3: Start Lead Extraction",
+      paragraph:
+        "Once logged in and your dashboard opens, return to the tool and click 'Fetch Leads' again. The scraper will begin collecting your enquiries in real time.",
+      description:
+        "Once logged in and your dashboard opens, return to the tool and click 'Fetch Leads' again. The scraper will begin collecting your enquiries in real time.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+      sectionHeading: "Fetch Enquiries",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "B2B Marketplace",
+      presubtitle: "Lead Management",
+    },
+    {
+      subheading: "Step 4: View and Manage Your Leads",
+      paragraph:
+        "Within a few minutes, leads will start appearing in your panel. Review and manage them easily from the dashboard — all your IndiaMART enquiries in one place.",
+      description:
+        "Within a few minutes, leads will start appearing in your panel. Review and manage them easily from the dashboard — all your IndiaMART enquiries in one place.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+      sectionHeading: "View Collected Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "B2B Marketplace",
+      presubtitle: "Lead Management",
+    },
+    {
+      subheading: "Step 5: Retrieve Older Leads",
+      paragraph:
+        "You can also select an older date to fetch past leads. Simply change the date and click 'Fetch Leads' again — the tool will collect and append older leads to your list.",
+      description:
+        "You can also select an older date to fetch past leads. Simply change the date and click 'Fetch Leads' again — the tool will collect and append older leads to your list.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+      sectionHeading: "Retrieve Old Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "B2B Marketplace",
+      presubtitle: "Lead Management",
+    },
+    {
+      subheading: "Step 6: Follow Up with Customers",
+      paragraph:
+        "After fetching your leads, you can directly connect with your customers through calls, WhatsApp, or messages — all from your central CRM dashboard.",
+      description:
+        "After fetching your leads, you can directly connect with your customers through calls, WhatsApp, or messages — all from your central CRM dashboard.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
+      sectionHeading: "Engage with Customers",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "B2B Marketplace",
+      presubtitle: "Lead Management",
+    },
+  ],
+};
+
+
+export const indiaMartCrmVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "OKzkToxybdc?si=JSTJsUPW9a3d9m8E",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+
+export const HowitworksJustdialCrm = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    
+    {
+      subheading: "Step 1: Enter Login Page URL",
+      paragraph:
+        "Begin by entering the Justdial login page URL into the tool. Then, specify your target date and time. The scraper will automatically collect all leads up to the selected date and time.",
+      description:
+        "Begin by entering the Justdial login page URL into the tool. Then, specify your target date and time. The scraper will automatically collect all leads up to the selected date and time.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+      sectionHeading: "Enter Login Details",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Justdial CRM",
+    },
+    {
+      subheading: "Step 2: Start Fetching Leads",
+      paragraph:
+        "Click the ‘Fetch Leads’ button to start the process. A new browser window will open and automatically redirect you to Justdial’s login page. Log in to your account and verify the OTP.",
+      description:
+        "Click the ‘Fetch Leads’ button to start the process. A new browser window will open and automatically redirect you to Justdial’s login page. Log in to your account and verify the OTP.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+      sectionHeading: "Fetch Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Justdial CRM",
+    },
+    {
+      subheading: "Step 3: Navigate to Leads Section",
+      paragraph:
+        "Once the Justdial dashboard opens, click the ‘Leads’ button to view your leads. Scroll down and click on any displayed lead to open its details page.",
+      description:
+        "Once the Justdial dashboard opens, click the ‘Leads’ button to view your leads. Scroll down and click on any displayed lead to open its details page.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+      sectionHeading: "View Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Justdial CRM",
+    },
+    {
+      subheading: "Step 4: Copy and Paste Enquiry Panel URL",
+      paragraph:
+        "Copy the URL from the browser’s address bar and paste it into the tool’s ‘Enquiry Panel URL’ input field. You can also select an older date to retrieve historical leads.",
+      description:
+        "Copy the URL from the browser’s address bar and paste it into the tool’s ‘Enquiry Panel URL’ input field. You can also select an older date to retrieve historical leads.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+      sectionHeading: "Paste Enquiry URL",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Justdial CRM",
+    },
+    {
+      subheading: "Step 5: Fetch and Review Results",
+      paragraph:
+        "Click ‘Fetch Leads’ again. Within a few minutes, your leads will appear in the dashboard table. Once the process completes, review your extracted leads directly in the panel.",
+      description:
+        "Click ‘Fetch Leads’ again. Within a few minutes, your leads will appear in the dashboard table. Once the process completes, review your extracted leads directly in the panel.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+      sectionHeading: "Review Extracted Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Justdial CRM",
+    },
+    {
+      subheading: "Step 6: Retrieve Older Leads",
+      paragraph:
+        "To collect older leads, simply change the date and time, then click the ‘Fetch Leads’ button again. The older leads will automatically be appended to your existing data.",
+      description:
+        "To collect older leads, simply change the date and time, then click the ‘Fetch Leads’ button again. The older leads will automatically be appended to your existing data.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+      sectionHeading: "Retrieve Old Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Justdial CRM",
+    },
+    {
+      subheading: "Step 7: Process Complete",
+      paragraph:
+        "Once all steps are complete, your lead data is ready for export or review. Thank you for using Scrape Genius to simplify your Justdial lead management process.",
+      description:
+        "Once all steps are complete, your lead data is ready for export or review. Thank you for using Scrape Genius to simplify your Justdial lead management process.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
+      sectionHeading: "Process Complete",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Justdial CRM",
+    },
+  ],
+};
+
+
+export const justdialCrmVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "UHZ7LEqncZE?si=Vicp05EHbd4moWiz",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+
+export const HowitworksGoogleAdsCrm = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Google Search Scraper (Scrape By Query)",
+      paragraph: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Scraper to provide precise results by scraping Google search results.",
+      description: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Scraper to provide precise results by scraping Google search results.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Scrape By Query", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Search Scraper (Initiate the Extraction)",
+      paragraph: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin web scraping Google search results based on your input, utilizing advanced Google search scraper APIs and Python-based extraction techniques.",
+      description: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin web scraping Google search results based on your input, utilizing advanced Google search scraper APIs and Python-based extraction techniques.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Initiate the Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Search Scraper (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Data Extraction", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Search Scraper (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search scraper tool lets you quickly use and analyze the data, making it valuable for various applications",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search scraper tool lets you quickly use and analyze the data, making it valuable for various applications",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Review the Results", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+    {
+      subheading: "Google Search Scraper (Download or Export Data)",
+      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Download or Export Data", // Dynamic section heading
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Search Engine",
+      presubtitle: "Lead Generation",
+    },
+  ],
+};
+
+export const googleAdsCrmVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "OKzkToxybdc?si=JSTJsUPW9a3d9m8E",
+  buttonText: "Try Free Trial",
+  buttonLink: "/signup",
+};
+
 export const Howitworksindiamartscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [

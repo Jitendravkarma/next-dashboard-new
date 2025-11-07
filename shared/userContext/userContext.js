@@ -2,6 +2,7 @@ import React, { createContext, useCallback, useContext, useEffect, useMemo, useS
 import Cookies from 'js-cookie';
 import { getUserData, resellerUsers } from "../apis/api";
 import axios from "axios";
+import { googleAdsCrmProps, indiaMartCrmProps, justdialCrmProps } from "../data/static-content/subPageContent";
 const UserContext = createContext();
 export const useUserContext = () => useContext(UserContext);
 export const UserProvider = ({ children }) => {
@@ -178,7 +179,10 @@ export const UserProvider = ({ children }) => {
     document: "1TrNt8Szv7Y",
     image: "uGlkLHHHXSw",
     whois: "4hmndvMq1rQ",
-    installation: "jLI0zULD6cw"
+    installation: "jLI0zULD6cw",
+    justdialCrm : "UHZ7LEqncZE",
+    indiaMartCrm : "tNfQ75JCXYM",
+    googleAdsCrm : "",
   })
   const [ dynamicSocialLinks, setDynamicSocialLinks ] = useState({
     facebook: "",
@@ -262,7 +266,10 @@ export const UserProvider = ({ children }) => {
               document: "UCuamwNuO2M",
               image: "B13KxuDkY98",
               whois: "_w0iMP95G-A",
-              installation: "tOLGsRr9V5Q"
+              installation: "tOLGsRr9V5Q",
+              justdialCrm : "UHZ7LEqncZE",
+              indiaMartCrm : "tNfQ75JCXYM",
+              googleAdsCrm : "",
             }
           )
         }

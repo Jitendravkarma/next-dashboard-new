@@ -190,7 +190,21 @@ export const seo_not_found = {
     description: `This page is not avaiable on Scrape Genius`,
     keyword: `Page Not Found`
 }
-
+export const seo_indiaMartCrm = {
+    title: `IndiaMart CRM | Efficient Web Scraping Tools - Scrape Genius`,
+    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
+    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+}
+export const seo_justdialCrm = {
+    title: `Justdial CRM | Efficient Web Scraping Tools - Scrape Genius`,
+    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
+    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+}
+export const seo_googleAdsCrm = {
+    title: `Google Ads CRM | Efficient Web Scraping Tools - Scrape Genius`,
+    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
+    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+}
 export const seo_justdial_scraper = {
     title: `Justdail Scraper | Efficient Web Scraping Tools - Scrape Genius`,
     description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,

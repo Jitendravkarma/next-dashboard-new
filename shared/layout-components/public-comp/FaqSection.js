@@ -22,6 +22,11 @@ const FaqSection = () => {
         "A Google Search Scraper is a specific type of web scraping tool that is designed to extract information from the search results pages of Google. This tool simulates a user querying Google's search engine and then collects data from the search results displayed, including website URLs, titles, descriptions, and keywords. As part of a larger suite of data scraping tools, the Google Search Scraper enables users to perform targeted whois searches for domain information and to gather insights for business directory scraping. It is particularly useful for digital marketing professionals and SEO experts looking to analyze competition, track trends, or gather leads. This tool is often integrated with other scraping functionalities, such as yellow pages scraper for business listings or whois database lookup for domain registration details. With the ability to automate the extraction process, users can save time and effort while obtaining accurate data to drive their strategies.",
     },
     {
+      question: "What are CRM services ?",
+      answer:
+        "CRM (Customer Relationship Management) services help businesses manage and organize customer enquiries, leads, and interactions in one place. Our CRM tools automatically collect and centralize leads from platforms like Justdial and IndiaMART, so you don’t have to manually track or import them.",
+    },
+    {
       question: "What Is Website Data Scraper?",
       answer:
         "Our Website Data Scraper tool lets you easily scrape data from millions of websites worldwide. With this powerful web scraping service, you can extract domain names, email IDs, phone numbers, titles, and country details in a snap. It's simple to use, making it perfect for quick research and finding contacts. Whether you're conducting a whois database lookup or gathering leads, our website scraper is designed to boost your business by gathering all the info you need effortlessly. Utilize our web scraping tools to streamline your data collection process and enhance your marketing strategies.",

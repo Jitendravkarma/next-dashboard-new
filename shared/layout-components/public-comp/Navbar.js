@@ -11,13 +11,33 @@ export default function Header() {
   const menus = [
     { title: "home", url: "/" },
     { title: "tools", url: "/services" },
+    { title: "CRM", url: "/CRM" },
     { title: "pricing", url: "/pricing" },
     // { title: "Docs", url: "/docs" },
     { title: "about", url: "/about" },
     { title: "signin", url: "/signin" },
     { title: isAuthenticated ? "Download Now" : "Start a Free Trial", url: isAuthenticated ? "/downloads" : "/signup" }
   ];
-
+  const crmMainMenus = [
+    {
+      title : "Justdial CRM", 
+      url: "/services/justdialCrm", 
+      subLinks: [], 
+      category: false
+    },
+    // {
+    //   title : "Google Ads CRM", 
+    //   url: "/services/googleAdsCrm", 
+    //   subLinks: [], 
+    //   category: false
+    // },
+    {
+      title : "India Mart CRM", 
+      url: "/services/indiaMartCrm", 
+      subLinks: [], 
+      category: false
+    }
+  ]
   const mainMenus = [
     {
       title : "Live Tools", 
@@ -160,6 +180,7 @@ export default function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isCrmDropdownOpen, setIsCrmDropdownOpen] = useState(false);
   const [isEcommerceDropdownOpen, setIsEcommerceDropdownOpen] = useState(false);
   const [isSocialMediaDropdownOpen, setIsSocialMediaDropdownOpen] =
     useState(false);
@@ -174,7 +195,14 @@ export default function Header() {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+    if(isCrmDropdownOpen)
+    {setIsCrmDropdownOpen(!isCrmDropdownOpen);}
   };
+  const toggleDropdown2 = () => {
+    setIsCrmDropdownOpen(!isCrmDropdownOpen);
+    if(isDropdownOpen)
+    {setIsDropdownOpen(!isDropdownOpen);};
+  }
 
   const showSubMenu = (title, menus)=>{
     setSubMenus({title, menus})
@@ -182,8 +210,8 @@ export default function Header() {
 
   function handleLogout() {
     handleSignOut();
-		window.location.reload()
-	}
+    window.location.reload()
+  }
 
   // Close mobile menu when clicked outside
   useEffect(() => {
@@ -238,7 +266,7 @@ export default function Header() {
                       onClick={toggleDropdown}
                       className="flex items-center space-x-1 nav-link hover:text-blue-500"
                     >
-                      <span>Tools & Services</span>
+                      <span>Scrapping Services</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -261,6 +289,92 @@ export default function Header() {
                         <ul>
                           {
                             mainMenus.map(({title, url, category, subLinks}, ind)=>(
+                              <li key={ind}>
+                                {
+                                  category ? 
+                                  <button onClick={()=>showSubMenu(title, subLinks)} className="w-full relative header-submenu-item rounded-sm hover:bg-gray-100 p-2 flex justify-between cursor-pointer">
+                                      <span>{title}</span>
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        className={`w-4 h-4 transition-transform duration-200 ${
+                                          subMenus.title === title ? "transform rotate-0" : "-rotate-90"
+                                        }`}
+                                      >
+                                        <path
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          strokeWidth="2"
+                                          d="M19 9l-7 7-7-7"
+                                        />
+                                      </svg>
+                                      {
+                                        (subMenus.menus.length > 0 && subMenus.title === title) &&
+                                        <div className="rounded-md absolute -right-52 capitalize text-start mt-5 border border-gray-300 bg-white shadow-md w-60 p-2 z-50 header-submenu">
+                                          <ul>
+                                            {
+                                              subMenus.menus.map((link, ind)=>(
+                                                <li key={ind}>
+                                                  <Link
+                                                    href={link.url}
+                                                    className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                                  >
+                                                    {link.title}
+                                                  </Link>
+                                                </li>
+                                              ))
+                                            }
+                                          </ul>
+                                        </div>
+                                      }
+                                  </button>
+                                  :
+                                  <Link
+                                    href={url}
+                                    className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                  >
+                                    {title}
+                                  </Link>
+                                }
+                              </li>
+                            ))
+                          }
+                        </ul>
+                      </div>
+                    )}
+                  </li>
+                ) : title === "CRM" ? (
+                  <li key={url} className="relative z-50">
+                    {/* Lead Generation menu with dropdown */}
+                    <button
+                      onClick={toggleDropdown2}
+                      className="flex items-center space-x-1 nav-link hover:text-blue-500"
+                    >
+                      <span>CRM Services</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          isCrmDropdownOpen ? "transform rotate-180" : ""
+                        }`}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    {isCrmDropdownOpen && (
+                      <div className="rounded-md absolute left-0 mt-5 border border-gray-300 bg-white shadow-md w-60 p-2 z-50 header-submenu">
+                        <ul>
+                          {
+                            crmMainMenus.map(({title, url, category, subLinks}, ind)=>(
                               <li key={ind}>
                                 {
                                   category ? 
