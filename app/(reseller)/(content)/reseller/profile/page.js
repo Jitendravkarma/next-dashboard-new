@@ -868,7 +868,9 @@ const Profile = () => {
     { toolName: "business directory scraper", shortName: "directory", value: `https://www.youtube.com/watch?v=xnDlalSMNdk`, placeholder: `https://www.youtube.com/watch?v=xnDlalSMNdk`},
     { toolName: "document data scraper", shortName: "document", value: `https://www.youtube.com/watch?v=UCuamwNuO2M`, placeholder: `https://www.youtube.com/watch?v=UCuamwNuO2M`},
     { toolName: "image data scraper", shortName: "image", value: `https://www.youtube.com/watch?v=B13KxuDkY98`, placeholder: `https://www.youtube.com/watch?v=B13KxuDkY98`},
-    { toolName: "whois domain lookup", shortName: "whois", value: `https://www.youtube.com/watch?v=_w0iMP95G-A`, placeholder: `https://www.youtube.com/watch?v=_w0iMP95G-A`}
+    { toolName: "whois domain lookup", shortName: "whois", value: `https://www.youtube.com/watch?v=_w0iMP95G-A`, placeholder: `https://www.youtube.com/watch?v=_w0iMP95G-A`},
+    { toolName: "Indiamart CRM", shortName: "indiaMartCrm", value: `https://www.youtube.com/watch?v=tNfQ75JCXYM`, placeholder: `https://www.youtube.com/watch?v=tNfQ75JCXYM`},
+    { toolName: "JustDial CRM", shortName: "justdialCrm", value: `https://www.youtube.com/watch?v=UHZ7LEqncZE`, placeholder: `https://www.youtube.com/watch?v=UHZ7LEqncZE`},
   ]
   const defautlSocialLinks = [
     { mediaName: "facebook", shortName: "facebook", value: ``, placeholder: ``},
@@ -1042,7 +1044,9 @@ const Profile = () => {
                 directory: youtubeLinks[19].value,
                 document: youtubeLinks[20].value,
                 image: youtubeLinks[21].value,
-                whois: youtubeLinks[22].value
+                whois: youtubeLinks[22].value,
+                indiaMartCrm: youtubeLinks[23].value,
+                justdialCrm: youtubeLinks[24].value,
               }
               collectedData.append("youtubeLinks", JSON.stringify(links))
               collectedData.append("socialLinks", JSON.stringify(customSocialLinks))
@@ -1112,7 +1116,9 @@ const Profile = () => {
       { toolName: "business directory scraper", shortName: "directory", value: `https://www.youtube.com/watch?v=${yt_links.directory}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.directory}`},
       { toolName: "document data scraper", shortName: "document", value: `https://www.youtube.com/watch?v=${yt_links.document}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.document}`},
       { toolName: "image data scraper", shortName: "image", value: `https://www.youtube.com/watch?v=${yt_links.image}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.image}`},
-      { toolName: "whois domain lookup", shortName: "whois", value: `https://www.youtube.com/watch?v=${yt_links.whois}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.whois}`}
+      { toolName: "whois domain lookup", shortName: "whois", value: `https://www.youtube.com/watch?v=${yt_links.whois}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.whois}`},
+      { toolName: "Indiamart CRM", shortName: "indiaMartCrm", value: `https://www.youtube.com/watch?v=${yt_links.indiaMartCrm}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.indiaMartCrm}`},
+      { toolName: "JustDial CRM", shortName: "justdialCrm", value: `https://www.youtube.com/watch?v=${yt_links.justdialCrm}`, placeholder: `https://www.youtube.com/watch?v=${yt_links.justdialCrm}`},
     ])
   }, [yt_links])
 
