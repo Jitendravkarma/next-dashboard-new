@@ -1,6 +1,12 @@
 // Tab data including icons and content for each tab
 export const HeroContent = [
     {
+     text: <span>Data Scraping Tools With <br />Scrape Genius</span>,
+    }, 
+    {
+     text: <span>CRM Solutions With <br />Scrape Genius</span>,
+    },  
+    {
       text: <span>Enhance Your Marketing With  <br />Scrape Genius</span>,
     },
     {
@@ -59,11 +65,24 @@ export const tabs = [
     },
   },
 ];
-
+export const featureVideos = [
+  {
+    videoUrl :'https://www.youtube.com/embed/pD3P4hUJgNw',
+    toolname :'video 1'
+  },
+  {
+    videoUrl :'https://www.youtube.com/embed/56d1MnYnKt4',
+    toolname :'video 2'
+  },
+    {
+    videoUrl :'https://www.youtube.com/embed/XmVFvQwpK4s',
+    toolname :'video 2'
+  },
+]
 export const featurestemplates = [
   {
     title: "Live Website Scraper",
-    url: "/services/google-search-scraper",
+    url: "/services/live-website-scraping",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/live.png"
@@ -78,7 +97,7 @@ export const featurestemplates = [
   },
   {
     title: "Live Website Data",
-    url: "/services/google-search-scraper",
+    url: "/services/live-website-data",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/websiteIcon.png"
@@ -93,7 +112,7 @@ export const featurestemplates = [
   },
   {
     title: "Bing Search Scraper",
-    url: "/services/google-search-scraper",
+    url: "/services/bing-search-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/bing.png"
@@ -123,7 +142,7 @@ export const featurestemplates = [
   },
   {
     title: "DuckDuckGo Search Scraper",
-    url: "/services/google-search-scraper",
+    url: "/services/duckduckgo-search-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/duckduckgo.png"
@@ -138,7 +157,7 @@ export const featurestemplates = [
   },
   {
     title: "Yahoo Search Scraper",
-    url: "/services/google-search-scraper",
+    url: "/services/yahoo-search-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/yahoo.png"
@@ -168,7 +187,7 @@ export const featurestemplates = [
   },
   {
     title: "IndiaMART Scraper",
-    url: "/services/google-map-scraper",
+    url: "/services/indiamart-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/indiamartIcon.png"
@@ -183,7 +202,7 @@ export const featurestemplates = [
   },
   {
     title: "Justdial Scraper",
-    url: "/services/google-map-scraper",
+    url: "/services/justdial-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/jdIcon.png"
@@ -198,7 +217,7 @@ export const featurestemplates = [
   },
   {
     title: "Sulekha Scraper",
-    url: "/services/google-map-scraper",
+    url: "/services/sulekha-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/sulekha.png"
@@ -213,7 +232,7 @@ export const featurestemplates = [
   },
   {
     title: "Email Scraper",
-    url: "/services/google-map-scraper",
+    url: "/services/email-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/email.png"
@@ -228,7 +247,7 @@ export const featurestemplates = [
   },
   {
     title: "Phone number scraper",
-    url: "/services/google-map-scraper",
+    url: "/services/phone-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/phone.png"
@@ -240,6 +259,36 @@ export const featurestemplates = [
       "Phone number scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
     youtube: "BhI2KKoSj3Y",
     toolName: "phone"
+  },
+  {
+    title: "Justdial CRM",
+    url: "/services/justdial-CRM",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/jdIcon.png"
+        alt="Justdial CRM"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Our Justdial CRM helps you automatically collect, centralize, and manage customer enquiries from your Justdial account — without any API integration..",
+    youtube: "UHZ7LEqncZE",
+    toolName: "justdialCrm"
+  },
+  {
+    title: "IndiaMart CRM",
+    url: "/services/indiaMart-CRM",
+    image: (
+      <img
+        src="/assets/iconfonts/dashboard-icon/indiamartIcon.png"
+        alt="IndiaMart CRM"
+        className="rounded-full"
+      />
+    ),
+    description:
+      "Our IndiaMART CRM is built to simplify lead management by automatically fetching and centralizing your IndiaMART enquiries — completely API-free.",
+    youtube: "tNfQ75JCXYM",
+    toolName: "indiaMartCrm"
   },
   {
     title: "Website Data Scraper",
@@ -380,6 +429,20 @@ export const Businessgrowusecases = [
     title: "Whois Data",
     icon: <i className="ri-bubble-chart-fill"></i>,
     backgroundColor: "#ebf9ff",
+    iconColor: "#36c3ff",
+    link: "/expert-scraper",
+  },
+  {
+    title: "CRM Solutions",
+    icon: <i className="ri-bar-chart-box-line"></i>,
+    backgroundColor: "#ffd9cd",
+    iconColor: "#e8501f",
+    link: "/advanced-scraper",
+  },
+  {
+    title: "B2C Customer Leads",
+    icon: <i className="ri-team-line"></i>,
+    backgroundColor: "#ffead0",
     iconColor: "#36c3ff",
     link: "/expert-scraper",
   },

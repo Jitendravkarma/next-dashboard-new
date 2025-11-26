@@ -89,15 +89,15 @@ export const seo_faq = {
 }
 
 export const seo_google_search = {
-    title: `Google Search - Scrape Genius`,
-    description: `Boost your research and SEO strategy with our advanced Google search scraper. Easily extract search results, website URLs, metadata and rankings. Automated data collection for lead generation, competitive analysis and market research.`,
-    keywords: `Google Search Scraper, Google SERP extractor, search engine data scraper, SEO research tool, keyword ranking analysis, Google results automation, web scraping tool`
+    title: `Google Search Scraper - Scrape Genius`,
+    description: `Enhance your SEO research and marketing strategy with the Scrape Genius Google Search Scraper. Automatically extract Google SERP results including titles, URLs, snippets, and rankings for keyword analysis, lead generation, and competitive intelligence.`,
+    keywords: `Google Search scraper, Google SERP extractor, Google data scraper, SEO research tool, keyword ranking analysis, Google results automation, web scraping API, Google search automation`
 }
 
 export const seo_google_map = {
-    title: `Powerful Google Maps Scraper & Data Extractor for Accurate Results - Scrape Genius`,
-    description: `Extract business details from Google Maps easily! Get company names, phone numbers, addresses, websites and reviews in bulk. Perfect for lead generation, sales prospecting and location-based marketing.`,
-    keywords: `Google Maps data scraper, Google business extractor, location-based lead generation, business contact scraper, maps API scraping, local business search tool, Google Places scraper`
+    title: `Google Maps Scraper & Business Data Extractor - Scrape Genius`,
+    description: `Easily scrape business listings and contact information from Google Maps using Scrape Genius. Collect names, phone numbers, addresses, websites, ratings, and reviews at scale for lead generation and local marketing insights.`,
+    keywords: `Google Maps scraper, Google business data extractor, Google Places scraper, location-based lead generation, business contact scraper, local business data API, maps scraping tool, Google Maps automation`
 }
 
 export const seo_website_scraper = {
@@ -107,22 +107,21 @@ export const seo_website_scraper = {
 }
 
 export const seo_document_scraper = {
-    title: `Document Data Scraper | Efficient Contact Info Scraper - Scrape Genius`,
-    description: `Extract valuable insights from Text, Word, Excel, and CSV files with our Document Data Scraper. Automate text, table, and metadata extraction for research, finance, and analytics.`,
-    keywords: `Document scraper, CSV text extractor, data mining tool, OCR extraction, document automation, Excel and CSV scraper`
+    title: `Document Data Scraper & File Extractor - Scrape Genius`,
+    description: `Extract structured data, text, tables, and metadata from Word, PDF, Excel, and CSV files with Scrape Genius. Automate document parsing for research, finance, analytics, and data processing at scale.`,
+    keywords: `document scraper, file data extractor, PDF text scraper, Excel and CSV parser, document automation, data mining tool, metadata extraction, text analysis API`
 }
 
 export const seo_image_scraper = {
-    title: `Effortlessly Scrape Images from Any Website | Free Image Scraper - Scrape Genius`,
-    description: `Extract image metadata, URLs, alt text, and captions with our smart Image Data Scraper. Ideal for SEO, research, and digital asset management. Automate image data collection effortlessly!`,
-    keywords: `Image metadata extractor, image scraper tool, alt text analysis, image SEO optimization, photo data mining, image recognition, automated image processing`
+    title: `Image Scraper & Metadata Extractor - Scrape Genius`,
+    description: `Scrape and analyze images from any website using Scrape Genius. Collect image URLs, metadata, alt text, captions, and more for SEO optimization, content curation, and digital asset management.`,
+    keywords: `image scraper, image metadata extractor, photo data scraper, alt text analyzer, image SEO tool, automated image extraction, image recognition API, image data collection`
 }
 
-
 export const seo_directory_scraper = {
-    title: `Business Directory & Yellow Pages Scraper | Free Download Tool - Scrape Genius`,
-    description: `Extract contact details, emails and business information in bulk from online directories. Automated lead generation for B2B outreach, marketing and customer acquisition.`,
-    keywords: `Business directory extractor, company email scraper, B2B lead generation, contact list scraper, Yellow Pages scraper, business listings extraction, online directory data scraper`
+    title: `Business Directory Scraper & Contact Data Extractor - Scrape Genius`,
+    description: `Extract business listings, emails, phone numbers, and addresses from directories like Yellow Pages with Scrape Genius. Ideal for B2B lead generation, marketing campaigns, and customer acquisition automation.`,
+    keywords: `business directory scraper, Yellow Pages extractor, company contact scraper, B2B lead generation, business data extraction, online directory scraper, contact list automation, business information API`
 }
 
 export const seo_whois_data = {
@@ -157,20 +156,20 @@ export const seo_live_data = {
 
 export const seo_bing = {
     title: `Bing Search Scraper - Scrape Genius`,
-    description: `Check out the comprehensive Scrape Genius documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
-    keywords: `Scrape Genius documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+    description: `Learn how to scrape Bing Search results with Scrape Genius. Extract search data, links, titles, snippets, and more efficiently from Bing using our API. Perfect for SEO analysis, market research, and data automation.`,
+    keywords: `Bing Search scraper, Bing data extractor, Bing SERP scraper, Scrape Genius Bing API, scrape Bing search results, Bing web crawler, Bing automation tool, Bing data scraping guide`
 }
 
 export const seo_yahoo = {
     title: `Yahoo Search Scraper - Scrape Genius`,
-    description: `Check out the comprehensive Scrape Genius documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
-    keywords: `Scrape Genius documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+    description: `Master Yahoo Search scraping with Scrape Genius. Retrieve search results, titles, URLs, and snippets from Yahoo for data research, SEO tracking, and competitive analysis. Automate your Yahoo data extraction with ease.`,
+    keywords: `Yahoo Search scraper, Yahoo data extractor, Yahoo SERP scraper, Scrape Genius Yahoo API, scrape Yahoo search results, Yahoo web crawler, Yahoo automation tool, Yahoo data scraping guide`
 }
 
 export const seo_duck = {
-    title: `Duck Duck Go Search Scraper - Scrape Genius`,
-    description: `Check out the comprehensive Scrape Genius documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
-    keywords: `Scrape Genius documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+    title: `DuckDuckGo Search Scraper - Scrape Genius`,
+    description: `Explore how to scrape DuckDuckGo Search data using Scrape Genius. Extract organic results, URLs, and snippets anonymously for privacy-friendly SEO monitoring and research automation.`,
+    keywords: `DuckDuckGo Search scraper, DuckDuckGo data extractor, DuckDuckGo SERP scraper, Scrape Genius DuckDuckGo API, scrape DuckDuckGo results, DuckDuckGo web crawler, privacy search scraping, DuckDuckGo data scraping guide`
 }
 
 export const seo_facebook = {
@@ -191,14 +190,14 @@ export const seo_not_found = {
     keyword: `Page Not Found`
 }
 export const seo_indiaMartCrm = {
-    title: `IndiaMart CRM | Efficient Web Scraping Tools - Scrape Genius`,
-    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
-    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+    title: `IndiaMART CRM | Automated Lead Management Tool - Scrape Genius`,
+    description: `Our IndiaMART CRM simplifies lead management by automatically fetching and centralizing your IndiaMART enquiries — completely API-free. It continuously monitors your IndiaMART seller account to collect leads, customer messages, and contact details into one streamlined dashboard. Perfect for businesses that rely on IndiaMART for B2B growth, this CRM keeps all buyer interactions organized and actionable.`,
+    keywords: `IndiaMART CRM, IndiaMART leads automation, IndiaMART enquiry management, B2B CRM tool, automated lead collection, IndiaMART seller dashboard, lead tracking software, IndiaMART data scraper`
 }
 export const seo_justdialCrm = {
-    title: `Justdial CRM | Efficient Web Scraping Tools - Scrape Genius`,
-    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
-    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+    title: `Justdial CRM | Real-Time Lead Capture & Management - Scrape Genius`,
+    description: `Our Justdial CRM helps you automatically collect, centralize, and manage customer enquiries from your Justdial account — without any API integration. It captures leads in real time directly from your Justdial dashboard and organizes them into a unified CRM panel. Ideal for sales teams and businesses that depend on Justdial for inbound leads, this tool ensures that no customer enquiry is ever missed.`,
+    keywords: `Justdial CRM, Justdial leads automation, Justdial enquiry manager, customer enquiry tracking, Justdial scraper, automated lead management, CRM for Justdial sellers, lead capture software`
 }
 export const seo_googleAdsCrm = {
     title: `Google Ads CRM | Efficient Web Scraping Tools - Scrape Genius`,
@@ -206,32 +205,38 @@ export const seo_googleAdsCrm = {
     keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
 }
 export const seo_justdial_scraper = {
-    title: `Justdail Scraper | Efficient Web Scraping Tools - Scrape Genius`,
-    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
-    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+    title: `Justdial Scraper & Business Data Extractor - Scrape Genius`,
+    description: `Extract business listings, phone numbers, addresses, ratings, and reviews from Justdial using Scrape Genius. Automate local business data collection for lead generation, marketing, and analytics.`,
+    keywords: `Justdial scraper, Justdial business extractor, Justdial data scraper, local business listings scraper, contact information extractor, B2B data scraping, Justdial automation, lead generation tool`
 }
 export const seo_indiamart_scraper = {
-    title: `IndiaMart Scraper | Efficient Web Scraping Tools - Scrape Genius`,
-    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
-    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+    title: `IndiaMART Scraper & Supplier Data Extractor - Scrape Genius`,
+    description: `Scrape supplier and product data from IndiaMART effortlessly. Collect company details, product descriptions, prices, emails, and contact info for business research, sourcing, and sales automation.`,
+    keywords: `IndiaMART scraper, supplier data extractor, product data scraper, IndiaMART API, business directory scraper, B2B lead generation, vendor data collection, IndiaMART automation`
 }
 export const seo_tradeindia_scraper = {
-    title: `Tradeindia Scraper | Efficient Web Scraping Tools - Scrape Genius`,
-    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
-    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+    title: `TradeIndia Scraper & Exporter Data Extractor - Scrape Genius`,
+    description: `Extract exporter and supplier details from TradeIndia with Scrape Genius. Gather company info, product listings, prices, and contacts to enhance your sourcing, analytics, and business outreach.`,
+    keywords: `TradeIndia scraper, exporter data extractor, supplier scraper, B2B business scraper, product data extraction, TradeIndia automation, vendor information scraper, TradeIndia data API`
 }
 export const seo_exportersindia_scraper = {
-    title: `ExportersIndia Scraper | Efficient Web Scraping Tools - Scrape Genius`,
-    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
-    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+    title: `ExportersIndia Scraper & Manufacturer Data Extractor - Scrape Genius`,
+    description: `Scrape manufacturer and supplier data from ExportersIndia quickly and accurately. Extract company profiles, products, prices, and contact details for trade insights, sourcing, and business intelligence.`,
+    keywords: `ExportersIndia scraper, manufacturer data extractor, supplier data scraper, B2B marketplace scraper, business directory scraper, product listings extraction, ExportersIndia automation, contact data scraper`
+}
+
+export const seo_sulekha_scraper = {
+    title: `Sulekha Scraper & Service Provider Data Extractor - Scrape Genius`,
+    description: `Extract service provider listings, contact details, and ratings from Sulekha using Scrape Genius. Ideal for lead generation, market research, and automation in local service discovery.`,
+    keywords: `Sulekha scraper, service provider extractor, local business scraper, contact data scraper, Sulekha data extraction, B2C lead generation, online directory scraper, Sulekha automation tool`
 }
 export const seo_email_scraper = {
-    title: `Email Scraper | Efficient Web Scraping Tools - Scrape Genius`,
-    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
-    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+    title: `Email Scraper & Contact Extractor - Scrape Genius`,
+    description: `Extract email addresses from websites, directories, and documents automatically using Scrape Genius. Ideal for lead generation, marketing campaigns, and business outreach — no coding required!`,
+    keywords: `email scraper, email extractor, contact data scraper, lead generation tool, website email extraction, business email finder, automated email collection, email scraping software`
 }
 export const seo_phone_scraper = {
-    title: `Phone Scraper Software | Efficient Web Scraping Tools - Scrape Genius`,
-    description: `Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!`,
-    keywords: `Website data extraction, web scraper tool, online data collection, web crawling software, HTML scraper, website content extraction, automated web scraping`
+    title: `Phone Number Scraper & Contact Extractor - Scrape Genius`,
+    description: `Collect phone numbers and contact details from websites, business directories, and online listings with Scrape Genius. Automate lead generation and contact data extraction effortlessly.`,
+    keywords: `phone number scraper, contact extractor, phone data scraper, lead generation automation, business phone scraper, website contact scraper, phone number extraction tool, data collection software`
 }

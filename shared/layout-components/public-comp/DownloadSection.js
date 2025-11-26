@@ -107,6 +107,12 @@ const DownloadSection = () => {
                 <i className='ri-home-4-line text-lg'/> Reseller
               </Link>
             }
+             {
+              (user.reseller && user.email === "support@designcollection.in") && 
+              <Link href={"/admin/dashboard"} title='Visit reseller dashboard' target='_blank' className='inline-block rounded-md duration-300 gap-2 hover:bg-indigo-500 hover:text-white items-center px-6 py-2 transition-all'>
+                <i className='ri-home-4-line text-lg'/> Admin
+              </Link>
+            }
 
             <button onClick={handleLogout} 
               className="flex ml-auto rounded-md duration-300 gap-2 hover:bg-red-500 hover:text-white items-center px-6 py-2 transition-all"

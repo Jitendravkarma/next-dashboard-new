@@ -7,12 +7,14 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
+import { approveReseller } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
-	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData, fetchUserData, userData } = useUserContext()
+	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData,allUsersData, fetchUserData, userData } = useUserContext()
 	// const [ validity, setValidity ] = useState(false);
 	// const [ userId, setUserId ] = useState(false);
 	const [ data, setData ] = useState([]);
+	const [ isSet, setIsSet ] = useState(false)
 	const [adminData, setAdminData] = useState([
 			{
 				id: 1,
@@ -90,10 +92,10 @@ const UserAnalytics = () => {
 			field: "user_type",
 			width: 200,
 			renderCell: (params) => {
-				const value = params.row.reseller;
+				const value = params.row.user_type;
 				return (
-				  <span className={`${value === "true" ? "bg-success/10 text-success" : "bg-primary/10 text-primary"} badge leading-none rounded-sm capitalize`}>
-					{value ?"Reseller":"User"}
+				  <span className={`${value === "reseller" ? "bg-success/10 text-success" : "bg-primary/10 text-primary"} badge leading-none rounded-sm capitalize`}>
+					{value === "reseller" ?"Reseller":"User"}
 					{/* //{console.log(params)} */}
 				  </span>
 				)
@@ -105,18 +107,38 @@ const UserAnalytics = () => {
 			field: "reseller",
 			width: 200,
 			renderCell: (params) => {
-				const value = params.row.reseller;
+				const value = params.row.user_type;
 				return (
 				//   <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
 				// 	{value ? "Paid User" : "Unpaid User"}
 				//   </span>
 				<span>
-					<button  className="focus:outline-none text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-900"
+					<button disabled ={value==='reseller'?true:false}  className={
+    `focus:outline-none text-white font-medium rounded-full text-sm px-5 py-2.5 mb-2 ` +
+    (value ==='reseller'
+      ? "bg-green-300 hover:bg-green-400 text-white font-medium rounded-full text-sm px-5 py-2.5"
+      : `bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-900`
+    )
+  }
   onClick={(e) => {
     e.stopPropagation();
     console.log("Button clicked");
+	const approve = async()=>{
+		try{console.log(params.row.email)
+             const response = await approveReseller(params.row.email); 
+			 
+			//  const message = response.message ??response.errors.email;
+			 alert(`${params.row.email}${response} `);
+		}
+		catch(error)
+		{
+           console.log(error);
+		   setIsSet((prev)=>!prev);
+		}
+	} 
+   approve();
   }}
->{value?" Already Approved":"Approve Reseller"}</button>
+>{value === "reseller"?" Already Approved" :"Approve Reseller"}</button>
 				</span>
 				)
 			},
@@ -240,15 +262,15 @@ const UserAnalytics = () => {
 	}, [])
 
 	useEffect(()=>{
-		setData(userData);
-		console.log(userData)
+		setData(allUsersData);
+		console.log(allUsersData)
 		console.log(data);
-	}, [userData.length])
+	}, [allUsersData.length])
 
-	useEffect(()=>{
-		console.log(userData)
-		console.log(data);
-	}, [userData.length])
+	// useEffect(()=>{
+	// 	console.log(userData)
+	// 	console.log(data);
+	// }, [userData.length])
      
     // useEffect(()=>{
 	// 	const home = fetchUserData();
@@ -324,12 +346,12 @@ const UserAnalytics = () => {
 							</div>
 						</div>
 						{
-							adminData.length > 0 ? 
+							data.length > 0 ? 
 							<>
-								<DataTable columns={columns} progressStatus={{isScraping:false}} data={adminData} hideClear={true} handleDataCount={updateNumOfData} sortOptions={sortOptions}/>
+								<DataTable columns={columns} progressStatus={{isScraping:false}} data={data} hideClear={true} handleDataCount={updateNumOfData} sortOptions={sortOptions}/>
 
 								<div className="px-6 pb-4">
-									<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={adminData} fileName={"customers-data.csv"}/>
+									<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={data} fileName={"customers-data.csv"}/>
 								</div>
 							</>
 							:

@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
     {
       title: "Cloud-Based Platform",
       description:
-        "Access your tools and scraped data anywhere, anytime, with seamless cloud support.",
+        "Access your tools and scraped data anywhere, anytime, with seamless cloud support (coming soon).",
       icon: <i className="ri-cloud-line text-blue-400 lg:text-4xl text-3xl" />,
     },
   ];

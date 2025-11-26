@@ -5,6 +5,7 @@ import Footer from '@/shared/layout-components/public-comp/Footer'
 import { seo_home } from '@/shared/data/seo-content/content'
 import ServicesSection from '@/shared/layout-components/public-comp/Services'
 import FeatureSection from '@/shared/layout-components/public-comp/Features'
+import FeatureVideo from '@/shared/layout-components/public-comp/FeaturesVideo'
 import BusinessGrowSection from '@/shared/layout-components/public-comp/BusinessGrow'
 import HeadElement from '@/shared/layout-components/public-comp/HeadElement'
 import { HorizontalAds } from '@/shared/layout-components/public-comp/Ads'
@@ -21,6 +22,7 @@ const Home = () => {
           <ServicesSection/>
           <FeatureSection/>
           <BusinessGrowSection/>
+          <FeatureVideo/>
           <HorizontalAds/>
           <Footer/>
           {/* Google Tag Manager (noscript */}

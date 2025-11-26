@@ -116,7 +116,7 @@ const ContactUs = () => {
         </div>
         <div className='grid grid-cols-12 items-center justify-center my-10 px-4'>
             <div className='col-span-12 my-10'>
-                <h1 className='text-2xl text-center font-bold'>Our Team</h1>
+                <h1 className='text-2xl text-center font-bold'>Our Support Team</h1>
             </div>
             <div className='col-span-12 grid grid-cols-12 gap-6 text-center items-center justify-center'>
                 {teamMembers.map(({ name, role, desc, profile_img, phone, whatsapp, social_links }, ind) => (

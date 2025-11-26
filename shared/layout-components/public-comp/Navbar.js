@@ -21,7 +21,7 @@ export default function Header() {
   const crmMainMenus = [
     {
       title : "Justdial CRM", 
-      url: "/services/justdialCrm", 
+      url: "/services/justdial-CRM", 
       subLinks: [], 
       category: false
     },
@@ -33,7 +33,13 @@ export default function Header() {
     // },
     {
       title : "India Mart CRM", 
-      url: "/services/indiaMartCrm", 
+      url: "/services/indiaMart-CRM", 
+      subLinks: [], 
+      category: false,
+    },
+    {
+      title : "Coming Soon ...", 
+      url: "#", 
       subLinks: [], 
       category: false
     }
@@ -266,7 +272,7 @@ export default function Header() {
                       onClick={toggleDropdown}
                       className="flex items-center space-x-1 nav-link hover:text-blue-500"
                     >
-                      <span>Scrapping Services</span>
+                      <span>Scraping Services</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

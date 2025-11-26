@@ -1,28 +1,31 @@
 "use client"
 import React from "react";
-import { featurestemplates } from "@/shared/data/static-content/public";
+import { featureVideos } from "@/shared/data/static-content/public";
+import { VideoSection2 } from "@/shared/layout-components/public-comp/VideoSection2";
+import {
+  bingsearchscraperdataget,
+  BingsearchscraperProps,
+  googlesearchscraperstatus,
+  BingsearchscraperVideo,
+  HowitworksBingsearchscraper,
+} from "@/shared/data/static-content/subPageContent";
 import Link from "next/link";
 import { useUserContext } from "@/shared/userContext/userContext";
-const FeatureSection = () => {
+const FeatureVideo = () => {
   const { yt_links } = useUserContext()
   return (
     <section className="py-14 lg:pt-[62px] bg-white relative">
       <div className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-16"><span className="text-blue-500">Top Featured</span> Templates</h2>
+        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-16"><span className="text-blue-500">Take a Quick </span> Tour</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featurestemplates.map((template, index) => (
+          {featureVideos.map((item, index) => (
             <div
               key={index}
               className="border border-gray-200 group rounded-md p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col relative overflow-hidden"
             >
-              {
-                (template.toolName === "justdialCrm"|| template.toolName === "indiaMartCrm") &&
-                <div className="border border-white shadow-sm bg-red-500 text-white animate-pulse rotate-45 py-1 px-12 text-[10px] absolute top-2 -right-8">
-                  New
-                </div>
-              }
-              <div className="flex items-center mb-4">
+              <VideoSection2 videoUrl={`${item.videoUrl}`} toolName={`${item.toolname}`}/>
+              {/* <div className="flex items-center mb-4">
                 <div
                   className="w-12 h-12 p-1 flex items-center justify-center bg-white border border-gray-300 rounded-md shadow"
                 >
@@ -46,7 +49,7 @@ const FeatureSection = () => {
                   <i className="ri-youtube-line"></i>
                   <span>YouTube</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>    
@@ -55,4 +58,4 @@ const FeatureSection = () => {
   );
 };
 
-export default FeatureSection;
+export default FeatureVideo;

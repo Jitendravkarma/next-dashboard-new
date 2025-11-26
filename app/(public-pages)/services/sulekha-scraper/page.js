@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
-import { seo_justdial_scraper } from "@/shared/data/seo-content/content";
+import { seo_sulekha_scraper } from "@/shared/data/seo-content/content";
 import {
   sulekhascraperstatus,
   Howitworkssulekhascraper,
@@ -15,7 +15,7 @@ import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
 import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
-export const metadata = seo_justdial_scraper;
+export const metadata = seo_sulekha_scraper;
 
 const SulekhaScraper = () => {
   return (

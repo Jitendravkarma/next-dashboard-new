@@ -1631,24 +1631,24 @@ export const googleAdsCrmProps = {
 };
 
 export const justdialCrmstatus = [
-  { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
-  { icon: <i className="ri-group-line"></i>, value: "20M+", label: "Total Subscribers" },
-  { icon: <i className="ri-video-line"></i>, value: "35M+", label: "Total Videos" },
-  { icon: <i className="ri-eye-line"></i>, value: "43M+", label: "Total Views" },
+  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Scraping Tools" },
+  { icon: <i className="ri-group-line"></i>, value: "10+", label: "CRM Tools" },
+  { icon: <i className="ri-mail-line"></i>, value: "10M+", label: "Emails" },
+  { icon: <i className="ri-eye-line"></i>, value: "15M+", label: "Contact Number" },
 ];
 
 export const googleAdsCrmstatus = [
   { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
   { icon: <i className="ri-group-line"></i>, value: "20M+", label: "Total Subscribers" },
-  { icon: <i className="ri-video-line"></i>, value: "35M+", label: "Total Videos" },
+  { icon: <i className="ri-mail-line"></i>, value: "35M+", label: "Total Videos" },
   { icon: <i className="ri-eye-line"></i>, value: "43M+", label: "Total Views" },
 ];
 
 export const indiaMartCrmstatus = [
-  { icon: <i className="ri-clipboard-line"></i>, value: "15M+", label: "Total Records" },
-  { icon: <i className="ri-group-line"></i>, value: "20M+", label: "Total Subscribers" },
-  { icon: <i className="ri-video-line"></i>, value: "35M+", label: "Total Videos" },
-  { icon: <i className="ri-eye-line"></i>, value: "43M+", label: "Total Views" },
+  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Scraping Tools" },
+  { icon: <i className="ri-group-line"></i>, value: "10+", label: "CRM Tools" },
+  { icon: <i className="ri-mail-line"></i>, value: "10M+", label: "Emails" },
+  { icon: <i className="ri-eye-line"></i>, value: "15M+", label: "Contact Number" },
 ];
 
 export const indiaMartCrmdataget = [
@@ -1695,7 +1695,7 @@ export const HowitworksIndiamartCrm = {
       sectionHeading: "Introduction",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "B2B Marketplace",
+      pretitle: "IndiaMart CRM",
       presubtitle: "Lead Management",
     },
     {
@@ -1708,7 +1708,7 @@ export const HowitworksIndiamartCrm = {
       sectionHeading: "Set Date Range",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "B2B Marketplace",
+      pretitle: "IndiaMart CRM",
       presubtitle: "Lead Management",
     },
     {
@@ -1721,7 +1721,7 @@ export const HowitworksIndiamartCrm = {
       sectionHeading: "Login and Authenticate",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "B2B Marketplace",
+      pretitle: "IndiaMart CRM",
       presubtitle: "Lead Management",
     },
     {
@@ -1734,7 +1734,7 @@ export const HowitworksIndiamartCrm = {
       sectionHeading: "Fetch Enquiries",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "B2B Marketplace",
+      pretitle: "IndiaMart CRM",
       presubtitle: "Lead Management",
     },
     {
@@ -1747,7 +1747,7 @@ export const HowitworksIndiamartCrm = {
       sectionHeading: "View Collected Leads",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "B2B Marketplace",
+      pretitle: "IndiaMart CRM",
       presubtitle: "Lead Management",
     },
     {
@@ -1760,7 +1760,7 @@ export const HowitworksIndiamartCrm = {
       sectionHeading: "Retrieve Old Leads",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "B2B Marketplace",
+      pretitle: "IndiaMart CRM",
       presubtitle: "Lead Management",
     },
     {
@@ -1773,7 +1773,7 @@ export const HowitworksIndiamartCrm = {
       sectionHeading: "Engage with Customers",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "B2B Marketplace",
+      pretitle: "IndiaMart CRM",
       presubtitle: "Lead Management",
     },
   ],

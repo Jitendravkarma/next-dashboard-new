@@ -182,7 +182,7 @@ export async function getAuthenticatedData(apiEndpoint) {
 export async function getUserData() {
   checkAndAddAuthTokenToHeader()
   try {
-    const response = await api.get('/restricted/users?limit=500');
+    const response = await api.get('/restricted/users?limit=10000');
     return response; // It will provide every registered users data
   } catch (error) {
     throw error;
@@ -298,6 +298,15 @@ export async function verificationLink(email) {
   checkAndAddAuthTokenToHeader()
   try {
     const response = await api.post('/verification', {email});
+    return response.data.data; // Assuming the API returns the user data and a token
+  } catch (error) {
+    return error;
+  }
+}
+export async function approveReseller(email) {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.get(`/restricted/makereseller?email=${email}`);
     return response.data.data; // Assuming the API returns the user data and a token
   } catch (error) {
     return error;
