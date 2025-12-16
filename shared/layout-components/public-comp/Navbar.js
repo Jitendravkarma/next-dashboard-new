@@ -199,10 +199,15 @@ export default function Header() {
     setIsSocialMediaDropdownOpen(false); // Close dropdown when menu is toggled
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-    if(isCrmDropdownOpen)
-    {setIsCrmDropdownOpen(!isCrmDropdownOpen);}
+  const toggleDropdown = (tool_name) => {
+    if(tool_name === "crm") {
+      setIsCrmDropdownOpen(!isCrmDropdownOpen)
+      setIsDropdownOpen(false)
+    }
+    else {
+      setIsDropdownOpen(!isDropdownOpen)
+      setIsCrmDropdownOpen(false)
+    };
   };
   const toggleDropdown2 = () => {
     setIsCrmDropdownOpen(!isCrmDropdownOpen);
@@ -525,7 +530,7 @@ export default function Header() {
             ) : title === "tools" ? (
               <li key={url} className="border-bottom relative">
                 <button
-                  onClick={toggleDropdown}
+                  onClick={()=>toggleDropdown("tools")}
                   aria-expanded={isDropdownOpen}
                   aria-haspopup="true"
                   className="font-normal flex items-center space-x-1 text-black cursor-pointer capitalize"
@@ -553,6 +558,93 @@ export default function Header() {
                     <ul>
                       {
                         mainMenus.map(({title, url, category, subLinks}, ind)=>(
+                          <li key={ind}>
+                            {
+                              category ? 
+                              <button onClick={()=>showSubMenu(title, subLinks)} className="w-full relative header-submenu-item rounded-sm hover:bg-gray-100 px-4 py-2 flex justify-between cursor-pointer">
+                                  <span>{title}</span>
+                                  <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                      className={`w-4 h-4 transition-transform duration-200 ${
+                                        subMenus.title === title ? "transform rotate-0" : "-rotate-90"
+                                      }`}
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M19 9l-7 7-7-7"
+                                      />
+                                    </svg>
+                                  {
+                                    (subMenus.menus.length > 0 && subMenus.title === title) &&
+                                    <div className="rounded-md absolute left-4 top-4 capitalize text-start mt-5 border border-gray-300 bg-white shadow-md w-60 p-2 z-50 header-submenu">
+                                      <ul>
+                                        {
+                                          subMenus.menus.map((link, ind)=>(
+                                            <li key={ind}>
+                                              <Link
+                                                href={link.url}
+                                                className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                              >
+                                                {link.title}
+                                              </Link>
+                                            </li>
+                                          ))
+                                        }
+                                      </ul>
+                                    </div>
+                                  }
+                              </button>
+                              :
+                              <Link
+                                href={url}
+                                className="capitalize block px-4 py-2 text-black hover:bg-gray-100 text-sm font-light"
+                              >
+                                {title}
+                              </Link>
+                            }
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                )}
+              </li>
+            ) : title === "CRM" ? (
+              <li key={url} className="border-bottom relative">
+                <button
+                  onClick={()=>toggleDropdown("crm")}
+                  aria-expanded={isCrmDropdownOpen}
+                  aria-haspopup="true"
+                  className="font-normal flex items-center space-x-1 text-black cursor-pointer capitalize"
+                >
+                  <span>CRM Solutions</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      isCrmDropdownOpen ? "transform rotate-180" : ""
+                    }`}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {isCrmDropdownOpen && (
+                  <div className="bg-white shadow-lg rounded-md py-2 transition-all duration-300 w-full">
+                    <ul>
+                      {
+                        crmMainMenus.map(({title, url, category, subLinks}, ind)=>(
                           <li key={ind}>
                             {
                               category ? 

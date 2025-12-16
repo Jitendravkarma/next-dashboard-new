@@ -108,7 +108,7 @@ const GenerateLicence = () => {
 	} 
 
 	const generateLicenceCode = async ()=>{
-		if(licences.length < 100){
+		if(licences.length < 300){
 			try {
 				setIsGenerating(true)
 				const generateCode = await generateLicence()
@@ -131,7 +131,7 @@ const GenerateLicence = () => {
 	useEffect(()=>{
 		setNumOfData([
 			{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "100", color: "primary/10", color1: "success" },
-			{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: <span className={`${licences.length > 95 && "animate-pulse text-danger"}`}>{100 - licences.length}</span>, color: "primary/10", color1: "success" },
+			{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: <span className={`${licences.length > 95 && "animate-pulse text-danger"}`}>{300 - licences.length}</span>, color: "primary/10", color1: "success" },
 			{ id: 3, icon: status, class: "Sold Licences", title: "sold", text: <span>{licences.filter(lic=>lic.email).length}/<small className={`${licences.length < 5 && "animate-pulse text-danger"}`}>{licences.length}</small></span>, color: "primary/10", color1: "success" },
 			{ id: 4, icon: planIcon, class: "Available Licences", title: "type", text: <span>{licences.filter(lic=>!lic.email).length}/<small className={`${licences.length < 5 && "animate-pulse text-danger"}`}>{licences.length}</small></span>, color: "primary/10", color1: "success" },
 		])
@@ -209,12 +209,12 @@ const GenerateLicence = () => {
 							<div className="overflow-auto">
 								<div className="flex flex-wrap gap-5 justify-between items-center mb-5">
 									<div>
-										<button onClick={generateLicenceCode} className={`p-2 border rounded-sm hover:bg-indigo-500 ${isGenerating ? "animate-pulse border-indigo-500 bg-indigo-500 hover:!border-indigo-500 text-white" : "border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:!border-indigo-500 hover:text-white"} disabled:bg-indigo-500 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} disabled={licences.length === 100 || isGenerating}>
+										<button onClick={generateLicenceCode} className={`p-2 border rounded-sm hover:bg-indigo-500 ${isGenerating ? "animate-pulse border-indigo-500 bg-indigo-500 hover:!border-indigo-500 text-white" : "border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:!border-indigo-500 hover:text-white"} disabled:bg-indigo-500 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} disabled={licences.length === 300 || isGenerating}>
 											<i className="ri-magic-line"/>{" "} {isGenerating ? "Generating..." : "Generate Licence"}
 										</button>
 										{
-											licences.length === 100 && 
-											<p className="mt-1 text-red-500">Note: You can't generate more than 100 licenses. Contact your plan provider to increase your licence limit.</p>
+											licences.length === 300 && 
+											<p className="mt-1 text-red-500">Note: You can't generate more than 300 licenses. Contact your plan provider to increase your licence limit.</p>
 										}
 									</div>
 									<div className="flex gap-2 items-center">
