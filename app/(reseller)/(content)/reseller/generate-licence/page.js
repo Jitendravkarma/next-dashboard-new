@@ -49,7 +49,7 @@ const GenerateLicence = () => {
 	const planIcon = <i className={`${dashboard_data.role === "reseller" ? "ri-pie-chart-line bg-secondary/10 text-secondary" : dashboard_data.role === "white" ? "ri-medal-line bg-warning/10 text-warning" : "ri-bard-line bg-info/10 text-info"} text-xl avatar w-10 h-10 rounded-full p-2.5 leading-none`}></i>
 
 	const [ numOfData, setNumOfData] = useState([
-		{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "100", color: "primary/10", color1: "success" },
+		{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "300", color: "primary/10", color1: "success" },
 		{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: 0, color: "primary/10", color1: "success" },
 		{ id: 3, icon: status, class: "Sold Licences", title: "sold", text: <span>0/<small>0</small></span>, color: "primary/10", color1: "success" },
 		{ id: 4, icon: planIcon, class: "Available Licences", title: "type", text: <span>0/<small>0</small></span>, color: "primary/10", color1: "success" },
@@ -99,7 +99,7 @@ const GenerateLicence = () => {
 					available: asigned_user_email ? false : true
 				}
 			})
-			setLicences(converData)
+			setLicences(converData.reverse())
 		} catch (error) {
 			console.log(error)
 		} finally {
@@ -130,8 +130,8 @@ const GenerateLicence = () => {
 
 	useEffect(()=>{
 		setNumOfData([
-			{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "100", color: "primary/10", color1: "success" },
-			{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: <span className={`${licences.length > 95 && "animate-pulse text-danger"}`}>{300 - licences.length}</span>, color: "primary/10", color1: "success" },
+			{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "300", color: "primary/10", color1: "success" },
+			{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: <span className={`${licences.length > 295 && "animate-pulse text-danger"}`}>{300 - licences.length}</span>, color: "primary/10", color1: "success" },
 			{ id: 3, icon: status, class: "Sold Licences", title: "sold", text: <span>{licences.filter(lic=>lic.email).length}/<small className={`${licences.length < 5 && "animate-pulse text-danger"}`}>{licences.length}</small></span>, color: "primary/10", color1: "success" },
 			{ id: 4, icon: planIcon, class: "Available Licences", title: "type", text: <span>{licences.filter(lic=>!lic.email).length}/<small className={`${licences.length < 5 && "animate-pulse text-danger"}`}>{licences.length}</small></span>, color: "primary/10", color1: "success" },
 		])
