@@ -75,15 +75,15 @@ const ContactUs = () => {
             profile_img: "/assets/team/support_two.jpeg"
         },
         {
-            name: "Siddharth Singh Bais",
+            name: "Sanket Vani",
             role: "Technical Support",
             desc: "He is a Good Technical Support Team Member",
-            phone: "917587575814",
+            phone: "916264572510",
             whatsapp: true,
             social_links: [
                 {social_icon: "facebook", social_link: "/contact"}
             ],
-            profile_img: "https://media.licdn.com/dms/image/v2/D4D03AQE1kBo7n271nA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688310237958?e=1763596800&v=beta&t=5cUDjWLT81FUvcRbduK1Hiv9mEln7dBWDkiny58Uut4"
+            profile_img: "/assets/team/support_three.jpg"
         }
     ]
   return (

@@ -41,6 +41,32 @@ export const BingsearchscraperProps = {
   leftImg: "/assets/img/slider-images/bingscreen.png",
   rightImg: "/assets/img/slider-images/gscreen2.png",
 };
+export const customleaduploadProps = {
+  title: (
+    <>
+    Custom <span className="hero-title">Lead </span> CRM
+    </>
+  ),
+  description:
+    "Our Custom Lead Upload streamlines the process of importing and managing your own lead data through structured CSV uploads. It supports essential fields like customer name, phone, email, address, source, and category, ensuring clean and organized records. Designed to automate lead preparation for follow-ups, reporting, and CRM workflows, it’s perfect for businesses, sales teams, and agencies seeking reliable, ready-to-use lead data to drive efficient, data-driven engagement.",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/customLeads.png",
+  rightImg: "/assets/img/slider-images/all-in-one.jpg",
+};
+export const metaAdsCrmProps = {
+  title: (
+    <>
+    Meta <span className="hero-title">Ads</span> CRM
+    </>
+  ),
+  description:
+    "Meta Ads CRM seamlessly captures and manages leads generated from your Facebook and Instagram ads in real time. It integrates directly with Meta Instant Forms, Google Sheets, and secure Facebook App tokens to automate lead collection, synchronization, and organization. With flexible CRM connectivity, easy lead fetching, and export options, businesses can review, follow up, and download leads effortlessly. Ideal for marketers, agencies, and sales teams, Meta Ads CRM ensures accurate, reliable, and structured lead data to streamline campaigns and maximize conversion performance",
+  buttonText: "Try For Free",
+  buttonLink: "/signup",
+  leftImg: "/assets/img/slider-images/metaAds.png",
+  rightImg: "/assets/img/slider-images/all-in-one.jpg",
+};
 
 // Define the properties as an object
 export const DucksearchscraperProps = {
@@ -175,6 +201,30 @@ export const bingsearchscraperdataget = [
   { tooltips: 'The keyword or query term used for searching in Google Search.', keywords: 'Keywords' },
   { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
   { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+];
+export const metaadscrmdataget = [
+  { tooltips: 'The Date of the Enquiry made .', keywords: 'Enquiry Date' },
+  { tooltips: 'The name of the customer .', keywords: 'Customer Name' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone number of the Lead.', keywords: 'Phone Number' },
+  { tooltips: 'Source of the lead like .', keywords: 'Enquiry Source' },
+  { tooltips: 'The location including city.', keywords: 'City' },
+  { tooltips: 'The name of the form .', keywords: 'Form Name' },
+  { tooltips: 'The ID of particular campaign ID.', keywords: 'Campaign ID' },
+  { tooltips: 'The name of particular campaign.', keywords: 'Campaign name' },
+  { tooltips: 'The ID of the of the ad .', keywords: 'Ad ID' },
+  { tooltips: 'The name of the of the ad.', keywords: 'Ad Name' },
+  { tooltips: 'From where the lead is from.', keywords: 'Platform Name' }, 
+];
+export const customleaduploaddataget = [
+  { tooltips: 'The date of the Enquiry made .', keywords: 'Enquiry Date' },
+  { tooltips: 'The name of the customer .', keywords: 'Customer Name' },
+  { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
+  { tooltips: 'The phone number of the Lead.', keywords: 'Phone Number' },
+  { tooltips: 'Source of the lead like .', keywords: 'Enquiry Source' },
+  { tooltips: 'The location including city.', keywords: 'Address' },
+  { tooltips: 'The source of the lead  .', keywords: 'Lead Source' },
+  { tooltips: 'The category of the lead .', keywords: 'Category' },
 ];
 
 export const yahoosearchscraperdataget = [
@@ -668,6 +718,18 @@ export const BingsearchscraperVideo = {
 export const YahoosearchscraperVideo = {
   heading: "<span className='text-blue-500'>Watch a</span>Demo",
   videoUrl: "w15iPuDbtBo?si=cQjcZkk8wgI6GjHx",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+export const metaAdsCrmVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "",
+  buttonText: "Get Started",
+  buttonLink: "/signup",
+};
+export const customLeadUploadVideo = {
+  heading: "<span className='text-blue-500'>Watch a</span>Demo",
+  videoUrl: "",
   buttonText: "Get Started",
   buttonLink: "/signup",
 };
@@ -1623,14 +1685,26 @@ export const googleAdsCrmProps = {
     </>
   ),
   description:
-    "Our Yahoo Search Scraper is designed to pull essential data directly from Yahoo search results—including keywords, business contact information, and location-based links. It streamlines data extraction for analytics, marketing insights, and custom tools. Whether you're in business, research, or digital marketing, this scraper delivers trustworthy and timely data to support your strategic decisions.",
+    "Our Google Ads CRM is designed to capture and organize lead data directly from your Google Ads and website forms using secure Google Sheets integration. It streamlines lead collection for follow-ups, sales tracking, and campaign analysis. Whether you’re a business, agency, or marketer, this tool delivers accurate, real-time lead data to support faster conversions and smarter decision-making.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
-  leftImg: "/assets/img/slider-images/gscreen.png",
-  rightImg: "/assets/img/slider-images/gscreen2.png",
+  leftImg: "/assets/img/slider-images/GoogleAds.png",
+  rightImg: "/assets/img/slider-images/all-in-one.jpg",
 };
 
 export const justdialCrmstatus = [
+  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Scraping Tools" },
+  { icon: <i className="ri-group-line"></i>, value: "10+", label: "CRM Tools" },
+  { icon: <i className="ri-mail-line"></i>, value: "10M+", label: "Emails" },
+  { icon: <i className="ri-eye-line"></i>, value: "15M+", label: "Contact Number" },
+];
+export const metaAdsCrmstatus = [
+  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Scraping Tools" },
+  { icon: <i className="ri-group-line"></i>, value: "10+", label: "CRM Tools" },
+  { icon: <i className="ri-mail-line"></i>, value: "10M+", label: "Emails" },
+  { icon: <i className="ri-eye-line"></i>, value: "15M+", label: "Contact Number" },
+];
+export const customLeadUploadStatus = [
   { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Scraping Tools" },
   { icon: <i className="ri-group-line"></i>, value: "10+", label: "CRM Tools" },
   { icon: <i className="ri-mail-line"></i>, value: "10M+", label: "Emails" },
@@ -1671,15 +1745,15 @@ export const justdialCrmdataget = [
 ];
 
 export const googleAdsCrmdataget = [
-  { tooltips: 'The official website address of the place or service', keywords: 'Website' },
-  { tooltips: 'The name or title of a place or service.', keywords: 'Title' },
+  { tooltips: 'The Date of the Enquiry made .', keywords: 'Enquiry Date' },
+  { tooltips: 'The Enquiry made about .', keywords: 'Enquiry' },
+  { tooltips: 'The name of the customer .', keywords: 'Customer Name' },
   { tooltips: 'The email address associated with the place or service', keywords: 'Email' },
-  { tooltips: 'The phone number to contact the place or service.', keywords: 'Phone Number' },
-  { tooltips: 'Get the all social media links for searched results.', keywords: 'Social Links' },
-  { tooltips: 'A brief description providing details about the place or service.', keywords: 'Description' },
-  { tooltips: 'The keyword or query term used for searching in Google Search.', keywords: 'Keywords' },
-  { tooltips: 'The full address of the place, including street, city, and zip code.', keywords: 'Address' },
-  { tooltips: 'The specific keyword or query term used during the search process.', keywords: 'Searched Keyword' }
+  { tooltips: 'The phone number of the Lead.', keywords: 'Phone Number' },
+  { tooltips: 'Source of the lead like .', keywords: 'Enquiry Source' },
+  { tooltips: 'The location including city.', keywords: 'City' },
+  { tooltips: 'The URL of the Google Sheet .', keywords: 'Google Sheet URL' },
+  { tooltips: 'The name of the Google Sheet .', keywords: 'Google Sheet Name' },
 ];
 
 export const HowitworksIndiamartCrm = {
@@ -1884,6 +1958,199 @@ export const HowitworksJustdialCrm = {
     },
   ],
 };
+export const HowitworksMetaAdsCrm = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Step 1: Log in to Facebook Business",
+      paragraph:
+        "Log in to your Facebook Business account. From the sidebar, click on ‘All Tools’ and search for ‘Instant Forms’ to access all your created lead forms.",
+      description:
+        "Log in to your Facebook Business account. From the sidebar, click on ‘All Tools’ and search for ‘Instant Forms’ to access all your created lead forms.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/meta.png",
+      sectionHeading: "Access Instant Forms",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Meta Ads CRM",
+    },
+    {
+      subheading: "Step 2: Connect Google Sheets Integration",
+      paragraph:
+        "Inside Instant Forms, click on ‘Lead Integration’ and choose ‘Google Sheets’. Create a new integration by selecting an existing Google Sheet or creating a new one.",
+      description:
+        "Inside Instant Forms, click on ‘Lead Integration’ and choose ‘Google Sheets’. Create a new integration by selecting an existing Google Sheet or creating a new one.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/meta.png",
+      sectionHeading: "Connect Google Sheets",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Meta Ads CRM",
+    },
+    {
+      subheading: "Step 3: Configure Google Sheet Access",
+      paragraph:
+        "Open Google Drive and create a new Google Sheet. Click ‘Share’ and change access to ‘Anyone with the link’. Set the permission to ‘Viewer’ and copy the sheet URL.",
+      description:
+        "Open Google Drive and create a new Google Sheet. Click ‘Share’ and change access to ‘Anyone with the link’. Set the permission to ‘Viewer’ and copy the sheet URL.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/meta.png",
+      sectionHeading: "Set Sheet Permissions",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Meta Ads CRM",
+    },
+    {
+      subheading: "Step 4: Finalize Lead Integration",
+      paragraph:
+        "Paste the Google Sheet URL into Facebook’s integration field and remove extra URL parameters. Select the sheet, choose your lead form, verify form details, and connect the dataset.",
+      description:
+        "Paste the Google Sheet URL into Facebook’s integration field and remove extra URL parameters. Select the sheet, choose your lead form, verify form details, and connect the dataset.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/meta.png",
+      sectionHeading: "Finalize Lead Integration",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Meta Ads CRM",
+    },
+    {
+      subheading: "Step 5: Fetch Leads Using Google Sheets",
+      paragraph:
+        "Paste the connected Google Sheet URL into the Meta Ads CRM tool, enter the sheet name, and click ‘Fetch Leads’. Your leads will be loaded into the dashboard automatically.",
+      description:
+        "Paste the connected Google Sheet URL into the Meta Ads CRM tool, enter the sheet name, and click ‘Fetch Leads’. Your leads will be loaded into the dashboard automatically.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/meta.png",
+      sectionHeading: "Fetch Sheet Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Meta Ads CRM",
+    },
+    {
+      subheading: "Step 6: Generate Facebook App Token",
+      paragraph:
+        "Visit the Facebook Developers portal, create a new app, select Ads and Content Management use cases, assign permissions, and generate a secure access token.",
+      description:
+        "Visit the Facebook Developers portal, create a new app, select Ads and Content Management use cases, assign permissions, and generate a secure access token.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/meta.png",
+      sectionHeading: "Create App Token",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Meta Ads CRM",
+    },
+    {
+      subheading: "Step 7: Fetch Leads Using App Token",
+      paragraph:
+        "Paste the generated Facebook App token into the tool, select your Facebook page and ad set, then click ‘Fetch Leads’ to retrieve leads directly from Meta Ads.",
+      description:
+        "Paste the generated Facebook App token into the tool, select your Facebook page and ad set, then click ‘Fetch Leads’ to retrieve leads directly from Meta Ads.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/meta.png",
+      sectionHeading: "Fetch Ad Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Meta Ads CRM",
+    },
+    {
+      subheading: "Step 8: Review and Export Leads",
+      paragraph:
+        "Once leads are fetched, review them in the dashboard, set follow-ups, and easily download or export the records to Google Drive.",
+      description:
+        "Once leads are fetched, review them in the dashboard, set follow-ups, and easily download or export the records to Google Drive.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/meta.png",
+      sectionHeading: "Review and Export Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "Meta Ads CRM",
+    },
+  ],
+};
+export const HowitworksCsvUploadCrm = {
+  mainheading: "<span className='text-blue-500'>How It </span>Works?",
+  scrapers: [
+    {
+      subheading: "Step 1: Prepare Your CSV File",
+      paragraph:
+        "Create a CSV file with the required fields: title (customer name), phone, email, address, source, and category. Ensure all columns are correctly named for accurate data processing.",
+      description:
+        "Create a CSV file with the required fields: title (customer name), phone, email, address, source, and category. Ensure all columns are correctly named for accurate data processing.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/excel.png",
+      sectionHeading: "Prepare CSV",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "CSV Upload CRM",
+    },
+    {
+      subheading: "Step 2: Upload the CSV File",
+      paragraph:
+        "Upload the prepared CSV file into the tool using the upload option. The system will automatically read and validate the required fields.",
+      description:
+        "Upload the prepared CSV file into the tool using the upload option. The system will automatically read and validate the required fields.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/excel.png",
+      sectionHeading: "Upload CSV",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "CSV Upload CRM",
+    },
+    {
+      subheading: "Step 3: Validate and Process Data",
+      paragraph:
+        "Once uploaded, the tool validates the CSV data and processes the records. Any missing or incorrect fields can be reviewed before final submission.",
+      description:
+        "Once uploaded, the tool validates the CSV data and processes the records. Any missing or incorrect fields can be reviewed before final submission.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/excel.png",
+      sectionHeading: "Validate Data",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "CSV Upload CRM",
+    },
+    {
+      subheading: "Step 4: View Uploaded Leads",
+      paragraph:
+        "After successful processing, all leads are displayed in the dashboard table with customer details, source, and category information.",
+      description:
+        "After successful processing, all leads are displayed in the dashboard table with customer details, source, and category information.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/excel.png",
+      sectionHeading: "View Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "CSV Upload CRM",
+    },
+    {
+      subheading: "Step 5: Manage Follow-ups",
+      paragraph:
+        "Once the data is displayed, the leads are ready for follow-ups. Assign status, schedule follow-ups, and track interactions directly from the CRM.",
+      description:
+        "Once the data is displayed, the leads are ready for follow-ups. Assign status, schedule follow-ups, and track interactions directly from the CRM.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/excel.png",
+      sectionHeading: "Follow-up Ready",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "CSV Upload CRM",
+    },
+    {
+      subheading: "Step 6: Export or Download Data",
+      paragraph:
+        "After managing your leads, you can download or export the processed data for reporting, sharing, or external CRM usage.",
+      description:
+        "After managing your leads, you can download or export the processed data for reporting, sharing, or external CRM usage.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/excel.png",
+      sectionHeading: "Process Complete",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Lead Automation",
+      presubtitle: "CSV Upload CRM",
+    },
+  ],
+};
+
 
 
 export const justdialCrmVideo = {
@@ -1897,62 +2164,99 @@ export const HowitworksGoogleAdsCrm = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Google Search Scraper (Scrape By Query)",
-      paragraph: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Scraper to provide precise results by scraping Google search results.",
-      description: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Scraper to provide precise results by scraping Google search results.",
+      subheading: "Step 1: Create Google Apps Script",
+      paragraph:
+        "Click on ‘Edit App Script’ and copy the provided Google Apps Script code. Create a new Google Sheet, rename the sheet to ‘Leads’, then navigate to Extensions → Apps Script and replace the default function with the copied code.",
+      description:
+        "Click on ‘Edit App Script’ and copy the provided Google Apps Script code. Create a new Google Sheet, rename the sheet to ‘Leads’, then navigate to Extensions → Apps Script and replace the default function with the copied code.",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
-      sectionHeading: "Scrape By Query", // Dynamic section heading
+      sectionHeading: "Create Apps Script",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Search Engine",
-      presubtitle: "Lead Generation",
+      pretitle: "Google Ads",
+      presubtitle: "Lead Automation",
     },
     {
-      subheading: "Google Search Scraper (Initiate the Extraction)",
-      paragraph: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin web scraping Google search results based on your input, utilizing advanced Google search scraper APIs and Python-based extraction techniques.",
-      description: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin web scraping Google search results based on your input, utilizing advanced Google search scraper APIs and Python-based extraction techniques.",
+      subheading: "Step 2: Deploy Script as Web App",
+      paragraph:
+        "In Apps Script, click on ‘Deploy’ → ‘New Deployment’. Select ‘Web App’, enter a description, set access to ‘Anyone’, and deploy. Authorize access by selecting your account and confirming permissions.",
+      description:
+        "In Apps Script, click on ‘Deploy’ → ‘New Deployment’. Select ‘Web App’, enter a description, set access to ‘Anyone’, and deploy. Authorize access by selecting your account and confirming permissions.",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
-      sectionHeading: "Initiate the Extraction", // Dynamic section heading
+      sectionHeading: "Deploy Web App",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Search Engine",
-      presubtitle: "Lead Generation",
+      pretitle: "Google Ads",
+      presubtitle: "Lead Automation",
     },
     {
-      subheading: "Google Search Scraper (Data Extraction)",
-      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
-      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      subheading: "Step 3: Save Deployment Details",
+      paragraph:
+        "Once deployment is complete, securely save the generated Deployment ID and Web App URL. Copy the URL to use it for lead collection in the tool.",
+      description:
+        "Once deployment is complete, securely save the generated Deployment ID and Web App URL. Copy the URL to use it for lead collection in the tool.",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
-      sectionHeading: "Data Extraction", // Dynamic section heading
+      sectionHeading: "Save Deployment URL",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Search Engine",
-      presubtitle: "Lead Generation",
+      pretitle: "Google Ads",
+      presubtitle: "Lead Automation",
     },
     {
-      subheading: "Google Search Scraper (Review the Results)",
-      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search scraper tool lets you quickly use and analyze the data, making it valuable for various applications",
-      description: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search scraper tool lets you quickly use and analyze the data, making it valuable for various applications",
+      subheading: "Step 4: Connect Script to the Tool",
+      paragraph:
+        "Paste the Web App URL into the tool’s input field and provide the Google Sheet URL where leads will be stored. Save the configuration to continue.",
+      description:
+        "Paste the Web App URL into the tool’s input field and provide the Google Sheet URL where leads will be stored. Save the configuration to continue.",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
-      sectionHeading: "Review the Results", // Dynamic section heading
+      sectionHeading: "Connect Sheet",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Search Engine",
-      presubtitle: "Lead Generation",
+      pretitle: "Google Ads",
+      presubtitle: "Lead Automation",
     },
     {
-      subheading: "Google Search Scraper (Download or Export Data)",
-      paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
-      description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
+      subheading: "Step 5: Embed Form Script on Website",
+      paragraph:
+        "Copy the generated script tag from the tool and paste it into the head or body section of your website. This will display the lead capture form on your webpage.",
+      description:
+        "Copy the generated script tag from the tool and paste it into the head or body section of your website. This will display the lead capture form on your webpage.",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
-      sectionHeading: "Download or Export Data", // Dynamic section heading
+      sectionHeading: "Embed Lead Form",
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Search Engine",
-      presubtitle: "Lead Generation",
+      pretitle: "Google Ads",
+      presubtitle: "Lead Automation",
+    },
+    {
+      subheading: "Step 6: Share Google Sheet Access",
+      paragraph:
+        "Copy the provided email address from the tool and share your Google Sheet with this email. Ensure the permission is set to ‘Viewer’ so the tool can read lead data.",
+      description:
+        "Copy the provided email address from the tool and share your Google Sheet with this email. Ensure the permission is set to ‘Viewer’ so the tool can read lead data.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Grant Sheet Access",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Google Ads",
+      presubtitle: "Lead Automation",
+    },
+    {
+      subheading: "Step 7: Fetch and Manage Leads",
+      paragraph:
+        "Paste the Google Sheet URL into the tool, enter the sheet name, and click ‘Fetch Leads’. Your Google Ad leads will appear in the dashboard, ready for follow-ups or export.",
+      description:
+        "Paste the Google Sheet URL into the tool, enter the sheet name, and click ‘Fetch Leads’. Your Google Ad leads will appear in the dashboard, ready for follow-ups or export.",
+      imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
+      sectionHeading: "Fetch Leads",
+      link: "/signup",
+      buttonText: "Try Now",
+      pretitle: "Google Ads",
+      presubtitle: "Lead Automation",
     },
   ],
 };
+
 
 export const googleAdsCrmVideo = {
   heading: "<span className='text-blue-500'>Watch a</span>Demo",

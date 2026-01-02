@@ -38,8 +38,20 @@ export default function Header() {
       category: false,
     },
     {
-      title : "Coming Soon ...", 
-      url: "#", 
+      title : "Google Ads CRM", 
+      url: "/services/googleAdsCrm", 
+      subLinks: [], 
+      category: false
+    },
+    {
+      title : "Meta Ads CRM", 
+      url: "/services/meta-Ads-CRM", 
+      subLinks: [], 
+      category: false
+    },
+    {
+      title : "Custom Lead CRM", 
+      url: "/services/custom-lead-upload", 
       subLinks: [], 
       category: false
     }

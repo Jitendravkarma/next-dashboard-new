@@ -543,8 +543,8 @@ export const priceplanmonth = [
   {
     plantitle: "Reseller Plan",
     plansubtitle: "Perfect for medium-sized businesses",
-    rupees: "₹14,999",
-    original_price: "₹18,999",
+    rupees: "₹24,999",
+    original_price: "₹31,248",
     month: "/year",
     payLink: "https://u.payu.in/PAYUMN/Mr2pc5BkTfAL",
     buttontext: "Buy Now",

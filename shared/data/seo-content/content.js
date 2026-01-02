@@ -240,3 +240,14 @@ export const seo_phone_scraper = {
     description: `Collect phone numbers and contact details from websites, business directories, and online listings with Scrape Genius. Automate lead generation and contact data extraction effortlessly.`,
     keywords: `phone number scraper, contact extractor, phone data scraper, lead generation automation, business phone scraper, website contact scraper, phone number extraction tool, data collection software`
 }
+export const seo_custom_lead_upload = {
+  title: `Custom Lead Upload CRM - Scrape Genius`,
+  description: `Upload and manage your leads effortlessly with Scrape Genius Custom Lead Upload CRM. Import CSV files with customer details, validate data automatically, and prepare leads for follow-ups and conversions.`,
+  keywords: `custom lead upload CRM, CSV lead upload tool, import leads from CSV, lead management system, CRM lead upload, Scrape Genius CSV CRM, bulk lead upload, sales follow-up CRM`
+};
+
+export const seo_meta_ads = {
+  title: `Meta Ads CRM - Scrape Genius`,
+  description: `Automate Meta Ads lead collection with Scrape Genius Meta Ads CRM. Fetch leads from Facebook and Instagram Instant Forms using Google Sheets or App Tokens, manage follow-ups, and export leads effortlessly.`,
+  keywords: `Meta Ads CRM, Facebook lead ads CRM, Instagram lead ads integration, Meta Instant Forms leads, Facebook Ads lead automation, Scrape Genius Meta Ads tool, fetch Facebook leads, Meta lead management`
+};
