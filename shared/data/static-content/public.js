@@ -546,7 +546,7 @@ export const priceplanmonth = [
     rupees: "₹24,999",
     original_price: "₹31,248",
     month: "/year",
-    payLink: "https://u.payu.in/PAYUMN/Mr2pc5BkTfAL",
+    payLink: "https://u.payu.in/PAYUMN/jrgiFfZdShJz",
     buttontext: "Buy Now",
     paragraph: "Built for white-label reselling",
     content: [
