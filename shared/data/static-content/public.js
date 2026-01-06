@@ -503,7 +503,7 @@ export const priceplanmonth = [
     month: "/year",
     buttontext: "Buy Now",
     paragraph: "Upgrade to get full access on tools",
-    payLink: "https://u.payu.in/PAYUMN/Frj6yWpbvwKu",
+    payLink: "https://rzp.io/rzp/AyT6R6hC",
     content: [
       {
         tooltips:
@@ -546,7 +546,7 @@ export const priceplanmonth = [
     rupees: "₹24,999",
     original_price: "₹31,248",
     month: "/year",
-    payLink: "https://u.payu.in/PAYUMN/jrgiFfZdShJz",
+    payLink: "https://rzp.io/rzp/C1ahOWvi",
     buttontext: "Buy Now",
     paragraph: "Built for white-label reselling",
     content: [
