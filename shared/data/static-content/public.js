@@ -556,8 +556,8 @@ export const priceplanmonth = [
         question: true,
       },
       {
-        tooltips: "Empower resellers to sell products to upto 100 customers effortlessly.",
-        text: "100 License Key",
+        tooltips: "Empower resellers to sell products to upto 200 customers effortlessly.",
+        text: "200 License Key",
         question: true,
       },
       {
