@@ -40,7 +40,7 @@ export default function Footer() {
         { title: "Google Search Scraper", url: "/services/google-search-scraper" },
         { title: "Google Map Scraper", url: "/services/google-map-scraper" },
         { title: "Website Data Scraper", url: "/services/website-data-scraper" },
-        { title: "Live Data Center", url: "/services/website-data-center" },
+        { title: "Live Website Data", url: "/services/live-website-data" },
         { title: "Document Data Scraper", url: "/services/document-data-scraper" },
         { title: "Image Data Scraper", url: "/services/image-data-scraper" },
         { title: "Business Directory Scraper", url: "/services/business-directory-scraper" },

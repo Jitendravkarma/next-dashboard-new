@@ -83,36 +83,46 @@ const PolicyContentData = () => {
       ]
     },
     {
-      title:"Refund Policy", 
+      title:"Cancellation and Refund Policy", 
       description:
       <p className="text-xss font-light leading-normal">
-        We aim to ensure customer satisfaction with our services. However, due to the nature of our products and services (data scraping tools and lead generation services), we maintain the following refund policy:
+        <b>NEURALNETICS TECHNOLOGIES PRIVATE LIMITED</b> believes in helping its customers as far as possible, and has therefore a liberal cancellation policy. Under this policy: Cancellations will be considered only if the request is made within 3-5 days of placing the order. However, the cancellation request may not be entertained if the orders have been communicated to the vendors/merchants and they have initiated the process of shipping them. <b>NEURALNETICS TECHNOLOGIES PRIVATE LIMITED</b> does not accept cancellation requests for perishable items like flowers, eatables etc. However, refund/replacement can be made if the customer establishes that the quality of product delivered is not good. In case of receipt of damaged or defective items please report the same to our Customer Service team. The request will, however, be entertained once the merchant has checked and determined the same at his own end. This should be reported within 3-5 days of receipt of the products. In case you feel that the product received is not as shown on the site or as per your expectations, you must bring it to the notice of our customer service within 3-5 days of receiving the product. The Customer Service Team after looking into your complaint will take an appropriate decision. In case of complaints regarding products that come with a warranty from manufacturers, please refer the issue to them. In case of any Refunds approved by the <b>NEURALNETICS TECHNOLOGIES PRIVATE LIMITED</b>, it’ll take 6-8 days for the refund to be processed to the end customer.
+        
       </p>, 
-      list: true, 
-      listItems: [
-        <li>Refunds will only be considered if the service has not been initiated or if technical issues prevent the service from being delivered.</li>,
-        <li>Refund requests must be made within 7 days of purchase and will require proof of non-usage or technical difficulties.</li>,
-        <li>Services or subscriptions that have been fully delivered or accessed are non-refundable.</li>,
-        <li>Customized services or tools created for specific user needs are also non-refundable.</li>,
-        <li>If eligible, refunds will be processed to the original payment method within 7-10 business days after approval.</li>,
-        <li>A confirmation email will be sent once the refund has been processed.</li>
-      ]
+      list: false, 
+      listItems: []
     },
-    {
-      title:"Cancellation Policy", 
-      description:
-      <p className="text-xss font-light leading-normal">
-        We may cancel your payment under the following conditions:
-      </p>, 
-      list: true, 
-      listItems: [
-        <li>You may cancel your subscription or services at any time by contacting our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:${resellerContactInfo.email}`}>{resellerContactInfo.email}</a>.</li>,
-        <li>Cancellations will only be effective from the next billing cycle. No refunds will be provided for the current billing cycle.</li>,
-        <li>We reserve the right to cancel or suspend services in cases of misuse, non-compliance with our terms, or fraudulent activities.</li>,
-        <li>In such cases, no refunds will be provided.</li>,
-        <li>For cancellations or refund-related inquiries, please contact us at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:${resellerContactInfo.email}`}>{resellerContactInfo.email}</a>.</li>
-      ]
-    },
+    // {
+    //   title:"Refund Policy", 
+    //   description:
+    //   <p className="text-xss font-light leading-normal">
+    //     We aim to ensure customer satisfaction with our services. However, due to the nature of our products and services (data scraping tools and lead generation services), we maintain the following refund policy:
+    //   </p>, 
+    //   list: true, 
+    //   listItems: [
+    //     <li>Refunds will only be considered if the service has not been initiated or if technical issues prevent the service from being delivered.</li>,
+    //     <li>Refund requests must be made within 7 days of purchase and will require proof of non-usage or technical difficulties.</li>,
+    //     <li>Services or subscriptions that have been fully delivered or accessed are non-refundable.</li>,
+    //     <li>Customized services or tools created for specific user needs are also non-refundable.</li>,
+    //     <li>If eligible, refunds will be processed to the original payment method within 7-10 business days after approval.</li>,
+    //     <li>A confirmation email will be sent once the refund has been processed.</li>
+    //   ]
+    // },
+    // {
+    //   title:"Cancellation Policy", 
+    //   description:
+    //   <p className="text-xss font-light leading-normal">
+    //     We may cancel your payment under the following conditions:
+    //   </p>, 
+    //   list: true, 
+    //   listItems: [
+    //     <li>You may cancel your subscription or services at any time by contacting our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:${resellerContactInfo.email}`}>{resellerContactInfo.email}</a>.</li>,
+    //     <li>Cancellations will only be effective from the next billing cycle. No refunds will be provided for the current billing cycle.</li>,
+    //     <li>We reserve the right to cancel or suspend services in cases of misuse, non-compliance with our terms, or fraudulent activities.</li>,
+    //     <li>In such cases, no refunds will be provided.</li>,
+    //     <li>For cancellations or refund-related inquiries, please contact us at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:${resellerContactInfo.email}`}>{resellerContactInfo.email}</a>.</li>
+    //   ]
+    // },
     {
       title:"Shipping and Delivery Policy", 
       description:
