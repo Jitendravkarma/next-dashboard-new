@@ -86,7 +86,7 @@ const PriceTable = () => {
               <td className="py-4 px-6">
                 <i className="ri-close-line text-red-500" />
               </td>
-              <td className="py-4 px-6">Resale upto 100 clients</td>
+              <td className="py-4 px-6">Resale upto 200 clients</td>
             </tr>
 
             {/* Contact Section */}
