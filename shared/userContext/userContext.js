@@ -321,12 +321,14 @@ export const UserProvider = ({ children }) => {
         console.log(allUsers);
         const user_dataAll = allUsers.data.data.records ;
         if(user_dataAll.length){
-          const convert_dataAll = user_dataAll.map(({id, email, name, purchase_code, verified, reseller}, ind)=>{
+          const convert_dataAll = user_dataAll.reverse().map(({id, email, created_at, valid_till, name, purchase_code, verified, reseller}, ind)=>{
             return {
               sn: ind + 1,
               user_id: id,
               name,
               email,
+              created_at,
+              valid_till,
               user_type: reseller ? "reseller" : "user",
               access_code: purchase_code,
               verified

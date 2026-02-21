@@ -303,6 +303,15 @@ export async function verificationLink(email) {
     return error;
   }
 }
+export async function updateValidity(obj) {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.post('/restricted/set_validity', obj);
+    return response.data.data; // Assuming the API returns the user data and a token
+  } catch (error) {
+    return error;
+  }
+}
 export async function approveReseller(email) {
   checkAndAddAuthTokenToHeader()
   try {

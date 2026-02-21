@@ -1,5 +1,5 @@
 "use client"
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
@@ -7,7 +7,7 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
-import { approveReseller } from "@/shared/apis/api";
+import { approveReseller, updateValidity } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
 	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData,allUsersData, fetchUserData, userData } = useUserContext()
@@ -15,37 +15,6 @@ const UserAnalytics = () => {
 	// const [ userId, setUserId ] = useState(false);
 	const [ data, setData ] = useState([]);
 	const [ isSet, setIsSet ] = useState(false)
-	const [adminData, setAdminData] = useState([
-			{
-				id: 1,
-				name: "animesh",
-				email: "nama.animesh@gmail.com",
-				verified: true,
-				purchase_code: "WEBCRAWLER-1743968252-54f9c2cc",
-				image: null,
-				admin: true,
-				reseller: true,
-				reseller_credits: 100,
-				parent_id: 1,
-				created_at: "2024-07-17T20:07:41.945639Z",
-				updated_at: "2025-04-06T19:37:43.898162Z",
-			},
-			{
-				id: 2,
-				name: "ani",
-				email: "nama.ani@gmail.com",
-				verified: true,
-				purchase_code: "WEBCRAWLER-1743968252-54f9c2cc",
-				image: null,
-				admin: false,
-				reseller: false,
-				reseller_credits: 100,
-				parent_id: 1,
-				created_at: "2024-07-17T20:07:41.945639Z",
-				updated_at: "2025-04-06T19:37:43.898162Z",
-			}
-	 
-		]);
 	const [ isLoading, setIsLoading ] = useState(false);
 	const columns = [
 		// {
@@ -67,18 +36,87 @@ const UserAnalytics = () => {
 			editable: false,
 		},
 		{
-			headerName: "User Name",
-			field: "name",
-			width: 300,
-			renderCell: (params)=>
-				(<span className="capitalize">{params.row.name}</span>)
-			,
+			headerName: 'Registered On',
+			field: 'created_at',
+			width: 150,
+			renderCell: ({row})=>{
+				const value = row.created_at;
+				return(
+					<span>
+						{new Date(value).toLocaleDateString()} 
+					</span>
+				)
+			},
+			editable: false,
+		},
+		{
+			headerName: 'Valid Till',
+			field: 'valid_till',
+			width: 150,
+			renderCell: ({row})=>{
+				const value = row.valid_till;
+				return(
+					<span>
+						{new Date(value).toLocaleDateString()} 
+					</span>
+				)
+			},
+			editable: false,
+		},
+		{
+			headerName: "Update Limit",
+			field: "limit",
+			width: 200,
+			renderCell: (params) => {
+				const inputRef = useRef();
+				const [ days, setDays ] = useState("");
+				const [ isUpdating, setIsUpdating ] = useState(false);
+				return (
+				//   <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+				// 	{value ? "Paid User" : "Unpaid User"}
+				//   </span>
+				<div className="flex items-center gap-2 h-full justify-between">
+					<input value={days} ref={inputRef} placeholder="Enter Days" onChange={(e)=>setDays(e.target.value)} className="border border-indigo-300 w-24 focus-within:border-2 focus-within:border-indigo-700 py-1 px-2 text-xs rounded-sm"/>
+					<button disabled={isUpdating} className={`disabled:cursor-not-allowed disabled:animate-pulse focus:outline-none text-white font-medium rounded-sm text-xs px-2 p-1 bg-indigo-500 border border-indigo-500 hover:bg-indigo-600`}
+						onClick={(e) => {
+							if(!days) {
+								inputRef.current.focus();
+								return;
+							};
+							const approve = async()=>{
+								setIsUpdating(true);
+								try {
+									const resp = await updateValidity({ email: params.row.email, no_days: Number(days) });
+									alert(`Limit updated successfully! Please reload the page.`)
+								} catch (error) {
+									console.log(error)
+								} finally {
+									setIsUpdating(false);
+								}
+							} 
+							approve();
+						}}
+					>
+						{isUpdating ? "Updating..." : "Update"}
+					</button>
+				</div>
+				)
+			},
 			editable: false
 		},
 		{
 			headerName: "Email",
 			field: "email",
 			width: 300,
+			editable: false
+		},
+		{
+			headerName: "User Name",
+			field: "name",
+			width: 300,
+			renderCell: (params)=>
+				(<span className="capitalize">{params.row.name}</span>)
+			,
 			editable: false
 		},
 		// {
@@ -90,7 +128,7 @@ const UserAnalytics = () => {
 		{
 			headerName: "User Type",
 			field: "user_type",
-			width: 200,
+			width: 100,
 			renderCell: (params) => {
 				const value = params.row.user_type;
 				return (
@@ -114,31 +152,33 @@ const UserAnalytics = () => {
 				//   </span>
 				<span>
 					<button disabled ={value==='reseller'?true:false}  className={
-    `focus:outline-none text-white font-medium rounded-full text-sm px-5 py-2.5 mb-2 ` +
-    (value ==='reseller'
-      ? "bg-green-300 hover:bg-green-400 text-white font-medium rounded-full text-sm px-5 py-2.5"
-      : `bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-900`
-    )
-  }
-  onClick={(e) => {
-    e.stopPropagation();
-    console.log("Button clicked");
-	const approve = async()=>{
-		try{console.log(params.row.email)
-             const response = await approveReseller(params.row.email); 
-			 
-			//  const message = response.message ??response.errors.email;
-			 alert(`${params.row.email}${response} `);
-		}
-		catch(error)
-		{
-           console.log(error);
-		   setIsSet((prev)=>!prev);
-		}
-	} 
-   approve();
-  }}
->{value === "reseller"?" Already Approved" :"Approve Reseller"}</button>
+							`focus:outline-none text-white font-medium rounded-sm text-xs py-1 px-2 ` +
+							(value ==='reseller'
+							? "bg-green-500 text-white font-medium rounded-full text-sm"
+							: `bg-indigo-500 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-600 dark:focus:ring-indigo-900`
+							)
+						}
+						onClick={(e) => {
+							e.stopPropagation();
+							console.log("Button clicked");
+							const approve = async()=>{
+								try{console.log(params.row.email)
+									const response = await approveReseller(params.row.email); 
+									
+									//  const message = response.message ??response.errors.email;
+									alert(`${params.row.email}${response} `);
+								}
+								catch(error)
+								{
+								console.log(error);
+								setIsSet((prev)=>!prev);
+								}
+							} 
+						approve();
+						}}
+					>
+						{value === "reseller"?" Reseller Approved" :"Make Reseller"}
+					</button>
 				</span>
 				)
 			},
@@ -263,8 +303,8 @@ const UserAnalytics = () => {
 
 	useEffect(()=>{
 		setData(allUsersData);
-		console.log(allUsersData)
-		console.log(data);
+		// console.log(allUsersData)
+		// console.log(data);
 	}, [allUsersData.length])
 
 	// useEffect(()=>{

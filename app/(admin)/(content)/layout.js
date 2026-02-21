@@ -14,7 +14,7 @@ import { redirect } from "next/navigation";
 const Contentlayout = ({ children }) => {
 	const { user } = useUserContext()
 	const token = "support@designcollection.in";
-	if(token !== user.email){
+	if("allmysource@gmail.com" !== user.email){
 		redirect("/signin")
 	}
 	else{

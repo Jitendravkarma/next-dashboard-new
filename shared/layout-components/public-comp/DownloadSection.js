@@ -108,7 +108,7 @@ const DownloadSection = () => {
               </Link>
             }
              {
-              (user.reseller && user.email === "support@designcollection.in") && 
+              (user.reseller && (user.email === "support@designcollection.in" || "allmysource@gmail.com" === user.email)) && 
               <Link href={"/admin/dashboard"} title='Visit reseller dashboard' target='_blank' className='inline-block rounded-md duration-300 gap-2 hover:bg-indigo-500 hover:text-white items-center px-6 py-2 transition-all'>
                 <i className='ri-home-4-line text-lg'/> Admin
               </Link>
