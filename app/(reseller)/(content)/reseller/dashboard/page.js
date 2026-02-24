@@ -152,7 +152,7 @@ const Home = () => {
 									labels: ["Available Licence", "Used Licence"],
 									datasets: [
 										{
-											data: [100, soldLicence],
+											data: [300, soldLicence],
 											backgroundColor: ["rgb(90, 102, 241)", "rgb(96, 165, 250)"],
 											borderWidth: 0,
 										},
@@ -161,7 +161,7 @@ const Home = () => {
 								<div
 									className="chart-circle-value circle-style absolute border-2 border-dashed border-primary -top-5 inset-0 flex justify-center items-center w-[150px] h-[150px] leading-[70px] rounded-full text-5xl mx-auto my-auto">
 									<div className="text-xl font-bold text-center">
-										{100 - soldLicence} <br/>
+										{300 - soldLicence} <br/>
 										<span>Licence Left</span>
 									</div>
 								</div>
@@ -178,7 +178,7 @@ const Home = () => {
 								<div className="px-5 py-3">
 									<div className="text-center">
 										<p className="text-primary dark:text-white text-2xl font-medium">
-											100
+											300
 										</p>
 									</div>
 									<div className="text-sm text-gray-500 dark:text-white/80 text-center font-medium">

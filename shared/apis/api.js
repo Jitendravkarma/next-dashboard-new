@@ -100,10 +100,10 @@ export const activateAccount = async (value) => {
   }
 };
 
-export const generateLicence = async () => {
+export const generateLicence = async (days) => {
   checkAndAddAuthTokenToHeader()
   try {
-    const response = await api.get(`/restricted/purchasecodecreate`);
+    const response = await api.get(`/restricted/purchasecodecreate/${days}`);
     return response; // Assuming the API returns the user data and a token
   } catch (error) {
     throw error;

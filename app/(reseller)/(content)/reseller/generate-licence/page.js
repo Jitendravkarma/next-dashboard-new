@@ -20,7 +20,7 @@ const GenerateLicence = () => {
         access_code: "kri-465-ind-id5",
         purchase_date: "2025",
         plan_date: "2025",
-        validity: "2026",
+        validity: new Date().getFullYear(),
         expired: false,
 		licence_codes: [
             // {
@@ -41,7 +41,11 @@ const GenerateLicence = () => {
 	
 	const [ openRenewal, setOpenRenewal ] = useState(false);
 
-	const compareDate = dashboard_data && new Date([dashboard_data.validity]) < new Date();
+	const [ validDays, setValidDays ] = useState("");
+
+	const [ validUntilDate, setValidUntilDate ] = useState("DD/MM/YYYY");
+
+	const compareDate = dashboard_data && new Date([dashboard_data.validity]) < new Date().getFullYear();
 	
 	const calender = <i className="ri-pass-valid-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const status = <i className={`${compareDate ? "ri-close-line bg-danger/10 text-danger" : "ri-shield-check-line bg-success/10 text-success"} text-xl avatar w-10 h-10 rounded-full p-2.5 leading-none`}></i>
@@ -108,10 +112,16 @@ const GenerateLicence = () => {
 	} 
 
 	const generateLicenceCode = async ()=>{
+		const convertNum = Number(validDays);
+		if(convertNum > 365){
+			openSnackBar();
+            handleSnackMessage("You cannot enter more than 365 days.", "danger", "text-white")
+			return;
+		}
 		if(licences.length < 300){
 			try {
 				setIsGenerating(true)
-				const generateCode = await generateLicence()
+				const generateCode = await generateLicence(convertNum)
 				const access_code = generateCode.data.data
 				if(access_code){
 					fetchLicenses()
@@ -128,6 +138,15 @@ const GenerateLicence = () => {
 		}
 	}
 
+	const handleDaysChange = (e)=>{
+		const num = Number(e.target.value);
+		if(num <= 365) setValidDays(e.target.value);
+		else {
+			openSnackBar();
+            handleSnackMessage("You cannot enter more than 365 days.", "danger", "text-white")
+		}
+	}
+
 	useEffect(()=>{
 		setNumOfData([
 			{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "300", color: "primary/10", color1: "success" },
@@ -137,6 +156,25 @@ const GenerateLicence = () => {
 		])
 		fetchLicenses()
 	}, [licences.length])
+
+	useEffect(()=>{
+		if(validDays){
+			const daysNum = Number(validDays);
+			function getFutureDate(days) {
+				const date = new Date();
+				date.setDate(date.getDate() + days);
+
+				const day = String(date.getDate()).padStart(2, '0');
+				const month = String(date.getMonth() + 1).padStart(2, '0');
+				const year = date.getFullYear();
+
+				return `${day}/${month}/${year}`;
+			}
+			const newDate = getFutureDate(daysNum);
+			console.log(newDate);
+			if(daysNum >= 10 ) setValidUntilDate(newDate);
+		}
+	}, [ validDays ]);
 
 	return (
 		<div>
@@ -208,13 +246,19 @@ const GenerateLicence = () => {
 						<div className="box-body p-5">
 							<div className="overflow-auto">
 								<div className="flex flex-wrap gap-5 justify-between items-center mb-5">
-									<div>
-										<button onClick={generateLicenceCode} className={`p-2 border rounded-sm hover:bg-indigo-500 ${isGenerating ? "animate-pulse border-indigo-500 bg-indigo-500 hover:!border-indigo-500 text-white" : "border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:!border-indigo-500 hover:text-white"} disabled:bg-indigo-500 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} disabled={licences.length === 300 || isGenerating}>
+									<div className="flex items-center gap-2">
+										<input type="text" value={validDays} onChange={handleDaysChange} placeholder="Enter Days (Ex. 10, 50)" className="border !border-indigo-500 placeholder:text-indigo-500 text-indigo-500 rounded-sm py-2 px-3 text-sm"/>
+										
+										<button onClick={generateLicenceCode} className={`p-2 border rounded-sm hover:bg-indigo-500 ${Number(validDays) >= 10 ? "bg-indigo-500 hover:bg-indigo-600 text-white" : ""} ${isGenerating ? "animate-pulse border-indigo-500 bg-indigo-500 hover:!border-indigo-500 text-white" : "border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:!border-indigo-500 hover:text-white"} disabled:bg-indigo-500 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} disabled={licences.length === 300 || isGenerating || !validDays || Number(validDays) < 10}>
 											<i className="ri-magic-line"/>{" "} {isGenerating ? "Generating..." : "Generate Licence"}
 										</button>
 										{
-											licences.length === 300 && 
+											licences.length === 300 ?
 											<p className="mt-1 text-red-500">Note: You can't generate more than 300 licenses. Contact your plan provider to increase your licence limit.</p>
+											:
+											<span className="text-lg text-indigo-500">
+												Valid Until: <b>{validUntilDate}</b>
+											</span>
 										}
 									</div>
 									<div className="flex gap-2 items-center">
