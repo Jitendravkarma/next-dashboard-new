@@ -312,6 +312,15 @@ export async function updateValidity(obj) {
     return error;
   }
 }
+export async function deactiveReseller(email) {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.post('/restricted/deactivate_reseller', {email});
+    return response.data.data; // Assuming the API returns the user data and a token
+  } catch (error) {
+    return error;
+  }
+}
 export async function approveReseller(email) {
   checkAndAddAuthTokenToHeader()
   try {

@@ -7,10 +7,10 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
-import { approveReseller, updateValidity } from "@/shared/apis/api";
+import { approveReseller, deactiveReseller, updateValidity } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
-	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData,allUsersData, fetchUserData, userData } = useUserContext()
+	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData,allUsersData, fetchUserData, userData, openSnackBar, handleSnackMessage } = useUserContext()
 	// const [ validity, setValidity ] = useState(false);
 	// const [ userId, setUserId ] = useState(false);
 	const [ data, setData ] = useState([]);
@@ -146,43 +146,85 @@ const UserAnalytics = () => {
 			width: 200,
 			renderCell: (params) => {
 				const value = params.row.user_type;
+				const checkReseller = value === "reseller" ? true : false;
+				const [ isProcessing, setIsProcessing ] = useState({ activating: false, deactivating: false });
+				const handleActiveReseller = async()=>{
+					setIsProcessing(cur=>({...cur, activating: true}));
+					try{console.log(params.row.email)
+						const response = await approveReseller(params.row.email); 
+						
+						//  const message = response.message ??response.errors.email;
+						openSnackBar();
+						handleSnackMessage(`${params.row.email}${response} `, "green-500", "text-white");
+						setTimeout(()=>window.location.reload(), 2000)
+					}
+					catch(error)
+					{
+						console.log(error);
+						setIsSet((prev)=>!prev);
+						openSnackBar();
+						handleSnackMessage("Something went wrong!", "danger", "text-white");
+					}
+					setIsProcessing(cur=>({...cur, activating: false}));
+				}
+				const handleDeactiveReseller = async ()=>{
+					setIsProcessing(cur=>({...cur, deactivating: true}));
+					try {
+						const deactiveNow = await deactiveReseller(params.row.email);
+						const respObj = deactiveNow;
+						console.log(respObj);
+						if(respObj.email){
+							openSnackBar();
+        					handleSnackMessage("Reseller deactivated successfully!", "green-500", "text-white");
+							setTimeout(()=>window.location.reload(), 2000)
+						}
+					} catch (error) {
+						console.log(error);
+						openSnackBar();
+        				handleSnackMessage("Something went wrong!", "danger", "text-white");
+					}
+					setIsProcessing(cur=>({...cur, deactivating: false}));
+				}
 				return (
 				//   <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
 				// 	{value ? "Paid User" : "Unpaid User"}
 				//   </span>
-				<span>
-					<button disabled ={value==='reseller'?true:false}  className={
-							`focus:outline-none text-white font-medium rounded-sm text-xs py-1 px-2 ` +
-							(value ==='reseller'
-							? "bg-green-500 text-white font-medium rounded-full text-sm"
-							: `bg-indigo-500 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-600 dark:focus:ring-indigo-900`
-							)
-						}
-						onClick={(e) => {
-							e.stopPropagation();
-							console.log("Button clicked");
-							const approve = async()=>{
-								try{console.log(params.row.email)
-									const response = await approveReseller(params.row.email); 
-									
-									//  const message = response.message ??response.errors.email;
-									alert(`${params.row.email}${response} `);
-								}
-								catch(error)
-								{
-								console.log(error);
-								setIsSet((prev)=>!prev);
-								}
-							} 
-						approve();
-						}}
-					>
-						{value === "reseller"?" Reseller Approved" :"Make Reseller"}
-					</button>
-				</span>
+				<div className="h-full flex items-center gap-2">
+					{
+						checkReseller ?
+						<button title="Deactive the reseller" className="text-orange-700 border border-orange-500 bg-orange-100 hover:bg-orange-200 rounded-sm py-1 px-2 text-xs disabled:opacity-40 disabled:cursor-not-allowed" onClick={handleDeactiveReseller}>
+							⛔ { isProcessing.deactivating ? "Please wait..." : "Deactive Reseller"}
+						</button>
+						:
+						<button title="Make user reseller" disabled ={value==='reseller'?true:false}  className={
+								`focus:outline-none font-medium border rounded-sm text-xs py-1 px-2 ` +
+								(value ==='reseller'
+								? "border-green-500 bg-green-100 text-green-600 font-medium rounded-full text-sm"
+								: `border-green-500 bg-green-100 text-green-600  hover:bg-green-200 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-600 dark:focus:ring-indigo-900`
+								)
+							}
+							onClick={handleActiveReseller}
+						>
+							{value === "reseller"?" Reseller Approved" : isProcessing.activating ? "Please wait..." : "✅ Activate Reseller"}
+						</button>
+					}
+				</div>
 				)
 			},
 			editable: false
+		},
+		{
+			headerName: 'Block/Unblock',
+			field: 'block_unblock',
+			width: 150,
+			renderCell: ({row})=>{
+				return(
+					<span>
+						🚫 Block User
+					</span>
+				)
+			},
+			editable: false,
 		},
 // 		{
 // 			headerName: "CRM",
