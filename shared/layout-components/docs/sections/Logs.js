@@ -4,6 +4,82 @@ import { Heading } from "../Heading";
 const Logs = () => {
   const change_logs = [
     {
+      release: "22.0",
+      logs:[
+        <span>Introducing a new tool <strong>SmartScraper.exe</strong></span>,
+        <span>Added the <strong>Bright Data Web Unlocker</strong> feature to extract results faster</span>,
+        <span>Added the <strong>ListClean API</strong> for email verification</span>,
+        <span>Implemented the <strong>SendGrid API</strong> to send mails in bulk</span>,
+        <span>You can enter custom email domain to extract it in the Email Scraper</span>
+      ]
+    },
+    {
+      release: "21.0",
+      logs:[
+        <span>Introducing <strong>MLM Diary</strong> Scraper</span>,
+        <span>Added Lead Assigning Feature</span>,
+        <span>Added pincode feature on google map</span>,
+        <span>Upgraded mail sending features</span>,
+      ]
+    },
+    {
+      release: "20.0",
+      logs:[
+        <span>Added <strong>Google Ads and Meta Ads Leads</strong> under the CRM Sources</span>,
+        <span>Bug fixes</span>
+      ]
+    },
+    {
+      release: "19.0",
+      logs:[
+        <span>Introducing Custom Lead Upload tool</span>,
+        <span>Now manage all your lead follow-ups effortlessly</span>,
+        <span>Added follow-ups history page</span>
+      ]
+    },
+    {
+      release: "18.0",
+      logs:[
+        <span>Introducing <strong>CRM Solutions</strong></span>,
+        <span>Now access <strong>B2C Data Leads</strong></span>,
+        <span>Improved some functionalities</span>
+      ]
+    },
+    {
+      release: "17.0",
+      logs:[
+        <span>Improved the <strong>speed</strong> of the Google Map Scraper</span>,
+        <span>Introducing <strong>Facebook Ad Library Scraper</strong></span>,
+        <span>Added <strong>Global Directory</strong> Scraper</span>,
+        <span>URL-based Scraping now available on Justdial</span>,
+      ]
+    },
+    {
+      release: "16.0",
+      logs:[
+        <span>Added <strong>Whatsapp Number Scraper</strong> under the Bulk Contact Scraper</span>,
+        <span>Added <strong>Job Portal Scraper</strong></span>,
+        <span>Fixed some important bugs</span>,
+      ]
+    },
+    {
+      release: "15.0",
+      logs:[
+        <span>Added <strong>Corporate scraper</strong></span>,
+        <span>Scrape corporate details using <strong>Pvt Ltd and GST scrapers</strong></span>,
+        <span>Added <strong>Mynsta and Snapdeal</strong> scraper under the E-Commerce Scraper</span>,
+      ]
+    },
+    {
+      release: "14.0",
+      logs:[
+        <span>Added <strong>eCommerce seller</strong> scraper</span>,
+        <span>Combined all search engine scrapers</span>,
+        <span>Combined all social media scrapers</span>,
+        <span>Added Language translator plugin</span>,
+      ]
+    },
+    {
       release: "13.0",
       logs:[
         <span>Introducing advanced tools.</span>,
