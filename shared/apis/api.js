@@ -2,7 +2,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 const api = axios.create({
-  baseURL: "https://api.scrapegenius.com/v1/",
+  baseURL: "https://api.scrapegenius.com/api/v22/",
   // You can also set common headers here
 });
 

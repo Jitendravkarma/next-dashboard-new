@@ -4,6 +4,16 @@ import { Heading } from "../Heading";
 const Logs = () => {
   const change_logs = [
     {
+      release: "22.1",
+      logs:[
+        <span>Added the <strong>WhatsApp Group Scraper</strong> to extract group data efficiently</span>,
+        <span>Introduced the <strong>Company Contact Scraper</strong> for business lead collection</span>,
+        <span>Launched an <strong>AI WhatsApp Message Generator</strong> for smart messaging</span>,
+        <span>Implemented <strong>Bulk WhatsApp Number Verification</strong> to validate contacts quickly</span>,
+        <span>Now supports up to <strong>1000 searches</strong> per session</span>
+      ]
+    },
+    {
       release: "22.0",
       logs:[
         <span>Introducing a new tool <strong>SmartScraper.exe</strong></span>,
