@@ -43,11 +43,11 @@ const PricingPage = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+            <a href="#reseller-plan" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
               View Reseller Plans
             </a>
 
-            <a className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300">
+            <a href="#whatsapp-contact" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-300">
               Contact on WhatsApp
             </a>
           </div>
@@ -130,7 +130,7 @@ const PricingPage = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 max-w-7xl mx-auto">
+      <section className="py-20 px-6 max-w-7xl mx-auto" id="reseller-plan">
         {/* Heading */}
         <h2 className="text-center text-3xl sm:text-4xl font-extrabold text-blue-600 mb-14">
           Choose Your Reseller Plan
@@ -429,7 +429,7 @@ const PricingPage = () => {
         </div>
       </section>
 
-      <section className="relative py-24 px-6 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e293b] text-center overflow-hidden">
+      <section className="relative py-24 px-6 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e293b] text-center overflow-hidden" id="whatsapp-contact">
   
         {/* Glow background */}
         <div className="absolute inset-0 flex justify-center">
