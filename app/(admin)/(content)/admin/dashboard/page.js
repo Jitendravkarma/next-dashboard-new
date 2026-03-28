@@ -8,7 +8,7 @@ import { SessionOverview } from "@/shared/data/dashboard/analyticdata";
 import { useUserContext } from "@/shared/userContext/userContext";
 
 const Home = () => {
-	const { usersData } = useUserContext()
+	const { allUsersData } = useUserContext()
 	const users = <i className="ri-group-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const active = <i className="ri-user-follow-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const inactive = <i className="ri-user-unfollow-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
@@ -29,13 +29,14 @@ const Home = () => {
 
     const [ monthlyUser, setMonthlyUser ] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
     const [ soldLicence, setSoldLicence] = useState(0)
+    const [ pieChart, setPieChart] = useState({total: 0, paid: 0})
 
     useEffect(()=>{
-        if(usersData.length){
+        if(allUsersData.length){
             const records = [
-                { title: "total", count: usersData.length}, 
-                { title: "paid", count: usersData.filter(user=>user.access_code).length}, 
-                { title: "unpaid", count: usersData.filter(user=>!user.access_code).length}, 
+                { title: "total", count: allUsersData.length}, 
+                { title: "paid", count: allUsersData.filter(user=>user.access_code).length}, 
+                { title: "unpaid", count: allUsersData.filter(user=>!user.access_code).length}, 
                 { title: "date", count: (validity.getFullYear()+1).toString()}
             ]
 			const new_data = totalRecords.map(rec=>{
@@ -49,8 +50,9 @@ const Home = () => {
 			})
             setSoldLicence(records[1].count)
 			setTotalRecords(new_data)
+			setPieChart({ total: allUsersData.length, paid: allUsersData.filter(user=>user.access_code).length })
         }
-    }, [usersData.length])
+    }, [allUsersData.length])
 	// useEffect(()=>{
 	// 	let getReseller = dashboard_data;
 	// 	let getCustomers = getReseller.licence_codes;
@@ -137,7 +139,6 @@ const Home = () => {
 				))}
 			</div>
 			<div className="grid grid-cols-12 gap-x-5">
-				<UpgradePlan/>
 				<div className="col-span-12 lg:col-span-6">
 					<div className="box">
 						<div className="box-header">
@@ -149,10 +150,10 @@ const Home = () => {
 							<div className="sales-value relative border-b border-gray-200 dark:border-white/10 pb-5">
 								<SalesValue data={{
 									type: "doughnut",
-									labels: ["Available Licence", "Used Licence"],
+									labels: ["Registered Users", "Paid Customers"],
 									datasets: [
 										{
-											data: [100, soldLicence],
+											data: [pieChart.total, pieChart.paid],
 											backgroundColor: ["rgb(90, 102, 241)", "rgb(96, 165, 250)"],
 											borderWidth: 0,
 										},
@@ -161,28 +162,28 @@ const Home = () => {
 								<div
 									className="chart-circle-value circle-style absolute border-2 border-dashed border-primary -top-5 inset-0 flex justify-center items-center w-[150px] h-[150px] leading-[70px] rounded-full text-5xl mx-auto my-auto">
 									<div className="text-xl font-bold text-center">
-										{100 - soldLicence} <br/>
-										<span>Licence Left</span>
+										{pieChart.total - pieChart.paid} <br/>
+										<span></span>
 									</div>
 								</div>
 							</div>
 							<div className="grid grid-cols-2 p-3">
 								<div className="px-5 py-3 ltr:border-r rtl:border-l border-gray-200 dark:border-white/10">
 									<div className="text-center">
-										<p className="text-blue-500 dark:text-white text-2xl font-medium">{soldLicence}</p>
+										<p className="text-blue-500 dark:text-white text-2xl font-medium">{pieChart.total}</p>
 									</div>
 									<div className="text-sm text-gray-500 dark:text-white/80 text-center font-medium">
-										Your Licence
+										Registered Users
 									</div>
 								</div>
 								<div className="px-5 py-3">
 									<div className="text-center">
 										<p className="text-primary dark:text-white text-2xl font-medium">
-											100
+											{pieChart.paid}
 										</p>
 									</div>
 									<div className="text-sm text-gray-500 dark:text-white/80 text-center font-medium">
-										Licence Limit
+										Paid Customers
 									</div>
 								</div>
 							</div>

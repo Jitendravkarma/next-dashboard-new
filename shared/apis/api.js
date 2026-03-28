@@ -209,6 +209,16 @@ export async function getGoogleData(userData, cancelToken) {
   }
 }
 
+export async function updateUserBlock(userData) {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.post('/restricted/deactivate_user', userData);
+    return response; // It will server data of google search scraper
+  } catch (error) {
+    throw error;
+  }
+}
+
 export async function getGoogleMapData(userData) {
   checkAndAddAuthTokenToHeader()
   try {

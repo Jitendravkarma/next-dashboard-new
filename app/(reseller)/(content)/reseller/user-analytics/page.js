@@ -7,6 +7,7 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
+import { updateUserBlock } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
 	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData } = useUserContext()
@@ -92,6 +93,50 @@ const UserAnalytics = () => {
 				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
 					{value ? "Verified User" : "Unverified User"}
 				  </span>
+				)
+			},
+			editable: false
+		},
+		{
+			headerName: "Block/Unblock",
+			field: "block",
+			width: 200,
+			renderCell: (params) => {
+				const email = params.row.email;
+				const value = params.row.account_activation;
+				const handleBlock = async ()=>{
+					try {
+						if(value){
+							const confirmBox = confirm(`Are you sure want to block ${email}?`);
+							if(confirmBox){
+								const updateData = await updateUserBlock({email});
+								console.log(updateData.data);
+								alert(updateData.data.data);
+							}
+							else {
+								alert(`Request canceled!`)
+							}
+						}
+						else {
+							alert(`API not available!`)
+						}
+					} catch (error) {
+						alert(`Failed to block!`);
+					}
+				}
+				return (
+					<>
+						{
+							value ?
+							<button className={``} onClick={handleBlock}>
+								🚫Block User
+							</button>
+							:
+							<button className={``} onClick={handleBlock}>
+								✅Unblock User
+							</button>
+						}
+					</>
 				)
 			},
 			editable: false

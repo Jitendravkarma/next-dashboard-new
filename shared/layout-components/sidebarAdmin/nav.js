@@ -1,6 +1,8 @@
 const ResellerDash = <i className="ri-home-4-line side-menu__icon"></i>;
 
-const Analytics = <i className="ri-user-line side-menu__icon"></i>;
+const Analytics = <i className="ri-group-line side-menu__icon"></i>;
+
+const Reseller = <i className="ri-shake-hands-line side-menu__icon"></i>;
 
 const Renewal = <i className="ri-refresh-line side-menu__icon"></i>;
 
@@ -21,15 +23,15 @@ export const MENUITEMS = [
 
 	{ path: "/admin/dashboard", icon: ResellerDash, title: "Admin Dashboard", type: "link", active: false, selected: false },
 
-	{ path: "/admin/resllerApprove", icon: Analytics, title: "Reseller Approve", type: "link", active: false, selected: false },
+	{ path: "/admin/user-analytics", icon: Analytics, title: "User Analytics", type: "link", active: false, selected: false },
 
-	{ path: "/admin/resellerList", icon: Analytics, title: "Resller List", type: "link", active: false, selected: false },
+	// { path: "/admin/resellers", icon: Reseller, title: "Resllers", type: "link", active: false, selected: false },
 
-	{ path: "/admin/resellerKey", icon: Licence, title: "Reseller License Key", type: "link", active: false, selected: false },
+	// { path: "/admin/resellerKey", icon: Licence, title: "Reseller License Key", type: "link", active: false, selected: false },
 	
-	{ path: "/admin/resellerValidity", icon: Renewal, title: "Reseller Validity", type: "link", active: false, selected: false },
+	// { path: "/admin/resellerValidity", icon: Renewal, title: "Reseller Validity", type: "link", active: false, selected: false },
 
-	{ path: "/admin/resellerCredits", icon: Credit, title: "Reseller Credits", type: "link", active: false, selected: false },
+	// { path: "/admin/resellerCredits", icon: Credit, title: "Reseller Credits", type: "link", active: false, selected: false },
 	
 	// {
 	// 	menutitle: "Settings",
