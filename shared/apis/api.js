@@ -209,10 +209,20 @@ export async function getGoogleData(userData, cancelToken) {
   }
 }
 
-export async function updateUserBlock(userData) {
+export async function updateUserBlock(actionType=false, userData) {
   checkAndAddAuthTokenToHeader()
   try {
-    const response = await api.post('/restricted/deactivate_user', userData);
+    const response = await api.post(`/restricted/${actionType ? 'deactivate_user' : 'activate_user'}`, userData);
+    return response; // It will server data of google search scraper
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function updateUserUnBlock(email) {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.post('/restricted/activate_user', {email});
     return response; // It will server data of google search scraper
   } catch (error) {
     throw error;
@@ -326,6 +336,15 @@ export async function deactiveReseller(email) {
   checkAndAddAuthTokenToHeader()
   try {
     const response = await api.post('/restricted/deactivate_reseller', {email});
+    return response.data.data; // Assuming the API returns the user data and a token
+  } catch (error) {
+    return error;
+  }
+}
+export async function activeReseller(email) {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.post('/restricted/activate_reseller', {email});
     return response.data.data; // Assuming the API returns the user data and a token
   } catch (error) {
     return error;

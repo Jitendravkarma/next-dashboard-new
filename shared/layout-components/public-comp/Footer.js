@@ -52,12 +52,18 @@ export default function Footer() {
       list: [
         { title: "Sign In", url: "/signin" },
         { title: "Sign Up", url: "/signup" },
-        { title: "Docs", url: "/docs" },
+        { title: "User Manual", url: "/user-manual" },
         { title: "Contact Us", url: "/contact" },
         { title: "About Us", url: "/about" },
         { title: "Terms & Conditions", url: "/legal-terms" },
         { title: "Privacy Policy", url: "/legal-policy" },
         { title: "FAQ", url: "/faq" }
+      ],
+    },
+    {
+      title: "watch tutorials",
+      list: [
+        { title: "youtube", url: dynamicSocialLinks.youtube },
       ],
     },
     {
@@ -88,8 +94,8 @@ export default function Footer() {
       }
       <footer className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-12 gap-0 xl:gap-0 xl:space-x-10">
-            <div className="col-span-12 xl:col-span-5 flex flex-col gap-5">
+          <div className="grid grid-cols-12 gap-5">
+            <div className="col-span-12 xl:col-span-4 flex flex-col gap-5">
               <div className="mr-auto">
                 <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
                   <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" />
@@ -98,16 +104,13 @@ export default function Footer() {
               <p>
                 Scrape Genius provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
               </p>
-              <p>
-              © {new Date().getFullYear()}. <Link href={"https://designcollection.in"} target="_blank">Design Collection</Link> - All Rights Reserved.
-              </p>
             </div>
 
-            <div className="col-span-12 xl:col-span-7 grid grid-cols-12 gap-0 md:gap-2">
+            <div className="col-span-12 xl:col-span-8 grid grid-cols-12 gap-0 md:gap-2">
               {
                 footerLinks.map(({ title, list }, ind) => (
-                  title === "follow us" ? (
-                    <div key={ind} className="col-span-12 md:col-span-4 my-5 xl:my-0">
+                  (title === "follow us" || title === "watch tutorials") ? (
+                    <div key={ind} className="col-span-12 sm:col-span-6 md:col-span-3 my-5 xl:my-0">
                       <h4 className="capitalize text-base font-normal text-black mb-4">
                         {title}
                       </h4>
@@ -130,7 +133,7 @@ export default function Footer() {
                       </div>
                     </div>
                   ) : (
-                    <div key={ind} className="col-span-12 md:col-span-4 my-5 xl:my-0">
+                    <div key={ind} className="col-span-12 sm:col-span-6 md:col-span-3 my-5 xl:my-0">
                       <h4 className="capitalize text-base font-normal text-black mb-4">
                         {title}
                       </h4>
@@ -149,6 +152,11 @@ export default function Footer() {
               }
             </div>
 
+            <div className="col-span-12 text-center border-t pt-3">
+              <p>
+              © {new Date().getFullYear()}. <Link href={"https://designcollection.in"} target="_blank">Design Collection</Link> - All Rights Reserved.
+              </p>
+            </div>
           </div>
         </div>
       </footer>

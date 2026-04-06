@@ -15,7 +15,7 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
 
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
-    const searchFields = ['name', 'title', 'website', 'description', 'keywords', 'phone', 'email', 'query', 'user_type'];
+    const searchFields = ['name', 'city', 'state', 'followers', 'following', 'posts', 'gst', 'profile_name', 'title', 'company', 'company_name', 'website', 'description', 'keywords', 'phone', 'email', 'query'];
     const filteredRows = data.filter((row) => {
       return searchFields.some((field) => {
         return row[field] && String(row[field]).toLowerCase().includes(value);
@@ -26,17 +26,16 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
   };
 
   const handleSorting = (e)=>{
-    const filterData = data.filter(row=>(row[e.value])).map((item, ind)=>({id: ind+1, ...item}))
+    const filterData = data.filter(row=>(row[e.label] !== "N/A")).map((item, ind)=>({id: ind+1, ...item}))
     let sort=[];
-    if(e.value === "paid"){
-      sort = data.filter(row=>(row.access_code))
+    if(e.label === "Need Validity"){
+      sort = data.filter(row=>(!row[e.value.toLowerCase()]))
     }
-    else if(e.value === "unpaid"){
-      console.log(e)
-      sort = data.filter(row=>!row.access_code)
+    else if(e.label === "Active Plans"){
+      sort = data.filter(row=>(row[e.value.toLowerCase()] && !row.expired))
     }
-    else if(e.value === "verified"){
-      sort = data.filter(row=>!row.access_code)
+    else if(e.value === "Expired Plans"){
+      sort = data.filter(row=>row.expired)
     }
     setRows(sort.length ? sort.map((item, ind)=>({id: ind+1, ...item})) : filterData)
     setSortName(e)
@@ -61,7 +60,7 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
 
   useEffect(() => {
     const serialData = data.map((item, ind) => {
-      if (item.id !== undefined) {
+      if (item?.id !== undefined) {
         return item; // Keep the existing data as is
       }
       return { id: ind + 1, ...item };
@@ -74,11 +73,15 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
     const website = rows.filter(row=> row.website !== "N/A").length;
     const email = rows.filter(row=> row.email !== "N/A").length;
     const phone = rows.filter(row=> row.phone !== "N/A").length;
+    const activeMail = rows.filter(row=> row.status).length;
+    const inactive_mail = rows.filter(row=> !row.status).length;
     const ary = [
       {title: "records", num: rows.length},
       {title: "website", num: website},
       {title: "phone", num: phone},
-      {title: "email", num: email}
+      {title: "email", num: email},
+      {title: "active_mail", num: activeMail},
+      {title: "inactive_mail", num: inactive_mail},
     ]
     handleDataCount(ary)
   }, [rows])
@@ -104,7 +107,7 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
           }
         </div>
 
-        <div className="w-full md:w-auto flex gap-2 items-center justify-between">
+        <div className="w-full md:w-auto flex flex-wrap gap-2 items-center justify-between">
           {
             sortName && 
             <button className='text-sm text-red-500 hover:underline' onClick={removeSorting}>
@@ -116,7 +119,7 @@ const DataTable = ({ progressStatus, columns, data, clearData, handleDataCount, 
 
           {
             !hideClear &&
-            <button type="button" className="py-1 px-2 ti-btn ml-0 md:ml-auto bg-red-500 text-white hover:bg-red-600 focus:ring-red-500 dark:focus:ring-offset-white/10" onClick={clearData} disabled={progressStatus.isScraping || progressStatus.isExtracting}>
+            <button type="button" className="py-1 px-2 ti-btn ml-0 md:ml-auto bg-red-500 text-white hover:bg-red-600 focus:ring-red-500 dark:focus:ring-offset-white/10" onClick={clearData} disabled={progressStatus.isScraping || progressStatus.isExtracting || progressStatus?.isGenerating}>
               Clear Data
               <i className="ri-close-line"></i>
             </button>

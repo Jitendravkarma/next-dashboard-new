@@ -1,105 +1,117 @@
+"use client"
 import React from "react";
 import Link from "next/link";
+import { useUserContext } from "@/shared/userContext/userContext";
 
 const PriceTable = () => {
+  const { priceObj } = useUserContext();
   return (
-    <div className="bg-white py-14 max-w-screen-lg mx-auto">
-      {/* Table Heading */}
-      <h1 className="text-4xl font-bold text-center mb-10">Compare Plans & <span className="text-blue-500">Features</span></h1>
+    <div>
+      {/* Header Row */}
+      <div className="text-center max-w-2xl mx-auto mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">
+          Compare Plans &{" "}
+          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            Features
+          </span>
+        </h2>
+        <p className="text-gray-600">
+          Choose the plan that best fits your business needs
+        </p>
+      </div>
+      
+      <div className="max-w-6xl mx-auto bg-white border border-gray-200 rounded-md overflow-hidden shadow">
+        <div className="grid grid-cols-4 text-center border-b bg-white">
+          <div></div>
+          {/* Silver */}
+          <div className="py-6">
+            <h3 className="font-semibold text-gray-700">Silver Plan</h3>
+            <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{priceObj.silver}/yr</p>
+            <Link target="_blank" href={priceObj.silverLink} className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-semibold">
+              Buy Now
+            </Link>
+          </div>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full border-collapse text-center">
-          {/* Table Header */}
-          <thead>
-            <tr className="border-b border-gray-200">
-              <th className="py-4 px-6"></th>
-              <th className="py-4 px-6">Free Plan</th>
-              <th className="py-4 px-6">Standard Plan</th>
-              <th className="py-4 px-6">Reseller Plan</th>
-            </tr>
-          </thead>
+          {/* Gold */}
+          <div className="py-6">
+            <h3 className="font-semibold text-orange-500">Gold Plan</h3>
+            <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{priceObj.gold}/yr</p>
+            <Link target="_blank" href={priceObj.goldLink} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-semibold">
+              Buy Now
+            </Link>
+          </div>
 
-          {/* Table Body */}
-          <tbody>
-            {/* Button */}
-            <tr>
-              <td className="text-left font-bold"></td>
-              <td className="pb-5 px-6">
-                <Link href={"/signup"} target="_blank" className="inline-block mt-6 w-[130px] py-2 border-b-2 border-blue-500 hover:text-white font-semibold rounded-md hover:bg-blue-500">Get Started</Link>
-              </td>
-              <td className="pb-5 px-6">
-                <Link href={"https://codecanyon.net/item/google-map-scraper-pro/25283251"} target="_blank" className="inline-block mt-6 w-[130px] py-2 border-b-2 border-green-500 hover:text-white font-semibold rounded-md hover:bg-green-500">Buy Now</Link>
-              </td>
-              <td className="pb-5 px-6">
-                <Link href={"https://codecanyon.net/item/google-map-scraper-pro/25283251"} target="_blank" className="inline-block mt-6 w-[130px] py-2 border-b-2 border-yellow-500 hover:text-white font-semibold rounded-md hover:bg-yellow-500">Buy Now</Link>
-              </td>
-            </tr>
+          {/* Platinum */}
+          <div className="py-6">
+            <h3 className="font-semibold text-purple-600">Platinum Plan</h3>
+            <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{priceObj.platinum}/yr</p>
+            <Link target="_blank" href={priceObj.platinumLink} className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-semibold">
+              Buy Now
+            </Link>
+          </div>
+        </div>
 
-            {/* Pricing Section */}
-            <tr>
-              <td className="py-4 px-6 text-left font-bold bg-gray-100 md:bg-white shadow-md">Price</td>
-              <td className="py-4 px-6">₹0</td>
-              <td className="py-4 px-6">₹4,999</td>
-              <td className="py-4 px-6">₹24,999</td>
-            </tr>
+        {/* Rows */}
+        {[
+          ["Database Access", "10 Million", "50 Million", "100+ Million"],
+          ["License Keys", "200", "1,000", "5,000"],
+          ["Sub-reseller Accounts", "✖", "✖", "12 Accounts"],
+          ["Billed Annually", "✔", "✔", "✔"],
+          ["Downloads", "Unlimited", "Unlimited", "Unlimited"],
+          ["White-label Reselling", "✔", "✔", "✔"],
+          ["Chargeable Reseller Activation", "✔", "✔", "✖"],
+          ["Priority Onboarding", "✖", "✔", "✔"],
+          ["Dedicated Account Manager", "✖", "✖", "✔"],
+          ["Contact Support", "Direct Support", "Direct Support", "24/7 Priority Support"],
+          ["Google & Meta Advertising Campaign Setup", "✔", "✔", "✔"],
+          ["Customer Leads Support", "✔", "✔", "✔"],
+          ["Early Access to New Features", "✖", "✖", "✔"],
+        ].map((row, i) => (
+          <div
+            key={i}
+            className={`grid grid-cols-4 items-center text-sm ${
+              i % 2 === 0 ? "bg-white" : "bg-gray-50"
+            } border-b`}
+          >
+            {/* Feature */}
+            <div className="p-4 text-gray-700 font-medium">
+              {row[0]}
+            </div>
 
-            {/* Billing Section */}
-            <tr>
-              <td className="py-4 px-6 text-left bg-gray-100 md:bg-white shadow-md">Billed Quarterly</td>
-              <td className="py-4 px-6 text-gray-500">
-                <i className="ri-close-line text-red-500" />
-              </td>
-              <td className="py-4 px-6 text-gray-500">
-                <i className="ri-close-line text-red-500" />
-              </td>
-              <td className="py-4 px-6 text-gray-500">
-                <i className="ri-close-line text-red-500" />
-              </td>
-            </tr>
-            <tr>
-              <td className="py-4 px-6 text-left bg-gray-100 md:bg-white shadow-md">Billed Annually</td>
-              <td className="py-4 px-6 text-gray-500">
-                <i className="ri-close-line text-red-500" />
-              </td>
-              <td className="py-4 px-6 text-gray-500">
-                <i className="ri-check-line text-green-500" />
-              </td>
-              <td className="py-4 px-6 text-gray-500">
-                <i className="ri-check-line text-green-500" />
-              </td>
-            </tr>
+            {/* Silver */}
+            <div className="text-center p-4">
+              {row[1] === "✔" ? (
+                <span className="text-green-600 font-bold">✔</span>
+              ) : row[1] === "✖" ? (
+                <span className="text-red-300 font-bold">✖</span>
+              ) : (
+                row[1]
+              )}
+            </div>
 
-            {/* Download Section */}
-            <tr>
-              <td className="py-4 px-6 text-left bg-gray-100 md:bg-white shadow-md">Downloads</td>
-              <td className="py-4 px-6">Limited upto 50 records</td>
-              <td className="py-4 px-6">No Limit</td>
-              <td className="py-4 px-6">No Limit</td>
-            </tr>
+            {/* Gold */}
+            <div className="text-center p-4">
+              {row[2] === "✔" ? (
+                <span className="text-green-600 font-bold">✔</span>
+              ) : row[2] === "✖" ? (
+                <span className="text-red-300 font-bold">✖</span>
+              ) : (
+                row[2]
+              )}
+            </div>
 
-            {/* devices access */}
-            <tr>
-              <td className="py-4 px-6 text-left bg-gray-100 md:bg-white shadow-md">Reselling</td>
-              <td className="py-4 px-6">
-                <i className="ri-close-line text-red-500" />
-              </td>
-              <td className="py-4 px-6">
-                <i className="ri-close-line text-red-500" />
-              </td>
-              <td className="py-4 px-6">Resale upto 200 clients</td>
-            </tr>
-
-            {/* Contact Section */}
-            <tr>
-              <td className="py-4 px-6 text-left bg-gray-100 md:bg-white shadow-md">Contact Support</td>
-              <td className="py-4 px-6 text-gray-500">
-                <i className="ri-close-line text-red-500" />
-              </td>
-              <td className="py-4 px-6">Standard Support</td>
-              <td className="py-4 px-6">24/7 Priority Support</td>
-            </tr>
-          </tbody>
-        </table>
+            {/* Platinum */}
+            <div className="text-center p-4">
+              {row[3] === "✔" ? (
+                <span className="text-green-600 font-bold">✔</span>
+              ) : row[3] === "✖" ? (
+                <span className="text-red-300 font-bold">✖</span>
+              ) : (
+                row[3]
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

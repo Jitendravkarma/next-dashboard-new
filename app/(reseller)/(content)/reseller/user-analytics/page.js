@@ -106,37 +106,24 @@ const UserAnalytics = () => {
 				const value = params.row.account_activation;
 				const handleBlock = async ()=>{
 					try {
-						if(value){
-							const confirmBox = confirm(`Are you sure want to block ${email}?`);
-							if(confirmBox){
-								const updateData = await updateUserBlock({email});
-								console.log(updateData.data);
-								alert(updateData.data.data);
-							}
-							else {
-								alert(`Request canceled!`)
-							}
+						const confirmBox = confirm(`Are you sure want to ${value ? 'Block' : 'Unblock'} ${email}?`);
+						if(confirmBox){
+							const updateData = await updateUserBlock(value, {email});
+							console.log(updateData.data);
+							alert(updateData.data.data);
+							window.location.reload();
 						}
 						else {
-							alert(`API not available!`)
+							alert(`Request canceled!`)
 						}
 					} catch (error) {
-						alert(`Failed to block!`);
+						alert(`Failed to block/unblock!`);
 					}
 				}
 				return (
-					<>
-						{
-							value ?
-							<button className={``} onClick={handleBlock}>
-								🚫Block User
-							</button>
-							:
-							<button className={``} onClick={handleBlock}>
-								✅Unblock User
-							</button>
-						}
-					</>
+					<button className={`hover:underline`} onClick={handleBlock} title={value ? "Click to Block User" : "Click to Unblock User"}>
+						{value ? "🚫Block User" : "✅Unblock User"}
+					</button>
 				)
 			},
 			editable: false

@@ -7,7 +7,7 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
-import { approveReseller, deactiveReseller, updateValidity } from "@/shared/apis/api";
+import { activeReseller, approveReseller, deactiveReseller, updateValidity } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
 	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData,allUsersData, fetchUserData, userData, openSnackBar, handleSnackMessage } = useUserContext()
@@ -87,7 +87,8 @@ const UserAnalytics = () => {
 								setIsUpdating(true);
 								try {
 									const resp = await updateValidity({ email: params.row.email, no_days: Number(days) });
-									alert(`Limit updated successfully! Please reload the page.`)
+									alert(`Limit updated successfully!`);
+									window.location.reload();
 								} catch (error) {
 									console.log(error)
 								} finally {
@@ -217,11 +218,33 @@ const UserAnalytics = () => {
 			headerName: 'Block/Unblock',
 			field: 'block_unblock',
 			width: 150,
-			renderCell: ({row})=>{
-				return(
-					<span>
-						🚫 Block User
-					</span>
+			renderCell: (params) => {
+				const email = params.row.email;
+				const value = params.row.account_activation;
+				const handleBlock = async ()=>{
+					if(value){
+						alert(`User already activated!`)
+						return;
+					}
+					try {
+						const confirmBox = confirm(`Are you sure want to ${value ? 'Block' : 'Unblock'} ${email}?`);
+						if(confirmBox){
+							const updateData = await activeReseller(email);
+							// console.log(updateData);
+							alert(`User unblocked successfully!`);
+							window.location.reload();
+						}
+						else {
+							alert(`Request canceled!`)
+						}
+					} catch (error) {
+						alert(`Failed to unblock!`);
+					}
+				}
+				return (
+					<button className={`hover:underline`} onClick={handleBlock} title={value ? "Click to Block User" : "Click to Unblock User"}>
+						{value ? "-" : "✅Unblock User"}
+					</button>
 				)
 			},
 			editable: false,
@@ -381,7 +404,7 @@ const UserAnalytics = () => {
 				<Snackbar content={snackMessage} isOpen={openSnack}/>
 			}
 			<Seo title='User Analytics' />
-			<PageHeader currentpage="Reseller Approve" img="/assets/img/users/profile.png" activepage="admin" mainpage="Reseller Approve" />
+			<PageHeader currentpage="User Analytics" img="/assets/img/users/profile.png" activepage="admin" mainpage="User Analytics" />
 			<div className="grid grid-cols-12 gap-x-5">
 				{numOfData.map((idx) => (
 					<div className="col-span-12 md:col-span-4" key={Math.random()}>

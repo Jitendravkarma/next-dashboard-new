@@ -137,9 +137,9 @@ export const seo_verify = {
 }
 
 export const seo_docs = {
-    title: `Documentation - Scrape Genius`,
-    description: `Check out the comprehensive Scrape Genius documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
-    keywords: `Scrape Genius documentation, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
+    title: `User Manual - Scrape Genius`,
+    description: `Check out the comprehensive Scrape Genius User Manual to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.`,
+    keywords: `Scrape Genius documentation, Scrape Genius User Manual, data scraping API, web scraping guide, Google Maps scraper, business directory scraper, website data extractor, automation tools, data extraction guide, scraping software tutorial, how to scrape websites, web crawling guide`
 }
 
 export const seo_live_scraping = {

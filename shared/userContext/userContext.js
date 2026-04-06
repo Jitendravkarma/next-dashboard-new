@@ -7,6 +7,18 @@ const UserContext = createContext();
 export const useUserContext = () => useContext(UserContext);
 export const UserProvider = ({ children }) => {
 
+  const defaultPrices = {
+    silver: "24,999", 
+    gold: "74,999", 
+    platinum: "1,49,999", 
+    silverOld: "31,248", 
+    goldOld: '93,750', 
+    platinumOld: '2,00,000',
+    silverLink: "https://rzp.io/rzp/Mr9bmyT", 
+    goldLink: "https://rzp.io/rzp/zqZEWbt", 
+    platinumLink: "https://rzp.io/rzp/TRAw3NDe", 
+    priceTag: "₹"
+  }
   const [isVerfified, setIsVerified] = useState(true); // Initialize with false
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Initialize with false
   const [isAdmin, setIsAdmin] = useState(false);
@@ -19,6 +31,8 @@ export const UserProvider = ({ children }) => {
   const [validity, setvalidity] = useState(false)
   const [allocateKeyBox, setAllocateKeyBox] = useState(false);
   const [user, setUser] = useState({ email: "", auth: false });
+  const [isUSDPrice, setIsUSDPrice] = useState(false);
+  const [priceObj, setPriceObj] = useState(defaultPrices);
   const [localUser, setLocalUser] = useState({
     name: "",
     email: "",
@@ -316,12 +330,13 @@ export const UserProvider = ({ children }) => {
       }
     } 
     const fetchAllUsers = async ()=>{
+      if(!user.admin) return;
       try {
         // setIsLoading(true)
         const allUsers = await getUserData()
         const user_dataAll = allUsers.data.data.records ;
         if(user_dataAll.length){
-          const convert_dataAll = user_dataAll.reverse().map(({id, email, created_at, valid_till, name, purchase_code, verified, reseller}, ind)=>{
+          const convert_dataAll = user_dataAll.reverse().map(({id, account_activation, email, created_at, valid_till, name, purchase_code, verified, reseller}, ind)=>{
             return {
               sn: ind + 1,
               user_id: id,
@@ -329,6 +344,7 @@ export const UserProvider = ({ children }) => {
               email,
               created_at,
               valid_till,
+              account_activation,
               user_type: reseller ? "reseller" : "user",
               access_code: purchase_code,
               verified
@@ -392,6 +408,26 @@ export const UserProvider = ({ children }) => {
         window.removeEventListener("offline", checkOff);
     }
   }, []);
+
+  useEffect(()=>{
+    if(isUSDPrice){
+      setPriceObj({
+        silver: "269.00", 
+        gold: "799.00", 
+        platinum: "1,599.00", 
+        silverOld: "336.25", 
+        goldOld: '998.75', 
+        platinumOld: '2132.00',
+        silverLink: "https://rzp.io/rzp/NrpkcUjZ", 
+        goldLink: "https://rzp.io/rzp/Pn7WLGU", 
+        platinumLink: "https://rzp.io/rzp/puCDvvd", 
+        priceTag: "$"
+      })
+    }
+    else {
+      setPriceObj(defaultPrices);
+    }
+  }, [isUSDPrice])
 
   // Update user state and local storage when the user logs in
   const handleSignIn = (userData, local_user, verified) => {
@@ -572,7 +608,7 @@ export const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ user, usersData,allUsersData, productUrl, localUser, logo, years, DOCS, yt_channel, yt_links, dynamicSocialLinks, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail, validityBoxClose, validity, allocateKeyBoxClose, allocateKeyBox }}
+      value={{ priceObj, isUSDPrice, setIsUSDPrice, user, usersData,allUsersData, productUrl, localUser, logo, years, DOCS, yt_channel, yt_links, dynamicSocialLinks, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail, validityBoxClose, validity, allocateKeyBoxClose, allocateKeyBox }}
     >
       {children}
     </UserContext.Provider>
