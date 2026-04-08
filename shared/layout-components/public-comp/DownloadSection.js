@@ -165,11 +165,11 @@ const DownloadSection = () => {
             
             <div className='flex flex-col sm:flex-row justify-between gap-3 items-center'>
               <a 
-                href="/docs"
+                href="/user-manual"
                 className="w-full flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-5 py-3 transform transition-all"
               >
                 <i className="text-xl ri-file-text-line"></i>
-                Explore Docs
+                User Manual
               </a>
               <span>OR</span>
               <Link 

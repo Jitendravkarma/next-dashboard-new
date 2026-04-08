@@ -13,9 +13,9 @@ export default function Header() {
     { title: "tools", url: "/services" },
     { title: "CRM", url: "/CRM" },
     { title: "pricing", url: "/pricing" },
-    { title: "User Manual", url: "/user-manual" },
-    { title: "Contact", url: "/contact" },
-    { title: "signin", url: "/signin" },
+    // { title: "User Manual", url: "/user-manual" },
+    // { title: "Contact", url: "/contact" },
+    { title: "sign in", url: "/signin" },
     { title: isAuthenticated ? "Download Now" : "Start a Free Trial", url: isAuthenticated ? "/downloads" : "/signup" }
   ];
   const crmMainMenus = [

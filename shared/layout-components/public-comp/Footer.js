@@ -46,25 +46,21 @@ export default function Footer() {
         { title: "Business Directory Scraper", url: "/services/business-directory-scraper" },
         { title: "Whois Domain Lookup", url: "/services/whois-database" }
       ],
+      subItem: false,
     },
     {
       title: "Quick Links",
       list: [
         { title: "Sign In", url: "/signin" },
-        { title: "Sign Up", url: "/signup" },
-        { title: "User Manual", url: "/user-manual" },
-        { title: "Contact Us", url: "/contact" },
+        { title: "Create Account", url: "/signup" },
         { title: "About Us", url: "/about" },
+        { title: "User Manual", url: "/user-manual" },
         { title: "Terms & Conditions", url: "/legal-terms" },
         { title: "Privacy Policy", url: "/legal-policy" },
-        { title: "FAQ", url: "/faq" }
+        { title: "FAQ", url: "/faq" },
+        { title: "Contact Us", url: "/contact" },
       ],
-    },
-    {
-      title: "watch tutorials",
-      list: [
-        { title: "youtube", url: dynamicSocialLinks.youtube },
-      ],
+      subItem: false,
     },
     {
       title: "follow us",
@@ -74,6 +70,12 @@ export default function Footer() {
         { title: "youtube", url: dynamicSocialLinks.youtube },
         { title: "linkedin", url: dynamicSocialLinks.linkedin }
       ],
+      subItem: {
+        title: "watch tutorials",
+        list: [
+          { title: "youtube", url: dynamicSocialLinks.youtube },
+        ],
+      },
     },
   ];
 
@@ -94,8 +96,8 @@ export default function Footer() {
       }
       <footer className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-12 gap-5">
-            <div className="col-span-12 xl:col-span-4 flex flex-col gap-5">
+          <div className="grid grid-cols-12 gap-8">
+            <div className="col-span-12 xl:col-span-5 flex flex-col gap-5">
               <div className="mr-auto">
                 <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
                   <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" />
@@ -106,31 +108,58 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="col-span-12 xl:col-span-8 grid grid-cols-12 gap-0 md:gap-2">
+            <div className="col-span-12 xl:col-span-7 grid grid-cols-12 gap-0 md:gap-5">
               {
-                footerLinks.map(({ title, list }, ind) => (
-                  (title === "follow us" || title === "watch tutorials") ? (
-                    <div key={ind} className="col-span-12 sm:col-span-6 md:col-span-3 my-5 xl:my-0">
-                      <h4 className="capitalize text-base font-normal text-black mb-4">
-                        {title}
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {
-                          list.map(({ title, url }, idx) => (
-                            <div key={idx}>
-                              <Link
-                                href={url ? url : "/reseller/profile"}
-                                target="_blank"
-                                aria-label={title}
-                                title={url ? `Visit ${title} profile` : `${title} profile not found`}
-                                className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "twitter" ? "hover:bg-gray-800" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
-                              >
-                                <i className={`${title === "facebook" ? "ri-facebook-line" : title === "twitter" ? "ri-twitter-x-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
-                              </Link>
-                            </div>
-                          ))
-                        }
+                footerLinks.map(({ title, list, subItem }, ind) => (
+                  (title === "follow us") ? (
+                    <div key={ind} className="col-span-12 sm:col-span-6 md:col-span-3 my-5 xl:my-0 flex flex-col gap-7">
+                      <div className="">
+                        <h4 className="capitalize text-base font-normal text-black mb-4">
+                          {title}
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {
+                            list.map(({ title, url }, idx) => (
+                              <div key={idx}>
+                                <Link
+                                  href={url ? url : "/reseller/profile"}
+                                  target="_blank"
+                                  aria-label={title}
+                                  title={url ? `Visit ${title} profile` : `${title} profile not found`}
+                                  className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "twitter" ? "hover:bg-gray-800" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
+                                >
+                                  <i className={`${title === "facebook" ? "ri-facebook-line" : title === "twitter" ? "ri-twitter-x-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
+                                </Link>
+                              </div>
+                            ))
+                          }
+                        </div>
                       </div>
+                      {
+                        subItem &&
+                        <div className="">
+                          <h4 className="capitalize text-base font-normal text-black mb-4">
+                            {subItem.title}
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {
+                              subItem.list.map(({ title, url }, idx) => (
+                                <div key={idx}>
+                                  <Link
+                                    href={url ? url : "/reseller/profile"}
+                                    target="_blank"
+                                    aria-label={title}
+                                    title={url ? `Visit ${title} profile` : `${title} profile not found`}
+                                    className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "twitter" ? "hover:bg-gray-800" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
+                                  >
+                                    <i className={`${title === "facebook" ? "ri-facebook-line" : title === "twitter" ? "ri-twitter-x-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
+                                  </Link>
+                                </div>
+                              ))
+                            }
+                          </div>
+                        </div>
+                      }
                     </div>
                   ) : (
                     <div key={ind} className="col-span-12 sm:col-span-6 md:col-span-3 my-5 xl:my-0">
@@ -154,7 +183,7 @@ export default function Footer() {
 
             <div className="col-span-12 text-center border-t pt-3">
               <p>
-              © {new Date().getFullYear()}. <Link href={"https://designcollection.in"} target="_blank">Design Collection</Link> - All Rights Reserved.
+              © {new Date().getFullYear()}. <Link href={"https://neuralnetics.io/"} target="_blank">Neuralnetics Technologies Pvt. Ltd.</Link> - All Rights Reserved.
               </p>
             </div>
           </div>
