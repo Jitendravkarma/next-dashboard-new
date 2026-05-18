@@ -16,7 +16,7 @@ export default function Header() {
     // { title: "User Manual", url: "/user-manual" },
     // { title: "Contact", url: "/contact" },
     { title: "sign in", url: "/signin" },
-    { title: isAuthenticated ? "Download Now" : "Start a Free Trial", url: isAuthenticated ? "/downloads" : "/signup" }
+    { title: isAuthenticated ? "My Dashboard" : "Start a Free Trial", url: isAuthenticated ? "/downloads" : "/signup" }
   ];
   const crmMainMenus = [
     {
@@ -273,7 +273,7 @@ export default function Header() {
           <nav className="hidden lg:block">
             <ul className="flex space-x-6 capitalize">
               {menus.map(({ title, url }) =>
-                (title === "Start a Free Trial" || title === "Download Now") ? (
+                (title === "Start a Free Trial" || title === "My Dashboard") ? (
                   <li key={url}>
                     <Link
                       href={url}
@@ -530,7 +530,7 @@ export default function Header() {
 
         <ul className="flex flex-col space-y-5 px-5 text-black">
           {menus.map(({ title, url }) =>
-            (title === "Start a Free Trial" || title === "Download Now") ? (
+            (title === "Start a Free Trial" || title === "My Dashboard") ? (
               <li key={url}>
                 <Link
                   href={url}
