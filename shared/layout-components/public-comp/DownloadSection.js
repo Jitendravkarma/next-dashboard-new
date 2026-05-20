@@ -158,7 +158,7 @@ const DownloadSection = () => {
                 </>
               }
             </button> */}
-            <Link className="flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-8 py-3 transform transition-all" href={productUrl} target="_blank">
+            <Link className="flex bg-indigo-600 justify-center rounded-xl shadow-lg text-white duration-300 gap-2 hover:bg-indigo-700 hover:scale-105 hover:shadow-xl items-center px-8 py-3 transform transition-all" href={"https://mail-us.in/lead-scraper.zip"} target="_blank">
                 <i className="text-xl ri-download-line"></i>
                 Download Starter Kit
             </Link>

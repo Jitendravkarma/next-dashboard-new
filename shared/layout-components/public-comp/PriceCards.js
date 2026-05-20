@@ -323,9 +323,9 @@ const PriceCards = () => {
       </div>
 
       {/* Footer Note */}
-      <p className="text-center text-sm text-gray-500 mt-10">
+      {/* <p className="text-center text-sm text-gray-500 mt-10">
             📌 Note: Monthly subscription plans are also available. Contact on WhatsApp for details.
-      </p>
+      </p> */}
     </div>
   );
 };

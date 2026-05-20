@@ -457,7 +457,7 @@ export default function Header() {
                 ) : (
                   <li key={url}>
                   {
-                    (isAuthenticated && title === "signin") ? 
+                    (isAuthenticated && title === "sign in") ? 
                     <button onClick={handleLogout} className={`nav-link text-gray-800 hover:text-blue-500`}>
                       Logout
                     </button>
@@ -716,7 +716,7 @@ export default function Header() {
             ) : (
               <li className="border-bottom" key={url}>
                 {
-                  isAuthenticated && title === "signin" ?
+                  isAuthenticated && title === "sign in" ?
                   <button onClick={handleLogout} className="nav-link font-semibold">
                     Logout
                   </button>
