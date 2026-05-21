@@ -206,11 +206,11 @@ export default function Downloads() {
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
               <div>
                 <h2 className="text-xl font-semibold mb-2">
-                  STEP 1 Install NodeJs
+                  <b>STEP 1 -</b> Install NodeJs
                 </h2>
 
                 <p className="text-gray-600 mb-6">
-                  Open the downloaded folder, locate the{" "}
+                  Extract the downloaded zip file then open the folder, locate {" "}
                   <code className="text-red-600">
                     node_for_windows
                   </code>{" "}
@@ -223,13 +223,13 @@ export default function Downloads() {
 
             <StepSection
               reverse
-              title="STEP 2 Run Installer"
+              title={<span><b>STEP 2 -</b> Run Installer</span>}
               description={`After installing Node.js, open the project folder and double-click <code class="text-red-600">installer</code> file to run it.`}
               image="https://mcusercontent.com/385185488e96c2387bba7596f/images/a41cbda8-039b-290d-cd2a-e57c35d93cf1.png"
             />
 
             <StepSection
-              title="STEP 3 Start Server"
+              title={<span><b>STEP 3 -</b> Start Server</span>}
               description={`After running the installer file, double-click the <code class="text-red-600">starter</code> file to start the server.`}
               image="https://mcusercontent.com/385185488e96c2387bba7596f/images/ee948d93-24ae-bf95-3cf9-4ee58321cc01.png"
               gradient="from-orange-100 to-red-200"
@@ -237,7 +237,7 @@ export default function Downloads() {
 
             <StepSection
               reverse
-              title="STEP 4 Open localhost URL"
+              title={<span><b>STEP 4 -</b> Open localhost URL</span>}
               description={`Open <a href="http://localhost:3000" class="underline font-bold text-red-600" target="_blank">http://localhost:3000</a> in your browser.`}
               image="https://mcusercontent.com/385185488e96c2387bba7596f/images/fb848118-428d-154c-75ef-c7860b6713c1.png"
             />
@@ -278,11 +278,11 @@ export default function Downloads() {
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
               <div>
                 <h2 className="text-xl font-semibold mb-2">
-                  STEP 1 Install NodeJs
+                  <b>STEP 1 -</b> Install NodeJs
                 </h2>
 
                 <p className="text-gray-600 mb-6">
-                  Open the downloaded folder and install{" "}
+                  Extract the downloaded zip file then open the folder and install{" "}
                   <code className="text-red-600">
                     node_for_mac
                   </code>
@@ -294,13 +294,13 @@ export default function Downloads() {
 
             <StepSection
               reverse
-              title="STEP 2 Open in Terminal"
+              title={<span><b>STEP 2 -</b> Open in Terminal</span>}
               description={`Open project folder and click <code class="text-red-600">New Terminal at Folder</code>`}
               image="https://mcusercontent.com/385185488e96c2387bba7596f/images/d49ed269-8047-fded-702b-f330d543a379.jpeg"
             />
 
             <StepSection
-              title="STEP 3 Install Packages"
+              title={<span><b>STEP 3 -</b> Install Packages</span>}
               description={`Run <code class="text-red-600">npm install</code>`}
               image="https://mcusercontent.com/385185488e96c2387bba7596f/images/0432e62f-6b01-8648-dcca-7d977dd798d2.png"
               gradient="from-orange-100 to-red-200"
@@ -308,14 +308,14 @@ export default function Downloads() {
 
             <StepSection
               reverse
-              title="STEP 4 Install Core Packages"
+              title={<span><b>STEP 4 -</b> Install Core Packages</span>}
               description={`Run <code class="text-red-600">npx playwright install</code>`}
               image="https://mcusercontent.com/385185488e96c2387bba7596f/images/dd1073af-e0a7-e042-ba29-4e8245b0c12e.png"
               gradient="from-orange-100 to-red-200"
             />
 
             <StepSection
-              title="STEP 5 Start Server"
+              title={<span><b>STEP 5 -</b> Start Server</span>}
               description={`Run <code class="text-red-600">npm start</code> and open <a href="http://localhost:3000" target="_blank" class="underline font-bold text-red-600">http://localhost:3000</a>`}
               image="https://mcusercontent.com/385185488e96c2387bba7596f/images/93ef2d05-b8de-3ec6-4602-7d1b250c1e9e.png"
             />
