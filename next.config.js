@@ -8,6 +8,7 @@ const nextConfig = {
   swcMinify: true,
   basePath: "",
 	assetPrefix : "",
+  reactStrictMode: false,
   // images: {
   //   loader: "imgix",
   //   path: "/",

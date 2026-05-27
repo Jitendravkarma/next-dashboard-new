@@ -1,8 +1,9 @@
 "use client";
 
 import { useUserContext } from "@/shared/userContext/userContext";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 const windowsSlides = [
   "https://mcusercontent.com/385185488e96c2387bba7596f/images/cb02f033-ec2e-2d40-f2d1-ca99c9acd871.png",
@@ -108,33 +109,46 @@ function StepSection({
 export default function Downloads() {
   const { push } = useRouter()
   const [selectedOS, setSelectedOS] = useState("");
-  const {isAuthenticated } = useUserContext()
+  const {isAuthenticated, user } = useUserContext()
 
-   useEffect(() => {
-     const fileUrl =
-       "https://mail-us.in/lead-scraper.zip";
+  useEffect(() => {
+    if(user){
+      if(user.email !== 'support@designcollection.in'){
+        const fileUrl =
+          "https://mail-us.in/lead-scraper.zip";
+    
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
 
-     const link = document.createElement("a");
-     link.href = fileUrl;
-
-     // optional file name
-     link.download = "your-file.zip";
-
-     document.body.appendChild(link);
-     link.click();
-     document.body.removeChild(link);
-   }, []);
-    if(!isAuthenticated){
-        push('/signin')
     }
+  }, [user]);
+   
+  if(!isAuthenticated){
+      push('/signin')
+  }
   return (
     <main className="text-gray-800 scroll-smooth">
       {/* Header */}
       <header className="text-black py-20 text-center bg-white">
+        <div className="flex justify-end items-center gap-3 mb-4 pr-20 mr-2">
+            <Link target="_blank" href={`/reseller/dashboard`} className="bg-blue-500 hover:bg-blue-600 text-sm text-white font-medium py-3 px-4 rounded-md">
+              <i className="ri-home-2-line"/>{" "}
+              Reseller
+            </Link>
+            <Link target="_blank" href={`/admin/dashboard`} className="bg-blue-500 hover:bg-blue-600 text-sm text-white font-medium py-3 px-4 rounded-md">
+              <i className="ri-home-2-line"/>{" "}
+              Admin
+            </Link>
+        </div>
         <h1 className="text-7xl font-bold">
           <p className="mb-6">👍</p>
           Thanks for downloading!
           <p className="mt-2">Just a few steps left</p>
+          <p className="mt-6 text-lg font-normal" title="Download now">If the download has not started, you can <a href="https://mail-us.in/lead-scraper.zip" target="_blank" className="underline font-semibold text-blue-500 hover:underline">Download it manually</a></p>
         </h1>
       </header>
 

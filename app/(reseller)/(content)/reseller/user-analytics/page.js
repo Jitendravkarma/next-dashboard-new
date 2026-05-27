@@ -49,12 +49,12 @@ const UserAnalytics = () => {
 			width: 300,
 			editable: false
 		},
-		// {
-		// 	headerName: "Phone",
-		// 	field: "phone",
-		// 	width: 170,
-		// 	editable: false
-		// },
+		{
+			headerName: "Phone",
+			field: "phone",
+			width: 250,
+			editable: false
+		},
 		{
 			headerName: "User Type",
 			field: "user_type",

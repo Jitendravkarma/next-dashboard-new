@@ -309,12 +309,13 @@ export const UserProvider = ({ children }) => {
         const users = await resellerUsers()
         const user_data = users.data.data
         if(user_data.length){
-          const convert_data = user_data.map(({id, email, name, purchase_code, verified, reseller, account_activation}, ind)=>{
+          const convert_data = user_data.map(({id, email, phone, name, purchase_code, verified, reseller, account_activation}, ind)=>{
             return {
               sn: ind + 1,
               user_id: id,
               name,
               email,
+              phone: phone || '-',
               account_activation,
               user_type: reseller ? "reseller" : "user",
               access_code: purchase_code,
@@ -336,12 +337,13 @@ export const UserProvider = ({ children }) => {
         const allUsers = await getUserData()
         const user_dataAll = allUsers.data.data.records ;
         if(user_dataAll.length){
-          const convert_dataAll = user_dataAll.reverse().map(({id, account_activation, email, created_at, valid_till, name, purchase_code, verified, reseller}, ind)=>{
+          const convert_dataAll = user_dataAll.reverse().map(({id, account_activation, email, phone, created_at, valid_till, name, purchase_code, verified, reseller}, ind)=>{
             return {
               sn: ind + 1,
               user_id: id,
               name,
               email,
+              phone: phone || '-',
               created_at,
               valid_till,
               account_activation,

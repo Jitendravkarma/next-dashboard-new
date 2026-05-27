@@ -112,6 +112,12 @@ const UserAnalytics = () => {
 			editable: false
 		},
 		{
+			headerName: "Phone",
+			field: "phone",
+			width: 250,
+			editable: false
+		},
+		{
 			headerName: "User Name",
 			field: "name",
 			width: 300,
