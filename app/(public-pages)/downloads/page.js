@@ -112,7 +112,7 @@ export default function Downloads() {
   const {isAuthenticated, user } = useUserContext()
 
   useEffect(() => {
-    if(user){
+    if(isAuthenticated && user?.email){
       if(user.email !== 'support@designcollection.in'){
         const fileUrl =
           "https://mail-us.in/lead-scraper.zip";
@@ -125,7 +125,7 @@ export default function Downloads() {
       }
 
     }
-  }, [user]);
+  }, [isAuthenticated, user]);
    
   if(!isAuthenticated){
       push('/signin')
@@ -134,16 +134,19 @@ export default function Downloads() {
     <main className="text-gray-800 scroll-smooth">
       {/* Header */}
       <header className="text-black py-20 text-center bg-white">
-        <div className="flex justify-end items-center gap-3 mb-4 pr-20 mr-2">
-            <Link target="_blank" href={`/reseller/dashboard`} className="bg-blue-500 hover:bg-blue-600 text-sm text-white font-medium py-3 px-4 rounded-md">
-              <i className="ri-home-2-line"/>{" "}
-              Reseller
-            </Link>
-            <Link target="_blank" href={`/admin/dashboard`} className="bg-blue-500 hover:bg-blue-600 text-sm text-white font-medium py-3 px-4 rounded-md">
-              <i className="ri-home-2-line"/>{" "}
-              Admin
-            </Link>
-        </div>
+        {
+          (user && (user?.email === 'support@designcollection.in' || user?.email === 'allmysource@gmail.com')) &&
+          <div className="flex justify-end items-center gap-3 mb-4 pr-20 mr-2">
+              <Link target="_blank" href={`/reseller/dashboard`} className="bg-blue-500 hover:bg-blue-600 text-sm text-white font-medium py-3 px-4 rounded-md">
+                <i className="ri-home-2-line"/>{" "}
+                Reseller
+              </Link>
+              <Link target="_blank" href={`/admin/dashboard`} className="bg-blue-500 hover:bg-blue-600 text-sm text-white font-medium py-3 px-4 rounded-md">
+                <i className="ri-home-2-line"/>{" "}
+                Admin
+              </Link>
+          </div>
+        }
         <h1 className="text-7xl font-bold">
           <p className="mb-6">👍</p>
           Thanks for downloading!

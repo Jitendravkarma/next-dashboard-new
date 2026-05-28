@@ -233,6 +233,7 @@ export default function Header() {
 
   function handleLogout() {
     handleSignOut();
+    push('/signin');
     window.location.reload()
   }
 
