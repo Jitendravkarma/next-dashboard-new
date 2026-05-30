@@ -115,7 +115,7 @@ export default function Downloads() {
     if(isAuthenticated && user?.email){
       if(user.email !== 'support@designcollection.in'){
         const fileUrl =
-          "https://mail-us.in/lead-scraper.zip";
+          "https://mail-us.in/lead_generation_tool.zip";
     
         const link = document.createElement("a");
         link.href = fileUrl;
@@ -151,7 +151,7 @@ export default function Downloads() {
           <p className="mb-6">👍</p>
           Thanks for downloading!
           <p className="mt-2">Just a few steps left</p>
-          <p className="mt-6 text-lg font-normal" title="Download now">If the download has not started, you can <a href="https://mail-us.in/lead-scraper.zip" target="_blank" className="underline font-semibold text-blue-500 hover:underline">Download it manually</a></p>
+          <p className="mt-6 text-lg font-normal" title="Download now">If the download has not started, you can <a href="https://mail-us.in/lead_generation_tool.zip" target="_blank" className="underline font-semibold text-blue-500 hover:underline">Download it manually</a></p>
         </h1>
       </header>
 
