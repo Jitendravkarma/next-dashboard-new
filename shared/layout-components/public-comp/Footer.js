@@ -5,8 +5,10 @@ import Image from "next/image";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { basePath } from "@/next.config";
 import EnquiryFormModal from "./Enquiry";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathName = usePathname();
   const { logo, resellerContactInfo, companyDetails, dynamicSocialLinks } = useUserContext()
   const [showGoTop, setShowGoTop] = useState(false);
   const [openEnquiry, setOpenEnquiry] = useState(false);
@@ -91,7 +93,7 @@ export default function Footer() {
     <>
       {/* Footer Section */}
       {
-        openEnquiry &&
+        (openEnquiry && pathName !== '/downloads/') &&
         <EnquiryFormModal closePop={closePop}/>
       }
       <footer className="bg-white py-20">
