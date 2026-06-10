@@ -182,7 +182,7 @@ export async function getAuthenticatedData(apiEndpoint) {
 export async function getUserData() {
   checkAndAddAuthTokenToHeader()
   try {
-    const response = await api.get('/restricted/users?limit=10000');
+    const response = await api.get('/restricted/users?limit=100000');
     return response; // It will provide every registered users data
   } catch (error) {
     throw error;
