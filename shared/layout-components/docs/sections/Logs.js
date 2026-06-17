@@ -4,6 +4,17 @@ import { Heading } from "../Heading";
 const Logs = () => {
   const change_logs = [
     {
+      release: "22.2",
+      logs: [
+        <span>Download the <strong>latest version</strong> from our website</span>,
+        <span>Introduced the <strong>Real Estate Scraper</strong></span>,
+        <span>Now you can attach files while sending emails</span>,
+        <span>Enabled <strong>pincode lookup</strong> for all cities on Google Maps</span>,
+        <span>Increased the <strong>query limit</strong></span>,
+        <span>Made additional improvements and enhancements</span>
+      ]
+    },
+    {
       release: "22.1",
       logs:[
         <span>Added the <strong>WhatsApp Group Scraper</strong> to extract group data efficiently</span>,

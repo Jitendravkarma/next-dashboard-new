@@ -114,13 +114,25 @@ const Services = () => {
     {
       title: "Image data scraper",
       img: "/assets/iconfonts/dashboard-icon/imageIcon.png",
-      des: "Extract text and contact information from images with OCR technology.",
+      des: "Extract text and contact information such as phone number and email address from images with OCR technology.",
       url: "/signup",
     },
     {
       title: "Whois domain database",
       img: "/assets/iconfonts/dashboard-icon/domain.png",
-      des: "Retrieve domain ownership details like name, address, and country.",
+      des: "Retrieve domain ownership details like name, registered company name, company address, company pincode and country.",
+      url: "/signup",
+    },
+    {
+      title: "Real State Scraper",
+      img: "/assets/iconfonts/dashboard-icon/property.png",
+      des: "Collect profile url, prices and contact details from 99acres, Magicbricks, Beegru, Makaan24 and more.",
+      url: "/signup",
+    },
+    {
+      title: "Whatsapp Group Scraper",
+      img: "/assets/iconfonts/dashboard-icon/whatsapp.png",
+      des: "Extract WhatsApp group links, and collect the valuable contacts from WhatsApp groups and grow your leads effortlessly.",
       url: "/signup",
     },
   ];
