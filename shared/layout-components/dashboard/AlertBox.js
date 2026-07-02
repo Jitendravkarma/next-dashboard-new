@@ -1,10 +1,11 @@
 "use client"
-import { useEffect, memo, useState } from 'react';
+import { useEffect, memo, useState, useRef } from 'react';
 import countryList from './Country';
 import { useUserContext } from '@/shared/userContext/userContext';
 import Link from 'next/link';
 import { Download } from './DownloadBtn';
 import DatePicker from 'react-datepicker';
+import axios from 'axios';
 
 const Logo = ()=>{
   return(
@@ -897,4 +898,389 @@ const AllocateKey = memo(({ id,type, closeModel }) => {
   );
 });
 
-export { ContactBox, SmsBox, WhatsappBox, LimitReachedBox, DownloadBox, ValidityBox, UpgradePlanPopup, AllocateKey }
+const UserAccess = memo(({ email, closePop, initialSelected = [] }) => {
+  const [ availableTools, setAvailableTools] = useState([
+    { id: "tool_analytics", name: "Search Engine Scraper", description: "View reports & charts" }
+  ]);
+  
+  const [query, setQuery] = useState("");
+  const [respMsg, setRespMsg] = useState("");
+  const [selectedSet, setSelectedSet] = useState(new Set(initialSelected));
+  const [saving, setSaving] = useState(false);
+  const containerRef = useRef(null);
+
+  const MENUITEMS = [
+    { path: "/dashboard/home", title: "Dashboard" },
+
+    { path: "/dashboard/followup-history", title: "Follow Up History" },
+
+    {
+      title: "CRM Sources",
+      children: [
+        { path: "/dashboard/custom-leads", title: "Custom Leads" },
+        { path: "/dashboard/justdial-enquiry-scraper", title: "JustDial Enquiries" },
+        { path: "/dashboard/indiamart-enquiry-scraper", title: "IndiaMart Enquiries" },
+        { path: "/dashboard/google-ad-leads", title: "Google Ads" },
+        { path: "/dashboard/meta-ad-leads", title: "Meta Ads" },
+      ],
+    },
+
+    {
+      path: "/dashboard/smart-leads",
+      title: (
+        <span>
+          Smart Leads <span className="text-yellow-600 animate-pulse font-bold">Pro</span>
+        </span>
+      ),
+    },
+
+    { path: "/dashboard/search-engine-scraper", title: "Search Engines" },
+
+    { path: "/dashboard/google-map-scraper", title: "Google Maps" },
+
+    { path: "/dashboard/social-media-scraper", title: "Social Media" },
+
+    { path: "/dashboard/facebook-ad-library-scraper", title: "Ad Library" },
+
+    { path: "/dashboard/ecommerce-scraper", title: "Ecommerce Platforms" },
+
+    { path: "/dashboard/job-portal-scraper", title: "Job Portals" },
+
+    { path: "/dashboard/global-directory-scraper", title: "Global Directories" },
+
+    {
+      path: "/dashboard/whatsapp-group-scraper",
+      title: <span>WA Group Scraper</span>,
+    },
+
+    {
+      path: "/dashboard/real-estate-scraper",
+      title: (
+        <span>
+          Real Estate Scraper <span className="text-red-500 animate-pulse font-bold">New</span>
+        </span>
+      ),
+    },
+
+    {
+      title: "Indian Directories",
+      children: [
+        { path: "/dashboard/mlmdiary-scraper", title: "MLMDiary Scraper" },
+        { path: "/dashboard/indiamart-scraper", title: "Indiamart Scraper" },
+        { path: "/dashboard/justdial-scraper", title: "JustDial Scraper" },
+        { path: "/dashboard/sulekha-scraper", title: "Sulekha Scraper" },
+        { path: "/dashboard/tradeindia-scraper", title: "TradeIndia Scraper" },
+        { path: "/dashboard/exportersindia-scraper", title: "ExportersIndia Scraper" },
+      ],
+    },
+
+    {
+      title: "Corporate Registries",
+      children: [
+        {
+          path: "/dashboard/company-contact-scraper",
+          title: (
+            <span>
+              Company Scraper <span className="text-red-500 animate-pulse font-bold">New</span>
+            </span>
+          ),
+        },
+        { path: "/dashboard/pvt-ltd-scraper", title: "Pvt. Ltd. Scraper" },
+        { path: "/dashboard/gst-no-scraper", title: "GST No. Scraper" },
+      ],
+    },
+
+    {
+      title: "Bulk Contacts",
+      children: [
+        { path: "/dashboard/email-scraper", title: "Email Scraper" },
+        { path: "/dashboard/phone-no-scraper", title: "Phone No. Scraper" },
+        { path: "/dashboard/whatsapp-number-scraper", title: "Whatsapp No. Scraper" },
+      ],
+    },
+
+    {
+      title: "Web Crawler",
+      children: [
+        { path: "/dashboard/website-data-scraper", title: "Website Data Scraper" },
+        { path: "/dashboard/live-website-data", title: "Live Website Data" },
+        { path: "/dashboard/business-directory-scraper", title: "Business Directory" },
+      ],
+    },
+
+    {
+      title: "File Uploads",
+      children: [
+        { path: "/dashboard/document-data-scraper", title: "Document Data Scraper" },
+        { path: "/dashboard/image-data-scraper", title: "Image Data Scraper" },
+      ],
+    },
+
+    {
+      title: "Website Analyzer",
+      children: [
+        { path: "/dashboard/live-website-scraping", title: "Live Website Scraper" },
+        { path: "/dashboard/live-website-data", title: "Live Website Data" },
+        { path: "/dashboard/live-website-checker", title: "Live Website Checker" },
+      ],
+    },
+
+    {
+      title: "Domain Tools",
+      children: [
+        { path: "/dashboard/whois-domains", title: "WHOIS Domain Lookup" },
+        {
+          path: "/dashboard/verified-domains",
+          title: (
+            <span>
+              Verified Domains{" "}
+              <span className="text-yellow-500 italic font-bold animate-pulse">
+                Pro
+              </span>
+            </span>
+          ),
+        },
+      ],
+    },
+
+    { path: "/dashboard/phone-verifier", title: "Phone Numbers" },
+
+    { path: "/dashboard/email-verifier", title: "Email Addresses" },
+
+    { path: "/dashboard/whatsapp-verifier", title: "WhatsApp Numbers" },
+  ];
+
+  // outside click to close (keeps your existing id check but safer using ref)
+  const handleOutsideClick = (e) => {
+    if (e.target.id === "popup-container" || e.target === containerRef.current) {
+      closePop();
+    }
+  };
+
+  // const fetchLimitedAccessUser = async()=>{
+  //   try {
+  //     //dashboard_999
+  //     const fetch_data = await axios.post('/api/logs', { email, fileName: true })
+  //     const resp_data = fetch_data.data;
+  //     // console.log('api obj')
+  //     if(resp_data){
+  //       if(resp_data?.tools?.length){
+  //         alert(`Modules updated successfully!`);
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+
+  // filtered tools by query
+  const filtered = availableTools.filter((t) =>
+    (t.name + (t.description || "")).toLowerCase().includes(query.toLowerCase())
+  );
+
+  function toggleTool(id) {
+    setSelectedSet((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function handleAllTool (){
+    const filterTools = availableTools.map(item=>item.name).filter(item=>item);
+    setSelectedSet(new Set(filterTools))
+  }
+
+  function clearSelection() {
+    setSelectedSet(new Set());
+  }
+
+  async function handleSave() {
+    if(selectedSet.size < 6){
+      const tools = Array.from(selectedSet);
+      try {
+        setSaving(true);
+        const user_object = {reseller_email: "support@designcollection.in", email, tools}
+        await axios.post('/api/logs', { user_object });
+        // await fetchLimitedAccessUser(email);
+        setRespMsg(`Access updated successfully!`);
+      } catch (err) {
+        console.log(err);
+        setRespMsg(`Failed to update access!`);
+      } finally {
+        setSaving(false);
+      }
+    }
+    else {
+      setRespMsg(`Alert! Only five tools are allowed to be selected.`);
+    }
+  }
+
+  useEffect(() => {
+    const allTools = [];
+    MENUITEMS.forEach(item=>{
+      if("path" in item){
+        if(item.title !== "Dashboard" && item.title !== "Follow Up History"){
+          allTools.push(item)
+        }
+      }
+      const children = item?.children;
+      if(children && children.length){
+        children.forEach(child=>{
+          if("path" in child){
+            allTools.push(child)
+          }
+        })
+      }
+    })
+    const converted_tools = allTools.map(item=>{
+      const trimmedUrl = item.path.replace(/\/$/, "");
+      const segments = trimmedUrl.split('/');
+      const lastSegment = segments[segments.length - 1];
+      const readableName = lastSegment.replace(/-/g, ' ');
+      return {
+        name: readableName,
+        id: readableName
+      }
+    })
+    setAvailableTools(converted_tools)
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") closePop();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  useEffect(()=>{
+    if(selectedSet.size === 5) setRespMsg(`Alert! Only five tools are allowed to be selected.`);
+    else {
+      if(respMsg){
+        setTimeout(()=>{
+          if(selectedSet.size < 5) setRespMsg(``);
+        }, 2000)
+      }
+    }
+  }, [selectedSet.size])
+
+  return (
+    <div
+      id="popup-container"
+      ref={containerRef}
+      onClick={handleOutsideClick}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
+    >
+      <div className="bg-gradient-to-br from-white via-gray-50 to-blue-50 rounded-xl shadow-2xl p-6 max-w-2xl w-full transform transition-all duration-300 scale-100 relative">
+        {/* Close */}
+        <button
+          type="button"
+          onClick={() => closePop()}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 rounded-full p-2 bg-gray-100 hover:bg-gray-200 shadow-sm"
+        >
+          <svg className="w-4 h-4" aria-hidden xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+          </svg>
+          <span className="sr-only">Close modal</span>
+        </button>
+
+        {/* Heading */}
+        <h1 className="font-bold mb-1 text-gray-800 flex items-center justify-center gap-2">
+          <span className='text-lg text-center'>
+            <i className="ri-user-fill text-blue-500" />
+            User Email
+            <br/> <b>{email}</b>
+          </span>
+        </h1>
+        <p className="text-gray-600 mb-4 text-sm text-center">Edit which tools this user may access.</p>
+
+        {/* Controls */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Left: available list */}
+          <div>
+            <label className="text-xs font-medium text-gray-700">Search Tool</label>
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Ex. Search Engine Scraper"
+              className="mt-2 mb-3 w-full rounded-md border px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+            />
+
+            <div className="flex justify-between items-center gap-2 text-xs">
+              <div className="text-slate-500">{filtered.length} Tools</div>
+              <button className='hover:underline' onClick={handleAllTool}>Select All</button>
+            </div>
+
+            <ul className="max-h-48 overflow-auto divide-y rounded-md border">
+              {filtered.map((tool, idx) => (
+                <li key={idx} className="flex items-center gap-3 p-3">
+                  <input
+                    type="checkbox"
+                    checked={selectedSet.has(tool.id)}
+                    onChange={() => toggleTool(tool.id)}
+                    disabled={selectedSet.size === 5}
+                    className="h-4 w-4 rounded border-slate-300"
+                  />
+                  <div className="font-medium text-sm capitalize">{tool.name}</div>
+                </li>
+              ))}
+              {filtered.length === 0 && <li className="p-3 text-sm text-slate-500">No tools match your search.</li>}
+            </ul>
+          </div>
+
+          {/* Right: selected */}
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <div className="text-sm font-medium">Selected tools</div>
+              <div className="text-xs text-slate-500">{selectedSet.size} selected</div>
+            </div>
+
+            <div className="min-h-[140px] max-h-[215px] overflow-auto rounded-md border p-3 bg-white">
+              {selectedSet.size === 0 ? (
+                <div className="text-sm text-slate-500">No tools selected yet.</div>
+              ) : (
+                Array.from(selectedSet).map((id) => {
+                  const tool = availableTools.find((t) => t.id === id);
+                  return (
+                    <div key={id} className="flex items-center justify-between gap-3 rounded-md border border-gray-200 bg-slate-50 p-2 mb-2">
+                      <div>
+                        <div className="text-sm font-medium">{tool?.name ?? id}</div>
+                        {tool?.description && <div className="text-xs text-slate-500">{tool.description}</div>}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <button onClick={() => setSelectedSet((s) => { const n = new Set(s); n.delete(id); return n; })} className="text-xs px-2 py-1 rounded hover:text-red-400 hover:underline">Remove</button>
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+
+            <div className="mt-3 flex items-center gap-2">
+              <div className="flex gap-2">
+                <button onClick={clearSelection} className="px-3 py-1 rounded-full border text-sm bg-white hover:bg-gray-200 disabled:opacity-60">Clear</button>
+              </div>
+              <button
+                onClick={handleSave}
+                disabled={saving}
+                className="ml-auto rounded-full bg-blue-600 text-white px-4 py-1 text-sm font-medium shadow hover:bg-blue-700 disabled:opacity-60"
+              >
+                {saving ? "Saving..." : `Save & Apply (${selectedSet.size})`}
+              </button>
+            </div>
+            {
+              respMsg &&
+              <p className={`my-2 ${(respMsg.includes("Failed") || respMsg.includes("Alert")) ? "text-danger" : "text-success"} font-bold italic`}>{respMsg}</p>
+            }
+          </div>
+        </div>
+
+        {/* Small footer note */}
+        <div className="mt-4 text-xs text-slate-500 text-center">
+          Tip: Use the search to find a tool.
+        </div>
+      </div>
+    </div>
+  );
+});
+
+export { ContactBox, SmsBox, WhatsappBox, LimitReachedBox, DownloadBox, ValidityBox, UpgradePlanPopup, AllocateKey, UserAccess }

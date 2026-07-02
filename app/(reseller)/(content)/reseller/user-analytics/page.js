@@ -5,7 +5,7 @@ import Seo from "@/shared/layout-components/seo/seo";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
-import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { ContactBox, LimitReachedBox, SmsBox, UserAccess, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 import { updateUserBlock } from "@/shared/apis/api";
 
@@ -14,6 +14,8 @@ const UserAnalytics = () => {
 	// const [ validity, setValidity ] = useState(false);
 	// const [ userId, setUserId ] = useState(false);
 	const [ data, setData ] = useState([]);
+	const [ userEmail, setUserEmail ] = useState("")
+	const [ accessLimit, setAccessLimit ] = useState(false)
 	const [ isLoading, setIsLoading ] = useState(false);
 	const columns = [
 		// {
@@ -31,13 +33,13 @@ const UserAnalytics = () => {
 		{
 			headerName: 'S.N',
 			field: 'sn',
-			width: 100,
+			width: 80,
 			editable: false,
 		},
 		{
 			headerName: "User Name",
 			field: "name",
-			width: 300,
+			width: 200,
 			renderCell: (params)=>
 				(<span className="capitalize">{params.value}</span>)
 			,
@@ -56,9 +58,23 @@ const UserAnalytics = () => {
 			editable: false
 		},
 		{
+			headerName: "Valid Until",
+			field: "valid_until",
+			width: 150,
+			renderCell: (params) => {
+				const value = params.row.valid_till.split('T')[0];
+				return (
+				  <span className={`${value === "reseller" ? "bg-success/10 text-success" : "bg-primary/10 text-primary"} badge leading-none rounded-sm capitalize`}>
+					{value}
+				  </span>
+				)
+			},
+			editable: false
+		},
+		{
 			headerName: "User Type",
 			field: "user_type",
-			width: 200,
+			width: 150,
 			renderCell: (params) => {
 				const value = params.row.user_type;
 				return (
@@ -93,6 +109,24 @@ const UserAnalytics = () => {
 				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
 					{value ? "Verified User" : "Unverified User"}
 				  </span>
+				)
+			},
+			editable: false
+		},
+		{
+			headerName: "Single Module",
+			field: "single_module",
+			width: 150,
+			renderCell: (params) => {
+				const value = params.row.email;
+				const handleLimitBox = ()=>{
+					setAccessLimit(true)
+					setUserEmail(value)
+				}
+				return (
+				  <button onClick={handleLimitBox} className={`bg-indigo-400 hover:bg-indigo-600 text-white badge leading-none rounded-sm capitalize`}>
+					Edit Access
+				  </button>
 				)
 			},
 			editable: false
@@ -332,6 +366,10 @@ const UserAnalytics = () => {
 			{
 				limitErr &&
 				<LimitReachedBox/>
+			}
+			{
+				accessLimit &&
+				<UserAccess email={userEmail} closePop={()=>setAccessLimit(false)}/>
 			}
 			{/* {
 				validity &&
