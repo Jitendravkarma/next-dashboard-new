@@ -25,7 +25,7 @@ export const MENUITEMS = [
 
 	{ path: "/admin/user-analytics", icon: Analytics, title: "User Analytics", type: "link", active: false, selected: false },
 
-	// { path: "/admin/resellers", icon: Reseller, title: "Resllers", type: "link", active: false, selected: false },
+	{ path: "/admin/resellers", icon: Reseller, title: "Our Resllers", type: "link", active: false, selected: false },
 
 	// { path: "/admin/resellerKey", icon: Licence, title: "Reseller License Key", type: "link", active: false, selected: false },
 	

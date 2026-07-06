@@ -226,12 +226,15 @@ const UserAnalytics = () => {
 	];
 	
 	const csvHeaders = [
-        { label: "ID", key: "id" },
+        { label: "ID", key: "sn" },
         { label: "Customer Name", key: "name" },
         { label: "Email", key: "email" },
         { label: "Phone", key: "phone" },
-        { label: "Payment Status", key: "payment_status" },
-        { label: "Validity", key: "validity" }
+        { label: "Purchase Code", key: "access_code" },
+		{ label: "Account Activation", key: "account_activation" },
+        { label: "Email Activation", key: "verified" },
+        { label: "Valid Until", key: "valid_till" },
+        { label: "User Type", key: "user_type" }
     ];
 
 	const users = <i className="ri-group-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>

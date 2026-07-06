@@ -338,12 +338,16 @@ const UserAnalytics = () => {
 	];
 	
 	const csvHeaders = [
-        { label: "ID", key: "id" },
+        { label: "ID", key: "sn" },
         { label: "Customer Name", key: "name" },
         { label: "Email", key: "email" },
         { label: "Phone", key: "phone" },
-        { label: "Payment Status", key: "payment_status" },
-        { label: "Validity", key: "validity" }
+        { label: "Purchase Code", key: "access_code" },
+        { label: "Account Activation", key: "account_activation" },
+        { label: "Email Activation", key: "verified" },
+        { label: "Registered On", key: "created_at" },
+        { label: "Valid Until", key: "valid_till" },
+        { label: "User Type", key: "user_type" }
     ];
 
 	const users = <i className="ri-group-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
@@ -462,7 +466,7 @@ const UserAnalytics = () => {
 								<DataTable columns={columns} progressStatus={{isScraping:false}} data={data} hideClear={true} handleDataCount={updateNumOfData} sortOptions={sortOptions}/>
 
 								<div className="px-6 pb-4">
-									<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={data} fileName={"customers-data.csv"}/>
+									<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={data} fileName={"registered-users.csv"}/>
 								</div>
 							</>
 							:

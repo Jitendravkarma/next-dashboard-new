@@ -1,6 +1,6 @@
 
 "use client"
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { ThemeChanger } from "@/shared/redux/action";
 import Modalsearch from "../modal-search/modalsearch";
@@ -8,8 +8,11 @@ import store from "@/shared/redux/store";
 import Link from "next/link";
 import { basePath } from "@/next.config";
 import { useUserContext } from "@/shared/userContext/userContext";
+import { usePathname } from "next/navigation";
 
 const Header = ({ ThemeChanger }) => {
+    const pathName = usePathname();
+    const [ switchUrl, setSwitchUrl ] = useState("");
 
     const { user, handleSignOut, logo, isLoading } = useUserContext()
     
@@ -215,6 +218,13 @@ const Header = ({ ThemeChanger }) => {
         };
     }, []);
 
+    useEffect(()=>{
+        if(pathName.includes('reseller')) 
+            setSwitchUrl('/admin/dashboard');
+        else if(pathName.includes('admin'))
+            setSwitchUrl('/reseller/dashboard');
+    }, [ pathName ])
+
     return (
         <Fragment>
             <header className="header custom-sticky !top-0 !w-full">
@@ -251,6 +261,8 @@ const Header = ({ ThemeChanger }) => {
                             <div className="responsive-headernav">
                                 <div className="header-nav-right">
                                     <div className="header-profile hs-dropdown ti-dropdown" data-hs-dropdown-placement="bottom-right">
+                                        <Link href={switchUrl} className="bg-indigo-500 text-white border border-indigo-500 rounded-sm py-1 px-3 inline-block mr-2">{switchUrl.includes('reseller') ? 'Reseller' : 'Admin'} Dasbhboard</Link>
+
                                         <button id="dropdown-profile" type="button" className="hs-dropdown-toggle ti-dropdown-toggle gap-2 !p-0 !ring-0 !border-0 flex-shrink-0 h-8 w-8 rounded-full !shadow-none focus:ring-gray-400 text-xs dark:focus:ring-white/10">
                                             <i className="ri-user-3-line header-icon"></i>
                                         </button>

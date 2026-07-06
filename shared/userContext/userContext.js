@@ -338,7 +338,7 @@ export const UserProvider = ({ children }) => {
         const allUsers = await getUserData()
         const user_dataAll = allUsers.data.data.records ;
         if(user_dataAll.length){
-          const convert_dataAll = user_dataAll.reverse().map(({id, account_activation, email, phone, created_at, valid_till, name, purchase_code, verified, reseller}, ind)=>{
+          const convert_dataAll = user_dataAll.reverse().map(({id, account_activation, parent_id, company_name, company_registered_year, reseller_phone, reseller_email, email, phone, created_at, valid_till, name, purchase_code, verified, reseller}, ind)=>{
             return {
               sn: ind + 1,
               user_id: id,
@@ -346,6 +346,12 @@ export const UserProvider = ({ children }) => {
               email,
               phone: phone || '-',
               created_at,
+              reseller,
+              parent_id, 
+              company_name, 
+              company_registered_year, 
+              reseller_phone, 
+              reseller_email,
               valid_till,
               account_activation,
               user_type: reseller ? "reseller" : "user",

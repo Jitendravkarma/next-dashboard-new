@@ -5,46 +5,20 @@ import Seo from "@/shared/layout-components/seo/seo";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
-import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { ContactBox, LimitReachedBox, SmsBox, UserAccess, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
+import { updateUserBlock } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
-	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData } = useUserContext()
+	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, allUsersData } = useUserContext()
 	// const [ validity, setValidity ] = useState(false);
 	// const [ userId, setUserId ] = useState(false);
 	const [ data, setData ] = useState([]);
-	// const [adminData ,setAdminData] = useState([
-	// 	{
-    //             "id": 1,
-    //             "name": "animesh",
-    //             "email": "nama.animesh@gmail.com",
-    //             "verified": true,
-    //             "purchase_code": "WEBCRAWLER-1743968252-54f9c2cc",
-    //             "image": null,
-    //             "admin": true,
-    //             "reseller": true,
-    //             "reseller_credits": 100,
-    //             "parent_id": 1,
-    //             "created_at": "2024-07-17T20:07:41.945639Z",
-    //             "updated_at": "2025-04-06T19:37:43.898162Z"
-    //         },
-    //     {
-    //             "id": 2,
-    //             "name": "ani",
-    //             "email": "nama.ani@gmail.com",
-    //             "verified": true,
-    //             "purchase_code": "WEBCRAWLER-1743228252-54f9c2cc",
-    //             "image": null,
-    //             "admin": true,
-    //             "reseller": true,
-    //             "reseller_credits": 100,
-    //             "parent_id": 1,
-    //             "created_at": "2024-07-17T20:07:41.945639Z",
-    //             "updated_at": "2025-04-06T19:37:43.898162Z"
-    //         },
- 
-	// ]);
+	const [ userEmail, setUserEmail ] = useState("")
+	const [ accessLimit, setAccessLimit ] = useState(false)
 	const [ isLoading, setIsLoading ] = useState(false);
+	const [ isResellerUsers, setIsResellerUsers ] = useState(false);
+	const [ resellerRow, setResellerRow ] = useState(null);
 	const columns = [
 		// {
 		// 	field: 'actions',
@@ -58,16 +32,39 @@ const UserAnalytics = () => {
 		// 		);
 		// 	},
 		// },
+		// {
+		// 	headerName: 'S.N',
+		// 	field: 'sn',
+		// 	width: 80,
+		// 	editable: false,
+		// },
 		{
-			headerName: 'S.N',
-			field: 'sn',
-			width: 100,
-			editable: false,
+			headerName: "View Users",
+			field: "reseller_users",
+			width: 150,
+			renderCell: (params) => {
+				const resellerUser = ()=>{
+					console.log(params.row);
+					if(params.row.reseller_email){
+						setIsResellerUsers(true)
+						setResellerRow(params.row);
+					}
+					else {
+						alert(`Reseller doesn't updated their local tool profile!`);
+					}
+				}
+				return (
+				  <button onClick={resellerUser} className={`bg-indigo-400 hover:bg-indigo-600 text-white badge leading-none rounded-sm capitalize`}>
+					Show Users
+				  </button>
+				)
+			},
+			editable: false
 		},
 		{
 			headerName: "User Name",
 			field: "name",
-			width: 300,
+			width: 200,
 			renderCell: (params)=>
 				(<span className="capitalize">{params.value}</span>)
 			,
@@ -79,12 +76,26 @@ const UserAnalytics = () => {
 			width: 300,
 			editable: false
 		},
-		// {
-		// 	headerName: "Phone",
-		// 	field: "phone",
-		// 	width: 170,
-		// 	editable: false
-		// },
+		{
+			headerName: "Phone",
+			field: "phone",
+			width: 250,
+			editable: false
+		},
+		{
+			headerName: "Valid Until",
+			field: "valid_until",
+			width: 150,
+			renderCell: (params) => {
+				const value = params.row.valid_till.split('T')[0];
+				return (
+				  <span className={`${value === "reseller" ? "bg-success/10 text-success" : "bg-primary/10 text-primary"} badge leading-none rounded-sm capitalize`}>
+					{value}
+				  </span>
+				)
+			},
+			editable: false
+		},
 		{
 			headerName: "User Type",
 			field: "user_type",
@@ -100,141 +111,74 @@ const UserAnalytics = () => {
 			editable: false
 		},
 		{
-			headerName: "Block Reseller",
-			field: "Block",
+			headerName: "Paid/Unpaid",
+			field: "access_code",
 			width: 200,
 			renderCell: (params) => {
 				const value = params.row.access_code;
 				return (
-				//   <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
-				// 	{value ? "Paid User" : "Unpaid User"}
-				//   </span>
-				<span>
-					<button className="focus:outline-none text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-900"
-  onClick={(e) => {
-    e.stopPropagation();
-    console.log("Button clicked");
-  }}
->Block</button>
-{/* {value?'Block':'Unblock'} */}
-				</span>
+				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+					{value ? "Paid User" : "Unpaid User"}
+				  </span>
 				)
 			},
 			editable: false
 		},
 		{
-			headerName: "Unblock Reseller",
-			field: "Unblock",
+			headerName: "User Status",
+			field: "verified",
 			width: 200,
 			renderCell: (params) => {
-				const value = params.row.access_code;
+				const value = params.row.verified;
 				return (
-				//   <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
-				// 	{value ? "Paid User" : "Unpaid User"}
-				//   </span>
-				<span>
-					<button className="focus:outline-none text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-100 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-orange-400 dark:hover:bg-orange-500 dark:focus:ring-orange-700"
-  onClick={(e) => {
-    e.stopPropagation();
-    console.log("Button clicked");
-  }}
->Unblock</button>
-{/* {value?'Block':'Unblock'} */}
-				</span>
+				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+					{value ? "Verified User" : "Unverified User"}
+				  </span>
 				)
 			},
 			editable: false
 		},
-// 		{
-// 			headerName: "CRM",
-// 			field: "verified",
-// 			width: 200,
-// 			renderCell: (params) => {
-// 				const value = params.row.verified;
-// 				return (
-// 				  <span>
-// 					<button className="rounded-md p-2 bg-indigo-500 text-white hover:bg-indigo-800 hover:text-white duration-150 text-center"
-//   onClick={(e) => {
-//     e.stopPropagation();
-//     console.log("Button clicked");
-//   }}
-// >Approve CRM</button>
-// 				</span>
-// 				)
-// 			},
-// 			editable: false
-// 		},
-		// {
-		// 	headerName: "Plan Date",
-		// 	field: "plan_date",
-		// 	width: 150,
-		// 	renderCell: (params) => {
-		// 		const value = params.value;
-		// 		return value && (
-		// 		  <span>
-		// 			{value}
-		// 		  </span>
-		// 		)
-		// 	},
-		// 	editable: false
-		// },
-		// {
-		// 	headerName: "Plan Expiry",
-		// 	field: "validity",
-		// 	width: 150,
-		// 	renderCell: (params) => {
-		// 		const value = params.value;
-		// 		const id = params.row.id;
-		// 		const editValidity = ()=>{
-		// 			setValidity(true)
-		// 			setUserId(id)
-		// 			setStartDate(params.row.plan_date)
-		// 		}
-		// 		return value ? (
-		// 		  <span>
-		// 			{
-		// 				params.row.expired ?
-		// 				<span className="text-danger font-semibold" title="Plan expired!">{value}</span>
-		// 				:
-		// 				<span className="font-semibold">{value}</span>
-		// 			}
-		// 		  </span>
-		// 		) : (
-		// 			<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Set Plan Validity">
-		// 				Set Validity
-		// 			</button>
-		// 		);
-		// 	},
-		// 	editable: false
-		// },
-		// {
-		// 	field: 'block',
-		// 	headerName: 'Plan Edit',
-		// 	width: 100,
-		// 	renderCell: (params) => {
-		// 		const id = params.row.id;
-		// 		const editValidity = ()=>{
-		// 			setValidity(true)
-		// 			setUserId(id)
-		// 			setStartDate(params.row.plan_date)
-		// 		}
-		// 		return (
-		// 			<div>
-		// 				<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Edit Plan Validity"><i className="ri-pencil-fill"></i></button>
-		// 			</div>
-		// 		)
-		// 	},
-		// },
+		{
+			headerName: "Block/Unblock",
+			field: "block",
+			width: 200,
+			renderCell: (params) => {
+				const email = params.row.email;
+				const value = params.row.account_activation;
+				const handleBlock = async ()=>{
+					try {
+						const confirmBox = confirm(`Are you sure want to ${value ? 'Block' : 'Unblock'} ${email}?`);
+						if(confirmBox){
+							const updateData = await updateUserBlock(value, {email});
+							console.log(updateData.data);
+							alert(updateData.data.data);
+							window.location.reload();
+						}
+						else {
+							alert(`Request canceled!`)
+						}
+					} catch (error) {
+						alert(`Failed to block/unblock!`);
+					}
+				}
+				return (
+					<button className={`hover:underline`} onClick={handleBlock} title={value ? "Click to Block User" : "Click to Unblock User"}>
+						{value ? "🚫Block User" : "✅Unblock User"}
+					</button>
+				)
+			},
+			editable: false
+		}
 	];
 	
 	const csvHeaders = [
-        { label: "ID", key: "id" },
-        { label: "Customer Name", key: "name" },
-        { label: "Email", key: "email" },
-        { label: "Phone", key: "phone" },
-        { label: "Payment Status", key: "payment_status" },
-        { label: "Validity", key: "validity" }
-    ];
+		{ label: "ID", key: "id" },
+		{ label: "Customer Name", key: "name" },
+		{ label: "Email", key: "email" },
+		{ label: "Phone", key: "phone" },
+		{ label: "Payment Status", key: "payment_status" },
+		{ label: "Validity", key: "validity" }
+	];
 
 	const users = <i className="ri-group-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
 	const clients = <i className="ri-user-follow-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-success/10 text-success leading-none"></i>
@@ -263,8 +207,11 @@ const UserAnalytics = () => {
 	}, [])
 
 	useEffect(()=>{
-		setData(usersData)
-	}, [usersData.length])
+		if(allUsersData.length){
+			const filterResellers = allUsersData.filter(item=>item.reseller);
+			setData(filterResellers);
+		}
+	}, [allUsersData.length])
 
 	useEffect(()=>{
 		if(data.length){
@@ -280,14 +227,23 @@ const UserAnalytics = () => {
 		}
 	}, [data.length])
 
+	useEffect(()=>{
+		if(resellerRow){
+			const filterUsers = allUsersData.filter(item=>item.reseller_email === resellerRow.email);
+			console.log(filterUsers);
+		}
+	}, [resellerRow])
+
+	console.log(resellerRow);
+
 	return (
 		<div>
 			{
 				openSnack &&
 				<Snackbar content={snackMessage} isOpen={openSnack}/>
 			}
-			<Seo title='Reseller List' />
-			<PageHeader currentpage="Reseller List" img="/assets/img/users/profile.png" activepage="Admin" mainpage="Reseller List" />
+			<Seo title='User Analytics' />
+			<PageHeader currentpage="User Analytics" img="/assets/img/users/profile.png" activepage="Reseller" mainpage="User Analytics" />
 			<div className="grid grid-cols-12 gap-x-5">
 				{numOfData.map((idx) => (
 					<div className="col-span-12 md:col-span-4" key={Math.random()}>
@@ -368,6 +324,10 @@ const UserAnalytics = () => {
 			{
 				limitErr &&
 				<LimitReachedBox/>
+			}
+			{
+				accessLimit &&
+				<UserAccess email={userEmail} closePop={()=>setAccessLimit(false)}/>
 			}
 			{/* {
 				validity &&
