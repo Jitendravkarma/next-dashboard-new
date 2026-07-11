@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useUserContext } from "@/shared/userContext/userContext";
 
 const PriceTable = () => {
-  const { priceObj } = useUserContext();
+  const { priceObj, selectedSilverPlan } = useUserContext();
   return (
     <div>
       {/* Header Row */}
@@ -26,8 +26,8 @@ const PriceTable = () => {
           {/* Silver */}
           <div className="py-6">
             <h3 className="font-semibold text-gray-700">Silver Plan</h3>
-            <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{priceObj.silver}/yr</p>
-            <Link target="_blank" href={priceObj.silverLink} className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-semibold">
+            <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{priceObj.pro}/yr</p>
+            <Link target="_blank" href={priceObj.proLink} className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-semibold">
               Buy Now
             </Link>
           </div>
@@ -54,17 +54,18 @@ const PriceTable = () => {
         {/* Rows */}
         {[
           ["Database Access", "10 Million", "50 Million", "100+ Million"],
-          ["License Keys", "200", "1,000", "5,000"],
+          ["License Keys", "200 License Keys", "1,000 License Keys", "5,000 License Keys"],
+          ["Annual Renewal", `${priceObj.priceTag}${priceObj.silverRenewal}`, `${priceObj.priceTag}${priceObj.goldRenewal}`, `Not applicable`],
           ["Sub-reseller Accounts", "✖", "✖", "12 Accounts"],
           ["Billed Annually", "✔", "✔", "✔"],
           ["Downloads", "Unlimited", "Unlimited", "Unlimited"],
           ["White-label Reselling", "✔", "✔", "✔"],
-          ["Chargeable Reseller Activation", "✔", "✔", "✖"],
+          ["Chargeable Reseller Activation", "30% margin for new reseller partners", "50% margin for new reseller partners", "12 Free Sub-reseller Account"],
           ["Priority Onboarding", "✖", "✔", "✔"],
           ["Dedicated Account Manager", "✖", "✖", "✔"],
           ["Contact Support", "Direct Support", "Direct Support", "24/7 Priority Support"],
           ["Google & Meta Advertising Campaign Setup", "✔", "✔", "✔"],
-          ["Customer Leads Support", "✔", "✔", "✔"],
+          ["Customer Support", "✔", "✔", "✔"],
           ["Early Access to New Features", "✖", "✖", "✔"],
         ].map((row, i) => (
           <div

@@ -5,7 +5,7 @@ import axios from "axios";
 import Link from "next/link"; // For navigation links
 import { useState } from "react"; // React hook for state management
 const PriceCards = () => {
-  const { priceObj, isUSDPrice, setIsUSDPrice } = useUserContext();
+  const { priceObj, isUSDPrice, setIsUSDPrice, silverPlans, selectedSilverPlan, setSelectedSilverPlan } = useUserContext();
   
   const [isConverting, setIsConverting] = useState(false);
   
@@ -134,13 +134,19 @@ const PriceCards = () => {
             Silver
           </span>
 
-          <h3 className="text-xl font-bold text-blue-600 mb-1">Silver Plan</h3>
+          <h3 className="flex justify-between items-center gap-2 bg-gray-100 p-2 mb-2 rounded-full">
+            {
+              silverPlans.map((item, idx)=>(
+                <button key={idx} className={`py-1 px-3 rounded-full capitalize ${item.plan_name === selectedSilverPlan.plan_name ? 'bg-blue-500 text-white' : 'text-blue-500 hover:bg-white'}`} onClick={()=>setSelectedSilverPlan(item)}>{item.plan_name}</button>
+              ))
+            }
+          </h3>
           <p className="text-sm text-gray-500 mb-4">
-            Perfect for medium-sized businesses
+            {selectedSilverPlan.sub_title}
           </p>
 
           <div className="flex items-center gap-2 mb-1">
-            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{priceObj.silverOld}/year</p>
+            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{selectedSilverPlan.old_price}/year</p>
             <span className="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full">
               20% Off
             </span>
@@ -148,7 +154,7 @@ const PriceCards = () => {
 
           <div className="flex items-center justify-between mb-5">
             <p className="text-3xl font-extrabold text-gray-900">
-              {priceObj.priceTag}{priceObj.silver} 
+              {priceObj.priceTag}{selectedSilverPlan.price} 
               <span className="text-sm font-medium text-gray-500">/year</span>
             </p>
 
@@ -162,7 +168,7 @@ const PriceCards = () => {
             • Up to 10 million database access
           </div>
 
-          <Link href={priceObj.silverLink} target="_blank" className="block text-center w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-md font-semibold mb-6 transition">
+          <Link href={selectedSilverPlan.price_link} target="_blank" className="block text-center w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-md font-semibold mb-6 transition">
             Buy Silver Plan ↗
           </Link>
 
@@ -172,16 +178,16 @@ const PriceCards = () => {
 
           <ul className="space-y-2 text-sm text-gray-700">
             {[
+              ...selectedSilverPlan.plan_features,
+              `Renewal Fee: ${priceObj.priceTag}${priceObj.silverRenewal} per year will be applicable`,
               "Access to all premium features",
-              "200 License Keys",
               "Full access panel",
               "Direct contact support",
               "Unlimited downloads",
-              "High priority support",
+              "Priority support",
               "White-label reselling",
-              "Chargeable Reseller Activation",
+              "30% margin for new reseller partners",
               "Google & Meta Advertising Campaign Setup",
-              "Customer Leads Support",
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span>✔</span> {item}
@@ -238,15 +244,16 @@ const PriceCards = () => {
             {[
               "Access to all premium features",
               "1,000 License Keys",
+              `Renewal Fee: ${priceObj.priceTag}${priceObj.goldRenewal} per year will be applicable`,
               "Full access panel",
               "Direct contact support",
               "Unlimited downloads",
               "High priority support",
               "White-label reselling",
-              "Chargeable Reseller Activation",
+              "50% margin for new reseller partners",
               "Priority onboarding",
               "Google & Meta Advertising Campaign Setup",
-              "Customer Leads Support",
+              "Customer Support",
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span className="text-orange-500">✔</span> {item}
@@ -300,6 +307,7 @@ const PriceCards = () => {
             {[
               "Access to all premium features",
               "5,000 License Keys",
+              `Renewal Fee: Not applicable`,
               "12 Free Sub-reseller Account",
               "Full access panel",
               "Direct contact support",
@@ -308,7 +316,7 @@ const PriceCards = () => {
               "White-label reselling",
               "Early access to new features",
               "Google & Meta Advertising Campaign Setup",
-              "Customer Leads Support",
+              "Customer Support",
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span className="text-purple-500">✔</span> {item}

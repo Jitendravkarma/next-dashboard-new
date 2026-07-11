@@ -8,17 +8,31 @@ export const useUserContext = () => useContext(UserContext);
 export const UserProvider = ({ children }) => {
 
   const defaultPrices = {
-    silver: "24,999", 
+    lite: "8,750",
+    liteOld: "10,938",
+    basic: "14,999",
+    basicOld: "18,750",
+    standard: "20,999",
+    standardOld: "26,250",
+    pro: "24,999", 
     gold: "74,999", 
     platinum: "1,49,999", 
-    silverOld: "31,248", 
+    proOld: "31,250", 
     goldOld: '93,750', 
     platinumOld: '2,00,000',
-    silverLink: "https://rzp.io/rzp/Mr9bmyT", 
+    liteLink: "https://rzp.io/rzp/tg2J9z0", 
+    basicLink: "https://rzp.io/rzp/K0F7QO1d", 
+    standardLink: "https://rzp.io/rzp/ZXfq7mDE", 
+    proLink: "https://rzp.io/rzp/Mr9bmyT", 
     goldLink: "https://rzp.io/rzp/zqZEWbt", 
     platinumLink: "https://rzp.io/rzp/TRAw3NDe", 
-    priceTag: "₹"
+    priceTag: "₹",
+    silverRenewal: "5,000",
+    goldRenewal: "3,000",
+    platinumRenewal: "2,000",
   }
+  const [ selectedSilverPlan, setSelectedSilverPlan ] = useState({ plan_name: 'basic', price: "", old_price: "", price_link: "", sub_title: 'Perfect for growing small businesses', plan_features: [] });
+  const [ silverPlans, setSilverPlans ] = useState([]);
   const [isVerfified, setIsVerified] = useState(true); // Initialize with false
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Initialize with false
   const [isAdmin, setIsAdmin] = useState(false);
@@ -421,16 +435,28 @@ export const UserProvider = ({ children }) => {
   useEffect(()=>{
     if(isUSDPrice){
       setPriceObj({
-        silver: "269.00", 
+        lite: "92.00",
+        liteOld: "108.00",
+        basic: "157.00",
+        basicOld: "185.00",
+        standard: "221.00",
+        standardOld: "260.00",
+        pro: "269.00", 
         gold: "799.00", 
         platinum: "1,599.00", 
-        silverOld: "336.25", 
+        proOld: "336.25", 
         goldOld: '998.75', 
         platinumOld: '2132.00',
-        silverLink: "https://rzp.io/rzp/NrpkcUjZ", 
+        liteLink: "https://rzp.io/rzp/ywOr3Rp", 
+        basicLink: "https://rzp.io/rzp/yJF9b9N", 
+        standardLink: "https://rzp.io/rzp/Dzx15P4w", 
+        proLink: "https://rzp.io/rzp/NrpkcUjZ", 
         goldLink: "https://rzp.io/rzp/Pn7WLGU", 
         platinumLink: "https://rzp.io/rzp/puCDvvd", 
-        priceTag: "$"
+        priceTag: "$",
+        silverRenewal: "53.00",
+        goldRenewal: "42.00",
+        platinumRenewal: "21.00",
       })
     }
     else {
@@ -615,9 +641,22 @@ export const UserProvider = ({ children }) => {
     }
   }
 
+  useEffect(()=>{
+    if(priceObj){
+      const plans = [
+        { plan_name: 'lite', price: priceObj.lite, old_price: priceObj.liteOld, price_link: priceObj.liteLink, sub_title: 'Perfect for individuals and small businesses', plan_features: ["50 License Keys"] },
+        { plan_name: 'basic', price: priceObj.basic, old_price: priceObj.basicOld, price_link: priceObj.basicLink, sub_title: 'Perfect for growing small businesses', plan_features: ["100 License Keys"] },
+        { plan_name: 'standard', price: priceObj.standard, old_price: priceObj.standardOld, price_link: priceObj.standardLink, sub_title: 'Perfect for medium-sized businesses', plan_features: ["150 License Keys"] },
+        { plan_name: 'pro', price: priceObj.pro, old_price: priceObj.proOld, price_link: priceObj.proLink, sub_title: 'Perfect for large businesses and enterprises', plan_features: ["200 License Keys"] },
+      ]
+      setSilverPlans(plans);
+      setSelectedSilverPlan(plans[1]);
+    }
+  }, [ priceObj ]);
+
   return (
     <UserContext.Provider
-      value={{ priceObj, isUSDPrice, setIsUSDPrice, user, usersData,allUsersData, productUrl, localUser, logo, years, DOCS, yt_channel, yt_links, dynamicSocialLinks, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail, validityBoxClose, validity, allocateKeyBoxClose, allocateKeyBox }}
+      value={{ priceObj, isUSDPrice, setIsUSDPrice, user, usersData,allUsersData, productUrl, localUser, logo, years, DOCS, yt_channel, yt_links, dynamicSocialLinks, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail, validityBoxClose, validity, allocateKeyBoxClose, allocateKeyBox, silverPlans, selectedSilverPlan, setSelectedSilverPlan }}
     >
       {children}
     </UserContext.Provider>
