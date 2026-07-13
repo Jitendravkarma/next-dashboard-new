@@ -31,7 +31,7 @@ export const UserProvider = ({ children }) => {
     goldRenewal: "3,000",
     platinumRenewal: "2,000",
   }
-  const [ selectedSilverPlan, setSelectedSilverPlan ] = useState({ plan_name: 'basic', price: "", old_price: "", price_link: "", sub_title: 'Perfect for growing small businesses', plan_features: [] });
+  const [ selectedSilverPlan, setSelectedSilverPlan ] = useState({ plan_name: 'pro', price: '24,999', old_price: "31,250", price_link: "https://rzp.io/rzp/Mr9bmyT", sub_title: 'Perfect for large businesses and enterprises', plan_features: ["200 License Keys"] });
   const [ silverPlans, setSilverPlans ] = useState([]);
   const [isVerfified, setIsVerified] = useState(true); // Initialize with false
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Initialize with false
@@ -650,7 +650,7 @@ export const UserProvider = ({ children }) => {
         { plan_name: 'pro', price: priceObj.pro, old_price: priceObj.proOld, price_link: priceObj.proLink, sub_title: 'Perfect for large businesses and enterprises', plan_features: ["200 License Keys"] },
       ]
       setSilverPlans(plans);
-      setSelectedSilverPlan(plans[1]);
+      setSelectedSilverPlan(plans[3]);
     }
   }, [ priceObj ]);
 
