@@ -133,6 +133,20 @@ const UserAnalytics = () => {
 		// 	editable: false
 		// },
 		{
+			headerName: "User Status",
+			field: "verified",
+			width: 200,
+			renderCell: (params) => {
+				const value = params.row.verified;
+				return (
+					<span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+					{value ? "Verified User" : "Unverified User"}
+					</span>
+				)
+			},
+			editable: false
+		},
+		{
 			headerName: "User Type",
 			field: "user_type",
 			width: 100,

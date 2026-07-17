@@ -134,13 +134,14 @@ const PriceCards = () => {
             Silver
           </span>
 
-          <h3 className="flex justify-between items-center gap-2 bg-gray-100 p-2 mb-2 rounded-full">
+          <h3 className="text-xl font-bold text-blue-600 mb-1">Silver Plan</h3>
+          {/* <h3 className="flex justify-between items-center gap-2 bg-gray-100 p-2 mb-2 rounded-full">
             {
               silverPlans.map((item, idx)=>(
                 <button key={idx} className={`py-1 px-3 rounded-full capitalize ${item.plan_name === selectedSilverPlan.plan_name ? 'bg-blue-500 text-white' : 'text-blue-500 hover:bg-white'}`} onClick={()=>setSelectedSilverPlan(item)}>{item.plan_name}</button>
               ))
             }
-          </h3>
+          </h3> */}
           <p className="text-sm text-gray-500 mb-4">
             {selectedSilverPlan.sub_title}
           </p>
@@ -178,9 +179,8 @@ const PriceCards = () => {
 
           <ul className="space-y-2 text-sm text-gray-700">
             {[
-              ...selectedSilverPlan.plan_features,
-              `Renewal Fee: ${priceObj.priceTag}${priceObj.silverRenewal} per year will be applicable`,
               "Access to all premium features",
+              ...selectedSilverPlan.plan_features,
               "Full access panel",
               "Direct contact support",
               "Unlimited downloads",
@@ -244,7 +244,6 @@ const PriceCards = () => {
             {[
               "Access to all premium features",
               "1,000 License Keys",
-              `Renewal Fee: ${priceObj.priceTag}${priceObj.goldRenewal} per year will be applicable`,
               "Full access panel",
               "Direct contact support",
               "Unlimited downloads",
@@ -307,7 +306,6 @@ const PriceCards = () => {
             {[
               "Access to all premium features",
               "5,000 License Keys",
-              `Renewal Fee: Not applicable`,
               "12 Free Sub-reseller Account",
               "Full access panel",
               "Direct contact support",

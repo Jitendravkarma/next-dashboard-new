@@ -55,7 +55,6 @@ const PriceTable = () => {
         {[
           ["Database Access", "10 Million", "50 Million", "100+ Million"],
           ["License Keys", "200 License Keys", "1,000 License Keys", "5,000 License Keys"],
-          ["Annual Renewal", `${priceObj.priceTag}${priceObj.silverRenewal}`, `${priceObj.priceTag}${priceObj.goldRenewal}`, `Not applicable`],
           ["Sub-reseller Accounts", "✖", "✖", "12 Accounts"],
           ["Billed Annually", "✔", "✔", "✔"],
           ["Downloads", "Unlimited", "Unlimited", "Unlimited"],
