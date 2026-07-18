@@ -133,6 +133,20 @@ const UserAnalytics = () => {
 		// 	editable: false
 		// },
 		{
+			headerName: "Paid/Unpaid",
+			field: "access_code",
+			width: 200,
+			renderCell: (params) => {
+				const value = params.row.access_code;
+				return (
+					<span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+					{value ? "Paid User" : "Unpaid User"}
+					</span>
+				)
+			},
+			editable: false
+		},
+		{
 			headerName: "User Status",
 			field: "verified",
 			width: 200,
