@@ -3,6 +3,7 @@ import { seo_pricing } from "@/shared/data/seo-content/content";
 import Link from "next/link";
 import PriceCards from "@/shared/layout-components/public-comp/PriceCards";
 import PriceTable from "@/shared/layout-components/public-comp/PriceTable";
+import PriceCredits from "@/shared/layout-components/public-comp/PriceCredits";
 
 export const metadata = seo_pricing
 
@@ -136,9 +137,15 @@ const PricingPage = () => {
         <PriceCards/>
       </section>
 
-      <section className="py-20 px-6 bg-gray-50">
-        <PriceTable/>
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <PriceTable/>
+        </div>
       </section>
+      
+      {/* <section className="py-20 bg-gray-50">
+        <PriceCredits/>
+      </section> */}
 
       <section className="relative py-24 px-6 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e293b] text-center overflow-hidden" id="whatsapp-contact">
   

@@ -20,7 +20,7 @@ const PriceTable = () => {
         </p>
       </div>
       
-      <div className="max-w-6xl mx-auto bg-white border border-gray-200 rounded-md overflow-hidden shadow">
+      <div className="px-6 max-w-7xl mx-auto bg-white border border-gray-200 rounded-md overflow-hidden shadow">
         <div className="grid grid-cols-4 text-center border-b bg-white">
           <div></div>
           {/* Silver */}

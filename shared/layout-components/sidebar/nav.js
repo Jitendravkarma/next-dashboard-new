@@ -29,7 +29,7 @@ export const MENUITEMS = [
 		menutitle: "Settings",
 	},
 
-	{ path: "/reseller/profile", icon: Profile, title: "Profile", type: "link", active: false, selected: false },
+	// { path: "/reseller/profile", icon: Profile, title: "Profile", type: "link", active: false, selected: false },
 	
 	{ path: "/reseller/smtp", icon: SMTP, title: "SMTP", type: "link", active: false, selected: false },
 	

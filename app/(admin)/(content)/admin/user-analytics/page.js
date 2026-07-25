@@ -249,120 +249,36 @@ const UserAnalytics = () => {
 			editable: false
 		},
 		{
-			headerName: 'Block/Unblock',
-			field: 'block_unblock',
-			width: 150,
+			headerName: "Block/Unblock",
+			field: "block",
+			width: 200,
 			renderCell: (params) => {
 				const email = params.row.email;
 				const value = params.row.account_activation;
 				const handleBlock = async ()=>{
-					if(value){
-						alert(`User already activated!`)
-						return;
-					}
 					try {
 						const confirmBox = confirm(`Are you sure want to ${value ? 'Block' : 'Unblock'} ${email}?`);
 						if(confirmBox){
-							const updateData = await activeReseller(email);
-							// console.log(updateData);
-							alert(`User unblocked successfully!`);
+							const updateData = await updateUserBlock(value, {email});
+							console.log(updateData.data);
+							alert(updateData.data.data);
 							window.location.reload();
 						}
 						else {
 							alert(`Request canceled!`)
 						}
 					} catch (error) {
-						alert(`Failed to unblock!`);
+						alert(`Failed to block/unblock!`);
 					}
 				}
 				return (
 					<button className={`hover:underline`} onClick={handleBlock} title={value ? "Click to Block User" : "Click to Unblock User"}>
-						{value ? "-" : "✅Unblock User"}
+						{value ? "🚫Block User" : "✅Unblock User"}
 					</button>
 				)
 			},
-			editable: false,
-		},
-// 		{
-// 			headerName: "CRM",
-// 			field: "verified",
-// 			width: 200,
-// 			renderCell: (params) => {
-// 				const value = params.row.verified;
-// 				return (
-// 				  <span>
-// 					<button className="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-full text-sm px-5 py-2.5 mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-900"
-//   onClick={(e) => {
-//     e.stopPropagation();
-//     console.log("Button clicked");
-//   }}
-// >Approve CRM</button>
-// 				</span>
-// 				)
-// 			},
-// 			editable: false
-// 		},
-		// {
-		// 	headerName: "Plan Date",
-		// 	field: "plan_date",
-		// 	width: 150,
-		// 	renderCell: (params) => {
-		// 		const value = params.value;
-		// 		return value && (
-		// 		  <span>
-		// 			{value}
-		// 		  </span>
-		// 		)
-		// 	},
-		// 	editable: false
-		// },
-		// {
-		// 	headerName: "Plan Expiry",
-		// 	field: "validity",
-		// 	width: 150,
-		// 	renderCell: (params) => {
-		// 		const value = params.value;
-		// 		const id = params.row.id;
-		// 		const editValidity = ()=>{
-		// 			setValidity(true)
-		// 			setUserId(id)
-		// 			setStartDate(params.row.plan_date)
-		// 		}
-		// 		return value ? (
-		// 		  <span>
-		// 			{
-		// 				params.row.expired ?
-		// 				<span className="text-danger font-semibold" title="Plan expired!">{value}</span>
-		// 				:
-		// 				<span className="font-semibold">{value}</span>
-		// 			}
-		// 		  </span>
-		// 		) : (
-		// 			<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Set Plan Validity">
-		// 				Set Validity
-		// 			</button>
-		// 		);
-		// 	},
-		// 	editable: false
-		// },
-		// {
-		// 	field: 'block',
-		// 	headerName: 'Plan Edit',
-		// 	width: 100,
-		// 	renderCell: (params) => {
-		// 		const id = params.row.id;
-		// 		const editValidity = ()=>{
-		// 			setValidity(true)
-		// 			setUserId(id)
-		// 			setStartDate(params.row.plan_date)
-		// 		}
-		// 		return (
-		// 			<div>
-		// 				<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Edit Plan Validity"><i className="ri-pencil-fill"></i></button>
-		// 			</div>
-		// 		)
-		// 	},
-		// },
+			editable: false
+		}
 	];
 	
 	const csvHeaders = [

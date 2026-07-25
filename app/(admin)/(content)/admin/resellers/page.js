@@ -234,8 +234,6 @@ const UserAnalytics = () => {
 		}
 	}, [resellerRow])
 
-	console.log(resellerRow);
-
 	return (
 		<div>
 			{
