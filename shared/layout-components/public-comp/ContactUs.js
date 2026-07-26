@@ -300,7 +300,7 @@ const ContactUs = () => {
                                             target='_blank'
                                             className='w-full xl:w-auto inline-block bg-transparent text-green-500 font-semibold text-sm px-4 py-2 rounded-full shadow-md border-2 border-green-500 hover:bg-gradient-to-r hover:from-green-500 hover:to-green-700 hover:text-white hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out'
                                         >
-                                            <i className="ri-whatsapp-fill"></i> What'sApp
+                                            <i className="ri-whatsapp-fill"></i> WhatsApp
                                         </a>
                                     }
                                     <a

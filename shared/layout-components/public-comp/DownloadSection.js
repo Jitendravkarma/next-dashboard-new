@@ -19,7 +19,7 @@ const DownloadSection = () => {
       icon: "ri-phone-line"
     },
     {
-      title: "Whats'App Now",
+      title: "WhatsApp Now",
       url: `https://wa.me/${resellerContactInfo.phone.replace(/[\s()\-\+]/g, '')}`,
       icon: "ri-whatsapp-line"
     },

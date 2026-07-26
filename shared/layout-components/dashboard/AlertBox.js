@@ -302,7 +302,7 @@ const WhatsappBox = memo(({closePop, code="", message}) => {
                         <i className="ri-whatsapp-fill"></i>
                       </div>
                       <div className="block pl-2 font-semibold text-xl self-start text-gray-700">
-                          <h2 className="leading-relaxed text-green-600">What'sApp Now!</h2>
+                          <h2 className="leading-relaxed text-green-600">WhatsApp Now!</h2>
                           <p className="text-sm text-gray-500 font-normal leading-relaxed">Send sms on whatsapp and grow your bussiness.</p>
                       </div>
                   </div>
@@ -332,7 +332,7 @@ const WhatsappBox = memo(({closePop, code="", message}) => {
                               <div className="relative focus-within:text-gray-600 text-gray-400">
                               <textarea type="text" value={whatsAppMsg} rows={5} onChange={(e)=>setWhatsAppMsg(e.target.value)} className="px-2 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Type your message"/>
                               </div>
-                              <p className='text-red-500 text-xs mt-1'>Please log in to <Link href={"https://web.whatsapp.com/"} target='_blank' className='font-bold underline hover:italic' title={`Click for What'sApp login`}>Web WhatsApp</Link> before sending messages.</p>
+                              <p className='text-red-500 text-xs mt-1'>Please log in to <Link href={"https://web.whatsapp.com/"} target='_blank' className='font-bold underline hover:italic' title={`Click for WhatsApp login`}>Web WhatsApp</Link> before sending messages.</p>
                           </div>
                       </div>
                       <div className="pt-4 flex items-center space-x-4">
