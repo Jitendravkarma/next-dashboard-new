@@ -43,7 +43,6 @@ const ContactUs = () => {
             name: "Naveen Sharma",
             role: "Manager",
             gen: 'm',
-            desc: "Manager of the Company",
             phone: "919171677633",
             email: false,
             whatsapp: true,
@@ -58,158 +57,113 @@ const ContactUs = () => {
             name: "Mukesh Gehlot",
             role: "Sales Head",
             gen: 'm',
-            desc: "Manager of the Company",
             phone: "917987887047",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "https://www.facebook.com/mukesh.gehlot.mewada/"},
-                {social_icon: "twitter", social_link: "https://x.com/mukesh019"},
-                {social_icon: "linkedin", social_link: "https://www.linkedin.com/in/msgehlot/"},
-            ],
+            // social_links: [
+            //     {social_icon: "facebook", social_link: "https://www.facebook.com/mukesh.gehlot.mewada/"},
+            //     {social_icon: "twitter", social_link: "https://x.com/mukesh019"},
+            //     {social_icon: "linkedin", social_link: "https://www.linkedin.com/in/msgehlot/"},
+            // ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/78e2bd04-64b7-5545-0bb8-00442df970ea.png"
         },
         {
             name: "Animesh Nama",
             role: "Technical Head",
             gen: 'm',
-            desc: "Technical Support",
             phone: "919171677633",
             email: 'support@designcollection.in',
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/17920786-befe-b79f-51ed-c545ea54702d.png"
         },
         {
             name: "Jitendra Karma",
             role: "Technical Support",
             gen: 'm',
-            desc: "He is a Good Technical Support Team Member",
             phone: "917067946921",
             email: 'support@designcollection.in',
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/c7dda43c-a9d6-1e56-68e7-70f5947ef73e.png"
         },
         {
             name: "Poonam Adlak",
             role: "Sales Support",
             gen: 'f',
-            desc: "She is a sales person very good communication",
             phone: "916267642478",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/02edafed-34d3-f76d-376d-64603fda8b36.png"
         },
         {
             name: "Pooja Kshtriya",
             role: "Sales Support",
             gen: 'f',
-            desc: "She is a sales person very good communication",
             phone: "918982563657",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/437e07eb-956e-0f14-ea08-cda03b2f1f2d.png"
         },
         {
             name: "Kritika Sharma",
             role: "Sales Support",
             gen: 'f',
-            desc: "She is a sales person very good communication",
             phone: "918383064269",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/1d21ad7f-8bbd-2d8d-9aee-c35229a85128.png"
         },
         {
             name: "Priya Sourashtriya",
             role: "Sales Support",
             gen: 'f',
-            desc: "She is a sales person very good communication",
             phone: "916267640091",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/5a82e969-63a6-c057-8c3c-98494ad8cc71.png"
         },
         {
             name: "Tanisha Solanki",
             role: "Sales Support",
             gen: 'f',
-            desc: "She is a sales person very good communication",
             phone: "919354652094",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/d66801c4-0397-f2c6-9dd3-b38a7f3296a8.png"
         },
         {
             name: "Sahara Narvariya",
             role: "Sales Support",
             gen: 'f',
-            desc: "She is a sales person very good communication",
             phone: "919343740544",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/af50f24c-67d6-9126-8e79-63fd58b0e650.png"
         },
         {
             name: "Sneha Agrawal",
             role: "Sales Support",
             gen: 'f',
-            desc: "She is a sales person very good communication",
             phone: "917389912139",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/714c10ae-e0f3-07c3-d74e-22a8ee0a2d10.png"
         },
         {
             name: "Jaya Puware",
             role: "Sales Support",
             gen: 'f',
-            desc: "She is a sales person very good communication",
             phone: "918349257428",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/13487edd-cb56-c3af-29ba-d2d822fdec3c.png"
         },
         {
-            name: "Shurti Parashar",
+            name: "Shruti Parashar",
             role: "Sales Support",
             gen: 'f',
-            desc: "She is a sales person very good communication",
             phone: "917898287428",
             email: false,
             whatsapp: true,
-            social_links: [
-                {social_icon: "facebook", social_link: "/contact"}
-            ],
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/5bfb20cb-3faa-00e5-36a6-5040bc605094.png"
         },
     ]

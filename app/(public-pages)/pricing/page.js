@@ -144,7 +144,9 @@ const PricingPage = () => {
       </section>
       
       {/* <section className="py-20 bg-gray-50">
-        <PriceCredits/>
+        <div className="max-w-7xl mx-auto px-6">
+          <PriceCredits/>
+        </div>
       </section> */}
 
       <section className="relative py-24 px-6 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e293b] text-center overflow-hidden" id="whatsapp-contact">
