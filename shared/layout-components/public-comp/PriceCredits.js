@@ -2,6 +2,7 @@
 import { useUserContext } from '@/shared/userContext/userContext';
 import Link from 'next/link';
 import React, { useState } from 'react'
+import { Tooltip } from './Button';
 
 const PriceCredits = () => {
     const { isUSDPrice, setIsUSDPrice, priceObj } = useUserContext();
@@ -65,25 +66,6 @@ const PriceCredits = () => {
                 buyLink: priceObj.thirdEmailSendBuy
             },
         },
-        // {
-        //     name: "AI Message Generator",
-        //     des: "Generate multiple AI message",
-        //     '50': {
-        //         credits: 50000,
-        //         price: priceObj.firstAI,
-        //         buyLink: priceObj.firstAIBuy
-        //     },
-        //     '75': {
-        //         credits: 75000,
-        //         price: priceObj.secondAI,
-        //         buyLink: priceObj.secondAIBuy
-        //     },
-        //     '100': {
-        //         credits: 100000,
-        //         price: priceObj.thirdAI,
-        //         buyLink: priceObj.thirdAIBuy
-        //     },
-        // },
         {
             name: "GST Verifier",
             des: "Check a GST number and get its information including contact info",
@@ -101,6 +83,25 @@ const PriceCredits = () => {
                 credits: 100000,
                 price: priceObj.thirdGST,
                 buyLink: priceObj.thirdGSTBuy
+            },
+        },
+         {
+            name: "AI Message Generator",
+            des: "Generate multiple AI message and email content",
+            '50': {
+                credits: 50000,
+                price: priceObj.firstAI,
+                buyLink: priceObj.firstAIBuy
+            },
+            '75': {
+                credits: 75000,
+                price: priceObj.secondAI,
+                buyLink: priceObj.secondAIBuy
+            },
+            '100': {
+                credits: 100000,
+                price: priceObj.thirdAI,
+                buyLink: priceObj.thirdAIBuy
             },
         },
     ];
@@ -145,9 +146,9 @@ const PriceCredits = () => {
                     <th className="px-6 py-5 text-center font-semibold capitalize">
                       Monthly Price
 
-                      <button className='ml-2 text-blue-500 text-xs py-1 px-2 border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white' onClick={loadPrice}>
+                      {/* <button className='ml-2 text-blue-500 text-xs py-1 px-2 border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white' onClick={loadPrice}>
                           {isUSDPrice ? 'INR' : 'USD'}
-                      </button>
+                      </button> */}
                     </th>
 
                     <th className="px-8 py-5 text-center">
@@ -200,7 +201,24 @@ const PriceCredits = () => {
                       <td className="px-6 py-6 text-center">
 
                         <span className="rounded-full bg-indigo-100 px-4 py-2 text-sm font-bold text-indigo-700">
-                          {switchCredit === '50' ? '50k' : switchCredit === '75' ? '75k' : '100k'}
+                          {
+                            plan.name.toLowerCase() === 'ai message generator' ? 
+                            <Tooltip
+                              width="w-36"
+                              position="bottom"
+                              content={`${switchCredit === '50' ? '1' : switchCredit === '75' ? '3' : '5'} Million tokens per month`}
+                            >
+                              <span tabIndex={0}>{switchCredit === '50' ? '1M' : switchCredit === '75' ? '3M' : '5M'}</span>
+                            </Tooltip>
+                            :
+                            <Tooltip
+                              width="w-36"
+                              position="bottom"
+                              content={`${switchCredit === '50' ? '50,000' : switchCredit === '75' ? '75,000' : '100,000'} credits per month`}
+                            >
+                              <span tabIndex={0}>{switchCredit === '50' ? '50k' : switchCredit === '75' ? '75k' : '100k'}</span>
+                            </Tooltip>
+                          }
                         </span>
 
                       </td>

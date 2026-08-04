@@ -98,6 +98,7 @@ const GenerateLicence = () => {
 				return {
 					licence_code: purchase_code, 
 					allocated: asigned_user_email ? asigned_user_email : false, 
+					allocated_phone: false, 
 					email: asigned_user_email, 
 					created_date: `${day}-${month}-${year}`,
 					available: asigned_user_email ? false : true
@@ -276,8 +277,9 @@ const GenerateLicence = () => {
 												<th scope="col" className="!p-[0.65rem]">Generated At</th>
 												<th scope="col" className="text-center !p-[0.65rem]">Share On</th>
 												<th scope="col" className="text-center !p-[0.65rem]">Licence Code</th>
-												<th scope="col" className="!p-[0.65rem]">Allocated To</th>
-												<th scope="col" className="!p-[0.65rem]">Licence Availability</th>
+												<th scope="col" className="!p-[0.65rem]">Email</th>
+												<th scope="col" className="!p-[0.65rem]">Phone</th>
+												{/* <th scope="col" className="!p-[0.65rem]">Licence Availability</th> */}
 											</tr>
 										</thead>
 										<tbody>
@@ -291,7 +293,7 @@ const GenerateLicence = () => {
 														<button className="" onClick={()=>convertAndReturnNum(dt.licence_code)}>
 															<i className="ri-whatsapp-fill text-green-500 hover:text-white  hover:bg-indigo-500 bg-primary/10 leading-none p-2 rounded-full bg-gray-100 text-lg"></i>
 														</button>
-														<a href={`mailto:${dt.allocated? dt.allocated : "example@mail.com"}?subject=Scrap Genius Activation Key Inside!&body=Thank you for purchasing *SCRAPE GENIUS* 🎉,%0A%0A Your activation key is: ${dt.licence_code}*,%0A%0A With this key, you can now scrape unlimited leads using Scrap Genius. 🚀,%0A%0A
+														<a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${dt.allocated? dt.allocated : "example@mail.com"}&su=Scrap Genius Activation Key Inside!&body=Thank you for purchasing *SCRAPE GENIUS* 🎉,%0A%0A Your activation key is: ${dt.licence_code}*,%0A%0A With this key, you can now scrape unlimited leads using Scrap Genius. 🚀,%0A%0A
 														If you need any help with setup or usage, feel free to reach out to us anytime.
 														*Best regards*,%0A%0A
 														Team Scrap Genius`} target="_blank">
@@ -307,9 +309,12 @@ const GenerateLicence = () => {
 													<td className="!p-[0.65rem] text-sm">
 														{dt.allocated ? dt.allocated : "Not Allocated"}
 													</td>
-													<td className={`!p-[0.65rem] text-sm ${!dt.available && "text-danger"}`}>
-														{dt.available ? "Available" : "Not Available"}
+													<td className="!p-[0.65rem] text-sm">
+														{dt?.allocated_phone ? dt?.allocated_phone : "Not Allocated"}
 													</td>
+													{/* <td className={`!p-[0.65rem] text-sm ${!dt.available && "text-danger"}`}>
+														{dt.available ? "Available" : "Not Available"}
+													</td> */}
 												</tr>
 												))
 											}

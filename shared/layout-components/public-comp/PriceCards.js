@@ -159,10 +159,10 @@ const PriceCards = () => {
               <span className="text-sm font-medium text-gray-500">/year</span>
             </p>
 
-            <button className="flex items-center gap-1 text-xs text-indigo-600 bg-indigo-100 hover:bg-indigo-200 px-3 py-1 rounded-md" onClick={loadPrice} title={isUSDPrice ? "Switch to INR" : "Switch to USD"}>
+            {/* <button className="flex items-center gap-1 text-xs text-indigo-600 bg-indigo-100 hover:bg-indigo-200 px-3 py-1 rounded-md" onClick={loadPrice} title={isUSDPrice ? "Switch to INR" : "Switch to USD"}>
               <i className={`ri-exchange-dollar-line inline-block ${isConverting ? "animate-spin" : ""} text-lg`}></i>
               {isUSDPrice ? "Convert to INR" : "Convert to USD"}
-            </button>
+            </button> */}
           </div>
 
           <div className="bg-gray-200 text-gray-700 text-sm rounded-md px-4 py-3 mb-4">
