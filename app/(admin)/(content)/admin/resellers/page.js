@@ -1,5 +1,5 @@
 "use client"
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
@@ -7,13 +7,15 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { ContactBox, LimitReachedBox, SmsBox, UserAccess, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
-import { updateUserBlock } from "@/shared/apis/api";
+import { fetchResellerUsers, resellerList, updateResellerLicence, updateUserBlock } from "@/shared/apis/api";
+import axios from "axios";
 
 const UserAnalytics = () => {
-	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, allUsersData } = useUserContext()
+	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage } = useUserContext()
 	// const [ validity, setValidity ] = useState(false);
 	// const [ userId, setUserId ] = useState(false);
 	const [ data, setData ] = useState([]);
+	const [ usersData, setUsersData ] = useState([]);
 	const [ userEmail, setUserEmail ] = useState("")
 	const [ accessLimit, setAccessLimit ] = useState(false)
 	const [ isLoading, setIsLoading ] = useState(false);
@@ -42,16 +44,18 @@ const UserAnalytics = () => {
 			headerName: "View Users",
 			field: "reseller_users",
 			width: 150,
-			renderCell: (params) => {
-				const resellerUser = ()=>{
-					console.log(params.row);
-					if(params.row.reseller_email){
-						setIsResellerUsers(true)
-						setResellerRow(params.row);
+			renderCell: ({row}) => {
+				const resellerUser = async ()=>{
+					console.log(row);
+					setIsResellerUsers(true)
+					try {
+						const users = await fetchResellerUsers(row.user_id);
+						console.log(users);
+						if(users.length) setUsersData(users);
+					} catch (error) {
+						console.log(error)
 					}
-					else {
-						alert(`Reseller doesn't updated their local tool profile!`);
-					}
+					setIsResellerUsers(false)
 				}
 				return (
 				  <button onClick={resellerUser} className={`bg-indigo-400 hover:bg-indigo-600 text-white badge leading-none rounded-sm capitalize`}>
@@ -59,6 +63,54 @@ const UserAnalytics = () => {
 				  </button>
 				)
 			},
+			editable: false
+		},
+		{
+			headerName: "Allot Licences",
+			field: "limit",
+			width: 180,
+			renderCell: (params) => {
+				const inputRef = useRef();
+				const [ days, setDays ] = useState("");
+				const [ isUpdating, setIsUpdating ] = useState(false);
+				return (
+					<div className="flex items-center gap-2 h-full justify-between">
+						<input value={days} ref={inputRef} placeholder="No of Licence" onChange={(e)=>setDays(e.target.value)} className="border border-indigo-300 w-24 focus-within:border-2 focus-within:border-indigo-700 py-1 px-2 text-xs rounded-sm"/>
+						<button disabled={isUpdating} className={`disabled:cursor-not-allowed disabled:animate-pulse focus:outline-none text-white font-medium rounded-sm text-xs px-2 p-1 bg-indigo-500 border border-indigo-500 hover:bg-indigo-600`}
+							onClick={(e) => {
+								if(!days) {
+									inputRef.current.focus();
+									return;
+								};
+								const approve = async()=>{
+									setIsUpdating(true);
+									try {
+										const resp = await updateResellerLicence({ email: params.row.email, no_of_licences: Number(days) });
+										alert(`Licences updated successfully!`);
+										// window.location.reload();
+									} catch (error) {
+										console.log(error)
+									} finally {
+										setIsUpdating(false);
+									}
+								} 
+								approve();
+							}}
+						>
+							{isUpdating ? "Updating..." : "Update"}
+						</button>
+					</div>
+				)
+			},
+			editable: false
+		},
+		{
+			headerName: "Allotted Licences",
+			field: "lisence_alloted",
+			width: 200,
+			renderCell: (params)=>
+				(<span className="capitalize">{params.row.lisence_alloted}</span>)
+			,
 			editable: false
 		},
 		{
@@ -207,11 +259,39 @@ const UserAnalytics = () => {
 	}, [])
 
 	useEffect(()=>{
-		if(allUsersData.length){
-			const filterResellers = allUsersData.filter(item=>item.reseller);
-			setData(filterResellers);
+		const resellerFun = async ()=>{
+			try {
+				const fetchResellers = await resellerList();
+				const list = fetchResellers.records;
+				const convert_dataAll = list.reverse().map(({id, account_activation, parent_id, company_name, company_registered_year, reseller_phone, reseller_email, email, phone, created_at, valid_till, name, purchase_code, lisence_alloted, verified, reseller}, ind)=>{
+					return {
+						sn: ind + 1,
+						user_id: id,
+						name,
+						email,
+						phone: phone || '-',
+						created_at,
+						reseller,
+						parent_id, 
+						company_name, 
+						company_registered_year, 
+						reseller_phone, 
+						reseller_email,
+						valid_till,
+						account_activation,
+						lisence_alloted,
+						user_type: reseller ? "reseller" : "user",
+						access_code: purchase_code,
+						verified
+					}
+				});
+				setData(convert_dataAll)
+			} catch (error) {
+				console.log(error);
+			}
 		}
-	}, [allUsersData.length])
+		resellerFun();
+	}, [])
 
 	useEffect(()=>{
 		if(data.length){
@@ -226,13 +306,6 @@ const UserAnalytics = () => {
 			setNumOfData(new_data)
 		}
 	}, [data.length])
-
-	useEffect(()=>{
-		if(resellerRow){
-			const filterUsers = allUsersData.filter(item=>item.reseller_email === resellerRow.email);
-			console.log(filterUsers);
-		}
-	}, [resellerRow])
 
 	return (
 		<div>
@@ -277,23 +350,36 @@ const UserAnalytics = () => {
 				<div className="col-span-12">
 					<div className="box orders-table">
 						<div className="box-header">
-							<div className="flex gap-2 items-center">
-								<h5 className="box-title my-auto">User Records</h5>
+							<div className="flex gap-2 items-center justify-between">
+								<div>
+									<h5 className="box-title my-auto">User Records</h5>
+									{
+										isLoading &&
+										<div className="ti-spinner w-4 h-4 text-primary" role="status" aria-label="loading">
+											<span className="sr-only">Loading...</span>
+										</div>
+									}
+								</div>
 								{
-									isLoading &&
-									<div className="ti-spinner w-4 h-4 text-primary" role="status" aria-label="loading">
-										<span className="sr-only">Loading...</span>
-									</div>
+									usersData.length > 0 && <button className="text-blue-500 hover:underline">Back to Resellers</button>
 								}
 							</div>
 						</div>
 						{
+							usersData.length > 0 ?
+							<>
+								<DataTable columns={columns} progressStatus={{isScraping:false}} data={usersData} hideClear={true} handleDataCount={updateNumOfData} sortOptions={sortOptions}/>
+								<div className="px-6 pb-4">
+									<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={usersData} fileName={"reseller-customers.csv"}/>
+								</div>
+							</>
+							:
 							data.length > 0 ? 
 							<>
 								<DataTable columns={columns} progressStatus={{isScraping:false}} data={data} hideClear={true} handleDataCount={updateNumOfData} sortOptions={sortOptions}/>
 
 								<div className="px-6 pb-4">
-									<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={data} fileName={"customers-data.csv"}/>
+									<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={data} fileName={"resellers.csv"}/>
 								</div>
 							</>
 							:

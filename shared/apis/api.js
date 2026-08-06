@@ -341,6 +341,33 @@ export async function deactiveReseller(email) {
     return error;
   }
 }
+export async function resellerList() {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.get('/restricted/list_reseller?limit=5000');
+    return response.data.data; // Assuming the API returns the user data and a token
+  } catch (error) {
+    return error;
+  }
+}
+export async function fetchResellerUsers(parent_id) {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.get(`/restricted/list_reseller_users/${parent_id}`);
+    return response.data.data.records; // Assuming the API returns the user data and a token
+  } catch (error) {
+    return error;
+  }
+}
+export async function updateResellerLicence(payload) {
+  checkAndAddAuthTokenToHeader()
+  try {
+    const response = await api.post('/restricted/allot_lisence', payload);
+    return response.data.data; // Assuming the API returns the user data and a token
+  } catch (error) {
+    return error;
+  }
+}
 export async function activeReseller(email) {
   checkAndAddAuthTokenToHeader()
   try {
