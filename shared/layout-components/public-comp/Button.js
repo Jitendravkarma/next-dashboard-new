@@ -19,7 +19,7 @@ export const Tooltip = ({ children, content, position = "bottom", width = "w-64"
 
       <div
         className={`absolute z-50 ${positionClasses[position]} ${width}
-          rounded-md bg-gray-900 px-3 py-2 text-xs text-white shadow-lg
+          rounded-md bg-gray-900 px-3 py-2 text-center text-xs text-white shadow-lg
           opacity-0 invisible transition-all duration-200
           group-hover:opacity-100 group-hover:visible
           group-focus-within:opacity-100 group-focus-within:visible`}

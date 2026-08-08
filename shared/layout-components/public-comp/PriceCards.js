@@ -4,8 +4,10 @@ import axios from "axios";
 // Importing necessary libraries and hooks
 import Link from "next/link"; // For navigation links
 import { useState } from "react"; // React hook for state management
+import { ResellerComission } from "../dashboard/AlertBox";
+import { Tooltip } from './Button';
 const PriceCards = () => {
-  const { priceObj, isUSDPrice, setIsUSDPrice, silverPlans, selectedSilverPlan, setSelectedSilverPlan } = useUserContext();
+  const { priceObj, isUSDPrice, setIsUSDPrice, silverPlans, selectedSilverPlan, setSelectedSilverPlan, isRatesOpen, openRates } = useUserContext();
   
   const [isConverting, setIsConverting] = useState(false);
   
@@ -181,13 +183,20 @@ const PriceCards = () => {
             {[
               "Access to all premium features",
               ...selectedSilverPlan.plan_features,
+              "Single Reseller Account",
               "Full access panel",
               "Direct contact support",
               "Unlimited downloads",
               "Priority support",
               "White-label reselling",
-              "30% margin for new reseller partners",
               "Google & Meta Advertising Campaign Setup",
+              <Tooltip
+                width="w-36"
+                position="bottom"
+                content={`Click to check the commission rates`}
+              >
+                <button tabIndex={0} className="underline font-bold" onClick={openRates}>Reseller Referral Commission</button>
+              </Tooltip>,
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span>✔</span> {item}
@@ -243,16 +252,23 @@ const PriceCards = () => {
           <ul className="space-y-2 text-sm text-gray-700">
             {[
               "Access to all premium features",
-              "1,000 License Keys",
+              "500 License Keys",
+              "Single Reseller Account",
               "Full access panel",
               "Direct contact support",
               "Unlimited downloads",
               "High priority support",
               "White-label reselling",
-              "50% margin for new reseller partners",
               "Priority onboarding",
               "Google & Meta Advertising Campaign Setup",
               "Customer Support",
+              <Tooltip
+                width="w-36"
+                position="bottom"
+                content={`Click to check the commission rates`}
+              >
+                <button tabIndex={0} className="underline font-bold" onClick={openRates}>Reseller Referral Commission</button>
+              </Tooltip>,
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span className="text-orange-500">✔</span> {item}
@@ -305,16 +321,23 @@ const PriceCards = () => {
           <ul className="space-y-2 text-sm text-gray-700">
             {[
               "Access to all premium features",
-              "5,000 License Keys",
-              "12 Free Sub-reseller Account",
+              "1,500 License Keys",
+              "Create up to 12 reseller accounts for free",
               "Full access panel",
               "Direct contact support",
               "Unlimited downloads",
-              "Dedicated account manager",
+              // "Dedicated account manager",
               "White-label reselling",
               "Early access to new features",
               "Google & Meta Advertising Campaign Setup",
-              "Customer Support",
+              "Dedicated Sales Manager Support",
+              <Tooltip
+                width="w-36"
+                position="bottom"
+                content={`Click to check the commission rates`}
+              >
+                <button tabIndex={0} className="underline font-bold" onClick={openRates}>Reseller Referral Commission</button>
+              </Tooltip>
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span className="text-purple-500">✔</span> {item}
@@ -332,6 +355,10 @@ const PriceCards = () => {
       {/* <p className="text-center text-sm text-gray-500 mt-10">
             📌 Note: Monthly subscription plans are also available. Contact on WhatsApp for details.
       </p> */}
+      {
+        isRatesOpen &&
+        <ResellerComission/>
+      }
     </div>
   );
 };

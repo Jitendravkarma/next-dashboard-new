@@ -1283,4 +1283,107 @@ const UserAccess = memo(({ email, closePop, initialSelected = [] }) => {
   );
 });
 
-export { ContactBox, SmsBox, WhatsappBox, LimitReachedBox, DownloadBox, ValidityBox, UpgradePlanPopup, AllocateKey, UserAccess }
+const ResellerComission = ()=>{
+  const { closeRates } = useUserContext();
+  const plans = [
+    {
+      name: "Silver",
+      icon: "🥈",
+      price: "₹24,999",
+      commission: "20%",
+      earns: "₹4,999.80",
+      color: "from-slate-400 to-gray-500",
+    },
+    {
+      name: "Gold",
+      icon: "🥇",
+      price: "₹74,999",
+      commission: "30%",
+      earns: "₹22,499.70",
+      color: "from-yellow-400 to-amber-500",
+    },
+    {
+      name: "Platinum",
+      icon: "💎",
+      price: "₹1,49,999",
+      commission: "40%",
+      earns: "₹59,999.60",
+      color: "from-cyan-500 to-indigo-600",
+    },
+  ];
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+      <div className="w-full max-w-xl overflow-hidden rounded-xl bg-white shadow-2xl">
+        {/* Header */}
+        <div className="flex items-center justify-between bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-4 text-white">
+          <div>
+            <h2 className="text-lg font-bold">
+              Reseller Partner Referral Commission
+            </h2>
+            <p className="text-xs text-indigo-100">
+              Earn commission on every successful referral.
+            </p>
+          </div>
+
+          <button
+            onClick={closeRates}
+            className="rounded-full py-1 px-3 text-lg hover:bg-white/20"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Table */}
+        <div className="p-5">
+          <div className="overflow-hidden rounded-xl border border-gray-200">
+            <table className="w-full text-sm">
+              <thead className="bg-gray-100 text-gray-700">
+                <tr>
+                  <th className="px-4 py-3 text-left">Plan</th>
+                  <th className="px-4 py-3 text-center">Price</th>
+                  <th className="px-4 py-3 text-center">Commission</th>
+                  <th className="px-4 py-3 text-right">Earns</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {plans.map((plan) => (
+                  <tr
+                    key={plan.name}
+                    className="border-t hover:bg-indigo-50 transition"
+                  >
+                    <td className="px-4 py-3 font-semibold">
+                      {plan.icon} {plan.name}
+                    </td>
+
+                    <td className="px-4 py-3 text-center">
+                      {plan.price}
+                    </td>
+
+                    <td className="px-4 py-3 text-center">
+                      <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-700">
+                        {plan.commission}
+                      </span>
+                    </td>
+
+                    <td className="px-4 py-3 text-right font-bold text-indigo-600">
+                      {plan.earns}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Footer */}
+          {/* <div className="mt-4 rounded-md bg-indigo-50 p-3 text-center text-sm text-gray-700">
+            💰 <span className="font-semibold">Higher plans = Higher commissions.</span>
+          </div> */}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export { ContactBox, SmsBox, WhatsappBox, LimitReachedBox, DownloadBox, ValidityBox, UpgradePlanPopup, AllocateKey, UserAccess, ResellerComission }

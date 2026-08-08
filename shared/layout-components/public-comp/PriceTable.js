@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useUserContext } from "@/shared/userContext/userContext";
 
 const PriceTable = () => {
-  const { priceObj, selectedSilverPlan } = useUserContext();
+  const { priceObj, selectedSilverPlan, openRates } = useUserContext();
   return (
     <div>
       {/* Header Row */}
@@ -55,12 +55,12 @@ const PriceTable = () => {
           {/* Rows */}
           {[
             ["Database Access", "10 Million", "50 Million", "100+ Million"],
-            ["License Keys", "200 License Keys", "1,000 License Keys", "5,000 License Keys"],
-            ["Sub-reseller Accounts", "✖", "✖", "12 Accounts"],
+            ["License Keys", "100 License Keys", "500 License Keys", "1,500 License Keys"],
             ["Billed Annually", "✔", "✔", "✔"],
             ["Downloads", "Unlimited", "Unlimited", "Unlimited"],
             ["White-label Reselling", "✔", "✔", "✔"],
-            ["Chargeable Reseller Activation", "30% margin for new reseller partners", "50% margin for new reseller partners", "12 Free Sub-reseller Account"],
+            ["No of Accounts", "Single Account", "Single Account", "Create up to 12 reseller accounts for free."],
+            ["Reseller Referral Commission", <button className="badge bg-indigo-500 hover:bg-indigo-600 text-white font-bold" onClick={openRates}>Click for Comission Rates</button>, <button className="badge bg-indigo-500 hover:bg-indigo-600 text-white font-bold" onClick={openRates}>Click for Comission Rates</button>, <button className="badge bg-indigo-500 hover:bg-indigo-600 text-white font-bold" onClick={openRates}>Click for Comission Rates</button>],
             ["Priority Onboarding", "✖", "✔", "✔"],
             ["Dedicated Account Manager", "✖", "✖", "✔"],
             ["Contact Support", "Direct Support", "Direct Support", "24/7 Priority Support"],

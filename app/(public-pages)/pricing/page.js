@@ -147,6 +147,13 @@ const PricingPage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <PriceCredits/>
         </div>
+
+        <div className="mt-4 flex items-center justify-center gap-2 text-xs text-gray-600">
+          <span className="text-green-600">✓</span>
+          <span>
+            All prices and plans include <strong className="text-gray-900">18% GST</strong>
+          </span>
+        </div>
       </section>
 
       <section className="relative py-24 px-6 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#1e293b] text-center overflow-hidden" id="whatsapp-contact">
