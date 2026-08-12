@@ -321,7 +321,16 @@ const PriceCards = () => {
           <ul className="space-y-2 text-sm text-gray-700">
             {[
               "Access to all premium features",
-              "1,500 License Keys",
+              <div className="flex items-center gap-1">
+                1,500 License Keys
+                <Tooltip
+                  width="w-44"
+                  position="bottom"
+                  content={`These licenses are distributed across all free reseller accounts.`}
+                >
+                  <i className="ri-question-line text-lg cursor-pointer" tabIndex={0}/>
+                </Tooltip>
+              </div>,
               "Create up to 12 reseller accounts for free",
               "Full access panel",
               "Direct contact support",
