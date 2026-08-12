@@ -81,7 +81,7 @@ const GenerateLicence = () => {
 			With this key, you can now scrape unlimited leads using Scrap Genius. 🚀
 			If you need any help with setup or usage, feel free to reach out to us anytime.
 			*Best regards,*
-			Team Scrap Genius`
+			Team Scrape Genius`
 		);
         validatePhoneNumber("123456789", false, countryList, "whatsapp")
     };
