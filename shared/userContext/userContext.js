@@ -362,15 +362,16 @@ export const UserProvider = ({ children }) => {
         const users = await resellerUsers()
         const user_data = users.data.data
         if(user_data.length){
-          const convert_data = user_data.map(({id, email, phone, name, valid_till, purchase_code, verified, reseller, account_activation}, ind)=>{
+          const convert_data = user_data.map(({id, email, phone, name, created_at, valid_till, purchase_code, verified, reseller, account_activation}, ind)=>{
             return {
               sn: ind + 1,
               user_id: id,
               name,
               email,
-              valid_till,
               phone: phone || '-',
               account_activation,
+              created_at,
+              valid_till,
               user_type: reseller ? "reseller" : "user",
               access_code: purchase_code,
               verified

@@ -58,6 +58,20 @@ const UserAnalytics = () => {
 			editable: false
 		},
 		{
+			headerName: 'Registered On',
+			field: 'created_at',
+			width: 150,
+			renderCell: ({row})=>{
+				const value = row.created_at;
+				return(
+					<span>
+						{new Date(value).toLocaleDateString()} 
+					</span>
+				)
+			},
+			editable: false,
+		},
+		{
 			headerName: "Valid Until",
 			field: "valid_until",
 			width: 150,
@@ -233,6 +247,7 @@ const UserAnalytics = () => {
         { label: "Purchase Code", key: "access_code" },
 		{ label: "Account Activation", key: "account_activation" },
         { label: "Email Activation", key: "verified" },
+        { label: "Registered On", key: "created_at" },
         { label: "Valid Until", key: "valid_till" },
         { label: "User Type", key: "user_type" }
     ];
