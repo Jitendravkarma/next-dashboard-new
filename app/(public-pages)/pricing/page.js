@@ -1,6 +1,5 @@
 import React from "react";
 import { seo_pricing } from "@/shared/data/seo-content/content";
-import Link from "next/link";
 import PriceCards from "@/shared/layout-components/public-comp/PriceCards";
 import PriceTable from "@/shared/layout-components/public-comp/PriceTable";
 import PriceCredits from "@/shared/layout-components/public-comp/PriceCredits";
@@ -151,7 +150,7 @@ const PricingPage = () => {
         <div className="mt-4 flex items-center justify-center gap-2 text-xs text-gray-600">
           <span className="text-green-600">✓</span>
           <span>
-            All prices and plans include <strong className="text-gray-900">18% GST</strong>
+            All prices and plans exclusive <strong className="text-gray-900">18% GST</strong>
           </span>
         </div>
       </section>

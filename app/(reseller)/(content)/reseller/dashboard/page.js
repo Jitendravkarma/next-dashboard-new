@@ -51,61 +51,7 @@ const Home = () => {
 			setTotalRecords(new_data)
         }
     }, [usersData.length])
-	// useEffect(()=>{
-	// 	let getReseller = dashboard_data;
-	// 	let getCustomers = getReseller.licence_codes;
-	// 	if(getCustomers){
-	// 		const paid = getCustomers.filter(user=>user.email).length
-	// 		const checkDate = (new Date(getReseller?.validity) < validity);
-	// 		const totalCount = [
-	// 			{title: "total", count: paid},
-	// 			{title: "active", count: getCustomers.filter(dt=>(dt.validity && !dt.expired)).length},
-	// 			{title: "inactive", count: getCustomers.filter(dt=>(dt.expired)).length},
-	// 			{title: "date", count: checkDate ? "Expired" : dashboard_data.validity}
-	// 		]
-	// 		setData(getCustomers.slice(0, 6))
-	// 		const newData = totalRecords.map(obj=>{
-	// 			const find = totalCount.find(dt=>dt.title === obj.title)
-	// 			if(find){
-	// 				return {...obj, icon: (find.title === "date") ? checkDate ? expiry_icon : date : obj.icon, text: find.title === obj.title ? find.count : 0}
-	// 			}
-	// 			else {
-	// 				return obj
-	// 			}
-	// 		})
-	// 		setTotalRecords(newData)
-	// 	}
-	// 	else {
-	// 		JSON.parse(localStorage.getItem("customers"));
-	// 	}
-	// },[data.length])
-
-	// useEffect(()=>{
-	// 	let getReseller = JSON.parse(localStorage.getItem("reseller"));;
-	// 	if(getReseller){
-	// 		setReseller(getReseller)
-	// 	}
-	// }, [])
-
-    // useEffect(() => {
-    //     // filter out monthly registered users
-    //     const filterMonths = dashboard_data.licence_codes.map(user => {
-    //         if (user.purchase_date) {
-    //             // get the month (0-11) from the purchase date
-    //             return new Date(user.purchase_date).getMonth();
-    //         }
-    //         return null; // return null if no purchase_date
-    //     }).filter(date => date !== null); // filter out null values
-    
-    //     let months_data = Array(12).fill(0); // initialize all months with 0
-    
-    //     filterMonths.forEach(mon_dt => {
-    //         months_data[mon_dt] = months_data[mon_dt] + 1;
-    //     });
-    
-    //     setMonthlyUser(months_data);
-    // }, [dashboard_data.licence_codes.length]);
-
+	
 	return (
 		<div>
 			<Seo title='Dashboard' />
@@ -218,53 +164,6 @@ const Home = () => {
 							<h5 className="box-title my-auto">Recent Customers</h5>
 						</div>
 						<div className="box-body p-0">
-							{/* <div className="overflow-auto">
-								<table className="ti-custom-table ti-custom-table-head">
-									<thead>
-										<tr>
-											<th scope="col" className="!p-[0.65rem]"></th>
-											<th scope="col" className="text-center !p-[0.65rem]">Customer Name</th>
-											<th scope="col" className="text-center !p-[0.65rem]">Customer Email</th>
-											<th scope="col" className="!p-[0.65rem]">Validity</th>
-										</tr>
-									</thead>
-									<tbody>
-										{dashboard_data.licence_codes.filter(user=>user.email).map((idx) => (
-											<tr key={Math.random()}>
-												<td className="!p-[0.65rem] truncate">
-													<Link href={"/dashboard/user-analytics"} title={idx.name}>
-														<i className="ri-user-follow-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>
-													</Link>
-												</td>
-												<td className="leading-none !text-gray-800 dark:!text-white !p-[0.65rem] capitalize">
-													{idx.name}
-												</td>
-												<td className="leading-none !text-gray-800 dark:!text-white !p-[0.65rem]">
-													{idx.email}
-												</td>
-												<td className="!p-[0.65rem] text-sm">
-													{
-														idx.validity ?
-														<span className="font-semibold">
-															{idx.validity} {" "}
-															{
-																idx.expired && 
-																<span className={`badge leading-none bg-danger/10 text-danger rounded-sm animate-pulse`}>
-																	Plan Expired
-																</span>
-															}
-														</span>
-														:
-														<Link href={"/dashboard/user-analytics"} className="!m-0 hs-tooltip-toggle relative ti-btn  !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary">
-															Set Validity
-														</Link>
-													}
-												</td>
-											</tr>
-										))}
-									</tbody>
-								</table>
-							</div> */}
                             <p className="my-5 text-center">No Customer Registered!</p>
 						</div>
 					</div>

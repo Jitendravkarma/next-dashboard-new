@@ -44,24 +44,6 @@ const PrivacyPolicy = () => {
             </p>
 
             <PolicyContentData/>
-
-            {/* <div className="text-center mt-28 mb-5 bg-blue-100 rounded-md py-16 px-5">
-              <h4 className="font-bold text-lg sm:text-3xl mb-3 sm:leading-10 italic capitalize">
-                "How do you contact us regarding this policy"
-              </h4>
-              <div className="text-sm sm:text-lg font-light leading-normal">
-                If you have any questions or suggestions about our Privacy Policy,
-                do not hesitate to 
-                <Link href="/contact-us" className="text-blue-500 hover:underline hover:font-bold hover:italic capitalize">
-                  {" "} contact us
-                </Link>.
-                <p className="mt-3 text-2xl sm:text-5xl text-center">
-                  <a href="mailto:support@designcollection.in">
-                    <i className="ri-mail-line text-blue-500 hover:text-blue-600" title="Email Now"/>
-                  </a>
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>

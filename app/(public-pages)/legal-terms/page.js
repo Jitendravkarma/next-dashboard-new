@@ -1,7 +1,6 @@
 import { seo_terms } from "@/shared/data/seo-content/content";
 import AllTerms from "@/shared/layout-components/public-comp/AllTerms";
 // import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
-import Link from "next/link";
 
 export const metadata = seo_terms
 

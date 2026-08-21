@@ -11,25 +11,11 @@ import { updateUserBlock } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
 	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData } = useUserContext()
-	// const [ validity, setValidity ] = useState(false);
-	// const [ userId, setUserId ] = useState(false);
 	const [ data, setData ] = useState([]);
 	const [ userEmail, setUserEmail ] = useState("")
 	const [ accessLimit, setAccessLimit ] = useState(false)
 	const [ isLoading, setIsLoading ] = useState(false);
 	const columns = [
-		// {
-		// 	field: 'actions',
-		// 	headerName: 'Actions',
-		// 	width: 200,
-		// 	renderCell: (params) => {
-		// 		const phone = params.row.phone;
-		// 		const email = params.row.email;
-		// 		return (
-		// 			<ContactVia contact={{phone, email, customNum:false}}/>
-		// 		);
-		// 	},
-		// },
 		{
 			headerName: 'S.N',
 			field: 'sn',
@@ -175,68 +161,7 @@ const UserAnalytics = () => {
 				)
 			},
 			editable: false
-		},
-		// {
-		// 	headerName: "Plan Date",
-		// 	field: "plan_date",
-		// 	width: 150,
-		// 	renderCell: (params) => {
-		// 		const value = params.value;
-		// 		return value && (
-		// 		  <span>
-		// 			{value}
-		// 		  </span>
-		// 		)
-		// 	},
-		// 	editable: false
-		// },
-		// {
-		// 	headerName: "Plan Expiry",
-		// 	field: "validity",
-		// 	width: 150,
-		// 	renderCell: (params) => {
-		// 		const value = params.value;
-		// 		const id = params.row.id;
-		// 		const editValidity = ()=>{
-		// 			setValidity(true)
-		// 			setUserId(id)
-		// 			setStartDate(params.row.plan_date)
-		// 		}
-		// 		return value ? (
-		// 		  <span>
-		// 			{
-		// 				params.row.expired ?
-		// 				<span className="text-danger font-semibold" title="Plan expired!">{value}</span>
-		// 				:
-		// 				<span className="font-semibold">{value}</span>
-		// 			}
-		// 		  </span>
-		// 		) : (
-		// 			<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Set Plan Validity">
-		// 				Set Validity
-		// 			</button>
-		// 		);
-		// 	},
-		// 	editable: false
-		// },
-		// {
-		// 	field: 'block',
-		// 	headerName: 'Plan Edit',
-		// 	width: 100,
-		// 	renderCell: (params) => {
-		// 		const id = params.row.id;
-		// 		const editValidity = ()=>{
-		// 			setValidity(true)
-		// 			setUserId(id)
-		// 			setStartDate(params.row.plan_date)
-		// 		}
-		// 		return (
-		// 			<div>
-		// 				<button className="!m-0 hs-tooltip-toggle relative ti-btn !px-2 !py-1 text-xs transition-none focus:outline-none ti-btn-soft-primary" onClick={editValidity} title="Edit Plan Validity"><i className="ri-pencil-fill"></i></button>
-		// 			</div>
-		// 		)
-		// 	},
-		// },
+		}
 	];
 	
 	const csvHeaders = [

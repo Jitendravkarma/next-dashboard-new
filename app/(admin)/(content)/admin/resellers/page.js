@@ -8,111 +8,15 @@ import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
 import { ContactBox, LimitReachedBox, SmsBox, UserAccess, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 import { fetchResellerUsers, resellerList, updateResellerLicence, updateUserBlock } from "@/shared/apis/api";
-import axios from "axios";
 
 const UserAnalytics = () => {
 	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage } = useUserContext()
-	// const [ validity, setValidity ] = useState(false);
-	// const [ userId, setUserId ] = useState(false);
 	const [ data, setData ] = useState([]);
 	const [ usersData, setUsersData ] = useState([]);
 	const [ userEmail, setUserEmail ] = useState("")
 	const [ accessLimit, setAccessLimit ] = useState(false)
 	const [ isLoading, setIsLoading ] = useState(false);
-	const [ isResellerUsers, setIsResellerUsers ] = useState(false);
-	const [ resellerRow, setResellerRow ] = useState(null);
-	const columns = [
-		// {
-		// 	field: 'actions',
-		// 	headerName: 'Actions',
-		// 	width: 200,
-		// 	renderCell: (params) => {
-		// 		const phone = params.row.phone;
-		// 		const email = params.row.email;
-		// 		return (
-		// 			<ContactVia contact={{phone, email, customNum:false}}/>
-		// 		);
-		// 	},
-		// },
-		// {
-		// 	headerName: 'S.N',
-		// 	field: 'sn',
-		// 	width: 80,
-		// 	editable: false,
-		// },
-		{
-			headerName: "View Users",
-			field: "reseller_users",
-			width: 150,
-			renderCell: ({row}) => {
-				const resellerUser = async ()=>{
-					console.log(row);
-					setIsResellerUsers(true)
-					try {
-						const users = await fetchResellerUsers(row.user_id);
-						console.log(users);
-						if(users.length) setUsersData(users);
-					} catch (error) {
-						console.log(error)
-					}
-					setIsResellerUsers(false)
-				}
-				return (
-				  <button onClick={resellerUser} className={`bg-indigo-400 hover:bg-indigo-600 text-white badge leading-none rounded-sm capitalize`}>
-					Show Users
-				  </button>
-				)
-			},
-			editable: false
-		},
-		{
-			headerName: "Allot Licences",
-			field: "limit",
-			width: 180,
-			renderCell: (params) => {
-				const inputRef = useRef();
-				const [ days, setDays ] = useState("");
-				const [ isUpdating, setIsUpdating ] = useState(false);
-				return (
-					<div className="flex items-center gap-2 h-full justify-between">
-						<input value={days} ref={inputRef} placeholder="No of Licence" onChange={(e)=>setDays(e.target.value)} className="border border-indigo-300 w-24 focus-within:border-2 focus-within:border-indigo-700 py-1 px-2 text-xs rounded-sm"/>
-						<button disabled={isUpdating} className={`disabled:cursor-not-allowed disabled:animate-pulse focus:outline-none text-white font-medium rounded-sm text-xs px-2 p-1 bg-indigo-500 border border-indigo-500 hover:bg-indigo-600`}
-							onClick={(e) => {
-								if(!days) {
-									inputRef.current.focus();
-									return;
-								};
-								const approve = async()=>{
-									setIsUpdating(true);
-									try {
-										const resp = await updateResellerLicence({ email: params.row.email, no_of_licences: Number(days) });
-										alert(`Licences updated successfully!`);
-										// window.location.reload();
-									} catch (error) {
-										console.log(error)
-									} finally {
-										setIsUpdating(false);
-									}
-								} 
-								approve();
-							}}
-						>
-							{isUpdating ? "Updating..." : "Update"}
-						</button>
-					</div>
-				)
-			},
-			editable: false
-		},
-		{
-			headerName: "Allotted Licences",
-			field: "lisence_alloted",
-			width: 200,
-			renderCell: (params)=>
-				(<span className="capitalize">{params.row.lisence_alloted}</span>)
-			,
-			editable: false
-		},
+	const [ columns, setColumns ] = useState([
 		{
 			headerName: "User Name",
 			field: "name",
@@ -135,6 +39,63 @@ const UserAnalytics = () => {
 			editable: false
 		},
 		{
+			headerName: "Paid/Unpaid",
+			field: "access_code",
+			width: 200,
+			renderCell: (params) => {
+				const value = params.row.access_code;
+				return (
+				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+					{value ? "Paid User" : "Unpaid User"}
+				  </span>
+				)
+			},
+			editable: false
+		},
+		{
+			headerName: "Account Status",
+			field: "account_activation",
+			width: 200,
+			renderCell: (params) => {
+				const value = params.row.account_activation;
+				return (
+				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+					<i className="ri-circle-fill text-xs"/>
+					{value ? "Active" : "Inactive"}
+				  </span>
+				)
+			},
+			editable: false
+		},
+		{
+			headerName: "User Status",
+			field: "verified",
+			width: 200,
+			renderCell: (params) => {
+				const value = params.row.verified;
+				return (
+				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
+					{value ? "Verified User" : "Unverified User"}
+				  </span>
+				)
+			},
+			editable: false
+		},
+		{
+			headerName: 'Registered On',
+			field: 'created_at',
+			width: 150,
+			renderCell: ({row})=>{
+				const value = row.created_at;
+				return(
+					<span>
+						{new Date(value).toLocaleDateString()} 
+					</span>
+				)
+			},
+			editable: false,
+		},
+		{
 			headerName: "Valid Until",
 			field: "valid_until",
 			width: 150,
@@ -150,41 +111,13 @@ const UserAnalytics = () => {
 		},
 		{
 			headerName: "User Type",
-			field: "user_type",
+			field: "reseller",
 			width: 150,
 			renderCell: (params) => {
-				const value = params.row.user_type;
+				const value = params.row.reseller;
 				return (
 				  <span className={`${value === "reseller" ? "bg-success/10 text-success" : "bg-primary/10 text-primary"} badge leading-none rounded-sm capitalize`}>
-					{value}
-				  </span>
-				)
-			},
-			editable: false
-		},
-		{
-			headerName: "Paid/Unpaid",
-			field: "access_code",
-			width: 200,
-			renderCell: (params) => {
-				const value = params.row.access_code;
-				return (
-				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
-					{value ? "Paid User" : "Unpaid User"}
-				  </span>
-				)
-			},
-			editable: false
-		},
-		{
-			headerName: "User Status",
-			field: "verified",
-			width: 200,
-			renderCell: (params) => {
-				const value = params.row.verified;
-				return (
-				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
-					{value ? "Verified User" : "Unverified User"}
+					{value ? 'Reseller' : 'User'}
 				  </span>
 				)
 			},
@@ -221,7 +154,7 @@ const UserAnalytics = () => {
 			},
 			editable: false
 		}
-	];
+	]);
 	
 	const csvHeaders = [
 		{ label: "ID", key: "id" },
@@ -307,6 +240,89 @@ const UserAnalytics = () => {
 		}
 	}, [data.length])
 
+	useEffect(()=>{
+		if(usersData.length){
+			const newColumn = columns.slice(3);
+			setColumns(newColumn);
+		}
+		else {
+			const resellerAry = [{
+				headerName: "View Users",
+				field: "reseller_users",
+				width: 150,
+				renderCell: ({row}) => {
+					const [ isResellerUsers, setIsResellerUsers ] = useState(false);
+					const resellerUser = async ()=>{
+						setIsResellerUsers(true)
+						try {
+							const users = await fetchResellerUsers(row.user_id);
+							if(users.length) setUsersData(users);
+						} catch (error) {
+							console.log(error)
+						}
+						setIsResellerUsers(false)
+					}
+					return (
+					<button onClick={resellerUser} className={`bg-indigo-400 hover:bg-indigo-600 text-white badge leading-none rounded-sm capitalize disabled:cursor-not-allowed disabled:animate-pulse`} disabled={isResellerUsers}>
+						{ isResellerUsers ? 'Please wait...' : 'Show Users'}
+					</button>
+					)
+				},
+				editable: false
+			},
+			{
+				headerName: "Allot Licences",
+				field: "limit",
+				width: 180,
+				renderCell: (params) => {
+					const inputRef = useRef();
+					const [ days, setDays ] = useState("");
+					const [ isUpdating, setIsUpdating ] = useState(false);
+					return (
+						<div className="flex items-center gap-2 h-full justify-between">
+							<input value={days} ref={inputRef} placeholder="No of Licence" onChange={(e)=>setDays(e.target.value)} className="border border-indigo-300 w-24 focus-within:border-2 focus-within:border-indigo-700 py-1 px-2 text-xs rounded-sm"/>
+							<button disabled={isUpdating} className={`disabled:cursor-not-allowed disabled:animate-pulse focus:outline-none text-white font-medium rounded-sm text-xs px-2 p-1 bg-indigo-500 border border-indigo-500 hover:bg-indigo-600`}
+								onClick={(e) => {
+									if(!days) {
+										inputRef.current.focus();
+										return;
+									};
+									const approve = async()=>{
+										setIsUpdating(true);
+										try {
+											const resp = await updateResellerLicence({ email: params.row.email, no_of_licences: Number(days) });
+											alert(`Licences updated successfully!`);
+											// window.location.reload();
+										} catch (error) {
+											console.log(error)
+										} finally {
+											setIsUpdating(false);
+										}
+									} 
+									approve();
+								}}
+							>
+								{isUpdating ? "Updating..." : "Update"}
+							</button>
+						</div>
+					)
+				},
+				editable: false
+			},
+			{
+				headerName: "Allotted Licences",
+				field: "lisence_alloted",
+				width: 200,
+				renderCell: (params)=>
+					(<span className="capitalize">{params.row.lisence_alloted}</span>)
+				,
+				editable: false
+			}];
+
+			setColumns(cur=>([...resellerAry, ...cur]))
+		}
+	}, [usersData.length]);
+
 	return (
 		<div>
 			{
@@ -361,7 +377,7 @@ const UserAnalytics = () => {
 									}
 								</div>
 								{
-									usersData.length > 0 && <button className="text-blue-500 hover:underline">Back to Resellers</button>
+									usersData.length > 0 && <button className="text-blue-500 hover:underline" onClick={()=>setUsersData([])}>Back to Resellers</button>
 								}
 							</div>
 						</div>

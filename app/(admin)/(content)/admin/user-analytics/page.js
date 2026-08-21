@@ -5,14 +5,12 @@ import Seo from "@/shared/layout-components/seo/seo";
 import DataTable from "@/shared/data/basic-ui/tables/nexttable";
 import { useUserContext } from "@/shared/userContext/userContext";
 import { Download } from "@/shared/layout-components/dashboard/DownloadBtn";
-import { ContactBox, LimitReachedBox, SmsBox, ValidityBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
+import { ContactBox, LimitReachedBox, SmsBox, WhatsappBox } from "@/shared/layout-components/dashboard/AlertBox";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
-import { activeReseller, approveReseller, deactiveReseller, updateUserBlock, updateValidity } from "@/shared/apis/api";
+import { approveReseller, deactiveReseller, updateUserBlock, updateValidity } from "@/shared/apis/api";
 
 const UserAnalytics = () => {
-	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, usersData,allUsersData, fetchUserData, userData, openSnackBar, handleSnackMessage } = useUserContext()
-	// const [ validity, setValidity ] = useState(false);
-	// const [ userId, setUserId ] = useState(false);
+	const { contactNum, smsNum, whatsAppNum, limitErr, openSnack, snackMessage, allUsersData, openSnackBar, handleSnackMessage } = useUserContext()
 	const [ data, setData ] = useState([]);
 	const [ isSet, setIsSet ] = useState(false)
 	const [ isLoading, setIsLoading ] = useState(false);

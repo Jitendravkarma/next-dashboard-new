@@ -243,30 +243,6 @@ const PlanRenewal = () => {
 						</div>
 					</div>
 				</div>
-				
-				{/* <div className="col-span-12">
-					<div className="box orders-table">
-						<div className="box-header">
-							<div className="sm:flex justify-between">
-								<h5 className="box-title my-auto">Licence Overview</h5>
-							</div>
-						</div>
-						{
-							dashboard_data.licence_codes.length > 0 ? 
-							<>
-								<DataTable columns={columns} progressStatus={{isScraping: false}} handleDataCount={updateNumOfData} data={dashboard_data.licence_codes} />
-
-								<div className="px-6 pb-4">
-									<Download customCls={"ti-btn ti-btn-outline !border-indigo-500 hover:bg-indigo-500 hover:text-white text-indigo-500 hover:!border-indigo-500 focus:ring-indigo-500 dark:focus:ring-offset-white/10"} csvHeaders={csvHeaders} data={data} fileName={"customers-data.csv"}/>
-								</div>
-							</>
-							:
-							<div className="box-body">
-								<p className="text-center text-base">There is no data to display</p>
-							</div>
-						}
-					</div>
-				</div> */}
 			</div>
 
 			{

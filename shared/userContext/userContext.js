@@ -2,7 +2,6 @@ import React, { createContext, useCallback, useContext, useEffect, useMemo, useS
 import Cookies from 'js-cookie';
 import { getUserData, resellerUsers } from "../apis/api";
 import axios from "axios";
-import { googleAdsCrmProps, indiaMartCrmProps, justdialCrmProps } from "../data/static-content/subPageContent";
 const UserContext = createContext();
 export const useUserContext = () => useContext(UserContext);
 export const UserProvider = ({ children }) => {

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import PageHeader from "@/shared/layout-components/page-header/pageheader";
 import Seo from "@/shared/layout-components/seo/seo";
 import { SalesValue } from "@/shared/data/charts/chartjsdata";
-import UpgradePlan from "@/shared/layout-components/dashboard/UpgradePlan";
 import { SessionOverview } from "@/shared/data/dashboard/analyticdata";
 import { useUserContext } from "@/shared/userContext/userContext";
 
@@ -53,60 +52,6 @@ const Home = () => {
 			setPieChart({ total: allUsersData.length, paid: allUsersData.filter(user=>user.access_code).length })
         }
     }, [allUsersData.length])
-	// useEffect(()=>{
-	// 	let getReseller = dashboard_data;
-	// 	let getCustomers = getReseller.licence_codes;
-	// 	if(getCustomers){
-	// 		const paid = getCustomers.filter(user=>user.email).length
-	// 		const checkDate = (new Date(getReseller?.validity) < validity);
-	// 		const totalCount = [
-	// 			{title: "total", count: paid},
-	// 			{title: "active", count: getCustomers.filter(dt=>(dt.validity && !dt.expired)).length},
-	// 			{title: "inactive", count: getCustomers.filter(dt=>(dt.expired)).length},
-	// 			{title: "date", count: checkDate ? "Expired" : dashboard_data.validity}
-	// 		]
-	// 		setData(getCustomers.slice(0, 6))
-	// 		const newData = totalRecords.map(obj=>{
-	// 			const find = totalCount.find(dt=>dt.title === obj.title)
-	// 			if(find){
-	// 				return {...obj, icon: (find.title === "date") ? checkDate ? expiry_icon : date : obj.icon, text: find.title === obj.title ? find.count : 0}
-	// 			}
-	// 			else {
-	// 				return obj
-	// 			}
-	// 		})
-	// 		setTotalRecords(newData)
-	// 	}
-	// 	else {
-	// 		JSON.parse(localStorage.getItem("customers"));
-	// 	}
-	// },[data.length])
-
-	// useEffect(()=>{
-	// 	let getReseller = JSON.parse(localStorage.getItem("reseller"));;
-	// 	if(getReseller){
-	// 		setReseller(getReseller)
-	// 	}
-	// }, [])
-
-    // useEffect(() => {
-    //     // filter out monthly registered users
-    //     const filterMonths = dashboard_data.licence_codes.map(user => {
-    //         if (user.purchase_date) {
-    //             // get the month (0-11) from the purchase date
-    //             return new Date(user.purchase_date).getMonth();
-    //         }
-    //         return null; // return null if no purchase_date
-    //     }).filter(date => date !== null); // filter out null values
-    
-    //     let months_data = Array(12).fill(0); // initialize all months with 0
-    
-    //     filterMonths.forEach(mon_dt => {
-    //         months_data[mon_dt] = months_data[mon_dt] + 1;
-    //     });
-    
-    //     setMonthlyUser(months_data);
-    // }, [dashboard_data.licence_codes.length]);
 
 	return (
 		<div>

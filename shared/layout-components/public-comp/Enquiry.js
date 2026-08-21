@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { countryList } from "@/shared/data/static-content/allCountry";
+import countryList from "@/shared/layout-components/dashboard/Country";
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
 const EnquiryFormModal = ({closePop}) => {
