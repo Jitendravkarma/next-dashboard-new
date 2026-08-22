@@ -55,11 +55,11 @@ const PriceTable = () => {
           {/* Rows */}
           {[
             ["Database Access", "10 Million", "50 Million", "100+ Million"],
-            ["License Keys", "100 License Keys", "500 License Keys", "1,500 License Keys"],
+            ["License Keys", "50 License Keys", "200 License Keys", "500 License Keys"],
             ["Billed Annually", "✔", "✔", "✔"],
             ["Downloads", "Unlimited", "Unlimited", "Unlimited"],
             ["White-label Reselling", "✔", "✔", "✔"],
-            ["No of Accounts", "Single Account", "Single Account", "Create up to 12 reseller accounts for free."],
+            ["No of Accounts", "Single Account", "Single Account", "Create up to 5 reseller accounts for free."],
             ["Reseller Referral Commission", <button className="badge bg-indigo-500 hover:bg-indigo-600 text-white font-bold" onClick={openRates}>Click for Comission Rates</button>, <button className="badge bg-indigo-500 hover:bg-indigo-600 text-white font-bold" onClick={openRates}>Click for Comission Rates</button>, <button className="badge bg-indigo-500 hover:bg-indigo-600 text-white font-bold" onClick={openRates}>Click for Comission Rates</button>],
             ["Priority Onboarding", "✖", "✔", "✔"],
             ["Dedicated Account Manager", "✖", "✖", "✔"],

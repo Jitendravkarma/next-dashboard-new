@@ -1290,24 +1290,24 @@ const ResellerComission = ()=>{
       name: "Silver",
       icon: "🥈",
       price: "₹24,999",
-      commission: "20%",
-      earns: "₹4,999.80",
+      commission: "15%",
+      earns: "₹3,750.00",
       color: "from-slate-400 to-gray-500",
     },
     {
       name: "Gold",
       icon: "🥇",
       price: "₹74,999",
-      commission: "30%",
-      earns: "₹22,499.70",
+      commission: "20%",
+      earns: "₹15,000.00",
       color: "from-yellow-400 to-amber-500",
     },
     {
       name: "Platinum",
       icon: "💎",
       price: "₹1,49,999",
-      commission: "40%",
-      earns: "₹59,999.60",
+      commission: "25%",
+      earns: "₹37,500.00",
       color: "from-cyan-500 to-indigo-600",
     },
   ];
@@ -1322,7 +1322,7 @@ const ResellerComission = ()=>{
               Reseller Partner Referral Commission
             </h2>
             <p className="text-xs text-indigo-100">
-              Earn commission on every successful referral.
+              Earn one time commission on every successful referral.
             </p>
           </div>
 

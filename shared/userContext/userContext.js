@@ -60,7 +60,7 @@ export const UserProvider = ({ children }) => {
     secondGSTBuy: "https://rzp.io/rzp/Rv8qIYi",
     thirdGSTBuy: "https://rzp.io/rzp/ZpFQvSpO",
   }
-  const [ selectedSilverPlan, setSelectedSilverPlan ] = useState({ plan_name: 'pro', price: '24,999', old_price: "31,250", price_link: "https://rzp.io/rzp/Mr9bmyT", sub_title: 'Perfect for large businesses and enterprises', plan_features: ["100 License Keys"] });
+  const [ selectedSilverPlan, setSelectedSilverPlan ] = useState({ plan_name: 'pro', price: '24,999', old_price: "31,250", price_link: "https://rzp.io/rzp/Mr9bmyT", sub_title: 'Perfect for large businesses and enterprises', plan_features: ["50 License Keys"] });
   const [ silverPlans, setSilverPlans ] = useState([]);
   const [isVerfified, setIsVerified] = useState(true); // Initialize with false
   const [isAuthenticated, setIsAuthenticated] = useState(false); // Initialize with false

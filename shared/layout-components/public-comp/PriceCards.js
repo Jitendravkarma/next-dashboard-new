@@ -149,7 +149,7 @@ const PriceCards = () => {
           </p>
 
           <div className="flex items-center gap-2 mb-1">
-            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{selectedSilverPlan.old_price}/year</p>
+            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{selectedSilverPlan.old_price}/yearly</p>
             <span className="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full">
               20% Off
             </span>
@@ -158,7 +158,7 @@ const PriceCards = () => {
           <div className="flex items-center justify-between mb-5">
             <p className="text-3xl font-extrabold text-gray-900">
               {priceObj.priceTag}{selectedSilverPlan.price} 
-              <span className="text-sm font-medium text-gray-500">/year</span>
+              <span className="text-sm font-medium text-gray-500">/yearly</span>
             </p>
 
             {/* <button className="flex items-center gap-1 text-xs text-indigo-600 bg-indigo-100 hover:bg-indigo-200 px-3 py-1 rounded-md" onClick={loadPrice} title={isUSDPrice ? "Switch to INR" : "Switch to USD"}>
@@ -182,14 +182,23 @@ const PriceCards = () => {
           <ul className="space-y-2 text-sm text-gray-700">
             {[
               "Access to all premium features",
-              ...selectedSilverPlan.plan_features,
+              <div className="flex items-center gap-1">
+                50 License Keys
+                <Tooltip
+                  width="w-44"
+                  position="bottom"
+                  content={`You can purchase at least 20 additional licenses separately, priced at ₹500 per license.`}
+                >
+                  <i className="ri-question-line text-lg cursor-pointer" tabIndex={0}/>
+                </Tooltip>
+              </div>,
               "Single Reseller Account",
               "Full access panel",
               "Direct contact support",
               "Unlimited downloads",
               "Priority support",
               "White-label reselling",
-              "Google & Meta Advertising Campaign Setup",
+              "Meta Advertising Campaign Setup",
               <Tooltip
                 width="w-36"
                 position="bottom"
@@ -205,7 +214,7 @@ const PriceCards = () => {
           </ul>
 
           <p className="text-xs text-gray-400 mt-6 text-center">
-            Annual billing
+            Plan Annual billing
           </p>
         </div>
 
@@ -227,14 +236,14 @@ const PriceCards = () => {
           </p>
 
           <div className="flex items-center gap-2 mb-1">
-            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{priceObj.goldOld}/year</p>
+            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{priceObj.goldOld}/yearly</p>
             <span className="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full">
               20% Off
             </span>
           </div>
 
           <p className="text-3xl font-extrabold text-gray-900 mb-5">
-            {priceObj.priceTag}{priceObj.gold}  <span className="text-sm font-medium text-gray-500">/year</span>
+            {priceObj.priceTag}{priceObj.gold}  <span className="text-sm font-medium text-gray-500">/yearly</span>
           </p>
 
           <div className="bg-gray-200 text-gray-700 text-sm rounded-md px-4 py-3 mb-4">
@@ -252,7 +261,16 @@ const PriceCards = () => {
           <ul className="space-y-2 text-sm text-gray-700">
             {[
               "Access to all premium features",
-              "500 License Keys",
+              <div className="flex items-center gap-1">
+                200 License Keys
+                <Tooltip
+                  width="w-44"
+                  position="bottom"
+                  content={`You can purchase at least 50 additional licenses separately, priced at ₹400 per license.`}
+                >
+                  <i className="ri-question-line text-lg cursor-pointer" tabIndex={0}/>
+                </Tooltip>
+              </div>,
               "Single Reseller Account",
               "Full access panel",
               "Direct contact support",
@@ -261,7 +279,7 @@ const PriceCards = () => {
               "White-label reselling",
               "Priority onboarding",
               "Google & Meta Advertising Campaign Setup",
-              "Customer Support",
+              "Training Support",
               <Tooltip
                 width="w-36"
                 position="bottom"
@@ -277,7 +295,7 @@ const PriceCards = () => {
           </ul>
 
           <p className="text-xs text-gray-400 mt-6 text-center">
-            Annual billing
+            Plan Annual billing
           </p>
         </div>
 
@@ -296,14 +314,14 @@ const PriceCards = () => {
           </p>
 
           <div className="flex items-center gap-2 mb-1">
-            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{priceObj.platinumOld}/year</p>
+            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{priceObj.platinumOld}/yearly</p>
             <span className="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full">
               25% Off
             </span>
           </div>
 
           <p className="text-3xl font-extrabold text-gray-900 mb-5">
-            {priceObj.priceTag}{priceObj.platinum}  <span className="text-sm font-medium text-gray-500">/year</span>
+            {priceObj.priceTag}{priceObj.platinum}  <span className="text-sm font-medium text-gray-500">/yearly</span>
           </p>
 
           <div className="bg-gray-200 text-gray-700 text-sm rounded-md px-4 py-3 mb-4">
@@ -322,16 +340,25 @@ const PriceCards = () => {
             {[
               "Access to all premium features",
               <div className="flex items-center gap-1">
-                1,500 License Keys
+                500 License Keys
                 <Tooltip
                   width="w-44"
                   position="bottom"
-                  content={`These licenses are distributed across all free reseller accounts.`}
+                  content={`You can purchase at least 100 additional licenses separately, priced at ₹300 per license.`}
                 >
                   <i className="ri-question-line text-lg cursor-pointer" tabIndex={0}/>
                 </Tooltip>
               </div>,
-              "Create up to 12 reseller accounts for free",
+              <div className="flex items-center gap-1">
+                Create up to 5 reseller accounts for free
+                <Tooltip
+                  width="w-44"
+                  position="bottom"
+                  content={`Licenses are distributed across all free reseller accounts.`}
+                >
+                  <i className="ri-question-line text-lg cursor-pointer" tabIndex={0}/>
+                </Tooltip>
+              </div>,
               "Full access panel",
               "Direct contact support",
               "Unlimited downloads",
@@ -339,7 +366,7 @@ const PriceCards = () => {
               "White-label reselling",
               "Early access to new features",
               "Google & Meta Advertising Campaign Setup",
-              "Dedicated Sales Manager Support",
+              "Dedicated Sales & Technical Manager Support",
               <Tooltip
                 width="w-36"
                 position="bottom"
@@ -355,7 +382,7 @@ const PriceCards = () => {
           </ul>
 
           <p className="text-xs text-gray-400 mt-6 text-center">
-            Annual billing
+            Plan Annual billing
           </p>
         </div>
       </div>
