@@ -13,7 +13,7 @@ const DocBottomSupport = () => {
         We’re dedicated to supporting you—don’t hesitate to get in touch!
         </p>
         <Link 
-        href={`mailto:${resellerContactInfo.email}`} 
+        href={`mailto:support@designcollection.in`} 
         className="bg-blue-600 rounded-md text-sm sm:text-lg text-white duration-300 font-medium gap-2 hover:bg-blue-700 inline-flex items-center p-2 px-4 sm:px-6 sm:py-3 transition-colors"
         >
         <i className="text-base sm:text-xl ri-mail-fill"></i>

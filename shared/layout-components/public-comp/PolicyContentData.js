@@ -116,11 +116,11 @@ const PolicyContentData = () => {
     //   </p>, 
     //   list: true, 
     //   listItems: [
-    //     <li>You may cancel your subscription or services at any time by contacting our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:${resellerContactInfo.email}`}>{resellerContactInfo.email}</a>.</li>,
+    //     <li>You may cancel your subscription or services at any time by contacting our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:support@designcollection.in`}>support@designcollection.in</a>.</li>,
     //     <li>Cancellations will only be effective from the next billing cycle. No refunds will be provided for the current billing cycle.</li>,
     //     <li>We reserve the right to cancel or suspend services in cases of misuse, non-compliance with our terms, or fraudulent activities.</li>,
     //     <li>In such cases, no refunds will be provided.</li>,
-    //     <li>For cancellations or refund-related inquiries, please contact us at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:${resellerContactInfo.email}`}>{resellerContactInfo.email}</a>.</li>
+    //     <li>For cancellations or refund-related inquiries, please contact us at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:support@designcollection.in`}>support@designcollection.in</a>.</li>
     //   ]
     // },
     {
@@ -142,7 +142,7 @@ const PolicyContentData = () => {
         </li>,
         <li>
           <b>Delivery Issues: </b>
-          If you do not receive your purchased product or experience any delay, please contact our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:${resellerContactInfo.email}`}>{resellerContactInfo.email}</a> We will resolve the issue promptly.
+          If you do not receive your purchased product or experience any delay, please contact our support team at <a className="text-blue-500 hover:underline hover:font-bold hover:italic" href={`mailto:support@designcollection.in`}>support@designcollection.in</a> We will resolve the issue promptly.
         </li>,
         <li>
           <b>Changes to Delivery: </b>

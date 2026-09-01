@@ -10,7 +10,7 @@ const DownloadSection = () => {
   const contactLinks = [
     {
       title: "Mail Now",
-      url: `mailto:${resellerContactInfo.email}`,
+      url: `mailto:support@designcollection.in`,
       icon: "ri-mail-line"
     },
     {
