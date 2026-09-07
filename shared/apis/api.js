@@ -353,7 +353,7 @@ export async function resellerList() {
 export async function fetchResellerUsers(parent_id) {
   checkAndAddAuthTokenToHeader()
   try {
-    const response = await api.get(`/restricted/list_reseller_users/${parent_id}`);
+    const response = await api.get(`/restricted/list_reseller_users/${parent_id}?limit=5000`);
     return response.data.data.records; // Assuming the API returns the user data and a token
   } catch (error) {
     return error;

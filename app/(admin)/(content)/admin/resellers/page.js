@@ -40,10 +40,10 @@ const UserAnalytics = () => {
 		},
 		{
 			headerName: "Paid/Unpaid",
-			field: "access_code",
+			field: "purchase_code",
 			width: 200,
 			renderCell: (params) => {
-				const value = params.row.access_code;
+				const value = params.row.purchase_code;
 				return (
 				  <span className={`${value ? "bg-success/10 text-success" : "bg-danger/10 text-danger"} badge leading-none rounded-sm`}>
 					{value ? "Paid User" : "Unpaid User"}
@@ -157,17 +157,21 @@ const UserAnalytics = () => {
 	]);
 	
 	const csvHeaders = [
-		{ label: "ID", key: "id" },
 		{ label: "Customer Name", key: "name" },
 		{ label: "Email", key: "email" },
 		{ label: "Phone", key: "phone" },
-		{ label: "Payment Status", key: "payment_status" },
-		{ label: "Validity", key: "validity" }
+		{ label: "Account Verified", key: "verified" },
+		{ label: "Account Activation", key: "account_activation" },
+		// { label: "User Type", key: "reseller" },
+		{ label: "Purchase Code", key: "purchase_code" },
+		{ label: "Registered On", key: "created_at" },
+		{ label: "Validity", key: "valid_till" }
 	];
 
 	const users = <i className="ri-group-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
-	const clients = <i className="ri-user-follow-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-success/10 text-success leading-none"></i>
-	const renewal = <i className="ri-loop-left-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-danger/10 text-danger leading-none"></i>
+	const paid = <i className="ri-money-rupee-circle-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-success/10 text-success leading-none"></i>
+	const clients = <i className="ri-user-follow-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-primary/10 text-primary leading-none"></i>
+	const renewal = <i className="ri-user-forbid-line text-xl avatar w-10 h-10 rounded-full p-2.5 bg-danger/10 text-danger leading-none"></i>
 
 	const sortOptions = [
 		{value:"paid", label: "Paid Users"},
@@ -177,8 +181,9 @@ const UserAnalytics = () => {
 
 	const [ numOfData, setNumOfData] = useState([
 		{ id: 1, icon: users, class: "Total Customers", title: "total", text: 0, color: "primary/10", color1: "success" },
-		{ id: 2, icon: clients, class: "Active Plans", title: "clients", text: 0, color: "primary/10", color1: "success" },
-		{ id: 3, icon: renewal, class: "Expired Plans", title: "renewal", text: 0, color: "primary/10", color1: "success" }
+		{ id: 2, class: "Paid Customers", icon: paid, title: "paid", text: "0", color: "primary/10", color1: "success" },
+		{ id: 3, icon: clients, class: "Active Plans", title: "clients", text: 0, color: "primary/10", color1: "success" },
+		{ id: 4, icon: renewal, class: "Inactive Plans", title: "renewal", text: 0, color: "primary/10", color1: "success" }
 	])
 
 	const updateNumOfData = useCallback((dataCount)=>{
@@ -214,7 +219,7 @@ const UserAnalytics = () => {
 						account_activation,
 						lisence_alloted,
 						user_type: reseller ? "reseller" : "user",
-						access_code: purchase_code,
+						purchase_code,
 						verified
 					}
 				});
@@ -227,8 +232,8 @@ const UserAnalytics = () => {
 	}, [])
 
 	useEffect(()=>{
-		if(data.length){
-			const records = [{ title: "total", count: data.length}, { title: "clients", count: data.filter(user=>user.access_code).length}, { title: "renewal", count: 0}]
+		if(!usersData.length && data.length){
+			const records = [{ title: "total", count: data.length}, { title: "paid", count: data.filter(user=>user.purchase_code).length}, { title: "clients", count: data.filter(user=>user.account_activation).length}, { title: "renewal", count: data.filter(user=>!user.account_activation).length}]
 			const new_data = numOfData.map(rec=>{
 				const find = records.find(rec2=> rec.title === rec2.title);
 				return {
@@ -238,7 +243,7 @@ const UserAnalytics = () => {
 			})
 			setNumOfData(new_data)
 		}
-	}, [data.length])
+	}, [usersData.length, data.length])
 
 	useEffect(()=>{
 		if(usersData.length){
@@ -256,7 +261,20 @@ const UserAnalytics = () => {
 						setIsResellerUsers(true)
 						try {
 							const users = await fetchResellerUsers(row.user_id);
-							if(users.length) setUsersData(users);
+							if(!users.length) {
+								alert(`No users founded!`);
+								return
+							};
+							setUsersData(users);
+							const records = [{ title: "total", count: users.length}, {title: "paid", count: users.filter(user=>user.purchase_code).length}, { title: "clients", count: users.filter(user=>user.account_activation).length}, { title: "renewal", count: users.filter(user=>!user.account_activation).length}]
+							const new_data = numOfData.map(rec=>{
+								const find = records.find(rec2=> rec.title === rec2.title);
+								return {
+									...rec,
+									text: rec.title === find.title ? find.count : rec.text
+								}
+							})
+							setNumOfData(new_data);
 						} catch (error) {
 							console.log(error)
 						}
@@ -329,11 +347,11 @@ const UserAnalytics = () => {
 				openSnack &&
 				<Snackbar content={snackMessage} isOpen={openSnack}/>
 			}
-			<Seo title='User Analytics' />
-			<PageHeader currentpage="User Analytics" img="/assets/img/users/profile.png" activepage="Reseller" mainpage="User Analytics" />
+			<Seo title='Reseller Partners' />
+			<PageHeader currentpage="Reseller Partners" img="/assets/img/users/profile.png" activepage="Reseller" mainpage="Reseller Partners" />
 			<div className="grid grid-cols-12 gap-x-5">
 				{numOfData.map((idx) => (
-					<div className="col-span-12 md:col-span-4" key={Math.random()}>
+					<div className="col-span-12 md:col-span-6 xl:col-span-3" key={Math.random()}>
 						<div className="box">
 							<div className="box-body">
 								<div className="flex space-x-3 rtl:space-x-reverse">
@@ -377,7 +395,10 @@ const UserAnalytics = () => {
 									}
 								</div>
 								{
-									usersData.length > 0 && <button className="text-blue-500 hover:underline" onClick={()=>setUsersData([])}>Back to Resellers</button>
+									usersData.length > 0 && <button className="text-blue-500 hover:underline" onClick={()=>setUsersData([])}>
+										<i className="ri-arrow-go-back-line text-lg"></i>{" "}
+										Back to Resellers
+									</button>
 								}
 							</div>
 						</div>
