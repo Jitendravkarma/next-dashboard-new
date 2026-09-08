@@ -332,10 +332,10 @@ export async function updateValidity(obj) {
     return error;
   }
 }
-export async function deactiveReseller(email) {
+export async function deactiveReseller(email, activate) {
   checkAndAddAuthTokenToHeader()
   try {
-    const response = await api.post('/restricted/deactivate_reseller', {email});
+    const response = await api.post(`/restricted/${activate ? '' : 'de'}activate_reseller`, {email});
     return response.data.data; // Assuming the API returns the user data and a token
   } catch (error) {
     return error;
@@ -362,7 +362,7 @@ export async function fetchResellerUsers(parent_id) {
 export async function updateResellerLicence(payload) {
   checkAndAddAuthTokenToHeader()
   try {
-    const response = await api.post('/restricted/allot_lisence', payload);
+    const response = await api.post('/restricted/allot_license', payload);
     return response.data.data; // Assuming the API returns the user data and a token
   } catch (error) {
     return error;

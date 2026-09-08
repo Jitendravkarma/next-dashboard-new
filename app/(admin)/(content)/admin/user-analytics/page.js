@@ -174,8 +174,8 @@ const UserAnalytics = () => {
 			editable: false
 		},
 		{
-			headerName: "Reseller",
-			field: "reseller",
+			headerName: "Make Reseller",
+			field: "createreseller",
 			width: 200,
 			renderCell: (params) => {
 				const value = params.row.user_type;
@@ -200,10 +200,54 @@ const UserAnalytics = () => {
 					}
 					setIsProcessing(cur=>({...cur, activating: false}));
 				}
+				return (
+				<div className="h-full flex items-center gap-2">
+					<button title="Make user reseller" disabled ={checkReseller}  className={
+							`focus:outline-none font-medium border rounded-sm text-xs py-1 px-2 border-green-500 ` +
+							(value ==='reseller'
+							? "bg-green-500 text-green-100 font-medium rounded-full text-sm"
+							: ` bg-green-100 text-green-600 hover:bg-green-200 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-600 dark:focus:ring-indigo-900`
+							)
+						}
+						onClick={handleActiveReseller}
+					>
+						{checkReseller ?" Reseller Approved" : isProcessing.activating ? "Please wait..." : "Make Reseller"}
+					</button>
+				</div>
+				)
+			},
+			editable: false
+		},
+		{
+			headerName: "Reseller",
+			field: "reseller",
+			width: 200,
+			renderCell: (params) => {
+				const value = params.row.user_type;
+				const checkReseller = value === "reseller" ? true : false;
+				const [ isProcessing, setIsProcessing ] = useState({ activating: false, deactivating: false });
+				const handleActiveReseller = async()=>{
+					setIsProcessing(cur=>({...cur, activating: true}));
+					try {
+						const deactiveNow = await deactiveReseller(params.row.email, true);
+						const respObj = deactiveNow;
+						console.log(respObj);
+						if(respObj.email){
+							openSnackBar();
+        					handleSnackMessage("Reseller activated successfully!", "green-500", "text-white");
+							setTimeout(()=>window.location.reload(), 2000)
+						}
+					} catch (error) {
+						console.log(error);
+						openSnackBar();
+        				handleSnackMessage("Something went wrong!", "danger", "text-white");
+					}
+					setIsProcessing(cur=>({...cur, activating: false}));
+				}
 				const handleDeactiveReseller = async ()=>{
 					setIsProcessing(cur=>({...cur, deactivating: true}));
 					try {
-						const deactiveNow = await deactiveReseller(params.row.email);
+						const deactiveNow = await deactiveReseller(params.row.email, false);
 						const respObj = deactiveNow;
 						console.log(respObj);
 						if(respObj.email){
