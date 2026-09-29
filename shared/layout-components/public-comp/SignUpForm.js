@@ -5,13 +5,14 @@ import { useUserContext } from "@/shared/userContext/userContext";
 import Link from "next/link";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 import GoogleSignIn from "../google-signin/googlesignin";
+import axios from "axios";
 
 const SignUpForm = () => {
     const refElement = useRef()
 	const { openSnack, snackMessage, openSnackBar, handleSnackMessage, resellerContactInfo } = useUserContext()
 	const [ onSuccess, setOnSuccess ] = useState(false)
 	const [ loading, setLoading ] = useState(false)
-	const [ formData, setFormData ] = useState({name:"", email: "", password: "", confirmPassword: "", rememberMe: false})
+	const [ formData, setFormData ] = useState({name:"", email: "", phone: "", password: "", confirmPassword: "", rememberMe: false})
 	const [ errors, setErrors ] = useState({name:"", email: "", password: "", confirmPassword: "", rememberMe: false})
 	const [ togglePass, setTogglePass ] = useState({ password: false, confirmPassword: false})
 
@@ -78,6 +79,34 @@ const SignUpForm = () => {
             }
 		}
 	}
+
+    const handleOTP = async (resend = false)=>{
+        if(!formData.phone) {
+            alert(`Missing phone number`)
+            return;
+        };
+        try {
+            let otpStatus = await axios.post('/api/otp/request', {
+                "customer_name": formData.name,
+                "customer_mobile": formData.phone,
+                "country_code": "91",
+                "customer_city": "",
+                "country_name": "india",
+                "otp": 6541,
+                "action": resend
+            }, {
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            console.log(otpStatus.data);
+            openSnackBar();
+            handleSnackMessage(`OTP sent successfully on ${otpStatus.data.message}!`, "green-500", "text-white");
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
   return (
     <div className="w-full h-screen flex justify-center items-center">
         {
@@ -150,6 +179,18 @@ const SignUpForm = () => {
                                         <input type="email" ref={refElement} name="email" onChange={handleChange} placeholder="Enter your email" value={formData.email}
                                             className="py-2 px-3 block w-full border-gray-200 rounded-sm text-sm focus:border-primary focus:ring-primary dark:bg-bgdark dark:border-white/10 dark:text-white/70"
                                             required />
+                                    </div>                                
+                                </div>
+                                <div>
+                                    <label className="block text-sm mb-2 dark:text-white">Phone Number</label>
+                                    <div className="relative flex justify-between items-center">
+                                        <input type="phone" ref={refElement} name="phone" onChange={handleChange} placeholder="Enter your phone" value={formData.phone}
+                                        className="py-2 px-3 block w-full border-gray-200 rounded-sm text-sm focus:border-primary focus:ring-primary dark:bg-bgdark dark:border-white/10 dark:text-white/70"
+                                        required />
+
+                                        <div className="w-28 text-end">
+                                            <button className="text-blue-500 underline" onClick={()=>handleOTP(false)}>Send OTP</button>
+                                        </div>
                                     </div>                                
                                 </div>
                                 <div>

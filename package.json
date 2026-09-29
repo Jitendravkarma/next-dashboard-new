@@ -40,6 +40,7 @@
     "googleapis": "^160.0.0",
     "js-cookie": "^3.0.5",
     "leaflet": "^1.9.4",
+    "mysql2": "^3.24.4",
     "next": "^14.2.4",
     "nodemailer": "^7.0.2",
     "or": "^0.2.0",
