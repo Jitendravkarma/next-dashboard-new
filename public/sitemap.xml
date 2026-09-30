@@ -1,191 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/download/eea2329da-37a2753dd/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-       <loc>https://scrapegenius.com/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
+    <loc>https://scrapegenius.com/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/pricing/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/pricing/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/signin/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/signup/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/signup/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/about/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/live-website-scraping/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/contact/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/live-website-data/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/reseller/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/bing-search-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/faq/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/google-search-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/user-manual/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/duckduckgo-search-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/indiaMart-CRM/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/yahoo-search-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/justdial-CRM/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/google-map-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/googleAdsCrm/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/indiamart-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/meta-Ads-CRM/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/justdial-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/custom-lead-upload/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/sulekha-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/google-map-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/email-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/indiamart-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/phone-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/justdial-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/justdial-CRM/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/sulekha-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/indiaMart-CRM/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/tradeindia-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/website-data-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/exportersindia-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/document-data-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/google-search-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/image-data-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/bing-search-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/business-directory-scraper/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/yahoo-search-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/services/whois-database/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/duckduckgo-search-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/about/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/email-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/user-manual/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/phone-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/legal-terms/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/facebook-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/legal-policy/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/youtube-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/faq/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/website-data-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/contact/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/live-website-scraping/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/reseller/profile/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
+    <loc>https://scrapegenius.com/services/live-website-data/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
   <url>
-       <loc>https://scrapegenius.com/forget-password/</loc>
-       <lastmod>2026-07-13T04:55:20+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
+    <loc>https://scrapegenius.com/services/business-directory-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://scrapegenius.com/services/document-data-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://scrapegenius.com/services/image-data-scraper/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://scrapegenius.com/services/whois-database/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://scrapegenius.com/legal-terms/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://scrapegenius.com/legal-policy/</loc>
+    <lastmod>2026-09-28</lastmod>
   </url>
 </urlset>

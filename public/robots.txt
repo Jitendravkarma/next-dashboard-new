@@ -1,3 +1,14 @@
 User-agent: *
-Disallow:
-Sitemap: https://webcrawlerspider.com/sitemap.xml
+Allow: /
+Disallow: /admin/
+Disallow: /reseller/dashboard/
+Disallow: /reseller/smtp/
+Disallow: /reseller/user-analytics/
+Disallow: /reseller/plan-renewal/
+Disallow: /reseller/generate-licence/
+Disallow: /google-search-scraper/
+Disallow: /api/
+Disallow: /*?client_id=*
+Disallow: /*?session_id=*
+
+Sitemap: https://scrapegenius.com/sitemap.xml

@@ -1,7 +1,7 @@
 // Tab data including icons and content for each tab
 export const HeroContent = [
     {
-     text: <span>Data Scraping Tools With <br />Scrape Genius</span>,
+     text: <span>B2B Lead Generation Software <br />for Indian Businesses</span>,
     }, 
     {
      text: <span>CRM Solutions With <br />Scrape Genius</span>,
@@ -23,9 +23,9 @@ export const tabs = [
     icon: <i className="ri-user-line"></i>,
     content: {
       title:
-        "Automate Lead Generation with Smart Scraping",
+        "Automate Your B2B Lead Generation",
       description:
-        <span>Supercharge your sales and marketing efforts with automated lead generation using our powerful web scraping tools. Extract valuable contact details, business information, and customer insights from multiple online sources, including <b>Google Search</b>, <b>Google Maps</b>, and <b>business directories</b>.</span>,
+        <span>Supercharge your sales and marketing with automated lead generation. Find verified contact details and business information from <b>Google Maps</b>, <b>IndiaMART</b>, <b>JustDial</b>, <b>Google Search</b> and <b>business directories</b>, then reach every lead on call, WhatsApp and email from one place.</span>,
       image: "/assets/img/transform-your-data.png",
     },
   },
@@ -34,10 +34,10 @@ export const tabs = [
     icon: <i className="ri-building-line"></i>,
     content: {
       title:
-        "Accuracy and Quality Information Collection",
+        "Accurate, Verified Business Contacts",
       description:
         <span>
-          Harness the power of data in your business with our state-of-the-art data collection services. Be it extracting important details from documents, websites, or other sources using our web scraping tools, we utilize advanced technologies to ensure precise and comprehensive data capture. Our strong Artificial Intelligence algorithms and data science guarantee that you will get the information you need quickly and reliably, whether it’s from our <b>business directory scraper</b>, <b>yellow pages scraper</b>, or <b>image scraping</b> tool.
+          Whether you need contacts from websites, documents, directories or images, Scrape Genius finds complete and accurate business details in minutes. Our AI-powered engine checks every result so your sales team gets reliable leads from the <b>Business Directory Lead Finder</b>, <b>Website Contact Finder</b> and <b>Image to Text</b> tools.
         </span>,
       image: "/assets/img/quality-information-collection.png",
     },
@@ -47,9 +47,9 @@ export const tabs = [
     icon: <i className="ri-group-line"></i>,
     content: {
       title:
-        "Raising Standards with Ensuring Accuracy",
+        "Quality Leads Your Sales Team Can Trust",
       description:
-        "At the core of our services is an unwavering commitment to data quality and accuracy. We understand the importance of accurate and reliable information when using our business directory scraper, website data scraper, and document scraper. Our state-of-the-art quality assurance protocols enhance the data collected from these tools, including the data scraping tools and web scraping service, by carefully verifying it through data science. This ensures you can trust the information you receive to effectively market your business.",
+        "Wrong numbers and bounced emails waste your team's time. Every lead from Scrape Genius goes through quality checks that remove duplicates and invalid contacts, so your sales team spends its time talking to real prospects instead of cleaning spreadsheets.",
       image: "/assets/img/rising-standard.png",
     },
   },
@@ -58,9 +58,9 @@ export const tabs = [
     icon: <i className="ri-bank-card-line"></i>,
     content: {
       title:
-        "Seamless and Reliable Data Extraction",
+        "Turn Files into Ready-to-Use Lead Lists",
       description:
-      <span>Our platform ensures seamless data extraction with unmatched efficiency. With Scrape Genius's advanced Document Scraper service, extracting critical information such as email addresses and phone numbers has never been easier. Whether you're working with <b>.csv, .txt, .doc, .docx, .html</b>, or other file formats, our tool simplifies the process, providing a user-friendly and reliable solution. Trust in our proven expertise to deliver accurate and consistent results, empowering you with the data you need, precisely when you need it.</span>,
+      <span>Have old customer lists, exhibitor catalogues or exported reports lying around? The Document Contact Finder pulls email addresses and phone numbers out of <b>.csv, .txt, .doc, .docx, .html</b> and other file formats in seconds, so you can start calling and emailing right away.</span>,
       image: "/assets/img/data-extraction.png",
     },
   },
@@ -81,302 +81,287 @@ export const featureVideos = [
 ]
 export const featurestemplates = [
   {
-    title: "Live Website Scraper",
+    title: "Live Website Leads",
     url: "/services/live-website-scraping",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/live.png"
-        alt="Live Website Scraper"
+        alt="Live Website Leads"
         className="rounded-full"
       />
     ),
     description:
-      "Extract the data from millions of live websites for the select country and get detailed data such as Phone numbers, Email addresses, Social media links, and more.",
+      "Find businesses from millions of live websites in your chosen country with phone numbers, email addresses, social media links and more.",
     youtube: "xJsktXJfZZ8",
     toolName: "live_scraping"
   },
   {
-    title: "Live Website Data",
+    title: "Website Intelligence",
     url: "/services/live-website-data",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/websiteIcon.png"
-        alt="Live Website Data"
+        alt="Website Intelligence"
         className="rounded-full"
       />
     ),
     description:
-      "Here now you can get the enhanced data from our actual database in few seconds.",
+      "Get website details, contact numbers and emails of businesses in seconds from our ready-made business index.",
     youtube: "xJsktXJfZZ8",
     toolName: "live_data"
   },
   {
-    title: "Bing Search Scraper",
+    title: "Bing Lead Finder",
     url: "/services/bing-search-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/bing.png"
-        alt="Bing Search Scraper"
+        alt="Bing Lead Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Scrape data using keywords on Google to extract website names, emails, contact numbers, and more efficiently with this powerful web scraping tool.",
+      "Find businesses from Bing search results using your keywords and get their websites, emails and phone numbers.",
     youtube: "xJsktXJfZZ8",
     toolName: "bing"
   },
   {
-    title: "Google Search Scraper",
+    title: "Google Search Lead Finder",
     url: "/services/google-search-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/google.png"
-        alt="Google Search Scraper"
+        alt="Google Search Lead Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Scrape data using keywords on Google to extract website names, emails, contact numbers, and more efficiently with this powerful web scraping tool.",
+      "Turn any keyword into a list of relevant businesses with websites, emails and phone numbers from Google search results.",
     youtube: "xJsktXJfZZ8",
     toolName: "google"
   },
   {
-    title: "DuckDuckGo Search Scraper",
+    title: "DuckDuckGo Lead Finder",
     url: "/services/duckduckgo-search-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/duckduckgo.png"
-        alt="DuckDuckGo Search Scraper"
+        alt="DuckDuckGo Lead Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Scrape data using keywords on Google to extract website names, emails, contact numbers, and more efficiently with this powerful web scraping tool.",
+      "Find businesses from DuckDuckGo search results using your keywords and collect their websites, emails and phone numbers.",
     youtube: "xJsktXJfZZ8",
     toolName: "duck"
   },
   {
-    title: "Yahoo Search Scraper",
+    title: "Yahoo Lead Finder",
     url: "/services/yahoo-search-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/yahoo.png"
-        alt="Yahoo Search Scraper"
+        alt="Yahoo Lead Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Scrape data using keywords on Google to extract website names, emails, contact numbers, and more efficiently with this powerful web scraping tool.",
+      "Find businesses from Yahoo search results by keyword and get their websites, emails and phone numbers.",
     youtube: "xJsktXJfZZ8",
     toolName: "yahoo"
   },
   {
-    title: "Google Map Scraper",
+    title: "Google Maps Lead Finder",
     url: "/services/google-map-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/map.png"
-        alt="Google Map Scraper"
+        alt="Google Maps Lead Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Google Map Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+      "Find local businesses on Google Maps by category and city, with phone numbers, emails, websites and ratings.",
     youtube: "BhI2KKoSj3Y",
     toolName: "map"
   },
   {
-    title: "IndiaMART Scraper",
+    title: "IndiaMART Lead Finder",
     url: "/services/indiamart-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/indiamartIcon.png"
-        alt="IndiaMART Scraper"
+        alt="IndiaMART Lead Finder"
         className="rounded-full"
       />
     ),
     description:
-      "IndiaMART Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+      "Discover suppliers and manufacturers on IndiaMART with company names, contact numbers and product categories.",
     youtube: "BhI2KKoSj3Y",
     toolName: "indiamart"
   },
   {
-    title: "Justdial Scraper",
+    title: "JustDial Lead Finder",
     url: "/services/justdial-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/jdIcon.png"
-        alt="Justdial Scraper"
+        alt="JustDial Lead Finder"
         className="rounded-full"
       />
     ),
     description:
-      "JustDial Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+      "Get local business listings from JustDial by city and category, complete with contact numbers and addresses.",
     youtube: "BhI2KKoSj3Y",
     toolName: "justdial"
   },
   {
-    title: "Sulekha Scraper",
+    title: "Sulekha Lead Finder",
     url: "/services/sulekha-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/sulekha.png"
-        alt="Sulekha Scraper"
+        alt="Sulekha Lead Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Sulekha Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+      "Reach service providers listed on Sulekha by location and service type, with phone numbers and ratings.",
     youtube: "BhI2KKoSj3Y",
     toolName: "sulekha"
   },
   {
-    title: "Email Scraper",
+    title: "Email Finder",
     url: "/services/email-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/email.png"
-        alt="Email Scraper"
+        alt="Email Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Email Scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+      "Find business email addresses from websites, including contact pages and footers, in bulk.",
     youtube: "BhI2KKoSj3Y",
     toolName: "email"
   },
   {
-    title: "Phone number scraper",
+    title: "Phone Number Finder",
     url: "/services/phone-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/phone.png"
-        alt="Phone number scraper"
+        alt="Phone Number Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Phone number scraper extracts website names, emails, and contact numbers from map.google.com, providing essential data for your business needs.",
+      "Collect mobile and landline numbers of businesses, ready for calling and WhatsApp campaigns.",
     youtube: "BhI2KKoSj3Y",
     toolName: "phone"
   },
   {
-    title: "Justdial CRM",
+    title: "JustDial CRM",
     url: "/services/justdial-CRM",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/jdIcon.png"
-        alt="Justdial CRM"
+        alt="JustDial CRM"
         className="rounded-full"
       />
     ),
     description:
-      "Our Justdial CRM helps you automatically collect, centralize, and manage customer enquiries from your Justdial account — without any API integration..",
+      "Automatically download your JustDial enquiries into one CRM and follow up on every lead, with no API needed.",
     youtube: "UHZ7LEqncZE",
     toolName: "justdialCrm"
   },
   {
-    title: "IndiaMart CRM",
+    title: "IndiaMART CRM",
     url: "/services/indiaMart-CRM",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/indiamartIcon.png"
-        alt="IndiaMart CRM"
+        alt="IndiaMART CRM"
         className="rounded-full"
       />
     ),
     description:
-      "Our IndiaMART CRM is built to simplify lead management by automatically fetching and centralizing your IndiaMART enquiries — completely API-free.",
+      "Automatically import your IndiaMART enquiries into one CRM and export them to Excel, with no API needed.",
     youtube: "tNfQ75JCXYM",
     toolName: "indiaMartCrm"
   },
   {
-    title: "Website Data Scraper",
+    title: "Website Contact Finder",
     url: "/services/website-data-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/website.png"
-        alt="Website Data Scraper"
+        alt="Website Contact Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Gather country-specific domain records, including domain names, emails, and phone numbers, with our seamless website data scraper software.",
+      "Get emails, phone numbers and domain details of websites in your target country.",
     youtube: "_sXWe4U2Cz8",
     toolName: "website_data"
   },
   {
-    title: "Document Data Scraper",
+    title: "Document Contact Finder",
     url: "/services/document-data-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/docIcon.png"
-        alt="Document Data Scraper"
+        alt="Document Contact Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Our document scraper handles .txt, .csv, and more, efficiently extracting contact numbers and email addresses from various document types.",
+      "Pull phone numbers and email addresses out of .txt, .csv, .doc and other files instantly.",
     youtube: "NfOetsKFX_E",
     toolName: "document"
   },
   {
-    title: "Image Data Scraper",
+    title: "Image to Text",
     url: "/services/image-data-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/imageIcon.png"
-        alt="Image Data Scraper"
+        alt="Image to Text"
         className="rounded-full"
       />
     ),
     description:
-      "Upload any image to our image scraping tool to extract text or details efficiently, converting visuals into data to enhance your workflow.",
+      "Upload a visiting card, brochure or screenshot and turn it into editable text and contact details.",
     youtube: "k_zh66JW-oU",
     toolName: "image"
   },
   {
-    title: "Business Directory Scraper",
+    title: "Business Directory Lead Finder",
     url: "/services/business-directory-scraper",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/directoryIcon.png"
-        alt="Business Directory Scraper"
+        alt="Business Directory Lead Finder"
         className="rounded-full"
       />
     ),
     description:
-      "Easily scrape data by entering URLs of directories, including email IDs, contact numbers, and domain names for efficient business directory scraping.",
+      "Paste any directory URL and get the listed businesses with emails, contact numbers and websites.",
     youtube: "LW9_PAJhens",
     toolName: "directory"
   },
   {
-    title: "Website Data Center",
-    url: "/services/website-data-center",
-    image: (
-      <img
-        src="/assets/iconfonts/dashboard-icon/websiteIcon.png"
-        alt="website-data-cente"
-        className="rounded-full"
-      />
-    ),
-    description:
-      "Our Website Data Center allows quick searches by country and keyword, delivering results like URLs, emails, and phone numbers tailored to your needs.",
-    youtube: "_sXWe4U2Cz8",
-    toolName: "live_data"
-  },
-  {
-    title: "Whois Domain Database",
+    title: "Whois Domain Lookup",
     url: "/services/whois-database",
     image: (
       <img
         src="/assets/iconfonts/dashboard-icon/domain.png"
-        alt="whois-domain-detabase"
+        alt="Whois Domain Lookup"
         className="rounded-full"
       />
     ),
     description:
-      "Access our 8+ years of Whois database with raw data from APIs, filtered year-wise, offering an extensive and convenient search experience.",
+      "Search 8+ years of domain registration records, filtered by year, to find newly registered businesses.",
     youtube: "iGRgQurIOPg",
     toolName: "whois"
   },
@@ -384,49 +369,49 @@ export const featurestemplates = [
 
 export const Businessgrowusecases = [
   {
-    title: "Reliable Email Extractor",
+    title: "Email Finder",
     icon: <i className="ri-mail-line"></i>,
     backgroundColor: "#ebf9ff",
     iconColor: "#36c3ff",
     link: "/email-extractor",
   },
   {
-    title: "B2B Directory Scraper",
+    title: "B2B Directory Leads",
     icon: <i className="ri-shake-hands-line"></i>,
     backgroundColor: "#ffd9cd",
     iconColor: "#e8501f",
     link: "/pdf-scraper",
   },
   {
-    title: "Bulk Contact Scraper",
+    title: "Bulk Contact Finder",
     icon: <i className="ri-group-line"></i>,
     backgroundColor: "#f3f4ff",
     iconColor: "#6271ff",
     link: "/website-scraper",
   },
   {
-    title: "Document scraper",
+    title: "Document Contacts",
     icon: <i className="ri-file-text-line"></i>,
     backgroundColor: "#ffead0",
     iconColor: "#ff9400",
     link: "/document-scraper",
   },
   {
-    title: "Image scraping",
+    title: "Image to Text",
     icon: <i className="ri-image-line"></i>,
     backgroundColor: "#f0f7ff",
     iconColor: "#3470ff",
     link: "/image-scraper",
   },
   {
-    title: "Advanced web scraping",
+    title: "Website Leads",
     icon: <i className="ri-search-line"></i>,
     backgroundColor: "#efffed",
     iconColor: "#62ca51",
     link: "/advanced-scraper",
   },
   {
-    title: "Whois Data",
+    title: "Whois Lookup",
     icon: <i className="ri-bubble-chart-fill"></i>,
     backgroundColor: "#ebf9ff",
     iconColor: "#36c3ff",

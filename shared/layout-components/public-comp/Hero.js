@@ -36,7 +36,7 @@ const HeroSection = () => {
           <div>{currentText}</div>
         </h1>
         <p className="mb-8 text-black text-base font-light">
-          Increase Sales with Our Scraper.
+          Find B2B leads from Google Maps, IndiaMART, JustDial and websites, and manage them in one CRM.
         </p>
         <PrimaryButton/>
       </div>

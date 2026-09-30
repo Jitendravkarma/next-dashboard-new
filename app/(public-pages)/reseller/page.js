@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import React from 'react'
+import { seo_reseller } from '@/shared/data/seo-content/content'
+
+export const metadata = seo_reseller
 
 const Content = ({ layout = true, title, image, description }) => {
     return (

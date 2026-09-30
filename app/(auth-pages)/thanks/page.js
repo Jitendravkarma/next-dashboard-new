@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
+import { seo_thanks } from '@/shared/data/seo-content/content'
+
+export const metadata = seo_thanks
 
 const ThanksPage = () => {
   return (

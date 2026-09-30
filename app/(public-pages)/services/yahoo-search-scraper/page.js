@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from "@/shared/layout-components/public-comp/PageHeader";
-import { seo_google_search } from "@/shared/data/seo-content/content";
+import { seo_yahoo } from "@/shared/data/seo-content/content";
 import {
   yahoosearchscraperdataget,
   YahoosearchscraperProps,
@@ -15,7 +15,7 @@ import FaqSection from "@/shared/layout-components/public-comp/FaqSection";
 import WhyChooseUs from "@/shared/layout-components/public-comp/WhyChoose";
 import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
 
-export const metadata = seo_google_search;
+export const metadata = seo_yahoo;
 
 const GoogleSearch = () => {
   return (

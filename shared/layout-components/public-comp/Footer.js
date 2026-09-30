@@ -37,16 +37,16 @@ export default function Footer() {
 
   const footerLinks = [
     {
-      title: "Top Services",
+      title: "Top Tools",
       list: [
-        { title: "Google Search Scraper", url: "/services/google-search-scraper" },
-        { title: "Google Map Scraper", url: "/services/google-map-scraper" },
-        { title: "Website Data Scraper", url: "/services/website-data-scraper" },
-        { title: "Live Website Data", url: "/services/live-website-data" },
-        { title: "Document Data Scraper", url: "/services/document-data-scraper" },
-        { title: "Image Data Scraper", url: "/services/image-data-scraper" },
-        { title: "Business Directory Scraper", url: "/services/business-directory-scraper" },
-        { title: "Whois Domain Lookup", url: "/services/whois-database" }
+        { title: "Google Maps Lead Finder", url: "/services/google-map-scraper/" },
+        { title: "IndiaMART CRM", url: "/services/indiaMart-CRM/" },
+        { title: "JustDial CRM", url: "/services/justdial-CRM/" },
+        { title: "IndiaMART Lead Finder", url: "/services/indiamart-scraper/" },
+        { title: "JustDial Lead Finder", url: "/services/justdial-scraper/" },
+        { title: "Google Search Lead Finder", url: "/services/google-search-scraper/" },
+        { title: "Website Contact Finder", url: "/services/website-data-scraper/" },
+        { title: "Business Directory Lead Finder", url: "/services/business-directory-scraper/" }
       ],
       subItem: false,
     },
@@ -61,6 +61,7 @@ export default function Footer() {
         { title: "Privacy Policy", url: "/legal-policy" },
         { title: "FAQ", url: "/faq" },
         { title: "Contact Us", url: "/contact" },
+        { title: "Become a Reseller", url: "/reseller" },
       ],
       subItem: false,
     },
@@ -106,7 +107,7 @@ export default function Footer() {
                 </Link>
               </div>
               <p>
-                Scrape Genius provides advanced web scraping solutions designed to simplify and automate your data extraction needs. Get actionable insights, streamline your workflow, and harness the full potential of online data efficiently and effortlessly.
+                Scrape Genius is B2B lead generation software that helps Indian businesses find verified leads from Google Maps, IndiaMART, JustDial and websites, and manage every enquiry in one CRM.
               </p>
             </div>
 
@@ -121,10 +122,10 @@ export default function Footer() {
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {
-                            list.map(({ title, url }, idx) => (
+                            list.filter(({ url }) => url).map(({ title, url }, idx) => (
                               <div key={idx}>
                                 <Link
-                                  href={url ? url : "/reseller/profile"}
+                                  href={url}
                                   target="_blank"
                                   aria-label={title}
                                   title={url ? `Visit ${title} profile` : `${title} profile not found`}
@@ -145,10 +146,10 @@ export default function Footer() {
                           </h4>
                           <div className="flex flex-wrap gap-2">
                             {
-                              subItem.list.map(({ title, url }, idx) => (
+                              subItem.list.filter(({ url }) => url).map(({ title, url }, idx) => (
                                 <div key={idx}>
                                   <Link
-                                    href={url ? url : "/reseller/profile"}
+                                    href={url}
                                     target="_blank"
                                     aria-label={title}
                                     title={url ? `Visit ${title} profile` : `${title} profile not found`}
