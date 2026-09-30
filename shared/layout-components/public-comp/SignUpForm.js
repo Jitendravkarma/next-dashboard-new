@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
-import { signUp } from "@/shared/apis/api";
+import { login, saveProfile, signUp } from "@/shared/apis/api";
 import { useUserContext } from "@/shared/userContext/userContext";
 import Link from "next/link";
 import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
@@ -10,9 +10,12 @@ import axios from "axios";
 const SignUpForm = () => {
     const refElement = useRef()
 	const { openSnack, snackMessage, openSnackBar, handleSnackMessage, resellerContactInfo } = useUserContext()
+    const [ otpId, setOtpId ] = useState(false);
+    const [ otpSending, setOtpSending ] = useState(false);
+    const [ otpMsg, setOtpMsg ] = useState(false);
 	const [ onSuccess, setOnSuccess ] = useState(false)
 	const [ loading, setLoading ] = useState(false)
-	const [ formData, setFormData ] = useState({name:"", email: "", phone: "", password: "", confirmPassword: "", rememberMe: false})
+	const [ formData, setFormData ] = useState({name:"", email: "", phone: "", password: "", confirmPassword: "", rememberMe: false, otp: '', otp_verified: false})
 	const [ errors, setErrors ] = useState({name:"", email: "", password: "", confirmPassword: "", rememberMe: false})
 	const [ togglePass, setTogglePass ] = useState({ password: false, confirmPassword: false})
 
@@ -41,6 +44,27 @@ const SignUpForm = () => {
         }
     }
 
+    const verifyOtp = ()=>{
+        setOtpMsg('');
+        if(formData.otp){
+            const fetchLocalPin = localStorage.getItem('random');
+            if(fetchLocalPin) {
+                const sliceOtp = Number(fetchLocalPin.slice(4, -4)) - (1050 + 325);
+                if(sliceOtp === Number(formData.otp)) {
+                    setFormData(cur=>({...cur, otp_verified: true}));
+                    setOtpMsg(`OTP verified successfully!`);
+                    localStorage.removeItem('random');
+                }
+                else {
+                    setOtpMsg(`Invalid OTP`);
+                }
+            }
+        }
+        else {
+            setOtpMsg(`Enter OTP`);
+        }
+    }
+
 	const togglePassword = (name)=>{
 		setTogglePass({...togglePass, [name]: !togglePass[name]})
 	}
@@ -56,6 +80,16 @@ const SignUpForm = () => {
                     setLoading(true)
                     try {
                         await signUp({...formData, ParentEmail: "support@designcollection.in"})
+                        try {
+                            const response = await login(formData);
+                            const userData = response.user;
+                            console.log(userData);
+                            console.log(response.access_token);
+                            const saveOnDb = await saveProfile({ ...formData, country: 'india' }, response.access_token);
+                            console.log(saveOnDb);
+                        } catch (error) {
+                            console.log(error)
+                        }
                         setOnSuccess(true)
                     } catch (error) {
                         const err = error.response.data.errors.email;
@@ -86,26 +120,36 @@ const SignUpForm = () => {
             return;
         };
         try {
+            setOtpMsg('');
+            setOtpSending(true);
             let otpStatus = await axios.post('/api/otp/request', {
                 "customer_name": formData.name,
                 "customer_mobile": formData.phone,
                 "country_code": "91",
                 "customer_city": "",
                 "country_name": "india",
-                "otp": 6541,
-                "action": resend
+                "otp": false,
+                "resend": false
             }, {
                 headers: {
                     "Content-Type": "application/json"
                 }
             });
-            console.log(otpStatus.data);
+            const obj = otpStatus.data;
+            localStorage.setItem('random', obj.otp_id);
+            setOtpId(obj.otp_id);
             openSnackBar();
-            handleSnackMessage(`OTP sent successfully on ${otpStatus.data.message}!`, "green-500", "text-white");
+            handleSnackMessage(`OTP sent successfully on ${obj.message}!`, "green-500", "text-white");
         } catch (error) {
             console.log(error);
         }
+        setOtpSending(false);
     }
+
+    useEffect(()=>{
+        const fetchOtpId = localStorage.getItem('random');
+        if(fetchOtpId) setOtpId(fetchOtpId);
+    }, []);
 
   return (
     <div className="w-full h-screen flex justify-center items-center">
@@ -188,11 +232,32 @@ const SignUpForm = () => {
                                         className="py-2 px-3 block w-full border-gray-200 rounded-sm text-sm focus:border-primary focus:ring-primary dark:bg-bgdark dark:border-white/10 dark:text-white/70"
                                         required />
 
-                                        <div className="w-28 text-end">
-                                            <button className="text-blue-500 underline" onClick={()=>handleOTP(false)}>Send OTP</button>
-                                        </div>
-                                    </div>                                
+                                        {
+                                            formData.phone &&
+                                            <div className="w-28 text-end">
+                                                <button type="button" disabled={otpSending} className="text-blue-500 hover:text-blue-700 hover:underline" onClick={()=>handleOTP(false)}>{otpSending ? 'Sending...' : otpId ? 'Re-Send' : 'Send OTP'}</button>
+                                            </div>
+                                        }
+                                    </div> 
+                                    {
+                                        otpMsg &&
+                                        <spna className={`${otpMsg.includes(`successfully`) ? 'text-green-500 italic' : 'text-red-500'} text-xs font-bold`}>{otpMsg}</spna>
+                                    }
                                 </div>
+                                {
+                                    (otpId && !formData.otp_verified && formData.phone) &&
+                                    <div>
+                                        <label className="block text-sm mb-2 dark:text-white">Enter OTP</label>
+                                        <div className="relative flex justify-between items-center">
+                                            <input type="text" ref={refElement} name="otp" onChange={handleChange} placeholder="4 Digits OTP" value={formData.otp}
+                                            className="py-2 px-3 block w-full border-gray-200 rounded-sm text-sm focus:border-primary focus:ring-primary dark:bg-bgdark dark:border-white/10 dark:text-white/70" maxLength={4} inputMode="numeric" pattern="[0-9]*" required />
+
+                                            <div className="w-28 text-end">
+                                                <button type="button" className="text-blue-500 hover:text-blue-700 hover:underline" onClick={verifyOtp}>Verify OTP</button>
+                                            </div>
+                                        </div>                                
+                                    </div>
+                                }
                                 <div>
                                     <label htmlFor="password" className="block text-sm mb-2 dark:text-white">Password</label>
                                     <div className="relative">

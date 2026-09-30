@@ -161,11 +161,14 @@ export function getAuthToken() {
 }
 
 // Function to check and add the authentication token to the Axios header if it's missing
-export function checkAndAddAuthTokenToHeader() {
+export function checkAndAddAuthTokenToHeader(localAuth) {
 
   const authToken = getAuthToken();
   if (authToken && !api.defaults.headers.common['Authorization']) {
     api.defaults.headers.common['Authorization'] = `Bearer ${authToken}`;
+  }
+  else {
+    if(localAuth) api.defaults.headers.common['Authorization'] = `Bearer ${localAuth}`;
   }
 }
 // Function to make an authenticated API request
@@ -381,6 +384,16 @@ export async function approveReseller(email) {
   checkAndAddAuthTokenToHeader()
   try {
     const response = await api.get(`/restricted/makereseller?email=${email}`);
+    return response.data.data; // Assuming the API returns the user data and a token
+  } catch (error) {
+    return error;
+  }
+}
+
+export async function saveProfile(data, authToken) {
+  checkAndAddAuthTokenToHeader(authToken)
+  try {
+    const response = await api.post('/restricted/update_profile_details', data);
     return response.data.data; // Assuming the API returns the user data and a token
   } catch (error) {
     return error;
