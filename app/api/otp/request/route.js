@@ -228,7 +228,7 @@ export async function POST(request) {
   } catch (error) {
     console.error("OTP request error:", error);
     return NextResponse.json(
-      { status: false, message: "Something went wrong" },
+      { status: false, message: "Something went wrong", error },
       { status: 500 }
     );
   }
