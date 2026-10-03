@@ -226,7 +226,7 @@ const SignUpForm = () => {
                                             required />
                                     </div>                                
                                 </div>
-                                <div>
+                                {/* <div>
                                     <label className="block text-sm mb-2 dark:text-white">Phone Number</label>
                                     <div className="relative flex justify-between items-center">
                                         <input type="phone" ref={refElement} name="phone" onChange={handleChange} placeholder="Enter your phone" value={formData.phone}
@@ -244,7 +244,7 @@ const SignUpForm = () => {
                                         otpMsg &&
                                         <spna className={`${otpMsg.includes(`successfully`) ? 'text-green-500 italic' : 'text-red-500'} text-xs font-bold`}>{otpMsg}</spna>
                                     }
-                                </div>
+                                </div> */}
                                 {
                                     (otpId && !formData.otp_verified && formData.phone) &&
                                     <div>
@@ -313,7 +313,7 @@ const SignUpForm = () => {
                                 </div>
 
                                 <button 
-                                    disabled={errors.password || errors.confirmPassword || !formData.otp_verified}
+                                    disabled={errors.password || errors.confirmPassword}
                                     type="submit"
                                     className={`py-2 px-3 inline-flex justify-center items-center gap-2 rounded-sm border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-0 focus:ring-primary focus:ring-offset-0 transition-all text-sm dark:focus:ring-offset-white/10 disabled:opacity-50 ${loading ? "opacity-[0.6]" : ""}`}>
                                     { loading ? <span className="animate-pulse">Please wait...</span> : "Sign up"}
