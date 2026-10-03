@@ -131,7 +131,7 @@ export default function Downloads() {
       push('/signin')
   }
   return (
-    <main className="text-gray-800 scroll-smooth">
+    <div className="text-gray-800 scroll-smooth">
       {/* Header */}
       <header className="text-black py-20 text-center bg-white">
         {
@@ -343,6 +343,6 @@ export default function Downloads() {
           </h4>
         </section>
       )}
-    </main>
+    </div>
   );
 }

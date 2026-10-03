@@ -71,6 +71,7 @@ const SignUpForm = () => {
 
 	const handleSubmit = async (e)=>{
 		e.preventDefault()
+        setOtpMsg('');
 		if(formData.name && formData.email && formData.password && formData.confirmPassword){
 			if(formData.password !== formData.confirmPassword){
                 setErrors({...errors, confirmPassword: `Passwords do not match!`})
@@ -312,7 +313,7 @@ const SignUpForm = () => {
                                 </div>
 
                                 <button 
-                                    disabled={errors.password || errors.confirmPassword}
+                                    disabled={errors.password || errors.confirmPassword || !formData.otp_verified}
                                     type="submit"
                                     className={`py-2 px-3 inline-flex justify-center items-center gap-2 rounded-sm border border-transparent font-semibold bg-primary text-white hover:bg-primary focus:outline-none focus:ring-0 focus:ring-primary focus:ring-offset-0 transition-all text-sm dark:focus:ring-offset-white/10 disabled:opacity-50 ${loading ? "opacity-[0.6]" : ""}`}>
                                     { loading ? <span className="animate-pulse">Please wait...</span> : "Sign up"}
