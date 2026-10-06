@@ -904,6 +904,7 @@ const UserAccess = memo(({ email, closePop, initialSelected = [] }) => {
   ]);
   
   const [query, setQuery] = useState("");
+  const [validity, setValidity] = useState("");
   const [respMsg, setRespMsg] = useState("");
   const [selectedSet, setSelectedSet] = useState(new Set(initialSelected));
   const [saving, setSaving] = useState(false);
@@ -1099,9 +1100,14 @@ const UserAccess = memo(({ email, closePop, initialSelected = [] }) => {
   async function handleSave() {
     if(selectedSet.size < 6){
       const tools = Array.from(selectedSet);
+      console.log(validity);
+      if(!validity) {
+        alert(`Missing validity!`);
+        return;
+      }
       try {
         setSaving(true);
-        const user_object = {reseller_email: "support@designcollection.in", email, tools}
+        const user_object = {reseller_email: "support@designcollection.in", email, tools, valid_until: validity}
         await axios.post('/api/logs', { user_object });
         // await fetchLimitedAccessUser(email);
         setRespMsg(`Access updated successfully!`);
@@ -1201,6 +1207,15 @@ const UserAccess = memo(({ email, closePop, initialSelected = [] }) => {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              placeholder="Ex. Search Engine Scraper"
+              className="mt-2 mb-3 w-full rounded-md border px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+            />
+
+            <label className="text-xs font-medium text-gray-700">Validity Date</label>
+            <input
+              type='date'
+              value={validity}
+              onChange={(e) => setValidity(e.target.value)}
               placeholder="Ex. Search Engine Scraper"
               className="mt-2 mb-3 w-full rounded-md border px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-200"
             />
