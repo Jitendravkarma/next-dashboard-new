@@ -13,8 +13,8 @@ const GetStart = () => {
         </ul>
        <div className="flex justify-center mt-8">
           <a
-            href="https://mail-us.in/lead_generation_tool.zip"
-            download
+            href="/signin"
+            target='_blank'
             className="inline-flex items-center gap-3 px-10 py-5 text-lg bg-gradient-to-r from-indigo-500 to-indigo-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300"
           >
             <i className='ri-download-fill'/> Download Now

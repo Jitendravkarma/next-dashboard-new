@@ -4,6 +4,18 @@ import { Heading } from "../Heading";
 const Logs = () => {
   const change_logs = [
     {
+      release: "22.3",
+      logs: [
+        <span>MSME & MCA B2B Lead Generation</span>,
+        <span>WhatsApp Call Integration</span>,
+        <span>New Email Template Layouts</span>,
+        <span>AI-Powered Top 10 City Suggestions</span>,
+        <span>Improved Google Maps Scraping</span>,
+        <span>Custom SMTP for Bulk Email</span>,
+        <span>Minor Bug Fixes & Performance Improvements</span>
+      ]
+    },
+    {
       release: "22.2",
       logs: [
         <span>Download the <strong>latest version</strong> from our website</span>,
