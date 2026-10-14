@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { useUserContext } from "@/shared/userContext/userContext";
 
-const PriceTable = () => {
+const PriceTable = ({singleuser}) => {
   const { priceObj, selectedSilverPlan, openRates } = useUserContext();
   return (
     <div>
@@ -26,27 +26,27 @@ const PriceTable = () => {
             <div></div>
             {/* Silver */}
             <div className="py-6">
-              <h3 className="font-semibold text-gray-700">Silver Plan</h3>
-              <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{priceObj.pro}/yr</p>
-              <Link target="_blank" href={priceObj.proLink} className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-semibold">
+              <h3 className="font-semibold text-gray-700">{singleuser ? 'basic' : 'Silver'} Plan</h3>
+              <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{singleuser ? '11,999' : priceObj.pro}/yr</p>
+              <Link target="_blank" href={singleuser ? 'https://basic.com' : priceObj.proLink} className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-semibold">
                 Buy Now
               </Link>
             </div>
 
             {/* Gold */}
             <div className="py-6">
-              <h3 className="font-semibold text-orange-500">Gold Plan</h3>
-              <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{priceObj.gold}/yr</p>
-              <Link target="_blank" href={priceObj.goldLink} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-semibold">
+              <h3 className="font-semibold text-orange-500">{singleuser ? 'Standard' : 'Gold'} Plan</h3>
+              <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{singleuser ? '15,999' : priceObj.gold}/yr</p>
+              <Link target="_blank" href={singleuser ? 'https://standard.com' : priceObj.goldLink} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-semibold">
                 Buy Now
               </Link>
             </div>
 
             {/* Platinum */}
             <div className="py-6">
-              <h3 className="font-semibold text-purple-600">Platinum Plan</h3>
-              <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{priceObj.platinum}/yr</p>
-              <Link target="_blank" href={priceObj.platinumLink} className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-semibold">
+              <h3 className="font-semibold text-purple-600">{singleuser ? 'Pro' : 'Platinum'} Plan</h3>
+              <p className="text-gray-400 text-sm mb-3">{priceObj.priceTag}{singleuser ? '18,999' : priceObj.platinum}/yr</p>
+              <Link target="_blank" href={singleuser ? 'https://pro.com' : priceObj.platinumLink} className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-semibold">
                 Buy Now
               </Link>
             </div>
@@ -54,19 +54,15 @@ const PriceTable = () => {
 
           {/* Rows */}
           {[
-            ["Database Access", "10 Million", "50 Million", "100+ Million"],
-            ["License Keys", "50 License Keys", "200 License Keys", "500 License Keys"],
+            ["Data Extraction", "upto 1.8 million", "upto 3.6 million", "upto 5 million"],
             ["Billed Annually", "✔", "✔", "✔"],
             ["Downloads", "Unlimited", "Unlimited", "Unlimited"],
-            ["White-label Reselling", "✔", "✔", "✔"],
-            ["No of Accounts", "Single Account", "Single Account", "Create up to 5 reseller accounts for free."],
-            ["Reseller Referral Commission", <button className="badge bg-indigo-500 hover:bg-indigo-600 text-white font-bold" onClick={openRates}>Click for Comission Rates</button>, <button className="badge bg-indigo-500 hover:bg-indigo-600 text-white font-bold" onClick={openRates}>Click for Comission Rates</button>, <button className="badge bg-indigo-500 hover:bg-indigo-600 text-white font-bold" onClick={openRates}>Click for Comission Rates</button>],
-            ["Priority Onboarding", "✖", "✔", "✔"],
-            ["Dedicated Account Manager", "✖", "✖", "✔"],
-            ["Contact Support", "Direct Support", "Direct Support", "24/7 Priority Support"],
-            ["Google & Meta Advertising Campaign Setup", "✔", "✔", "✔"],
+            ["No of Licence", "Single Licence", "Single Licence", "Single Licence"],
+            ["Priority Onboarding", "✔", "✔", "✔"],
+            ["Dedicated Account Manager", "✔", "✔", "✔"],
+            ["Contact Support", "Email Support", "Direct Contact Support", "24/7 Priority Support"],
             ["Customer Support", "✔", "✔", "✔"],
-            ["Early Access to New Features", "✖", "✖", "✔"],
+            ["Early Access to New Features", "✔", "✔", "✔"],
           ].map((row, i) => (
             <div
               key={i}

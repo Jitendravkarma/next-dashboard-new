@@ -6,7 +6,7 @@ import Link from "next/link"; // For navigation links
 import { useState } from "react"; // React hook for state management
 import { ResellerComission } from "../dashboard/AlertBox";
 import { Tooltip } from './Button';
-const PriceCards = () => {
+const PriceCards = ({singleuser}) => {
   const { priceObj, isUSDPrice, setIsUSDPrice, silverPlans, selectedSilverPlan, setSelectedSilverPlan, isRatesOpen, openRates } = useUserContext();
   
   const [isConverting, setIsConverting] = useState(false);
@@ -124,7 +124,7 @@ const PriceCards = () => {
     <div>
       {/* Heading */}
       <h2 className="text-center text-3xl sm:text-4xl font-extrabold text-blue-600 mb-14">
-        Choose Your Reseller Plan
+        Choose Your {singleuser ? 'Single' : 'Reseller'} Plan
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -133,10 +133,10 @@ const PriceCards = () => {
         <div className="bg-gray-50 hover:shadow-xl hover:scale-105 duration-300 border border-gray-200 rounded-md p-7">
           <span className="inline-flex items-center gap-2 bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm mb-4">
             <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
-            Silver
+            {singleuser ? 'Basic' : 'Silver'}
           </span>
 
-          <h3 className="text-xl font-bold text-blue-600 mb-1">Silver Plan</h3>
+          <h3 className="text-xl font-bold text-blue-600 mb-1">{singleuser ? 'Basic' : 'Silver'} Plan</h3>
           {/* <h3 className="flex justify-between items-center gap-2 bg-gray-100 p-2 mb-2 rounded-full">
             {
               silverPlans.map((item, idx)=>(
@@ -145,11 +145,11 @@ const PriceCards = () => {
             }
           </h3> */}
           <p className="text-sm text-gray-500 mb-4">
-            {selectedSilverPlan.sub_title}
+            {singleuser ? 'Perfect for small size business' : selectedSilverPlan.sub_title}
           </p>
 
           <div className="flex items-center gap-2 mb-1">
-            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{selectedSilverPlan.old_price}/yearly</p>
+            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{singleuser ? '14,398' : selectedSilverPlan.old_price}/yearly</p>
             <span className="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full">
               20% Off
             </span>
@@ -157,7 +157,7 @@ const PriceCards = () => {
 
           <div className="flex items-center justify-between mb-5">
             <p className="text-3xl font-extrabold text-gray-900">
-              {priceObj.priceTag}{selectedSilverPlan.price} 
+              {priceObj.priceTag}{singleuser ? '11,999' : selectedSilverPlan.price} 
               <span className="text-sm font-medium text-gray-500">/yearly</span>
             </p>
 
@@ -167,20 +167,33 @@ const PriceCards = () => {
             </button> */}
           </div>
 
-          <div className="bg-gray-200 text-gray-700 text-sm rounded-md px-4 py-3 mb-4">
-            • Up to 10 million database access
-          </div>
+          {/* <div className="bg-gray-200 text-gray-700 text-sm rounded-md px-4 py-3 mb-4">
+            • Up to 2 million database access
+          </div> */}
 
-          <Link href={selectedSilverPlan.price_link} target="_blank" className="block text-center w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-md font-semibold mb-6 transition">
-            Buy Silver Plan ↗
+          <Link href={singleuser ? 'https://Basic.com' : selectedSilverPlan.price_link} target="_blank" className="block text-center w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-md font-semibold mb-6 transition">
+            Buy {singleuser ? 'Basic' : 'Silver'} Plan ↗
           </Link>
 
           <p className="text-xs text-gray-400 mb-3 uppercase tracking-wide">
-            Built for white-label reselling:
+            {singleuser ? '' : 'Built for white-label reselling:'}
           </p>
 
           <ul className="space-y-2 text-sm text-gray-700">
-            {[
+            {
+            (singleuser ? 
+            [
+              "Access to all premium features",
+              "Full access panel",
+              "1.8 million B2B data extraction",
+              "Direct contact support",
+              "Unlimited CSV file downloads",
+              // "Dedicated account manager",
+              "Early access to new features",
+              "Office Time Support"
+            ]
+            :
+            [
               "Access to all premium features",
               <div className="flex items-center gap-1">
                 50 License Keys
@@ -195,7 +208,7 @@ const PriceCards = () => {
               "Single Reseller Account",
               "Full access panel",
               "Direct contact support",
-              "Unlimited downloads",
+              "Unlimited CSV file downloads",
               "Priority support",
               "White-label reselling",
               "Meta Advertising Campaign Setup",
@@ -206,7 +219,7 @@ const PriceCards = () => {
               >
                 <button tabIndex={0} className="underline font-bold" onClick={openRates}>Reseller Referral Commission</button>
               </Tooltip>,
-            ].map((item, i) => (
+            ]).map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span>✔</span> {item}
               </li>
@@ -227,39 +240,52 @@ const PriceCards = () => {
 
           <span className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm mb-4">
             <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
-            Gold
+            {singleuser ? 'Standard' : 'Gold'}
           </span>
 
-          <h3 className="text-xl font-bold text-blue-600 mb-1">Gold Plan</h3>
+          <h3 className="text-xl font-bold text-blue-600 mb-1">{singleuser ? 'Standard' : 'Gold'} Plan</h3>
           <p className="text-sm text-gray-500 mb-4">
-            Best for growing reseller businesses
+            {singleuser ? '' : 'Best for growing reseller business:'}
           </p>
 
           <div className="flex items-center gap-2 mb-1">
-            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{priceObj.goldOld}/yearly</p>
+            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{singleuser ? '17,998' : priceObj.goldOld}/yearly</p>
             <span className="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full">
               20% Off
             </span>
           </div>
 
           <p className="text-3xl font-extrabold text-gray-900 mb-5">
-            {priceObj.priceTag}{priceObj.gold}  <span className="text-sm font-medium text-gray-500">/yearly</span>
+            {priceObj.priceTag}{singleuser ? '14,999' : priceObj.gold}  <span className="text-sm font-medium text-gray-500">/yearly</span>
           </p>
 
-          <div className="bg-gray-200 text-gray-700 text-sm rounded-md px-4 py-3 mb-4">
-            • Up to 50 million database access
-          </div>
+          {/* <div className="bg-gray-200 text-gray-700 text-sm rounded-md px-4 py-3 mb-4">
+            • Up to 5 million database access
+          </div> */}
 
-          <Link href={priceObj.goldLink} target="_blank" className="block text-center w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-semibold mb-6 transition">
-            Buy Gold Plan ↗
+          <Link href={singleuser ? 'https://gold.com' :priceObj.goldLink} target="_blank" className="block text-center w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-semibold mb-6 transition">
+            Buy {singleuser ? 'Standard' : 'Gold'} Plan ↗
           </Link>
 
           <p className="text-xs text-gray-400 mb-3 uppercase tracking-wide">
-            Best for growing resellers:
+            {singleuser ? 'Perfect for large size business:' : 'Best for growing resellers:'}
           </p>
 
           <ul className="space-y-2 text-sm text-gray-700">
-            {[
+            {
+              (singleuser ?
+            [
+              "Access to all premium features",
+              "Full access panel",
+              "3.6 million B2B data extraction",
+              "Unlimited CSV file downloads",
+              // "Dedicated account manager",
+              "Early access to new features",
+              "WhatsApp and phone call support",
+              "Training & Guide Support"
+            ] 
+            :
+            [
               "Access to all premium features",
               <div className="flex items-center gap-1">
                 200 License Keys
@@ -274,7 +300,7 @@ const PriceCards = () => {
               "Single Reseller Account",
               "Full access panel",
               "Direct contact support",
-              "Unlimited downloads",
+              "Unlimited CSV file downloads",
               "High priority support",
               "White-label reselling",
               "Priority onboarding",
@@ -287,7 +313,7 @@ const PriceCards = () => {
               >
                 <button tabIndex={0} className="underline font-bold" onClick={openRates}>Reseller Referral Commission</button>
               </Tooltip>,
-            ].map((item, i) => (
+            ]).map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span className="text-orange-500">✔</span> {item}
               </li>
@@ -303,33 +329,33 @@ const PriceCards = () => {
         <div className="bg-gray-50 hover:shadow-xl hover:scale-105 duration-300 border border-gray-200 rounded-md p-7">
           <span className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm mb-4">
             <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-            Platinum
+            {singleuser ? 'Pro' : 'Platinum'}
           </span>
 
           <h3 className="text-xl font-bold text-blue-600 mb-1">
-            Platinum Plan
+            {singleuser ? 'Pro' : 'Platinum'} Plan
           </h3>
           <p className="text-sm text-gray-500 mb-4">
-            Ultimate reseller package
+            {singleuser ? '' : 'Ultimate reseller package'}
           </p>
 
           <div className="flex items-center gap-2 mb-1">
-            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{priceObj.platinumOld}/yearly</p>
+            <p className="line-through text-sm text-gray-400">{priceObj.priceTag}{singleuser ? '23,998' : priceObj.platinumOld}/yearly</p>
             <span className="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full">
-              25% Off
+              {singleuser ? '20' : '25'}% Off
             </span>
           </div>
 
           <p className="text-3xl font-extrabold text-gray-900 mb-5">
-            {priceObj.priceTag}{priceObj.platinum}  <span className="text-sm font-medium text-gray-500">/yearly</span>
+            {priceObj.priceTag}{singleuser ? '19,999' : priceObj.platinum}  <span className="text-sm font-medium text-gray-500">/yearly</span>
           </p>
 
-          <div className="bg-gray-200 text-gray-700 text-sm rounded-md px-4 py-3 mb-4">
-            • Up to 100+ million database access
-          </div>
+          {/* <div className="bg-gray-200 text-gray-700 text-sm rounded-md px-4 py-3 mb-4">
+            • Up to 7 million database access
+          </div> */}
 
-          <Link href={priceObj.platinumLink} target="_blank" className="block text-center w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-md font-semibold mb-6 transition">
-            Buy Platinum Plan ↗
+          <Link href={singleuser ? 'https://pro.com' : priceObj.platinumLink} target="_blank" className="block text-center w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-md font-semibold mb-6 transition">
+            Buy {singleuser ? 'Pro' : 'Platinum'} Plan ↗
           </Link>
 
           <p className="text-xs text-gray-400 mb-3 uppercase tracking-wide">
@@ -337,7 +363,19 @@ const PriceCards = () => {
           </p>
 
           <ul className="space-y-2 text-sm text-gray-700">
-            {[
+            {(singleuser ? 
+            [
+              "Access to all premium features",
+              "Full access panel",
+              "5 Million B2B data extraction",
+              "Unlimited CSV file downloads",
+              // "Dedicated account manager",
+              "Early access to new features",
+              "Phone, WhatsApp, and Email support",
+              "Immediate Support",
+              "Technical Manager Support",
+            ] : 
+            [
               "Access to all premium features",
               <div className="flex items-center gap-1">
                 500 License Keys
@@ -361,7 +399,7 @@ const PriceCards = () => {
               </div>,
               "Full access panel",
               "Direct contact support",
-              "Unlimited downloads",
+              "Unlimited CSV file downloads",
               // "Dedicated account manager",
               "White-label reselling",
               "Early access to new features",
@@ -374,7 +412,7 @@ const PriceCards = () => {
               >
                 <button tabIndex={0} className="underline font-bold" onClick={openRates}>Reseller Referral Commission</button>
               </Tooltip>
-            ].map((item, i) => (
+            ]).map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span className="text-purple-500">✔</span> {item}
               </li>

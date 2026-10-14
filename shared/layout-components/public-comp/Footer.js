@@ -62,6 +62,7 @@ export default function Footer() {
         { title: "FAQ", url: "/faq" },
         { title: "Contact Us", url: "/contact" },
         { title: "Become a Reseller", url: "/reseller" },
+        { title: "Single User Plan", url: "/singleuser" },
       ],
       subItem: false,
     },
