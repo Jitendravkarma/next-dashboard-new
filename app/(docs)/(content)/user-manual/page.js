@@ -10,6 +10,7 @@ import Services from "@/shared/layout-components/docs/sections/Services";
 import DocBottomSupport from "@/shared/layout-components/public-comp/DocBottomSupport";
 import DocYouTubeChannel from "@/shared/layout-components/public-comp/DocYouTubeChannel";
 import { HorizontalAds } from "@/shared/layout-components/public-comp/Ads";
+import DownloadOperator from "@/shared/layout-components/public-comp/DownloadOperator";
 
 export const metadata = seo_docs
 
@@ -30,9 +31,13 @@ const Docs = () => {
             <div className="py-24" id="started">
               <GetStart/>
             </div>
+            
+            <div className="pb-24" id="guide">
+              <DownloadOperator/>
+            </div>
 
             <div className="py-24" id="features">
-              <HorizontalAds/>
+              {/* <HorizontalAds/> */}
               <Features/>
             </div>
 

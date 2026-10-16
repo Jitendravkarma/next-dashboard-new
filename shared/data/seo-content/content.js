@@ -213,6 +213,96 @@ export const seo_bing = page(
     `Find businesses from Bing search results using your target keywords. Get websites, emails and phone numbers and export them to Excel instantly.`
 );
 
+export const seo_ecomm = page(
+    "/services/ecommerce-scraper/",
+    "Ecommerce Scraper - Product & Seller Data Extraction | Scrape Genius",
+    "Extract product details, prices, seller information, ratings, and other available data from Amazon, Flipkart, Meesho, and more ecommerce platforms. Collect and export ecommerce data for research, analysis, and business growth."
+);
+
+export const seo_fbads = page(
+"/services/facebook-ad-library",
+"Facebook Ad Library Scraper - Extract Meta Ads Data | Scrape Genius",
+"Extract advertising data from Meta Facebook Ad Library, including company names, ad titles, advertiser details, social media links, ad creatives, landing page URLs, and other available information for competitor research and advertising analysis."
+);
+
+export const seo_job = page(
+  `/services/job-portal-scraper/`,
+  `Job Portal Scraper - Extract Job Listings & Recruitment Data | Scrape Genius`,
+  `Extract job portal data, including job titles, company names, job descriptions, locations, salary details, experience requirements, recruiter information, application links, and other available information for recruitment research, job market analysis, and hiring insights.`
+);
+
+export const seo_email_veri = page(
+  `/services/email-verification/`,
+  `Email Verification - Verify Email Validity & Deliverability | Scrape Genius`,
+  `Verify email addresses in bulk using a CSV file. Check email formatting, domain configuration, mail server records, and available mailbox verification signals to identify valid, invalid, risky, or unknown email addresses and improve email list quality and deliverability.`
+);
+
+export const seo_phone_veri = page(
+  `/services/phone-number-verification/`,
+  `Phone Number Verification - Check Carrier & Location Details | Scrape Genius`,
+  `Verify phone numbers in bulk using a CSV file. Retrieve available telecom operator and carrier names, state, country, and geographic details to validate phone number data, clean contact lists, and improve business lead quality.`
+);
+
+export const seo_whatsapp_veri = page(
+  `/services/whatsapp-number-verification/`,
+  `WhatsApp Number Verification - Check WhatsApp Registration | Scrape Genius`,
+  `Check phone numbers in bulk using a CSV file to identify whether they are registered on WhatsApp, based on available verification results. Organize registered, not registered, and unknown statuses to clean contact lists and support targeted WhatsApp business communication.`
+);
+
+export const seo_real_estate = page(
+  `/services/real-estate-scraper/`,
+  `Real Estate Scraper - Extract Property Leads & Data | Scrape Genius`,
+  `Extract real estate data, including property names, prices, locations, property types, agent and broker details, phone numbers, email addresses, property listings, and other available information for property research, lead generation, and real estate market analysis.`
+);
+
+export const seo_search_engine = page(
+  `/services/search-engine-scraper/`,
+  `Search Engine Scraper - Extract Search Results & Leads | Scrape Genius`,
+  `Extract search engine data from Google, Bing, Yahoo, and other search engines, including business names, websites, phone numbers, email addresses, social media links, search result titles, URLs, and other available information for lead generation and market research.`
+);
+
+export const seo_social_media = page(
+  `/services/social-media-scraper/`,
+  `Social Media Scraper - Extract Profiles & Contact Data | Scrape Genius`,
+  `Extract social media data from platforms such as Facebook, Instagram, LinkedIn, and other supported networks, including profile names, usernames, phone numbers, email addresses, websites, social links, and other available information for lead generation and business research.`
+);
+
+export const seo_mlmdiary = page(
+  `/services/mlm-diary-scraper/`,
+  `MLM Diary Scraper - Extract MLM Leads & Contact Data | Scrape Genius`,
+  `Extract available MLM Diary data, including member names, phone numbers, email addresses, MLM company details, business profiles, locations, and other available information for network marketing prospecting and lead generation.`
+);
+
+export const seo_msme_company = page(
+  `/services/msme-company-scraper/`,
+  `MSME Company Scraper - Extract MSME Business Data | Scrape Genius`,
+  `Extract available Indian MSME business data, including company names, contact details, websites, email addresses, phone numbers, Udyam registration details, business addresses, PIN codes, industry classifications, and other available information for B2B lead generation and business research.`
+);
+
+export const seo_pvt_ltd = page(
+  `/services/pvt-ltd-company-scraper/`,
+  `Pvt Ltd Company Scraper - Extract Private Limited Company Data | Scrape Genius`,
+  `Extract available private limited company data, including company names, CIN, websites, phone numbers, email addresses, social media profiles, registered addresses, director details, incorporation dates, and other available corporate information for B2B lead generation and business research.`
+);
+
+export const seo_company_scraper = page(
+  `/services/company-contact-scraper/`,
+  `Company Contact Scraper - Extract Business Contacts & Leads | Scrape Genius`,
+  `Extract company contact information in bulk by uploading a CSV file containing company names and city names. Discover available phone numbers, email addresses, websites, social media profiles, business addresses, company categories, and other business details to build targeted B2B lead lists and support sales prospecting and market research.`
+);
+
+export const seo_gst_no = page(
+  `/services/gst-number-scraper/`,
+  `GST Number Scraper - Find GSTIN & Business Details | Scrape Genius`,
+  `Find GST registration details using company names or GST numbers. Extract available GSTIN, legal names, trade names, registration dates, business addresses, registration status, phone numbers, email addresses, and other available business information for lead generation and company research.`
+);
+
+export const seo_global_dir = page(
+  `/services/global-directory-scraper/`,
+  `Global Directory Scraper - Extract Business Leads Worldwide | Scrape Genius`,
+  `Extract available business directory data from supported global directories, including company names, websites, phone numbers, email addresses, business addresses, categories, and other available company information for international B2B lead generation and market research.`
+);
+
 export const seo_yahoo = page(
     "/services/yahoo-search-scraper/",
     `Yahoo Lead Finder - Business Leads from Yahoo | Scrape Genius`,

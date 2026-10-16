@@ -9,6 +9,7 @@ import Snackbar from "@/shared/layout-components/dashboard/SnackBar";
 import countryList from "@/shared/layout-components/dashboard/Country";
 
 const GenerateLicence = () => {
+	const licenceLimit = 500;
 	const { openSnack, snackMessage, openSnackBar, handleSnackMessage, whatsAppNum, validatePhoneNumber } = useUserContext()
 	const dashboard_data = {
 		user_id: 5,
@@ -53,7 +54,7 @@ const GenerateLicence = () => {
 	const planIcon = <i className={`${dashboard_data.role === "reseller" ? "ri-pie-chart-line bg-secondary/10 text-secondary" : dashboard_data.role === "white" ? "ri-medal-line bg-warning/10 text-warning" : "ri-bard-line bg-info/10 text-info"} text-xl avatar w-10 h-10 rounded-full p-2.5 leading-none`}></i>
 
 	const [ numOfData, setNumOfData] = useState([
-		{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "300", color: "primary/10", color1: "success" },
+		{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: licenceLimit, color: "primary/10", color1: "success" },
 		{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: 0, color: "primary/10", color1: "success" },
 		{ id: 3, icon: status, class: "Sold Licences", title: "sold", text: <span>0/<small>0</small></span>, color: "primary/10", color1: "success" },
 		{ id: 4, icon: planIcon, class: "Available Licences", title: "type", text: <span>0/<small>0</small></span>, color: "primary/10", color1: "success" },
@@ -119,7 +120,7 @@ const GenerateLicence = () => {
             handleSnackMessage("You cannot enter more than 365 days.", "danger", "text-white")
 			return;
 		}
-		if(licences.length < 300){
+		if(licences.length < licenceLimit){
 			try {
 				setIsGenerating(true)
 				const generateCode = await generateLicence(convertNum)
@@ -150,8 +151,8 @@ const GenerateLicence = () => {
 
 	useEffect(()=>{
 		setNumOfData([
-			{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: "300", color: "primary/10", color1: "success" },
-			{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: <span className={`${licences.length > 295 && "animate-pulse text-danger"}`}>{300 - licences.length}</span>, color: "primary/10", color1: "success" },
+			{ id: 1, icon: calender, class: "Licences Limit", title: "limit", text: licenceLimit, color: "primary/10", color1: "success" },
+			{ id: 2, icon: expiry, class: "Available Limit", title: "available", text: <span className={`${licences.length > 295 && "animate-pulse text-danger"}`}>{licenceLimit - licences.length}</span>, color: "primary/10", color1: "success" },
 			{ id: 3, icon: status, class: "Sold Licences", title: "sold", text: <span>{licences.filter(lic=>lic.email).length}/<small className={`${licences.length < 5 && "animate-pulse text-danger"}`}>{licences.length}</small></span>, color: "primary/10", color1: "success" },
 			{ id: 4, icon: planIcon, class: "Available Licences", title: "type", text: <span>{licences.filter(lic=>!lic.email).length}/<small className={`${licences.length < 5 && "animate-pulse text-danger"}`}>{licences.length}</small></span>, color: "primary/10", color1: "success" },
 		])
@@ -250,12 +251,12 @@ const GenerateLicence = () => {
 									<div className="flex items-center gap-2">
 										<input type="text" value={validDays} onChange={handleDaysChange} placeholder="Enter Days (Ex. 10, 50)" className="border !border-indigo-500 placeholder:text-indigo-500 text-indigo-500 rounded-sm py-2 px-3 text-sm"/>
 										
-										<button onClick={generateLicenceCode} className={`p-2 border rounded-sm hover:bg-indigo-500 ${Number(validDays) >= 10 ? "bg-indigo-500 hover:bg-indigo-600 text-white" : ""} ${isGenerating ? "animate-pulse border-indigo-500 bg-indigo-500 hover:!border-indigo-500 text-white" : "border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:!border-indigo-500 hover:text-white"} disabled:bg-indigo-500 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} disabled={licences.length === 300 || isGenerating || !validDays || Number(validDays) < 10}>
+										<button onClick={generateLicenceCode} className={`p-2 border rounded-sm hover:bg-indigo-500 ${Number(validDays) >= 10 ? "bg-indigo-500 hover:bg-indigo-600 text-white" : ""} ${isGenerating ? "animate-pulse border-indigo-500 bg-indigo-500 hover:!border-indigo-500 text-white" : "border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:!border-indigo-500 hover:text-white"} disabled:bg-indigo-500 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50 focus:ring-indigo-500 dark:focus:ring-offset-white/10`} disabled={licences.length === licenceLimit || isGenerating || !validDays || Number(validDays) < 10}>
 											<i className="ri-magic-line"/>{" "} {isGenerating ? "Generating..." : "Generate Licence"}
 										</button>
 										{
-											licences.length === 300 ?
-											<p className="mt-1 text-red-500">Note: You can't generate more than 300 licenses. Contact your plan provider to increase your licence limit.</p>
+											licences.length === licenceLimit ?
+											<p className="mt-1 text-red-500">Note: You can't generate more than {licenceLimit} licenses. Contact your plan provider to increase your licence limit.</p>
 											:
 											<span className="text-lg text-indigo-500">
 												Valid Until: <b>{validUntilDate}</b>

@@ -86,22 +86,31 @@ const ContactUs = () => {
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/c7dda43c-a9d6-1e56-68e7-70f5947ef73e.png"
         },
         {
-            name: "Poonam Adlak",
-            role: "Sales Support",
-            gen: 'f',
-            phone: "916267642478",
-            email: false,
-            whatsapp: true,
-            profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/02edafed-34d3-f76d-376d-64603fda8b36.png"
-        },
-        {
             name: "Pooja Kshtriya",
-            role: "Sales Support",
+            role: "Senior Sales upport",
             gen: 'f',
             phone: "918982563657",
             email: false,
             whatsapp: true,
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/437e07eb-956e-0f14-ea08-cda03b2f1f2d.png"
+        },
+        {
+            name: "Rahul Soni",
+            role: "Sales Support",
+            gen: 'm',
+            phone: "919171677633",
+            email: false,
+            whatsapp: true,
+            profile_img: "https://mcusercontent.com/385185488e96c2387bba7596f/images/ed6a88cb-bc48-5a02-6956-b5529b3eccd9.png"
+        },
+        {
+            name: "Priyanshi Sen",
+            role: "Sales Support",
+            gen: 'f',
+            phone: "919343740544",
+            email: false,
+            whatsapp: true,
+            profile_img: "https://mcusercontent.com/385185488e96c2387bba7596f/images/0eee4707-5375-5caa-f606-a9a56db14612.png"
         },
         {
             name: "Kritika Sharma",
@@ -111,6 +120,42 @@ const ContactUs = () => {
             email: false,
             whatsapp: true,
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/1d21ad7f-8bbd-2d8d-9aee-c35229a85128.png"
+        },
+        {
+            name: "Shruti Parashar",
+            role: "Sales Support",
+            gen: 'f',
+            phone: "917898287428",
+            email: false,
+            whatsapp: true,
+            profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/5bfb20cb-3faa-00e5-36a6-5040bc605094.png"
+        },
+        {
+            name: "Sneha Agrawal",
+            role: "Sales Support",
+            gen: 'f',
+            phone: "917389912139",
+            email: false,
+            whatsapp: true,
+            profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/714c10ae-e0f3-07c3-d74e-22a8ee0a2d10.png"
+        },
+        {
+            name: "Jaya Puware",
+            role: "Sales Support",
+            gen: 'f',
+            phone: "918349257428",
+            email: false,
+            whatsapp: true,
+            profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/13487edd-cb56-c3af-29ba-d2d822fdec3c.png"
+        },
+        {
+            name: "Poonam Adlak",
+            role: "Sales Support",
+            gen: 'f',
+            phone: "916267642478",
+            email: false,
+            whatsapp: true,
+            profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/02edafed-34d3-f76d-376d-64603fda8b36.png"
         },
         {
             name: "Priya Sourashtriya",
@@ -138,33 +183,6 @@ const ContactUs = () => {
             email: false,
             whatsapp: true,
             profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/af50f24c-67d6-9126-8e79-63fd58b0e650.png"
-        },
-        {
-            name: "Sneha Agrawal",
-            role: "Sales Support",
-            gen: 'f',
-            phone: "917389912139",
-            email: false,
-            whatsapp: true,
-            profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/714c10ae-e0f3-07c3-d74e-22a8ee0a2d10.png"
-        },
-        {
-            name: "Jaya Puware",
-            role: "Sales Support",
-            gen: 'f',
-            phone: "918349257428",
-            email: false,
-            whatsapp: true,
-            profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/13487edd-cb56-c3af-29ba-d2d822fdec3c.png"
-        },
-        {
-            name: "Shruti Parashar",
-            role: "Sales Support",
-            gen: 'f',
-            phone: "917898287428",
-            email: false,
-            whatsapp: true,
-            profile_img: "https://mcusercontent.com/5d140583052f4e46c9833ce88/images/5bfb20cb-3faa-00e5-36a6-5040bc605094.png"
         },
     ]
 

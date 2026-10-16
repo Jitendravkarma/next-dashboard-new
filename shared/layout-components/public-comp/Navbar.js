@@ -56,7 +56,7 @@ export default function Header() {
       category: false
     }
   ]
-  const mainMenus = [
+  const oldmainMenus = [
     {
       title : "Live Tools", 
       url: "", 
@@ -64,10 +64,14 @@ export default function Header() {
         {
          title : "Live Website Scraping", 
          url: "/services/live-website-scraping", 
+         deepLinks: [],
+         category: false,
         },
         {
           title : "Live Website Data", 
           url: "/services/live-website-data",
+          deepLinks: [],
+          category: false,
         }
       ], 
       category: true
@@ -78,23 +82,33 @@ export default function Header() {
       subLinks: [
         {
           title: "Bing Search Scraper",
-          url: "/services/bing-search-scraper/"
+          url: "/services/bing-search-scraper/",
+          deepLinks: [],
+          category: false,
         },
         {
           title: "Google Search Scraper",
-          url: "/services/google-search-scraper/"
+          url: "/services/google-search-scraper/",
+          deepLinks: [],
+          category: false,
         },
         {
           title: "Yahoo Search Scraper",
-          url: "/services/yahoo-search-scraper/"
+          url: "/services/yahoo-search-scraper/",
+          deepLinks: [],
+          category: false,
         },
         {
           title: "DuckDuckGo Search Scraper",
-          url: "/services/duckduckgo-search-scraper/"
+          url: "/services/duckduckgo-search-scraper/",
+          deepLinks: [],
+          category: false,
         },
         {
           title: "Google Map Scraper",
-          url: "/services/google-map-scraper/"
+          url: "/services/google-map-scraper/",
+          deepLinks: [],
+          category: false,
         }
       ], 
       category: true
@@ -105,11 +119,15 @@ export default function Header() {
       subLinks: [
         {
           title: "facebook Scraper",
-          url: "/services/facebook-scraper/"
+          url: "/services/facebook-scraper/",
+          deepLinks: [],
+          category: false,
         },
         {
           title: "youtube scraper",
-          url: "/services/youtube-scraper"
+          url: "/services/youtube-scraper",
+          deepLinks: [],
+          category: false,
         }
       ], 
       category: true
@@ -120,23 +138,33 @@ export default function Header() {
       subLinks:[
         {
           title:"IndiaMart Scraper",
-          url:"/services/indiamart-scraper"
+          url:"/services/indiamart-scraper",
+          deepLinks: [],
+          category: false,
         },
         {
           title:"JustDial Scraper",
-          url:"/services/justdial-scraper"
+          url:"/services/justdial-scraper",
+          deepLinks: [],
+          category: false,
         },
         {
           title:"Sulekha Scraper",
-          url:"/services/sulekha-scraper"
+          url:"/services/sulekha-scraper",
+          deepLinks: [],
+          category: false,
         },
         {
           title:"TradeIndia Scraper",
-          url:"/services/tradeindia-scraper"
+          url:"/services/tradeindia-scraper",
+          deepLinks: [],
+          category: false,
         },
         {
           title:"ExportersIndia Scraper",
-          url:"/services/exportersindia-scraper"
+          url:"/services/exportersindia-scraper",
+          deepLinks: [],
+          category: false,
         }
       ],
       category:true
@@ -147,11 +175,15 @@ export default function Header() {
       subLinks: [
         {
           title:"Email Scraper",
-          url:"/services/email-scraper"
+          url:"/services/email-scraper",
+          deepLinks: [],
+          category: false,
         },
         {
           title:"Phone Number Scraper",
-          url:"/services/phone-scraper"
+          url:"/services/phone-scraper",
+          deepLinks: [],
+          category: false,
         }
       ],
       category:true
@@ -162,11 +194,15 @@ export default function Header() {
       subLinks: [
         {
           title: "Website Data Scraper",
-          url: "/services/website-data-scraper/"
+          url: "/services/website-data-scraper/",
+          deepLinks: [],
+          category: false,
         },
         {
           title: "Business Directory Scraper",
-          url: "/services/business-directory-scraper/"
+          url: "/services/business-directory-scraper/",
+          deepLinks: [],
+          category: false,
         }
       ], 
       category: true
@@ -177,11 +213,15 @@ export default function Header() {
       subLinks: [
         {
           title: "Document data scraper",
-          url: "/services/document-data-scraper/"
+          url: "/services/document-data-scraper/",
+          deepLinks: [],
+          category: false,
         },
         {
           title: "image data scraper",
-          url: "/services/image-data-scraper/"
+          url: "/services/image-data-scraper/",
+          deepLinks: [],
+          category: false,
         }
       ], 
       category: true
@@ -193,8 +233,264 @@ export default function Header() {
       category: false
     }
   ]
+  
+  const mainMenus = [
+    {
+      title : "Scraping Mining", 
+      url: "", 
+      subLinks: [
+        {
+         title : "Search Engine Scraper", 
+         url: "/services/search-engine-scraper", 
+         deepLinks: [],
+         category: false,
+        },
+        {
+          title : "Social Media Scraper", 
+          url: "/services/social-media-scraper", 
+          deepLinks: [],
+          category: false,
+        },
+        {
+          title : "Google Map Scraper", 
+          url: "/services/google-map-scraper/",
+          deepLinks: [],
+          category: false,
+        },
+        {
+          title : "Ad Library Scraper", 
+          url: "/services/facebook-ad-library", 
+          deepLinks: [],
+          category: false,
+        },
+        {
+          title : "Ecommerce Scraper", 
+          url: "/services/ecommerce-scraper/",
+          deepLinks: [],
+          category: false,
+        },
+        {
+          title : "Job Portal Scraper", 
+          url: "/services/job-portal-scraper/",
+          deepLinks: [],
+          category: false,
+        },
+        {
+          title : "Global Directory Scraper", 
+          url: "/services/global-directory-scraper/",
+          deepLinks: [],
+          category: false,
+        },
+        {
+          title : "WhatsApp Group Scraper", 
+          url: "/services/whatsapp-group-scraper/",
+          deepLinks: [],
+          category: false,
+        },
+        {
+          title : "Real Estate Scraper", 
+          url: "/services/real-estate-scraper/",
+          deepLinks: [],
+          category: false,
+        }
+      ], 
+      category: true
+    },
+    {
+      title : "Data Extraction", 
+      url: "", 
+      subLinks: [
+         {
+          title : "B2B Directory Scraper",
+          url: "",
+          deepLinks:[
+            {
+              title:"MLMDiary Scraper",
+              url:"/services/mlmdiary-scraper",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title:"IndiaMart Scraper",
+              url:"/services/indiamart-scraper",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title:"JustDial Scraper",
+              url:"/services/justdial-scraper",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title:"Sulekha Scraper",
+              url:"/services/sulekha-scraper",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title:"TradeIndia Scraper",
+              url:"/services/tradeindia-scraper",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title:"ExportersIndia Scraper",
+              url:"/services/exportersindia-scraper",
+              deepLinks: [],
+              category: false,
+            }
+          ],
+          category:true
+        },
+        {
+          title:"Corporate Registries",
+          url:"",
+          deepLinks: [
+            {
+              title:"MSME Company",
+              url:"/services/msme-company",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title:"Company Scraper",
+              url:"/services/company-scraper",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title:"Pvt Ltd Scraper",
+              url:"/services/pvt-ltd-scraper",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title:"GST No Scraper",
+              url:"/services/gst-no-scraper",
+              deepLinks: [],
+              category: false,
+            },
+          ],
+          category:true
+        },
+        {
+          title:"Bulk Contact Scraper",
+          url:"",
+          deepLinks: [
+            {
+              title:"Email Scraper",
+              url:"/services/email-scraper",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title:"Phone Number Scraper",
+              url:"/services/phone-scraper",
+              deepLinks: [],
+              category: false,
+            }
+          ],
+          category:true
+        },
+        {
+          title : "Web Scrapers", 
+          url: "", 
+          deepLinks: [
+            {
+              title: "Website Data Scraper",
+              url: "/services/website-data-scraper/",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title: "Business Directory Scraper",
+              url: "/services/business-directory-scraper/",
+              deepLinks: [],
+              category: false,
+            }
+          ], 
+          category: true
+        },
+        {
+          title : "File data scrapers", 
+          url: "/services/document-data-scraper", 
+          deepLinks: [
+            {
+              title: "Document data scraper",
+              url: "/services/document-data-scraper/",
+              deepLinks: [],
+              category: false,
+            },
+            {
+              title: "image data scraper",
+              url: "/services/image-data-scraper/",
+              deepLinks: [],
+              category: false,
+            }
+          ], 
+          category: true
+        },
+      ], 
+      category: true
+    },
+    {
+      title : "Verifications", 
+      url: "", 
+      subLinks: [
+        {
+          title: "Phone Numbers",
+          url: "/services/phone-verification/",
+          deepLinks: [],
+          category: false,
+        },
+        {
+          title: "WhatsApp Numbers",
+          url: "/services/whatsapp-verification/",
+          deepLinks: [],
+          category: false,
+        },
+        {
+          title: "Email Addresses",
+          url: "/services/email-verification/",
+          deepLinks: [],
+          category: false,
+        },
+      ], 
+      category: true
+    },
+    {
+      title : "Utilities", 
+      url: "", 
+      subLinks: [
+          {
+            title : "Live Tools", 
+            url: "", 
+            deepLinks: [
+              {
+              title : "Live Website Scraping", 
+              url: "/services/live-website-scraping", 
+              },
+              {
+                title : "Live Website Data", 
+                url: "/services/live-website-data",
+              }
+            ], 
+            category: true
+          },
+         {
+          title : "whois domain database", 
+          url: "/services/whois-database", 
+          deepLinks: [], 
+          category: false
+        }
+      ], 
+      category: true
+    },
+  ]
 
   const [ subMenus, setSubMenus ] = useState({title: "", menus: []})
+  const [ deepMenus, setDeepMenus ] = useState({title: "", menus: []})
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -230,6 +526,8 @@ export default function Header() {
   const showSubMenu = (title, menus)=>{
     setSubMenus({title, menus})
   }
+  
+  const showDeepMenu = (title, menus)=> setDeepMenus({title, menus});
 
   function handleLogout() {
     handleSignOut();
@@ -246,6 +544,7 @@ export default function Header() {
         setIsEcommerceDropdownOpen(false);
         setIsSocialMediaDropdownOpen(false);
         setSubMenus({title: "", menus: []})
+        setDeepMenus({title: "", menus: []})
       }
     };
 
@@ -340,14 +639,59 @@ export default function Header() {
                                           <ul>
                                             {
                                               subMenus.menus.map((link, ind)=>(
-                                                <li key={ind}>
-                                                  <Link
-                                                    href={link.url}
-                                                    className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
-                                                  >
-                                                    {link.title}
-                                                  </Link>
-                                                </li>
+                                                <>
+                                                {
+                                                  !link.category ?
+                                                  <li key={ind}>
+                                                    <Link
+                                                      href={link.url}
+                                                      className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                                    >
+                                                      {link.title}
+                                                    </Link>
+                                                  </li>
+                                                  :
+                                                  <button onClick={()=>showDeepMenu(link.title, link.deepLinks)} className="w-full relative header-submenu-item rounded-sm hover:bg-gray-100 p-2 flex justify-between cursor-pointer">
+                                                    <span>{link.title}</span>
+                                                    <svg
+                                                      xmlns="http://www.w3.org/2000/svg"
+                                                      fill="none"
+                                                      viewBox="0 0 24 24"
+                                                      stroke="currentColor"
+                                                      className={`w-4 h-4 transition-transform duration-200 ${
+                                                        deepMenus.title === link.title ? "transform rotate-0" : "-rotate-90"
+                                                      }`}
+                                                    >
+                                                      <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth="2"
+                                                        d="M19 9l-7 7-7-7"
+                                                      />
+                                                    </svg>
+                                                    {
+                                                      (deepMenus.menus.length > 0 && deepMenus.title === link.title) &&
+                                                      <div className="rounded-md absolute -right-36 capitalize text-start mt-5 border border-gray-300 bg-white shadow-md w-60 p-2 z-50 header-submenu">
+                                                        <ul>
+                                                          {
+                                                            deepMenus.menus.map((link, ind)=>(
+                                                              <li key={ind}>
+                                                                <Link
+                                                                  href={link.url}
+                                                                  className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                                                >
+                                                                  {link.title}
+                                                                </Link>
+                                                              </li>
+                                                            ))
+                                                          }
+                                                        </ul>
+                                                      </div>
+                                                    }
+                                                  </button>
+                                                }
+                                                
+                                                </>
                                               ))
                                             }
                                           </ul>
@@ -598,14 +942,62 @@ export default function Header() {
                                       <ul>
                                         {
                                           subMenus.menus.map((link, ind)=>(
-                                            <li key={ind}>
-                                              <Link
-                                                href={link.url}
-                                                className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
-                                              >
-                                                {link.title}
-                                              </Link>
-                                            </li>
+                                            <>
+                                              {
+                                                !link.category ?
+                                                <li key={ind}>
+                                                  <Link
+                                                    href={link.url}
+                                                    className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                                  >
+                                                    {link.title}
+                                                  </Link>
+                                                </li>
+                                                :
+                                                <>
+                                                  <button onClick={()=>showDeepMenu(link.title, link.deepLinks)} className="w-full relative header-submenu-item rounded-sm hover:bg-gray-100 px-4 py-2 flex justify-between cursor-pointer">
+                                                    <span>{link.title}</span>
+                                                    <svg
+                                                      xmlns="http://www.w3.org/2000/svg"
+                                                      fill="none"
+                                                      viewBox="0 0 24 24"
+                                                      stroke="currentColor"
+                                                      className={`w-4 h-4 transition-transform duration-200 ${
+                                                        deepMenus.title === link.title ? "transform rotate-0" : "-rotate-90"
+                                                      }`}
+                                                    >
+                                                      <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth="2"
+                                                        d="M19 9l-7 7-7-7"
+                                                      />
+                                                    </svg>
+                                                    {
+                                                      (deepMenus.menus.length > 0 && deepMenus.title === link.title) &&
+                                                      <div className="rounded-md absolute left-28 top-4 capitalize text-start mt-5 border border-gray-300 bg-white shadow-md w-60 p-2 z-50 header-submenu">
+                                                        <ul>
+                                                          {
+                                                            deepMenus.menus.map((link, ind)=>(
+                                                              <>
+                                                                <li key={ind}>
+                                                                  <Link
+                                                                    href={link.url}
+                                                                    className="header-submenu-item rounded-sm hover:bg-gray-100 p-2 block"
+                                                                  >
+                                                                    {link.title}
+                                                                  </Link>
+                                                                </li>
+                                                              </>
+                                                            ))
+                                                          }
+                                                        </ul>
+                                                      </div>
+                                                    }
+                                                  </button>
+                                                </>
+                                              }
+                                            </>
                                           ))
                                         }
                                       </ul>

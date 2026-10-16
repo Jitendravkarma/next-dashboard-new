@@ -70,7 +70,7 @@ export default function Footer() {
       title: "follow us",
       list: [
         { title: "facebook", url: dynamicSocialLinks.facebook },
-        { title: "twitter", url: dynamicSocialLinks.twitter },
+        { title: "instagram", url: "https://www.instagram.com/designcollection.in/" },
         { title: "youtube", url: dynamicSocialLinks.youtube },
         { title: "linkedin", url: dynamicSocialLinks.linkedin }
       ],
@@ -130,9 +130,9 @@ export default function Footer() {
                                   target="_blank"
                                   aria-label={title}
                                   title={url ? `Visit ${title} profile` : `${title} profile not found`}
-                                  className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "twitter" ? "hover:bg-gray-800" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
+                                  className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "instagram" ? "hover:bg-pink-500" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
                                 >
-                                  <i className={`${title === "facebook" ? "ri-facebook-line" : title === "twitter" ? "ri-twitter-x-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
+                                  <i className={`${title === "facebook" ? "ri-facebook-line" : title === "instagram" ? "ri-instagram-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
                                 </Link>
                               </div>
                             ))
@@ -154,9 +154,9 @@ export default function Footer() {
                                     target="_blank"
                                     aria-label={title}
                                     title={url ? `Visit ${title} profile` : `${title} profile not found`}
-                                    className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "twitter" ? "hover:bg-gray-800" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
+                                    className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "instagram" ? "hover:bg-pink-500" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
                                   >
-                                    <i className={`${title === "facebook" ? "ri-facebook-line" : title === "twitter" ? "ri-twitter-x-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
+                                    <i className={`${title === "facebook" ? "ri-facebook-line" : title === "instagram" ? "ri-instagram-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
                                   </Link>
                                 </div>
                               ))

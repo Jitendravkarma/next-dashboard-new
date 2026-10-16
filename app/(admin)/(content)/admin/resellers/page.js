@@ -308,7 +308,7 @@ const UserAnalytics = () => {
 									const approve = async()=>{
 										setIsUpdating(true);
 										try {
-											const resp = await updateResellerLicence({ email: params.row.email, no_of_licences: Number(days) });
+											const resp = await updateResellerLicence({ email: params.row.email, no_of_licenses: Number(days) });
 											alert(`Licences updated successfully!`);
 											// window.location.reload();
 										} catch (error) {
