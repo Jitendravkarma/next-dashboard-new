@@ -87,7 +87,7 @@ const ContactUs = () => {
         },
         {
             name: "Pooja Kshtriya",
-            role: "Senior Sales upport",
+            role: "Senior Sales Support",
             gen: 'f',
             phone: "918982563657",
             email: false,
