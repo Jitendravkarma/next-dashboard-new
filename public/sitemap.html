@@ -1,812 +1,96 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-	<title>Simple Data Scraping Made Possible by Scrape Genius Site Map  Page 1 - created with PRO Sitemap Service - pro-sitemaps.com</title>
-	
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-<script type="text/javascript">
-	function el_t(el,cl){if(el)el.classList.toggle(cl);}
-	window.addEventListener('load', (event) => {
-		let alh = document.getElementsByClassName('lhead');
-		for (let lh of alh) {
-			lh.addEventListener('click', function (event) {
-				el_t(this,'collapse');
-				el_t(this.nextElementSibling,'hide');
-				el_t(this.nextElementSibling.nextElementSibling,'hide');
-			});
-		}
-	});
-
-	</script>
-	<style type="text/css">
-	body {
-		background-color: #fff;
-		font-family: "Arial Narrow", "Helvetica", "Arial", sans-serif;
-		margin: 0;
-	}
-
-	.hide {
-		display: none;
-	}
-	.collapse {
-		text-decoration-style: dashed;
-		text-decoration-line: underline;
-	}
-	#top {
-
-		background-color: #b1d1e8;
-		font-size: 16px;
-		padding-bottom: 40px;
-	}
-
-	nav {
-		font-size: 24px;
-
-		margin: 0px 30px 0px;
-		border-bottom-left-radius: 6px;
-		border-bottom-right-radius: 6px;
-		background-color: #f3f3f3;
-		color: #666;
-		box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-		padding: 10px 0;
-		text-align: center;
-		z-index: 1;
-	}
-
-	h3 {
-		margin: auto;
-		padding: 10px;
-		max-width: 600px;
-		color: #666;
-	}
-
-	h3 span {
-		float: right;
-	}
-
-	h3 a {
-		font-weight: normal;
-		display: block;
-	}
-
-
-	#cont {
-		font-size: 18px;
-		position: relative;
-		border-radius: 6px;
-		box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-
-		background: #f3f3f3;
-
-		margin: -20px 30px 0px 30px;
-		padding: 20px;
-	}
-	small {
-		color: #666;
-	}
-
-	a:link,
-	a:visited {
-		color: #0180AF;
-		text-decoration: underline;
-	}
-
-	a:hover {
-		color: #666;
-	}
-
-
-	#footer {
-		padding: 10px;
-		text-align: center;
-	}
-
-	ul {
-		margin: 0px;
-		padding: 0px;
-		list-style: none;
-	}
-
-	ul.ultree {
-		border: #ccc 1px solid;
-		border-radius: 4px;
-		border-bottom: none;
-	}
-
-	li {
-		margin: 0px;
-	}
-
-	li ul {
-		margin-left: 20px;
-	}
-
-	li.lhead {
-		background: #ddd;
-		color: #666;
-		padding: 5px;
-		margin: 0px;
-		cursor: pointer;
-	}
-	li.lhead:hover,
-	.pager a:hover
-	 {
-  		background: #ccc;
-	}
-	.lcount {
-		padding: 0px 10px;
-	}
-
-	.lpage {
-		/*border-bottom: #ddd 1px solid;*/
-		padding: 5px;
-	}
-
-	.last-page {
-		border: none;
-	}
-
-	.pager {
-		text-align: center;
-	}
-
-	.pager a,
-	.pager span {
-		padding: 10px;
-		margin: 2px;
-		background: #fff;
-		border-radius: 10px;
-    	display: inline-block;
-	}
-	.pager span {
-		border: #ccc 1px solid;
-	}
-	</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scrape Genius HTML Sitemap</title>
+  <meta name="description" content="Browse all Scrape Genius website pages and services.">
+  <style>
+    :root { --primary: #0180af; --text: #171717; --muted: #666; --border: #e5e7eb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px 16px; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--text); background: #f8fafc; }
+    header, main { max-width: 1000px; margin: 0 auto; }
+    header { padding: 24px; background: white; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 18px; }
+    h1 { font-size: clamp(1.4rem, 3vw, 2rem); margin: 0 0 8px; }
+    header p { margin: 0; color: var(--muted); }
+    .group { background: white; border: 1px solid var(--border); border-radius: 10px; margin: 12px 0; overflow: hidden; }
+    .group h2 { margin: 0; padding: 14px 18px; background: #eef6f9; font-size: 1.05rem; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { padding: 13px 18px; border-top: 1px solid var(--border); }
+    a { color: var(--primary); font-weight: 600; overflow-wrap: anywhere; }
+    .url { display: block; font-size: .88rem; color: var(--muted); margin-top: 4px; overflow-wrap: anywhere; }
+    .desc { margin: 6px 0 0; font-size: .92rem; line-height: 1.5; color: #444; }
+    footer { max-width: 1000px; margin: 18px auto 0; text-align: center; color: var(--muted); font-size: .85rem; }
+  </style>
 </head>
-
 <body>
-	<div id="top">
-		<nav>
-			scrapegenius.com HTML Site Map</nav>
-		<h3>
-<span>Last updated: 2026, July 13 04:55:20<br />
-Total pages: 31</span>
-<a href="https://scrapegenius.com/">scrapegenius.com Homepage</a>
-</h3></div>
-	<div id="cont">
-		
-		
-			
-						
-			
-			<ul class="ultree level-1 has-pages">
-				<li class="lhead" title="Click to toggle">https://scrapegenius.com/<span class="lcount">1 page <small>[+30 in 12 subfolders]</small></span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/" title="Simple Data Scraping Made Possible by Scrape Genius">Simple Data Scraping Made Possible by Scrape Genius</a>
-						<br /><small>Scrape Genius – The ultimate web scraping and data extraction tool for Google Search, Google Maps, Websites, Documents, Images, Business Directories and Whois Domains. Automated data collection for lead generation, market research and business intelligence.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-					<li class="lsub">
-						
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">pricing/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/pricing/" title="Pricing - Scrape Genius">Pricing - Scrape Genius</a>
-						<br /><small>Explore Scrape Genius&#x27;s pricing plans and choose the best web scraping solution for your needs. Affordable plans for Google Search Scraper, Google Maps Scraper, Website Data Scraper, Whois Domain Lookup, and more. Start extracting data today!</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">signin/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/signin/" title="Sign In to Your Scrape Genius Account">Sign In to Your Scrape Genius Account</a>
-						<br /><small>Log in to your Scrape Genius account to access powerful web scraping tools, manage data extraction, and effortlessly automate business intelligence tasks.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">signup/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/signup/" title="Sign Up for Scrape Genius Tools">Sign Up for Scrape Genius Tools</a>
-						<br /><small>Create a free account on Scrape Genius and start extracting data from Google, Maps, Websites and Documents instantly. Join now and automate data collection!</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 ">
-				<li class="lhead" title="Click to toggle">services/<span class="lcount"> <small>[19 in 19 subfolders]</small></span></li>
-				
-				
-					<li class="lsub">
-						
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">live-website-scraping/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/live-website-scraping/" title="Live Website Scraping - Scrape Genius">Live Website Scraping - Scrape Genius</a>
-						<br /><small>Check out the comprehensive Scrape Genius documentation to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">live-website-data/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/live-website-data/" title="Live Website Data - Scrape Genius">Live Website Data - Scrape Genius</a>
-						<br /><small>Get valuable live website data, including website URLs, descriptions, titles, contact details, and more. Stay updated with real-time insights from various websites!</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">bing-search-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/bing-search-scraper/" title="Bing Search Scraper - Scrape Genius">Bing Search Scraper - Scrape Genius</a>
-						<br /><small>Learn how to scrape Bing Search results with Scrape Genius. Extract search data, links, titles, snippets, and more efficiently from Bing using our API. Perfect for SEO analysis, market research, and data automation.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">google-search-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/google-search-scraper/" title="Google Search Scraper - Scrape Genius">Google Search Scraper - Scrape Genius</a>
-						<br /><small>Enhance your SEO research and marketing strategy with the Scrape Genius Google Search Scraper. Automatically extract Google SERP results including titles, URLs, snippets, and rankings for keyword analysis, lead generation, and competitive intelligence.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">duckduckgo-search-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/duckduckgo-search-scraper/" title="DuckDuckGo Search Scraper - Scrape Genius">DuckDuckGo Search Scraper - Scrape Genius</a>
-						<br /><small>Explore how to scrape DuckDuckGo Search data using Scrape Genius. Extract organic results, URLs, and snippets anonymously for privacy-friendly SEO monitoring and research automation.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">yahoo-search-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/yahoo-search-scraper/" title="Google Search Scraper - Scrape Genius">Google Search Scraper - Scrape Genius</a>
-						<br /><small>Enhance your SEO research and marketing strategy with the Scrape Genius Google Search Scraper. Automatically extract Google SERP results including titles, URLs, snippets, and rankings for keyword analysis, lead generation, and competitive intelligence.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">google-map-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/google-map-scraper/" title="Google Maps Scraper &amp; Business Data Extractor - Scrape Genius">Google Maps Scraper &amp; Business Data Extractor - Scrape Genius</a>
-						<br /><small>Easily scrape business listings and contact information from Google Maps using Scrape Genius. Collect names, phone numbers, addresses, websites, ratings, and reviews at scale for lead generation and local marketing insights.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">indiamart-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/indiamart-scraper/" title="IndiaMART Scraper &amp; Supplier Data Extractor - Scrape Genius">IndiaMART Scraper &amp; Supplier Data Extractor - Scrape Genius</a>
-						<br /><small>Scrape supplier and product data from IndiaMART effortlessly. Collect company details, product descriptions, prices, emails, and contact info for business research, sourcing, and sales automation.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">justdial-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/justdial-scraper/" title="Justdial Scraper &amp; Business Data Extractor - Scrape Genius">Justdial Scraper &amp; Business Data Extractor - Scrape Genius</a>
-						<br /><small>Extract business listings, phone numbers, addresses, ratings, and reviews from Justdial using Scrape Genius. Automate local business data collection for lead generation, marketing, and analytics.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">sulekha-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/sulekha-scraper/" title="Sulekha Scraper &amp; Service Provider Data Extractor - Scrape Genius">Sulekha Scraper &amp; Service Provider Data Extractor - Scrape Genius</a>
-						<br /><small>Extract service provider listings, contact details, and ratings from Sulekha using Scrape Genius. Ideal for lead generation, market research, and automation in local service discovery.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">email-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/email-scraper/" title="Email Scraper &amp; Contact Extractor - Scrape Genius">Email Scraper &amp; Contact Extractor - Scrape Genius</a>
-						<br /><small>Extract email addresses from websites, directories, and documents automatically using Scrape Genius. Ideal for lead generation, marketing campaigns, and business outreach — no coding required!</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">phone-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/phone-scraper/" title="Phone Number Scraper &amp; Contact Extractor - Scrape Genius">Phone Number Scraper &amp; Contact Extractor - Scrape Genius</a>
-						<br /><small>Collect phone numbers and contact details from websites, business directories, and online listings with Scrape Genius. Automate lead generation and contact data extraction effortlessly.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">justdial-CRM/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/justdial-CRM/" title="Justdial CRM | Real-Time Lead Capture &amp; Management - Scrape Genius">Justdial CRM | Real-Time Lead Capture &amp; Management - Scrape Genius</a>
-						<br /><small>Our Justdial CRM helps you automatically collect, centralize, and manage customer enquiries from your Justdial account — without any API integration. It captures leads in real time directly from your Justdial dashboard and organizes them into a unified CRM panel. Ideal for sales teams and businesses that depend on Justdial for inbound leads, this tool ensures that no customer enquiry is ever missed.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">indiaMart-CRM/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/indiaMart-CRM/" title="IndiaMART CRM | Automated Lead Management Tool - Scrape Genius">IndiaMART CRM | Automated Lead Management Tool - Scrape Genius</a>
-						<br /><small>Our IndiaMART CRM simplifies lead management by automatically fetching and centralizing your IndiaMART enquiries — completely API-free. It continuously monitors your IndiaMART seller account to collect leads, customer messages, and contact details into one streamlined dashboard. Perfect for businesses that rely on IndiaMART for B2B growth, this CRM keeps all buyer interactions organized and actionable.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">website-data-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/website-data-scraper/" title="Website Data Scraper Software | Efficient Web Scraping Tools - Scrape Genius">Website Data Scraper Software | Efficient Web Scraping Tools - Scrape Genius</a>
-						<br /><small>Automate data collection from any website with our powerful website data scraper. Extract text, links, images and structured data for research, analysis and business insights. No coding required!</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">document-data-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/document-data-scraper/" title="Document Data Scraper &amp; File Extractor - Scrape Genius">Document Data Scraper &amp; File Extractor - Scrape Genius</a>
-						<br /><small>Extract structured data, text, tables, and metadata from Word, PDF, Excel, and CSV files with Scrape Genius. Automate document parsing for research, finance, analytics, and data processing at scale.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">image-data-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/image-data-scraper/" title="Image Scraper &amp; Metadata Extractor - Scrape Genius">Image Scraper &amp; Metadata Extractor - Scrape Genius</a>
-						<br /><small>Scrape and analyze images from any website using Scrape Genius. Collect image URLs, metadata, alt text, captions, and more for SEO optimization, content curation, and digital asset management.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">business-directory-scraper/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/business-directory-scraper/" title="Business Directory Scraper &amp; Contact Data Extractor - Scrape Genius">Business Directory Scraper &amp; Contact Data Extractor - Scrape Genius</a>
-						<br /><small>Extract business listings, emails, phone numbers, and addresses from directories like Yellow Pages with Scrape Genius. Ideal for B2B lead generation, marketing campaigns, and customer acquisition automation.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">whois-database/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/services/whois-database/" title="Whois Domain Database - Scrape Genius">Whois Domain Database - Scrape Genius</a>
-						<br /><small>Get real-time Whois domain information including owner details, registration date, expiration and contact details. Perfect for domain research, cyber security and website validation.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-					</li>
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">about/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/about/" title="About Us - Your Source for Data Scraping Tools &amp; Services">About Us - Your Source for Data Scraping Tools &amp; Services</a>
-						<br /><small>Learn more about Scrape Genius – a powerful web scraping solution designed to automate data extraction from Google Search, Google Maps, websites, documents, and more. Explore our mission, technology and expertise in data mining and automation.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">user-manual/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/user-manual/" title="User Manual - Scrape Genius">User Manual - Scrape Genius</a>
-						<br /><small>Check out the comprehensive Scrape Genius User Manual to learn how to efficiently scrape data from Google Search, Google Maps, business directories, websites, documents, and more. Get started with API usage, advanced filtering, and automation for seamless data extraction.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">legal-terms/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/legal-terms/" title="Terms and Conditions | Scrape Genius">Terms and Conditions | Scrape Genius</a>
-						<br /><small>Read the terms and conditions of Scrape Genius. Understand the rules, policies, and usage guidelines for our web scraping services, ensuring compliance and ethical data extraction.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">legal-policy/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/legal-policy/" title="Privacy Policy | Scrape Genius">Privacy Policy | Scrape Genius</a>
-						<br /><small>Your privacy matters! Read the privacy policy of Scrape Genius to understand how we collect, use and protect your data while providing web scraping services.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">faq/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/faq/" title="Frequently Asked Questions | Document &amp; Data Scraping Tools">Frequently Asked Questions | Document &amp; Data Scraping Tools</a>
-						<br /><small>Find answers to common questions about Scrape Genius. Learn how to use our web scraping tools, pricing details, features, API access, and data extraction best practices. Get expert insight and troubleshooting help.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">contact/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/contact/" title="Contact Us - Get in Touch for Data Scraping Solutions">Contact Us - Get in Touch for Data Scraping Solutions</a>
-						<br /><small>Contact Scrape Genius! Contact us for inquiries, support, partnerships and custom data scraping solutions. We are here to assist with your web extraction needs.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 ">
-				<li class="lhead" title="Click to toggle">reseller/<span class="lcount"> <small>[1 in 1 subfolder]</small></span></li>
-				
-				
-					<li class="lsub">
-						
-			
-			<ul class="ultree level-3 has-pages">
-				<li class="lhead" title="Click to toggle">profile/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/reseller/profile/" title="profile">profile</a>
-						
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-					</li>
-				
-			</ul>
-			
-		
-			
-			<ul class="ultree level-2 has-pages">
-				<li class="lhead" title="Click to toggle">forget-password/<span class="lcount">1 page</span></li>
-				
-					<li class="lpagelist">
-					<ul class="ulpages">
-				
-					<li class="lpage">
-						<a href="https://scrapegenius.com/forget-password/" title="Reset Your Password - Scrape Genius">Reset Your Password - Scrape Genius</a>
-						<br /><small>Securely reset your Scrape Genius password and regain access to your web scraping tools. Follow the simple steps to recover your account.</small>
-					</li>
-				
-					</ul>
-					</li>
-				
-				
-			</ul>
-			
-		
-					</li>
-				
-			</ul>
-			
-		
-			
-		
-		
-	</div>
-
-<div id="footer">
-Page created with PRO-Sitemaps.com - <a href="https://pro-sitemaps.com">PRO Sitemap Service</a>
-</div>
-
+  <header>
+    <h1><a href="https://scrapegenius.com/" style="text-decoration:none;color:inherit;">Scrape Genius</a> HTML Sitemap</h1>
+    <p>Browse the website pages and services listed below. Total pages: 41.</p>
+  </header>
+  <main>
+    <section class="group">\n      <h2>Main Pages (3)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/" title="B2B Lead Generation Software India | Scrape Genius">B2B Lead Generation Software India | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/</span>\n          <p class="desc">Find B2B leads from Google Maps, IndiaMART, JustDial and websites. Get phone numbers, emails and WhatsApp contacts with a built-in CRM. Start your free trial today.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/pricing/" title="Pricing Plans | B2B Lead Generation Software - Scrape Genius">Pricing Plans | B2B Lead Generation Software - Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/pricing/</span>\n          <p class="desc">Compare Scrape Genius plans for B2B lead generation. Free, Standard and Reseller plans with full access to Google Maps, IndiaMART and JustDial lead tools.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/signup/" title="Start Your Free Trial | Scrape Genius">Start Your Free Trial | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/signup/</span>\n          <p class="desc">Create your free Scrape Genius account and start finding B2B leads from Google Maps, IndiaMART, JustDial and websites in minutes.</p>\n        </li>
+      </ul>\n    </section>
+    <section class="group">\n      <h2>Scraping Mining (9)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/services/search-engine-scraper/" title="Search Engine Scraper | Scrape Genius">Search Engine Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/search-engine-scraper/</span>\n          <p class="desc">Find business leads from search engines using targeted keywords and collect available contact details.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/social-media-scraper/" title="Social Media Scraper | Scrape Genius">Social Media Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/social-media-scraper/</span>\n          <p class="desc">Discover business and social media information from supported social platforms.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/google-map-scraper/" title="Google Maps Lead Finder - Local Business Leads | Scrape Genius">Google Maps Lead Finder - Local Business Leads | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/google-map-scraper/</span>\n          <p class="desc">Find local businesses on Google Maps by category and city. Get phone numbers, emails, websites, addresses and ratings, ready to export to Excel.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/facebook-ad-library/" title="Facebook Ad Library Scraper | Scrape Genius">Facebook Ad Library Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/facebook-ad-library/</span>\n          <p class="desc">Explore ad library data and available business information from Facebook ads.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/ecommerce-scraper/" title="Ecommerce Scraper | Scrape Genius">Ecommerce Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/ecommerce-scraper/</span>\n          <p class="desc">Extract available product and seller information from supported ecommerce websites.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/job-portal-scraper/" title="Job Portal Scraper | Scrape Genius">Job Portal Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/job-portal-scraper/</span>\n          <p class="desc">Collect job listing and employer information from supported job portals.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/global-directory-scraper/" title="Global Directory Scraper | Scrape Genius">Global Directory Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/global-directory-scraper/</span>\n          <p class="desc">Find business information from supported global business directories.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/whatsapp-group-scraper/" title="WhatsApp Group Scraper | Scrape Genius">WhatsApp Group Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/whatsapp-group-scraper/</span>\n          <p class="desc">Collect available information from supported WhatsApp group sources.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/real-estate-scraper/" title="Real Estate Scraper | Scrape Genius">Real Estate Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/real-estate-scraper/</span>\n          <p class="desc">Extract available property listing and real estate business information.</p>\n        </li>
+      </ul>\n    </section>
+    <section class="group">\n      <h2>B2B Directory Scrapers (6)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/services/mlmdiary-scraper/" title="MLMDiary Scraper | Scrape Genius">MLMDiary Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/mlmdiary-scraper/</span>\n          <p class="desc">Find available business and contact information from MLMDiary.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/indiamart-scraper/" title="IndiaMART Lead Finder - Suppliers &amp; Manufacturers | Scrape Genius">IndiaMART Lead Finder - Suppliers &amp; Manufacturers | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/indiamart-scraper/</span>\n          <p class="desc">Find suppliers and manufacturers on IndiaMART with company names, contact numbers, products and prices. Build targeted B2B lead lists in minutes.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/justdial-scraper/" title="JustDial Lead Finder - Local Business Leads | Scrape Genius">JustDial Lead Finder - Local Business Leads | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/justdial-scraper/</span>\n          <p class="desc">Find local businesses on JustDial by city and category with phone numbers, addresses and ratings. Export leads to Excel or CSV. Free trial available.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/sulekha-scraper/" title="Sulekha Lead Finder - Service Provider Leads | Scrape Genius">Sulekha Lead Finder - Service Provider Leads | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/sulekha-scraper/</span>\n          <p class="desc">Find service providers on Sulekha by city and service type with phone numbers and ratings. Build local lead lists in minutes.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/tradeindia-scraper/" title="TradeIndia Scraper | Scrape Genius">TradeIndia Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/tradeindia-scraper/</span>\n          <p class="desc">Find available supplier, manufacturer and business information from TradeIndia.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/exportersindia-scraper/" title="ExportersIndia Scraper | Scrape Genius">ExportersIndia Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/exportersindia-scraper/</span>\n          <p class="desc">Find available exporter, supplier and business information from ExportersIndia.</p>\n        </li>
+      </ul>\n    </section>
+    <section class="group">\n      <h2>Corporate Registries (4)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/services/msme-company/" title="MSME Company Scraper | Scrape Genius">MSME Company Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/msme-company/</span>\n          <p class="desc">Find available MSME company information and business details.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/company-scraper/" title="Company Scraper | Scrape Genius">Company Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/company-scraper/</span>\n          <p class="desc">Extract available company details and contact information in bulk.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/pvt-ltd-scraper/" title="Pvt Ltd Company Scraper | Scrape Genius">Pvt Ltd Company Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/pvt-ltd-scraper/</span>\n          <p class="desc">Find available private limited company records by state and registration date, with contact information where available.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/gst-no-scraper/" title="GST Number Scraper | Scrape Genius">GST Number Scraper | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/gst-no-scraper/</span>\n          <p class="desc">Find available GST and business registration information using company details.</p>\n        </li>
+      </ul>\n    </section>
+    <section class="group">\n      <h2>Bulk Contact Scrapers (2)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/services/email-scraper/" title="Email Finder - Find Business Emails in Bulk | Scrape Genius">Email Finder - Find Business Emails in Bulk | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/email-scraper/</span>\n          <p class="desc">Find business email addresses from websites, contact pages and directories in bulk. Export to Excel or CSV for your email campaigns. Try it free.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/phone-scraper/" title="Phone Number Finder - Business Mobile Numbers | Scrape Genius">Phone Number Finder - Business Mobile Numbers | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/phone-scraper/</span>\n          <p class="desc">Find mobile and landline numbers of businesses from websites and online listings, ready for your calling and WhatsApp campaigns.</p>\n        </li>
+      </ul>\n    </section>
+    <section class="group">\n      <h2>Web Scrapers (2)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/services/website-data-scraper/" title="Website Contact Finder - Emails &amp; Phone Numbers | Scrape Genius">Website Contact Finder - Emails &amp; Phone Numbers | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/website-data-scraper/</span>\n          <p class="desc">Find emails, phone numbers and social links of websites in your target country and industry. Build B2B contact lists without manual research.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/business-directory-scraper/" title="Business Directory Lead Finder | Scrape Genius">Business Directory Lead Finder | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/business-directory-scraper/</span>\n          <p class="desc">Paste any business directory URL and get the listed companies with phone numbers, emails and addresses. Export to Excel or CSV. Free trial available.</p>\n        </li>
+      </ul>\n    </section>
+    <section class="group">\n      <h2>File Data Scrapers (2)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/services/document-data-scraper/" title="Document Contact Finder - Contacts from Files | Scrape Genius">Document Contact Finder - Contacts from Files | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/document-data-scraper/</span>\n          <p class="desc">Pull phone numbers and email addresses out of PDF, Word, Excel, CSV and TXT files instantly. Turn old documents into ready-to-use lead lists.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/image-data-scraper/" title="Image to Text - Visiting Card &amp; Brochure Reader | Scrape Genius">Image to Text - Visiting Card &amp; Brochure Reader | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/image-data-scraper/</span>\n          <p class="desc">Upload visiting cards, brochures or screenshots and turn them into editable text and contact details. Save hours of manual typing.</p>\n        </li>
+      </ul>\n    </section>
+    <section class="group">\n      <h2>Verifications (3)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/services/phone-verification/" title="Phone Number Verification | Scrape Genius">Phone Number Verification | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/phone-verification/</span>\n          <p class="desc">Check and validate phone number data using the available verification tools.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/whatsapp-verification/" title="WhatsApp Number Verification | Scrape Genius">WhatsApp Number Verification | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/whatsapp-verification/</span>\n          <p class="desc">Check available WhatsApp number status using the supported verification tools.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/email-verification/" title="Email Address Verification | Scrape Genius">Email Address Verification | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/email-verification/</span>\n          <p class="desc">Validate email address data using the available verification tools.</p>\n        </li>
+      </ul>\n    </section>
+    <section class="group">\n      <h2>Utilities (3)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/services/live-website-scraping/" title="Live Website Leads - Real-Time Business Contacts | Scrape Genius">Live Website Leads - Real-Time Business Contacts | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/live-website-scraping/</span>\n          <p class="desc">Find businesses from millions of live websites in your chosen country and get phone numbers, emails and social media links in real time.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/live-website-data/" title="Website Intelligence - Instant Business Contacts | Scrape Genius">Website Intelligence - Instant Business Contacts | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/live-website-data/</span>\n          <p class="desc">Get website details, contact numbers and emails of businesses in seconds from our ready-made business index. Filter by country and keyword.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/services/whois-database/" title="Whois Domain Lookup - 8+ Years of Records | Scrape Genius">Whois Domain Lookup - 8+ Years of Records | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/services/whois-database/</span>\n          <p class="desc">Search 8+ years of domain registration records by year and keyword. Find newly registered businesses and their contact details for outreach.</p>\n        </li>
+      </ul>\n    </section>
+    <section class="group">\n      <h2>Other Website Pages (7)</h2>\n      <ul>
+        <li>\n          <a href="https://scrapegenius.com/about/" title="About Scrape Genius | B2B Lead Generation Software India">About Scrape Genius | B2B Lead Generation Software India</a>\n          <span class="url">https://scrapegenius.com/about/</span>\n          <p class="desc">Scrape Genius is built by a DPIIT-recognized Indian startup to help sales teams find B2B leads from Google Maps, IndiaMART, JustDial and websites.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/user-manual/" title="User Manual | Scrape Genius">User Manual | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/user-manual/</span>\n          <p class="desc">Step-by-step guide to installing and using Scrape Genius: lead finders, CRM tools, filters, exports and licence activation.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/legal-terms/" title="Terms and Conditions | Scrape Genius">Terms and Conditions | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/legal-terms/</span>\n          <p class="desc">Read the terms and conditions for using Scrape Genius lead generation software, licences and related services.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/legal-policy/" title="Privacy Policy | Scrape Genius">Privacy Policy | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/legal-policy/</span>\n          <p class="desc">Learn how Scrape Genius collects, uses and protects your personal information when you use our website and software.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/faq/" title="FAQ | Scrape Genius Lead Generation Software">FAQ | Scrape Genius Lead Generation Software</a>\n          <span class="url">https://scrapegenius.com/faq/</span>\n          <p class="desc">Answers to common questions about Scrape Genius: installation, licences, pricing, lead sources, CRM features and support.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/contact/" title="Contact Us | Scrape Genius Sales &amp; Support">Contact Us | Scrape Genius Sales &amp; Support</a>\n          <span class="url">https://scrapegenius.com/contact/</span>\n          <p class="desc">Talk to the Scrape Genius team for demos, pricing, reseller partnerships and support for our B2B lead generation software.</p>\n        </li>
+        <li>\n          <a href="https://scrapegenius.com/reseller/" title="Reseller Program - Sell B2B Lead Generation Software | Scrape Genius">Reseller Program - Sell B2B Lead Generation Software | Scrape Genius</a>\n          <span class="url">https://scrapegenius.com/reseller/</span>\n          <p class="desc">Become a Scrape Genius reseller. Sell white-label B2B lead generation software under your own brand with 200 licence keys and dedicated partner support.</p>\n        </li>
+      </ul>\n    </section>
+  </main>
+  <footer>HTML sitemap for Scrape Genius</footer>
 </body>
-
 </html>
