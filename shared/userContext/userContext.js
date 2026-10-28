@@ -100,6 +100,8 @@ export const UserProvider = ({ children }) => {
   const [page, setPage] = useState(10)
   const [limitErr, setLimitErr] = useState("")
   const [contactNum, setContactNum] = useState("")
+  const [ agreementRequired, setAgreementRequired ] = useState({status: false, required: true, updating: false})
+  const [ finalStatement, setFinalStatement ] = useState({token: false, local_user: false, user_verify: false, userData: []})
   const [numberOfData, setNumberOfData] = useState({
     email: 0,
     url: 0,
@@ -110,6 +112,9 @@ export const UserProvider = ({ children }) => {
   });
   const cls = useMemo(()=>({btn:"px-3 mr-2 py-2 mt-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-600 rounded-sm hover:bg-blue-800 disabled:bg-gray-300 disabled:cursor-not-allowed"}),[]);
   const [ records, setRecords] = useState("");
+
+  const updateLoginStatement = (obj) => setFinalStatement(cur=>({...cur, ...obj}));
+  const updateAgreementStatus = (obj)=> setAgreementRequired(cur=>({...cur, ...obj}));
 
   const validityBoxClose = () => {
     setvalidity((prev) => !prev);
@@ -742,7 +747,7 @@ export const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ priceObj, isUSDPrice, setIsUSDPrice, user, usersData,allUsersData, productUrl, localUser, logo, years, DOCS, yt_channel, yt_links, dynamicSocialLinks, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail, validityBoxClose, validity, allocateKeyBoxClose, allocateKeyBox, silverPlans, selectedSilverPlan, setSelectedSilverPlan, isRatesOpen, openRates, closeRates }}
+      value={{ priceObj, isUSDPrice, setIsUSDPrice, user, usersData,allUsersData, productUrl, localUser, logo, years, DOCS, yt_channel, yt_links, dynamicSocialLinks, companyDetails, resellerContact, resellerContactInfo, userProfileDetails, isLoading, saveData, limitErr, snackMessage, waitForInternetConnection, handleSnackMessage, successPop, openSuccessPop, closeSuccessPop, openSnack, openSnackBar, closeSnackBar, handleLimitErr, handleSignIn, validatePhoneNumber, validateSendEmail, handleSignOut, setActivated, isAdmin, isAuthenticated, isActivated, isVerfified, page, googleData, mapData, getPostGoogleData, getPostMapData, numberOfData, setNumberOfData, queryBox, setQueryBox, queryMapBox, setQueryMapBox, net, setNetwork, tempData, setTempData, freeData, setFreeData, cls, mapAllData, saveAllMapData, googleAllData, saveAllGoogleData, dashboardRecords, addEmails, fetchUserData, userData, contactNum, handleContactNumber, handleWhatsAppNumber, handleSmsNumber, whatsAppNum, smsNum, iconPing, hanleIconPing, verify, openVerifyEmail, closeVerifyEmail, validityBoxClose, validity, allocateKeyBoxClose, allocateKeyBox, silverPlans, selectedSilverPlan, setSelectedSilverPlan, isRatesOpen, openRates, closeRates, agreementRequired, finalStatement, updateLoginStatement, updateAgreementStatus }}
     >
       {children}
     </UserContext.Provider>

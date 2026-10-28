@@ -74,6 +74,593 @@ const validatePhoneNum = (number, url, countryCode, message)=>{
   }
 }
 
+
+const sections = [
+  {
+    title: `1. Introduction, Parties and Acceptance`,
+    content: `
+This Reseller Partner Agreement is between Neuralnetics Technologies Pvt. Ltd. (the "Company") and the individual, firm or organization (the "Reseller") that fills in its details in the table at the end of this agreement and signs or accepts it. Under it, the Reseller becomes a reseller partner for the Company's ScrapeGenius software.
+
+Before becoming a reseller partner, buying a partner plan or starting to sell ScrapeGenius, the Reseller must read this entire agreement carefully. Signing it, accepting it online or starting to use the partner program means the Reseller has accepted all its terms.
+`
+  },
+  {
+    title: `2. Definitions`,
+    content: `
+• Company: Neuralnetics Technologies Pvt. Ltd., Indore, Madhya Pradesh, India.
+
+• Software: The ScrapeGenius Windows desktop application, its updates and related services.
+
+• Reseller: The partner approved by the Company who sells or refers the Software under this agreement.
+
+• Customer: The individual, firm or organization that buys a license for the Software through the Reseller.
+
+• Partner Plan: The reseller plans set by the Company (Silver, Gold and Platinum), the details of which are given on the Company's website or in written notice.
+
+• End User Agreement: The Company's ScrapeGenius license agreement, which every Customer must accept before the Software is activated.
+
+• Commission: The referral commission payable to the Reseller under this agreement.
+
+• Brand Materials: The ScrapeGenius name, logo, demos, presentations and other marketing material.
+`
+  },
+  {
+    title: `3. Appointment and Relationship`,
+    content: `
+• The Company grants the Reseller a non-exclusive, non-transferable and revocable permission to sell and refer the Software in line with the selected Partner Plan.
+
+• The Reseller has no exclusive right over any territory, city or customer segment unless the Company has given it in writing.
+
+• The Reseller is an independent business. This agreement does not create a partnership, employment, agency or joint venture between the Company and the Reseller. The Reseller cannot enter into any contract on the Company's behalf or bind the Company to any obligation.
+
+• The Reseller will bear its own costs, staff and marketing expenses.
+`
+  },
+  {
+    title: `4. Partner Plans and Tiers`,
+    content: `
+• The Company offers three Reseller Partner Plans: Silver, Gold and Platinum. The price, benefits and terms of each plan are given on the Company's website (scrapegenius.com) or in the Company's written notice.
+
+• The Reseller's Partner Plan determines its commission rate and benefits. To change the plan (upgrade or downgrade), the Reseller must contact the Company's support team.
+
+• The Partner Plan fee must be paid in full in advance, and applicable GST is payable separately. When the Partner Plan ends, the Reseller must renew it; the renewal price will be the new price in effect at that time.
+
+• The Company may change Partner Plan prices and terms for new sales; this does not affect the current period of plans already paid for.
+`
+  },
+  {
+    title: `5. Commission and Payment`,
+    content: `
+• If a Customer comes through the Reseller and buys a Single User plan or a Reseller plan, the Reseller may be eligible for a referral commission as per the following table.
+
+• Commission on the Single User plan is up to 10%; the exact rate will be set and communicated by the Company.
+
+• Commission is calculated on the plan amount actually received by the Company from the Customer, excluding GST.
+
+• Commission becomes payable only after the Company has received the Customer's full payment and the Customer has accepted the End User Agreement.
+
+• If a refund is given to the Customer or the payment is reversed through a chargeback, the commission paid or payable on it will be cancelled or adjusted against future commission.
+
+• Which Customer a commission is payable on will be decided from the Company's records. The Reseller must give the Customer's details to the Company before the purchase.
+
+• The timing and method of commission payment will be communicated by the Company in writing. The Reseller must provide bills and documents, including GST documents if registered. Applicable TDS will be deducted as per law. The Reseller is responsible for its own taxes.
+
+• Commission on renewals is payable only if the Company has clearly stated it in the Partner Plan or in a written notice.
+
+Referral Commission Rates:
+
+| Plan | Referral Commission |
+|---|---|
+| Single User Plan | Up to 10% |
+| Reseller Partner Plan – Silver | 15% |
+| Reseller Partner Plan – Gold | 20% |
+| Reseller Partner Plan – Platinum | 25% |
+`
+  },
+  {
+    title: `6. Reseller Obligations`,
+    content: `
+• Before selling the Software to any Customer, the Reseller must inform them of the End User Agreement and ensure that the Customer accepts it before activation.
+
+• The Reseller will give only accurate and Company-approved information about the Software. It will not make any promise to a Customer that is not in the End User Agreement, such as a lifetime license, a guarantee of leads or sales, or a guarantee that public data is 100% accurate.
+
+• The Reseller will tell Customers that the Software is a B2B lead generation tool that extracts publicly available data.
+
+• The Reseller will sell only at the Company's price list. Discounts may be given only if the Company has permitted them in writing.
+
+• Giving Customers first-level help, such as information and demos, is the Reseller's responsibility. Technical issues will be passed to the Company's support team.
+
+• The Reseller will comply with all applicable laws, including TRAI/NDNC (DND) rules and consumer and advertising laws.
+
+• The Reseller will keep its registered contact details, including phone, email and WhatsApp, up to date.
+`
+  },
+  {
+    title: `7. Prohibited Conduct`,
+    content: `
+The Reseller shall not:
+
+• Sell or share one license among several Customers or PCs, or use or distribute cracks, patches or unauthorized keys.
+
+• Mislead Customers, make false claims, or present itself as the Company's representative beyond the permission given in this agreement.
+
+• Promote the Software through spam, illegal calls or messages, or any unlawful marketing.
+
+• Modify, repackage or sell the Software under its own name without the Company's written permission.
+
+• Collect payment from Customers on the Company's behalf unless the Company has permitted this in writing.
+
+• Create names, domains or social media accounts similar to ScrapeGenius without the Company's written permission.
+
+• Use abusive language or foul words towards the Company, its support team or staff.
+`
+  },
+  {
+    title: `8. Customers, Support, Renewals and Refunds`,
+    content: `
+• The Software license is directly between the Customer and the Company. The End User Agreement applies to the Customer, and the Company's contract with the Customer cannot be changed through the Reseller.
+
+• The Company may contact Customers directly, including for renewal notices by WhatsApp, phone call, email and Software pop-up, technical support and account-related messages.
+
+• The Customer's renewal will follow the Company's renewal policy. When the license period ends, the Software stops working, and renewal is only at the new price then in effect.
+
+• Refunds will follow the refund policy in the End User Agreement entirely. The Reseller will not make any refund promise to a Customer that differs from that policy.
+
+• The Company's decision on matters of payment, invoices and refunds will be final, unless this agreement says otherwise.
+`
+  },
+  {
+    title: `9. Intellectual Property and Brand Use`,
+    content: `
+The ScrapeGenius name, logo, software code, design and all related intellectual property belong to the Company.
+
+The Reseller has a limited, non-transferable permission to use Brand Materials only to promote and sell the Software under this agreement, in the form provided by the Company. The Reseller may not alter Brand Materials or use them in a misleading way.
+
+All goodwill arising from the use of the brand will belong to the Company. When this agreement ends, the Reseller must stop using Brand Materials.
+`
+  },
+  {
+    title: `10. Data and Confidentiality`,
+    content: `
+• The Reseller will keep the Company's confidential information, such as partner terms, prices, rates, demo access and support processes, confidential and use it only for the purposes of this agreement. This obligation continues after the agreement ends.
+
+• Any personal information of Customers that comes to the Reseller will be used only for sales and support, and handled in line with applicable laws.
+
+• The Reseller acknowledges that, as per the End User Agreement, the Company may keep a copy of the data scraped by a Customer and use or share it on the terms stated there.
+
+• The Company will keep limited information about the Reseller, such as name, phone, email and GSTIN, for license verification, commission and support, and will use it only for those purposes.
+`
+  },
+  {
+    title: `11. Term and Termination`,
+    content: `
+• This agreement starts on the date of acceptance and runs for the period of the Reseller's Partner Plan. If the Partner Plan is renewed, the agreement continues. If it is not renewed, partner status ends automatically.
+
+• Either party may end this agreement by giving 30 days' written notice.
+
+• The Company may suspend or terminate this agreement without prior notice if the Reseller breaches any term, misleads Customers, engages in fraud or unlawful marketing, sells unauthorized keys, misuses the brand, or behaves abusively.
+
+• After termination, the Reseller will stop new sales and stop using Brand Materials. Commission on payments actually received by the Company, and not reversed, before termination will be paid; no commission is payable on sales made after termination.
+
+• The Partner Plan fee is normally non-refundable unless the Company has said otherwise in writing. No refund will be given where the agreement is terminated for breach.
+
+• Existing Customers' licenses continue directly with the Company after termination. The Company may handle their support and renewals itself, or migrate them to the Company or another partner. The Reseller will cooperate in this.
+
+• Sections 5, 7, 9, 10, 12 and 13 continue to apply after termination.
+`
+  },
+  {
+    title: `12. Disclaimer, Liability and Indemnity`,
+    content: `
+• The Software is provided "as is." The Company does not guarantee that the Software will run without errors, extract data from every website, or that data will be complete and accurate. There is no guarantee of the Reseller's sales, earnings or commission.
+
+• To the maximum extent permitted by law, the Company is not liable for any indirect or consequential loss, such as loss of business or profit.
+
+• In no event will the Company's total liability exceed the amount the Reseller actually paid for the Partner Plan concerned.
+
+• The Reseller will indemnify and hold the Company harmless against any claim, loss or expense, including legal fees, arising from breach of this agreement, incorrect information or promises given to Customers, or unlawful marketing.
+`
+  },
+  {
+    title: `13. Governing Law and General`,
+    content: `
+• Governing Law: This agreement is governed by the laws of India. Any dispute will first be attempted to be resolved through mutual discussion. If it is not resolved within 30 days, only the courts at Indore, Madhya Pradesh, will have exclusive jurisdiction.
+
+• Entire Agreement: This agreement is the complete understanding between the Company and the Reseller and overrides all earlier emails, WhatsApp messages or verbal promises.
+
+• Changes to this Agreement: The Company may change this agreement. Notice of a change will be given by email or WhatsApp, and continuing to use the partner program after that means the Reseller has accepted the new agreement.
+
+• Assignment: The Reseller may not transfer this agreement or its rights to anyone else without the Company's written permission.
+
+• Force Majeure and Severability: The Company is not responsible for delay or disruption caused by events beyond its control, such as natural disasters or major internet or server outages. If any part of this agreement is held invalid by a court, the rest of the agreement remains valid as before.
+
+• Language: This agreement is provided in both Hindi and English. If there is any difference between the two versions, the English version will prevail.
+`
+  },
+  {
+    title: `14. Contact Details and Signatures`,
+    content: `
+For any question about this agreement, contact the Company:
+
+Company: Neuralnetics Technologies Pvt. Ltd.
+
+Address: 271, Avantika Nagar, Scheme No. 51, Indore, Madhya Pradesh
+
+Phone / WhatsApp: +91 7987887047, 0731-4001313
+
+Email: [Add support email here]
+
+Website: scrapegenius.com
+
+Reseller Declaration:
+
+I have read and understood this Reseller Partner Agreement in full. I agree to all its terms and will sell ScrapeGenius in accordance with them.
+
+Reseller Details:
+
+• Reseller Name / Firm: ______________________________
+
+• GSTIN (if any): ____________________________________
+
+• Address: __________________________________________
+
+• Phone / Email: _____________________________________
+
+• Partner Plan (Silver / Gold / Platinum): ______________
+
+Signatures:
+
+Company: Neuralnetics Technologies Pvt. Ltd.
+
+• Name: _____________________________________________
+
+• Designation: _______________________________________
+
+• Signature: _________________________________________
+
+• Date: _____________________________________________
+
+Reseller:
+
+• Name: _____________________________________________
+
+• Designation: _______________________________________
+
+• Signature: _________________________________________
+
+• Date: _____________________________________________
+`
+  }
+];
+
+function Icon({ name, className = "" }) {
+  return (
+    <i
+      className={`ri-${name} ${className}`}
+      aria-hidden="true"
+    />
+  );
+}
+
+export function UserAgreement({
+  open = true,
+  isUpdating,
+  onAccept = () => {},
+  onClose = () => {},
+}) {
+  const contentRef = useRef(null);
+  const [progress, setProgress] = useState(0);
+  const [hasScrolledToEnd, setHasScrolledToEnd] = useState(false);
+  const [agreed, setAgreed] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const element = contentRef.current;
+    if (!element) return;
+
+    const updateProgress = () => {
+      const maxScroll =
+        element.scrollHeight - element.clientHeight;
+
+      const percentage =
+        maxScroll <= 1
+          ? 100
+          : Math.min(
+              100,
+              Math.round((element.scrollTop / maxScroll) * 100)
+            );
+
+      setProgress(percentage);
+
+      if (
+        maxScroll <= 1 ||
+        element.scrollTop + element.clientHeight >=
+          element.scrollHeight - 8
+      ) {
+        setHasScrolledToEnd(true);
+      }
+    };
+
+    updateProgress();
+
+    element.addEventListener("scroll", updateProgress, {
+      passive: true,
+    });
+
+    return () => {
+      element.removeEventListener("scroll", updateProgress);
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open, onClose]);
+
+  if (!open) return null;
+
+  const canAccept = hasScrolledToEnd && agreed;
+
+  const handleAccept = () => {
+    if (!canAccept) {
+      onClose();
+      return
+    }
+    
+    onAccept();
+  };
+
+  return (
+    
+  
+<div
+  className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-2 sm:p-4"
+  onMouseDown={(event) => {
+    if (event.target === event.currentTarget) onClose();
+  }}
+>
+  <section
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="agreement-title"
+    className="flex max-h-[82dvh] min-h-0 w-full max-w-lg flex-col overflow-hidden rounded-md border border-slate-300 bg-white shadow-lg"
+  >
+    {/* Header */}
+    <header className="shrink-0 border-b border-indigo-500 bg-indigo-500 px-3 py-2.5 text-white sm:px-4 sm:py-3">
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex min-w-0 items-center gap-2">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-white bg-white text-indigo-500">
+            <Icon name="shield-check-line" className="text-lg" />
+          </div>
+
+          <div className="min-w-0">
+            <div className="mb-0.5 flex items-center gap-1.5">
+              <span className="text-[9px] font-bold uppercase tracking-wider text-slate-200">
+                Reseller Terms &amp; Conditions
+              </span>
+            </div>
+
+            <h2
+              id="agreement-title"
+              className="text-base font-bold leading-tight tracking-tight"
+            >
+              Reseller Partner Agreement
+            </h2>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close agreement"
+          className="shrink-0 rounded-md p-1 transition hover:bg-slate-300 hover:text-black focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          <Icon name="close-line" className="text-lg" />
+        </button>
+      </div>
+
+      <div className="mt-2 flex items-center justify-between gap-2 text-[10px] font-medium">
+        <span className="flex items-center gap-1">
+          <Icon name="file-list-3-line" className="text-xs" />
+          Reseller agreement document
+        </span>
+
+        <span className="shrink-0" aria-live="polite">
+          {hasScrolledToEnd ? "Review complete" : `${progress}% reviewed`}
+        </span>
+      </div>
+
+      <div
+        className="relative mt-1 h-1 overflow-hidden rounded-full bg-slate-600"
+        role="progressbar"
+        aria-label="Agreement reading progress"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={progress}
+      >
+        <div
+          className="h-full rounded-full bg-white transition-all duration-200"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+    </header>
+
+    {/* Scrollable Agreement Content */}
+    <main
+      ref={contentRef}
+      tabIndex={0}
+      className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain px-3 py-3 text-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600 sm:px-4"
+    >
+      {/* Information Notice */}
+      <div className="mb-4 flex items-start gap-2 rounded-md border border-blue-200 bg-blue-50 p-2.5">
+        <Icon
+          name="information-line"
+          className="mt-0.5 shrink-0 text-base text-blue-700"
+        />
+
+        <div className="min-w-0">
+          <h3 className="text-xs font-semibold text-slate-900">
+            Before becoming a reseller partner
+          </h3>
+
+          <p className="mt-1 text-xs leading-5 text-slate-700">
+            Please review the complete Reseller Partner Agreement, including
+            partner plan fees, commission rates, reseller responsibilities,
+            customer support, refund policies, and termination terms.
+            By accepting, you agree to follow these terms when promoting
+            and selling ScrapeGenius.
+          </p>
+        </div>
+      </div>
+
+      {/* Agreement Sections */}
+      <div className="space-y-4">
+        {sections.map((section, index) => (
+          <article
+            key={section.title}
+            className="group flex min-w-0 items-start gap-2.5"
+          >
+            <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-100 text-[10px] font-semibold text-slate-600 group-hover:bg-indigo-500 group-hover:text-white">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+
+            <div className="min-w-0 flex-1">
+              <h3 className="break-words text-xs font-semibold leading-5 tracking-tight text-slate-900">
+                {section.title}
+              </h3>
+
+              <p className="mt-1 whitespace-pre-line break-words text-xs leading-5 text-slate-600">
+                {section.content}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {/* Scroll Reminder */}
+      {!hasScrolledToEnd && (
+        <div className="mt-4 flex items-center justify-center gap-1.5 text-center text-[10px] text-slate-400">
+          <Icon name="arrow-down-line" className="animate-bounce text-sm" />
+          Scroll down to review all reseller agreement terms
+        </div>
+      )}
+
+      {/* End-of-Document Confirmation */}
+      {hasScrolledToEnd && (
+        <div className="mt-4 flex items-start gap-2 rounded-md border border-emerald-200 bg-emerald-50 p-2.5">
+          <Icon
+            name="checkbox-circle-line"
+            className="shrink-0 text-lg text-emerald-600"
+          />
+
+          <div>
+            <p className="text-xs font-semibold text-emerald-900">
+              You have reached the end
+            </p>
+
+            <p className="mt-1 text-xs leading-4 text-emerald-800">
+              Confirm your acceptance of the Reseller Partner Agreement below
+              to continue.
+            </p>
+          </div>
+        </div>
+      )}
+    </main>
+
+    {/* Footer */}
+    <footer className="shrink-0 border-t border-slate-300 bg-slate-50 px-3 py-2">
+      {/* Consent Checkbox */}
+      <label
+        className={`flex items-start gap-2 rounded-md p-1.5 transition ${
+          hasScrolledToEnd
+            ? "cursor-pointer hover:bg-white"
+            : "cursor-not-allowed opacity-60"
+        }`}
+      >
+        <input
+          type="checkbox"
+          checked={agreed}
+          disabled={!hasScrolledToEnd}
+          onChange={(event) => setAgreed(event.target.checked)}
+          className="mt-0.5 h-3.5 w-3.5 shrink-0 accent-blue-700 focus:ring-2 focus:ring-blue-600 disabled:cursor-not-allowed"
+        />
+
+        <span className="text-xs leading-4 text-slate-600">
+          I have read, understood, and agree to the{" "}
+          <span className="font-semibold text-slate-900">
+            Reseller Partner Agreement
+          </span>
+          , including its commission terms, responsibilities, restrictions,
+          and termination conditions.
+        </span>
+      </label>
+
+      {!hasScrolledToEnd && (
+        <p className="px-1.5 text-[10px] leading-4 text-slate-400">
+          Scroll to the bottom to enable the consent checkbox.
+        </p>
+      )}
+
+      {/* Action Buttons */}
+      <div className="mt-2 flex gap-2">
+        <button
+          type="button"
+          onClick={onClose}
+          className="inline-flex min-h-8 flex-1 items-center justify-center gap-1.5 rounded-md border border-slate-300 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400"
+        >
+          <Icon name="close-line" className="text-sm" />
+          Decline
+        </button>
+
+        <button
+          type="button"
+          onClick={handleAccept}
+          disabled={!canAccept || isUpdating}
+          className="inline-flex min-h-8 flex-1 items-center justify-center gap-1.5 rounded-md bg-indigo-500 px-3 py-1.5 text-xs font-semibold text-white shadow-sm transition hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:cursor-not-allowed disabled:bg-slate-800 disabled:opacity-40"
+        >
+          {isUpdating ? (
+            <span className="inline-flex items-center gap-1.5">
+              Processing...
+              <i className="ri-loader-4-line inline-block animate-spin" />
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1.5">
+              Accept &amp; Continue
+              <Icon name="arrow-right-line" className="text-sm" />
+            </span>
+          )}
+        </button>
+      </div>
+
+      {/* Security Note */}
+      <p className="mt-1.5 flex items-center justify-center gap-1 text-center text-[10px] text-slate-400">
+        <Icon name="lock-line" className="text-xs" />
+        Your reseller agreement acceptance will be recorded securely.
+      </p>
+    </footer>
+  </section>
+</div>
+
+
+
+  );
+}
+
 const ContactBox = memo(({number, code=""}) => {
     const [countryCode, setCountryCode] = useState(code);
     const { contactNum, handleContactNumber } = useUserContext()
@@ -978,6 +1565,7 @@ const UserAccess = memo(({ email, closePop, initialSelected = [] }) => {
     {
       title: "Corporate Registries",
       children: [
+        { path: "/dashboard/msme-company", title: "MSME Company" },
         {
           path: "/dashboard/company-contact-scraper",
           title: (

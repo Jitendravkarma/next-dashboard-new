@@ -4,9 +4,10 @@ import { login, setAuthToken, verificationLink } from "@/shared/apis/api";
 import { useUserContext } from "@/shared/userContext/userContext";
 import Link from 'next/link';
 import Snackbar from '../dashboard/SnackBar';
+import { UserAgreement } from '../dashboard/AlertBox';
 
 const SignInForm = () => {
-    const { handleSignIn, handleSignOut, openSnack, snackMessage, openSnackBar, handleSnackMessage } = useUserContext()
+    const { handleSignIn, handleSignOut, openSnack, snackMessage, openSnackBar, handleSnackMessage, agreementRequired, updateLoginStatement } = useUserContext()
     const [ loading, setLoading ] = useState(false)
     const [ isSending, setIsSending ] = useState(false)
     const [ isError, setIsError ] = useState({ status:false, email: "" })
@@ -165,6 +166,10 @@ const SignInForm = () => {
                 <Link className="text-primary decoration-2 hover:underline font-medium" href={"/signup"}> Sign up here</Link>
             </p>
         </form>
+        {/* {
+            agreementRequired.required &&
+            <UserAgreement onClose={()=>setAgreementRequired(cur=>({...cur, required: false}))} onAccept={()=>console.log(`accepcted`)} isUpdating={agreementRequired.updating}/>
+        } */}
     </div>
   )
 }
