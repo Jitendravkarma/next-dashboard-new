@@ -72,9 +72,9 @@ export const ecommerceorders = [
 
 export const dashboardRecords = [
   { id: 1, icon: websiteIcon, class: "Total Searched Records", text: "13,54,654", color: "primary/10", color1: "success" },
-  { id: 2, icon: websiteIcon, class: "Total Website Scraped", text: "10,12,088", color: "primary/10", color1: "success" },
-  { id: 3, icon: emailIcon, class: "Total Email Scraped", text: "11,00,088", color: "primary/10", color1: "success" },
-  { id: 4, icon: phoneIcon, class: "Total Phone Scraped", text: "13,05,684", color: "primary/10", color1: "success" },
+  { id: 2, icon: websiteIcon, class: "Total Website Leads Generated", text: "10,12,088", color: "primary/10", color1: "success" },
+  { id: 3, icon: emailIcon, class: "Total Email Leads Generated", text: "11,00,088", color: "primary/10", color1: "success" },
+  { id: 4, icon: phoneIcon, class: "Total Phone Leads Generated", text: "13,05,684", color: "primary/10", color1: "success" },
   { id: 5, icon: googleIcon, class: "Total Google Searches", text: "89,088", color: "primary/10", color1: "success" },
   { id: 6, icon: mapIcon, class: "Total Map Searches", text: "1,05,088", color: "primary/10", color1: "success" }
 ]

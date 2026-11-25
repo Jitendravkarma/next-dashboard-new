@@ -13,7 +13,7 @@ export const metadata = seo_pvt_ltd;
 const HeaderProp = {
   title: (
     <>
-      Pvt Ltd Company Scraper
+      Pvt Ltd Company Lead Generation Tool
     </>
   ),
   description:
@@ -82,8 +82,8 @@ const HowItWorks = {
   scrapers: [
     {
       subheading: `Select Your State`,
-      paragraph: `Choose the Indian state for which you want to find registered private limited companies. The scraper will use your selected state to filter the available company records.`,
-      description: `Choose the Indian state for which you want to find registered private limited companies. The scraper will use your selected state to filter the available company records.`,
+      paragraph: `Choose the Indian state for which you want to find registered private limited companies. The lead generation tool will use your selected state to filter the available company records.`,
+      description: `Choose the Indian state for which you want to find registered private limited companies. The lead generation tool will use your selected state to filter the available company records.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
       sectionHeading: `Choose Your Target State`,
       link: `/signup`,
@@ -93,8 +93,8 @@ const HowItWorks = {
     },
     {
       subheading: `Choose Your Registration Date Range`,
-      paragraph: `Select a start date and an end date to define the registration period. The scraper will find matching private limited companies registered within your selected date range, subject to available records.`,
-      description: `Select a start date and an end date to define the registration period. The scraper will find matching private limited companies registered within your selected date range, subject to available records.`,
+      paragraph: `Select a start date and an end date to define the registration period. The lead generation tool will find matching private limited companies registered within your selected date range, subject to available records.`,
+      description: `Select a start date and an end date to define the registration period. The lead generation tool will find matching private limited companies registered within your selected date range, subject to available records.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
       sectionHeading: `Set Start & End Dates`,
       link: `/signup`,

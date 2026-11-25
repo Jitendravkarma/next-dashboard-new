@@ -309,7 +309,7 @@ const GoogleSearchScraper = () => {
     function stopScraping() {
         sourceRef.current.cancel('Post request canceled');  
 		stopFlag.current = true;
-        setProgressMsg("Scraping stopped!")
+        setProgressMsg("Lead Generation stopped!")
 		setIsScraping(false)
     };
 
@@ -345,7 +345,7 @@ const GoogleSearchScraper = () => {
                 <div>
                     <h3 className="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-lg sm:text-2xl font-medium flex gap-3 items-center">
                         <img src={"https://cdn-icons-png.flaticon.com/128/6897/6897087.png"} className="w-8"/>
-                        Google Search Scraper
+                        Google Search Lead Generation Tool
                     </h3>
                 </div>
             </div>

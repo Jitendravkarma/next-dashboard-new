@@ -95,7 +95,7 @@ const HowItWork = ({ scraperData }) => {
                         <div className="w-12 h-12 flex items-center justify-center bg-transparent border border-gray-300 rounded-md shadow">
                           <Image
                             src={howitworkgmps.imageSrc} // Use dynamic image source here
-                            alt="Google Map Scraper"
+                            alt="Google Map Lead Generation Tool"
                             className="w-8 h-8 rounded-md"
                             width={500}
                             height={500}

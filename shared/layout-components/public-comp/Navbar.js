@@ -62,7 +62,7 @@ export default function Header() {
       url: "", 
       subLinks: [
         {
-         title : "Live Website Scraping", 
+         title : "Live Website Lead Generation", 
          url: "/services/live-website-scraping", 
          deepLinks: [],
          category: false,
@@ -77,35 +77,35 @@ export default function Header() {
       category: true
     },
     {
-      title : "Search Engine Scraper", 
+      title : "Search Engine Lead Generation Tool", 
       url: "", 
       subLinks: [
         {
-          title: "Bing Search Scraper",
+          title: "Bing Search Lead Generation Tool",
           url: "/services/bing-search-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title: "Google Search Scraper",
+          title: "Google Search Lead Generation Tool",
           url: "/services/google-search-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title: "Yahoo Search Scraper",
+          title: "Yahoo Search Lead Generation Tool",
           url: "/services/yahoo-search-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title: "DuckDuckGo Search Scraper",
+          title: "DuckDuckGo Search Lead Generation Tool",
           url: "/services/duckduckgo-search-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title: "Google Map Scraper",
+          title: "Google Map Lead Generation Tool",
           url: "/services/google-map-scraper/",
           deepLinks: [],
           category: false,
@@ -114,17 +114,17 @@ export default function Header() {
       category: true
     },
     {
-      title : "Social Media Scraper", 
+      title : "Social Media Lead Generation Tool", 
       url: "", 
       subLinks: [
         {
-          title: "facebook Scraper",
+          title: "facebook Lead Generation Tool",
           url: "/services/facebook-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title: "youtube scraper",
+          title: "youtube lead generation tool",
           url: "/services/youtube-scraper",
           deepLinks: [],
           category: false,
@@ -133,35 +133,35 @@ export default function Header() {
       category: true
     },
     {
-      title : "B2B Directory Scraper",
+      title : "B2B Directory Lead Generation Tool",
       url: "",
       subLinks:[
         {
-          title:"IndiaMart Scraper",
+          title:"IndiaMart Lead Generation Tool",
           url:"/services/indiamart-scraper",
           deepLinks: [],
           category: false,
         },
         {
-          title:"JustDial Scraper",
+          title:"JustDial Lead Generation Tool",
           url:"/services/justdial-scraper",
           deepLinks: [],
           category: false,
         },
         {
-          title:"Sulekha Scraper",
+          title:"Sulekha Lead Generation Tool",
           url:"/services/sulekha-scraper",
           deepLinks: [],
           category: false,
         },
         {
-          title:"TradeIndia Scraper",
+          title:"TradeIndia Lead Generation Tool",
           url:"/services/tradeindia-scraper",
           deepLinks: [],
           category: false,
         },
         {
-          title:"ExportersIndia Scraper",
+          title:"ExportersIndia Lead Generation Tool",
           url:"/services/exportersindia-scraper",
           deepLinks: [],
           category: false,
@@ -170,17 +170,17 @@ export default function Header() {
       category:true
     },
     {
-      title:"Bulk Contact Scraper",
+      title:"Bulk Contact Lead Generation Tool",
       url:"",
       subLinks: [
         {
-          title:"Email Scraper",
+          title:"Email Lead Generation Tool",
           url:"/services/email-scraper",
           deepLinks: [],
           category: false,
         },
         {
-          title:"Phone Number Scraper",
+          title:"Phone Number Lead Generation Tool",
           url:"/services/phone-scraper",
           deepLinks: [],
           category: false,
@@ -189,17 +189,17 @@ export default function Header() {
       category:true
     },
     {
-      title : "Web Scrapers", 
+      title : "Lead Generation Tools", 
       url: "", 
       subLinks: [
         {
-          title: "Website Data Scraper",
+          title: "Website Lead Generation Tool",
           url: "/services/website-data-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title: "Business Directory Scraper",
+          title: "Business Directory Lead Generation Tool",
           url: "/services/business-directory-scraper/",
           deepLinks: [],
           category: false,
@@ -208,17 +208,17 @@ export default function Header() {
       category: true
     },
     {
-      title : "File data scrapers", 
+      title : "File lead generation tools", 
       url: "/services/document-data-scraper", 
       subLinks: [
         {
-          title: "Document data scraper",
+          title: "Document lead generation tool",
           url: "/services/document-data-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title: "image data scraper",
+          title: "image lead generation tool",
           url: "/services/image-data-scraper/",
           deepLinks: [],
           category: false,
@@ -236,59 +236,59 @@ export default function Header() {
   
   const mainMenus = [
     {
-      title : "Scraping Mining", 
+      title : "Lead Generation Mining", 
       url: "", 
       subLinks: [
         {
-         title : "Search Engine Scraper", 
+         title : "Search Engine Lead Generation Tool", 
          url: "/services/search-engine-scraper", 
          deepLinks: [],
          category: false,
         },
         {
-          title : "Social Media Scraper", 
+          title : "Social Media Lead Generation Tool", 
           url: "/services/social-media-scraper", 
           deepLinks: [],
           category: false,
         },
         {
-          title : "Google Map Scraper", 
+          title : "Google Map Lead Generation Tool", 
           url: "/services/google-map-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title : "Ad Library Scraper", 
+          title : "Ad Library Lead Generation Tool", 
           url: "/services/facebook-ad-library", 
           deepLinks: [],
           category: false,
         },
         {
-          title : "Ecommerce Scraper", 
+          title : "Ecommerce Lead Generation Tool", 
           url: "/services/ecommerce-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title : "Job Portal Scraper", 
+          title : "Job Portal Lead Generation Tool", 
           url: "/services/job-portal-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title : "Global Directory Scraper", 
+          title : "Global Directory Lead Generation Tool", 
           url: "/services/global-directory-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title : "WhatsApp Group Scraper", 
+          title : "WhatsApp Group Lead Generation Tool", 
           url: "/services/whatsapp-group-scraper/",
           deepLinks: [],
           category: false,
         },
         {
-          title : "Real Estate Scraper", 
+          title : "Real Estate Lead Generation Tool", 
           url: "/services/real-estate-scraper/",
           deepLinks: [],
           category: false,
@@ -301,41 +301,41 @@ export default function Header() {
       url: "", 
       subLinks: [
          {
-          title : "B2B Directory Scraper",
+          title : "B2B Directory Lead Generation Tool",
           url: "",
           deepLinks:[
             {
-              title:"MLMDiary Scraper",
+              title:"MLMDiary Lead Generation Tool",
               url:"/services/mlmdiary-scraper",
               deepLinks: [],
               category: false,
             },
             {
-              title:"IndiaMart Scraper",
+              title:"IndiaMart Lead Generation Tool",
               url:"/services/indiamart-scraper",
               deepLinks: [],
               category: false,
             },
             {
-              title:"JustDial Scraper",
+              title:"JustDial Lead Generation Tool",
               url:"/services/justdial-scraper",
               deepLinks: [],
               category: false,
             },
             {
-              title:"Sulekha Scraper",
+              title:"Sulekha Lead Generation Tool",
               url:"/services/sulekha-scraper",
               deepLinks: [],
               category: false,
             },
             {
-              title:"TradeIndia Scraper",
+              title:"TradeIndia Lead Generation Tool",
               url:"/services/tradeindia-scraper",
               deepLinks: [],
               category: false,
             },
             {
-              title:"ExportersIndia Scraper",
+              title:"ExportersIndia Lead Generation Tool",
               url:"/services/exportersindia-scraper",
               deepLinks: [],
               category: false,
@@ -354,19 +354,19 @@ export default function Header() {
               category: false,
             },
             {
-              title:"Company Scraper",
+              title:"Company Lead Generation Tool",
               url:"/services/company-scraper",
               deepLinks: [],
               category: false,
             },
             {
-              title:"Pvt Ltd Scraper",
+              title:"Pvt Ltd Lead Generation Tool",
               url:"/services/pvt-ltd-scraper",
               deepLinks: [],
               category: false,
             },
             {
-              title:"GST No Scraper",
+              title:"GST No Lead Generation Tool",
               url:"/services/gst-no-scraper",
               deepLinks: [],
               category: false,
@@ -375,17 +375,17 @@ export default function Header() {
           category:true
         },
         {
-          title:"Bulk Contact Scraper",
+          title:"Bulk Contact Lead Generation Tool",
           url:"",
           deepLinks: [
             {
-              title:"Email Scraper",
+              title:"Email Lead Generation Tool",
               url:"/services/email-scraper",
               deepLinks: [],
               category: false,
             },
             {
-              title:"Phone Number Scraper",
+              title:"Phone Number Lead Generation Tool",
               url:"/services/phone-scraper",
               deepLinks: [],
               category: false,
@@ -394,17 +394,17 @@ export default function Header() {
           category:true
         },
         {
-          title : "Web Scrapers", 
+          title : "Lead Generation Tools", 
           url: "", 
           deepLinks: [
             {
-              title: "Website Data Scraper",
+              title: "Website Lead Generation Tool",
               url: "/services/website-data-scraper/",
               deepLinks: [],
               category: false,
             },
             {
-              title: "Business Directory Scraper",
+              title: "Business Directory Lead Generation Tool",
               url: "/services/business-directory-scraper/",
               deepLinks: [],
               category: false,
@@ -413,17 +413,17 @@ export default function Header() {
           category: true
         },
         {
-          title : "File data scrapers", 
+          title : "File lead generation tools", 
           url: "/services/document-data-scraper", 
           deepLinks: [
             {
-              title: "Document data scraper",
+              title: "Document lead generation tool",
               url: "/services/document-data-scraper/",
               deepLinks: [],
               category: false,
             },
             {
-              title: "image data scraper",
+              title: "image lead generation tool",
               url: "/services/image-data-scraper/",
               deepLinks: [],
               category: false,
@@ -468,7 +468,7 @@ export default function Header() {
             url: "", 
             deepLinks: [
               {
-              title : "Live Website Scraping", 
+              title : "Live Website Lead Generation", 
               url: "/services/live-website-scraping", 
               },
               {
@@ -589,7 +589,7 @@ export default function Header() {
                       onClick={toggleDropdown}
                       className="flex items-center space-x-1 nav-link hover:text-blue-500"
                     >
-                      <span>Scraping Services</span>
+                      <span>Lead Generation Services</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

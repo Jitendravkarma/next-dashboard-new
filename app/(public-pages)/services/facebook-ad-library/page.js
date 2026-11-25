@@ -13,11 +13,11 @@ export const metadata = seo_fbads;
 const HeaderProp = {
 title: (
 <>
-Facebook Ad Library Scraper
+Facebook Ad Library Lead Generation Tool
 </>
 ),
 description:
-"Our Facebook Ad Library Scraper helps you collect valuable advertising information from Meta Ad Library. Discover advertisers and extract available data such as company names, ad titles, advertiser details, ad creatives, ad copy, landing page URLs, Facebook pages, Instagram profiles, social media links, and other available advertising information. Simplify competitor research, analyze advertising strategies, identify businesses running ads, and organize campaign insights for marketing research and lead generation. Company phone numbers, email addresses, and other contact details may require additional extraction from publicly available sources.",
+"Our Facebook Ad Library Lead Generation Tool helps you collect valuable advertising information from Meta Ad Library. Discover advertisers and extract available data such as company names, ad titles, advertiser details, ad creatives, ad copy, landing page URLs, Facebook pages, Instagram profiles, social media links, and other available advertising information. Simplify competitor research, analyze advertising strategies, identify businesses running ads, and organize campaign insights for marketing research and lead generation. Company phone numbers, email addresses, and other contact details may require additional extraction from publicly available sources.",
 buttonText: "Try For Free",
 buttonLink: "/signup",
 leftImg: "/assets/img/slider-images/ad_library_scraper.png",
@@ -60,7 +60,7 @@ const HowItWorks = {
 mainheading: "<span className='text-blue-500'>How It </span>Works?",
 scrapers: [
 {
-subheading: "Facebook Ad Library Scraper (Choose Your Search Criteria)",
+subheading: "Facebook Ad Library Lead Generation Tool (Choose Your Search Criteria)",
 paragraph: "Start by entering a relevant keyword, company name, brand name, or industry to discover advertisements in Meta Ad Library. Use specific search terms to find relevant advertisers and explore ads related to your target market, competitors, or business niche.",
 description: "Start by entering a relevant keyword, company name, brand name, or industry to discover advertisements in Meta Ad Library. Use specific search terms to find relevant advertisers and explore ads related to your target market, competitors, or business niche.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",
@@ -71,7 +71,7 @@ pretitle: "Meta Ad Library",
 presubtitle: "Ad Discovery",
 },
 {
-subheading: "Facebook Ad Library Scraper (Find Advertisers)",
+subheading: "Facebook Ad Library Lead Generation Tool (Find Advertisers)",
 paragraph: "Search for advertisements associated with your selected keywords, companies, or brands. Discover available advertiser information, Facebook pages, ad titles, and other details provided by Meta Ad Library to understand which businesses are promoting products or services in your target market.",
 description: "Search for advertisements associated with your selected keywords, companies, or brands. Discover available advertiser information, Facebook pages, ad titles, and other details provided by Meta Ad Library to understand which businesses are promoting products or services in your target market.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",
@@ -82,7 +82,7 @@ pretitle: "Competitor Research",
 presubtitle: "Advertiser Discovery",
 },
 {
-subheading: "Facebook Ad Library Scraper (Extract Ad & Company Data)",
+subheading: "Facebook Ad Library Lead Generation Tool (Extract Ad & Company Data)",
 paragraph: "Initiate the extraction process to collect available advertisement and advertiser information. Depending on the data exposed by Meta Ad Library and your supported extraction process, results may include company names, ad titles, ad copy, Facebook pages, Instagram profiles, creative links, landing page URLs, ad IDs, and other available fields. Additional company phone numbers and email addresses may require separate public-source enrichment.",
 description: "Initiate the extraction process to collect available advertisement and advertiser information. Depending on the data exposed by Meta Ad Library and your supported extraction process, results may include company names, ad titles, ad copy, Facebook pages, Instagram profiles, creative links, landing page URLs, ad IDs, and other available fields. Additional company phone numbers and email addresses may require separate public-source enrichment.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",
@@ -93,7 +93,7 @@ pretitle: "Data Extraction",
 presubtitle: "Company & Ad Details",
 },
 {
-subheading: "Facebook Ad Library Scraper (Review Advertising Results)",
+subheading: "Facebook Ad Library Lead Generation Tool (Review Advertising Results)",
 paragraph: "Once the extraction is complete, review the collected advertisements and advertiser information in an organized format. Examine ad titles, advertising copy, company names, social media profiles, landing page URLs, and other available fields to research competitors, compare promotional strategies, and identify potential business leads.",
 description: "Once the extraction is complete, review the collected advertisements and advertiser information in an organized format. Examine ad titles, advertising copy, company names, social media profiles, landing page URLs, and other available fields to research competitors, compare promotional strategies, and identify potential business leads.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",
@@ -104,7 +104,7 @@ pretitle: "Advertising Insights",
 presubtitle: "Competitor Analysis",
 },
 {
-subheading: "Facebook Ad Library Scraper (Export Ad & Company Data)",
+subheading: "Facebook Ad Library Lead Generation Tool (Export Ad & Company Data)",
 paragraph: "After reviewing your results, export the collected advertising data in a supported format, such as CSV or Excel, if available. Use the data for competitor analysis, campaign research, advertiser discovery, marketing reports, and lead generation. Keep in mind that contact details and social media links depend on their availability in the source data or additional enrichment.",
 description: "After reviewing your results, export the collected advertising data in a supported format, such as CSV or Excel, if available. Use the data for competitor analysis, campaign research, advertiser discovery, marketing reports, and lead generation. Keep in mind that contact details and social media links depend on their availability in the source data or additional enrichment.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",

@@ -13,11 +13,11 @@ export const metadata = seo_job;
 const HeaderProp = {
   title: (
     <>
-    Job Portal Scraper
+    Job Portal Lead Generation Tool
     </>
   ),
   description:
-    "Our Job Portal Scraper extracts valuable job listing and recruitment data from various job portals, including Naukri.com, Shine, PlacementIndia, and other supported platforms. Collect available information such as job titles, company names, job descriptions, salary details, job locations, experience requirements, recruiter names, company websites, and publicly available contact details. Automate job data collection for recruitment research, market analysis, hiring insights, and business intelligence. Simplify your workflow with organized job listing data for further analysis and reporting.",
+    "Our Job Portal Lead Generation Tool extracts valuable job listing and recruitment data from various job portals, including Naukri.com, Shine, PlacementIndia, and other supported platforms. Collect available information such as job titles, company names, job descriptions, salary details, job locations, experience requirements, recruiter names, company websites, and publicly available contact details. Automate job data collection for recruitment research, market analysis, hiring insights, and business intelligence. Simplify your workflow with organized job listing data for further analysis and reporting.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/job_portal_scraper.png",
@@ -60,7 +60,7 @@ const HowItWorks = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Job Portal Scraper (Search Jobs by Keyword)",
+      subheading: "Job Portal Lead Generation Tool (Search Jobs by Keyword)",
       paragraph: "Start by entering a job title, company name, industry, skill, or other relevant search keyword. For example, search for 'Sales Manager jobs in Mumbai' or 'Software Developer vacancies in Bangalore.' Your search criteria help discover relevant job listings across supported portals such as Naukri.com, Shine, PlacementIndia, and other available sources.",
       description: "Start by entering a job title, company name, industry, skill, or other relevant search keyword. For example, search for 'Sales Manager jobs in Mumbai' or 'Software Developer vacancies in Bangalore.' Your search criteria help discover relevant job listings across supported portals such as Naukri.com, Shine, PlacementIndia, and other available sources.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3850/3850285.png",
@@ -71,7 +71,7 @@ const HowItWorks = {
       presubtitle: "Recruitment Research",
     },
     {
-      subheading: "Job Portal Scraper (Select Your Job Portal)",
+      subheading: "Job Portal Lead Generation Tool (Select Your Job Portal)",
       paragraph: "Choose your preferred job portal or supported data source to find relevant vacancies. Explore listings from platforms such as Naukri.com, Shine, PlacementIndia, and more, depending on source availability. Refine your search by job role, location, company, experience level, or other supported filters to get more relevant results.",
       description: "Choose your preferred job portal or supported data source to find relevant vacancies. Explore listings from platforms such as Naukri.com, Shine, PlacementIndia, and more, depending on source availability. Refine your search by job role, location, company, experience level, or other supported filters to get more relevant results.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3850/3850285.png",
@@ -82,9 +82,9 @@ const HowItWorks = {
       presubtitle: "Job Portal Selection",
     },
     {
-      subheading: "Job Portal Scraper (Initiate Data Extraction)",
-      paragraph: "Once you have selected your source and search criteria, start the extraction process. Our Job Portal Scraper collects available information from supported job listings, which may include job titles, company names, descriptions, salaries, locations, experience requirements, recruiter details, and job URLs. The information collected depends on the selected portal and the data accessible from each listing.",
-      description: "Once you have selected your source and search criteria, start the extraction process. Our Job Portal Scraper collects available information from supported job listings, which may include job titles, company names, descriptions, salaries, locations, experience requirements, recruiter details, and job URLs. The information collected depends on the selected portal and the data accessible from each listing.",
+      subheading: "Job Portal Lead Generation Tool (Initiate Data Extraction)",
+      paragraph: "Once you have selected your source and search criteria, start the extraction process. Our Job Portal Lead Generation Tool collects available information from supported job listings, which may include job titles, company names, descriptions, salaries, locations, experience requirements, recruiter details, and job URLs. The information collected depends on the selected portal and the data accessible from each listing.",
+      description: "Once you have selected your source and search criteria, start the extraction process. Our Job Portal Lead Generation Tool collects available information from supported job listings, which may include job titles, company names, descriptions, salaries, locations, experience requirements, recruiter details, and job URLs. The information collected depends on the selected portal and the data accessible from each listing.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3850/3850285.png",
       sectionHeading: "Extract Job Data",
       link: "/signup",
@@ -93,7 +93,7 @@ const HowItWorks = {
       presubtitle: "Job & Company Information",
     },
     {
-      subheading: "Job Portal Scraper (Review Extracted Results)",
+      subheading: "Job Portal Lead Generation Tool (Review Extracted Results)",
       paragraph: "After extraction, review your collected job listings in an organized format. Analyze job titles, hiring companies, locations, salary information, experience requirements, and other available fields. Use the extracted information for recruitment research, hiring trend analysis, competitor research, and understanding opportunities across different industries.",
       description: "After extraction, review your collected job listings in an organized format. Analyze job titles, hiring companies, locations, salary information, experience requirements, and other available fields. Use the extracted information for recruitment research, hiring trend analysis, competitor research, and understanding opportunities across different industries.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3850/3850285.png",
@@ -104,7 +104,7 @@ const HowItWorks = {
       presubtitle: "Hiring Insights",
     },
     {
-      subheading: "Job Portal Scraper (Download or Export Data)",
+      subheading: "Job Portal Lead Generation Tool (Download or Export Data)",
       paragraph: "Once you have reviewed the results, export the collected job data in a supported format, such as CSV or Excel, if available. Use the exported information for recruitment planning, job market analysis, salary research, company hiring analysis, reporting, and other business applications. Company contact information may require additional extraction from publicly available sources when it is not provided directly by the job portal.",
       description: "Once you have reviewed the results, export the collected job data in a supported format, such as CSV or Excel, if available. Use the exported information for recruitment planning, job market analysis, salary research, company hiring analysis, reporting, and other business applications. Company contact information may require additional extraction from publicly available sources when it is not provided directly by the job portal.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/3850/3850285.png",

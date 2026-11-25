@@ -133,7 +133,7 @@ const PolicyContentData = () => {
       listItems: [
         <li>
           <b>Delivery Method: </b>
-          All purchased digital products and services, such as scraping tools, lead generation data, or other related services, are delivered electronically via email or through a secure download link provided in the user dashboard. No physical shipping is required for our products.
+          All purchased digital products and services, such as lead generation tools, lead generation data, or other related services, are delivered electronically via email or through a secure download link provided in the user dashboard. No physical shipping is required for our products.
         </li>,
         <li>
           <b>Delivery Timeline: </b>

@@ -4,43 +4,43 @@ import { Heading, Para } from "../Heading";
 const Services = () => {
   const services = [
     {
-      title: "Search Engine Scraper",
+      title: "Search Engine Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/searchEngine.png",
       des: "Extract titles, URLs, descriptions, and contacts from Google, Bing, Yahoo, and DuckDuckGo.",
       url: "/signup",
     },
     {
-      title: "Social Media Scraper",
+      title: "Social Media Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/socialIcon.png",
       des: "Collect profiles, posts, and contact details from Facebook, Instagram, LinkedIn, and YouTube.",
       url: "/signup",
     },
     {
-      title: "E-commerce Seller Scraper",
+      title: "E-commerce Seller Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/ecomIcon.png",
       des: "Extract product details, prices, and seller info from Amazon, Flipkart, Meesho, and more.",
       url: "/signup",
     },
     {
-      title: "Job Portal Scraper",
+      title: "Job Portal Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/jobIcon.png",
       des: "Extract Job details, Company Name, Payout, Experience and more from Naukri.com, Shine.com, Apna.co, and more.",
       url: "/signup",
     },
     {
-      title: "Corporate Scraper",
+      title: "Corporate Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/ltdIcon.png",
-      des: "Scrape corporate details such as company name, phone, email, gst and more using Pvt Ltd and GST scrapers.",
+      des: "Generate leads with corporate details such as company name, phone, email, gst and more using Pvt Ltd and GST lead generation tools.",
       url: "/signup",
     },
     {
-      title: "Google Map Scraper",
+      title: "Google Map Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/map.png",
-      des: "Scrape business details from Google Maps, including business name, phone, email, and address.",
+      des: "Generate leads with business details from Google Maps, including business name, phone, email, and address.",
       url: "/signup",
     },
     {
-      title: "Live Website Scraping",
+      title: "Live Website Lead Generation",
       img: "/assets/iconfonts/dashboard-icon/live.png",
       des: "Get the contact information, social media links, and more data directly from live websites.",
       url: "/signup",
@@ -52,67 +52,67 @@ const Services = () => {
       url: "/signup",
     },
     {
-      title: "India Mart Scraper",
+      title: "India Mart Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
       des: "Extract website URL, Indiamart numbers, actual phone number, email address, and GST number.",
       url: "/signup",
     },
     {
-      title: "Justdial Scraper",
+      title: "Justdial Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/jdIcon.png",
       des: "Extract business listings and profile details, including email address, GST number, virtual and actual phone numbers, and more.",
       url:"//signupr"
     },
     {
-      title: "Sulekha Scraper",
+      title: "Sulekha Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/sulekha.png",
       des: "Extract listing profile details, including website URL, virtual and actual phone numbers, email address, business address, and more.",
       url:"//signupr"
     },
     {
-      title: "Trade India Scraper",
+      title: "Trade India Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/tradeindia.png",
       des: "Extract business profile information, including profile URL, business website, virtual and actual phone numbers, email address, and more.",
       url:"//signupr"
     },
     {
-      title: "ExportersIndia Scraper",
+      title: "ExportersIndia Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/exporters.png",
       des: "Get ExportersIndia india business profile information, including website, virtual and actual phone numbers, email address, GST number .",
       url:"//signupr"
     },
     {
-      title: "Email Scraper",
+      title: "Email Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/email.png",
       des: "Extract bulk email addresses based on various domain types such as .com, .in, .org, and more—filtered by your chosen keywords and city.",
       url:"//signupr"
     },
     {
-      title: "Phone Scraper",
+      title: "Phone Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/phone.png",
       des: "Extract Indian phone numbers in bulk based on your selected keywords and city.",
       url:"//signupr"
     },
     {
-      title: "Website Data Scraper",
+      title: "Website Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/website.png",
       des: "Extract valuable data from websites for research and marketing.",
       url: "/signup",
     },
     {
-      title: "Business Directory Scraper",
+      title: "Business Directory Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       des: "Extract contact details from online business directories easily.",
       url: "/signup",
     },
     {
-      title: "Document Data Scraper",
+      title: "Document Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/docIcon.png",
       des: "Extract data from CSV, Excel, Doc, and other documents automatically.",
       url: "/signup",
     },
     {
-      title: "Image data scraper",
+      title: "Image lead generation tool",
       img: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       des: "Extract text and contact information such as phone number and email address from images with OCR technology.",
       url: "/signup",
@@ -124,13 +124,13 @@ const Services = () => {
       url: "/signup",
     },
     {
-      title: "Real State Scraper",
+      title: "Real State Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/property.png",
       des: "Collect profile url, prices and contact details from 99acres, Magicbricks, Beegru, Makaan24 and more.",
       url: "/signup",
     },
     {
-      title: "Whatsapp Group Scraper",
+      title: "Whatsapp Group Lead Generation Tool",
       img: "/assets/iconfonts/dashboard-icon/whatsapp.png",
       des: "Extract WhatsApp group links, and collect the valuable contacts from WhatsApp groups and grow your leads effortlessly.",
       url: "/signup",

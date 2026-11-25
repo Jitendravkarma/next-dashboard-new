@@ -3,15 +3,15 @@ import React from "react";
 const WhyChooseUs = () => {
   const features = [
     {
-      title: "Advanced Scraping Technology",
+      title: "Advanced Lead Generation Technology",
       description:
-        "Effortlessly scrape data from Google Maps, websites, and directories with precision.",
+        "Effortlessly generate leads from Google Maps, websites, and directories with precision.",
       icon: <i className="ri-tools-line text-blue-400 lg:text-4xl text-3xl" />,
     },
     {
       title: "Secure & Reliable",
       description:
-        "We ensure top-tier data privacy and protection for all your scraping projects.",
+        "We ensure top-tier data privacy and protection for all your lead generation projects.",
       icon: <i className="ri-lock-line text-blue-400 lg:text-4xl text-3xl" />,
     },
     {
@@ -23,19 +23,19 @@ const WhyChooseUs = () => {
     {
       title: "Built-in Proxy Integration",
       description:
-        "Avoid IP blocks and CAPTCHAs with built-in advanced anti-scraping technology.",
+        "Avoid IP blocks and CAPTCHAs with built-in advanced anti-blocking technology.",
       icon: <i className="ri-shield-line text-blue-400 lg:text-4xl text-3xl" />,
     },
     {
       title: "Easy-to-Use Interface",
       description:
-        "Start scraping instantly with a simple and intuitive user interface.",
+        "Start lead generation instantly with a simple and intuitive user interface.",
       icon: <i className="ri-clipboard-line text-blue-400 lg:text-4xl text-3xl" />,
     },
     {
       title: "Cloud-Based Platform",
       description:
-        "Access your tools and scraped data anywhere, anytime, with seamless cloud support (coming soon).",
+        "Access your tools and lead generation data anywhere, anytime, with seamless cloud support (coming soon).",
       icon: <i className="ri-cloud-line text-blue-400 lg:text-4xl text-3xl" />,
     },
   ];

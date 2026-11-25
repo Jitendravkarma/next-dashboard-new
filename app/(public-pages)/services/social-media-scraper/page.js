@@ -13,11 +13,11 @@ export const metadata = seo_social_media;
 const HeaderProp = {
   title: (
     <>
-    Social Media Scraper
+    Social Media Lead Generation Tool
     </>
   ),
   description:
-    `Our Social Media Scraper helps you collect publicly available business and profile information from multiple social media platforms, including Facebook, Instagram, X (Twitter), LinkedIn, and other supported sources. Discover relevant businesses, brands, professionals, and potential customers based on your search criteria. Extract available phone numbers, email addresses, social media profile links, website URLs, WhatsApp numbers, business names, profile descriptions, locations, and other publicly available details. Automate social media data collection for lead generation, audience research, business development, competitor analysis, and sales prospecting. Organize and export collected information to streamline your research and help you identify relevant business opportunities.`,
+    `Our Social Media Lead Generation Tool helps you collect publicly available business and profile information from multiple social media platforms, including Facebook, Instagram, X (Twitter), LinkedIn, and other supported sources. Discover relevant businesses, brands, professionals, and potential customers based on your search criteria. Extract available phone numbers, email addresses, social media profile links, website URLs, WhatsApp numbers, business names, profile descriptions, locations, and other publicly available details. Automate social media data collection for lead generation, audience research, business development, competitor analysis, and sales prospecting. Organize and export collected information to streamline your research and help you identify relevant business opportunities.`,
   buttonText: `Try For Free`,
   buttonLink: `/signup`,
   leftImg: `/assets/img/slider-images/social_media.png`,
@@ -61,7 +61,7 @@ const HowItWorks = {
   mainheading: `<span className='text-blue-500'>How It </span>Works?`,
   scrapers: [
     {
-      subheading: `Social Media Scraper (Search Profiles by Keyword)`,
+      subheading: `Social Media Lead Generation Tool (Search Profiles by Keyword)`,
       paragraph: `Start by entering a keyword, business name, industry, or location to discover relevant social media profiles and business pages. For example, search for schools in Mumbai, digital marketing agencies in Delhi, clothing brands in India, or real estate agents in Pune. Your search criteria help identify relevant profiles across supported platforms such as Facebook, Instagram, X (Twitter), LinkedIn, and other available sources.`,
       description: `Start by entering a keyword, business name, industry, or location to discover relevant social media profiles and business pages. For example, search for schools in Mumbai, digital marketing agencies in Delhi, clothing brands in India, or real estate agents in Pune. Your search criteria help identify relevant profiles across supported platforms such as Facebook, Instagram, X (Twitter), LinkedIn, and other available sources.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -72,7 +72,7 @@ const HowItWorks = {
       presubtitle: `Discover Relevant Accounts`,
     },
     {
-      subheading: `Social Media Scraper (Select Your Social Media Platform)`,
+      subheading: `Social Media Lead Generation Tool (Select Your Social Media Platform)`,
       paragraph: `Choose your preferred social media platform or supported data source to discover relevant profiles and business pages. Collect available information from Facebook, Instagram, X (Twitter), LinkedIn, and other supported platforms. Refine your search using relevant keywords, business names, industries, or locations to find profiles that match your target audience and business requirements.`,
       description: `Choose your preferred social media platform or supported data source to discover relevant profiles and business pages. Collect available information from Facebook, Instagram, X (Twitter), LinkedIn, and other supported platforms. Refine your search using relevant keywords, business names, industries, or locations to find profiles that match your target audience and business requirements.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -83,9 +83,9 @@ const HowItWorks = {
       presubtitle: `Social Media Data Collection`,
     },
     {
-      subheading: `Social Media Scraper (Initiate Profile Data Extraction)`,
-      paragraph: `Once you have selected a supported platform and search criteria, start the extraction process. Our Social Media Scraper collects available profile and business information, which may include names, phone numbers, email addresses, WhatsApp numbers, social media links, website URLs, profile descriptions, usernames, and business locations. Additional profile metrics and contact details depend on the platform, public visibility, and supported extraction process.`,
-      description: `Once you have selected a supported platform and search criteria, start the extraction process. Our Social Media Scraper collects available profile and business information, which may include names, phone numbers, email addresses, WhatsApp numbers, social media links, website URLs, profile descriptions, usernames, and business locations. Additional profile metrics and contact details depend on the platform, public visibility, and supported extraction process.`,
+      subheading: `Social Media Lead Generation Tool (Initiate Profile Data Extraction)`,
+      paragraph: `Once you have selected a supported platform and search criteria, start the extraction process. Our Social Media Lead Generation Tool collects available profile and business information, which may include names, phone numbers, email addresses, WhatsApp numbers, social media links, website URLs, profile descriptions, usernames, and business locations. Additional profile metrics and contact details depend on the platform, public visibility, and supported extraction process.`,
+      description: `Once you have selected a supported platform and search criteria, start the extraction process. Our Social Media Lead Generation Tool collects available profile and business information, which may include names, phone numbers, email addresses, WhatsApp numbers, social media links, website URLs, profile descriptions, usernames, and business locations. Additional profile metrics and contact details depend on the platform, public visibility, and supported extraction process.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
       sectionHeading: `Extract Social Media Data`,
       link: `/signup`,
@@ -94,7 +94,7 @@ const HowItWorks = {
       presubtitle: `Profile & Contact Details`,
     },
     {
-      subheading: `Social Media Scraper (Review Collected Profiles)`,
+      subheading: `Social Media Lead Generation Tool (Review Collected Profiles)`,
       paragraph: `After extraction, review the collected profiles and business information in an organized format. Check available names, phone numbers, email addresses, WhatsApp numbers, social media profile links, website URLs, descriptions, and location details. Analyze relevant profiles across supported platforms to identify potential customers, discover businesses, research competitors, and build targeted prospect lists for your marketing and sales activities.`,
       description: `After extraction, review the collected profiles and business information in an organized format. Check available names, phone numbers, email addresses, WhatsApp numbers, social media profile links, website URLs, descriptions, and location details. Analyze relevant profiles across supported platforms to identify potential customers, discover businesses, research competitors, and build targeted prospect lists for your marketing and sales activities.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -105,7 +105,7 @@ const HowItWorks = {
       presubtitle: `Organized Social Media Data`,
     },
     {
-      subheading: `Social Media Scraper (Download or Export Data)`,
+      subheading: `Social Media Lead Generation Tool (Download or Export Data)`,
       paragraph: `Once you have reviewed your results, export the collected information in a supported format, such as CSV or Excel, if available. Use the extracted data for lead generation, social media research, business development, influencer discovery, competitor analysis, and sales prospecting. Phone numbers, email addresses, WhatsApp numbers, social links, and other profile fields depend on their availability and accessibility through the supported extraction process.`,
       description: `Once you have reviewed your results, export the collected information in a supported format, such as CSV or Excel, if available. Use the extracted data for lead generation, social media research, business development, influencer discovery, competitor analysis, and sales prospecting. Phone numbers, email addresses, WhatsApp numbers, social links, and other profile fields depend on their availability and accessibility through the supported extraction process.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,

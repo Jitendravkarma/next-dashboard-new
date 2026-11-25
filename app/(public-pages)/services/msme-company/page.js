@@ -13,11 +13,11 @@ export const metadata = seo_msme_company;
 const HeaderProp = {
   title: (
     <>
-    MSME Company Scraper
+    MSME Company Lead Generation Tool
     </>
   ),
   description:
-    `Our MSME Company Scraper helps you collect available business and registration information about Micro, Small, and Medium Enterprises (MSMEs) across India. Discover registered enterprises based on state, district, industry, product, or business activity. Extract available company names, contact names, phone numbers, email addresses, business addresses, PIN codes, Udyam registration numbers, industry categories, business activities, and website URLs when available. Automate MSME data collection for B2B lead generation, supplier discovery, market research, sales prospecting, and business development. Organize and export collected records to build targeted business databases and identify potential opportunities across Indian industries.`,
+    `Our MSME Company Lead Generation Tool helps you collect available business and registration information about Micro, Small, and Medium Enterprises (MSMEs) across India. Discover registered enterprises based on state, district, industry, product, or business activity. Extract available company names, contact names, phone numbers, email addresses, business addresses, PIN codes, Udyam registration numbers, industry categories, business activities, and website URLs when available. Automate MSME data collection for B2B lead generation, supplier discovery, market research, sales prospecting, and business development. Organize and export collected records to build targeted business databases and identify potential opportunities across Indian industries.`,
   buttonText: `Try For Free`,
   buttonLink: `/signup`,
   leftImg: `/assets/img/slider-images/msme_scraper.png`,
@@ -61,7 +61,7 @@ const HowItWorks = {
   mainheading: `<span className='text-blue-500'>How It </span>Works?`,
   scrapers: [
     {
-      subheading: `MSME Company Scraper (Search Indian MSMEs)`,
+      subheading: `MSME Company Lead Generation Tool (Search Indian MSMEs)`,
       paragraph: `Start by entering a business keyword, product, industry, or location to discover relevant MSME companies across India. For example, search for textile manufacturers in Surat, food processing companies in Maharashtra, engineering businesses in Pune, or packaging manufacturers in Delhi. Use relevant search criteria to discover enterprise records from supported MSME directories and registration sources.`,
       description: `Start by entering a business keyword, product, industry, or location to discover relevant MSME companies across India. For example, search for textile manufacturers in Surat, food processing companies in Maharashtra, engineering businesses in Pune, or packaging manufacturers in Delhi. Use relevant search criteria to discover enterprise records from supported MSME directories and registration sources.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -72,7 +72,7 @@ const HowItWorks = {
       presubtitle: `Discover Indian Businesses`,
     },
     {
-      subheading: `MSME Company Scraper (Select Location & Industry)`,
+      subheading: `MSME Company Lead Generation Tool (Select Location & Industry)`,
       paragraph: `Choose your preferred supported MSME data source and refine your search using state, district, product, industry, or business activity. Discover relevant enterprises from supported Indian MSME directories and registration records. For example, target manufacturers in Gujarat, service providers in Karnataka, or food product businesses in Madhya Pradesh to find companies that match your business requirements.`,
       description: `Choose your preferred supported MSME data source and refine your search using state, district, product, industry, or business activity. Discover relevant enterprises from supported Indian MSME directories and registration records. For example, target manufacturers in Gujarat, service providers in Karnataka, or food product businesses in Madhya Pradesh to find companies that match your business requirements.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -83,9 +83,9 @@ const HowItWorks = {
       presubtitle: `Location & Business Activity`,
     },
     {
-      subheading: `MSME Company Scraper (Initiate Company Data Extraction)`,
-      paragraph: `After selecting your search criteria, start the extraction process. Our MSME Company Scraper collects available enterprise information, which may include company names, Udyam registration numbers, contact names, phone numbers, email addresses, business addresses, PIN codes, industry classifications, business activities, and registration dates. Website URLs and additional business details may also be collected when available through supported sources.`,
-      description: `After selecting your search criteria, start the extraction process. Our MSME Company Scraper collects available enterprise information, which may include company names, Udyam registration numbers, contact names, phone numbers, email addresses, business addresses, PIN codes, industry classifications, business activities, and registration dates. Website URLs and additional business details may also be collected when available through supported sources.`,
+      subheading: `MSME Company Lead Generation Tool (Initiate Company Data Extraction)`,
+      paragraph: `After selecting your search criteria, start the extraction process. Our MSME Company Lead Generation Tool collects available enterprise information, which may include company names, Udyam registration numbers, contact names, phone numbers, email addresses, business addresses, PIN codes, industry classifications, business activities, and registration dates. Website URLs and additional business details may also be collected when available through supported sources.`,
+      description: `After selecting your search criteria, start the extraction process. Our MSME Company Lead Generation Tool collects available enterprise information, which may include company names, Udyam registration numbers, contact names, phone numbers, email addresses, business addresses, PIN codes, industry classifications, business activities, and registration dates. Website URLs and additional business details may also be collected when available through supported sources.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
       sectionHeading: `Extract MSME Company Data`,
       link: `/signup`,
@@ -94,7 +94,7 @@ const HowItWorks = {
       presubtitle: `Company & Contact Details`,
     },
     {
-      subheading: `MSME Company Scraper (Review Collected Company Records)`,
+      subheading: `MSME Company Lead Generation Tool (Review Collected Company Records)`,
       paragraph: `After extraction, review your collected MSME records in an organized format. Check available company names, registration numbers, contact information, addresses, business activities, industry classifications, and other enterprise details. Compare companies across different states, districts, and industries to identify potential suppliers, business partners, customers, and sales prospects for your organization.`,
       description: `After extraction, review your collected MSME records in an organized format. Check available company names, registration numbers, contact information, addresses, business activities, industry classifications, and other enterprise details. Compare companies across different states, districts, and industries to identify potential suppliers, business partners, customers, and sales prospects for your organization.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -105,7 +105,7 @@ const HowItWorks = {
       presubtitle: `Organized Company Data`,
     },
     {
-      subheading: `MSME Company Scraper (Download or Export Data)`,
+      subheading: `MSME Company Lead Generation Tool (Download or Export Data)`,
       paragraph: `Once you have reviewed your results, export the collected company records in a supported format, such as CSV or Excel, if available. Use the extracted data for B2B lead generation, supplier research, industry analysis, market research, sales prospecting, and business development. Phone numbers, email addresses, registration details, website URLs, and other fields depend on their availability in the source records and the supported extraction process.`,
       description: `Once you have reviewed your results, export the collected company records in a supported format, such as CSV or Excel, if available. Use the extracted data for B2B lead generation, supplier research, industry analysis, market research, sales prospecting, and business development. Phone numbers, email addresses, registration details, website URLs, and other fields depend on their availability in the source records and the supported extraction process.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,

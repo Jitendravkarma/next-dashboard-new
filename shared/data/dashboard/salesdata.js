@@ -39,10 +39,10 @@ export const sales = [
 //Top Customaers
 
 export const customerdata = [
-  { id: 1, src: "../../assets/img/users/2.jpg", icon: <i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Google Scraper", data: "70,000 tasks", url: "/dashboard/google-search-scraper" },
-  { id: 2, src: "../../assets/img/users/3.jpg", icon: <i className="ri-map-2-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Google Map Scraper", data: "1,50,000 tasks", url: "/dashboard/google-map-scraper" },
-  { id: 3, src: "../../assets/img/users/4.jpg", icon: <i className="ri-global-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Website Scraper", data: "50,000 tasks", url: "/dashboard/website-scraper" },
-  { id: 4, src: "../../assets/img/users/5.jpg", icon: <i className="ri-git-repository-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Directory Scraper", data: "90,000 tasks", url: "/dashboard/directory-scraper"},
+  { id: 1, src: "../../assets/img/users/2.jpg", icon: <i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Google Lead Generation Tool", data: "70,000 tasks", url: "/dashboard/google-search-scraper" },
+  { id: 2, src: "../../assets/img/users/3.jpg", icon: <i className="ri-map-2-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Google Map Lead Generation Tool", data: "1,50,000 tasks", url: "/dashboard/google-map-scraper" },
+  { id: 3, src: "../../assets/img/users/4.jpg", icon: <i className="ri-global-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Website Lead Generation Tool", data: "50,000 tasks", url: "/dashboard/website-scraper" },
+  { id: 4, src: "../../assets/img/users/5.jpg", icon: <i className="ri-git-repository-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Directory Lead Generation Tool", data: "90,000 tasks", url: "/dashboard/directory-scraper"},
   { id: 5, src: "../../assets/img/users/6.jpg", icon: <i className="ri-database-2-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Website Data Center", data: "10,000 tasks", url: "/dashboard/website-data-center" },
   { id: 6, src: "../../assets/img/users/10.jpg", icon: <i className="ri-download-cloud-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, class: "Whois Downloads", data: "60,000 tasks", url: "/dashboard/whois-domain-database" },
 ];
@@ -50,12 +50,12 @@ export const customerdata = [
 //Top Selling Products
 
 export const topselling = [
-  { id: 1, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Scraper", url: "/dashboard/google-search-scraper", data1: "Schools contact numbers in london", data: "Bags", color: "success", text: "Completed" },
-  { id: 2, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Scraper", url: "/dashboard/google-map-scraper", data1: "Software companies in New York", data: "Clothing", color: "success", text: "Completed" },
-  { id: 3, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Scraper", url: "/dashboard/google-search-scraper", data1: "Hospitals email id in Holand", data: "Toys", color: "danger", text: "Incompleted" },
-  { id: 4, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Scraper", url: "/dashboard/google-search-scraper", data1: "Lawyers contact numbers in Edinburgh", data: "Fashion", color: "danger", text: "Incompleted" },
-  { id: 5, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Scraper", url: "/dashboard/google-map-scraper", data1: "Restaurants in Peris", data: "Electronic", color: "success", text: "Completed" },
-  { id: 6, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Scraper", url: "/dashboard/google-map-scraper", data1: "Medical stores in belgium", data: "Fashion", color: "danger", text: "Incompleted" },
+  { id: 1, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Lead Generation Tool", url: "/dashboard/google-search-scraper", data1: "Schools contact numbers in london", data: "Bags", color: "success", text: "Completed" },
+  { id: 2, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Lead Generation Tool", url: "/dashboard/google-map-scraper", data1: "Software companies in New York", data: "Clothing", color: "success", text: "Completed" },
+  { id: 3, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Lead Generation Tool", url: "/dashboard/google-search-scraper", data1: "Hospitals email id in Holand", data: "Toys", color: "danger", text: "Incompleted" },
+  { id: 4, icon:<i className="ri-google-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Search Lead Generation Tool", url: "/dashboard/google-search-scraper", data1: "Lawyers contact numbers in Edinburgh", data: "Fashion", color: "danger", text: "Incompleted" },
+  { id: 5, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Lead Generation Tool", url: "/dashboard/google-map-scraper", data1: "Restaurants in Peris", data: "Electronic", color: "success", text: "Completed" },
+  { id: 6, icon:<i className="ri-map-pin-line text-xl avatar w-10 h-10 bg-primary/10 text-primary leading-none avatar avatar-sm p-2 rounded-full bg-gray-100 dark:bg-bodybg"></i>, title: "Google Map Lead Generation Tool", url: "/dashboard/google-map-scraper", data1: "Medical stores in belgium", data: "Fashion", color: "danger", text: "Incompleted" },
 ];
 
 //Sales Over View
@@ -238,10 +238,10 @@ export class SocialVisitor extends Component {
         },
         xaxis: {
           categories: [
-            "Google Scraper",
-            "Map Scraper",
-            "Website Scraper",
-            "Directory Scraper",
+            "Google Lead Generation Tool",
+            "Map Lead Generation Tool",
+            "Website Lead Generation Tool",
+            "Directory Lead Generation Tool",
             "Data Center",
             "Whois Downloads",
           ],

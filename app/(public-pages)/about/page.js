@@ -25,7 +25,7 @@ const About = () => {
             <div className=''>
               {/* Welcome Message */}
               <p className='text-lg font-semibold my-4 text-center'>Hey there!</p>
-              <p className='text-lg font-semibold text-center'>We are all about making web scraping a breeze for everyone!</p>
+              <p className='text-lg font-semibold text-center'>We are all about making lead generation a breeze for everyone!</p>
 
               {/* About Us - Who We Are */}
               <h2 className='text-2xl lg:text-3xl font-bold  mt-16 uppercase'>Who we are?</h2>

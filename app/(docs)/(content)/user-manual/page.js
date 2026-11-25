@@ -23,7 +23,7 @@ const Docs = () => {
           <div className="text-center">
             <h1 className="text-2xl sm:text-4xl text-gray-800 font-semibold"><span className="text-blue-500">Scrape Genius</span><br/>User Manual</h1>
             <p className="text-gray-600 mt-4">
-              An advanced web scraping solution that uses multiple legal tools to <br/> efficiently extract and manage data, ensuring full compliance with relevant regulations.
+              An advanced lead generation solution that uses multiple legal tools to <br/> efficiently extract and manage data, ensuring full compliance with relevant regulations.
             </p>
           </div>
 

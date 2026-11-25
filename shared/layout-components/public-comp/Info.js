@@ -27,17 +27,17 @@ const Information = () => {
               The Scrape Genius, you can transform your data extraction journey, completing tasks that used to take hours in just a matter of minutes.
               </p>
               <p className="mb-2 text-xss leading-normal font-normal text-gray-600">
-              It is very easy to scrape data from Scrape Genius. You can tailor webscraping to your business needs using keywords that best describe the value of your business, <strong>such as employment consultants, chartered accountants, doctors, schools, software companies, restaurants, yoga classes, medical shops, or travel. agents </strong> and more
+              It is very easy to generate leads from Scrape Genius. You can tailor lead generation to your business needs using keywords that best describe the value of your business, <strong>such as employment consultants, chartered accountants, doctors, schools, software companies, restaurants, yoga classes, medical shops, or travel. agents </strong> and more
               </p>
               <p className="mb-2 text-xss leading-normal font-normal text-gray-600">
-              You can gather a lot of public online data using these keywords. Some of the web scraping tools we have developed. These tools will help you in scraping data. After scraping, you can download a CSV file of your filtered data.
+              You can gather a lot of public online data using these keywords. Some of the lead generation tools we have developed. These tools will help you in lead generation data. After lead generation, you can download a CSV file of your filtered data.
               </p>
               <p className="text-xl text-blue-600 font-normal my-5">
               Some of our Features are: 
               </p>
               <ul className="list-none text-gray-600 leading-normal text-xss mt-3">
               
-                <ListData name="Type your Keyword and scrape your data as per your
+                <ListData name="Type your Keyword and generate your leads as per your
                 requirement."/>
                 <ListData name="Most reliable (highest quality data, up to 80% genuine , No Duplicate , faster
                   data)"/>

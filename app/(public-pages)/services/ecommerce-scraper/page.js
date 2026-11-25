@@ -13,11 +13,11 @@ export const metadata = seo_ecomm;
 const HeaderProp = {
 title: (
 <>
-Ecommerce Scraper
+Ecommerce Lead Generation Tool
 </>
 ),
 description:
-"Our Ecommerce Scraper helps you extract valuable product and seller information from multiple ecommerce platforms, including Amazon, Flipkart, Meesho, and more. Collect available product names, prices, descriptions, ratings, reviews, product URLs, seller details, and other platform-supported information. Automate ecommerce data collection for product research, competitor analysis, price monitoring, and market insights. Organize and export extracted data to simplify your workflow and support data-driven business decisions.",
+"Our Ecommerce Lead Generation Tool helps you extract valuable product and seller information from multiple ecommerce platforms, including Amazon, Flipkart, Meesho, and more. Collect available product names, prices, descriptions, ratings, reviews, product URLs, seller details, and other platform-supported information. Automate ecommerce data collection for product research, competitor analysis, price monitoring, and market insights. Organize and export extracted data to simplify your workflow and support data-driven business decisions.",
 buttonText: "Try For Free",
 buttonLink: "/signup",
 leftImg: "/assets/img/slider-images/ecommerce_scraper.png",
@@ -57,7 +57,7 @@ const HowItWorks = {
 mainheading: "<span className='text-blue-500'>How It </span>Works?",
 scrapers: [
 {
-subheading: "Ecommerce Scraper (Select Your Source)",
+subheading: "Ecommerce Lead Generation Tool (Select Your Source)",
 paragraph: "Start by selecting your preferred ecommerce platform, such as Amazon, Flipkart, Meesho, or another supported source. Choose the products or categories you want to explore and prepare your search criteria to find relevant product listings.",
 description: "Start by selecting your preferred ecommerce platform, such as Amazon, Flipkart, Meesho, or another supported source. Choose the products or categories you want to explore and prepare your search criteria to find relevant product listings.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",
@@ -68,7 +68,7 @@ pretitle: "Ecommerce Research",
 presubtitle: "Product Data Extraction",
 },
 {
-subheading: "Ecommerce Scraper (Enter Product Keywords)",
+subheading: "Ecommerce Lead Generation Tool (Enter Product Keywords)",
 paragraph: "Enter the product name, brand, category, or other relevant search keywords to find matching listings. Use specific search terms to narrow down the results and discover products relevant to your research, competitor analysis, or pricing strategy.",
 description: "Enter the product name, brand, category, or other relevant search keywords to find matching listings. Use specific search terms to narrow down the results and discover products relevant to your research, competitor analysis, or pricing strategy.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",
@@ -79,9 +79,9 @@ pretitle: "Product Discovery",
 presubtitle: "Keyword-Based Search",
 },
 {
-subheading: "Ecommerce Scraper (Initiate Data Extraction)",
-paragraph: "Once you have selected the source and entered your search criteria, start the extraction process. Our Ecommerce Scraper collects available product information from supported listings, which may include product names, prices, descriptions, ratings, reviews, and seller details, depending on the platform.",
-description: "Once you have selected the source and entered your search criteria, start the extraction process. Our Ecommerce Scraper collects available product information from supported listings, which may include product names, prices, descriptions, ratings, reviews, and seller details, depending on the platform.",
+subheading: "Ecommerce Lead Generation Tool (Initiate Data Extraction)",
+paragraph: "Once you have selected the source and entered your search criteria, start the extraction process. Our Ecommerce Lead Generation Tool collects available product information from supported listings, which may include product names, prices, descriptions, ratings, reviews, and seller details, depending on the platform.",
+description: "Once you have selected the source and entered your search criteria, start the extraction process. Our Ecommerce Lead Generation Tool collects available product information from supported listings, which may include product names, prices, descriptions, ratings, reviews, and seller details, depending on the platform.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",
 sectionHeading: "Extract Product Data",
 link: "/signup",
@@ -90,7 +90,7 @@ pretitle: "Automated Extraction",
 presubtitle: "Product Information",
 },
 {
-subheading: "Ecommerce Scraper (Review Extracted Results)",
+subheading: "Ecommerce Lead Generation Tool (Review Extracted Results)",
 paragraph: "After extraction, review the collected product listings in an organized format. Examine available prices, product descriptions, ratings, review counts, URLs, and other extracted fields to compare products, analyze competitors, and identify useful market opportunities.",
 description: "After extraction, review the collected product listings in an organized format. Examine available prices, product descriptions, ratings, review counts, URLs, and other extracted fields to compare products, analyze competitors, and identify useful market opportunities.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",
@@ -101,7 +101,7 @@ pretitle: "Product Analysis",
 presubtitle: "Organized Results",
 },
 {
-subheading: "Ecommerce Scraper (Download or Export Data)",
+subheading: "Ecommerce Lead Generation Tool (Download or Export Data)",
 paragraph: "Once you have reviewed your results, export the collected product data in the supported format, such as CSV or Excel, if available. Use your exported data for product research, price comparisons, competitor monitoring, catalog analysis, reporting, and other ecommerce business activities.",
 description: "Once you have reviewed your results, export the collected product data in the supported format, such as CSV or Excel, if available. Use your exported data for product research, price comparisons, competitor monitoring, catalog analysis, reporting, and other ecommerce business activities.",
 imageSrc: "https://cdn-icons-png.flaticon.com/128/1162/1162499.png",

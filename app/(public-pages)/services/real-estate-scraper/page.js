@@ -13,11 +13,11 @@ export const metadata = seo_real_estate;
 const HeaderProp = {
   title: (
     <>
-    Real Estate Scraper
+    Real Estate Lead Generation Tool
     </>
   ),
   description:
-    "Our Real Estate Scraper extracts valuable property listing and real estate data from multiple platforms, including 99acres, Beegru, Magicbricks, Makaan24, Square Yards, and other supported sources. Collect available property details such as property names, prices, property types, locations, sizes, configurations, descriptions, amenities, agent information, owner details, and publicly available contact information. Automate property data collection for real estate market research, property comparisons, lead generation, investment analysis, and business intelligence. Organize and export property data to streamline your research and support informed real estate decisions.",
+    "Our Real Estate Lead Generation Tool extracts valuable property listing and real estate data from multiple platforms, including 99acres, Beegru, Magicbricks, Makaan24, Square Yards, and other supported sources. Collect available property details such as property names, prices, property types, locations, sizes, configurations, descriptions, amenities, agent information, owner details, and publicly available contact information. Automate property data collection for real estate market research, property comparisons, lead generation, investment analysis, and business intelligence. Organize and export property data to streamline your research and support informed real estate decisions.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/real_estate_scraper.png",
@@ -61,7 +61,7 @@ const HowItWorks = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Real Estate Scraper (Search Properties by Keyword)",
+      subheading: "Real Estate Lead Generation Tool (Search Properties by Keyword)",
       paragraph: "Start by entering a property-related keyword, location, property type, or listing category to discover relevant real estate listings. For example, search for '2 BHK flats in Pune,' 'commercial shops for rent in Delhi,' or 'residential plots in Indore.' Your search criteria help you find properties matching your requirements across supported sources such as 99acres, Beegru, Magicbricks, Makaan24, Square Yards, and other available platforms.",
       description: "Start by entering a property-related keyword, location, property type, or listing category to discover relevant real estate listings. For example, search for '2 BHK flats in Pune,' 'commercial shops for rent in Delhi,' or 'residential plots in Indore.' Your search criteria help you find properties matching your requirements across supported sources such as 99acres, Beegru, Magicbricks, Makaan24, Square Yards, and other available platforms.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/602/602182.png",
@@ -72,7 +72,7 @@ const HowItWorks = {
       presubtitle: "Real Estate Research",
     },
     {
-      subheading: "Real Estate Scraper (Select Your Data Source)",
+      subheading: "Real Estate Lead Generation Tool (Select Your Data Source)",
       paragraph: "Choose your preferred real estate platform or supported data source to discover property listings. Explore available data from 99acres, Beegru, Magicbricks, Makaan24, Square Yards, and more. Refine your search using location, property type, budget, BHK configuration, or listing purpose to find relevant properties for your research and business needs.",
       description: "Choose your preferred real estate platform or supported data source to discover property listings. Explore available data from 99acres, Beegru, Magicbricks, Makaan24, Square Yards, and more. Refine your search using location, property type, budget, BHK configuration, or listing purpose to find relevant properties for your research and business needs.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/602/602182.png",
@@ -83,9 +83,9 @@ const HowItWorks = {
       presubtitle: "Property Data Collection",
     },
     {
-      subheading: "Real Estate Scraper (Initiate Property Data Extraction)",
-      paragraph: "Once you have selected your data source and search criteria, start the extraction process. Our Real Estate Scraper collects available property information, which may include property titles, prices, locations, sizes, configurations, descriptions, amenities, listing URLs, and owner or agent details. Publicly available phone numbers and email addresses may also be collected when accessible through the supported extraction process.",
-      description: "Once you have selected your data source and search criteria, start the extraction process. Our Real Estate Scraper collects available property information, which may include property titles, prices, locations, sizes, configurations, descriptions, amenities, listing URLs, and owner or agent details. Publicly available phone numbers and email addresses may also be collected when accessible through the supported extraction process.",
+      subheading: "Real Estate Lead Generation Tool (Initiate Property Data Extraction)",
+      paragraph: "Once you have selected your data source and search criteria, start the extraction process. Our Real Estate Lead Generation Tool collects available property information, which may include property titles, prices, locations, sizes, configurations, descriptions, amenities, listing URLs, and owner or agent details. Publicly available phone numbers and email addresses may also be collected when accessible through the supported extraction process.",
+      description: "Once you have selected your data source and search criteria, start the extraction process. Our Real Estate Lead Generation Tool collects available property information, which may include property titles, prices, locations, sizes, configurations, descriptions, amenities, listing URLs, and owner or agent details. Publicly available phone numbers and email addresses may also be collected when accessible through the supported extraction process.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/602/602182.png",
       sectionHeading: "Extract Property Data",
       link: "/signup",
@@ -94,7 +94,7 @@ const HowItWorks = {
       presubtitle: "Property & Contact Details",
     },
     {
-      subheading: "Real Estate Scraper (Review Property Listings)",
+      subheading: "Real Estate Lead Generation Tool (Review Property Listings)",
       paragraph: "After extraction, review the collected property listings in an organized format. Compare property prices, locations, sizes, configurations, amenities, listing categories, and available owner or agent details. Analyze properties across multiple sources to support market research, property comparisons, investment analysis, sales prospecting, and real estate lead generation.",
       description: "After extraction, review the collected property listings in an organized format. Compare property prices, locations, sizes, configurations, amenities, listing categories, and available owner or agent details. Analyze properties across multiple sources to support market research, property comparisons, investment analysis, sales prospecting, and real estate lead generation.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/602/602182.png",
@@ -105,7 +105,7 @@ const HowItWorks = {
       presubtitle: "Market & Investment Insights",
     },
     {
-      subheading: "Real Estate Scraper (Download or Export Property Data)",
+      subheading: "Real Estate Lead Generation Tool (Download or Export Property Data)",
       paragraph: "Once you have reviewed your results, export the collected property data in a supported format, such as CSV or Excel, if available. Use the extracted information for property market analysis, price comparisons, investment research, real estate lead generation, sales planning, and reporting. Contact details and other listing fields depend on their availability from each source and the supported extraction process.",
       description: "Once you have reviewed your results, export the collected property data in a supported format, such as CSV or Excel, if available. Use the extracted information for property market analysis, price comparisons, investment research, real estate lead generation, sales planning, and reporting. Contact details and other listing fields depend on their availability from each source and the supported extraction process.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/602/602182.png",

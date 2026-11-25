@@ -1,4 +1,6 @@
+
 "use client";
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,36 +11,47 @@ import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const pathName = usePathname();
-  const { logo, resellerContactInfo, companyDetails, dynamicSocialLinks } = useUserContext()
+
+  const {
+    logo,
+    resellerContactInfo,
+    dynamicSocialLinks,
+  } = useUserContext();
+
   const [showGoTop, setShowGoTop] = useState(false);
   const [openEnquiry, setOpenEnquiry] = useState(false);
 
-  const handleVisibleButton = () => {
-    const position = window.pageYOffset;
-    setShowGoTop(position > 50); // Show button if scrolled down more than 50px
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowGoTop(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    setOpenEnquiry(true);
+  }, []);
+
+  const closePop = () => setOpenEnquiry(false);
 
   const scrollUp = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scrolling
+      behavior: "smooth",
     });
   };
 
-  // Scroll Listener
-  useEffect(() => {
-    window.addEventListener("scroll", handleVisibleButton);
-
-    // Cleanup listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleVisibleButton);
-    };
-  }, []);
-
-  const footerLinks = [
+  const footerSections = [
     {
-      title: "Top Tools",
-      list: [
+      title: "Popular Tools",
+      subtitle: "Explore our solutions",
+      icon: "ri-apps-2-line",
+      links: [
         { title: "Google Maps Lead Finder", url: "/services/google-map-scraper/" },
         { title: "IndiaMART CRM", url: "/services/indiaMart-CRM/" },
         { title: "JustDial CRM", url: "/services/justdial-CRM/" },
@@ -46,153 +59,221 @@ export default function Footer() {
         { title: "JustDial Lead Finder", url: "/services/justdial-scraper/" },
         { title: "Google Search Lead Finder", url: "/services/google-search-scraper/" },
         { title: "Website Contact Finder", url: "/services/website-data-scraper/" },
-        { title: "Business Directory Lead Finder", url: "/services/business-directory-scraper/" }
+        { title: "Business Directory Lead Finder", url: "/services/business-directory-scraper/" },
       ],
-      subItem: false,
     },
     {
       title: "Quick Links",
-      list: [
+      subtitle: "Everything you need",
+      icon: "ri-links-line",
+      links: [
         { title: "Sign In", url: "/signin" },
         { title: "Create Account", url: "/signup" },
         { title: "About Us", url: "/about" },
         { title: "User Manual", url: "/user-manual" },
-        { title: "Terms & Conditions", url: "/legal-terms" },
-        { title: "Privacy Policy", url: "/legal-policy" },
         { title: "FAQ", url: "/faq" },
         { title: "Contact Us", url: "/contact" },
         { title: "Become a Reseller", url: "/reseller" },
         { title: "Single User Plan", url: "/singleuser" },
       ],
-      subItem: false,
     },
     {
-      title: "follow us",
-      list: [
-        { title: "facebook", url: dynamicSocialLinks.facebook },
-        { title: "instagram", url: "https://www.instagram.com/designcollection.in/" },
-        { title: "youtube", url: dynamicSocialLinks.youtube },
-        { title: "linkedin", url: dynamicSocialLinks.linkedin }
+      title: "Agreements",
+      subtitle: "Legal information",
+      icon: "ri-shield-check-line",
+      links: [
+        { title: "User Agreement", url: "/user-agreement" },
+        { title: "Reseller Agreement", url: "/reseller-agreement" },
+        { title: "Partner Agreement", url: "/partner-agreement" },
+        { title: "Privacy Policy", url: "/legal-policy" },
+        { title: "Terms & Conditions", url: "/legal-terms" },
       ],
-      subItem: {
-        title: "watch tutorials",
-        list: [
-          { title: "youtube", url: dynamicSocialLinks.youtube },
-        ],
-      },
     },
   ];
 
-  const closePop = ()=>{
-    setOpenEnquiry(false)
-  }
+  const socialLinks = [
+    {
+      name: "Facebook",
+      url: dynamicSocialLinks?.facebook,
+      icon: "ri-facebook-fill",
+      color: "hover:bg-[#1877F2]",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/designcollection.in/",
+      icon: "ri-instagram-line",
+      color: "hover:bg-[#E4405F]",
+    },
+    {
+      name: "YouTube",
+      url: dynamicSocialLinks?.youtube,
+      icon: "ri-youtube-fill",
+      color: "hover:bg-[#FF0000]",
+    },
+    {
+      name: "LinkedIn",
+      url: dynamicSocialLinks?.linkedin,
+      icon: "ri-linkedin-fill",
+      color: "hover:bg-[#0A66C2]",
+    },
+  ];
 
-  useEffect(()=>{
-    setOpenEnquiry(true);
-  }, [])
+  const phone = resellerContactInfo?.phone || "";
+  const cleanPhone = phone.replace(/[\s()\-\+]/g, "");
 
   return (
     <>
-      {/* Footer Section */}
-      {
-        (openEnquiry && pathName !== '/downloads/') &&
-        <EnquiryFormModal closePop={closePop}/>
-      }
-      <footer className="bg-white py-20">
+      {/* Enquiry Modal */}
+      {(openEnquiry && pathName !== "/downloads/" && pathName !== "/user-agreement/" && pathName !== "/reseller-agreement/" && pathName !== "/signin/" && pathName !== "/signup/")&& (
+        <EnquiryFormModal closePop={closePop} />
+      )}
+
+      {/* ================= FOOTER ================= */}
+      <footer className="bg-white text-gray-800 border-t border-gray-100">
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-12 gap-8">
-            <div className="col-span-12 xl:col-span-5 flex flex-col gap-5">
-              <div className="mr-auto">
-                <Link className="responsive-logo-dark" href={"/"} aria-label="Brand">
-                  <img src={`${process.env.NODE_ENV === "production" ? basePath : ""}${logo.dark}`} alt="logo" className="w-36 mx-auto" />
-                </Link>
+
+          {/* Footer Main */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 py-14 lg:py-16">
+
+            {/* BRAND COLUMN */}
+            <div className="lg:col-span-4">
+
+              <Link href="/" aria-label="Scrape Genius Home">
+                <img
+                  src={`${
+                    process.env.NODE_ENV === "production"
+                      ? basePath
+                      : ""
+                  }${logo.dark}`}
+                  alt="Scrape Genius"
+                  className="w-44 object-contain"
+                />
+              </Link>
+
+              <p className="mt-6 text-sm text-gray-500 leading-7 max-w-sm">
+                Scrape Genius is a powerful B2B lead generation
+                platform that helps businesses discover verified
+                leads from Google Maps, IndiaMART, JustDial and
+                websites, while managing every enquiry through
+                one smart CRM.
+              </p>
+
+              {/* Social Media */}
+              <div className="mt-8">
+
+                <h4 className="text-sm font-bold text-gray-900 mb-4">
+                  Connect With Us
+                </h4>
+
+                <div className="flex gap-3">
+
+                  {socialLinks
+                    .filter((item) => item.url)
+                    .map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={item.name}
+                        title={item.name}
+                        className={`w-10 h-10 flex items-center justify-center rounded-xl bg-gray-100 text-gray-600 border border-gray-200 text-lg transition-all duration-300 hover:text-white hover:-translate-y-1 hover:border-transparent ${item.color}`}
+                      >
+                        <i className={item.icon} />
+                      </Link>
+                    ))}
+
+                </div>
               </div>
-              <p>
-                Scrape Genius is B2B lead generation software that helps Indian businesses find verified leads from Google Maps, IndiaMART, JustDial and websites, and manage every enquiry in one CRM.
-              </p>
+
             </div>
 
-            <div className="col-span-12 xl:col-span-7 grid grid-cols-12 gap-0 md:gap-5">
-              {
-                footerLinks.map(({ title, list, subItem }, ind) => (
-                  (title === "follow us") ? (
-                    <div key={ind} className="col-span-12 sm:col-span-6 md:col-span-3 my-5 xl:my-0 flex flex-col gap-7">
-                      <div className="">
-                        <h4 className="capitalize text-base font-normal text-black mb-4">
-                          {title}
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {
-                            list.filter(({ url }) => url).map(({ title, url }, idx) => (
-                              <div key={idx}>
-                                <Link
-                                  href={url}
-                                  target="_blank"
-                                  aria-label={title}
-                                  title={url ? `Visit ${title} profile` : `${title} profile not found`}
-                                  className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "instagram" ? "hover:bg-pink-500" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
-                                >
-                                  <i className={`${title === "facebook" ? "ri-facebook-line" : title === "instagram" ? "ri-instagram-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
-                                </Link>
-                              </div>
-                            ))
-                          }
-                        </div>
-                      </div>
-                      {
-                        subItem &&
-                        <div className="">
-                          <h4 className="capitalize text-base font-normal text-black mb-4">
-                            {subItem.title}
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {
-                              subItem.list.filter(({ url }) => url).map(({ title, url }, idx) => (
-                                <div key={idx}>
-                                  <Link
-                                    href={url}
-                                    target="_blank"
-                                    aria-label={title}
-                                    title={url ? `Visit ${title} profile` : `${title} profile not found`}
-                                    className={`bg-gray-200 rounded-sm p-2 text-gray-600 ${title === "facebook" ? "hover:bg-blue-600" : title === "instagram" ? "hover:bg-pink-500" : title === "youtube" ? "hover:bg-red-600" : "hover:bg-blue-700"} hover:text-white`}
-                                  >
-                                    <i className={`${title === "facebook" ? "ri-facebook-line" : title === "instagram" ? "ri-instagram-line" : title === "youtube" ? "ri-youtube-line" : "ri-linkedin-line"}`}></i>
-                                  </Link>
-                                </div>
-                              ))
-                            }
-                          </div>
-                        </div>
-                      }
+            {/* NAVIGATION COLUMNS */}
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10">
+
+              {footerSections.map((section) => (
+                <div key={section.title}>
+
+                  {/* Section Heading */}
+                  <div className="mb-6">
+
+                    <div className="flex items-center gap-2">
+
+                      <span className="w-9 h-9 flex items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                        <i className={`${section.icon} text-lg`} />
+                      </span>
+
+                      <h3 className="text-base font-bold text-gray-900">
+                        {section.title}
+                      </h3>
+
                     </div>
-                  ) : (
-                    <div key={ind} className="col-span-12 sm:col-span-6 md:col-span-3 my-5 xl:my-0">
-                      <h4 className="capitalize text-base font-normal text-black mb-4">
-                        {title}
-                      </h4>
-                      <ul>
-                        {
-                          list.map(({ title, url }, idx) => (
-                            <li key={idx}>
-                              <Link href={url} className="block py-1 hover:text-blue-500">{title}</Link>
-                            </li>
-                          ))
-                        }
-                      </ul>
-                    </div>
-                  )
-                ))
-              }
+
+                    <div className="w-10 h-[2px] bg-blue-600 rounded-full mt-4" />
+
+                  </div>
+
+                  {/* Links */}
+                  <ul className="space-y-3">
+
+                    {section.links.map((link) => (
+                      <li key={link.url}>
+
+                        <Link
+                          href={link.url}
+                          className="group flex items-center gap-2 text-[13px] text-gray-500 hover:text-blue-600 transition-all duration-200"
+                        >
+
+                          <i className="ri-arrow-right-s-line text-blue-500 text-base opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+
+                          <span className="group-hover:translate-x-0.5 transition-transform">
+                            {link.title}
+                          </span>
+
+                        </Link>
+
+                      </li>
+                    ))}
+
+                  </ul>
+
+                </div>
+              ))}
+
             </div>
 
-            <div className="col-span-12 text-center border-t pt-3">
-              <p>
-              © {new Date().getFullYear()}. <Link href={"https://neuralnetics.io/"} target="_blank">Neuralnetics Technologies Pvt. Ltd.</Link> - All Rights Reserved.
-              </p>
-            </div>
           </div>
+
+          {/* BOTTOM BAR */}
+          <div className="border-t border-gray-200 py-6">
+
+            <div className="text-center">
+
+              <p className="text-xs text-gray-500 text-center">
+                © {new Date().getFullYear()}{" "}
+
+                <Link
+                  href="https://neuralnetics.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                  Neuralnetics Technologies Pvt. Ltd.
+                </Link>
+
+                {" "}All Rights Reserved.
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
+
       </footer>
+
+      {/* ================= FLOATING BUTTONS ================= */}
 
       {/* Floating Contact and WhatsApp Buttons */}
       <Link
@@ -240,6 +321,7 @@ export default function Footer() {
           <i className="ri-arrow-up-circle-fill text-3xl"></i>
         </div>
       )}
+
     </>
   );
 }

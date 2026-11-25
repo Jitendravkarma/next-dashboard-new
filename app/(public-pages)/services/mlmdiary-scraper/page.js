@@ -13,11 +13,11 @@ export const metadata = seo_mlmdiary;
 const HeaderProp = {
   title: (
     <>
-    MLM Diary Scraper
+    MLM Diary Lead Generation Tool
     </>
   ),
   description:
-    `Our MLM Diary Scraper extracts available business, contact, and profile information from MLM Diary, a platform focused on network marketing and the direct selling industry. Discover MLM leaders, network marketers, direct selling companies, trainers, product suppliers, software providers, and classified listings. Collect available names, phone numbers, email addresses, WhatsApp numbers, company names, designations, locations, website URLs, profile links, business descriptions, and other publicly available details. Automate data collection for MLM lead generation, network marketing research, business development, company discovery, and sales prospecting. Organize and export collected records to simplify your research and help you identify relevant business opportunities.`,
+    `Our MLM Diary Lead Generation Tool extracts available business, contact, and profile information from MLM Diary, a platform focused on network marketing and the direct selling industry. Discover MLM leaders, network marketers, direct selling companies, trainers, product suppliers, software providers, and classified listings. Collect available names, phone numbers, email addresses, WhatsApp numbers, company names, designations, locations, website URLs, profile links, business descriptions, and other publicly available details. Automate data collection for MLM lead generation, network marketing research, business development, company discovery, and sales prospecting. Organize and export collected records to simplify your research and help you identify relevant business opportunities.`,
   buttonText: `Try For Free`,
   buttonLink: `/signup`,
   leftImg: `/assets/img/slider-images/mlmdiary_scraper.png`,
@@ -61,7 +61,7 @@ const HowItWorks = {
   mainheading: `<span className='text-blue-500'>How It </span>Works?`,
   scrapers: [
     {
-      subheading: `MLM Diary Scraper (Search Members & Listings)`,
+      subheading: `MLM Diary Lead Generation Tool (Search Members & Listings)`,
       paragraph: `Start by choosing a relevant keyword or search query to discover MLM leaders, network marketers, direct selling companies, trainers, product suppliers, software providers, and classified advertisements on MLM Diary. Search using terms such as network marketing leaders in India, MLM companies, direct selling trainers, or MLM software providers to find relevant profiles and business listings.`,
       description: `Start by choosing a relevant keyword or search query to discover MLM leaders, network marketers, direct selling companies, trainers, product suppliers, software providers, and classified advertisements on MLM Diary. Search using terms such as network marketing leaders in India, MLM companies, direct selling trainers, or MLM software providers to find relevant profiles and business listings.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -72,7 +72,7 @@ const HowItWorks = {
       presubtitle: `Discover Relevant Records`,
     },
     {
-      subheading: `MLM Diary Scraper (Choose Your Data Category)`,
+      subheading: `MLM Diary Lead Generation Tool (Choose Your Data Category)`,
       paragraph: `Select the type of information you want to collect from supported MLM Diary pages. Explore available member profiles, MLM company listings, classified advertisements, community posts, trainers, product suppliers, and business service providers. Use relevant keywords or available category filters to narrow your search and discover records that match your networking, research, or lead generation requirements.`,
       description: `Select the type of information you want to collect from supported MLM Diary pages. Explore available member profiles, MLM company listings, classified advertisements, community posts, trainers, product suppliers, and business service providers. Use relevant keywords or available category filters to narrow your search and discover records that match your networking, research, or lead generation requirements.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -83,9 +83,9 @@ const HowItWorks = {
       presubtitle: `Targeted MLM Data Collection`,
     },
     {
-      subheading: `MLM Diary Scraper (Initiate Data Extraction)`,
-      paragraph: `After selecting your search criteria and supported data category, start the extraction process. Our MLM Diary Scraper collects accessible information that may include names, phone numbers, email addresses, WhatsApp numbers, company names, designations, locations, website URLs, profile links, classified titles, and business descriptions. The available fields depend on the information displayed on each supported profile or listing and the extraction process.`,
-      description: `After selecting your search criteria and supported data category, start the extraction process. Our MLM Diary Scraper collects accessible information that may include names, phone numbers, email addresses, WhatsApp numbers, company names, designations, locations, website URLs, profile links, classified titles, and business descriptions. The available fields depend on the information displayed on each supported profile or listing and the extraction process.`,
+      subheading: `MLM Diary Lead Generation Tool (Initiate Data Extraction)`,
+      paragraph: `After selecting your search criteria and supported data category, start the extraction process. Our MLM Diary Lead Generation Tool collects accessible information that may include names, phone numbers, email addresses, WhatsApp numbers, company names, designations, locations, website URLs, profile links, classified titles, and business descriptions. The available fields depend on the information displayed on each supported profile or listing and the extraction process.`,
+      description: `After selecting your search criteria and supported data category, start the extraction process. Our MLM Diary Lead Generation Tool collects accessible information that may include names, phone numbers, email addresses, WhatsApp numbers, company names, designations, locations, website URLs, profile links, classified titles, and business descriptions. The available fields depend on the information displayed on each supported profile or listing and the extraction process.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
       sectionHeading: `Extract MLM Data`,
       link: `/signup`,
@@ -94,7 +94,7 @@ const HowItWorks = {
       presubtitle: `Member & Business Details`,
     },
     {
-      subheading: `MLM Diary Scraper (Review Collected Records)`,
+      subheading: `MLM Diary Lead Generation Tool (Review Collected Records)`,
       paragraph: `Once extraction is complete, review your collected MLM Diary records in an organized format. Check available member names, company associations, designations, phone numbers, email addresses, WhatsApp numbers, locations, website links, and classified details. Use the collected information to research direct selling companies, discover networking professionals, identify potential business connections, and organize relevant prospects for your business development activities.`,
       description: `Once extraction is complete, review your collected MLM Diary records in an organized format. Check available member names, company associations, designations, phone numbers, email addresses, WhatsApp numbers, locations, website links, and classified details. Use the collected information to research direct selling companies, discover networking professionals, identify potential business connections, and organize relevant prospects for your business development activities.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -105,7 +105,7 @@ const HowItWorks = {
       presubtitle: `Organized MLM Information`,
     },
     {
-      subheading: `MLM Diary Scraper (Download or Export Data)`,
+      subheading: `MLM Diary Lead Generation Tool (Download or Export Data)`,
       paragraph: `After reviewing your results, export the collected records in a supported format, such as CSV or Excel, if available. Use the extracted information for MLM lead generation, network marketing research, company discovery, business development, and sales prospecting. Phone numbers, email addresses, WhatsApp numbers, and other contact fields depend on their availability on the source pages and the supported extraction process.`,
       description: `After reviewing your results, export the collected records in a supported format, such as CSV or Excel, if available. Use the extracted information for MLM lead generation, network marketing research, company discovery, business development, and sales prospecting. Phone numbers, email addresses, WhatsApp numbers, and other contact fields depend on their availability on the source pages and the supported extraction process.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,

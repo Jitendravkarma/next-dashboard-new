@@ -13,11 +13,11 @@ export const metadata = seo_search_engine;
 const HeaderProp = {
   title: (
     <>
-    Search Engine Scraper
+    Search Engine Lead Generation Tool
     </>
   ),
   description:
-    `Our Search Engine Scraper extracts relevant business and organization data from multiple search engines, including Google, Bing, Yahoo, DuckDuckGo, and other supported sources. Simply enter a search query such as schools in Mumbai, dentists in Delhi, or manufacturers in Pune to discover relevant results. Collect available business names, phone numbers, email addresses, websites, social media links, website descriptions, business addresses, search result URLs, and other publicly available information. Automate search-based data collection for lead generation, market research, business development, competitor research, and sales prospecting. Organize and export collected results to simplify your research and support data-driven decisions.`,
+    `Our Search Engine Lead Generation Tool extracts relevant business and organization data from multiple search engines, including Google, Bing, Yahoo, DuckDuckGo, and other supported sources. Simply enter a search query such as schools in Mumbai, dentists in Delhi, or manufacturers in Pune to discover relevant results. Collect available business names, phone numbers, email addresses, websites, social media links, website descriptions, business addresses, search result URLs, and other publicly available information. Automate search-based data collection for lead generation, market research, business development, competitor research, and sales prospecting. Organize and export collected results to simplify your research and support data-driven decisions.`,
   buttonText: `Try For Free`,
   buttonLink: `/signup`,
   leftImg: `/assets/img/slider-images/search_engine_scraper.png`,
@@ -61,7 +61,7 @@ const HowItWorks = {
   mainheading: `<span className='text-blue-500'>How It </span>Works?`,
   scrapers: [
     {
-      subheading: `Search Engine Scraper (Search by Keyword)`,
+      subheading: `Search Engine Lead Generation Tool (Search by Keyword)`,
       paragraph: `Start by entering a keyword or search query to discover relevant businesses, organizations, and websites. For example, search for schools in Mumbai, hospitals in Delhi, real estate agents in Pune, or manufacturers in Ahmedabad. Your query helps identify relevant search results across supported search engines such as Google, Bing, Yahoo, and DuckDuckGo.`,
       description: `Start by entering a keyword or search query to discover relevant businesses, organizations, and websites. For example, search for schools in Mumbai, hospitals in Delhi, real estate agents in Pune, or manufacturers in Ahmedabad. Your query helps identify relevant search results across supported search engines such as Google, Bing, Yahoo, and DuckDuckGo.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -72,7 +72,7 @@ const HowItWorks = {
       presubtitle: `Discover Relevant Results`,
     },
     {
-      subheading: `Search Engine Scraper (Select Your Search Engine)`,
+      subheading: `Search Engine Lead Generation Tool (Select Your Search Engine)`,
       paragraph: `Choose your preferred search engine or supported data source to find relevant results. Explore available information from Google, Bing, Yahoo, DuckDuckGo, and other supported sources. Use specific keywords and locations, such as schools in Mumbai or IT companies in Bengaluru, to discover websites and organizations relevant to your target audience and business requirements.`,
       description: `Choose your preferred search engine or supported data source to find relevant results. Explore available information from Google, Bing, Yahoo, DuckDuckGo, and other supported sources. Use specific keywords and locations, such as schools in Mumbai or IT companies in Bengaluru, to discover websites and organizations relevant to your target audience and business requirements.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -83,9 +83,9 @@ const HowItWorks = {
       presubtitle: `Search Across Sources`,
     },
     {
-      subheading: `Search Engine Scraper (Initiate Data Extraction)`,
-      paragraph: `Once you have entered your query and selected a supported search engine, start the extraction process. Our Search Engine Scraper collects available search results and associated information, which may include business names, phone numbers, email addresses, website URLs, social media links, website descriptions, addresses, result titles, and page links. Additional details depend on what is publicly available and accessible through the supported extraction process.`,
-      description: `Once you have entered your query and selected a supported search engine, start the extraction process. Our Search Engine Scraper collects available search results and associated information, which may include business names, phone numbers, email addresses, website URLs, social media links, website descriptions, addresses, result titles, and page links. Additional details depend on what is publicly available and accessible through the supported extraction process.`,
+      subheading: `Search Engine Lead Generation Tool (Initiate Data Extraction)`,
+      paragraph: `Once you have entered your query and selected a supported search engine, start the extraction process. Our Search Engine Lead Generation Tool collects available search results and associated information, which may include business names, phone numbers, email addresses, website URLs, social media links, website descriptions, addresses, result titles, and page links. Additional details depend on what is publicly available and accessible through the supported extraction process.`,
+      description: `Once you have entered your query and selected a supported search engine, start the extraction process. Our Search Engine Lead Generation Tool collects available search results and associated information, which may include business names, phone numbers, email addresses, website URLs, social media links, website descriptions, addresses, result titles, and page links. Additional details depend on what is publicly available and accessible through the supported extraction process.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
       sectionHeading: `Extract Search Data`,
       link: `/signup`,
@@ -94,7 +94,7 @@ const HowItWorks = {
       presubtitle: `Business & Contact Details`,
     },
     {
-      subheading: `Search Engine Scraper (Review Search Results)`,
+      subheading: `Search Engine Lead Generation Tool (Review Search Results)`,
       paragraph: `After extraction, review your collected search results in an organized format. Check business and organization names, websites, available phone numbers, email addresses, social media profiles, descriptions, and location details. Analyze relevant results from multiple search engines to identify potential customers, discover businesses in specific locations, research competitors, and build targeted prospect lists.`,
       description: `After extraction, review your collected search results in an organized format. Check business and organization names, websites, available phone numbers, email addresses, social media profiles, descriptions, and location details. Analyze relevant results from multiple search engines to identify potential customers, discover businesses in specific locations, research competitors, and build targeted prospect lists.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
@@ -105,7 +105,7 @@ const HowItWorks = {
       presubtitle: `Organized Business Data`,
     },
     {
-      subheading: `Search Engine Scraper (Download or Export Data)`,
+      subheading: `Search Engine Lead Generation Tool (Download or Export Data)`,
       paragraph: `Once you have reviewed your results, export the collected data in a supported format, such as CSV or Excel, if available. Use the extracted information for lead generation, sales prospecting, market research, local business discovery, competitor analysis, and business development. Phone numbers, email addresses, social links, and other additional fields depend on their availability from the search results and supported extraction process.`,
       description: `Once you have reviewed your results, export the collected data in a supported format, such as CSV or Excel, if available. Use the extracted information for lead generation, sales prospecting, market research, local business discovery, competitor analysis, and business development. Phone numbers, email addresses, social links, and other additional fields depend on their availability from the search results and supported extraction process.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,

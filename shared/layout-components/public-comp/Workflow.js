@@ -80,7 +80,7 @@ const Workflow = () => {
       subtitle: "Accuracy and Quality Information Collection",
       description:
       <span>
-        Harness the power of data in your business with our state-of-the-art data collection services. Be it extracting important details from <b>documents</b>, <b>websites</b>, or other sources using our <b>web scraping tools</b>, we utilize advanced technologies to ensure precise and comprehensive data capture. Our strong <b>Artificial Intelligence</b> algorithms and data science guarantee that you will get the information you need quickly and reliably, whether it’s from our <b>business directory scraper</b>, <b>yellow pages scraper</b>, or <b>image scraping tool</b>.
+        Harness the power of data in your business with our state-of-the-art data collection services. Be it extracting important details from <b>documents</b>, <b>websites</b>, or other sources using our <b>lead generation tools</b>, we utilize advanced technologies to ensure precise and comprehensive data capture. Our strong <b>Artificial Intelligence</b> algorithms and data science guarantee that you will get the information you need quickly and reliably, whether it’s from our <b>business directory lead generation tool</b>, <b>yellow pages lead generation tool</b>, or <b>image lead generation tool</b>.
       </span>,
       right:true
     },
@@ -90,8 +90,8 @@ const Workflow = () => {
       subtitle: "Raising Standards with Ensuring Accuracy",
       description:
       <span>
-        At the core of our services is an unwavering commitment to <b>data quality</b> and <b>accuracy</b>. We understand the importance of accurate and reliable information when using our <b>business directory scraper</b>, <b>website data scraper</b>, and <b>document scraper</b>. Our <b>state-of-the-art quality</b> assurance protocols enhance the data collected from these tools, including the <b>data scraping tools</b> and <b>web scraping service</b>, by carefully verifying it through <b>data science</b>. This ensures you can trust the information you receive to effectively market your business.
-        Whether you are using our <b>document scraper</b> or the <b>image scraping tool</b>, you can enhance your decision-making processes and grow your business with data that meets the highest standards of <b>accuracy</b> and <b>reliability</b>. Our services are designed to help you extract valuable insights seamlessly, making <b>data collection</b> effortless and efficient.
+        At the core of our services is an unwavering commitment to <b>data quality</b> and <b>accuracy</b>. We understand the importance of accurate and reliable information when using our <b>business directory lead generation tool</b>, <b>website lead generation tool</b>, and <b>document lead generation tool</b>. Our <b>state-of-the-art quality</b> assurance protocols enhance the data collected from these tools, including the <b>lead generation tools</b> and <b>lead generation service</b>, by carefully verifying it through <b>data science</b>. This ensures you can trust the information you receive to effectively market your business.
+        Whether you are using our <b>document lead generation tool</b> or the <b>image lead generation tool</b>, you can enhance your decision-making processes and grow your business with data that meets the highest standards of <b>accuracy</b> and <b>reliability</b>. Our services are designed to help you extract valuable insights seamlessly, making <b>data collection</b> effortless and efficient.
       </span>,
       right:false
     },
@@ -101,7 +101,7 @@ const Workflow = () => {
       subtitle: "Seamless and Reliable Data Extraction",
       description:
       <span>
-          Our platform ensures seamless <b>data extraction</b> with unmatched efficiency. With <b>Scrape Genius's</b> advanced <b>Document Scraper</b> service, extracting critical information such as email addresses and phone numbers has never been easier.
+          Our platform ensures seamless <b>data extraction</b> with unmatched efficiency. With <b>Scrape Genius's</b> advanced <b>Document Lead Generation Tool</b> service, extracting critical information such as email addresses and phone numbers has never been easier.
           Whether you're working with <b>.csv</b>, <b>.txt</b>, <b>.doc</b>, <b>.docx</b>, <b>.html</b>, or other file formats, our tool simplifies the process, providing a <b>user-friendly</b> and reliable solution. 
           Trust in our proven expertise to deliver accurate and consistent results, empowering you with the data you need, precisely when you need it.
       </span>,

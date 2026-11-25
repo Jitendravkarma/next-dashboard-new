@@ -79,7 +79,7 @@ const GenerateLicence = () => {
 			`Hello Friend,
 			Thank you for purchasing *Scrape Genius* 🎉
 			Your activation key is: *${licence}*
-			With this key, you can now scrape unlimited leads using Scrap Genius. 🚀
+			With this key, you can now generate unlimited leads using Scrap Genius. 🚀
 			If you need any help with setup or usage, feel free to reach out to us anytime.
 			*Best regards,*
 			Team Scrape Genius`
@@ -294,7 +294,7 @@ const GenerateLicence = () => {
 														<button className="" onClick={()=>convertAndReturnNum(dt.licence_code)}>
 															<i className="ri-whatsapp-fill text-green-500 hover:text-white  hover:bg-indigo-500 bg-primary/10 leading-none p-2 rounded-full bg-gray-100 text-lg"></i>
 														</button>
-														<a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${dt.allocated? dt.allocated : "example@mail.com"}&su=Scrap Genius Activation Key Inside!&body=Thank you for purchasing *SCRAPE GENIUS* 🎉,%0A%0A Your activation key is: ${dt.licence_code}*,%0A%0A With this key, you can now scrape unlimited leads using Scrap Genius. 🚀,%0A%0A
+														<a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${dt.allocated? dt.allocated : "example@mail.com"}&su=Scrap Genius Activation Key Inside!&body=Thank you for purchasing *SCRAPE GENIUS* 🎉,%0A%0A Your activation key is: ${dt.licence_code}*,%0A%0A With this key, you can now generate unlimited leads using Scrap Genius. 🚀,%0A%0A
 														If you need any help with setup or usage, feel free to reach out to us anytime.
 														*Best regards*,%0A%0A
 														Team Scrap Genius`} target="_blank">

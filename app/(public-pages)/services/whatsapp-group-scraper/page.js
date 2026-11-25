@@ -13,11 +13,11 @@ export const metadata = seo_real_estate;
 const HeaderProp = {
   title: (
     <>
-    WhatsApp Group Scraper
+    WhatsApp Group Lead Generation Tool
     </>
   ),
   description:
-    "Our WhatsApp Group Scraper helps you discover WhatsApp group invite links and collect available group-related information based on your search keywords. Find relevant groups for networking, communities, business discussions, marketing research, and professional connections. Organize discovered group links and associated publicly available information to simplify group discovery and research. Phone numbers and member details are only available when legitimately accessible and permitted; group membership alone does not make members' phone numbers public or authorize bulk extraction.",
+    "Our WhatsApp Group Lead Generation Tool helps you discover WhatsApp group invite links and collect available group-related information based on your search keywords. Find relevant groups for networking, communities, business discussions, marketing research, and professional connections. Organize discovered group links and associated publicly available information to simplify group discovery and research. Phone numbers and member details are only available when legitimately accessible and permitted; group membership alone does not make members' phone numbers public or authorize bulk extraction.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/whatsapp_group_scraper.png",
@@ -54,7 +54,7 @@ const HowItWorks = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "WhatsApp Group Scraper (Search Groups by Keyword)",
+      subheading: "WhatsApp Group Lead Generation Tool (Search Groups by Keyword)",
       paragraph: "Start by entering a keyword related to the groups you want to discover. For example, search for 'business networking WhatsApp groups,' 'digital marketing groups,' or 'job updates WhatsApp groups.' Your search terms help identify relevant group invitation links published on accessible websites and other supported sources.",
       description: "Start by entering a keyword related to the groups you want to discover. For example, search for 'business networking WhatsApp groups,' 'digital marketing groups,' or 'job updates WhatsApp groups.' Your search terms help identify relevant group invitation links published on accessible websites and other supported sources.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/1384/1384055.png",
@@ -65,7 +65,7 @@ const HowItWorks = {
       presubtitle: "Keyword-Based Search",
     },
     {
-      subheading: "WhatsApp Group Scraper (Discover Group Invite Links)",
+      subheading: "WhatsApp Group Lead Generation Tool (Discover Group Invite Links)",
       paragraph: "Once you enter your search criteria, discover relevant WhatsApp group invitation links from supported sources. Organize the links according to your selected keywords or group categories, making it easier to find communities related to your interests, industry, business, or professional network.",
       description: "Once you enter your search criteria, discover relevant WhatsApp group invitation links from supported sources. Organize the links according to your selected keywords or group categories, making it easier to find communities related to your interests, industry, business, or professional network.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/1384/1384055.png",
@@ -76,7 +76,7 @@ const HowItWorks = {
       presubtitle: "Group Invite Discovery",
     },
     {
-      subheading: "WhatsApp Group Scraper (Collect Available Group Details)",
+      subheading: "WhatsApp Group Lead Generation Tool (Collect Available Group Details)",
       paragraph: "After discovering group links, collect available information such as group names, descriptions, categories, and source URLs where supported. Phone numbers explicitly published in accessible sources may also be recorded when appropriate. WhatsApp does not make every group member's phone number publicly available for unrestricted bulk extraction, so private member details are not assumed to be accessible.",
       description: "After discovering group links, collect available information such as group names, descriptions, categories, and source URLs where supported. Phone numbers explicitly published in accessible sources may also be recorded when appropriate. WhatsApp does not make every group member's phone number publicly available for unrestricted bulk extraction, so private member details are not assumed to be accessible.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/1384/1384055.png",
@@ -87,7 +87,7 @@ const HowItWorks = {
       presubtitle: "Available Information",
     },
     {
-      subheading: "WhatsApp Group Scraper (Review and Organize Results)",
+      subheading: "WhatsApp Group Lead Generation Tool (Review and Organize Results)",
       paragraph: "Review the collected group invitation links and available group information in an organized format. Check the discovered links, group categories, search keywords, and source details to identify relevant communities, remove duplicate links, and manage your group discovery results efficiently.",
       description: "Review the collected group invitation links and available group information in an organized format. Check the discovered links, group categories, search keywords, and source details to identify relevant communities, remove duplicate links, and manage your group discovery results efficiently.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/1384/1384055.png",
@@ -98,7 +98,7 @@ const HowItWorks = {
       presubtitle: "Organized Results",
     },
     {
-      subheading: "WhatsApp Group Scraper (Download or Export Data)",
+      subheading: "WhatsApp Group Lead Generation Tool (Download or Export Data)",
       paragraph: "Once you have reviewed your results, export the collected group links and available information in a supported format, such as CSV or Excel, if available. Use the exported data to organize communities, support research, discover relevant networking groups, and manage group resources. Ensure that any personal information is collected and used with appropriate authorization and in accordance with applicable privacy requirements.",
       description: "Once you have reviewed your results, export the collected group links and available information in a supported format, such as CSV or Excel, if available. Use the exported data to organize communities, support research, discover relevant networking groups, and manage group resources. Ensure that any personal information is collected and used with appropriate authorization and in accordance with applicable privacy requirements.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/1384/1384055.png",

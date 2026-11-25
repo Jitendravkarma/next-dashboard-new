@@ -13,7 +13,7 @@ export const metadata = seo_gst_no;
 const HeaderProp = {
   title: (
     <>
-      GST Number Scraper
+      GST Number Lead Generation Tool
     </>
   ),
   description:

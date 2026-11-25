@@ -13,7 +13,7 @@ export const metadata = seo_company_scraper;
 const HeaderProp = {
   title: (
     <>
-      Company Contact Scraper
+      Company Contact Lead Generation Tool
     </>
   ),
   description:
@@ -93,8 +93,8 @@ const HowItWorks = {
     },
     {
       subheading: `Match Companies by Name and City`,
-      paragraph: `The scraper uses the company name and city provided in each CSV row to search for matching businesses and help identify the correct company.`,
-      description: `The scraper uses the company name and city provided in each CSV row to search for matching businesses and help identify the correct company.`,
+      paragraph: `The lead generation tool uses the company name and city provided in each CSV row to search for matching businesses and help identify the correct company.`,
+      description: `The lead generation tool uses the company name and city provided in each CSV row to search for matching businesses and help identify the correct company.`,
       imageSrc: `https://cdn-icons-png.flaticon.com/128/3850/3850285.png`,
       sectionHeading: `Find the Right Companies`,
       link: `/signup`,

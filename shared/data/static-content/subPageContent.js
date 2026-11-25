@@ -1,11 +1,11 @@
 export const LiveScrapingProps = {
   title: (
     <>
-    Live <span className="hero-title">Website</span> Scraping
+    Live <span className="hero-title">Website</span> Lead Generation
     </>
   ),
   description:
-    "Our Live Website Scraping tool fetches real-time data directly from live websites, including keywords, contact details, and Google Maps information (if available). It automates data collection for analysis and tailored applications. Whether you're a business, researcher, or marketer, our service ensures accurate, up-to-date insights to support your data-driven goals.",
+    "Our Live Website Lead Generation tool fetches real-time data directly from live websites, including keywords, contact details, and Google Maps information (if available). It automates data collection for analysis and tailored applications. Whether you're a business, researcher, or marketer, our service ensures accurate, up-to-date insights to support your data-driven goals.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/livescrapingscreen.png",
@@ -16,11 +16,11 @@ export const LiveScrapingProps = {
 export const GooglesearchscraperProps = {
   title: (
     <>
-    Google <span className="hero-title">Search</span> Scraper
+    Google <span className="hero-title">Search</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our Google Search Scraper extracts data like keywords, contact details, and Google Maps results efficiently. It automates data collection for analytics and custom applications. Ideal for businesses, researchers, and marketers, it delivers accurate, reliable insights for diverse data-driven needs.",
+    "Our Google Search Lead Generation Tool extracts data like keywords, contact details, and Google Maps results efficiently. It automates data collection for analytics and custom applications. Ideal for businesses, researchers, and marketers, it delivers accurate, reliable insights for diverse data-driven needs.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/gscreen.png",
@@ -31,11 +31,11 @@ export const GooglesearchscraperProps = {
 export const BingsearchscraperProps = {
   title: (
     <>
-    Bing <span className="hero-title">Search</span> Scraper
+    Bing <span className="hero-title">Search</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our Bing Search Scraper efficiently extracts valuable data from Bing search results, including keywords, contact information, and even Google Maps links when available. it automates the data collection process for analytics, lead generation, and custom applications. Perfect for businesses, researchers, and marketers, it provides precise, dependable insights to power your data-driven strategies.",
+    "Our Bing Search Lead Generation Tool efficiently extracts valuable data from Bing search results, including keywords, contact information, and even Google Maps links when available. it automates the data collection process for analytics, lead generation, and custom applications. Perfect for businesses, researchers, and marketers, it provides precise, dependable insights to power your data-driven strategies.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/bingscreen.png",
@@ -72,11 +72,11 @@ export const metaAdsCrmProps = {
 export const DucksearchscraperProps = {
   title: (
     <>
-    DuckDuckGo <span className="hero-title">Search</span> Scraper
+    DuckDuckGo <span className="hero-title">Search</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our DuckDuckGo Search Scraper captures key data from DuckDuckGo search results, including keywords, contact details, and location-related links—while respecting user privacy-focused platforms. It simplifies the data collection process for use in analytics, lead generation, and customized solutions. Ideal for privacy-conscious businesses, researchers, and digital marketers seeking clean, reliable, and real-time insights.",
+    "Our DuckDuckGo Search Lead Generation Tool captures key data from DuckDuckGo search results, including keywords, contact details, and location-related links—while respecting user privacy-focused platforms. It simplifies the data collection process for use in analytics, lead generation, and customized solutions. Ideal for privacy-conscious businesses, researchers, and digital marketers seeking clean, reliable, and real-time insights.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/duckscreen.png",
@@ -87,11 +87,11 @@ export const DucksearchscraperProps = {
 export const FacebookscraperProps = {
   title: (
     <>
-    Facebook Scraper
+    Facebook Lead Generation Tool
     </>
   ),
   description:
-    "Our Facebook Scraper collects publicly available data like profile names, followers, likes, phone numbers, emails, and more. It’s perfect for marketers and researchers seeking quick, structured insights from Facebook pages and profiles.",
+    "Our Facebook Lead Generation Tool collects publicly available data like profile names, followers, likes, phone numbers, emails, and more. It’s perfect for marketers and researchers seeking quick, structured insights from Facebook pages and profiles.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/fbscreen.png",
@@ -102,11 +102,11 @@ export const FacebookscraperProps = {
 export const YoutubescraperProps = {
   title: (
     <>
-    YouTube Scraper
+    YouTube Lead Generation Tool
     </>
   ),
   description:
-    "Our YouTube Scraper collects public data like channel names, subscriber counts, video titles, views, likes, and descriptions. It's perfect for content research, competitor analysis, and tracking YouTube performance with ease.",
+    "Our YouTube Lead Generation Tool collects public data like channel names, subscriber counts, video titles, views, likes, and descriptions. It's perfect for content research, competitor analysis, and tracking YouTube performance with ease.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/ytscreen.png",
@@ -117,11 +117,11 @@ export const YoutubescraperProps = {
 export const YahoosearchscraperProps = {
   title: (
     <>
-    Yahoo <span className="hero-title">Search</span> Scraper
+    Yahoo <span className="hero-title">Search</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our Yahoo Search Scraper is designed to pull essential data directly from Yahoo search results—including keywords, business contact information, and location-based links. It streamlines data extraction for analytics, marketing insights, and custom tools. Whether you're in business, research, or digital marketing, this scraper delivers trustworthy and timely data to support your strategic decisions.",
+    "Our Yahoo Search Lead Generation Tool is designed to pull essential data directly from Yahoo search results—including keywords, business contact information, and location-based links. It streamlines data extraction for analytics, marketing insights, and custom tools. Whether you're in business, research, or digital marketing, this lead generation tool delivers trustworthy and timely data to support your strategic decisions.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/yahooscreen.png",
@@ -243,20 +243,20 @@ export const HowitworksGooglesearchscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Google Search Scraper (Scrape By Query)",
-      paragraph: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Scraper to provide precise results by scraping Google search results.",
-      description: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Scraper to provide precise results by scraping Google search results.",
+      subheading: "Google Search Lead Generation Tool (Generate Leads By Query)",
+      paragraph: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Lead Generation Tool to provide precise results by generating leads from Google search results.",
+      description: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search query will guide our Google Search Lead Generation Tool to provide precise results by generating leads from Google search results.",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
-      sectionHeading: "Scrape By Query", // Dynamic section heading
+      sectionHeading: "Generate Leads By Query", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
       pretitle: "Search Engine",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Google Search Scraper (Initiate the Extraction)",
-      paragraph: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin web scraping Google search results based on your input, utilizing advanced Google search scraper APIs and Python-based extraction techniques.",
-      description: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin web scraping Google search results based on your input, utilizing advanced Google search scraper APIs and Python-based extraction techniques.",
+      subheading: "Google Search Lead Generation Tool (Initiate the Extraction)",
+      paragraph: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin generating leads from Google search results based on your input, utilizing advanced Google search lead generation tool APIs and Python-based extraction techniques.",
+      description: "Once you’ve entered your query, simply click the search button to start the extraction process. Our tool will begin generating leads from Google search results based on your input, utilizing advanced Google search lead generation tool APIs and Python-based extraction techniques.",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
       sectionHeading: "Initiate the Extraction", // Dynamic section heading
       link: "/signup",
@@ -265,9 +265,9 @@ export const HowitworksGooglesearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Google Search Scraper (Data Extraction)",
-      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
-      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      subheading: "Google Search Lead Generation Tool (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs",
+      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
       sectionHeading: "Data Extraction", // Dynamic section heading
       link: "/signup",
@@ -276,9 +276,9 @@ export const HowitworksGooglesearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Google Search Scraper (Review the Results)",
-      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search scraper tool lets you quickly use and analyze the data, making it valuable for various applications",
-      description: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search scraper tool lets you quickly use and analyze the data, making it valuable for various applications",
+      subheading: "Google Search Lead Generation Tool (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search lead generation tool lets you quickly use and analyze the data, making it valuable for various applications",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This Google search lead generation tool lets you quickly use and analyze the data, making it valuable for various applications",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
@@ -287,7 +287,7 @@ export const HowitworksGooglesearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Google Search Scraper (Download or Export Data)",
+      subheading: "Google Search Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/google.png",
@@ -304,20 +304,20 @@ export const HowitworksBingsearchscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Bing Search Scraper (Scrape By Keyword)",
-      paragraph: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search Keyword will guide our Bing Search Scraper to provide precise results by scraping Bing search results.",
-      description: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search Keyword will guide our Bing Search Scraper to provide precise results by scraping Bing search results.",
+      subheading: "Bing Search Lead Generation Tool (Generate Leads By Keyword)",
+      paragraph: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search Keyword will guide our Bing Search Lead Generation Tool to provide precise results by generating leads from Bing search results.",
+      description: "Start by typing in the specific search term you’re interested in. For example, you might search for 'schools in London contact details.' This search Keyword will guide our Bing Search Lead Generation Tool to provide precise results by generating leads from Bing search results.",
       imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
-      sectionHeading: "Scrape By Keyword", // Dynamic section heading
+      sectionHeading: "Generate Leads By Keyword", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
       pretitle: "Search Engine",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Bing Search Scraper (Initiate the Extraction)",
-      paragraph: "Once you enter your query, simply click the search button to initiate the extraction process. Our tool will begin scraping Bing search results based on your input, leveraging advanced Bing search scraper APIs.",
-      description: "Once you enter your query, simply click the search button to initiate the extraction process. Our tool will begin scraping Bing search results based on your input, leveraging advanced Bing search scraper APIs.",
+      subheading: "Bing Search Lead Generation Tool (Initiate the Extraction)",
+      paragraph: "Once you enter your query, simply click the search button to initiate the extraction process. Our tool will begin generating leads from Bing search results based on your input, leveraging advanced Bing search lead generation tool APIs.",
+      description: "Once you enter your query, simply click the search button to initiate the extraction process. Our tool will begin generating leads from Bing search results based on your input, leveraging advanced Bing search lead generation tool APIs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
       sectionHeading: "Initiate the Extraction", // Dynamic section heading
       link: "/signup",
@@ -326,9 +326,9 @@ export const HowitworksBingsearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Bing Search Scraper (Data Extraction)",
-      paragraph: "Once the extraction is complete, you’ll receive a neatly organized list of all the emails found. Our web scraping service delivers clear results, enabling you to quickly review and utilize the website data scraper output as needed.",
-      description: "Once the extraction is complete, you’ll receive a neatly organized list of all the emails found. Our web scraping service delivers clear results, enabling you to quickly review and utilize the website data scraper output as needed.",
+      subheading: "Bing Search Lead Generation Tool (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive a neatly organized list of all the emails found. Our lead generation service delivers clear results, enabling you to quickly review and utilize the website lead generation tool output as needed.",
+      description: "Once the extraction is complete, you’ll receive a neatly organized list of all the emails found. Our lead generation service delivers clear results, enabling you to quickly review and utilize the website lead generation tool output as needed.",
       imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
       sectionHeading: "Data Extraction", // Dynamic section heading
       link: "/signup",
@@ -337,9 +337,9 @@ export const HowitworksBingsearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Bing Search Scraper (Review the Results)",
-      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Bing search scraper tool allows you to quickly review, use, and analyze the data, making it valuable for a wide range of applications.",
-      description: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Bing search scraper tool allows you to quickly review, use, and analyze the data, making it valuable for a wide range of applications.",
+      subheading: "Bing Search Lead Generation Tool (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Bing search lead generation tool allows you to quickly review, use, and analyze the data, making it valuable for a wide range of applications.",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Bing search lead generation tool allows you to quickly review, use, and analyze the data, making it valuable for a wide range of applications.",
       imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
@@ -348,7 +348,7 @@ export const HowitworksBingsearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Bing Search Scraper (Download or Export Data)",
+      subheading: "Bing Search Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/bing.png",
@@ -365,20 +365,20 @@ export const HowitworksYahoosearchscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Yahoo Search Scraper (Scrape By Keywords)",
-      paragraph: "Start by typing the specific search term you're interested in. For example, you could search for 'schools in London contact details.' These search keywords will guide our Yahoo Search Scraper to deliver precise results by scraping Yahoo search results.",
-      description: "Start by typing the specific search term you're interested in. For example, you could search for 'schools in London contact details.' These search keywords will guide our Yahoo Search Scraper to deliver precise results by scraping Yahoo search results.",
+      subheading: "Yahoo Search Lead Generation Tool (Generate Leads By Keywords)",
+      paragraph: "Start by typing the specific search term you're interested in. For example, you could search for 'schools in London contact details.' These search keywords will guide our Yahoo Search Lead Generation Tool to deliver precise results by generating leads from Yahoo search results.",
+      description: "Start by typing the specific search term you're interested in. For example, you could search for 'schools in London contact details.' These search keywords will guide our Yahoo Search Lead Generation Tool to deliver precise results by generating leads from Yahoo search results.",
       imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
-      sectionHeading: "Scrape By Keywords", // Dynamic section heading
+      sectionHeading: "Generate Leads By Keywords", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
       pretitle: "Search Engine",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Yahoo Search Scraper (Initiate the Extraction)",
-      paragraph: "Once you enter your query, simply click the search button to begin the extraction process. Our tool will start scraping Yahoo search results based on your input, utilizing advanced Yahoo search scraper APIs.",
-      description: "Once you enter your query, simply click the search button to begin the extraction process. Our tool will start scraping Yahoo search results based on your input, utilizing advanced Yahoo search scraper APIs.",
+      subheading: "Yahoo Search Lead Generation Tool (Initiate the Extraction)",
+      paragraph: "Once you enter your query, simply click the search button to begin the extraction process. Our tool will start generating leads from Yahoo search results based on your input, utilizing advanced Yahoo search lead generation tool APIs.",
+      description: "Once you enter your query, simply click the search button to begin the extraction process. Our tool will start generating leads from Yahoo search results based on your input, utilizing advanced Yahoo search lead generation tool APIs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
       sectionHeading: "Initiate the Extraction", // Dynamic section heading
       link: "/signup",
@@ -387,9 +387,9 @@ export const HowitworksYahoosearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Yahoo Search Scraper (Data Extraction)",
-      paragraph: "Once the extraction is complete, you’ll receive an organized list of all the emails found. Our web scraping service delivers clear results, enabling you to quickly review and utilize the scraped data for your needs.",
-      description: "Once the extraction is complete, you’ll receive an organized list of all the emails found. Our web scraping service delivers clear results, enabling you to quickly review and utilize the scraped data for your needs.",
+      subheading: "Yahoo Search Lead Generation Tool (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all the emails found. Our lead generation service delivers clear results, enabling you to quickly review and utilize the lead generation data for your needs.",
+      description: "Once the extraction is complete, you’ll receive an organized list of all the emails found. Our lead generation service delivers clear results, enabling you to quickly review and utilize the lead generation data for your needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
       sectionHeading: "Data Extraction", // Dynamic section heading
       link: "/signup",
@@ -398,9 +398,9 @@ export const HowitworksYahoosearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Yahoo Search Scraper (Review the Results)",
-      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Yahoo search scraper tool allows you to quickly use and analyze the data, making it valuable for a variety of applications.",
-      description: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Yahoo search scraper tool allows you to quickly use and analyze the data, making it valuable for a variety of applications.",
+      subheading: "Yahoo Search Lead Generation Tool (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Yahoo search lead generation tool allows you to quickly use and analyze the data, making it valuable for a variety of applications.",
+      description: "Once the extraction is complete, you’ll receive a detailed list of results, presented in an easy-to-read format. This Yahoo search lead generation tool allows you to quickly use and analyze the data, making it valuable for a variety of applications.",
       imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
@@ -409,7 +409,7 @@ export const HowitworksYahoosearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Yahoo Search Scraper (Download or Export Data)",
+      subheading: "Yahoo Search Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/yahoo.png",
@@ -426,20 +426,20 @@ export const HowitworksDucksearchscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "DuckDuckGo Search Scraper (Scrape By Query)",
-      paragraph: "Begin by entering the specific search term you’re interested in. For instance, you could search for 'schools in London contact details.' This query will direct our DuckDuckGo Search Scraper to deliver precise results by extracting relevant data from DuckDuckGo search results.",
-      description: "Begin by entering the specific search term you’re interested in. For instance, you could search for 'schools in London contact details.' This query will direct our DuckDuckGo Search Scraper to deliver precise results by extracting relevant data from DuckDuckGo search results.",
+      subheading: "DuckDuckGo Search Lead Generation Tool (Generate Leads By Query)",
+      paragraph: "Begin by entering the specific search term you’re interested in. For instance, you could search for 'schools in London contact details.' This query will direct our DuckDuckGo Search Lead Generation Tool to deliver precise results by extracting relevant data from DuckDuckGo search results.",
+      description: "Begin by entering the specific search term you’re interested in. For instance, you could search for 'schools in London contact details.' This query will direct our DuckDuckGo Search Lead Generation Tool to deliver precise results by extracting relevant data from DuckDuckGo search results.",
       imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
-      sectionHeading: "Scrape By Query", // Dynamic section heading
+      sectionHeading: "Generate Leads By Query", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
       pretitle: "Search Engine",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "DuckDuckGo Search Scraper (Initiate the Extraction)",
-      paragraph: "After entering your query, click the search button to begin the extraction process. Our tool will efficiently scrape DuckDuckGo search results based on your input, utilizing sophisticated search scraper APIs to ensure precise and accurate data retrieval.",
-      description: "After entering your query, click the search button to begin the extraction process. Our tool will efficiently scrape DuckDuckGo search results based on your input, utilizing sophisticated search scraper APIs to ensure precise and accurate data retrieval.",
+      subheading: "DuckDuckGo Search Lead Generation Tool (Initiate the Extraction)",
+      paragraph: "After entering your query, click the search button to begin the extraction process. Our tool will efficiently generate leads from DuckDuckGo search results based on your input, utilizing sophisticated search lead generation tool APIs to ensure precise and accurate data retrieval.",
+      description: "After entering your query, click the search button to begin the extraction process. Our tool will efficiently generate leads from DuckDuckGo search results based on your input, utilizing sophisticated search lead generation tool APIs to ensure precise and accurate data retrieval.",
       imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
       sectionHeading: "Initiate the Extraction", // Dynamic section heading
       link: "/signup",
@@ -448,9 +448,9 @@ export const HowitworksDucksearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "DuckDuckGo Search Scraper (Data Extraction)",
-      paragraph: "Upon completion of the extraction, you’ll receive a well-organized list of all the emails identified. Our web scraping service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
-      description: "Upon completion of the extraction, you’ll receive a well-organized list of all the emails identified. Our web scraping service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
+      subheading: "DuckDuckGo Search Lead Generation Tool (Data Extraction)",
+      paragraph: "Upon completion of the extraction, you’ll receive a well-organized list of all the emails identified. Our lead generation service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
+      description: "Upon completion of the extraction, you’ll receive a well-organized list of all the emails identified. Our lead generation service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
       sectionHeading: "Data Extraction", // Dynamic section heading
       link: "/signup",
@@ -459,9 +459,9 @@ export const HowitworksDucksearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "DuckDuckGo Search Scraper (Review the Results)",
-      paragraph: "Once the extraction is complete, you’ll receive a comprehensive list of results, presented in a clear and user-friendly format. This DuckDuckGo search scraper tool enables you to quickly analyze and utilize the data, making it highly valuable for a wide range of applications.",
-      description: "Once the extraction is complete, you’ll receive a comprehensive list of results, presented in a clear and user-friendly format. This DuckDuckGo search scraper tool enables you to quickly analyze and utilize the data, making it highly valuable for a wide range of applications.",
+      subheading: "DuckDuckGo Search Lead Generation Tool (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive a comprehensive list of results, presented in a clear and user-friendly format. This DuckDuckGo search lead generation tool enables you to quickly analyze and utilize the data, making it highly valuable for a wide range of applications.",
+      description: "Once the extraction is complete, you’ll receive a comprehensive list of results, presented in a clear and user-friendly format. This DuckDuckGo search lead generation tool enables you to quickly analyze and utilize the data, making it highly valuable for a wide range of applications.",
       imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
@@ -470,7 +470,7 @@ export const HowitworksDucksearchscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "DuckDuckGo Search Scraper (Download or Export Data)",
+      subheading: "DuckDuckGo Search Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/duckduckgo.png",
@@ -487,18 +487,18 @@ export const HowitworksFacebookscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Facebook Scraper (Scrape By Query)",
-      paragraph: "Begin by entering the specific search term you’re interested in. For example, you might search for 'schools contact number in London.' This query will direct our Facebook Scraper to retrieve precise results by extracting data from public Facebook profiles, including phone numbers, profile names, addresses, followers, and more.",
-      description: "Begin by entering the specific search term you’re interested in. For example, you might search for 'schools contact number in London.' This query will direct our Facebook Scraper to retrieve precise results by extracting data from public Facebook profiles, including phone numbers, profile names, addresses, followers, and more.",
+      subheading: "Facebook Lead Generation Tool (Generate Leads By Query)",
+      paragraph: "Begin by entering the specific search term you’re interested in. For example, you might search for 'schools contact number in London.' This query will direct our Facebook Lead Generation Tool to retrieve precise results by extracting data from public Facebook profiles, including phone numbers, profile names, addresses, followers, and more.",
+      description: "Begin by entering the specific search term you’re interested in. For example, you might search for 'schools contact number in London.' This query will direct our Facebook Lead Generation Tool to retrieve precise results by extracting data from public Facebook profiles, including phone numbers, profile names, addresses, followers, and more.",
       imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
-      sectionHeading: "Scrape By Query", // Dynamic section heading
+      sectionHeading: "Generate Leads By Query", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
       pretitle: "Social Media",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Facebook Scraper (Initiate the Extraction)",
+      subheading: "Facebook Lead Generation Tool (Initiate the Extraction)",
       paragraph: "Once you’ve entered your query, click the search button to initiate the extraction process. Our tool will begin collecting data from public Facebook profiles based on your input.",
       description: "Once you’ve entered your query, click the search button to initiate the extraction process. Our tool will begin collecting data from public Facebook profiles based on your input.",
       imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
@@ -509,7 +509,7 @@ export const HowitworksFacebookscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Facebook Scraper (Data Extraction)",
+      subheading: "Facebook Lead Generation Tool (Data Extraction)",
       paragraph: "Once the extraction is complete, you’ll receive an organized list of all profiles found on Facebook. This service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
       description: "Once the extraction is complete, you’ll receive an organized list of all profiles found on Facebook. This service delivers clear, actionable results, enabling you to efficiently review and utilize the data for your specific needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
@@ -520,7 +520,7 @@ export const HowitworksFacebookscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Facebook Scraper (Review the Results)",
+      subheading: "Facebook Lead Generation Tool (Review the Results)",
       paragraph: "Once the extraction is complete, you’ll receive a detailed list of results, presented in a clear and easy-to-read format. This tool allows you to quickly analyze and utilize the data, making it highly valuable for a variety of applications.",
       description: "Once the extraction is complete, you’ll receive a detailed list of results, presented in a clear and easy-to-read format. This tool allows you to quickly analyze and utilize the data, making it highly valuable for a variety of applications.",
       imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
@@ -531,7 +531,7 @@ export const HowitworksFacebookscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Facebook Scraper (Download or Export Data)",
+      subheading: "Facebook Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/facebook.png",
@@ -548,18 +548,18 @@ export const HowitworksYoutubescraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "YouTube Scraper (Scrape By Query)",
-      paragraph: "Begin by entering the specific search term you're interested in. For example, you might search for 'schools YouTube details in London.' This query will guide our YouTube Scraper to retrieve precise results, including channel details such as subscribers, videos, views, and more.",
-      description: "Begin by entering the specific search term you're interested in. For example, you might search for 'schools YouTube details in London.' This query will guide our YouTube Scraper to retrieve precise results, including channel details such as subscribers, videos, views, and more.",
+      subheading: "YouTube Lead Generation Tool (Generate Leads By Query)",
+      paragraph: "Begin by entering the specific search term you're interested in. For example, you might search for 'schools YouTube details in London.' This query will guide our YouTube Lead Generation Tool to retrieve precise results, including channel details such as subscribers, videos, views, and more.",
+      description: "Begin by entering the specific search term you're interested in. For example, you might search for 'schools YouTube details in London.' This query will guide our YouTube Lead Generation Tool to retrieve precise results, including channel details such as subscribers, videos, views, and more.",
       imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
-      sectionHeading: "Scrape By Query", // Dynamic section heading
+      sectionHeading: "Generate Leads By Query", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
       pretitle: "Social Media",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "YouTube Scraper (Initiate the Extraction)",
+      subheading: "YouTube Lead Generation Tool (Initiate the Extraction)",
       paragraph: "Once you’ve entered your query, click the search button to initiate the extraction process. Our tool will begin collecting results based on your input or selected keywords.",
       description: "Once you’ve entered your query, click the search button to initiate the extraction process. Our tool will begin collecting results based on your input or selected keywords.",
       imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
@@ -570,7 +570,7 @@ export const HowitworksYoutubescraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "YouTube Scraper (Data Extraction)",
+      subheading: "YouTube Lead Generation Tool (Data Extraction)",
       paragraph: "Once the extraction is complete, you’ll receive an organized list of YouTube channel details. Our tool delivers clear results, allowing you to efficiently review and utilize the data for your specific needs.",
       description: "Once the extraction is complete, you’ll receive an organized list of YouTube channel details. Our tool delivers clear results, allowing you to efficiently review and utilize the data for your specific needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
@@ -581,7 +581,7 @@ export const HowitworksYoutubescraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "YouTube Scraper (Review the Results)",
+      subheading: "YouTube Lead Generation Tool (Review the Results)",
       paragraph: "Once the extraction is complete, you’ll receive a detailed list of results of YouTube profiles. Review the information, which is presented in an easy-to-read format. This tool lets you quickly use and analyze the data, making it valuable for various applications",
       description: "Once the extraction is complete, you’ll receive a detailed list of results of YouTube profiles. Review the information, which is presented in an easy-to-read format. This tool lets you quickly use and analyze the data, making it valuable for various applications",
       imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
@@ -592,7 +592,7 @@ export const HowitworksYoutubescraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "YouTube Scraper (Download or Export Data)",
+      subheading: "YouTube Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/youtube.png",
@@ -609,58 +609,58 @@ export const HowitworksLiveScraping = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Live Website Scraping (Scrape By Country Selection)",
-      paragraph: "Start scraping by simply selecting a country and clicking the Start button. Instantly begin collecting efficient, targeted data tailored to your selected region—quick, easy, and hassle-free!",
-      description: "Start scraping by simply selecting a country and clicking the Start button. Instantly begin collecting efficient, targeted data tailored to your selected region—quick, easy, and hassle-free!",
+      subheading: "Live Website Lead Generation (Generate Leads By Country Selection)",
+      paragraph: "Start lead generation by simply selecting a country and clicking the Start button. Instantly begin collecting efficient, targeted data tailored to your selected region—quick, easy, and hassle-free!",
+      description: "Start lead generation by simply selecting a country and clicking the Start button. Instantly begin collecting efficient, targeted data tailored to your selected region—quick, easy, and hassle-free!",
       imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
-      sectionHeading: "Scrape By Country Name", // Dynamic section heading
+      sectionHeading: "Generate Leads By Country Name", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Live Website Scraping",
+      pretitle: "Live Website Lead Generation",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Live Website Scraping (Initiate the Extraction)",
-      paragraph: "Once you’ve select the country, simply click on the start button to start the extraction process. Our tool will begin web scraping and start data collection from live websites",
-      description: "Once you’ve select the country, simply click the start button to start the extraction process. Our tool will begin web scraping and start data collection from live websites",
+      subheading: "Live Website Lead Generation (Initiate the Extraction)",
+      paragraph: "Once you’ve select the country, simply click on the start button to start the extraction process. Our tool will begin lead generation and start data collection from live websites",
+      description: "Once you’ve select the country, simply click the start button to start the extraction process. Our tool will begin lead generation and start data collection from live websites",
       imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
       sectionHeading: "Initiate the Extraction", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Live Website Scraping",
+      pretitle: "Live Website Lead Generation",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Live Website Scraping (Data Extraction)",
-      paragraph: "Once the extraction is complete, you’ll receive an organized list of collected data from websites. Our Lice website scraping service provides clear results, allowing you to quickly review and utilize the searched records easily.",
-      description: "Once the extraction is complete, you’ll receive an organized list of collected data from websites. Our Lice website scraping service provides clear results, allowing you to quickly review and utilize the searched records easily.",
+      subheading: "Live Website Lead Generation (Data Extraction)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of collected data from websites. Our Lice website lead generation service provides clear results, allowing you to quickly review and utilize the searched records easily.",
+      description: "Once the extraction is complete, you’ll receive an organized list of collected data from websites. Our Lice website lead generation service provides clear results, allowing you to quickly review and utilize the searched records easily.",
       imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
       sectionHeading: "Data Extraction", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Live Website Scraping",
+      pretitle: "Live Website Lead Generation",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Live Website Scraping (Review the Results)",
+      subheading: "Live Website Lead Generation (Review the Results)",
       paragraph: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This tool lets you quickly use and analyze the data, making it valuable for various applications",
       description: "Once the extraction is complete, you’ll receive a detailed list of results. Review the information, which is presented in an easy-to-read format. This tool lets you quickly use and analyze the data, making it valuable for various applications",
       imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Live Website Scraping",
+      pretitle: "Live Website Lead Generation",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Live Website Scraping (Download or Export Data)",
+      subheading: "Live Website Lead Generation (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/live.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Live Website Scraping",
+      pretitle: "Live Website Lead Generation",
       presubtitle: "Lead Generation",
     },
   ],
@@ -740,7 +740,7 @@ export const customLeadUploadVideo = {
 export const GooglesmapscraperProps = {
   title: (
     <>
-    Google <span className="hero-title">Map</span> Scraper
+    Google <span className="hero-title">Map</span> Lead Generation Tool
     </>
   ),
   description:
@@ -779,20 +779,20 @@ export const HowitworksGooglesmapscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Google Map Scraper (Scrape By Keyword)",
-      paragraph: "After entering the Keyword, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
-      description: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      subheading: "Google Map Lead Generation Tool (Generate Leads By Keyword)",
+      paragraph: "After entering the Keyword, click the extract button to start the process. Our website lead generation software will scan the website for email addresses and other relevant data, utilizing efficient lead generation technology to ensure comprehensive extraction",
+      description: "After entering the URL, click the extract button to start the process. Our website lead generation software will scan the website for email addresses and other relevant data, utilizing efficient lead generation technology to ensure comprehensive extraction",
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
-      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      sectionHeading: "Initiate the Lead Generation Process", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
       pretitle: "Map Search Engine",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Google Map Scraper (Extract Emails)",
-      paragraph: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
-      description: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
+      subheading: "Google Map Lead Generation Tool (Extract Emails)",
+      paragraph: "The lead generation tool identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our lead generation tools make this process seamless, gathering information with precision",
+      description: "The lead generation tool identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our lead generation tools make this process seamless, gathering information with precision",
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
       sectionHeading: "Extract Emails", // Dynamic section heading
       link: "/signup",
@@ -801,9 +801,9 @@ export const HowitworksGooglesmapscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Google Map Scraper (Review the Results)",
-      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
-      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      subheading: "Google Map Lead Generation Tool (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs",
+      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs",
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
@@ -812,9 +812,9 @@ export const HowitworksGooglesmapscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Google Map Scraper (Analyze the Results)",
-      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
-      description: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      subheading: "Google Map Lead Generation Tool (Analyze the Results)",
+      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our lead generation tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      description: "Review the extracted data in an organized format to identify the most relevant information. Our lead generation tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
@@ -823,7 +823,7 @@ export const HowitworksGooglesmapscraper = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Google Map Scraper (Download or Export Data)",
+      subheading: "Google Map Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/gmapIcon.png",
@@ -850,11 +850,11 @@ export const GooglesmapscraperVideo = {
 export const websitedatascraperProps = {
   title: (
     <>
-    Website <span className="hero-title">Data</span> Scraper
+    Website <span className="hero-title">Data</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our Website Data Scraper helps extract essential details like emails, phone numbers, titles, descriptions, and keywords from any website URL. Perfect for lead generation, research, and contact info collection, it’s fast and efficient. Supports Python and Chrome, ideal for free or advanced web scraping to boost productivity effortlessly.",
+    "Our Website Lead Generation Tool helps extract essential details like emails, phone numbers, titles, descriptions, and keywords from any website URL. Perfect for lead generation, research, and contact info collection, it’s fast and efficient. Supports Python and Chrome, ideal for free or advanced lead generation to boost productivity effortlessly.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/webscreen.png",
@@ -882,69 +882,69 @@ export const Howitworkswebsitedatascraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Website Data Scraper (Enter the Website URL)",
-      paragraph: "Start by entering the URL of the website you want to scrape. Our Website Data Scraper allows you to extract email addresses from any website URL, whether it's the homepage or a specific page. This website scraping process makes data collection easy and fast.",
-      description: "Start by entering the URL of the website you want to scrape. Our Website Data Scraper allows you to extract email addresses from any website URL, whether it's the homepage or a specific page. This website scraping process makes data collection easy and fast.",
+      subheading: "Website Lead Generation Tool (Enter the Website URL)",
+      paragraph: "Start by entering the URL of the website you want to generate leads from. Our Website Lead Generation Tool allows you to extract email addresses from any website URL, whether it's the homepage or a specific page. This website lead generation process makes data collection easy and fast.",
+      description: "Start by entering the URL of the website you want to generate leads from. Our Website Lead Generation Tool allows you to extract email addresses from any website URL, whether it's the homepage or a specific page. This website lead generation process makes data collection easy and fast.",
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Enter the Website URL", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Website Data Scraper (Initiate the Scraping Process)",
-      paragraph: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction.",
-      description: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction.",
+      subheading: "Website Lead Generation Tool (Initiate the Lead Generation Process)",
+      paragraph: "After entering the URL, click the extract button to start the process. Our website lead generation software will scan the website for email addresses and other relevant data, utilizing efficient lead generation technology to ensure comprehensive extraction.",
+      description: "After entering the URL, click the extract button to start the process. Our website lead generation software will scan the website for email addresses and other relevant data, utilizing efficient lead generation technology to ensure comprehensive extraction.",
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
-      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      sectionHeading: "Initiate the Lead Generation Process", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Website Data Scraper (Extract Emails)",
-      paragraph: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision.",
-      description: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision.",
+      subheading: "Website Lead Generation Tool (Extract Emails)",
+      paragraph: "The lead generation tool identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our lead generation tools make this process seamless, gathering information with precision.",
+      description: "The lead generation tool identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our lead generation tools make this process seamless, gathering information with precision.",
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Extract Emails", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Website Data Scraper (Review the Results)",
-      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs.",
-      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs.",
+      subheading: "Website Lead Generation Tool (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs.",
+      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Website Data Scraper (Analyze the Results)",
-      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
-      description: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      subheading: "Website Lead Generation Tool (Analyze the Results)",
+      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our lead generation tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      description: "Review the extracted data in an organized format to identify the most relevant information. Our lead generation tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Website Data Scraper (Download or Export Data)",
+      subheading: "Website Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/website.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
   ],
@@ -963,11 +963,11 @@ export const websitedatascraperVideo = {
 export const documentdatascraperProps = {
   title: (
     <>
-    Document <span className="hero-title">Data</span> Scraper
+    Document <span className="hero-title">Data</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our Document Data Scraper extracts contact details like emails and phone numbers from .txt, .html, and .json files. It supports Python and Chrome, making it perfect for lead generation, research, or outreach. Simplify data extraction with our reliable, efficient, and versatile web scraping tool.",
+    "Our Document Lead Generation Tool extracts contact details like emails and phone numbers from .txt, .html, and .json files. It supports Python and Chrome, making it perfect for lead generation, research, or outreach. Simplify data extraction with our reliable, efficient, and versatile lead generation tool.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/docscreen.png",
@@ -991,69 +991,69 @@ export const Howitworksdocumentdatascraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Document Data Scraper (Upload Your Document)",
-      paragraph: "Start by uploading your document in one of the supported formats, such as .txt, .html, .json, and more. Our website data scraper and web scraping service accept a wide range of file types to accommodate various data extraction needs.",
-      description: "Start by uploading your document in one of the supported formats, such as .txt, .html, .json, and more. Our website data scraper and web scraping service accept a wide range of file types to accommodate various data extraction needs.",
+      subheading: "Document Lead Generation Tool (Upload Your Document)",
+      paragraph: "Start by uploading your document in one of the supported formats, such as .txt, .html, .json, and more. Our website lead generation tool and lead generation service accept a wide range of file types to accommodate various data extraction needs.",
+      description: "Start by uploading your document in one of the supported formats, such as .txt, .html, .json, and more. Our website lead generation tool and lead generation service accept a wide range of file types to accommodate various data extraction needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Upload Your Document", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Document Data Scraper (Initiate the Scraping Process)",
-      paragraph: "Once your document is uploaded, click the extract button to begin the website scraping process. This web scraper will automatically start analyzing the content of your document to identify relevant data.",
-      description: "Once your document is uploaded, click the extract button to begin the website scraping process. This web scraper will automatically start analyzing the content of your document to identify relevant data.",
+      subheading: "Document Lead Generation Tool (Initiate the Lead Generation Process)",
+      paragraph: "Once your document is uploaded, click the extract button to begin the website lead generation process. This lead generation tool will automatically start analyzing the content of your document to identify relevant data.",
+      description: "Once your document is uploaded, click the extract button to begin the website lead generation process. This lead generation tool will automatically start analyzing the content of your document to identify relevant data.",
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
-      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      sectionHeading: "Initiate the Lead Generation Process", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Document Data Scraper (Extract Contact Information)",
-      paragraph: "The data scraping tool will search through the document and extract all available email addresses and phone numbers from any country. This webscraper provides accurate and quick contact extraction for all your professional needs.",
-      description: "The data scraping tool will search through the document and extract all available email addresses and phone numbers from any country. This webscraper provides accurate and quick contact extraction for all your professional needs.",
+      subheading: "Document Lead Generation Tool (Extract Contact Information)",
+      paragraph: "The lead generation tool will search through the document and extract all available email addresses and phone numbers from any country. This lead generation tool provides accurate and quick contact extraction for all your professional needs.",
+      description: "The lead generation tool will search through the document and extract all available email addresses and phone numbers from any country. This lead generation tool provides accurate and quick contact extraction for all your professional needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Extract Contact Information", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Document Data Scraper (Review the Results)",
-      paragraph: "After extraction, the web scraping tool will display the collected data, including email addresses and phone numbers. The information is organized in a way that makes it easy to review and use immediately.",
-      description: "After extraction, the web scraping tool will display the collected data, including email addresses and phone numbers. The information is organized in a way that makes it easy to review and use immediately.",
+      subheading: "Document Lead Generation Tool (Review the Results)",
+      paragraph: "After extraction, the lead generation tool will display the collected data, including email addresses and phone numbers. The information is organized in a way that makes it easy to review and use immediately.",
+      description: "After extraction, the lead generation tool will display the collected data, including email addresses and phone numbers. The information is organized in a way that makes it easy to review and use immediately.",
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Document Data Scraper (Analyze the Results)",
-      paragraph: "Once the scraping is complete, review the extracted data presented in a clear, organized format. This helps you quickly identify and leverage the most relevant information, using a reliable website scraper Python setup or web scraper Chrome extension.",
-      description: "Once the scraping is complete, review the extracted data presented in a clear, organized format. This helps you quickly identify and leverage the most relevant information, using a reliable website scraper Python setup or web scraper Chrome extension.",
+      subheading: "Document Lead Generation Tool (Analyze the Results)",
+      paragraph: "Once the lead generation is complete, review the extracted data presented in a clear, organized format. This helps you quickly identify and leverage the most relevant information, using a reliable website lead generation tool Python setup or lead generation tool Chrome extension.",
+      description: "Once the lead generation is complete, review the extracted data presented in a clear, organized format. This helps you quickly identify and leverage the most relevant information, using a reliable website lead generation tool Python setup or lead generation tool Chrome extension.",
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Document Data Scraper (Download or Export Data)",
+      subheading: "Document Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/docIcon.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
   ],
@@ -1074,11 +1074,11 @@ export const documentdatascraperVideo = {
 export const imageDataScraperProps = {
   title: (
     <>
-    Image <span className="hero-title">Data</span> Scraper
+    Image <span className="hero-title">Data</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our Image Data Scraper extracts images and embedded contact details like emails and phone numbers from websites. Supporting formats like .jpg, .png, and .webp, it’s a hassle-free solution for professionals seeking fast and efficient image scraping for contact information and essential data extraction.",
+    "Our Image Lead Generation Tool extracts images and embedded contact details like emails and phone numbers from websites. Supporting formats like .jpg, .png, and .webp, it’s a hassle-free solution for professionals seeking fast and efficient image lead generation for contact information and essential data extraction.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/imgscreen.png",
@@ -1102,69 +1102,69 @@ export const HowitworksimageDataScraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Image Data Scraper (Upload Your Images)",
-      paragraph: "Start by uploading one or multiple image files in the supported formats, such as .jpg, .png, or .webp. This image scraper tool allows both single and bulk uploads, making it easy to scrape images from websites with flexibility for your data extraction needs.",
-      description: "Start by uploading one or multiple image files in the supported formats, such as .jpg, .png, or .webp. This image scraper tool allows both single and bulk uploads, making it easy to scrape images from websites with flexibility for your data extraction needs.",
+      subheading: "Image Lead Generation Tool (Upload Your Images)",
+      paragraph: "Start by uploading one or multiple image files in the supported formats, such as .jpg, .png, or .webp. This image lead generation tool allows both single and bulk uploads, making it easy to generate leads from images on websites with flexibility for your data extraction needs.",
+      description: "Start by uploading one or multiple image files in the supported formats, such as .jpg, .png, or .webp. This image lead generation tool allows both single and bulk uploads, making it easy to generate leads from images on websites with flexibility for your data extraction needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Upload Your Images", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Image Data Scraper (Initiate the Scraping Process)",
-      paragraph: "Once the images are uploaded, the web scraper for images will automatically extract the text content from each image and display it in a textarea element, allowing you to scrape all images from a website for easy review.",
-      description: "Once the images are uploaded, the web scraper for images will automatically extract the text content from each image and display it in a textarea element, allowing you to scrape all images from a website for easy review.",
+      subheading: "Image Lead Generation Tool (Initiate the Lead Generation Process)",
+      paragraph: "Once the images are uploaded, the lead generation tool for images will automatically extract the text content from each image and display it in a textarea element, allowing you to generate leads from all images on a website for easy review.",
+      description: "Once the images are uploaded, the lead generation tool for images will automatically extract the text content from each image and display it in a textarea element, allowing you to generate leads from all images on a website for easy review.",
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
-      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      sectionHeading: "Initiate the Lead Generation Process", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Image Data Scraper (Extract Specific Information)",
-      paragraph: " With the extracted text in the textarea, you have two options: click on the Extract Emails button to find and extract any email addresses within the text, or use the Extract Phone button to locate and pull out phone numbers. This feature is especially useful for those wanting to scrape images from websites free",
-      description: "With the extracted text in the textarea, you have two options: click on the Extract Emails button to find and extract any email addresses within the text, or use the Extract Phone button to locate and pull out phone numbers. This feature is especially useful for those wanting to scrape images from websites free",
+      subheading: "Image Lead Generation Tool (Extract Specific Information)",
+      paragraph: " With the extracted text in the textarea, you have two options: click on the Extract Emails button to find and extract any email addresses within the text, or use the Extract Phone button to locate and pull out phone numbers. This feature is especially useful for those wanting to generate leads from images on websites free",
+      description: "With the extracted text in the textarea, you have two options: click on the Extract Emails button to find and extract any email addresses within the text, or use the Extract Phone button to locate and pull out phone numbers. This feature is especially useful for those wanting to generate leads from images on websites free",
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Extract Specific Information", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Image Data Scraper (Review the Results)",
-      paragraph: "After clicking the desired button, the extracted information is presented in an organized manner, allowing you to easily review and use the data obtained from the image data scraper.",
-      description: "After clicking the desired button, the extracted information is presented in an organized manner, allowing you to easily review and use the data obtained from the image data scraper.",
+      subheading: "Image Lead Generation Tool (Review the Results)",
+      paragraph: "After clicking the desired button, the extracted information is presented in an organized manner, allowing you to easily review and use the data obtained from the image lead generation tool.",
+      description: "After clicking the desired button, the extracted information is presented in an organized manner, allowing you to easily review and use the data obtained from the image lead generation tool.",
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Image Data Scraper (Analyze the Results)",
-      paragraph: "Once the scraping is complete, review the extracted data in an organized format. This helps you easily identify and use the information most relevant to your needs, whether for contact management or other purposes.",
-      description: "Once the scraping is complete, review the extracted data in an organized format. This helps you easily identify and use the information most relevant to your needs, whether for contact management or other purposes.",
+      subheading: "Image Lead Generation Tool (Analyze the Results)",
+      paragraph: "Once the lead generation is complete, review the extracted data in an organized format. This helps you easily identify and use the information most relevant to your needs, whether for contact management or other purposes.",
+      description: "Once the lead generation is complete, review the extracted data in an organized format. This helps you easily identify and use the information most relevant to your needs, whether for contact management or other purposes.",
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Image Data Scraper (Download or Export Data)",
+      subheading: "Image Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/imageIcon.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "File Scraper",
+      pretitle: "File Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
   ],
@@ -1184,11 +1184,11 @@ export const imageDataScraperVideo = {
 export const businessdirectoryscraperProps = {
   title: (
     <>
-    Business <span className="hero-title">Directory</span> Scraper
+    Business <span className="hero-title">Directory</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our Business Directory Scraper efficiently extracts valuable contact details like emails and phone numbers from directories like Yellow Pages. Supporting various formats, it provides structured data extraction. Features include Yellow Pages email extractor and web scraper tools, offering free and flexible options for seamless data scraping and lead generation.",
+    "Our Business Directory Lead Generation Tool efficiently extracts valuable contact details like emails and phone numbers from directories like Yellow Pages. Supporting various formats, it provides structured data extraction. Features include Yellow Pages email extractor and lead generation tools, offering free and flexible options for seamless lead generation and lead generation.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/dirscreen.png",
@@ -1211,47 +1211,47 @@ export const Howitworksbusinessdirectoryscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Business Directory Scraper (Effortless Data Extraction)",
-      paragraph: "Simplify the process of pulling contact details from large directories with the Business Directory Scraper. This Yellow Pages scraper and Yellow Pages data extractor saves time and reduces manual effort, making data collection more efficient.",
-      description: "Simplify the process of pulling contact details from large directories with the Business Directory Scraper. This Yellow Pages scraper and Yellow Pages data extractor saves time and reduces manual effort, making data collection more efficient.",
+      subheading: "Business Directory Lead Generation Tool (Effortless Data Extraction)",
+      paragraph: "Simplify the process of pulling contact details from large directories with the Business Directory Lead Generation Tool. This Yellow Pages lead generation tool and Yellow Pages data extractor saves time and reduces manual effort, making data collection more efficient.",
+      description: "Simplify the process of pulling contact details from large directories with the Business Directory Lead Generation Tool. This Yellow Pages lead generation tool and Yellow Pages data extractor saves time and reduces manual effort, making data collection more efficient.",
       imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       sectionHeading: "Effortless Data Extraction", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Business Directory Scraper (Targeted Contact Information)",
-      paragraph: "Extract phone numbers and emails specific to key regions with our Yellow Pages email extractor and Yellow Pages web scraper, ensuring your contact lists are precise and actionable. This tool makes web scraping Yellow Pages highly targeted.",
-      description: "Extract phone numbers and emails specific to key regions with our Yellow Pages email extractor and Yellow Pages web scraper, ensuring your contact lists are precise and actionable. This tool makes web scraping Yellow Pages highly targeted.",
+      subheading: "Business Directory Lead Generation Tool (Targeted Contact Information)",
+      paragraph: "Extract phone numbers and emails specific to key regions with our Yellow Pages email extractor and Yellow Pages lead generation tool, ensuring your contact lists are precise and actionable. This tool makes lead generation from Yellow Pages highly targeted.",
+      description: "Extract phone numbers and emails specific to key regions with our Yellow Pages email extractor and Yellow Pages lead generation tool, ensuring your contact lists are precise and actionable. This tool makes lead generation from Yellow Pages highly targeted.",
       imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       sectionHeading: "Targeted Contact Information", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Business Directory Scraper (Flexible Data Handling)",
-      paragraph: "With support for multiple file formats like CSV and Excel, the Yellow Pages scraper allows you to work with various directory types without compatibility concerns. This Yellow Pages scraper software free download option is perfect for handling diverse data sources.",
-      description: "With support for multiple file formats like CSV and Excel, the Yellow Pages scraper allows you to work with various directory types without compatibility concerns. This Yellow Pages scraper software free download option is perfect for handling diverse data sources.",
+      subheading: "Business Directory Lead Generation Tool (Flexible Data Handling)",
+      paragraph: "With support for multiple file formats like CSV and Excel, the Yellow Pages lead generation tool allows you to work with various directory types without compatibility concerns. This Yellow Pages lead generation software free download option is perfect for handling diverse data sources.",
+      description: "With support for multiple file formats like CSV and Excel, the Yellow Pages lead generation tool allows you to work with various directory types without compatibility concerns. This Yellow Pages lead generation software free download option is perfect for handling diverse data sources.",
       imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       sectionHeading: "Flexible Data Handling", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Business Directory Scraper (Intuitive and Accessible)",
-      paragraph: "Designed with a user-friendly interface, the Reoon Yellow Pages scraper makes data extraction straightforward, even for users with minimal experience. This Yellow Pages scraper free tool is accessible and easy to use for all.",
-      description: "Designed with a user-friendly interface, the Reoon Yellow Pages scraper makes data extraction straightforward, even for users with minimal experience. This Yellow Pages scraper free tool is accessible and easy to use for all.",
+      subheading: "Business Directory Lead Generation Tool (Intuitive and Accessible)",
+      paragraph: "Designed with a user-friendly interface, the Reoon Yellow Pages lead generation tool makes data extraction straightforward, even for users with minimal experience. This Yellow Pages lead generation tool (free) is accessible and easy to use for all.",
+      description: "Designed with a user-friendly interface, the Reoon Yellow Pages lead generation tool makes data extraction straightforward, even for users with minimal experience. This Yellow Pages lead generation tool (free) is accessible and easy to use for all.",
       imageSrc: "/assets/iconfonts/dashboard-icon/directoryIcon.png",
       sectionHeading: "Intuitive and Accessible", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Web Scraper",
+      pretitle: "Lead Generation Tool",
       presubtitle: "Lead Generation",
     }
   ],
@@ -1365,7 +1365,7 @@ export const Howitworkswhoisdetadownload = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Whois Data Scraper (Initiate the Download)",
+      subheading: "Whois Lead Generation Tool (Initiate the Download)",
       paragraph: "Once youve selected the desired timeframe, click the download button. The whois database provider service will compile all relevant whois domain information registered within the specified period, including whois IP and whois domain owner details.",
       description: "Once youve selected the desired timeframe, click the download button. The whois database provider service will compile all relevant whois domain information registered within the specified period, including whois IP and whois domain owner details.",
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
@@ -1376,7 +1376,7 @@ export const Howitworkswhoisdetadownload = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Whois Data Scraper (Download the Zip File)",
+      subheading: "Whois Lead Generation Tool (Download the Zip File)",
       paragraph: "The compiled whois database data, including domain names, owner’s details, purchase dates, and more, will be packaged into a single zip file. You can download this file for easy access and storage, ideal for icann whois queries and whois IP lookup needs.",
       description: "The compiled whois database data, including domain names, owner’s details, purchase dates, and more, will be packaged into a single zip file. You can download this file for easy access and storage, ideal for icann whois queries and whois IP lookup needs.",
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
@@ -1387,7 +1387,7 @@ export const Howitworkswhoisdetadownload = {
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Whois Data Scraper (Extract and Review)",
+      subheading: "Whois Lead Generation Tool (Extract and Review)",
       paragraph: "After downloading, extract the zip file to view all the whois domain data. The information is organized for easy review, making it perfect for whois search, domain search whois functions, or managing whois com domain assets.",
       description: "After downloading, extract the zip file to view all the whois domain data. The information is organized for easy review, making it perfect for whois search, domain search whois functions, or managing whois com domain assets.",
       imageSrc: "/assets/iconfonts/dashboard-icon/domain.png",
@@ -1420,7 +1420,7 @@ export const websitedetacenterProps = {
     </>
   ),
   description:
-    "The Live Website Data is a powerful tool for extracting website data efficiently. It provides detailed results, including URLs, titles, emails, and phone numbers, Chrome extensions, and Excel exports. Ideal for research or LinkedIn scraping, its your all-in-one web scraping solution.",
+    "The Live Website Data is a powerful tool for extracting website data efficiently. It provides detailed results, including URLs, titles, emails, and phone numbers, Chrome extensions, and Excel exports. Ideal for research or LinkedIn lead generation, its your all-in-one lead generation solution.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/websiteDataCenter.png",
@@ -1450,8 +1450,8 @@ export const Howitworkswebsitedetacenter = {
   scrapers: [
     {
       subheading: "Live Website Data (Select Country)",
-      paragraph: "Start by selecting the country you want to focus your search on to ensure more targeted results. This step is essential for refining your search in our website data scraper, helping you get precise information from specific regions.",
-      description: "Start by selecting the country you want to focus your search on to ensure more targeted results. This step is essential for refining your search in our website data scraper, helping you get precise information from specific regions.",
+      paragraph: "Start by selecting the country you want to focus your search on to ensure more targeted results. This step is essential for refining your search in our website lead generation tool, helping you get precise information from specific regions.",
+      description: "Start by selecting the country you want to focus your search on to ensure more targeted results. This step is essential for refining your search in our website lead generation tool, helping you get precise information from specific regions.",
       imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
       sectionHeading: "Select Country", // Dynamic section heading
       link: "/signup",
@@ -1461,8 +1461,8 @@ export const Howitworkswebsitedetacenter = {
     },
     {
       subheading: "Live Website Data (Enter Your Keywords)",
-      paragraph: "After selecting the country, enter the keyword or phrase you want to search for in the Live Website Data's search bar. This web scraper and web scraping service enables efficient data retrieval based on your Keywords, simplifying website scraping for exact matches.",
-      description: "After selecting the country, enter the keyword or phrase you want to search for in the Live Website Data's search bar. This web scraper and web scraping service enables efficient data retrieval based on your Keywords, simplifying website scraping for exact matches.",
+      paragraph: "After selecting the country, enter the keyword or phrase you want to search for in the Live Website Data's search bar. This lead generation tool and lead generation service enables efficient data retrieval based on your Keywords, simplifying website lead generation for exact matches.",
+      description: "After selecting the country, enter the keyword or phrase you want to search for in the Live Website Data's search bar. This lead generation tool and lead generation service enables efficient data retrieval based on your Keywords, simplifying website lead generation for exact matches.",
       imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
       sectionHeading: "Enter Your Keywords", // Dynamic section heading
       link: "/signup",
@@ -1472,8 +1472,8 @@ export const Howitworkswebsitedetacenter = {
     },
     {
       subheading: "Live Website Data (Automated Scanning)",
-      paragraph: "The system then scans for relevant information, including website URLs, titles, descriptions, keywords, emails, and phone numbers related to your query. With data scraping tools and web scraper Chrome integration, this website data scraper software automates the entire process, making extracting data from websites seamless.",
-      description: "The system then scans for relevant information, including website URLs, titles, descriptions, keywords, emails, and phone numbers related to your query. With data scraping tools and web scraper Chrome integration, this website data scraper software automates the entire process, making extracting data from websites seamless.",
+      paragraph: "The system then scans for relevant information, including website URLs, titles, descriptions, keywords, emails, and phone numbers related to your query. With lead generation tools and lead generation tool Chrome integration, this website lead generation software automates the entire process, making extracting data from websites seamless.",
+      description: "The system then scans for relevant information, including website URLs, titles, descriptions, keywords, emails, and phone numbers related to your query. With lead generation tools and lead generation tool Chrome integration, this website lead generation software automates the entire process, making extracting data from websites seamless.",
       imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
       sectionHeading: "Automated Scanning", // Dynamic section heading
       link: "/signup",
@@ -1483,8 +1483,8 @@ export const Howitworkswebsitedetacenter = {
     },
     {
       subheading: "Live Website Data (Receive Detailed Results)",
-      paragraph: "Once a match is found, the tool presents you with detailed information in an organized manner for easy review. This feature is perfect for scraping LinkedIn or other platforms and is compatible with website scraper Python setups and web scraping tools free options for further data processing.",
-      description: "Once a match is found, the tool presents you with detailed information in an organized manner for easy review. This feature is perfect for scraping LinkedIn or other platforms and is compatible with website scraper Python setups and web scraping tools free options for further data processing.",
+      paragraph: "Once a match is found, the tool presents you with detailed information in an organized manner for easy review. This feature is perfect for lead generation from LinkedIn or other platforms and is compatible with website lead generation tool Python setups and lead generation tools free options for further data processing.",
+      description: "Once a match is found, the tool presents you with detailed information in an organized manner for easy review. This feature is perfect for lead generation from LinkedIn or other platforms and is compatible with website lead generation tool Python setups and lead generation tools free options for further data processing.",
       imageSrc: "/assets/iconfonts/dashboard-icon/websiteIcon.png",
       sectionHeading: "Receive Detailed Results", // Dynamic section heading
       link: "/signup",
@@ -1500,11 +1500,11 @@ export const Howitworkswebsitedetacenter = {
 export const justdialscraperProps = {
   title: (
     <>
-    Just<span className="hero-title">Dial</span> Scraper
+    Just<span className="hero-title">Dial</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our JustDial Scraper extracts structured data like businesses, addresses, phone numbers, and reviews from Google Maps. Perfect for marketers and researchers, it streamlines geographic data collection, providing essential details for campaigns and analysis. A reliable tool for quick, accurate information from Google Maps.",
+    "Our JustDial Lead Generation Tool extracts structured data like businesses, addresses, phone numbers, and reviews from Google Maps. Perfect for marketers and researchers, it streamlines geographic data collection, providing essential details for campaigns and analysis. A reliable tool for quick, accurate information from Google Maps.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/justdialscreen.png",
@@ -1538,69 +1538,69 @@ export const Howitworksjustdialscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
   {
-    subheading: "Justdial Scraper (Scrape By Keyword)",
-    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'Plumbers in Mumbai' or 'Cafes in Bangalore.' This helps the Justdial Scraper narrow down results to provide highly relevant business listings.",
-    description: "Start by entering the city and the business category you're targeting. For instance, search for 'Plumbers in Mumbai' or 'Cafes in Bangalore.' This helps the Justdial Scraper narrow down results to provide highly relevant business listings.",
+    subheading: "Justdial Lead Generation Tool (Generate Leads By Keyword)",
+    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'Plumbers in Mumbai' or 'Cafes in Bangalore.' This helps the Justdial Lead Generation Tool narrow down results to provide highly relevant business listings.",
+    description: "Start by entering the city and the business category you're targeting. For instance, search for 'Plumbers in Mumbai' or 'Cafes in Bangalore.' This helps the Justdial Lead Generation Tool narrow down results to provide highly relevant business listings.",
     imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
-    sectionHeading: "Scrape By Keyword",
+    sectionHeading: "Generate Leads By Keyword",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Justdial Scraper (Initiate Scraping Process)",
+    subheading: "Justdial Lead Generation Tool (Initiate Lead Generation Process)",
     paragraph: "Once you’ve entered your search query, click the Start button to begin the data extraction. The tool connects to Justdial and fetches the listings based on your inputs in real-time.",
     description: "Once you’ve entered your search query, click the Start button to begin the data extraction. The tool connects to Justdial and fetches the listings based on your inputs in real-time.",
     imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
-    sectionHeading: "Initiate Scraping Process",
+    sectionHeading: "Initiate Lead Generation Process",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Justdial Scraper (Extract Business Data)",
-    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
-    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    subheading: "Justdial Lead Generation Tool (Extract Business Data)",
+    paragraph: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
     imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
     sectionHeading: "Extract Business Data",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Justdial Scraper (Deep Extractor)",
+    subheading: "Justdial Lead Generation Tool (Deep Extractor)",
     paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
     sectionHeading: "Deep Extractor",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Justdial Scraper (Review Extracted Listings)",
+    subheading: "Justdial Lead Generation Tool (Review Extracted Listings)",
     paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
     sectionHeading: "Review Extracted Listings",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Justdial Scraper (Export to CSV)",
+    subheading: "Justdial Lead Generation Tool (Export to CSV)",
     paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
     sectionHeading: "Export to CSV",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
 ],
@@ -1618,7 +1618,7 @@ export const justdialscraperVideo = {
 export const indiamartscraperProps = {
   title: (
     <>
-    India<span className="hero-title">Mart</span> Scraper
+    India<span className="hero-title">Mart</span> Lead Generation Tool
     </>
   ),
   description:
@@ -1693,19 +1693,19 @@ export const googleAdsCrmProps = {
 };
 
 export const justdialCrmstatus = [
-  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Scraping Tools" },
+  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Lead Generation Tools" },
   { icon: <i className="ri-group-line"></i>, value: "10+", label: "CRM Tools" },
   { icon: <i className="ri-mail-line"></i>, value: "10M+", label: "Emails" },
   { icon: <i className="ri-eye-line"></i>, value: "15M+", label: "Contact Number" },
 ];
 export const metaAdsCrmstatus = [
-  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Scraping Tools" },
+  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Lead Generation Tools" },
   { icon: <i className="ri-group-line"></i>, value: "10+", label: "CRM Tools" },
   { icon: <i className="ri-mail-line"></i>, value: "10M+", label: "Emails" },
   { icon: <i className="ri-eye-line"></i>, value: "15M+", label: "Contact Number" },
 ];
 export const customLeadUploadStatus = [
-  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Scraping Tools" },
+  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Lead Generation Tools" },
   { icon: <i className="ri-group-line"></i>, value: "10+", label: "CRM Tools" },
   { icon: <i className="ri-mail-line"></i>, value: "10M+", label: "Emails" },
   { icon: <i className="ri-eye-line"></i>, value: "15M+", label: "Contact Number" },
@@ -1719,7 +1719,7 @@ export const googleAdsCrmstatus = [
 ];
 
 export const indiaMartCrmstatus = [
-  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Scraping Tools" },
+  { icon: <i className="ri-clipboard-line"></i>, value: "30+", label: "Lead Generation Tools" },
   { icon: <i className="ri-group-line"></i>, value: "10+", label: "CRM Tools" },
   { icon: <i className="ri-mail-line"></i>, value: "10M+", label: "Emails" },
   { icon: <i className="ri-eye-line"></i>, value: "15M+", label: "Contact Number" },
@@ -1762,9 +1762,9 @@ export const HowitworksIndiamartCrm = {
     {
       subheading: "Welcome to Scrape Genius IndiaMART CRM",
       paragraph:
-        "Our IndiaMART Enquiry Scraper is designed to simplify your lead collection process by automatically fetching customer enquiries from your IndiaMART seller account — no API required.",
+        "Our IndiaMART Enquiry Lead Generation Tool is designed to simplify your lead collection process by automatically fetching customer enquiries from your IndiaMART seller account — no API required.",
       description:
-        "Our IndiaMART Enquiry Scraper is designed to simplify your lead collection process by automatically fetching customer enquiries from your IndiaMART seller account — no API required.",
+        "Our IndiaMART Enquiry Lead Generation Tool is designed to simplify your lead collection process by automatically fetching customer enquiries from your IndiaMART seller account — no API required.",
       imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
       sectionHeading: "Introduction",
       link: "/signup",
@@ -1801,9 +1801,9 @@ export const HowitworksIndiamartCrm = {
     {
       subheading: "Step 3: Start Lead Extraction",
       paragraph:
-        "Once logged in and your dashboard opens, return to the tool and click 'Fetch Leads' again. The scraper will begin collecting your enquiries in real time.",
+        "Once logged in and your dashboard opens, return to the tool and click 'Fetch Leads' again. The lead generation tool will begin collecting your enquiries in real time.",
       description:
-        "Once logged in and your dashboard opens, return to the tool and click 'Fetch Leads' again. The scraper will begin collecting your enquiries in real time.",
+        "Once logged in and your dashboard opens, return to the tool and click 'Fetch Leads' again. The lead generation tool will begin collecting your enquiries in real time.",
       imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
       sectionHeading: "Fetch Enquiries",
       link: "/signup",
@@ -1868,9 +1868,9 @@ export const HowitworksJustdialCrm = {
     {
       subheading: "Step 1: Enter Login Page URL",
       paragraph:
-        "Begin by entering the Justdial login page URL into the tool. Then, specify your target date and time. The scraper will automatically collect all leads up to the selected date and time.",
+        "Begin by entering the Justdial login page URL into the tool. Then, specify your target date and time. The lead generation tool will automatically collect all leads up to the selected date and time.",
       description:
-        "Begin by entering the Justdial login page URL into the tool. Then, specify your target date and time. The scraper will automatically collect all leads up to the selected date and time.",
+        "Begin by entering the Justdial login page URL into the tool. Then, specify your target date and time. The lead generation tool will automatically collect all leads up to the selected date and time.",
       imageSrc: "/assets/iconfonts/dashboard-icon/jdIcon.png",
       sectionHeading: "Enter Login Details",
       link: "/signup",
@@ -2269,69 +2269,69 @@ export const Howitworksindiamartscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
   {
-    subheading: "IndiaMart Scraper (Scrape By Keyword)",
-    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'Digital Marketing Agency in Pune'. This helps the IndiaMart Scraper narrow down results to provide highly relevant business listings.",
-    description: "Start by entering the city and the business category you're targeting. For instance, search for 'Digital Marketing Agency in Pune'. This helps the IndiaMart Scraper narrow down results to provide highly relevant business listings.",
+    subheading: "IndiaMart Lead Generation Tool (Generate Leads By Keyword)",
+    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'Digital Marketing Agency in Pune'. This helps the IndiaMart Lead Generation Tool narrow down results to provide highly relevant business listings.",
+    description: "Start by entering the city and the business category you're targeting. For instance, search for 'Digital Marketing Agency in Pune'. This helps the IndiaMart Lead Generation Tool narrow down results to provide highly relevant business listings.",
     imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
-    sectionHeading: "Scrape By Keyword",
+    sectionHeading: "Generate Leads By Keyword",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "IndiaMart Scraper (Initiate Scraping Process)",
-    paragraph: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to IndiaMart and fetches the listings based on your inputs in real-time.",
-    description: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to IndiaMart and fetches the listings based on your inputs in real-time.",
+    subheading: "IndiaMart Lead Generation Tool (Initiate Lead Generation Process)",
+    paragraph: "Once you’ve entered your search query, click the generate leads button to begin the data extraction. The tool connects to IndiaMart and fetches the listings based on your inputs in real-time.",
+    description: "Once you’ve entered your search query, click the generate leads button to begin the data extraction. The tool connects to IndiaMart and fetches the listings based on your inputs in real-time.",
     imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
-    sectionHeading: "Initiate Scraping Process",
+    sectionHeading: "Initiate Lead Generation Process",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "IndiaMart Scraper (Extract Business Data)",
-    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
-    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    subheading: "IndiaMart Lead Generation Tool (Extract Business Data)",
+    paragraph: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
     imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
     sectionHeading: "Extract Business Data",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "IndiaMart Scraper (Deep Extractor)",
+    subheading: "IndiaMart Lead Generation Tool (Deep Extractor)",
     paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
     sectionHeading: "Deep Extractor",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "IndiaMart Scraper (Review Extracted Listings)",
+    subheading: "IndiaMart Lead Generation Tool (Review Extracted Listings)",
     paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
     sectionHeading: "Review Extracted Listings",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "IndiaMart Scraper (Export to CSV)",
+    subheading: "IndiaMart Lead Generation Tool (Export to CSV)",
     paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     imageSrc: "/assets/iconfonts/dashboard-icon/indiamartIcon.png",
     sectionHeading: "Export to CSV",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
 ],
@@ -2349,7 +2349,7 @@ export const indiamartscraperVideo = {
 export const sulekhascraperProps = {
   title: (
     <>
-     <span className="hero-title">Sulekha</span> Scraper
+     <span className="hero-title">Sulekha</span> Lead Generation Tool
     </>
   ),
   description:
@@ -2385,69 +2385,69 @@ export const Howitworkssulekhascraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
   {
-    subheading: "Sulekha Scraper (Scrape By Keyword Or URL)",
-    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'CBSE Schools in Pune' . This helps the Sulekha Scraper narrow down results to provide highly relevant business listings.",
-    description: "Start by entering the city and the business category you're targeting. For instance, search for 'CBSE Schools in Pune' . This helps the Sulekha Scraper narrow down results to provide highly relevant business listings.",
+    subheading: "Sulekha Lead Generation Tool (Generate Leads By Keyword Or URL)",
+    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'CBSE Schools in Pune' . This helps the Sulekha Lead Generation Tool narrow down results to provide highly relevant business listings.",
+    description: "Start by entering the city and the business category you're targeting. For instance, search for 'CBSE Schools in Pune' . This helps the Sulekha Lead Generation Tool narrow down results to provide highly relevant business listings.",
     imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
-    sectionHeading: "Scrape By Keyword or URL",
+    sectionHeading: "Generate Leads By Keyword or URL",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Sulekha Scraper (Initiate Scraping Process)",
-    paragraph: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to Sulekha and fetches the listings based on your inputs in real-time.",
-    description: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to Sulekha and fetches the listings based on your inputs in real-time.",
+    subheading: "Sulekha Lead Generation Tool (Initiate Lead Generation Process)",
+    paragraph: "Once you’ve entered your search query, click the generate leads button to begin the data extraction. The tool connects to Sulekha and fetches the listings based on your inputs in real-time.",
+    description: "Once you’ve entered your search query, click the generate leads button to begin the data extraction. The tool connects to Sulekha and fetches the listings based on your inputs in real-time.",
     imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
-    sectionHeading: "Initiate Scraping Process",
+    sectionHeading: "Initiate Lead Generation Process",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Sulekha Scraper (Extract Business Data)",
-    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
-    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    subheading: "Sulekha Lead Generation Tool (Extract Business Data)",
+    paragraph: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
     imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
     sectionHeading: "Extract Business Data",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Sulekha Scraper (Deep Extractor)",
+    subheading: "Sulekha Lead Generation Tool (Deep Extractor)",
     paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
     sectionHeading: "Deep Extractor",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Sulekha Scraper (Review Extracted Listings)",
+    subheading: "Sulekha Lead Generation Tool (Review Extracted Listings)",
     paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
     sectionHeading: "Review Extracted Listings",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Sulekha Scraper (Export to CSV)",
+    subheading: "Sulekha Lead Generation Tool (Export to CSV)",
     paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     imageSrc: "/assets/iconfonts/dashboard-icon/sulekha.png",
     sectionHeading: "Export to CSV",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
 ],
@@ -2465,11 +2465,11 @@ export const sulekhascraperVideo = {
 export const tradeindiascraperProps = {
   title: (
     <>
-    Trade<span className="hero-title">India</span> Scraper
+    Trade<span className="hero-title">India</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our TradeIndia Scraper automates the extraction of business profiles, product data, and contact details from TradeIndia. It helps exporters, importers, and B2B marketers connect with verified suppliers and clients.",
+    "Our TradeIndia Lead Generation Tool automates the extraction of business profiles, product data, and contact details from TradeIndia. It helps exporters, importers, and B2B marketers connect with verified suppliers and clients.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/tradeindiascreen.png",
@@ -2503,69 +2503,69 @@ export const Howitworkstradeindiascraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
   {
-    subheading: "Trade India Scraper (Scrape By Keyword)",
-    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'agricultural equipment in Nodia' . This helps the Trade India Scraper narrow down results to provide highly relevant business listings.",
-    description: "Start by entering the city and the business category you're targeting. For instance, search for 'agricultural equipment in Nodia' . This helps the Trade India Scraper narrow down results to provide highly relevant business listings.",
+    subheading: "Trade India Lead Generation Tool (Generate Leads By Keyword)",
+    paragraph: "Start by entering the city and the business category you're targeting. For instance, search for 'agricultural equipment in Nodia' . This helps the Trade India Lead Generation Tool narrow down results to provide highly relevant business listings.",
+    description: "Start by entering the city and the business category you're targeting. For instance, search for 'agricultural equipment in Nodia' . This helps the Trade India Lead Generation Tool narrow down results to provide highly relevant business listings.",
     imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
-    sectionHeading: "Scrape By Keyword",
+    sectionHeading: "Generate Leads By Keyword",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Trade India Scraper (Initiate Scraping Process)",
-    paragraph: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to Trade India and fetches the listings based on your inputs in real-time.",
-    description: "Once you’ve entered your search query, click the scrape button to begin the data extraction. The tool connects to Trade India and fetches the listings based on your inputs in real-time.",
+    subheading: "Trade India Lead Generation Tool (Initiate Lead Generation Process)",
+    paragraph: "Once you’ve entered your search query, click the generate leads button to begin the data extraction. The tool connects to Trade India and fetches the listings based on your inputs in real-time.",
+    description: "Once you’ve entered your search query, click the generate leads button to begin the data extraction. The tool connects to Trade India and fetches the listings based on your inputs in real-time.",
     imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
-    sectionHeading: "Initiate Scraping Process",
+    sectionHeading: "Initiate Lead Generation Process",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Trade India Scraper (Extract Business Data)",
-    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
-    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    subheading: "Trade India Lead Generation Tool (Extract Business Data)",
+    paragraph: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
     imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
     sectionHeading: "Extract Business Data",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Trade India Scraper (Deep Extractor)",
+    subheading: "Trade India Lead Generation Tool (Deep Extractor)",
     paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
     sectionHeading: "Deep Extractor",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Trade India Scraper (Review Extracted Listings)",
+    subheading: "Trade India Lead Generation Tool (Review Extracted Listings)",
     paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
     sectionHeading: "Review Extracted Listings",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Trade India Scraper (Export to CSV)",
+    subheading: "Trade India Lead Generation Tool (Export to CSV)",
     paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     imageSrc: "/assets/iconfonts/dashboard-icon/tradeindia.png",
     sectionHeading: "Export to CSV",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
 ],
@@ -2583,11 +2583,11 @@ export const tradeindiascraperVideo = {
 export const exportersindiascraperProps = {
   title: (
     <>
-    Exporters<span className="hero-title">India</span> Scraper
+    Exporters<span className="hero-title">India</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our ExportersIndia Scraper helps you collect data like business listings, contact details, product info, and company profiles from ExportersIndia.com. It's great for finding leads, doing market research, or building a business database.",
+    "Our ExportersIndia Lead Generation Tool helps you collect data like business listings, contact details, product info, and company profiles from ExportersIndia.com. It's great for finding leads, doing market research, or building a business database.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/exportersscreen.png",
@@ -2620,58 +2620,58 @@ export const Howitworksexportersindiascraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Exporters India Scraper (Scrape By URL)",
-      paragraph: "After entering the URL, click the extract button to start the process. Our data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
-      description: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      subheading: "Exporters India Lead Generation Tool (Generate Leads By URL)",
+      paragraph: "After entering the URL, click the extract button to start the process. Our lead generation software will scan the website for email addresses and other relevant data, utilizing efficient lead generation technology to ensure comprehensive extraction",
+      description: "After entering the URL, click the extract button to start the process. Our website lead generation software will scan the website for email addresses and other relevant data, utilizing efficient lead generation technology to ensure comprehensive extraction",
       imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
-      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      sectionHeading: "Initiate the Lead Generation Process", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "B2B Directory Scraper",
+      pretitle: "B2B Directory Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
   {
-    subheading: "Exporters India Scraper (Extract Business Data)",
-    paragraph: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
-    description: "The scraper collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    subheading: "Exporters India Lead Generation Tool (Extract Business Data)",
+    paragraph: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
+    description: "The lead generation tool collects key business information such as name, phone number, address, and service details. All relevant data is compiled and structured for easy access and filtering.",
     imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
     sectionHeading: "Extract Business Data",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Exporters India Scraper (Deep Extractor)",
+    subheading: "Exporters India Lead Generation Tool (Deep Extractor)",
     paragraph: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     description: "Dive deeper into each business listing to extract additional hidden data such as verified phone numbers and GST numbers. Our Deep Extractor module ensures you retrieve enriched contact and compliance details for stronger lead qualification.",
     imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
     sectionHeading: "Deep Extractor",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Exporters India Scraper (Review Extracted Listings)",
+    subheading: "Exporters India Lead Generation Tool (Review Extracted Listings)",
     paragraph: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     description: "Once the data is extracted, you can review the business listings in a clear, organized format. This lets you validate the results and decide on your next steps for outreach or marketing.",
     imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
     sectionHeading: "Review Extracted Listings",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
   {
-    subheading: "Exporters India Scraper (Export to CSV)",
+    subheading: "Exporters India Lead Generation Tool (Export to CSV)",
     paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
     imageSrc: "/assets/iconfonts/dashboard-icon/exporters.png",
     sectionHeading: "Export to CSV",
     link: "/signup",
     buttonText: "Try Now",
-    pretitle: "B2B Directory Scraper",
+    pretitle: "B2B Directory Lead Generation Tool",
     presubtitle: "Lead Generation",
   },
 ],
@@ -2689,11 +2689,11 @@ export const exportersindiascraperVideo = {
 export const emailscraperProps = {
   title: (
     <>
-    <span className="hero-title">Email</span> Scraper
+    <span className="hero-title">Email</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our Bulk Email Scraper efficiently extracts email addresses from websites, search engine results, or custom sources. Designed for marketers, researchers, and lead generation professionals, it automates the process of gathering valid email data at scale.",
+    "Our Bulk Email Lead Generation Tool efficiently extracts email addresses from websites, search engine results, or custom sources. Designed for marketers, researchers, and lead generation professionals, it automates the process of gathering valid email data at scale.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/emailscreen.png",
@@ -2720,58 +2720,58 @@ export const Howitworksemailscraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Email Scraper (Scrape By Keyword)",
-      paragraph: "After entering the Keyword, click the extract button to start the process. Our scraper software will scan the website for email addresses , utilizing efficient web scraper technology to ensure comprehensive extraction",
-      description: "After entering the Keyword, click the extract button to start the process. Our scraper software will scan the website for email addresses , utilizing efficient web scraper technology to ensure comprehensive extraction",
+      subheading: "Email Lead Generation Tool (Generate Leads By Keyword)",
+      paragraph: "After entering the Keyword, click the extract button to start the process. Our lead generation software will scan the website for email addresses , utilizing efficient lead generation technology to ensure comprehensive extraction",
+      description: "After entering the Keyword, click the extract button to start the process. Our lead generation software will scan the website for email addresses , utilizing efficient lead generation technology to ensure comprehensive extraction",
       imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
-      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      sectionHeading: "Initiate the Lead Generation Process", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Email Scraper",
+      pretitle: "Bulk Email Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Email Scraper (Extract Emails)",
-      paragraph: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
-      description: "The web scraper identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
+      subheading: "Email Lead Generation Tool (Extract Emails)",
+      paragraph: "The lead generation tool identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our lead generation tools make this process seamless, gathering information with precision",
+      description: "The lead generation tool identifies and extracts all available email addresses on the website, including those found on contact pages, footers, or other areas. Our lead generation tools make this process seamless, gathering information with precision",
       imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
       sectionHeading: "Extract Emails", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Email Scraper",
+      pretitle: "Bulk Email Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Email Scraper (Review the Results)",
-      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
-      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      subheading: "Email Lead Generation Tool (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs",
+      description: "Once the extraction is complete, you’ll receive an organized list of all emails found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs",
       imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Email Scraper",
+      pretitle: "Bulk Email Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Email Scraper (Analyze the Results)",
-      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
-      description: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      subheading: "Email Lead Generation Tool (Analyze the Results)",
+      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our lead generation tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      description: "Review the extracted data in an organized format to identify the most relevant information. Our lead generation tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
       imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Email Scraper",
+      pretitle: "Bulk Email Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Email Scraper (Download or Export Data)",
+      subheading: "Email Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/email.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Email Scraper",
+      pretitle: "Bulk Email Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
   ],
@@ -2789,11 +2789,11 @@ export const emailscraperVideo = {
 export const phonescraperProps = {
   title: (
     <>
-    <span className="hero-title">Phone</span> Scraper
+    <span className="hero-title">Phone</span> Lead Generation Tool
     </>
   ),
   description:
-    "Our Bulk Phone Number Scraper automates the extraction of phone numbers from websites, online directories, and search results. It’s ideal for businesses, sales teams, and data researchers needing large volumes of contact numbers.",
+    "Our Bulk Phone Number Lead Generation Tool automates the extraction of phone numbers from websites, online directories, and search results. It’s ideal for businesses, sales teams, and data researchers needing large volumes of contact numbers.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/phonescreen.png",
@@ -2818,58 +2818,58 @@ export const Howitworksphonescraper = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Phone Scraper (Scrape By URL)",
-      paragraph: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
-      description: "After entering the URL, click the extract button to start the process. Our website data scraper software will scan the website for email addresses and other relevant data, utilizing efficient web scraper technology to ensure comprehensive extraction",
+      subheading: "Phone Lead Generation Tool (Generate Leads By URL)",
+      paragraph: "After entering the URL, click the extract button to start the process. Our website lead generation software will scan the website for email addresses and other relevant data, utilizing efficient lead generation technology to ensure comprehensive extraction",
+      description: "After entering the URL, click the extract button to start the process. Our website lead generation software will scan the website for email addresses and other relevant data, utilizing efficient lead generation technology to ensure comprehensive extraction",
       imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
-      sectionHeading: "Initiate the Scraping Process", // Dynamic section heading
+      sectionHeading: "Initiate the Lead Generation Process", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Phone Scraper",
+      pretitle: "Bulk Phone Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Phone Scraper (Extract Phone)",
-      paragraph: "The web scraper identifies and extracts all available phone on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
-      description: "The web scraper identifies and extracts all available phone on the website, including those found on contact pages, footers, or other areas. Our data scraping tools make this process seamless, gathering information with precision",
+      subheading: "Phone Lead Generation Tool (Extract Phone)",
+      paragraph: "The lead generation tool identifies and extracts all available phone on the website, including those found on contact pages, footers, or other areas. Our lead generation tools make this process seamless, gathering information with precision",
+      description: "The lead generation tool identifies and extracts all available phone on the website, including those found on contact pages, footers, or other areas. Our lead generation tools make this process seamless, gathering information with precision",
       imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
       sectionHeading: "Extract Phone", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Phone Scraper",
+      pretitle: "Bulk Phone Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Phone Scraper (Review the Results)",
-      paragraph: "Once the extraction is complete, you’ll receive an organized list of all Phone Numbers found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
-      description: "Once the extraction is complete, you’ll receive an organized list of all Phone Numbers found. Our web scraping service provides clear results, allowing you to quickly review and utilize the website data scraper output for your needs",
+      subheading: "Phone Lead Generation Tool (Review the Results)",
+      paragraph: "Once the extraction is complete, you’ll receive an organized list of all Phone Numbers found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs",
+      description: "Once the extraction is complete, you’ll receive an organized list of all Phone Numbers found. Our lead generation service provides clear results, allowing you to quickly review and utilize the website lead generation tool output for your needs",
       imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
       sectionHeading: "Review the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Phone Scraper",
+      pretitle: "Bulk Phone Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Phone Scraper (Analyze the Results)",
-      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
-      description: "Review the extracted data in an organized format to identify the most relevant information. Our web scraping tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      subheading: "Phone Lead Generation Tool (Analyze the Results)",
+      paragraph: "Review the extracted data in an organized format to identify the most relevant information. Our lead generation tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
+      description: "Review the extracted data in an organized format to identify the most relevant information. Our lead generation tools are designed for easy analysis, making it simple to leverage the data for lead generation or research purposes.",
       imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
       sectionHeading: "Analyze the Results", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Phone Scraper",
+      pretitle: "Bulk Phone Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
     {
-      subheading: "Phone Scraper (Download or Export Data)",
+      subheading: "Phone Lead Generation Tool (Download or Export Data)",
       paragraph: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       description: "Finally, you have the option to download or export the data in CSV format, ready for further use. Whether for research, lead generation, or contacting businesses.",
       imageSrc: "/assets/iconfonts/dashboard-icon/phone.png",
       sectionHeading: "Download or Export Data", // Dynamic section heading
       link: "/signup",
       buttonText: "Try Now",
-      pretitle: "Bulk Phone Scraper",
+      pretitle: "Bulk Phone Lead Generation Tool",
       presubtitle: "Lead Generation",
     },
   ],
@@ -2884,13 +2884,13 @@ export const phonescraperVideo = {
 };
 // Dynamic data arrays
 export const aboutuswhowearecontent = [
-  "Scrape Genius, specializes in management software, including our business directory scraper and yellow pages extractor. With over 75 products, we offer tools for data scraping, such as Document scraper and image scraping tools. Our solutions streamline data collection for users worldwide.",
+  "Scrape Genius, specializes in management software, including our business directory lead generation tool and yellow pages extractor. With over 75 products, we offer tools for lead generation, such as Document lead generation tool and image lead generation tools. Our solutions streamline data collection for users worldwide.",
   "Our mission is to make data collection as easy as possible. We offer an automated process that lets you quickly and easily grab data from the Internet, all in one convenient place.",
 ];
 
 export const aboutuswebcontent = [
-  "The Scrape Genius is a powerful data scraping tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a business directory scraper, yellow pages scraper, and yellow pages data extractor, enabling users to effortlessly gather essential information such as yellow pages email extractor details, contact numbers, and domain names. With capabilities to scrape data from websites, scrape images from websites, and scrape CSV files, it is invaluable for various data collection tasks.",
-  "Why struggle with complex tools when you can harness the simplicity and efficiency of the Scrape Genius? It streamlines the process of web scraping yellow pages and supports document scraping for Excel and other formats. Whether you’re conducting a whois search or utilizing a website data scraper, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
+  "The Scrape Genius is a powerful lead generation tool designed to simplify data extraction for business professionals and enthusiasts. This versatile tool acts as a business directory lead generation tool, yellow pages lead generation tool, and yellow pages data extractor, enabling users to effortlessly gather essential information such as yellow pages email extractor details, contact numbers, and domain names. With capabilities to generate leads from websites, generate leads from images on websites, and generate leads from CSV files, it is invaluable for various data collection tasks.",
+  "Why struggle with complex tools when you can harness the simplicity and efficiency of the Scrape Genius? It streamlines the process of lead generation from yellow pages and supports document lead generation for Excel and other formats. Whether you’re conducting a whois search or utilizing a website lead generation tool, this tool ensures that all necessary data, including whois domain information and whois database lookup, is at your fingertips, turning minutes into moments of discovery.",
 ];
 
 export const buttons = [

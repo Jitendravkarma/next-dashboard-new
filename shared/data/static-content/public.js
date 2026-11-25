@@ -459,7 +459,7 @@ export const priceplanmonth = [
       },
       {
         tooltips:
-          "Perform limited scraping tasks simultaneously in this plan.",
+          "Perform limited lead generation tasks simultaneously in this plan.",
         text: "Limited Access",
         question: true,
       },
@@ -492,7 +492,7 @@ export const priceplanmonth = [
     content: [
       {
         tooltips:
-          "Access all Standard Plan features for efficient web scraping.",
+          "Access all Standard Plan features for efficient lead generation.",
         text: "Access to all features",
         question: true,
       },
@@ -536,7 +536,7 @@ export const priceplanmonth = [
     paragraph: "Built for white-label reselling",
     content: [
       {
-        tooltips: "Unlock all premium features for reseller-level scraping.",
+        tooltips: "Unlock all premium features for reseller-level lead generation.",
         text: "Access to all premium features",
         question: true,
       },

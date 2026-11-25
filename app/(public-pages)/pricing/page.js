@@ -25,6 +25,15 @@ const PricingPage = () => {
     "Renew your plan annually to keep your reseller account and all client licenses active",
   ];
 
+  const features = [
+    "Unlimited tool access",
+    "Custom Customize",
+    "Custom integrations",
+    // "Dedicated account manager",
+    "Priority 24/7 support",
+    "API accesses",
+  ];
+
   return (
     <>
       <section className="relative bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50 py-20 px-6 text-center overflow-hidden">
@@ -134,6 +143,112 @@ const PricingPage = () => {
 
       <section className="py-20 px-6 max-w-7xl mx-auto" id="reseller-plan">
         <PriceCards/>
+        <div className="mt-10 w-full">
+          <div className="relative overflow-hidden rounded-xl bg-slate-900 p-6 sm:p-8 shadow-xl">
+
+            {/* Decorative background */}
+            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl" />
+
+            <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
+
+              {/* Left Content */}
+              <div className="lg:col-span-5">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400">
+                  <span className="h-2 w-2 rounded-full bg-blue-400" />
+                  Need Something Bigger?
+                </div>
+
+                <h2 className="text-3xl font-bold text-white sm:text-4xl">
+                  Enterprise 
+                  <span className="text-blue-500"> Solution</span>
+                </h2>
+
+                <p className="mt-3 max-w-md text-sm leading-6 text-slate-400">
+                  Get a customized solution designed for your
+                  organization's unique needs. Scale without limits
+                  with our Enterprise plan.
+                </p>
+
+                <div className="mt-6">
+                  <p className="text-sm text-slate-400">Enterprise Pricing</p>
+                  <p className="mt-1 text-3xl font-bold text-white">
+                    Custom Pricing
+                  </p>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div className="lg:col-span-4">
+                <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-300">
+                  Everything included
+                </h3>
+
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                  {features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-400/10">
+                        <svg
+                          className="h-3 w-3 text-blue-400"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-300">
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="lg:col-span-3">
+                <div className="rounded-xl border border-slate-700 bg-slate-800/70 p-5 text-center">
+                  <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-400/10">
+                    <svg
+                      className="h-6 w-6 text-blue-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 21h18M5 21V7l8-4v18m6 0V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01M15 14v.01M15 17v.01"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-lg font-bold text-white">
+                    Let's Talk Business
+                  </h3>
+
+                  <p className="mt-2 text-xs leading-5 text-slate-400">
+                    Contact our team to discuss a plan
+                    that fits your requirements.
+                  </p>
+
+                  <a
+                    href="/contact"
+                    className="mt-5 block w-full rounded-lg bg-blue-500 px-5 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-400 hover:shadow-lg hover:shadow-blue-500/20"
+                  >
+                    Contact Sales →
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="py-20 bg-white">

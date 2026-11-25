@@ -13,11 +13,11 @@ export const metadata = seo_global_dir;
 const HeaderProp = {
   title: (
     <>
-    Global Directory Scraper
+    Global Directory Lead Generation Tool
     </>
   ),
   description:
-    "Our Global Directory Scraper extracts valuable business and directory information from multiple online platforms, including Nextdoor, Practo, Global Sources, Trustpilot, Hotfrog, and other supported sources. Collect available business names, company websites, phone numbers, email addresses, business categories, addresses, descriptions, ratings, reviews, and other publicly accessible details. Automate business data collection for lead generation, market research, supplier discovery, competitor analysis, and reputation monitoring. Organize and export collected information to streamline your research and support data-driven business decisions.",
+    "Our Global Directory Lead Generation Tool extracts valuable business and directory information from multiple online platforms, including Nextdoor, Practo, Global Sources, Trustpilot, Hotfrog, and other supported sources. Collect available business names, company websites, phone numbers, email addresses, business categories, addresses, descriptions, ratings, reviews, and other publicly accessible details. Automate business data collection for lead generation, market research, supplier discovery, competitor analysis, and reputation monitoring. Organize and export collected information to streamline your research and support data-driven business decisions.",
   buttonText: "Try For Free",
   buttonLink: "/signup",
   leftImg: "/assets/img/slider-images/global_directory_scraper.png",
@@ -60,7 +60,7 @@ const HowItWorks = {
   mainheading: "<span className='text-blue-500'>How It </span>Works?",
   scrapers: [
     {
-      subheading: "Global Directory Scraper (Search Businesses by Keyword)",
+      subheading: "Global Directory Lead Generation Tool (Search Businesses by Keyword)",
       paragraph: "Start by entering a business name, industry, service, product, or location as your search keyword. For example, search for 'dentists in London,' 'industrial equipment suppliers,' or 'plumbers in New York.' Your search criteria help you discover relevant business listings across supported sources such as Nextdoor, Practo, Global Sources, Trustpilot, Hotfrog, and other available directories.",
       description: "Start by entering a business name, industry, service, product, or location as your search keyword. For example, search for 'dentists in London,' 'industrial equipment suppliers,' or 'plumbers in New York.' Your search criteria help you discover relevant business listings across supported sources such as Nextdoor, Practo, Global Sources, Trustpilot, Hotfrog, and other available directories.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/13180/13180582.png",
@@ -71,7 +71,7 @@ const HowItWorks = {
       presubtitle: "Keyword-Based Search",
     },
     {
-      subheading: "Global Directory Scraper (Select Your Data Source)",
+      subheading: "Global Directory Lead Generation Tool (Select Your Data Source)",
       paragraph: "Choose your preferred directory or supported business data source based on your research requirements. Explore local business listings on Nextdoor, healthcare professionals on Practo, suppliers and manufacturers on Global Sources, customer reviews on Trustpilot, and business listings on Hotfrog. Source availability and supported search options may vary depending on the platform.",
       description: "Choose your preferred directory or supported business data source based on your research requirements. Explore local business listings on Nextdoor, healthcare professionals on Practo, suppliers and manufacturers on Global Sources, customer reviews on Trustpilot, and business listings on Hotfrog. Source availability and supported search options may vary depending on the platform.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/13180/13180582.png",
@@ -82,9 +82,9 @@ const HowItWorks = {
       presubtitle: "Directory Selection",
     },
     {
-      subheading: "Global Directory Scraper (Initiate Data Extraction)",
-      paragraph: "Once you have selected your source and search criteria, initiate the extraction process. Our Global Directory Scraper collects available information from supported listings, which may include business names, websites, phone numbers, email addresses, business categories, locations, descriptions, ratings, review counts, and supplier or service details. The extracted fields depend on the information accessible from each platform.",
-      description: "Once you have selected your source and search criteria, initiate the extraction process. Our Global Directory Scraper collects available information from supported listings, which may include business names, websites, phone numbers, email addresses, business categories, locations, descriptions, ratings, review counts, and supplier or service details. The extracted fields depend on the information accessible from each platform.",
+      subheading: "Global Directory Lead Generation Tool (Initiate Data Extraction)",
+      paragraph: "Once you have selected your source and search criteria, initiate the extraction process. Our Global Directory Lead Generation Tool collects available information from supported listings, which may include business names, websites, phone numbers, email addresses, business categories, locations, descriptions, ratings, review counts, and supplier or service details. The extracted fields depend on the information accessible from each platform.",
+      description: "Once you have selected your source and search criteria, initiate the extraction process. Our Global Directory Lead Generation Tool collects available information from supported listings, which may include business names, websites, phone numbers, email addresses, business categories, locations, descriptions, ratings, review counts, and supplier or service details. The extracted fields depend on the information accessible from each platform.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/13180/13180582.png",
       sectionHeading: "Extract Business Data",
       link: "/signup",
@@ -93,7 +93,7 @@ const HowItWorks = {
       presubtitle: "Business & Contact Details",
     },
     {
-      subheading: "Global Directory Scraper (Review Extracted Results)",
+      subheading: "Global Directory Lead Generation Tool (Review Extracted Results)",
       paragraph: "After extraction, review your collected business records in an organized format. Examine company names, contact details, websites, locations, categories, ratings, reviews, and other available information. Compare businesses across different sources to identify potential leads, research competitors, discover suppliers, evaluate customer feedback, and understand market opportunities.",
       description: "After extraction, review your collected business records in an organized format. Examine company names, contact details, websites, locations, categories, ratings, reviews, and other available information. Compare businesses across different sources to identify potential leads, research competitors, discover suppliers, evaluate customer feedback, and understand market opportunities.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/13180/13180582.png",
@@ -104,7 +104,7 @@ const HowItWorks = {
       presubtitle: "Business Intelligence",
     },
     {
-      subheading: "Global Directory Scraper (Download or Export Data)",
+      subheading: "Global Directory Lead Generation Tool (Download or Export Data)",
       paragraph: "Once you have reviewed your results, export the collected business data in a supported format, such as CSV or Excel, if available. Use the extracted information for lead generation, supplier research, local business discovery, reputation analysis, market research, and sales planning. Contact details, ratings, reviews, and other fields depend on their availability and the supported extraction capabilities of each source.",
       description: "Once you have reviewed your results, export the collected business data in a supported format, such as CSV or Excel, if available. Use the extracted information for lead generation, supplier research, local business discovery, reputation analysis, market research, and sales planning. Contact details, ratings, reviews, and other fields depend on their availability and the supported extraction capabilities of each source.",
       imageSrc: "https://cdn-icons-png.flaticon.com/128/13180/13180582.png",
